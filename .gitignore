@@ -1,0 +1,33 @@
+# Don't track content of these folders #
+########################################
+cache/
+saves/
+audio/
+gui/
+images/
+
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+*.rpyc
+*.rpymc
+
+#fonts
+*.ttf
+*.otf
+*.TTF
+
+# The log file and other misc things #
+######################################
+log.txt
+errors.txt
+traceback.txt
+files.txt
+
