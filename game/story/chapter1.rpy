@@ -221,20 +221,18 @@ label college_orientation:
     #n "Please deer god, you pray whoever it is doesn't sit there. You've had a rough day and don't want to have to make friends already."
     n "A moment later, a nerdy looking ram squeezes past you and sits in it."
 
-    #show rori neutral at norm with moveinright:
-        #xpos 600
+    show rori neutral at norm with moveinright:
+        xpos 600
     
-    #pause .25
+    pause .25
 
-    #rori @ say "D-did I miss anything?"
+    rori @ say "D-did I miss anything?"
 
-    #player "Nope"
+    player "Nothing important."
     #n "You snap out of your daydream and shake your head before returning your attention to the presenter."
     #n "You shake your head and return your attention to the presenter."
     
-    #player "Nope."
-
-    #hide rori with dissolve
+    hide rori with dissolve
 
     show ellen teacher neutral at norm with dissolve
 
