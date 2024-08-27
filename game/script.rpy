@@ -163,6 +163,7 @@ define fortune = Character("Fortune", image="fortune", what_color="d0dbff", call
 define creature = Character("Creature", image="fortune", what_color="d0dbff", what_font="dudu.ttf")
 define lina = Character("lina", image="lina", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
 define waitress = Character("waitress", image="lina", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
+define nicodemus = Character("Nicodemus", image="nicodemus", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
 
 #old mishka text color a4cffc
 #old gunner color #ffb7d3, reuse for lina?

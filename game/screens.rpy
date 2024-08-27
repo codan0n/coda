@@ -739,7 +739,8 @@ screen about():
         style_prefix "about"
 
         vbox:
-        
+            
+            #add text for mit license, give notice that the main code and story are gnu gpl 3.0
             #MIT License for Sodara's sprite highlighting code
             # Permission is hereby granted, free of charge, to any person
             # obtaining a copy of this software and associated documentation files
@@ -759,6 +760,9 @@ screen about():
             # LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
             # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
             # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+            
+            #tasmanian tiger photo, public domain, from Smithsonian Institutional Archives / E. J. Keller
+            
 
             label "[config.name!t]"
             text _("Version [config.version!t]\n")
