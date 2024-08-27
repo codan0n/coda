@@ -95,7 +95,6 @@ label nicodemusQuestions:
             pause 2.3
             
             menu:
-                n "{cps=0}The dean reaches into his coat pocket and pulls out a photograph.{/cps=0}"
                 "What about them?":
                     show box with Dissolve(.2):
                         ypos 0

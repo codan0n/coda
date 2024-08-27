@@ -1418,10 +1418,6 @@ layeredimage volginova neutral:
    
 
 label start:
-    call chapter1
-    
-    
-
     # variables
     $ dating = ""
     $ gardenvisit = False
@@ -1646,6 +1642,8 @@ label start:
 #        n "code ain't working"
 #        
 #    n "fin"
+
+call chapter1
 
 
 label continuing:
