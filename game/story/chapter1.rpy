@@ -809,237 +809,229 @@ label exploring_campus:
     n "There's one for the botany club, debate club, algae bee tea club,  {a=https://4chan.org/trash/hmofa}/hmofa/{/a} club, anime club, vidya club, golf club, and so on."
     n "Going straight across is the quickest way to the restaurants, so you head in with your eyes forward."
     n "You know the moment you look at any of them, some representative will drag you into an involuntary conversation."
-    
-    
-    # make random 50/50 whether you bump into ava and claire or gunner
-    
 
     $ randumb = renpy.random.randint(0, 1)
     
     #for testing
-    n "random number is [randumb]"
+    #n "random number is [randumb]"
     
-    if randum == 0:
-        "do claire's scene"
+    if randumb == 0:
+        #"do claire's scene"
+        n "You almost managed to get to the end without being harassed by anybody."
+        n "Surprisingly it wasn't a booth attendant, rather it's the chatty girls you saw the day prior."
+        
+        show claire sweater neutral at offscreenright:
+                yalign 0
+        show ava normal neutral at offscreenleft:
+            yalign 0
+
+        show claire sweater neutral at norm:
+            xalign 0
+            xpos 400
+        show ava normal neutral at norm:
+            xalign 0
+            xzoom -1
+            xpos -400
+        with move
+
+        claire @ say "Holy Frith, it's you! You were at the thing last night, weren't you?"
+        
+        show ava bored
+
+        ava @ say "She means the orientation."
+        
+        show ava normal neutral
+
+        player "Nope, you must have me confused for the other human around here."
+
+        n "Ava smirks at your joke but Claire seems to take a second to get it."
+
+        claire @ say "Oh..."
+        
+        show claire sweater surprised
+                    
+        claire @ say "Oh!"
+        
+        show claire sweater embarassed
+        
+        claire @ say "Duh!"
+        
+        show claire sweater wave
+        
+        claire @ say "What was your name again? [name]?"
+
+        player "Yeah. And you were... Ava and Claire, right?"
+        
+        show ava excited
+
+        ava @ say "Yup!"
+        
+        show claire sweater neutral
+        show ava normal neutral
+        
+        claire @ say "So what brings you out here, [name]? Looking to join a club?"
+
+        player "More like looking for a place to get breakfast, but I ended up here somehow."
+
+        ava @ say "One booth was giving out free donuts but they ran out pretty quick."
+
+        player "Aww..."
+
+        claire @ say "I guess you could say the early bird gets the donut~"
+        
+        show ava portrait neutral
+        
+        ava @ say "Hehe you're not wrong!~"
+        
+        show ava normal neutral
+
+        player "So have you signed up for anything so far?"
+
+        claire @ say "I looked into a bunch but I can't decide which one to join!"
+
+        ava @ say "I'm not much of a party animal so I just joined the photography club. Thinking about signing up for the cinematography club too. What about you?"
+
+        player "I'm not really interested in any of them."
+        
+        claire @ say "*gasp* We should all join a sorority!"
+        
+        ava @ say "What? Why?"
+        
+        player "I don't think they'd let me in."
+        
+        claire @ say "Why not? It's current year!"
+        claire @ say "We can hit on sorority sluts! Ksksksksks!"
+        
+        ava @ say "Pass."
+        
+        
+        
+        
+        
+        
+        
+
+        
+        hide ava
+        hide claire
+        with dissolve
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     else:
-        "do gunner's scene"
+        #"do gunner's scene"
+        n "You almost made it to the end without getting poached by some aggressive salesman."
+        
+        show gunner neutral at norm with dissolve
+
+        gunner @ say "Hey there! I saw you checkin' out the frats and thought you should know Alpha Alpha Alpha is the best one!"
+
+        player "Alpha Alpha Alpha? Is that the best name you could come up with?"
+
+        gunner @ say "It's cause only alpha males are allowed in. Are you a bad enough dude to join?"
+        
+        player "I personally identify as a sigma male but do go on."
+        
+        gunner @ say "No worries, we like totally respect your pronouns or whatever. Name's Gunner by the way!"
+        #gunner @ say "No worries, we like totally respect your pronouns or whatever stupid bullshit you believe in. Name's Gunner by the way!"
+
+        player "So what exactly do you do in a frat?"
+
+        gunner @ say "Haze new members, drink cheap beer, hit on sorority chicks and..."
+        gunner @ say "Hold that thought, I think I see my new roommate over there."
+        gunner @ say "Roriiii! Over here!"
+
+        show rori neutral:
+            yalign 0
+            xpos -1500
+
+        n "You look over your shoulder and spot the shy ram you met yesterday reluctantly approaching."
+
+        show rori neutral:
+            xzoom -1
+            xpos -400
+        show gunner:
+            xpos 350
+        with move
+
+        rori @ say "Gunner? You're recruiting for your frat?"
+        
+        
+        #gunner tries to get rori to join frat by saying there are lots of hot dudes
+        
+
+        gunner @ say "You bet! And look who was interested in joining!"
+
+        rori @ say "Hey, it's you! We met at the orientation last night, remember?"
+
+        gunner @ say "This must be the guy you were telling me about earlier."
+        gunner @ say "[name], was it?"
+
+        player "The one and only."
+
+        gunner @ say "A pleasure to meet you [name]! I can already tell we're gonna be great buddies!"
+
+        n "Gunner holds out his fist."
+        n "As is customary, you are forced to give him a fist bump."
+
+        player "So you two are roommates? You think they put people who are polar opposites in the same room together on purpose?"
+
+        gunner @ say "What? No, Rori's cool like me. I used to be introverted too until I joined the soccer team back in middle school!"
+        gunner @ say "But my dad made me quit because he said it was a made up sport to keep European ladies busy."
+        gunner @ say "Anyway I'm gonna take Rori here to the gym this week so he can pass the minimum requirements for being an Alpha!"
+
+        player "And that is...?"
+
+        gunner @ say "Bench 2 plates or squat 3. Pretty easy stuff honestly. I should be able to whip this ram into shape in just a couple weeks if we hit up the gym everyday for a few hours."
+
+        show rori anxiety
+        
+        rori @ say "That would really cut into my programming time a-and not to mention I seriously doubt I share the same hobbies as you 'Alphas' and and-"
+
+        gunner @ say "You're into gaming, right? You should play the new Call of Battlefield: Modern Football with us!"
+
+        show rori anxiety at shudder
+
+        n "Rori visibly cringes."
+
+        show rori neutral
+
+        player "Well it looks like you've found your newest recruit, Gunner."
+        player "Have fun being an Alpha, Rori!"
+
+        n "Thanks to Rori's distraction, you're able to make your escape and continue your search for breakfast."
+
+        show rori anxiety
+
+        rori @ say "Hey w-wait! Don't leave me alone with this normie!"
+
+        hide rori
+        hide gunner
+        with dissolve
+
+
+
+
+
+
+
+
+
 
     
-    
-    menu:
-        n "{cps=0}It seems they're representing a...{/cps=0}"
-        "...fraternity":
-            #writing done
-            $ boygirlfriend = "boyfriend"
-            $ fratsoro = "frat"
-            $ heshe = "he"
-            $ heher = "he"
-            $ hisher = "his"
-            $ himher = "him"
-            
-            #n "It seems they're representing a fraternity and want you to join."
-            #n "It sure would be embarrasing if you were a girl and they were trying to recruit you. Luckily you're not."
-            #n "...right?"
-            #n "I mean, if you wanted to be a girl you could simply roll back time and check out the sorority instead."
-            #n "It's as easy as scrolling up on the scroll wheel."
-            #n "Thank you for attending my schizo rant. Now back to what you were doing."
-            n "You give them the courtesy of approaching and at least pretending to be interested in what they have to say."
-
-            show gunner neutral at norm with dissolve
-
-            gunner @ say "Hey there! I saw you checkin' out the frats and thought you should know Alpha Alpha Alpha is the best one!"
-
-            player "Alpha Alpha Alpha? Is that the best name you could come up with?"
-
-            gunner @ say "It's cause only alpha males are allowed in. Are you a bad enough dude to join?"
-            
-            player "I personally identify as a sigma male but do go on."
-            
-            gunner @ say "No worries, we like totally respect your pronouns or whatever. Name's Gunner by the way!"
-            #gunner @ say "No worries, we like totally respect your pronouns or whatever stupid bullshit you believe in. Name's Gunner by the way!"
-
-            player "So what exactly do you do in a frat?"
-
-            gunner @ say "Haze new members, drink cheap beer, hit on sorority chicks and..."
-            gunner @ say "Hold that thought, I think I see my new roommate over there."
-            gunner @ say "Roriiii! Over here!"
-
-            show rori neutral:
-                yalign 0
-                xpos -1500
-
-            n "You look over your shoulder and spot the shy ram you met yesterday reluctantly approaching."
-
-            show rori neutral:
-                xzoom -1
-                xpos -400
-            show gunner:
-                xpos 350
-            with move
-
-            rori @ say "Gunner? You're recruiting for your frat?"
-
-            gunner @ say "You bet! And look who was interested in joining!"
-
-            rori @ say "Hey, it's you! We met at the orientation last night, remember?"
-
-            gunner @ say "This must be the guy you were telling me about earlier."
-            gunner @ say "[name], was it?"
-
-            player "The one and only."
-
-            gunner @ say "A pleasure to meet you [name]! I can already tell we're gonna be great buddies!"
-
-            n "Gunner holds out his fist."
-            n "As is customary, you are forced to give him a fist bump."
-
-            player "So you two are roommates? You think they put people who are polar opposites in the same room together on purpose?"
-
-            gunner @ say "What? No, Rori's cool like me. I used to be introverted too until I joined the soccer team back in middle school!"
-            gunner @ say "But my dad made me quit because he said it was a made up sport to keep European ladies busy."
-            gunner @ say "Anyway I'm gonna take Rori here to the gym this week so he can pass the minimum requirements for being an Alpha!"
-
-            player "And that is...?"
-
-            gunner @ say "Bench 2 plates or squat 3. Pretty easy stuff honestly. I should be able to whip this ram into shape in just a couple weeks if we hit up the gym everyday for a few hours."
-
-            show rori anxiety
-            
-            rori @ say "That would really cut into my programming time a-and not to mention I seriously doubt I share the same hobbies as you 'Alphas' and and-"
-
-            gunner @ say "You're into gaming, right? You should play the new Call of Battlefield: Modern Football with us!"
-
-            show rori anxiety at shudder
-
-            n "Rori visibly cringes."
-
-            show rori neutral
-
-            player "Well it looks like you've found your newest recruit, Gunner."
-            player "Have fun being an Alpha, Rori!"
-
-            n "Thanks to Rori's distraction, you're able to make your escape and continue your search for breakfast."
-
-            show rori anxiety
-
-            rori @ say "Hey w-wait! Don't leave me alone with this normie!"
-
-            hide rori
-            hide gunner
-            with dissolve
 
 
-        "...sorority":
-            #untested
-            $ boygirlfriend = "girlfriend"
-            $ fratsoro = "soro"
-            $ heshe = "she"
-            $ heher = "her"
-            $ hisher = "her"
-            $ himher = "her"
-
-            #n "It seems they're representing a sorority and want you to join."
-            #n "It sure would be embarrasing if you were a guy and they were trying to recruit you. Luckily you're not."
-            #n "...right?"
-            #n "I mean, if you wanted to be a guy you could simply roll back time and check out the fraternity instead."
-            #n "It's as easy as scrolling up on the scroll wheel."
-            #n "Thank you for attending my schizo rant. Now back to what you were doing."
-            n "You give them the courtesy of approaching and at least pretending to be interested in what they have to say."
-
-            show claire sweater neutral at offscreenright:
-                yalign 0
-            show ava normal neutral at offscreenleft:
-                yalign 0
-
-            n "However, as you're walking over, you get intercepted by the two girls from the orientation."
-
-            show claire sweater neutral at norm:
-                xalign 0
-                xpos 400
-            show ava normal neutral at norm:
-                xalign 0
-                xzoom -1
-                xpos -400
-            with move
-
-            claire @ say "Holy Frith, it's you! You were at the thing last night, weren't you?"
-            
-            show ava bored
-
-            ava @ say "She means the orientation."
-            
-            show ava normal neutral
-
-            player "Nope, you must have me confused for the other human around here."
-
-            n "Ava smirks at your joke but Claire seems to take a second to get it."
-
-            claire @ say "Oh..."
-            
-            show claire sweater surprised
-                        
-            claire @ say "Oh!"
-            
-            show claire sweater embarassed
-            
-            claire @ say "Duh!"
-            
-            show claire sweater wave
-            
-            claire @ say "What was your name again? [name]?"
-
-            player "Yeah. And you were... Ava and Claire, right?"
-            
-            show ava excited
-
-            ava @ say "Yup!"
-            
-            show claire sweater neutral
-            show ava normal neutral
-            
-            claire @ say "So what brings you out here, [name]? Looking to join a sorority?"
-
-            player "More like looking for a place to get breakfast, but I ended up here somehow."
-
-            ava @ say "One booth was giving out free donuts but they ran out pretty quick."
-
-            player "Aww..."
-
-            claire @ say "I guess you could say the early bird gets the donut~"
-            
-            show ava portrait neutral
-            
-            ava @ say "Hehe you're not wrong!~"
-            
-            show ava normal neutral
-
-            player "So have you signed up for anything so far?"
-
-            claire @ say "I looked into a bunch of sororities but I can't decide which one to join!"
-
-            ava @ say "I'm not much of a party animal so I just joined the photography club. Thinking about signing up for the cinematography club too."
-
-            player "Sounds fancy. I'm in the same boat as Claire though, I don't know which clubs I'd wanna join."
-
-            ava @ say "I'm sure you'll find something you enjoy!"
-
-            claire @ say "If not, we can make our own club for people who don't know which club to join!"
-
-            player "Hahaha we can call it the breakfast club!"
-
-            claire @ say "Sounds like a plan!"
-
-            player "Well it was nice actually talking with you, but I really do need to get something to eat. I'm sure we'll see each other around campus!"
-
-            claire @ say "Yeah! See ya, [name]!"
-            
-            ava @ say "Good luck on your search!"
-
-            player "Later!"
-
-            hide ava
-            hide claire
-            with dissolve
 
 
     n "You wave goodbye to the two of them and resume your quest. A few restaurants catch your eye, but the long lines accompanying them dissuade you from bothering."
