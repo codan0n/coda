@@ -318,10 +318,13 @@ label college_orientation:
 
     rori @ say "Computer engineering! I've always loved messing around with computers. I taught myself how to program since my high school didn't have any classes for it."
 
+    $ calledRoriNerd = False
+
     menu:
         rori "{cps=0}Computer engineering! I've always loved messing around with computers. I taught myself how to program since my high school didn't have any classes for it.{/cps}"
         "Hahaha nerrrrd":
             $ roriPoints = roriPoints - 1
+            $ calledRoriNerd = True
 
             show rori neutral
 
@@ -416,9 +419,772 @@ label college_orientation:
 
     show ava normal neutral at norm with dissolve
     
-    #ava says she's a bird photographer
+    ava @ say "Um hi...! My name's Ava and, as you might have guessed, I'm a photography major! I often go out into nature and shoot wildlife and landscapes, but I also dabble in street photography."
+    
+    show ava excited at hop
+    
+    ava @ say "I like the idea of capturing rare moments in time that disappear as quickly as they come."
+    #ava @ say "I like the idea of capturing the rarely seen or overlooked aspects of life!"
+    ava @ say "Umm, I don't know what else to say? I just kind of like experimenting and finding new ways to view things."
+
+    hide ava with dissolve
+
+    show ellen teacher neutral at norm with dissolve
+
+    ellen @ say "Very good! Next, how abouuuuutttt..."
+    
+    show ellen with move:
+        xpos -175
+        
+    pause .3
+
+    show ellen teacher neutral at flipright
+    
+    pause .3
+    
+    show ellen with move:
+        ypos 0
+        xzoom -1
+        xpos 110
+        
+    pause .4
+    
+    ellen @ say "You, in the pink sweater!"
+
+    hide ellen with dissolve
+
+    show claire sweater surprised at norm with dissolve:
+        xpos 0
+
+    claire @ say "        Moi?        "
+    
+    show claire sweater derp
+    
+    claire @ say "Hiiiii, my name's Claire and I left my major undecided cause, well, I couldn't decide what to do!"
+    
+    show claire sweater wave
+    
+    claire @ say "Something interesting about myself? I was a cheerleader in high school until I broke my leg, and then I joined the chess team and found out I'm actually pretty good at it??"
+    
+    show claire sweater overjoyed 
+    
+    claire @ say "I got to go to a national tournament once and came in third place!"
+    claire @ say "It was fun but I'm always looking for new things to try!"
+
+    hide claire with dissolve
+
+    show ellen teacher neutral at norm with dissolve:
+        xzoom -1
+        xpos -50
+
+    ellen @ say "Nicely done! We'll do a couple more. Let's see..."
+
+    show ellen teacher neutral at flipleft
+    
+    pause .6
+
+    ellen @ say "Hmm..."
+    ellen @ say "How about you!"
+
+    n "Of course she had to pick you. You pretend to think she's pointing at someone else."
+
+    ellen @ say "Yes, you! We don't bite, I promise!"
+
+    n "You let out a quiet sigh and rise from your seat."
+
+    player "Hi, my name's [name] and I'm also an undecided major, mostly for the same reason. I guess something that's interesting about me is that I'm the last human on Earth."
+    player "Which is probably the reason I got accepted here with a full scholarship, cause it sure wasn't my grades."
+
+    show ellen teacher melancholy
+
+    n "That gets a few chuckles from the room, but Ms. Ellen just glares at you."
+
+    ellen @ say "Yes well... very good, thank you [name]. Moving on."
+    
+    show ellen teacher neutral
+
+    n "Ms. Ellen gives a few more announcements before wrapping up her speech and dismissing you all."
+
+    ellen @ say "I hope you all have a wonderful time at Harmonia! That's all I have for you! You're free to go! Have a nice rest of your evening!"
+
+    hide ellen with dissolve
+    
+    play music "audio/ambient/indoors people talking.ogg" fadein 1.5
+
+    n "It's about time. You were starting to doze off."
+    n "Now that that's out of the way, you can return to your dorm and get your things put away."
+    #n "When you arrived earlier today, the dean himself greeted you and showed you to your dorm, no doubt a gesture mandated by the affirmative action council."
+    #n "When you arrived earlier today, the dean himself greeted you and personally showed you to your dorm, no doubt to make you feel more welcome given your situation."
+    #n "You can't help but feel it was an empty gesture though. He made sure to get you a room all to yourself, as if that wouldn't make you feel more alone."
+    n "On your way out, you overhear some familiar voices."
+
+    show ava normal neutral:
+        xpos 485
+    show claire sweater wave at norm:
+        xzoom -1
+        xpos -350
+    with dissolve
+
+    claire @ say "Hey! Cool camera! Is that a nifty fifty on it?"
+    
+    show ava portrait neutral
+
+    ava @ say "Thanks! I never leave home without it! Fifty millimeter is just so versatile!"
+
+    show claire sweater neutral
+
+    claire @ say "What dorm are you in? I'm in Saint Mary Hall."
+    
+    show ava normal neutral
+
+    ava @ say "No way! I'm in there too! What room number?"
+
+    claire @ say "209A!"
+    
+    show ava excited
+
+    ava @ say "Me too!!!"
+
+    claire @ say "Oh my gosh this is perfect! We're gonna become best friends ksksksks!"
+
+    hide ava
+    hide claire
+    with dissolve
+
+    n "Thank goodness they finally decided to move out of the way. The bunny alone was blocking the double doors leading outside."
+
+    scene bg campus with dissolve
+
+    play music "audio/ambient/outdoors night crickets.ogg" fadein 1.5
+
+    show box with Dissolve(.2):
+        ypos 0
+
+    n "The sun has passed under the horizon but a few remnants of light illuminate the sky."
+    n "You feel exhausted. You're not used to society's hustle and bustle. The tempo is difficult to keep up with after the past few years of keeping to yourself. "
+    n "You're not sure you even want to be here, but you figured it would be a waste not to try. You can always quit and go back home if you hate it that much."
+    n "Some obnoxious noise fills the air, getting louder."
+    n "Oh, it's just a group of people approaching. They appear to be the parents of the other freshmen completing their own tour of the campus."
+    n "As they reunite with their kids, they embrace each other, wave goodbye, and some even shed tears."
+    n "This must be the moment where they see their babies one last time before pushing them out of the nest."
+    n "As you walk past, you overhear them talking about how proud they are of their children and how much they'll miss them."
+    n "Damn, these people need to chill. It's not like they won't see each other again during the holidays. Or they can just call. We have the technology."
+    #n "Everyone's hugging and saying goodbye like they're not just gonna come back home in a few months for Thanksgiving and Christmas."
+    #n "Oh god some of them are even crying."
+    #n "Mostly the moms and some of the sons."
+
+    n "Rori sees you slinking off and calls out your name."
+
+    show rori neutral at norm with dissolve
+
+    rori @ say "Hey! [name]!"
+    rori @ say "Leaving already?"
+
+    player "I don't really have a reason to stick around, do I?"
+
+    rori @ say "Where's your par-"
+
+    show rori anxiety
+
+    rori @ say "...Oh. Sorry."
+
+    #n "You just look at him the same way a janitor would look at a child who was projectile vomitting across three tables in the cafeteria."
+
+    show rori neutral
+
+    rori @ say "A-anyway...! I'm staying in Edgar Hall! What dorm do you live in?"
+
+    player "I'm over in Swanson."
+
+    rori @ say "Ah, I heard that's the rich people's building."
+
+    player "Rich or endangered."
+
+    rori @ say "Hah, yeah I guess..."
+
+    pause .3
+    show rori neutral at flipright
+    pause .95
+    show rori neutral at flipleft
+
+    n "Rori looks around, seemingly unsure of what to say."
+
+    show rori anxiety at shudder
+
+    #rori @ say "M-my parents didn't come either... They just bought me a plane ticket and told me to come back with a degree or don't come back at all."
+    rori @ say "M-my parents didn't come either... They just bought me a plane ticket and told me not to contact them until I had a PhD."
+
+    #n "You didn't ask but whatever."
+
+    player "Wow, that's uh... tough."
+
+    show rori neutral
+
+    rori @ say "They just want to see me succeed. I'd probably live in their basement playing games for the rest of my life if they didn't force me out."
+    rori @ say "But I am actually really excited to have some freedom for once now that I'm no longer under their supervision!"
+
+    player "That's a good attitude to have."
+
+    show rori laughing
+
+    rori @ say "I guess so!"
+
+    show rori neutral
+
+    rori @ say "Well, I guess I'll see you around. I have to unpack my desktop and run some updates."
+    
+    show rori anxiety
+    
+    rori @ say "I haven't had it online in over 48 hours. I hope my package manager doesn't break my xorg session again..."
+
+    if calledRoriNerd == False:
+        menu:
+            "Need some help with that?":
+                $ roriPoints =+ 1
+            
+                player "Need some help with that?"
+                
+                n "Rori thinks for a moment before answering."
+                
+                rori "You know what, sure."
+                rori "When else am I gonna get a chance to show someone my riced out minimal window manager setup?"
+                rori "We can play some games and stuff too."
+                
+                player "Lead the way."
+                
+                call roriDormIntro
+                
+                player "Do you have a roommate? I get the feeling those aren't yours."
+                
+                n "You point to a dumbells in the corner."
+                
+                player "Plus the whole bunk bed setup."
+                
+                rori @ say "Hm? Oh yeah, those are my jock roommate's. He's a sophomore so he didn't have to do the orientation today."
+                rori @ say "He's probably out at some party right now, I dunno."
+                
+                player "Probably crushing pussy while we hook up a gaming computer."
+                
+                rori @ say "Now lets see if this works. I'm a bit worried about my SSD's firmware acting janky after the last update."
+                        
+                n "Rori goes over to the desk and hooks up a few wires to the desktop tower. When he presses the power button, a rainbow of LEDS shine through the glass panel of the case."
+                n "A moment later, the monitor wakes up and a stream of debug messages scrolls across the monitor."
+                n "It stops and prompts him to enter a password. You avert your eyes out of respect for his privacy."
+                n "Yet you can't help but notice the rapid fire clattering of his mechanical keyboard goes on for half a minute before he presses the enter key."
+                
+                player "Damn, your password must be longer than the Pentagon's. What you hiding on that hard drive?"
+                
+                n "Rori pushes up his glasses and smirks."
+                
+                rori @ say "16 terabytes of anime bluray rips, 4.5 terabytes of games, 750 gigabytes of jpop, and a couple gigs of source code."
+                
+                player "All legally acquired?"
+    
+                rori @ say "Legal in my VPN's host country!"
+                
+                player "Nice."
+                
+                rori @ say "Oh what the hell is this?"
+                rori @ say "Error: Cryptsetup couldn't resolve device. /dev/nvme0n1p3 is not a valid LUKS device."
+                rori @ say "It was working fine 2 days ago."
+                
+                player "RIP."
+                
+                rori @ say "Ugh, I'm gonna have to load up a live CD and chroot into this and dig around to find the problem."
+                
+                player "Average linux boot process."
+                
+                rori @ say "Haha yeah... Sorry about this but I doubt I'll be able to get this running tonight."
+                
+                player "Does this mean no games?"
+                
+                n "Rori looks down sadly."
+                
+                rori @ say "No games."
+
+                player "What about that?"
+                
+                n "You point to a console shoved under the desk."
+                
+                rori @ say "The PS3? I use it as a blueyray player."
+                
+                player "Doesn't it play games too?"
+                
+                rori @ say "What games?"
+                
+                player "Damn, you're right."
+                
+                rori @ say "I'll have this computer fixed and ready to go next time, I swear. I think something might have gotten corrupted during transport."
+                
+                player "It's alright. It's pretty late and it's been a long day anyway. I'm just gonna go to my dorm and sleep."
+                player "See you around, dude."
+                
+                rori @ say "Laters!"
+                
+                jump playerDormOrientationDay
+                
+            "Have fun with that.":
+                player "Have fun with that. Later."
+                
+                jump afterRoriOrientationDay
+    else:
+        player "Have fun with that. Later."
+        
+        jump afterRoriOrientationDay
+
+label afterRoriOrientationDay:
+    hide rori with dissolve
+
+    n "He waves goodbye as he walks off to Edgar Hall. You head in the opposite direction to your own dorm."
+
+    #show bg static1
+
+    #pause .02
+
+    #show bg campus
+
+    #n "You feel like you could fall asleep any minute now."
+    #n "Better hurry to your dorm before you faceplant into the ground. Thankfully it's not too far away."
+
+label playerDormOrientationDay:
+    stop music fadeout 1.5
+
+    scene bg codadorm with fade
+
+    show box with Dissolve(.2):
+        ypos 0
+
+    n "You can't entirely recall how you got here but you made it."
+    n "Home sweet home for the next four years."
+    n "You had packed as much from home as you could carry in your suitcases but haven't had a chance to unpack yet."
+    n "It'll have to wait until tomorrow. You're way too tired to bother with it right now."
+    n "Without even bothering to kick off your shoes, you flop directly onto your bed and instantly fall asleep."
+
+    hide box
+
+    scene bg black with fade
+
+    hide box
+
+    show bg calendar
+    show tsaturday at norm
+    with Dissolve(.5)
+
+    pause .6
+    show tforwardslash
+    pause .2
+    show tbackslash
+
+    pause .7
+    
+    #___sunday1
+
+label exploring_campus:
+    scene bg codadorm with fade
+
+    show box with Dissolve(.2):
+        ypos 0
+
+    play music "audio/ambient/morning birds.ogg" fadein 0.1
+
+    n "It's already around noon by the time you wake up."
+    n "Luckily classes don't start until tomorrow, so you can get away with sleeping in. For now."
+    n "You'll have to sort out your sleep schedule the painful way soon."
+    n "However, your primary concern at the moment is the breakfast situation."
+    n "You've subsisted on nothign but granola bars during your journey to Harmonia, and it's high time you got a warm meal."
+    n "You roll out of bed and take a quick shower, impatiently doing the bare minimum to make yourself presentable before heading out to find some food."
+
+    stop music fadeout 1.0
+
+    scene bg campus with fade
+
+    play music "audio/music/vylet - there.ogg" fadein .5
+
+    show box with Dissolve(.2):
+        ypos 0
+
+    n "It's a bright and sunny day with students bumbling about... {i}socializing{/i}, as if their normie instincts extract vital nourishment from it."
+    n "You unfortunately stumble into what must be the hub of social activity on campus today: club registration."
+    n "Booths line the street with banners advertising the different clubs and organizations the university has to offer."
+    n "There's one for the botany club, debate club, algae bee tea club,  {a=https://4chan.org/trash/hmofa}/hmofa/{/a} club, anime club, vidya club, golf club, and so on."
+    n "Going straight across is the quickest way to the restaurants, so you head in with your eyes forward."
+    n "You know the moment you look at any of them, some representative will drag you into an involuntary conversation."
+    
+    
+    # make random 50/50 whether you bump into ava and claire or gunner
+    
+
+    $ randumb = renpy.random.randint(0, 1)
+    
+    #for testing
+    n "random number is [randumb]"
+    
+    if randum == 0:
+        "do claire's scene"
+    else:
+        "do gunner's scene"
+
+    
+    
+    menu:
+        n "{cps=0}It seems they're representing a...{/cps=0}"
+        "...fraternity":
+            #writing done
+            $ boygirlfriend = "boyfriend"
+            $ fratsoro = "frat"
+            $ heshe = "he"
+            $ heher = "he"
+            $ hisher = "his"
+            $ himher = "him"
+            
+            #n "It seems they're representing a fraternity and want you to join."
+            #n "It sure would be embarrasing if you were a girl and they were trying to recruit you. Luckily you're not."
+            #n "...right?"
+            #n "I mean, if you wanted to be a girl you could simply roll back time and check out the sorority instead."
+            #n "It's as easy as scrolling up on the scroll wheel."
+            #n "Thank you for attending my schizo rant. Now back to what you were doing."
+            n "You give them the courtesy of approaching and at least pretending to be interested in what they have to say."
+
+            show gunner neutral at norm with dissolve
+
+            gunner @ say "Hey there! I saw you checkin' out the frats and thought you should know Alpha Alpha Alpha is the best one!"
+
+            player "Alpha Alpha Alpha? Is that the best name you could come up with?"
+
+            gunner @ say "It's cause only alpha males are allowed in. Are you a bad enough dude to join?"
+            
+            player "I personally identify as a sigma male but do go on."
+            
+            gunner @ say "No worries, we like totally respect your pronouns or whatever. Name's Gunner by the way!"
+            #gunner @ say "No worries, we like totally respect your pronouns or whatever stupid bullshit you believe in. Name's Gunner by the way!"
+
+            player "So what exactly do you do in a frat?"
+
+            gunner @ say "Haze new members, drink cheap beer, hit on sorority chicks and..."
+            gunner @ say "Hold that thought, I think I see my new roommate over there."
+            gunner @ say "Roriiii! Over here!"
+
+            show rori neutral:
+                yalign 0
+                xpos -1500
+
+            n "You look over your shoulder and spot the shy ram you met yesterday reluctantly approaching."
+
+            show rori neutral:
+                xzoom -1
+                xpos -400
+            show gunner:
+                xpos 350
+            with move
+
+            rori @ say "Gunner? You're recruiting for your frat?"
+
+            gunner @ say "You bet! And look who was interested in joining!"
+
+            rori @ say "Hey, it's you! We met at the orientation last night, remember?"
+
+            gunner @ say "This must be the guy you were telling me about earlier."
+            gunner @ say "[name], was it?"
+
+            player "The one and only."
+
+            gunner @ say "A pleasure to meet you [name]! I can already tell we're gonna be great buddies!"
+
+            n "Gunner holds out his fist."
+            n "As is customary, you are forced to give him a fist bump."
+
+            player "So you two are roommates? You think they put people who are polar opposites in the same room together on purpose?"
+
+            gunner @ say "What? No, Rori's cool like me. I used to be introverted too until I joined the soccer team back in middle school!"
+            gunner @ say "But my dad made me quit because he said it was a made up sport to keep European ladies busy."
+            gunner @ say "Anyway I'm gonna take Rori here to the gym this week so he can pass the minimum requirements for being an Alpha!"
+
+            player "And that is...?"
+
+            gunner @ say "Bench 2 plates or squat 3. Pretty easy stuff honestly. I should be able to whip this ram into shape in just a couple weeks if we hit up the gym everyday for a few hours."
+
+            show rori anxiety
+            
+            rori @ say "That would really cut into my programming time a-and not to mention I seriously doubt I share the same hobbies as you 'Alphas' and and-"
+
+            gunner @ say "You're into gaming, right? You should play the new Call of Battlefield: Modern Football with us!"
+
+            show rori anxiety at shudder
+
+            n "Rori visibly cringes."
+
+            show rori neutral
+
+            player "Well it looks like you've found your newest recruit, Gunner."
+            player "Have fun being an Alpha, Rori!"
+
+            n "Thanks to Rori's distraction, you're able to make your escape and continue your search for breakfast."
+
+            show rori anxiety
+
+            rori @ say "Hey w-wait! Don't leave me alone with this normie!"
+
+            hide rori
+            hide gunner
+            with dissolve
 
 
+        "...sorority":
+            #untested
+            $ boygirlfriend = "girlfriend"
+            $ fratsoro = "soro"
+            $ heshe = "she"
+            $ heher = "her"
+            $ hisher = "her"
+            $ himher = "her"
+
+            #n "It seems they're representing a sorority and want you to join."
+            #n "It sure would be embarrasing if you were a guy and they were trying to recruit you. Luckily you're not."
+            #n "...right?"
+            #n "I mean, if you wanted to be a guy you could simply roll back time and check out the fraternity instead."
+            #n "It's as easy as scrolling up on the scroll wheel."
+            #n "Thank you for attending my schizo rant. Now back to what you were doing."
+            n "You give them the courtesy of approaching and at least pretending to be interested in what they have to say."
+
+            show claire sweater neutral at offscreenright:
+                yalign 0
+            show ava normal neutral at offscreenleft:
+                yalign 0
+
+            n "However, as you're walking over, you get intercepted by the two girls from the orientation."
+
+            show claire sweater neutral at norm:
+                xalign 0
+                xpos 400
+            show ava normal neutral at norm:
+                xalign 0
+                xzoom -1
+                xpos -400
+            with move
+
+            claire @ say "Holy Frith, it's you! You were at the thing last night, weren't you?"
+            
+            show ava bored
+
+            ava @ say "She means the orientation."
+            
+            show ava normal neutral
+
+            player "Nope, you must have me confused for the other human around here."
+
+            n "Ava smirks at your joke but Claire seems to take a second to get it."
+
+            claire @ say "Oh..."
+            
+            show claire sweater surprised
+                        
+            claire @ say "Oh!"
+            
+            show claire sweater embarassed
+            
+            claire @ say "Duh!"
+            
+            show claire sweater wave
+            
+            claire @ say "What was your name again? [name]?"
+
+            player "Yeah. And you were... Ava and Claire, right?"
+            
+            show ava excited
+
+            ava @ say "Yup!"
+            
+            show claire sweater neutral
+            show ava normal neutral
+            
+            claire @ say "So what brings you out here, [name]? Looking to join a sorority?"
+
+            player "More like looking for a place to get breakfast, but I ended up here somehow."
+
+            ava @ say "One booth was giving out free donuts but they ran out pretty quick."
+
+            player "Aww..."
+
+            claire @ say "I guess you could say the early bird gets the donut~"
+            
+            show ava portrait neutral
+            
+            ava @ say "Hehe you're not wrong!~"
+            
+            show ava normal neutral
+
+            player "So have you signed up for anything so far?"
+
+            claire @ say "I looked into a bunch of sororities but I can't decide which one to join!"
+
+            ava @ say "I'm not much of a party animal so I just joined the photography club. Thinking about signing up for the cinematography club too."
+
+            player "Sounds fancy. I'm in the same boat as Claire though, I don't know which clubs I'd wanna join."
+
+            ava @ say "I'm sure you'll find something you enjoy!"
+
+            claire @ say "If not, we can make our own club for people who don't know which club to join!"
+
+            player "Hahaha we can call it the breakfast club!"
+
+            claire @ say "Sounds like a plan!"
+
+            player "Well it was nice actually talking with you, but I really do need to get something to eat. I'm sure we'll see each other around campus!"
+
+            claire @ say "Yeah! See ya, [name]!"
+            
+            ava @ say "Good luck on your search!"
+
+            player "Later!"
+
+            hide ava
+            hide claire
+            with dissolve
+
+
+    n "You wave goodbye to the two of them and resume your quest. A few restaurants catch your eye, but the long lines accompanying them dissuade you from bothering."
+    n "Eventually you come across an unassuming cafe hidden behind the library building that doesn't look crowded as hell. The smell of coffee and bagels draws you in."
+
+    stop music fadeout 1.3
+
+    scene bg cafe with fade
+
+    #play music "audio/music/mere - coffeeLoveIntro.exe.ogg" 
+    play music "audio/music/mere - coffeeLoveIntro.exe.ogg" 
+
+    show box with Dissolve(.2):
+        ypos 0
+
+    #n "Smooth jazzy music plays from speakers mounted on the walls. Thank raptor Jesus it's not the obnoxious music they blast at  so loud you can't even hear the barista call your name."
+    n "After giving the menu a look, you decide what you want and walk up to the counter."
+
+    show mishka neutral at norm with dissolve
+
+    mishka @ say "Privyet, welcome to Coffee Zona..."
+    
+    #show mishka derp
+    
+    mishka @ say "...er, Zone!"
+    
+    show mishka neutral
+    
+    mishka @ say "How can I help you?"
+
+    player "Yeah can I get uhh...."
+
+    n "You give the barista your order and pay with your debit card."
+
+    mishka @ say "And can I get name for you?"
+    mishka @ say  "Not that I really need it since we're the only ones in here."
+    mishka @ say "But it would be nice to have irregardless."
+
+    player "      [name].      "
+
+    mishka @ say "Alright [name], I'll have that your order ready for you soon!"
+
+    player "Thanks uhh..."
+
+    n "You look down at her nametag."
+
+    if roriPoints < 0:
+        n "It's in cyrillic."
+    
+        player "Thanks ...Mnwka? I don't know how to say that."
+        
+        show mishka depressed
+        
+        mishka @ say "It's Mishka."
+        
+        show mishka neutral
+        
+        n "She begins working on your order while continuing the conversation."
+        
+        mishka @ say "I don't recall seeing you before. You must be new student."
+    
+    else:
+        player "Thanks, Mishka! Am I saying that right?"
+
+        mishka @ say "Yup! Not many Mishkas around here, are there?"
+
+        player "Nope, you're the first I've ever met. Then again, I did just move here."
+
+        n "She begins working on your order while continuing the conversation."
+
+        mishka @ say "Oh? Are you new student?"
+
+    player "Yeah. Can't decide what to major in though."
+
+    mishka @ say "It can be tough choice to make. I wouldn't stress about it though, most people find something after semester or two."
+
+    player "I sure hope so. I wasn't really planning on going to college in the first place, but I also wasn't planning on not going, you know?"
+    player "But now I'm here and I still don't know what I'm doing."
+
+    mishka @ say "Many students feel the same way. Life can be that way sometimes. You just have to make best of it while you're here."
+    mishka @ say "For now, enjoy coffee and bagels!"
+
+    n "Mishka hands you a steaming hot cup and a bag."
+
+    player "Thanks! And I appreciate the advice!"
+    
+    show mishka overjoyed
+
+    mishka @ say "Nyema problyema! Come back soon, it gets pretty lonely here!"
+    
+    show mishka neutral
+
+    player "For sure!"
+
+    hide mishka with dissolve
+
+    pause .3
+
+    stop music fadeout 1.0
+
+    scene bg campus with dissolve
+
+    play music "audio/ambient/outdoors people talking.ogg" fadein .5
+
+    show box with Dissolve(.2):
+        ypos 0
+
+    n "You walk out the door, feeling somewhat uplifted by the barista's wise words, and find a place to sit and enjoy your breakfast."
+    n "A light breeze passes by as you bite into your bagel and watch the other students walking around."
+    n "It's pretty easy to pick out who's a freshman like you and who's been here for a while."
+    n "The new people are still basically high schoolers at this point. Practically still kids, and it shows in the way they carry themselves."
+    n "Unsure about the world but excited about all the possibilities."
+    n "The upperclassmen on the other hand seem a bit more grizzled, beaten down by the world but tougher for it."
+    n "Less optimistic, more realistic."
+    n "Man."
+    n "To be honest, you're kinda glad you're back in school."
+    n "The past few years hadn't been kind to you. You basically had to drop out of high school to take care of your parents in their final moments."
+    n "It'll be nice going back to a structured life with classes but with the added freedom of being a \"\"\"real\"\"\" adult."
+    n "You finish up your meal, gathering your scraps and throwing them away as you ponder what to do with the rest of your day."
+    if fratsoro == "frat":
+        n "Maybe you'll just go back to your dorm and post on your favorite Lithuanian underwater basketweaving forum in bed for a while."
+    else:
+        n "Maybe you'll just go back to your dorm and post on your favorite Turkish astral projection forum in bed for a while."
+    n "Yeah, that sounds like a good idea."
+
+    stop music fadeout 1.0
+
+    hide box
+
+    scene bg black with fade
+
+    hide box
+
+    show bg calendar
+    show tsunday at norm
+    with Dissolve(.5)
+
+    pause .6
+    show tforwardslash
+    pause .2
+    show tbackslash
+
+    pause .7
+
+    
 
 
 
