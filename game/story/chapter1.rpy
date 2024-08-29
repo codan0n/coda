@@ -978,7 +978,7 @@ label exploring_campus:
         
         player "I actually wasn't and I don't really care about fraternities."
         
-        gunner @ say "That's just the sort of thing an Alpha male would say!"
+        gunner @ say "That's just the sort of thing an Alpha would say!"
         
         player "I personally identify as a sigma male but okay."
         
@@ -1113,7 +1113,10 @@ label exploring_campus:
         ypos 0
 
     #n "Smooth jazzy music plays from speakers mounted on the walls. Thank raptor Jesus it's not the obnoxious music they blast at  so loud you can't even hear the barista call your name."
-    n "After giving the menu a look, you decide what you want and walk up to the counter."
+    n "The interior is dim and so quiet you can hear your footsteps echo. You'd think it was abandoned if not for the barista watering a plant at the counter."
+    n "Written on the chalkboard on the far end of the room is a phrase in cyrillic and underneath is the menu, thankfully in English."
+    #n "Calming music plays from the speakers mounted to the walls. This would be a nice place to study."
+    n "After giving it a lookover, you decide what you want and walk up to place your order."
 
     show mishka neutral at norm with dissolve
 
@@ -1129,45 +1132,60 @@ label exploring_campus:
 
     player "Yeah can I get uhh...."
 
-    n "You give the barista your order and pay with your debit card."
+    n "You give the barista your order and swipe your card on the machine."
 
-    mishka @ say "And can I get name for you?"
-    mishka @ say  "Not that I really need it since we're the only ones in here."
+    mishka @ say "And can I get a name for you?"
+    mishka @ say "Not that I really need it since we're the only ones in here."
     mishka @ say "But it would be nice to have irregardless."
 
     player "      [name].      "
 
-    mishka @ say "Alright [name], I'll have that your order ready for you soon!"
+    mishka @ say "Alright [name], I'll have your order ready for you soon!"
 
     player "Thanks uhh..."
 
     n "You look down at her nametag."
-
-    if roriPoints < 0:
-        n "It's in cyrillic."
+    n "It's in cyrillic."
+    n "{font=ahellya.ttf}Мишка{/font}"
     
-        player "Thanks ...Mnwka? I don't know how to say that."
+    menu:
+        "Myewka?":
+            player "Thanks ...Myewka? I don't know how to say that."
         
-        show mishka depressed
+            show mishka depressed
+            
+            mishka @ say "It's Mishka."
+            
+            show mishka neutral
+            
+            n "She begins working on your order while continuing the conversation."
+            
+            mishka @ say "I don't recall seeing you before. You must be new student."
+        "Mnyeka?":
+            player "Thanks ...Mnyeka? I don't know how to say that."
         
-        mishka @ say "It's Mishka."
-        
-        show mishka neutral
-        
-        n "She begins working on your order while continuing the conversation."
-        
-        mishka @ say "I don't recall seeing you before. You must be new student."
-    
-    else:
-        player "Thanks, Mishka! Am I saying that right?"
+            show mishka depressed
+            
+            mishka @ say "It's Mishka."
+            
+            show mishka neutral
+            
+            n "She begins working on your order while continuing the conversation."
+            
+            mishka @ say "I don't recall seeing you before. You must be new student."
+        #"{font=ahellya.ttf}Мишка{/font}":
+        "Meeshka":
+            n "You've pirated enough Russian malware to be able to sound out the letters."
+            
+            player "Thanks uhh, Meesh...ka! Am I saying that right?"
 
-        mishka @ say "Yup! Not many Mishkas around here, are there?"
+            mishka @ say "Yup! Not many Mishkas around here, are there?"
 
-        player "Nope, you're the first I've ever met. Then again, I did just move here."
+            player "Nope, you're the first I've ever met. Then again, I did just move here."
 
-        n "She begins working on your order while continuing the conversation."
+            n "She begins working on your order while continuing the conversation."
 
-        mishka @ say "Oh? Are you new student?"
+            mishka @ say "Oh? Are you new student?"
 
     player "Yeah. Can't decide what to major in though."
 
@@ -1176,10 +1194,10 @@ label exploring_campus:
     player "I sure hope so. I wasn't really planning on going to college in the first place, but I also wasn't planning on not going, you know?"
     player "But now I'm here and I still don't know what I'm doing."
 
-    mishka @ say "Many students feel the same way. Life can be that way sometimes. You just have to make best of it while you're here."
-    mishka @ say "For now, enjoy coffee and bagels!"
+    mishka @ say "Many students feel same way. Life can be that way sometimes. You just have to make the best of it while you're here."
+    mishka @ say "For now, enjoy coffee and blini!"
 
-    n "Mishka hands you a steaming hot cup and a bag."
+    n "Mishka hands you a steaming hot cup and a box."
 
     player "Thanks! And I appreciate the advice!"
     
@@ -1204,8 +1222,9 @@ label exploring_campus:
     show box with Dissolve(.2):
         ypos 0
 
-    n "You walk out the door, feeling somewhat uplifted by the barista's wise words, and find a place to sit and enjoy your breakfast."
-    n "A light breeze passes by as you bite into your bagel and watch the other students walking around."
+    n "You walk out the door, feeling somewhat uplifted by the barista's words, and find a place to sit and enjoy your breakfast."
+    n "A light breeze passes by as you open your box and stab a fork into your pancakes."
+    n "You take a sip of coffee and watch the other students walking around."
     n "It's pretty easy to pick out who's a freshman like you and who's been here for a while."
     n "The new people are still basically high schoolers at this point. Practically still kids, and it shows in the way they carry themselves."
     n "Unsure about the world but excited about all the possibilities."
@@ -1216,9 +1235,12 @@ label exploring_campus:
     n "The past few years hadn't been kind to you. You basically had to drop out of high school to take care of your parents in their final moments."
     n "It'll be nice going back to a structured life with classes but with the added freedom of being a \"\"\"real\"\"\" adult."
     n "You finish up your meal, gathering your scraps and throwing them away as you ponder what to do with the rest of your day."
-    if fratsoro == "frat":
+    
+    
+    
+    
+    
         n "Maybe you'll just go back to your dorm and post on your favorite Lithuanian underwater basketweaving forum in bed for a while."
-    else:
         n "Maybe you'll just go back to your dorm and post on your favorite Turkish astral projection forum in bed for a while."
     n "Yeah, that sounds like a good idea."
 
