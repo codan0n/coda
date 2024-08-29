@@ -646,8 +646,8 @@ label college_orientation:
                 
                 n "Rori thinks for a moment before answering."
                 
-                rori "You know what, sure."
-                rori "When else am I gonna get a chance to show someone my riced out minimal window manager setup?"
+                rori "Hmm... I usually don't have people over but..."
+                rori "When else am I gonna get a chance to show off my riced out minimal window manager setup?"
                 rori "We can play some games and stuff too."
                 
                 player "Lead the way."
@@ -816,7 +816,6 @@ label exploring_campus:
     #n "random number is [randumb]"
     
     if randumb == 0:
-        #"do claire's scene"
         n "You almost managed to get to the end without being harassed by anybody."
         n "Surprisingly it wasn't a booth attendant, rather it's the chatty girls you saw the day prior."
         
@@ -889,7 +888,7 @@ label exploring_campus:
 
         claire @ say "I looked into a bunch but I can't decide which one to join!"
 
-        ava @ say "I'm not much of a party animal so I just joined the photography club. Thinking about signing up for the cinematography club too. What about you?"
+        ava @ say "I just went for the obvious one and joined the photography club. Thinking about signing up for the cinematography club too. What about you?"
 
         player "I'm not really interested in any of them."
         
@@ -904,144 +903,210 @@ label exploring_campus:
         
         ava @ say "Pass."
         
+        claire @ say "Aww, you're no fun."
+        claire @ say "What about you, [name]?"
         
-        
-        
-        
-        
-        
-
+        menu:
+            "Yah":
+                $ clairePoints =+ 1
+                
+                player "You know what, sure, sign me up."
+                player "Should be funny when they realize I'm not a girl and kick me out."
+                
+                claire @ say "No way, you could totally pass for a girl with a little makeup!"
+                
+                player "Uh, thanks..."
+                
+                #claire @ say "That's the spirit!"
+                
+                player "You handle the forms though, I have to run."
+                
+                n "Ava rolls her eyes while Claire squeals in excitement."
+                
+                claire @ say "Eeeeeee it's gonna be so fun! Ava you're gonna regret not joining!"
+                
+                ava @ say "If you say so. We'll see you around, [name]!"
+                
+                player "Yeah, later guys."
+                
+                claire @ say "Byeeeee!!!"
+                
+            "Nah":
+                player "Nah."
+                
+                claire @ say "Can't a bun have a little fun?"
+                
+                ava @ say "No one's stopping you from joining on your own, you know."
+                
+                claire @ say "But I'll be lonely ;^;"
+                
+                ava @ say "Isn't the point of joining one so you *won't* be alone?"
+                
+                claire @ say "I wanna be around my friends though."
+                
+                ava @ say "Then make some in the sorority!"
+                
+                claire @ say "But what if they don't like me?"
+                
+                ava @ say "Oh trust me, I think you'll fit right in."
+                
+                claire @ say "Really?"
+                
+                n "Claire looks to you sympathetically."
+                n "Your stomach is roaring, demanding that you escape this mundane conversation and go find sustenance."
+                
+                player "Yeah you'd make a great sorority girl. Lemme know how it goes, I have to run for now."
+                
+                n "Claire quits pouting and instantly brightens up."
+                
+                claire @ say "Sure! See you around, [name]!"
+                
+                ava @ say "Later!"
+                
+                #n "You wave goodbye to them and hurry away before someone else distracts you from your mission."
         
         hide ava
         hide claire
         with dissolve
-    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
     else:
-        #"do gunner's scene"
         n "You almost made it to the end without getting poached by some aggressive salesman."
         
         show gunner neutral at norm with dissolve
 
         gunner @ say "Hey there! I saw you checkin' out the frats and thought you should know Alpha Alpha Alpha is the best one!"
-
-        player "Alpha Alpha Alpha? Is that the best name you could come up with?"
-
-        gunner @ say "It's cause only alpha males are allowed in. Are you a bad enough dude to join?"
         
-        player "I personally identify as a sigma male but do go on."
+        player "I actually wasn't and I don't really care about fraternities."
+        
+        gunner @ say "That's just the sort of thing an Alpha male would say!"
+        
+        player "I personally identify as a sigma male but okay."
         
         gunner @ say "No worries, we like totally respect your pronouns or whatever. Name's Gunner by the way!"
         #gunner @ say "No worries, we like totally respect your pronouns or whatever stupid bullshit you believe in. Name's Gunner by the way!"
-
-        player "So what exactly do you do in a frat?"
-
-        gunner @ say "Haze new members, drink cheap beer, hit on sorority chicks and..."
-        gunner @ say "Hold that thought, I think I see my new roommate over there."
-        gunner @ say "Roriiii! Over here!"
-
-        show rori neutral:
-            yalign 0
-            xpos -1500
-
-        n "You look over your shoulder and spot the shy ram you met yesterday reluctantly approaching."
-
+        
+        player "[name]. Now if you'll excuse me."
+        
+        gunner @ say "The strong stoic type, I see! You'd fit right in!"
+        
+        n "Gunner steps in front of you and blocks your path, waving a clipboard and pen in your face."
+        
+        gunner @ say "So what do you say? Are you a bad enough dude to join?"
+        
+        player "Not particularly."
+        
+        n "You attempt to maneuver around the cat only to bump into someone else."
+        
         show rori neutral:
             xzoom -1
             xpos -400
-        show gunner:
-            xpos 350
-        with move
-
-        rori @ say "Gunner? You're recruiting for your frat?"
         
+        rori @ say "Oh, hello again [name]!"
+        rori @ say "I see you've met my roommate."
         
-        #gunner tries to get rori to join frat by saying there are lots of hot dudes
+        gunner @ say "Rori! I'm begging you, join my frat!"
+        gunner @ say "If I don't get enough new recruits, they're gonna duct tape me to the ceiling again!"
         
+        rori @ say "Hrm... already doesn't sound like it's for me."
+        rori @ say "What do you even do in a frat?"
 
-        gunner @ say "You bet! And look who was interested in joining!"
-
-        rori @ say "Hey, it's you! We met at the orientation last night, remember?"
-
-        gunner @ say "This must be the guy you were telling me about earlier."
-        gunner @ say "[name], was it?"
-
-        player "The one and only."
-
-        gunner @ say "A pleasure to meet you [name]! I can already tell we're gonna be great buddies!"
-
-        n "Gunner holds out his fist."
-        n "As is customary, you are forced to give him a fist bump."
-
-        player "So you two are roommates? You think they put people who are polar opposites in the same room together on purpose?"
-
-        gunner @ say "What? No, Rori's cool like me. I used to be introverted too until I joined the soccer team back in middle school!"
-        gunner @ say "But my dad made me quit because he said it was a made up sport to keep European ladies busy."
-        gunner @ say "Anyway I'm gonna take Rori here to the gym this week so he can pass the minimum requirements for being an Alpha!"
-
-        player "And that is...?"
-
-        gunner @ say "Bench 2 plates or squat 3. Pretty easy stuff honestly. I should be able to whip this ram into shape in just a couple weeks if we hit up the gym everyday for a few hours."
-
-        show rori anxiety
+        gunner @ say "Let's see, we uh... haze new members, drink cheap beer, hit on sorority chicks, play sports..."
         
-        rori @ say "That would really cut into my programming time a-and not to mention I seriously doubt I share the same hobbies as you 'Alphas' and and-"
-
-        gunner @ say "You're into gaming, right? You should play the new Call of Battlefield: Modern Football with us!"
-
-        show rori anxiety at shudder
-
-        n "Rori visibly cringes."
-
-        show rori neutral
-
-        player "Well it looks like you've found your newest recruit, Gunner."
-        player "Have fun being an Alpha, Rori!"
-
-        n "Thanks to Rori's distraction, you're able to make your escape and continue your search for breakfast."
-
-        show rori anxiety
-
-        rori @ say "Hey w-wait! Don't leave me alone with this normie!"
-
+        rori @ say "Right... I don't think any of that appeals to me."
+        
+        gunner @ say "There's also a bunch of hot guys and stuff."
+        
+        rori @ say "Wha-? I-I don't see what that has to do with anything!"
+        
+        gunner @ say "Come on dude, I saw the kind of anime you watch."
+        
+        rori @ say "..."
+        
+        n "Rori tenses up but doesn't say anything. He's like a deer in headlights, except he's a ram and the headlights are an accusation of being gay."
+        
+        menu:
+            "Which anime?":
+                player "Which anime was it?"
+                
+                gunner @ say "The one with all the buff dudes and magic powers that are also buff dudes half the time."
+                
+                player "Jojo's Weird Adventure?"
+                
+                n "Rori nods his head."
+                n "Damn, you thought you could defend him but that one is undoubtedly pretty gay."
+                
+                gunner @ say "Hahahaha if that's your type there's plenty of jacked Alpha guys. They practically live at the gym."
+            "Lay off him, dude":
+                $roriPoints =+ 1
+                
+                player "So what? Lay off him, dude."
+                
+                n "Gunner puts his paws up innocently and scoffs."
+                
+                gunner @ say "Relax, it's just a bit of banter."
+                gunner @ say "Seriously though, some Alphas are jacked. They practically live at the gym."
+                
+        rori @ say "Thanks for the offer but I'm more into... sensitive guys I guess?"
+        
+        gunner @ say "Like... feelings? Yeah I dunno if they're good at that."
+        gunner @ say "Look, can I just put your names down? You don't have to show up but the more people who sign on, the more money we get."
+        gunner @ say "You'll get access to benefits like sports tickets and exclusive parties and stuff. Oh and we have monthly game tournaments!"
+        
+        n "That last part caught Rori's attention."
+        
+        rori @ say "Tournaments? What do you play?"
+        
+        gunner @ say "Usually the yearly Call of Battlefield: Modern Football but sometimes someone will bring in some weird ass Japanese game none of us have ever heard of hahaha!"
+        
+        n "Rori looks disappointed then shrugs."
+        
+        rori @ say "Fine, whatever. At least I can probably sell the sports tickets."
+        
+        gunner @ say "Sweet! Just sign here! And if I come across any uhh... emotional guys? I'll send them your way!"
+        
+        rori @ say "Suuuure..."
+        
+        gunner @ say "What about you? You down?"
+        
+        menu:
+            "Join":
+                player "Yeah but only for the free stuff."
+                
+                n "You take the clipboard and lazily scribble your name somewhere on it."
+                
+                gunner @ say "Yes! You won't regret it!"
+                
+                n "Gunner holds out his fist."
+                n "As is customary, you are forced to give him a fist bump."
+                
+                player "I better not."
+            
+            "Don't join":
+                player "Nah, I'd rather not."
+                
+                n "Gunner's ear flicks in annoyance."
+                
+                gunner @ say "Suit yourself."
+                
+        player "Now if you're done wasting my time, I have breakfast to catch."
+                
+        gunner @ say "No problem dude. I'll see you around!"
+        
+        rori @ say "See you later, [name]!"
+        
         hide rori
         hide gunner
         with dissolve
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-    n "You wave goodbye to the two of them and resume your quest. A few restaurants catch your eye, but the long lines accompanying them dissuade you from bothering."
-    n "Eventually you come across an unassuming cafe hidden behind the library building that doesn't look crowded as hell. The smell of coffee and bagels draws you in."
+        
+    n "You wave goodbye to the duo and hurry away before someone else distracts you from your mission."
+    n "A few restaurants catch your eye, but the long lines accompanying them dissuade you from bothering with them."
+    n "You weren't about to escape one crowd only to end up in another."
+    n "When all hope seemed lost, the scent of coffee and bagels in the air came to your rescue, leading you to a small building hidden behind the library."
 
     stop music fadeout 1.3
 
     scene bg cafe with fade
 
-    #play music "audio/music/mere - coffeeLoveIntro.exe.ogg" 
     play music "audio/music/mere - coffeeLoveIntro.exe.ogg" 
 
     show box with Dissolve(.2):
