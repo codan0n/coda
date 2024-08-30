@@ -809,6 +809,8 @@ label exploring_campus:
     n "There's one for the botany club, debate club, algae bee tea club,  {a=https://4chan.org/trash/hmofa}/hmofa/{/a} club, anime club, vidya club, golf club, and so on."
     n "Going straight across is the quickest way to the restaurants, so you head in with your eyes forward."
     n "You know the moment you look at any of them, some representative will drag you into an involuntary conversation."
+    
+    $ metGunner = False
 
     $ randumb = renpy.random.randint(0, 1)
     
@@ -970,6 +972,7 @@ label exploring_campus:
         with dissolve
         
     else:
+        $ metGunner = True
         n "You almost made it to the end without getting poached by some aggressive salesman."
         
         show gunner neutral at norm with dissolve
@@ -1028,7 +1031,7 @@ label exploring_campus:
             "Which anime?":
                 player "Which anime was it?"
                 
-                gunner @ say "The one with all the buff dudes and magic powers that are also buff dudes half the time."
+                gunner @ say "The one with all the buff dudes with ghosts that punch really fast and are also buff dudes half the time."
                 
                 player "Jojo's Weird Adventure?"
                 
@@ -1233,17 +1236,17 @@ label exploring_campus:
     n "Man."
     n "To be honest, you're kinda glad you're back in school."
     n "The past few years hadn't been kind to you. You basically had to drop out of high school to take care of your parents in their final moments."
-    n "It'll be nice going back to a structured life with classes but with the added freedom of being a \"\"\"real\"\"\" adult."
+    n "It'll be nice going back to a structured life with classes but with the added liberty of being a \"\"\"real\"\"\" adult."
     n "You finish up your meal, gathering your scraps and throwing them away as you ponder what to do with the rest of your day."
+    n "This is your last day of total freedom before you become a full time student."
+    n "It's already afternoon and you're already feeling tired."
+    n "Is this what it's like to be an adult?"
+    n "You feel like you should be cruising down the city streets on your way to some beach party, where you'll chat up a cutie by the bonfire and watch the stars together."
+    #n "Living life to its fullest."
+    n "Alas, you still need to unpack your belongings and tidy up your dorm. You should also do a bit of grocery shopping on the way back." 
+    n "You best go to bed early too, you don't want to be late for class tomorrow."
+    n "No sense in wasting any more time. You'll get these errands done now so you can be well rested tomorrow."
     
-    
-    
-    
-    
-        n "Maybe you'll just go back to your dorm and post on your favorite Lithuanian underwater basketweaving forum in bed for a while."
-        n "Maybe you'll just go back to your dorm and post on your favorite Turkish astral projection forum in bed for a while."
-    n "Yeah, that sounds like a good idea."
-
     stop music fadeout 1.0
 
     hide box
@@ -1263,7 +1266,1008 @@ label exploring_campus:
 
     pause .7
 
+label firstDayOfClass:
+    scene bg codadorm with fade
+
+    play music "audio/ambient/morning birds.ogg" fadein 1.5
+
+    show box with Dissolve(.2):
+        ypos 0
+
+    #n "It turns out going to bed early does nothing to guarantee restfulness"
+    n "Welp, today's the day."
+    n "Starting a new school year always gives you a mixture of anxiety and excitement."
+    n "It's a chance to kind of reset things and try new things, be a new person."
+    n "But it's also a huge obligation to keep up with studies."
+    n "Still better than being a wageslave you guess."
+
+    stop music fadeout 1.5
+
+    scene bg classroom with fade
+
+    play music "audio/music/mere - schooldaze.ogg" fadein 1.0
+
+    show box with Dissolve(.2):
+        ypos 0
+
+    n "You vastly overestimated your ability to get around campus quickly and arrive ten minutes late to your history class."
+    n "All eyes are on you as you bust through the doorway."
+
+    show rothbauer at norm with dissolve
+
+    rothbauer @ say "Ah, nice of you to join us. You must be [name]."
+    rothbauer @ say "I'll let your tardiness slide since it's the first day, but please make more of an effort to be on time in the future."
+    rothbauer @ say "Go ahead and take a seat."
+
+    n "Fuck yeah, human privilege."
+    n "The only available seat is toward the back of the classroom. You walk down the aisle, careful not to trip over everyone's backpacks as you pass by each desk but you do anyway."
+
+    rothbauer @ say "Now where was I? Oh yes, the group project that is due at the end of the semester!"
+    rothbauer @ say "You will be responsible for researching an ancient civilization, writing a ten page paper detailing its rise and fall and putting together a presentation."
+    rothbauer @ say "You'll find more information about the requirements and grading rubric in the syllabus."
+    rothbauer @ say "I'll let you go ahead and form groups of three now. I know most of you don't know each other but this will be a good opportunity to make friends!"
+
+    hide rothbauer with dissolve
+
+    n "Forming groups already? Welp, time to kill yourself."
+    n "Oh wait, the girl next to you is pretty cute. Maybe she's into humans."
+
+    player "Hey uh, wanna be partners?"
     
+    show rose neutral at norm with dissolve:
+        xzoom -1
+        xpos -400
+    
+    rose @ say "    Psh.    "
+    rose @ say "     No.     "
+
+    n "She scooches her desk away from you and faces the other way."
+
+    show rose with move:
+        linear .54 xpos -510
+    pause .15
+    show rose with move:
+        linear .54 xpos -750
+    pause .33
+    show rose with move:
+        linear .54 xpos -1700
+
+    n "Damn, maybe you came on too strong."
+    n "You try partnering up with some others but it seems everyone's already established their own group."
+    #n "You try partnering up with some others but as usual you get ignored."
+    n "You take another look at that raccoon girl. She didn't even attempt to talk to any of the other students. She's just staring out the window."
+    
+    show rothbauer at norm with dissolve
+
+    rothbauer @ say "Hopefully everyone's found a group by now."
+
+    n "Mr. Rothbauer asks who everyone is partnered with and jots it down in a notebook while you silently panic."
+
+    rothbauer @ say "[name], what about you? Who's group are you in?"
+
+    player "Err, I couldn't find one..."
+
+    rothbauer @ say "Oh? Does the class not divide evenly? Hah, this is why I'm a history teacher and not a math one!"
+    rothbauer @ say "Does anyone else not have a partner? What about you, Miss Kaczynski, who's group are you in?"
+
+    show rothbauer with move:
+        xpos 250
+        
+    show rose neutral at norm with dissolve:
+        xzoom -1
+        xpos -550
+
+    rose @ say "...Nobody's."
+    rose @ say " And just call me Rose."
+
+    rothbauer @ say "Very well, Rose, you and [name] can be a group of two then!"
+    
+    show rose unimpressed
+
+    #rose @ say "Ugh. Do I have to?"
+    rose @ say "I can do the assignment on my own."
+    
+    rothbauer @ say "I'm sure you could, but that's not the point of this exercise. It's important for students to learn how to work with others, like in a real work environment!"
+    rothbauer @ say "I'll be checking in from time to time with each student to monitor each individual's progress and contributions to the project, so please make sure everyone in your group is pulling their weight."
+    #rothbauer @ say "It's a great exercise in leadership and compromise that will serve you more in the long run than any history knowledge."
+
+    rose @ say "Fine, whatever."
+    
+    rothbauer @ say "Good! I'll put you and [name] into your own group then."
+
+    n "While Rothbauer writes your names in his notebook you hear crumpling paper beside you."
+    
+    show rose furious
+    
+    n "You glance towards Rose and see her clenching her fist, balling up a sheet of paper."
+    n "She turns to you and mutters something."
+
+    rose @ say "To hell with that. I'll do it all on my own."
+
+    hide rose with dissolve
+    
+    show rothbauer with move:
+        xpos 0
+
+    rothbauer @ say "Ahem well... now that that's settled, let's begin our first lesson!"
+    rothbauer @ say "This course and the follow up World History II are designed to give you an understanding of how civilization has progressed alllll the way back from when the dinosaurs roamed the earth..."
+
+    n "Mr. Rothbauer circles a crude drawing of a pterodactyl on the chalk board and starts drawing an arrow pointing to some stick figure people."
+
+    rothbauer @ say "...to the rise and fall of humanity, leading into the current era, Societas Animalium, that is 'Society of Animals' as they say."
+    rothbauer @ say "Of course, not much is known about how the dinosaurs lived since a meteor striking the planet destroyed nearly every bit of evidence they were here at all!"
+    rothbauer @ say "The world was buried under a blanket of smoke and ash, smothering their existence. It took millions of years before a civilization was able to form again."
+    rothbauer @ say "But what if I told you that we are not so different from the dinosaurs?"
+    rothbauer @ say "This... goes a bit against the curriculum but the evidence is there to suggest that our prehistoric ancestors were quite advanced!"
+    rothbauer @ say "The government doesn't want you to know that ancient integrated circuits have been discovered deep underground alongside the fossilized remains of Mesozoic era creatures."
+    rothbauer @ say "To develop such advanced technology implies the existence of organized civilization!"
+    rothbauer @ say "Ahem, excuse me, I'm just very passionate about that particular time period."
+    rothbauer @ say "In any case, anything before the agricultural revolution humans kickstarted circa 10,000BCE won't be on the test."
+    rothbauer @ say "A big thank you to [name]'s ancestors for that!"
+
+    n "A few students turn around in their seat and look back at you."
+    n "This is so uncomfortable."
+    n "Are you supposed to say anything?"
+    n "Why did Mr. Rothbauer have to call you out like that?"
+    n "It's not your fault your ancestors forced everyone to live in a society."
+
+    rothbauer @ say "Anyway, where was I? Oh yes, the human population was increasing exponentially during this time and they quickly established themselves as the dominant species..."
+
+    n "You take out a notebook and start taking notes as Mr. Rothbauer lectures for the next hour."
+
+    stop music fadeout 1.0
+
+    scene bg campus with fade
+
+    play music "audio/ambient/outdoors people talking.ogg" fadein .5
+
+    show box with Dissolve(.2):
+        ypos 0
+
+    n "Next up you've got Introduction to Probability and Statistics. You signed up for it because you thought it would teach you how to game drop rates in RPGs."
+
+    if metGunner == True:
+        n "Along the way you bump into a familiar feline."
+
+        show gunner neutral at norm with dissolve
+
+        gunner @ say "Sup, [name]! Where ya goin'?"
+
+        player "Oh hey, you again. I'm on my way to statistics."
+
+        gunner @ say "With Mrs. Herschel?"
+
+        player "Yeah I think so."
+
+        gunner @ say "Ayy, that makes us classmates!"
+        gunner @ say "Fair warning though, this class is hella hard."
+        
+        player "Fantastic."
+        
+        gunner @ say "We better hurry there, Mrs. Herschel hates it when students are late."
+        
+            
+        scene bg lecturehall with fade
+
+        play music "audio/music/mere - schooldaze faster.ogg" fadein 1.5
+
+        show box with Dissolve(.2):
+            ypos 0
+        
+        show herschel:
+            xpos 2000
+            yalign 0
+
+        n "Looks like you made it before the teacher arrived."
+        n "Nobody else is brave enough to sit in the front row, leaving you no choice but to take a seat there. Gunner sits right next to you."
+        n "Once you've settled in and got your pencil and notebook out, Mrs. Herschel walks in."
+
+    else:
+        scene bg lecturehall with fade
+
+        play music "audio/music/mere - schooldaze faster.ogg" fadein 1.5
+
+        show box with Dissolve(.2):
+            ypos 0
+        
+        show herschel:
+            xpos 2000
+            yalign 0
+
+        n "Looks like you made it before the teacher arrived."
+        n "Nobody else is brave enough to sit in the front row, leaving you no choice but to take a seat there."
+        n "Somone sits right next to you and starts chatting you up like you're best friends."
+        
+        show gunner neutral at norm with dissolve
+        
+        gunner @ say "Yeah so summer vacation was pretty lit. Went on this week long fishing trip on my dad's yacht with the bros and my portfolio is up 20\% from the start of the quarter."
+
+        menu:
+            "Are you talking to me?":
+                player "Huh? Are you talking to me?"
+                
+                gunner @ say "Uh yeah? That's not a problem is it?"
+                
+                player "No, it's just weird you would think I give a shit about your yacht."
+                
+                gunner @ say "Ohh sorry, sorry! You're more of a helicopter guy I see, my mistake."
+                gunner @ say "My family doesn't have one of those yet but maybe I'll ask for one for my birthday."
+            "Wow money is so cool.":
+                player "Wow money is just so cool, isn't it?"
+                
+                n "He evidently doesn't pick up on your sarcasm, because there isn't a hint of irony in his response."
+                
+                gunner @ say "I know right? I don't get why people like, choose to be poor? It's weird."
+
+        gunner @ say "I'm Gunner by the way! What's your name?"
+        
+        player "[name]."
+        
+        n "At least he's not pestering you with questions about what it's like being the last human. In fact, you don't know if he is even aware of that fact."
+        n "It seems he's more concerned with his own status and appearance."
+        
+        gunner @ say "[name], huh? Lemme tell you a funny story."
+        gunner @ say "This building was used for the feminism studies college last semester. They switched it over to math over the summer."
+        gunner @ say "So when I saw I had stats here my first thought was \"The hell? Are we gonna learn how to find the hypotenuse while folding laundry or something?\""
+        
+        menu:
+            "Laugh":
+                n "You have to admit, that got a chuckle out of you. You try to hide it, but your true colors make themselves known."
+                
+                gunner @ say "Hah, don't be afraid to laugh, I know I'm funny!"
+            "Don't say anything":
+                n "You pretend you're still waiting for the punchline and remain silent."
+                
+                gunner @ say "Like folding a towel or something into a triangle and-"
+                
+        n "Gunner goes quiet as an old lady walks into the room. That must be the professor."
+
+    show herschel with dissolve:
+        xpos 0
+
+    herschel @ say "Good afternoon everyone! My name is Mrs. Herschel and I'm very excited to teach probability and statistics again this year!"
+
+    show gunner neutral at norm with dissolve:
+        xzoom -1
+        xpos -500
+
+    gunner @ say "Looking good, Mrs. Herschel! I'm very excited to learn probability and statistics again this year!"
+
+    herschel @ say "Flattery will get you nowhere Gunner. I'm afraid you'll be learning this subject for the first time this year judging by your grades last year."
+
+    gunner @ say "Hey I still remember y = mx + b!"
+
+    herschel @ say "That's geometry, dear."
+
+    gunner @ say "..."
+    gunner @ say "Oh yeah."
+
+    hide gunner with dissolve
+
+    herschel @ say "That reminds me, I wanted to point out this can be a very challenging class. I recommend spending half an hour every night studying the textbook and working through the example problems."
+    #herschel @ say "That being said, feel free to ask as many questions as you'd like! If a student fails, then I've failed as a teacher after all."
+    herschel @ say "Now then, we have much to get through and not a lot of time, so let's begin with some basics! A set is defined as a collection of elements..."
+
+    hide herschel with dissolve
+
+    n "You notice Gunner aggressively taking notes throughout the whole class."
+    n "He even stays behind to ask Mrs. Herschel questions after she dismisses the class."
+    n "Is this stuff really that difficult? You understood it just fine but maybe it gets harder later."
+    n "Since you're done with classes for the day, you think you'll get a bite to eat then study a bit and call it a day."
+
+    stop music fadeout 1.0
+
+    hide box
+
+    scene bg black with fade
+
+    hide box
+
+    show bg calendar
+    show tmonday at norm
+    with Dissolve(.5)
+
+    pause .6
+    show tforwardslash
+    pause .2
+    show tbackslash
+
+    pause .7
+
+
+
+label secondDayOfClass:
+    #___tuesday1
+    scene bg codadorm with fade
+
+    play music "audio/ambient/morning birds.ogg" fadein 1.0
+
+    show box with Dissolve(.2):
+        ypos 0
+
+    n "You roll out of bed and start your morning ritual before getting ready for class."
+    n "Today you have World Literature and then French."
+    n "A couple weeks ago you received an email with the books you'll need. The first one you'll be going over in literature is the novella \"The Death of Ivan Ilyich.\""
+    n "You pack the book in your bag and venture out."
+
+    stop music fadeout 1.0
+
+    scene bg lecturehall with fade
+
+    play music "audio/music/mere - retrograde.ogg" fadein .5
+
+    show box with Dissolve(.2):
+        ypos 0
+
+    n "As fate would have it, the teacher of this class is the same lady who gave the orientation speech the other day."
+    n "She already has a slideshow set up on the projector."
+
+    show ellen teacher happy at norm with dissolve
+
+    ellen @ say "Good morning and welcome to Introduction to World Literature!"
+
+    n "She clicks a button and the slideshow advances to the next slide, going over some information about herself."
+    
+    show ellen teacher neutral
+
+    ellen @ say "My name is Miss Ellen and I've been teaching at Harmonia for 13 years so I like to think I've gotten quite good at it!"
+
+    show ellen teacher sad at shudder
+
+    ellen @ say "Oop, ignore the Mrs. in front of my name on the slide... I guess I forgot to update that..."
+    ellen @ say "Haha recently divorced... you know how it goes..."
+
+    n "She quickly advances forward a few more slides."
+
+    show ellen teacher neutral at norm
+
+    ellen @ say "Ahem where was I? Oh yes, this course will introduce you to literature throughout history and from many different cultures."
+    ellen @ say "In case you didn't get my email, you'll be responsible for procuring your own books, starting with a favorite of mine, Tolstoy's \"The Death of Ivan Ilyich!\""
+    ellen @ say "You won't have a test on it until the end of next week but I'll expect you all to have been reading it and contributing to the discussions in class."
+
+    n "Miss Ellen goes over some more of her expectations before starting with the lesson, explaining the historical context and some biographical information on the author."
+
+    ellen @ say "Leo Tolstoy is considered one of the greatest authors of all time, his works often taking on philosophical questions like 'What is the meaning of death?'"
+    ellen @ say "That, in fact, is the main topic of his novella \"The Death of Ivan Ilyich!\""
+    ellen @ say "We'll dive into the life of a man as his life crumbles apart and he learns to deal with his inevitable death."
+    ellen @ say "Indeed, this wasn't the first time Tolstoy wrote on the subject of death, as he had earlier written \"A Confession,\" considering the possible interpretations and attitudes toward death."
+    ellen @ say "Although he struggled with his own mortality, Tolstoy seems to have come to a conclusion on what a good death means."
+    ellen @ say "Please open your books and we'll hop right in!"
+
+    hide ellen with dissolve
+
+    n "You pull the book out of your bag and open your notebook to a fresh page."
+    n "Miss Ellen goes over the first few pages of the novella, explaining some things and asking the class for their thoughts along the way."
+    n "Time flies by quickly and the end of the hour is upon you before you realize it."
+
+    show ellen teacher neutral at norm with dissolve
+
+    ellen @ say "That's all for today! We'll continue this discussion next time! Have a nice day!"
+
+    hide ellen with dissolve
+
+    n "You pack your things and stand up."
+    n "Next up is French class. You always wanted to learn another language, and it takes care of some elective credits."
+    
+    stop music fadeout 1.0
+
+    scene bg classroom with fade
+
+    play music "audio/music/mere - retrograde.ogg" fadein .5
+
+    show box with Dissolve(.2):
+        ypos 0
+
+    show celestine neutral at norm with dissolve
+
+    celestine @ say "Bon après-midi! I am Mrs. Celestine and as you can tell I'll be your French teacher for this semester, and hopefully the next one as well!"
+
+    n "Her introduction is cut short as the door opens and Claire bursts in."
+
+    show claire sweater embarassed at norm with moveinleft:
+        xzoom -1
+        xpos -650
+
+    claire @ say "*Huff huff* Sorry I'm late!"
+    
+    celestine @ say "No worries! I'm just glad you arrived at all!"
+    
+    #show claire sweater neutral
+
+    n "Claire makes her way over to the desks and looks to you."
+
+    show claire sweater neutral at norm with move:
+        xpos 560
+
+    pause .05
+
+    show claire sweater neutral at flipleft
+
+    if fratsoro == "frat":
+        claire @ say "Hey, mind if I sit next to you?"
+
+        player "Not at all."
+    elif fratsoro == "soro":
+        claire @ say "[name], you're in this class too? You should have told me!"
+
+        player "I didn't know you were taking French!"
+        
+        show claire sweater lusty
+
+        claire @ say "Imma sit next to you, k?~"
+        
+        show claire sweater neutral
+
+    n "Claire takes the seat next to yours and starts rummaging around in her bag."
+
+    hide claire with dissolve
+
+    celestine @ say "Génial! Looks like everyone is present now! I'll say a few things about myself, then you can all tell me about yourselves and why you decided to learn French!"
+    celestine @ say "I was born in France and learned both French and English before moving to America at a young age."
+    celestine @ say "In high school I studied Arcoonian, then in college I learned a bit of Pandarianese."
+    celestine @ say "Learning languages opens up so many opportunities you'd otherwise never have!"
+    celestine @ say "I love to travel and I always learn a bit of the native language and dialect before going so I can converse with the locals."
+    celestine @ say "It's especially helpful for finding the best restaurants in a particular area hehe!"
+    celestine @ say "I'll be sure to share some stories from my journeys around the world throughout the semester but for now, I'd like to hear some things about you guys!"
+    celestine @ say "What brings you all to French 101?"
+
+    pause .2
+
+    show celestine at flipright
+
+    pause .3
+
+    celestine @ say "Starting with you, since you were late!"
+
+    show claire sweater derp at norm with dissolve:
+        xpos 560
+
+    claire @ say "Umm, I dunno, I kinda just picked it on a whim! I guess I like to try new things and leave things to chance!"
+
+    hide claire with dissolve
+
+    celestine @ say "That mindset has lead me to some very... intéressante places in the world."
+    celestine @ say "Next up, you there!"
+
+
+    menu:
+        celestine "{cps=0}Next up, you there!{/cps}"
+        "Same as Claire, it was random.":
+            #finished
+            $ clairePoints = clairePoints + 1
+            n "You shrug."
+
+            player "Same as Claire, it was random."
+
+            show celestine happy
+
+            celestine @ say "Ah, perhaps it was fate then!"
+
+            player "Fate?"
+
+            show celestine neutral
+            
+            celestine @ say "We're all destined to be in a certain place at a certain time, are we not?"
+            celestine @ say "We often find ourselves in situations due to factors outside of our control but that's not to say you can't influence your fate!"
+            celestine @ say "Maybe you let fate roll the die and choose this class for you, but what you get out of it is still up to you!"
+            celestine @ say "You might say your choices are predetermined but is that truly the case? Is it not the results of your decisions following a deterministic pattern?"
+            celestine @ say" I believe your choices are nobody's but your own! Life is a story with branching paths you may not have created but you at least choose which ones you take."
+            celestine @ say "It may even be possible to take unintended paths if you're clever enough!"
+            
+            player "I thought this was a French class, not a philosophy one."
+
+            celestine @ say "Some of the most reknowned philosophers come from France you know~"
+            celestine @ say "Voltaire wrote a story called \"Zadig,\" which is French for Destiny and--"
+            celestine @ say "Oh sorry, I went on a bit of a tangent there! I do that from time to time. We best move on before class ends. Next student!"
+
+            #n "Everything has a meaning? Could that really be true? Or are some things really just arbitrary?"
+
+        "Wanted to visit France someday.":
+            #finished
+            n "You shrug."
+
+            player "Wanted to visit France someday."
+
+            celestine @ say "Oh là là! France is such a beautiful and worthwhile place to visit! I could go on for hours, telling you the best spots to go!"
+            celestine @ say "France is pretty tourist friendly, but of course it helps a lot to know the language before going!"
+            celestine @ say "Just like I was saying earlier, you can always find interesting conversation in new places, provided you know what they're saying!"
+
+    n "The rest of the students give their reasons for being here, which ends up taking most of the class time."
+    n "Mrs. Celestine only has a few minutes to go over the very basics of French like pronunciations and greetings."
+
+    celestine @ say "Looks like we're out of time for today. Be sure to study and practice not only reading, but speaking in French as well!"
+    celestine @ say "You might find it helpful to get a study partner to practice conversing in French!"
+
+    hide celestine with dissolve
+
+    n "Claire turns to you with a grin."
+
+    show claire sweater wave at norm with dissolve:
+        xpos 560
+
+    claire @ say "Heyyyyy, wanna be study partners?"
+
+    menu:
+        claire say "{cps=0}Heyyyyy, wanna be study partners?{/cps}"
+        "Sure, why not?":
+            #finished
+            $ clairePoints = clairePoints + 1
+            player "Sure, why not?"
+            
+            show claire sweater overjoyed
+
+            claire @ say "Yay! I can't wait!"
+            
+            show claire sweater embarassed
+            
+            claire @ say "But I have to go to chemistry right now..."
+
+            player "I had literature earlier so I'm done for the day."
+            
+            show claire sweater derp
+
+            claire @ say "Great! That means you can walk me to my next class!"
+
+            stop music fadeout 1.0
+
+            scene bg campus with fade
+
+            show box with Dissolve(.2):
+                ypos 0
+
+            show claire sweater neutral at norm with dissolve:
+                xzoom -1
+                xpos -300
+                
+            play music "audio/music/Evan Schaeffer - Aqueduct.ogg" fadein .5
+
+            claire @ say "...and that was around the time I picked up sousaphone for my school's marching band and --"
+            
+            show claire sweater surprised
+            
+            claire @ say "Hey is that Ava?"
+            
+            show claire sweater wave
+            
+            claire @ say "Avaaaa! Over here!!!"
+
+            n "Claire waves to the bird in the distance taking photos in your general direction."
+            n "She looks annoyed as she lowers her camera and walks over."
+            
+            show claire sweater neutral
+            show ava pose annoyed at norm with moveinright:
+                xpos 400
+
+            #ava @ say "You know, the point of street photography is to capture reality without the photographer interacting with their subjects."
+            #ava @ say "You know, the point of street photography is to capture reality without the photographer's influence."
+            #ava @ say "I can't really do that with you looking directly at the camera and flailing your arms."
+            ava @ say "You know, street photography is sorta like wildlife photography."
+            
+            show claire sweater surprised
+
+            claire @ say "What do you mean?"
+
+            ava @ say "It's about capturing the moment in as natural a state as possible. Me and my camera are supposed to be invisible."
+            
+            show claire sweater cry
+
+            claire @ say "Oh did I ruin your shot? Sorry..."
+            
+            show ava pose happy
+
+            ava @ say "It's no big deal, I was just warming up anyway."
+            ava @ say "I see you brought a friend."
+            
+            show claire sweater neutral
+
+            claire @ say "Yup! Me and [name] here have French together so we're gonna be study buddies!"
+
+            ava @ say "Is that so? I took French in high school but I could never retain any of it."
+            
+            show claire sweater giggle
+            
+            claire @ say "How do you not remember your native tongue?"
+            
+            show ava pose concerned
+            
+            ava @ say "What? I hatched in Oregon."
+            
+            show claire sweater surprised
+
+            claire @ say "You mean... you're not French?"
+            
+            ava @ say "?"
+            ava @ say "No? Why would you think that I was?"
+            
+            show claire sweater embarassed
+            
+            claire @ say "It's just... you're artsy and your last name is Montblanc, like that mountain in France."
+            
+            show ava pose annoyed
+            
+            ava @ say "That doesn't mean *I've* ever been to France! That just means someone in my family was probably from there at some point!"
+            ava @ say "That's like me assuming you were born in the Netherlands just 'cause you're a Flemish giant rabbit!"
+            
+            claire @ say "Is that what I am??"
+            
+            show ava pose angry
+            
+            ava @ say "How do you not know these things?"
+            
+            show claire sweater derp
+            
+            #claire @ say "I guess I'm not all that smart huh..."
+            claire @ say "I guess I'm not such a clever bunny, huh..."
+            
+            show claire sweater surprised
+            
+            claire @ say "Oh, here's the science building! I'll catch you two later, k?"
+            
+            show claire sweater neutral 
+            show ava pose happy
+            claire @ say "How does lunch tomorrow sound?"
+
+            menu:
+                claire "{cps=0}How does lunch tomorrow sound?{/cps}"
+                "Sure!":
+                    #finished
+                    $ avaPoints = avaPoints + 1
+                    $ clairePoints = clairePoints + 1
+                    $ avalunch = True
+                    player "Sure, that sounds cool."
+
+                    show claire sweater overjoyed
+                    
+                    claire @ say "Yes!"
+                    
+                    n "Claire pulls you into a suffocating hug. Ava has to pry her off of you."
+                    
+                    show ava pose ohyou
+                    
+                    ava @ say "Come on Claire, we've got class to get to."
+                    
+                    show ava pose happy
+                    
+                    ava @ say "Bye [name]! We'll see you tomorrow!"
+                    
+                    player "Can't wait!"
+                    
+                    show claire sweater wave
+                    
+                    claire @ say "See you tomorrow!"
+                    
+                    n "Claire waves to you while Ava pushes her into the science building."
+                    
+                    show claire at offscreenleft:
+                        yalign 0
+                    show ava at offscreenleft:
+                        yalign 0
+                    with move
+                    
+                    n "The bird smiles to you before flapping her wings and taking off into the sky to wherever her own class is."
+                    
+                    show text "{color=c8f8ff} {/color}":
+                        ypos 46
+                        xpos 940
+                    
+                    #ava @ say "Bye [name]!{nw}"
+                    show text "{color=c8f8ff}Bye [name]!{/color}":
+                        ypos 46
+                        xpos 940
+
+                    show ava at offscreenright with MoveTransition(delay=.8):
+                        xzoom -1
+                        yalign .2
+
+                    hide text
+                    
+                    pause .6
+                    
+
+                    #ava @ say "Welp, I have to get to class as well. See you later, [name]!"
+                    
+                    #player "Salut!"
+                
+                    #ava @ say "?"
+                    #ava @ say "Oh haha French words."
+                    #ava @ say "Au revoir or however they say it."
+
+                "I already have plans":
+                    #untested
+                    $ avalunch = False
+                    $ roriPoints = roriPoints + 1
+                    player "Sorry, I already have plans."
+                    
+                    show claire sweater cry
+
+                    claire @ say "Oh... I guess you must be pretty busy. Maybe another time then?"
+                    
+                    player "Maybe."
+                    
+                    claire @ say "Maybe. Okay, yeah, maybe."
+                    claire @ say "See you later for real this time!"
+
+                    show claire sweater cry at offscreenleft with moveinleft:
+                        xzoom 1
+                        yalign 0
+
+                    n "Claire hurries off into the science building."
+
+                    ava @ say "What's her problem?"
+                    ava @ say "Whatever, she'll be fine. I've got a class to get to."
+                    ava @ say "See you around, [name]!"
+
+                    player "Later!"
+                    
+                    hide ava with dissolve
+
+            n "You're suddenly feeling very tired. Social interaction always makes you feel drained of energy. You decide to retire to your dorm."
+
+            stop music fadeout 1.0
+
+        "I don't need a study partner.":
+            #untested
+            player "I don't need a study partner."
+            
+            show claire sweater giggle
+
+            #claire @ say "But I do!"
+            claire @ say "Wow you must be really smart!"
+            
+            show claire sweater heyeah
+            
+            claire @ say "In that case you can be my tutor!"
+
+            player "That's not what I meant..."
+
+            stop music fadeout 1.0
+
+            scene bg campus with fade
+
+            show box with Dissolve(.2):
+                ypos 0
+
+            show claire sweater neutral at norm with dissolve:
+                xzoom -1
+                xpos -300
+                
+            play music "audio/music/Evan Schaeffer - Aqueduct.ogg" fadein .5
+
+            claire @ say "...and that was around the time I picked up sousaphone for my school's marching band and --"
+            
+            show claire sweater surprised
+            
+            claire @ say "Hey is that Ava?"
+            
+            show claire sweater wave
+            
+            claire @ say "Avaaaa! Over here!!!"
+
+            n "Claire waves to the bird in the distance taking photos in your general direction."
+            n "She looks annoyed as she lowers her camera and walks over."
+            
+            show claire sweater neutral
+            show ava pose annoyed at norm with moveinright:
+                xpos 400
+
+            #ava @ say "You know, the point of street photography is to capture reality without the photographer interacting with their subjects."
+            #ava @ say "You know, the point of street photography is to capture reality without the photographer's influence."
+            #ava @ say "I can't really do that with you looking directly at the camera and flailing your arms."
+            ava @ say "You know, street photography is sorta like wildlife photography."
+            
+            show claire sweater surprised
+
+            claire @ say "What do you mean?"
+
+            ava @ say "It's about capturing the moment in as natural a state as possible. Me and my camera are supposed to be invisible."
+            
+            show claire sweater cry
+
+            claire @ say "Oh did I ruin your shot? Sorry..."
+            
+            show ava pose happy
+
+            ava @ say "It's no big deal, I was just warming up anyway."
+            ava @ say "I see you brought a friend."
+            
+            show claire sweater neutral
+
+            claire @ say "Yup! Me and [name] here have French together so we're gonna be study buddies!"
+
+            ava @ say "Is that so? I took French in high school but I could never retain any of it."
+
+            show claire sweater pose neutral
+
+            claire @ say "Ksksksks hopefully we won't end up the same way!"
+            claire @ say "*Sigh*"
+            claire @ say "I'd just love to visit Paris one day!"
+
+            ava @ say "The only thing I remember is they say it like \"Pah ree\" over there."
+
+            player "Then why'd they put an \"s\" at the end of it?"
+
+            n "Ava shrugs."
+            
+            show ava bored
+
+            ava @ say "You have to ignore half the letters when it comes to French."
+
+            claire @ say "I guess so!"
+            
+            show claire sweater surprised
+            
+            #claire @ say "Wait, Ava, aren't you *from* France??"
+            claire @ say "To be honest, this whole time I thought you were from France!"
+            
+            ava @ say "?"
+            ava @ say "No? Where'd you get that idea?"
+            
+            show claire sweater neutral
+            
+            claire @ say "Cause you're artsy and your last name is Montblanc? As in that tall mountain in France?"
+            
+            show ava normal neutral
+            
+            ava @ say "Huh, is that where it comes from?"
+            
+            show ava angry
+            
+            ava @ say "Wait, did you just assume my nationality because I'm 'artsy?'"
+            
+            show claire sweater embarassed
+            
+            claire @ say "I mean, I just thought uhhh..."
+            claire @ say "Oop well here's the science building, gotta go, see you later!"
+            
+            #show claire at offscreenleft with move
+            show claire at hopaway
+            
+            #make little animation of claire 'hopping' away
+            
+            show ava normal neutral
+            
+            n "Claire hops away as if Ava were a bird of prey about to catch and fly off with her."
+            n "Even though she probably weighs quadruple Ava's weight."
+            n "Animal people instincts are funny like that."
+            n "Suddenly she turns on her heel and hops right back."
+            
+            #show claire sweater neutral at norm with dissolve:
+            #    xzoom -1
+            #    xpos -180
+            show claire sweater neutral at hopback
+            
+            pause .7
+            
+            claire @ say "Oh, before I forget..."
+            claire @ say "[name], would you like to have lunch with us tomorrow?"
+
+            menu:
+                claire @ say "{cps=0}[name], would you like to have lunch with us tomorrow?{/cps}"
+                "Sure!":
+                    $ avaPoints = avaPoints + 1
+                    $ clairePoints = clairePoints + 1
+                    $ avalunch = True
+                    player "Sure, that sounds cool."
+
+                    show claire sweater overjoyed
+                    
+                    claire @ say "Yes!"
+                    
+                    n "Claire pulls you into a suffocating hug. Ava has to pry her off of you."
+                    
+                    ava @ say "Come on Claire, we've got class to get to."
+                    
+                    show claire sweater wave
+                    
+                    claire @ say "See you tomorrow, [name]!"
+                
+                    player "Salut!"
+            
+                    ava @ say "?"
+                    ava @ say "Oh haha French words."
+                    ava @ say "Au revoir or however they say it."
+                    
+                    n "Claire waves to you while Ava pushes her into the science building."
+                    
+                    show claire at offscreenleft:
+                        yalign 0
+                    show ava at offscreenleft:
+                        yalign 0
+                    with move
+                    
+                    n "The bird smiles to you before flapping her wings and taking off into the sky to wherever her own class is."
+                    
+                    show text "{color=c8f8ff} {/color}":
+                        ypos 46
+                        xpos 940
+                    
+                    #ava @ say "Bye [name]!{nw}"
+                    show text "{color=c8f8ff}Bye [name]!{/color}":
+                        ypos 46
+                        xpos 940
+
+                    show ava at offscreenright with MoveTransition(delay=.8):
+                        xzoom -1
+                        yalign .2
+
+                    hide text
+                    
+                    pause .6
+
+                "I already have plans":
+                    $ avalunch = False
+                    $ roriPoints = roriPoints + 1
+                    player "Sorry, I already have plans."
+                    
+                    show claire sweater cry
+
+                    claire @ say "Oh... I guess you must be pretty busy. Maybe another time then?"
+                    
+                    player "Maybe."
+                    
+                    claire @ say "Maybe. Okay, yeah, maybe."
+                    claire @ say "See you later for real this time!"
+
+                    show claire sweater cry at offscreenleft with moveinleft:
+                        xzoom 1
+                        yalign 0
+
+                    n "Claire hurries off into the science building."
+
+                    ava @ say "What's her problem?"
+                    ava @ say "Whatever, she'll be fine. I've got a class to get to."
+                    ava @ say "See you around, [name]!"
+
+                    player "Later!"
+                    
+                    hide ava with dissolve
+
+            n "You're suddenly feeling very tired. Social interaction always makes you feel drained of energy. You decide to retire to your dorm."
+            
+            stop music fadeout 1.0
+
+    scene bg codadorm with fade
+
+    show box with Dissolve(.2):
+        ypos 0
+
+    #n "Damn, these classes sure take a lot out of you. 
+    n "You can't remember the last time you felt so exhausted. It's probably just because you're not used to the school routine after being left to your own devices for so long."
+    n "Literally. You haven't needed to go out or do much of anything since you've always had a computer within arm's reach."
+    n "Speaking of which..."
+
+    if fratsoro == "frat":
+        n "You flop down in bed and browse an Ethiopian alternative cryptocurrency fansite on your phone until you fall asleep."
+    else:
+        n "You flop down in bed and browse a Bangladeshi kite testing IRC channel on your phone until you fall asleep."
+
+    hide box
+
+    scene bg black with fade
+
+    hide box
+
+    show bg calendar
+    show ttuesday at norm
+    with Dissolve(.5)
+
+    pause .6
+    show tforwardslash
+    pause .2
+    show tbackslash
+
+    pause .7
+
+
+
+
+
+
+
+
+
+
+
 
 
 
