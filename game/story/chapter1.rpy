@@ -726,11 +726,10 @@ label college_orientation:
             "Have fun with that.":
                 player "Have fun with that. Later."
                 
-                jump afterRoriOrientationDay
     else:
         player "Have fun with that. Later."
-        
-        jump afterRoriOrientationDay
+    
+    rori @ say "Laters!"
 
 label afterRoriOrientationDay:
     hide rori with dissolve
@@ -777,9 +776,9 @@ label playerDormOrientationDay:
 
     pause .7
     
-    #___sunday1
-
 label exploring_campus:
+    #___sunday1
+    
     scene bg codadorm with fade
 
     show box with Dissolve(.2):
@@ -1447,7 +1446,7 @@ label firstDayOfClass:
     show box with Dissolve(.2):
         ypos 0
 
-    n "Next up you've got Introduction to Probability and Statistics. You signed up for it because you thought it would teach you how to game drop rates in RPGs."
+    n "Next up you've got Introduction to Probability and Statistics. You signed up for it so you could learn how to properly balance your crit chance with other stats in games."
 
     if metGunner == True:
         n "Along the way you bump into a familiar feline."
@@ -1595,8 +1594,6 @@ label firstDayOfClass:
     show tbackslash
 
     pause .7
-
-
 
 label secondDayOfClass:
     #___tuesday1
@@ -2031,7 +2028,6 @@ label secondDayOfClass:
             
             pause .6
             
-
             #ava @ say "Welp, I have to get to class as well. See you later, [name]!"
             
             #player "Salut!"
@@ -2060,7 +2056,7 @@ label secondDayOfClass:
 
             n "Claire hurries off into the science building."
 
-            ava @ say "What's her problem?"
+            ava @ say "So dramatic..."
             ava @ say "Whatever, she'll be fine. I've got a class to get to."
             ava @ say "See you around, [name]!"
 
@@ -2068,26 +2064,7 @@ label secondDayOfClass:
             
             hide ava with dissolve
 
-    n "You're suddenly feeling very tired. Social interaction always makes you feel drained of energy. You decide to retire to your dorm."
-
     stop music fadeout 1.0
-
-    scene bg codadorm with fade
-
-    show box with Dissolve(.2):
-        ypos 0
-
-    #n "Damn, these classes sure take a lot out of you. 
-    n "You can't remember the last time you felt so exhausted. It's probably just because you're not used to the school routine after being left to your own devices for so long."
-    n "Literally. You haven't needed to go out or do much of anything since you've always had a computer within arm's reach."
-    n "Speaking of which..."
-
-    if fratsoro == "frat":
-        n "You flop down in bed and browse an Ethiopian alternative cryptocurrency fansite on your phone until you fall asleep."
-    else:
-        n "You flop down in bed and browse a Bangladeshi kite testing IRC channel on your phone until you fall asleep."
-
-    hide box
 
     scene bg black with fade
 
@@ -2104,10 +2081,9 @@ label secondDayOfClass:
 
     pause .7
 
-label cafe_hangout1:
+label thirdDayOfClass:
     #___wednesday1
-    ###change classes so the teacher briefly goes over what they'll be talking about, then fade to next scene unless something interesting happens
-
+   
     play music "audio/ambient/morning birds.ogg" fadein .5
 
     scene bg codadorm with fade
@@ -2115,11 +2091,46 @@ label cafe_hangout1:
     show box with Dissolve(.2):
         ypos 0
 
-    n "Already, you're starting to dread this whole 'going to class' thing."
-    n "How did younger you manage to do this almost every day for as far back as you can remember?"
-    n "*Sigh*"
-    n "Let's get this over with."
-
+    n "Dragging your ass out of bed at the unfathomably early hour of...
+    n "You check the time on your phone."
+    n "...9:30AM"
+    n "My god, the sun probably isn't even up. You could stand to lie back down for a few more minutes. Catch a few more Z's so you can start making A's."
+    
+    $ bedpilled = False
+    
+    menu:
+        "Go back to bed":
+            $ bedpilled = True
+            
+            #results in you skipping history but having more time to do stuff after class
+            n "Without a doubt, the best thing you can do is take care of yourself."
+            n "And taking care of yourself means hitting the snooze button from time to time."
+            n "By your calculations, five more minutes of shuteye translates to at least an hour of alertness and productivity in the day."
+            n "Can you really refuse such a lucrative offer? That's more than a 10x return on investment!"
+            n "Yes, it's best to return to your comfy fortress underneath those blankets."
+            n "It would be foolish to fall for the sunk cost fallacy line of thinking that you *must* continue your day right now just because you've already gotten out of bed."
+            n "You crawl into the cotton's warm embrace and go for round two in the ring of slumber."
+            
+            scene bg black with fade
+            
+            pause 1.0
+            
+            scene bg codadorm with fade
+            
+            n "Five minutes turned into an hour in the snap of your fingers."
+            n "Time's imperceptibly slow march suddenly lurched forward while you were asleep to stab you in the back when you were at your most vulnerable."
+            n "Your eyes open and focus in on your clock. History class is halfway over by now but you might make it to Statistics."
+            n "Although you do feel slightly more energized, you forgot to account for diminishing returns."
+            n "Plus you now have to pay back your debt to the sleep economy by getting less than an optimal amount of sleep later."
+            n "Or you could go to bed earlier, but then you'd miss out on... {i}activities.{/i}"
+            n "Just something to consider. For now, you need to get ready and go to class."
+            
+            jump thirdDayOfClassStats
+        "Be a productive member of society":
+            n "You'll have time to rest when you're dead. Or tonight, whichever comes first."
+            n "Either way, these classes aren't going to attend themselves."
+            
+    
     stop music fadeout .5
 
     scene bg classroom with fade
@@ -2130,6 +2141,17 @@ label cafe_hangout1:
         ypos 0
 
     n "Time to learn about some ancient civilizations."
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     n "You sit in the same spot as last time, though your project partner is nowhere to be found, even as Mr. Rothbauer shows up."
 
     show rothbauer at norm with dissolve
@@ -2166,7 +2188,8 @@ label cafe_hangout1:
     n "Maybe she really doesn't need your help on the project after all. You'd probably just slow her down."
 
     #stop music fadeout .5
-
+    
+label thirdDayOfClassStats:
     scene bg lecturehall with fade
 
     play music "audio/music/mere - schooldaze faster.ogg" fadein .5
@@ -2236,7 +2259,7 @@ label cafe_hangout1:
 
     n "Gunner stayed behind to talk to Mrs. Herschel while you and the rest of the class left."
 
-    if avalunch == True:
+    if avaClaireLunch == True:
         #finished
         n "You're supposed to have lunch with Ava and Claire today but unfortunately forgot to ask where, or even for their phone numbers so you're left wandering around and hoping you'll bump into them."
         n "Just when you're about to call it quits, you spot Claire's ears sticking up among a crowd of students."

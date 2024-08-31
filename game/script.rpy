@@ -1645,10 +1645,13 @@ label start:
 #    n "fin"
 
 call chapter1
-    #___thursday1
+    
 label sickday:
+    #___thursday1
+    ###this day will need to be rewritten so the player fainting in class happens 1 week later. For now, continue going to class, setting up a routine, introduce the weather system on week 2 or during the weekend. Maybe move the gunner rori rooftop scene to this weekend. Choose what to study over the weekend. in week 2, choose to either study or hang out after classes. 
+    ###at this point, it's been a while since we've seen Rori. Give him a scene on this day. Ask how his classes are going and what he's up to. Maybe get coffee. Ask Rose if you should start working on the project.
     #sickday
-    #writing done, sprites my require adjustment
+    
 
     scene bg codadorm with fade
 
