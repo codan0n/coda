@@ -821,6 +821,7 @@ label exploring_campus:
     
     if randumb == 0:
         $ metClaire = True
+        $ metAva = True
         n "You almost managed to get to the end without being harassed by anybody."
         n "Surprisingly it wasn't a booth attendant, rather it's the chatty girls you saw the day prior."
         
@@ -1467,7 +1468,6 @@ label firstDayOfClass:
         player "Fantastic."
         
         gunner @ say "We better hurry there, Mrs. Herschel hates it when students are late."
-        
             
         scene bg lecturehall with fade
 
@@ -1835,7 +1835,7 @@ label secondDayOfClass:
             celestine @ say "Oh là là! France is such a beautiful and worthwhile place to visit! I could go on for hours, telling you the best spots to go!"
             celestine @ say "France is pretty tourist friendly, but of course it helps a lot to know the language before going!"
             celestine @ say "Just like I was saying earlier, you can always find interesting conversation in new places, provided you know what they're saying!"
-            
+            ###maybe add something here
             
 
     n "The rest of the students give their reasons for being here, which ends up taking most of the class time."
@@ -1854,7 +1854,7 @@ label secondDayOfClass:
     claire @ say "Heyyyyy, wanna be study partners?"
 
     menu:
-        claire say "{cps=0}Heyyyyy, wanna be study partners?{/cps}"
+        claire "{cps=0}Heyyyyy, wanna be study partners?{/cps}"
         "Sure, why not?":
             $ clairePoints =+ 1
             
@@ -1887,19 +1887,7 @@ label secondDayOfClass:
             claire @ say "In that case you can be my tutor!"
 
             player "That's not what I meant..."            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-
+        
     stop music fadeout 1.0
 
     scene bg campus with fade
@@ -1932,9 +1920,6 @@ label secondDayOfClass:
         
     claire @ say "What's up?"
 
-    #ava @ say "You know, the point of street photography is to capture reality without the photographer interacting with their subjects."
-    #ava @ say "You know, the point of street photography is to capture reality without the photographer's influence."
-    #ava @ say "I can't really do that with you looking directly at the camera and flailing your arms."
     ava @ say "You know, street photography is sorta like wildlife photography."
     
     show claire sweater surprised
@@ -1950,67 +1935,53 @@ label secondDayOfClass:
     show ava pose happy
 
     ava @ say "It's no big deal, I was just warming up anyway."
-    ava @ say "I see you brought a friend."
-    #if metAva:
-    #else:
     
+    if metAva == False:
+        ava @ say "I see you brought a friend."
+        ava @ say "I'm Ava. Claire and I are roommates."
+        
+        player "[name]. Nice to meet you."
+        
+        claire @ say "Ava is such a good photographer! She's like one of those surveillance birds, she really has an eye for that sort of thing!"
+        
+        ava @ say "Surveillance bird?! You mean a secretary bird??"
+        
+        claire @ say "No I mean like one of those birds the government uses to take secret spy photos!"
+        
+        ava @ say "Oh. Those."
+        ava @ say "I'm more in it for the artistic qualities but I suppose street photography and reconaissance have their similarities."
+    else:
+        ava @ say "I see you've found that boy you totally don't have a crush on."
+        
+        claire @ say "Wh-who, [name]?? We just happened to have French together just now! I wasn't like stalking him or anything!"
+        
+        ava @ say "Sure~"
+        
+        n "You get the feeling that some part of this conversation has flown over your head, but are struggling to decipher what these ladies could possibly be talking about."
+        n "You had your suspicions that Claire might be into you, but Ava's exceptionally straightforward words have put that idea to rest."
+        
     show claire sweater neutral
-
-    claire @ say "Yup! Me and [name] here have French together so we're gonna be study buddies!"
-
-    ava @ say "Is that so? I took French in high school but I could never retain any of it."
     
-    show claire sweater giggle
+    claire @ say "Oop, I have to be in class in a minute! We should all get lunch later!"
     
-    claire @ say "How do you not remember your native tongue?"
+    n "Ava shrugs."
     
-    show ava pose concerned
+    ava @ say "Today's no good for me. I have to do some club stuff."
     
-    ava @ say "What? I hatched in Oregon."
+    claire @ say "Tomorrow then?"
     
-    show claire sweater surprised
-
-    claire @ say "You mean... you're not French?"
+    ava @ say "Works for me!"
     
-    ava @ say "?"
-    ava @ say "No? Why would you think that I was?"
-    
-    show claire sweater embarassed
-    
-    claire @ say "It's just... you're artsy and your last name is Montblanc, like that mountain in France."
-    
-    show ava pose annoyed
-    
-    ava @ say "That doesn't mean *I've* ever been to France! That just means someone in my family was probably from there at some point!"
-    ava @ say "That's like me assuming you were born in the Netherlands just 'cause you're a Flemish giant rabbit!"
-    
-    claire @ say "Is that what I am??"
-    
-    show ava pose angry
-    
-    ava @ say "How do you not know these things?"
-    
-    show claire sweater derp
-    
-    #claire @ say "I guess I'm not all that smart huh..."
-    claire @ say "I guess I'm not such a clever bunny, huh..."
-    
-    show claire sweater surprised
-    
-    claire @ say "Oh, here's the science building! I'll catch you two later, k?"
-    
-    show claire sweater neutral 
-    show ava pose happy
-    claire @ say "How does lunch tomorrow sound?"
+    claire @ say "What about you, [name]?"
 
     menu:
         claire "{cps=0}How does lunch tomorrow sound?{/cps}"
         "Sure!":
-            #finished
-            $ avaPoints = avaPoints + 1
-            $ clairePoints = clairePoints + 1
-            $ avalunch = True
-            player "Sure, that sounds cool."
+            $ avaPoints =+ 1
+            $ clairePoints =+ 1
+            $ avaClaireLunch = True
+            
+            player "Sure, that sounds nice."
 
             show claire sweater overjoyed
             
@@ -2025,12 +1996,13 @@ label secondDayOfClass:
             show ava pose happy
             
             ava @ say "Bye [name]! We'll see you tomorrow!"
+            ###(later) claire "I forgot we don't have class together on wednesdays and wouldn't see each other!"
             
             player "Can't wait!"
             
             show claire sweater wave
             
-            claire @ say "See you tomorrow!"
+            claire @ say "Bye-byeeee!"
             
             n "Claire waves to you while Ava pushes her into the science building."
             
@@ -2069,9 +2041,9 @@ label secondDayOfClass:
             #ava @ say "Au revoir or however they say it."
 
         "I already have plans":
-            #untested
-            $ avalunch = False
+            $ avaClaireLunch = False
             $ roriPoints = roriPoints + 1
+            
             player "Sorry, I already have plans."
             
             show claire sweater cry
@@ -2081,7 +2053,6 @@ label secondDayOfClass:
             player "Maybe."
             
             claire @ say "Maybe. Okay, yeah, maybe."
-            claire @ say "See you later for real this time!"
 
             show claire sweater cry at offscreenleft with moveinleft:
                 xzoom 1
@@ -2099,205 +2070,6 @@ label secondDayOfClass:
 
     n "You're suddenly feeling very tired. Social interaction always makes you feel drained of energy. You decide to retire to your dorm."
 
-    stop music fadeout 1.0
-
-
-
-        
-            
-            
-            
-            
-            
-            
-            
-    claire @ say "Hey is that Ava?"
-    
-    show claire sweater wave
-    
-    claire @ say "Avaaaa! Over here!!!"
-
-    n "Claire waves to the bird in the distance taking photos in your general direction."
-    n "She looks annoyed as she lowers her camera and walks over."
-    
-    show claire sweater neutral
-    show ava pose annoyed at norm with moveinright:
-        xpos 400
-
-    #ava @ say "You know, the point of street photography is to capture reality without the photographer interacting with their subjects."
-    #ava @ say "You know, the point of street photography is to capture reality without the photographer's influence."
-    #ava @ say "I can't really do that with you looking directly at the camera and flailing your arms."
-    ava @ say "You know, street photography is sorta like wildlife photography."
-    
-    show claire sweater surprised
-
-    claire @ say "What do you mean?"
-
-    ava @ say "It's about capturing the moment in as natural a state as possible. Me and my camera are supposed to be invisible."
-    
-    show claire sweater cry
-
-    claire @ say "Oh did I ruin your shot? Sorry..."
-    
-    show ava pose happy
-
-    ava @ say "It's no big deal, I was just warming up anyway."
-    ava @ say "I see you brought a friend."
-    
-    show claire sweater neutral
-
-    claire @ say "Yup! Me and [name] here have French together so we're gonna be study buddies!"
-
-    ava @ say "Is that so? I took French in high school but I could never retain any of it."
-
-    show claire sweater pose neutral
-
-    claire @ say "Ksksksks hopefully we won't end up the same way!"
-    claire @ say "*Sigh*"
-    claire @ say "I'd just love to visit Paris one day!"
-
-    ava @ say "The only thing I remember is they say it like \"Pah ree\" over there."
-
-    player "Then why'd they put an \"s\" at the end of it?"
-
-    n "Ava shrugs."
-    
-    show ava bored
-
-    ava @ say "You have to ignore half the letters when it comes to French."
-
-    claire @ say "I guess so!"
-    
-    show claire sweater surprised
-    
-    #claire @ say "Wait, Ava, aren't you *from* France??"
-    claire @ say "To be honest, this whole time I thought you were from France!"
-    
-    ava @ say "?"
-    ava @ say "No? Where'd you get that idea?"
-    
-    show claire sweater neutral
-    
-    claire @ say "Cause you're artsy and your last name is Montblanc? As in that tall mountain in France?"
-    
-    show ava normal neutral
-    
-    ava @ say "Huh, is that where it comes from?"
-    
-    show ava angry
-    
-    ava @ say "Wait, did you just assume my nationality because I'm 'artsy?'"
-    
-    show claire sweater embarassed
-    
-    claire @ say "I mean, I just thought uhhh..."
-    claire @ say "Oop well here's the science building, gotta go, see you later!"
-    
-    #show claire at offscreenleft with move
-    show claire at hopaway
-    
-    #make little animation of claire 'hopping' away
-    
-    show ava normal neutral
-    
-    n "Claire hops away as if Ava were a bird of prey about to catch and fly off with her."
-    n "Even though she probably weighs quadruple Ava's weight."
-    n "Animal people instincts are funny like that."
-    n "Suddenly she turns on her heel and hops right back."
-    
-    #show claire sweater neutral at norm with dissolve:
-    #    xzoom -1
-    #    xpos -180
-    show claire sweater neutral at hopback
-    
-    pause .7
-    
-    claire @ say "Oh, before I forget..."
-    claire @ say "[name], would you like to have lunch with us tomorrow?"
-
-    menu:
-        claire @ say "{cps=0}[name], would you like to have lunch with us tomorrow?{/cps}"
-        "Sure!":
-            $ avaPoints = avaPoints + 1
-            $ clairePoints = clairePoints + 1
-            $ avalunch = True
-            player "Sure, that sounds cool."
-
-            show claire sweater overjoyed
-            
-            claire @ say "Yes!"
-            
-            n "Claire pulls you into a suffocating hug. Ava has to pry her off of you."
-            
-            ava @ say "Come on Claire, we've got class to get to."
-            
-            show claire sweater wave
-            
-            claire @ say "See you tomorrow, [name]!"
-        
-            player "Salut!"
-    
-            ava @ say "?"
-            ava @ say "Oh haha French words."
-            ava @ say "Au revoir or however they say it."
-            
-            n "Claire waves to you while Ava pushes her into the science building."
-            
-            show claire at offscreenleft:
-                yalign 0
-            show ava at offscreenleft:
-                yalign 0
-            with move
-            
-            n "The bird smiles to you before flapping her wings and taking off into the sky to wherever her own class is."
-            
-            show text "{color=c8f8ff} {/color}":
-                ypos 46
-                xpos 940
-            
-            #ava @ say "Bye [name]!{nw}"
-            show text "{color=c8f8ff}Bye [name]!{/color}":
-                ypos 46
-                xpos 940
-
-            show ava at offscreenright with MoveTransition(delay=.8):
-                xzoom -1
-                yalign .2
-
-            hide text
-            
-            pause .6
-
-        "I already have plans":
-            $ avalunch = False
-            $ roriPoints = roriPoints + 1
-            player "Sorry, I already have plans."
-            
-            show claire sweater cry
-
-            claire @ say "Oh... I guess you must be pretty busy. Maybe another time then?"
-            
-            player "Maybe."
-            
-            claire @ say "Maybe. Okay, yeah, maybe."
-            claire @ say "See you later for real this time!"
-
-            show claire sweater cry at offscreenleft with moveinleft:
-                xzoom 1
-                yalign 0
-
-            n "Claire hurries off into the science building."
-
-            ava @ say "What's her problem?"
-            ava @ say "Whatever, she'll be fine. I've got a class to get to."
-            ava @ say "See you around, [name]!"
-
-            player "Later!"
-            
-            hide ava with dissolve
-
-    n "You're suddenly feeling very tired. Social interaction always makes you feel drained of energy. You decide to retire to your dorm."
-    
     stop music fadeout 1.0
 
     scene bg codadorm with fade
@@ -2332,11 +2104,831 @@ label secondDayOfClass:
 
     pause .7
 
+label cafe_hangout1:
+    #___wednesday1
+    ###change classes so the teacher briefly goes over what they'll be talking about, then fade to next scene unless something interesting happens
 
+    play music "audio/ambient/morning birds.ogg" fadein .5
 
+    scene bg codadorm with fade
 
+    show box with Dissolve(.2):
+        ypos 0
 
+    n "Already, you're starting to dread this whole 'going to class' thing."
+    n "How did younger you manage to do this almost every day for as far back as you can remember?"
+    n "*Sigh*"
+    n "Let's get this over with."
 
+    stop music fadeout .5
+
+    scene bg classroom with fade
+    
+    play music "audio/music/mere - schooldaze.ogg" fadein 1.0
+
+    show box with Dissolve(.2):
+        ypos 0
+
+    n "Time to learn about some ancient civilizations."
+    n "You sit in the same spot as last time, though your project partner is nowhere to be found, even as Mr. Rothbauer shows up."
+
+    show rothbauer at norm with dissolve
+    
+    show rose neutral pendant at offscreenright:
+        yalign 0
+
+    rothbauer @ say "Good day class! Let's see who's been reading ahead!"
+    rothbauer @ say "Can anyone tell me what major event happened in Egypt at around 2500 BCE?"
+
+    show rose neutral pendant with move:
+        yalign 0
+        xpos 600
+
+    rose @ say "That would be Artyek's rebellion, leading to the overthrow of the pharaoh and rise of the first non-human leader of a major civilization."
+
+    n "Without missing a beat, Rose answers the question as soon as she steps into the classroom."
+    
+
+    show rothbauer at flipright
+
+    pause (.15)
+
+    rothbauer @ say "Yes, that's exactly right. Though ultimately short-lived, King Artyek's reign ignited the progression of how anthromorphs were perceived in a human dominated society."
+    rothbauer @ say "Similar uprisings would occur around the world over the next thousand years or so which we'll get into later."
+    rothbauer @ say "Very good, Rose, thank you."
+
+    hide rose
+    hide rothbauer
+    with dissolve
+
+    n "Rose takes her seat and Mr. Rothbauer then asks the class to open their books as he begins his lesson."
+    n "You notice that most of your classmates don't really seem interested in the subject matter but Rose is eager to answer questions and seems to know her stuff."
+    n "Maybe she really doesn't need your help on the project after all. You'd probably just slow her down."
+
+    #stop music fadeout .5
+
+    scene bg lecturehall with fade
+
+    play music "audio/music/mere - schooldaze faster.ogg" fadein .5
+
+    show box with Dissolve(.2):
+        ypos 0
+
+    n "You arrive to statistics a little early and decide to take the opportunity to read through the textbook after realizing you'd failed to do so last night."
+
+    show gunner neutral at norm with dissolve
+
+    gunner @ say "Hey bro! Whatchya readin'?"
+
+    n "Gunner suddenly pops up out of nowhere, startling you."
+
+    player "Oh! I didn't see you there, Gunner. I was just trying to prepare for today's lesson."
+
+    gunner @ say "Oh yeah that sounds like a good idea. I should probably do that too..."
+
+    hide gunner with dissolve
+
+    n "He slinks off to his desk and takes his book out of his bag, studying it intently in the minutes before Mrs. Herschel arrives."
+
+    show herschel at norm with dissolve
+
+    herschel @ say "Good afternoon class!"
+    herschel @ say "I hope you're mentally alert because this is where the material starts to get a little hard..."
+    herschel @ say "...and without a solid foundation of the principles of probability, you're going to be struggling for the rest of the semester."
+    herschel @ say "Recall from yesterday, the intersection of two events is equal to the product of the probability of event A and event B."
+
+    n "She writes the formula on the board."
+
+    herschel @ say "Conditional probability is just the chance that something will happen when given that a certain condition is true."
+    herschel @ say "So given B is true, the formula for finding the probability of A goes like this..."
+
+    n "She writes another formula on the board."
+
+    herschel @ say "The probability of A and B divided by the probability of B."
+    herschel @ say "Alternatively it can often be more useful to rearrange this into the probability of A and B is equal to the probability of A given B multiplied by B."
+    herschel @ say "Let me give you an example...."
+
+    n "Mrs. Herschel works out out to solve the probability of drawing two queens in a row from a deck of cards."
+    n "Gunner leans over and whispers to you."
+
+    show gunner neutral at norm with moveinleft:
+        xzoom -1
+        xpos -550
+
+    gunner @ say "Psst [name], did you understand any of that?"
+
+    player "Sort of? The book probably explains it better..."
+
+    hide gunner with dissolve
+
+    herschel @ say "Moving on, let's get into expected values which are simply defined as the sumation of the probability of each possible value multiplied by the outcome of each of those probabilities!"
+
+    n "Gunner groans and buries his head in his notebook."
+
+    stop music fadeout .5
+
+    scene bg campus with fade
+
+    play music "audio/music/vylet - Our Light and After (ft. Pepper Mei).ogg" fadein .5
+
+    show box with Dissolve(.2):
+        ypos 0
+
+    n "Gunner stayed behind to talk to Mrs. Herschel while you and the rest of the class left."
+
+    if avalunch == True:
+        #finished
+        n "You're supposed to have lunch with Ava and Claire today but unfortunately forgot to ask where, or even for their phone numbers so you're left wandering around and hoping you'll bump into them."
+        n "Just when you're about to call it quits, you spot Claire's ears sticking up among a crowd of students."
+
+        player "Hey, Claire, over here!"
+
+        n "Her ears turn in your direction and she comes hopping toward you with Ava fluttering along by her side."
+
+        show claire sweater overjoyed at norm:
+            xpos 500
+        show ava normal neutral at norm:
+            xzoom -1
+            xpos -450
+        with dissolve
+        
+        show claire sweater overjoyed
+
+        claire @ say "[name]!!! What's up?"
+        
+        show ava overjoyed
+
+        ava @ say "Hey [name]! We were afraid we'd never find you haha!"
+        
+        show ava normal neutral
+
+        player "Same! You coulda told me where we were gonna eat at least!"
+
+        show claire sweater heyeah
+        
+        claire @ say "Aaaaaa sorry!! We still haven't even decided!"
+
+        ava @ say "Claire keeps shooting down my ideas!"
+        
+        show claire sweater derp
+
+        claire @ say "I do not!!! Ksksksks!"
+
+        player "How about the cafe?"
+        
+        show claire sweater surprised
+        show ava bored
+
+        ava @ say "You mean Starbees? That place is hella crowded all the time."
+        
+        show claire sweater neutral
+        show ava concerned
+
+        player "No, it's a local restaurant. I think it's called Coffee Zone? It's tucked away behind the library and it was pretty quiet when I went there."
+        
+        player "They have sandwiches and stuff and I could go for a coffee."
+
+        claire @ say "I've never heard of it but that sounds good!"
+        
+        show ava excited
+        
+        ava @ say "Then it's settled! Lead the way, [name]!"
+
+        scene bg cafe with fade
+
+        play music "audio/music/mere - coffeeLoveInstrumentalEditSlowexe.ogg" fadein 1.0
+
+        show box with Dissolve(.2):
+            ypos 0
+
+        n "The cafe is nice and empty save for the barista and a feline sitting at a table reading a textbook while listening to his headphones."
+        n "As you walk past, you recognize him as one of your classmates. He must have ran straight here after talking with Mrs. Herschel."
+
+        show gunner neutral at norm with dissolve:
+            xzoom -1
+
+        gunner @ say "Hey [name]! Fancy meeting you here! I see you brought some lovely ladies as well!"
+
+        player "Gunner? What are you doing here?"
+
+        gunner @ say "I like to come here to study 'cause it's quiet and the smell of coffee keeps me awake."
+        
+        show gunner with move:
+            xpos -375
+        
+        show claire sweater neutral at norm:
+            #xpos 475
+            xpos 575
+        show ava normal neutral at norm:
+        #    xpos 680
+            xpos 300
+        
+        with moveinright
+
+        claire @ say "[name], you know this guy?"
+
+        player "Oh, right. Claire, Ava, this is Gunner. We have statistics together."
+        
+        show ava pose flattered
+
+        ava @ say "Nice to meet you, Gunner!"
+        
+        show claire sweater derp
+
+        claire @ say "I hope you don't mind us intruding on your territory!"
+        
+        show ava pose happy
+
+        gunner @ say "Nah, it's all good! I'd talk more but I'm *this* close to figuring out his problem and don't wanna lose my train of thought."
+        
+        show claire sweater neutral
+        
+        ava @ say "Aww, good luck! We'll leave you to it!"
+        
+        gunner @ say "See you around, enjoy your lunch!"
+
+        show gunner neutral at offscreenleft with moveinleft:
+            yalign 0
+        show mishka neutral at offscreenleft:
+            yalign 0
+
+        n "Gunner returns to his table while you, Claire and Ava approach the counter."
+
+        show mishka neutral at norm with move:
+            xzoom -1
+            xpos 1450
+            
+        #show mishka overjoyed
+
+        mishka @ say "Hello again, [name]! And you brought friends!"
+        
+        show mishka neutral
+
+        player "Hi Mishka! Yeah we're just stopping by for lunch."
+
+        claire @ say "Ohmygosh your accent is so cute! Tih rooskie?"
+
+        show mishka sad wave
+
+        mishka @ say "Nyet, no ya nyemnogo govaryu po-rooskie..."
+        
+        show mishka depressed
+        
+        mishka @ say "I am from a country that no longer exists unfortunately."
+        
+        n "Mishka turns to show the flag patch on her jacket."
+        
+        mishka @ say "Currently it is part of Ukraina but it has been occupied by Russian forces at many times since I was little."
+        mishka @ say "...So I tend to speak mixture Ookrainskoy ee Russiyskoy."
+        #I grew up near border between Russia and Ukraine so I tend to blend the two together."
+
+        claire @ say "Ahh, mnyeh zshal uhh... kak eto skazat... sleeshad eto. Ya nyemnogo znayu tolkuh russkie, no slihshal, shto ukrainskie pokhozh."
+        
+        show mishka neutral
+
+        mishka @ say "Nu vih dobre tse hovoryte!"
+
+        claire @ say "Spasibo!"
+
+        n "You're left dumbfounded as to what they're saying. You had no idea Claire knew Russian. If she can learn a hard language like that, French should be a breeze for her."
+
+        mishka @ say "Now then! What I can get for you?"
+
+        n "You place your order then turn back to Claire and Ava."
+
+        player "You guys can go ahead and order, I'll pay for it."
+
+        claire @ say "Aww, you don't have to do that!"
+        
+        ava @ say "Yeah, we can pay for ourselves."
+
+        menu:
+            claire "{cps=0}Yeah, we can pay for ourselves.{/cps}"
+            "Alright then":
+                #finished
+                player "Alright, just thought I'd offer."
+
+                n "You pay for your meal then move out of the way so Ava and Claire can order theirs."
+
+                mishka @ say "Thanks! I'll have that ready for you all shortly!"
+
+                hide mishka with dissolve
+
+            "No really, I got it.":
+                #finished
+                $ avaPoints = avaPoints + 1
+                $ clairePoints = clairePoints + 1
+                player "No really, I got it, don't worry about it."
+                
+                show ava pose ohyou
+
+                ava @ say "Well if you insist~"
+                
+                show claire sweater pose laugh
+                
+                claire @ say "Jeez, [name] you're so pushy ksksksksks!"
+                
+                show claire sweater neutral -pose
+                show ava pose happy
+
+                n "You move out of the way so Ava and Claire can order, then pay with your debit card."
+                
+                show mishka silly wink
+
+                mishka @ say "Thanks! I'll have that ready for you all shortly!"
+
+                hide mishka with dissolve
+
+        show ava with move:
+            xpos 100
+
+        n "You find a table and sit across from Ava and Claire while you wait."
+        
+        show claire sweater giggle
+
+        claire @ say "I totally saw you checking him out, Ava!"
+            
+        show ava unsure at fliphop:
+            #xpos 175
+            xpos 100
+            ypos 10
+            linear .1 ypos 0
+        
+        ava @ say "What? Who?!"
+        
+
+        claire @ say "That Gunner boy duh! Ksksksksksks!"
+        
+        show ava bored
+
+        ava @ say "Oh my god, I was not!"
+        
+        show claire sweater neutral
+
+        claire @ say "What do you think, [name]? Was she not looking at him with hearts in her eyes?"
+        
+        show ava concerned
+
+        ava @ say "Shush up or he'll hear you!"
+        
+        show claire surprised
+
+        claire @ say "Ksksksksks so I was right!"
+        
+        show ava annoyed
+
+        ava @ say "Nuh uhhhh! Maybe he's cute but I don't even know anything about him!"
+        
+        show claire sweater pose lusty alert
+
+        claire @ say "Oh so now you think he's cute?"
+        
+        show ava waitwhat
+
+        ava @ say "I didn't mean-!"
+
+        hide ava
+        hide claire
+        with dissolve
+
+        n "Ava continues to get more flustered as Claire teases her until Mishka calls you back to the counter to grab your food."
+
+        show mishka neutral at norm with dissolve:
+            xzoom -1
+
+        mishka @ say "Enjoying the company?"
+
+        player "Huh? Oh haha, you could hear our conversation?"
+
+        n "She flicks her big rat ears."
+
+        mishka @ say "We can hear pretty well."
+        
+        show mishka anxious grin
+        
+        mishka @ say "Those two must be best friends to argue like that."
+
+        player "Something like that. Hopefully some food will calm them down."
+        
+        show mishka neutral
+
+        mishka @ say "Hm-hm. Here ya go, [name]. Take care!"
+
+        player "Thanks!"
+
+        hide mishka with dissolve
+        hide gunner
+
+        n "You awkwardly grab all the cups and plates at once and bring them back to the table."
+
+        show ava angry at norm:
+            xzoom -1
+            xpos -500
+        show claire sweater giggle at norm:
+            xpos 500
+        with dissolve
+        
+        show gunner at offscreenleft:
+            yalign 0
+            xzoom -1
+
+        n "As soon as you drop off the food and drinks, Ava and Claire's conversation instantly comes to a halt."
+        
+        show ava normal neutral
+        show claire sweater neutral
+
+        player "Bon appetit!"
+
+        claire @ say "Ooh, that smells good~"
+        
+        show ava excited
+
+        ava @ say "It sure does~"
+        
+        show ava normal neutral
+        
+        claire @ say "What were we talking about just now?"
+        
+        ava @ say "Dunno. Don't care anymore."
+
+        #hide ava
+        #hide claire
+        #with dissolve
+
+        n "You all dig into your meals, enjoying the atmosphere the cafe offers as well as the surprisingly good food."
+        n "As your pleasant lunch comes to an end and you're throwing away the trash, Gunner comes up to you with his bag slung over his shoulder."
+
+        show gunner neutral at norm with move:
+            xpos 1880
+
+        gunner @ say "Oh hey, [name], I'm heading out but lemme get your phone number! We can study together later or get lunch or whatever you wanna do."
+
+        player "Uh sure okay! Here."
+
+        n "You give him your phone number."
+
+        gunner @ say "Thanks! Talk to ya later!"
+
+        n "Gunner gives a wave and heads out of the cafe."
+
+        show gunner at offscreenright with move:
+            yalign 0
+            
+        show claire sweater giggle
+
+        claire @ say "Oh my god did you just get his number? Ava's gonna be so jealous~"
+        
+        show ava annoyed
+
+        ava @ say "Shush you!"
+        
+        show claire sweater neutral
+        show ava normal neutral
+
+        claire @ say "That reminds me, I oughta give you mine so we don't have to rely on randomly bumping into each other next time!"
+        
+        show ava at hop
+
+        ava @ say "Yeah, that would be a good idea. Here's mine too!"
+
+        n "You exchange numbers with Ava and Claire."
+
+        player "Cool! I'll text you guys later but for now I'm about ready to call it a day."
+
+        claire @ say "Yeah I feel that. This was super fun though!"
+
+        ava @ say "Yeah we should do it again sometime!"
+
+        player "For sure! See you in French tomorrow Claire!"
+
+        claire @ say "See ya, [name]!~"
+
+        ava @ say "Laters!"
+
+        n "You step outside and part ways back to your respective dorms."
+
+        stop music fadeout 1.0
+
+        scene bg codadorm with fade
+        
+        play music "audio/music/vylet - wish.ogg" fadein 0.5
+
+        show box with Dissolve(.2):
+            ypos 0
+
+        n "After winding down a bit in your dorm, you lie in bed and look at your phone."
+
+        call phone_start from _call_phone_start
+
+        call message_start("Gunner", "Hey [name]! I found some tutorials online that helped with the homework", "gunneravi.png") from _call_message_start
+
+        call reply_message("Oh yeah? I'm glad you got some help with them.") from _call_reply_message
+
+        call message("Gunner", "I was gonna ask if you could help me out but I didn't wanna ruin your date with those two cuties lmao", "gunneravi.png") from _call_message
+
+        call reply_message("Date????? Lmao") from _call_reply_message_1
+
+        call message("Gunner", "I know for a fact at least one of them has a thing for you lol", "gunneravi.png") from _call_message_1
+
+        call reply_message("Who????") from _call_reply_message_2
+
+        call message("Gunner", "I ain't no snitch", "gunneravi.png") from _call_message_2
+
+        call reply_message("Fine, keep your secrets :P") from _call_reply_message_3
+
+        call message("Gunner", "Heh you should consider yourself lucky", "gunneravi.png") from _call_message_3
+
+        call reply_message("Lol ok. I'm feeling pretty beat tho so I'm gonna go to bed now. Goodnight!") from _call_reply_message_4
+
+        call message("Gunner", "Night!", "gunneravi.png") from _call_message_4
+
+        call phone_end from _call_phone_end
+
+    else:
+        ###not yet playtested
+        n "As you're walking around campus trying to decide a good place to eat, Gunner comes running up behind you."
+
+        show gunner neutral at norm with dissolve
+
+        gunner @ say "[name]! Wait up!"
+
+        player "Hm? What's up, Gunner?"
+
+        gunner @ say "Hey so I was thinking, I could use a tutor in statistics and you seemed to get it a lot better than I did."
+        gunner @ say "So......"
+
+        player "So...?"
+
+        gunner @ say "I'm asking if you'd tutor me!"
+
+        player "Me? But I hardly know the material!"
+
+        gunner @ say "Then we can be study buddies!"
+        gunner @ say "Come on, it'll give us an excuse to hang out and it's sure to boost both our grades!"
+        gunner @ say "I'll even buy you lunch!"
+
+        n "Free lunch is too good to pass up."
+
+        player "Hmmmffffiiiiiiine."
+
+        gunner @ say "Yes!!!"
+        gunner @ say "You free right now? Cause I know a good place to study and get some food."
+
+        player "Uhh sure?"
+
+        stop music fadeout .5
+
+        scene bg cafe with fade
+
+        play music "audio/music/mere - coffeeLoveInstrumentalEditSlowexe.ogg"
+
+        show box with Dissolve(.2):
+            ypos 0
+
+        show gunner neutral at norm with moveinright
+        
+        show mishka neutral:
+            yalign 0
+            xpos -1500
+
+        gunner @ say "This is my secret study spot. I like coming here cause it's quiet and the smell of coffee keeps me awake."
+        gunner @ say "So how about we order something to eat then you can show me how to calculate permutations haha!"
+        
+        gunner "{nw}"
+        #strange bug happens where characters lose the ability to have move animation after an @ say line, so I added a line that automatically skips itself right after
+
+        show mishka neutral:
+            xzoom -1
+            xpos -400
+        show gunner:
+            xpos 200
+        with move
+
+        mishka @ say "Hello again, [name]! And nice to see you as well, Gunner!"        
+        
+        gunner @ say "Heya Mishka! Yeah, I've got a lot of studying to do so expect to see me a lot this semester. Luckily I've got a study buddy to help me out!"
+
+        mishka @ say "Oh, is that so? Hopefully you're getting paid well, [name]~"
+
+        gunner @ say "Hey, I'm paying for lunch! That's a decent rate!"
+
+        mishka @ say "If you say so haha"
+        mishka @ say "So what can I get for you two?"
+
+        n "You and Gunner order your lunch and Mishka gets started on it while you find a table to sit at."
+
+        hide mishka with dissolve
+        
+        show gunner:
+            xpos -150
+        with move
+
+        n "Gunner unzips his backpack and pulls out a textbook and notepad."
+
+        gunner @ say "Alright, so I was thinking you could show me how you did these homework problems and then..."
+
+        show claire sweater neutral at offscreenleft
+        show ava normal neutral at offscreenleft
+
+        n "You're looking over the problems Gunner has circled when the door opens and two chatty ladies step inside."
+
+        show claire sweater neutral at norm:
+            xzoom -1
+            xpos 2300
+        show ava normal neutral at norm:
+            xpos 2600
+        with dissolve
+        
+        hide box
+        show box
+
+        claire @ say "...I usually get a salted caramel cappuccino but I'm feeling like a cinnamon almondmilk latte today."
+
+        ava @ say "Ooh both of those sound pretty good."
+        
+        show claire:
+            xzoom 1
+
+        claire @ say "Oh my gosh, look who it is! Heyyyy [name]!!!"
+
+        n "Gunner looks up from his book with an annoyed expression as the bird and bunny walk up to your table."
+
+        gunner @ say "Hey we're kinda trying to study here so-"
+
+        show gunner:
+            xzoom -1
+
+        n "Gunner changes his tune as soon as he turns around and sees who's talking."
+
+        gunner @ say "Er, I mean we've been studying for a long time, haven't we [name]? I could go for a break, couldn't you?"
+        
+        show ava excited
+
+        ava @ say "Hey [name]! Who's your friend?"
+        
+        show ava normal neutral
+
+        player "Hey Claire! Hey Ava! This is Gunner. We have statistics together and I was just helping him with some homework."
+
+        claire @ say "Ohhhh is that why you said you were busy today? You should have told me!! I got an A in my advanced statistics and stochastic processes class in high school!"
+
+        #yik pose 2 gunner here
+        gunner @ say "What the fuck are stochastic processes?"
+
+        player "Yeah, we're trying to figure out how to calculate the chance of drawing three queens from a deck of cards in a row."
+
+        claire @ say "Oh that's pretty simple!"
+        claire @ say "Just not intuitive like calculus or trigonometry."
+        #claire @ say "The axiomatic mathematical formalization is extremely subtle, and without a solid grasp of derivative calculus most of the functions will go over a typical student's head."
+        #claire @ say "There's also Pascal's essentialist outlook, which is deftly woven into his theories -- his personal philosophy draws heavily from the literature of Galileo Galilei, for instance."
+        #claire @ say "The fans understand this stuff; they have the intellectual capacity to truly appreciate the depths of these mathematical definitions..."
+        #claire @ say "...to realize they're not just explanations for natural phenomena- they say something deep about LIFE."
+        #claire @ say "As a consequence people who dislike probability & statistics truly ARE plebians -- of course they wouldn't appreciate, for instance, the humor in Pascal's existential catchphrase \"Man is only a reed...but he is a thinking reed\""
+        #claire @ say "..."
+
+        #gunner @ say "..."
+
+        #player "..."
+
+        #claire @ say "And yes, by the way, I DO have a probability and statistics tattoo. And no, you cannot see it."
+        #claire @ say "It's for the ladies' eyes only~"
+        #claire @ say "And even then they have to demonstrate they're within 5 IQ points of my own (preferably lower) beforehand."
+        ###author's note: adapting this copypasta was funnier in my head compared to how it turned out
+
+        ###offscreenleft
+        mishka @ say "Order for Gunner and [name], ready for pickup!"
+        ## offscreenleft
+
+        gunner @ say "Oh that's for us! Don't worry, I'll get it."
+
+        show gunner neutral at offscreenleft with moveinleft:
+            yalign 0
+
+        claire @ say "Well, we won't interrupt your little date with that Gunner boy much longer, we just wanted to say hey!"
+
+        player "Wha? It's not a date!"
+        
+        show claire sweater derp
+
+        claire @ say "Ksksksks I know, I'm just messin' with ya!"
+        
+        show ava portrait neutral
+
+        ava @ say "Hehehe!"
+        
+        show ava normal neutral
+        show claire sweater neutral
+        
+        ava @ say "Oh hey you should like, give us your number so we can coordinate hangouts better next time."
+
+        player "Sure! Here ya go."
+
+        n "You give Claire and Ava your number."
+        
+        show claire sweater leaning
+
+        claire @ say "Thaaaanks, [name]!"
+
+        ava @ say "We're gonna go order our drinks now and let you get back to studying. See ya!"
+
+        hide ava
+        hide claire
+        with dissolve
+
+        n "You wave the two of them goodbye as they walk over to the counter just as Gunner comes back."
+
+        show gunner neutral at norm with dissolve:
+            xpos 1900
+            xzoom -1
+
+        gunner @ say "Aww, did they leave already?"
+        gunner @ say "What was the bird girl's name? Ava? She's pretty cute, don't ya think?"
+
+        #put in choice here, affects ava or claire texting you later
+        
+        menu:
+            gunner "{cps=0}What was the bird girl's name? Ava? She's pretty cute, don't ya think?{/cps}"
+            "Yeah":
+                $ avaPoints += 1
+                player "Yeah, she cute."
+            "Shrug":
+                n "You shrug, not really wanting to commit to an answer."
+
+                player "I mean, I guess?"
+
+        gunner @ say "Sorry, we should really be focusing on the maths now shouldn't we?"
+
+        n "Gunner slides your food toward you and picks up a pencil."
+
+        gunner @ say "So I tried to do this one but I got stuck here..."
+
+        n "As you're enjoying your lunch and helping Gunner work through problems, you notice him taking glances at Ava."
+        n "Whenever she get her drink and starts to leave, he pathetically tries to wave goodbye to her but she doesn't seem to notice."
+        n "Poor guy. You choose not to bring it up and just help him work through the math problems."
+        n "After about a while he gets too frustrated to continue and stands up."
+
+        gunner @ say "Gah, why do I even need statistics in the first place? I'm never gonna use this stuff."
+        gunner @ say "Ah well, I think I'm ready to call it a day. Thanks for helping me out, [name]!"
+
+        player "No problem. You wanna exchange numbers so we can set up another study session later?"
+
+        gunner @ say "I was just about to bring that up! Here's mine."
+
+        n "He shows you his number on his phone and you type it into your address book."
+
+        gunner @ say "Just shoot me a text whenever. I'll be at the gym for the next couple hours though."
+
+        player "Cool, I'm gonna go back to my dorm and sleep. See ya later!"
+
+        gunner @ say "See ya!"
+
+        n "Gunner holds the door open for you as you walk out of the cafe before parting ways."
+
+        stop music fadeout 1.0
+
+        scene bg codadorm with fade
+        
+        play music "audio/music/vylet - wish.ogg" fadein 0.5
+
+        show box with Dissolve(.2):
+            ypos 0
+
+        n "After winding down a bit in your dorm, you lie in bed and look at your phone."
+
+        call phone_start from _call_phone_start_1
+
+        call message_start("Claire", "Hey [name]! It was cool seeing you at coffee zone today! That was my first time there lol", "claireavi.png") from _call_message_start_1
+        call message("Claire", "It was really good! :)", "claireavi.png") from _call_message_5
+
+        call reply_message("Yeah sorry i didn't clarify i was going with gunner") from _call_reply_message_5
+
+        call message("Claire", "No problem! We can go together another day!~", "claireavi.png") from _call_message_6
+
+        call reply_message("Sure that sounds fun!") from _call_reply_message_6
+        call reply_message("I'm feeling pretty beat so I'm gonna go to bed now. Goodnight!") from _call_reply_message_7
+
+        call message("Claire", "Nini!", "claireavi.png") from _call_message_7
+
+        call phone_end from _call_phone_end_1
+
+    stop music fadeout .5
+
+    hide box
+
+    scene bg black with fade
+
+    hide box
+
+    show bg calendar
+    show twednesday at norm
+    with Dissolve(.5)
+
+    pause .6
+    show tforwardslash
+    pause .2
+    show tbackslash
+
+    pause .7
 
 
 
