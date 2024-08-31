@@ -26,3 +26,13 @@ label roriDormIntro:
             rori "Good thing they have insurance then, and I have remote backups."
     
     return
+    
+label claireDormIntro:
+    $ claireDormIntroSeen = True
+    
+    "this is a description of Claire and Ava's dorm, to be played the first time you enter it."
+    "It's split into two halves with a bed on either end. What must be Ava's side is tidy with photography books and expensive camera gear on the desk."
+    "Whereas Claire's side is unkempt and disorganized. She has a tendency to leave her underwear in random places."
+    
+    
+    return

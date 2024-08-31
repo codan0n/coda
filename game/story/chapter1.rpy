@@ -811,13 +811,16 @@ label exploring_campus:
     n "You know the moment you look at any of them, some representative will drag you into an involuntary conversation."
     
     $ metGunner = False
-
+    $ metClaire = False
+    $ metAva = False
+    
     $ randumb = renpy.random.randint(0, 1)
     
     #for testing
     #n "random number is [randumb]"
     
     if randumb == 0:
+        $ metClaire = True
         n "You almost managed to get to the end without being harassed by anybody."
         n "Surprisingly it wasn't a booth attendant, rather it's the chatty girls you saw the day prior."
         
@@ -1132,8 +1135,27 @@ label exploring_campus:
     show mishka neutral
     
     mishka @ say "How can I help you?"
-
-    player "Yeah can I get uhh...."
+    
+    menu:
+        "Why are the lights off?":
+            player "Why are the lights off? Is the shop open?"
+            
+            mishka "It's just how I like things. I can turn the lights on if you like."
+            
+            menu:
+                "Please do":
+                    player "Please do. I can't see anything in this darkness."
+                    
+                    mishka @ say "Very well."
+                    
+                    n "The barista clenches her eyes shut as she puts a claw to the light switch."
+                    n "When the lights come on, she winces and slowly opens her eyes."
+                "Leave them off":
+                    player "It's fine, you can leave them off. It's comfier this way."
+                    
+                    #mishka @ say ""
+        "Place your order":
+            player "Yeah can I get uhh...."
 
     n "You give the barista your order and swipe your card on the machine."
 
@@ -1585,10 +1607,10 @@ label secondDayOfClass:
     show box with Dissolve(.2):
         ypos 0
 
-    n "You roll out of bed and start your morning ritual before getting ready for class."
-    n "Today you have World Literature and then French."
+    n "You roll out of bed and start your morning ritual in preparation for class."
+    n "Today you have World Literature and then French Language 101."
     n "A couple weeks ago you received an email with the books you'll need. The first one you'll be going over in literature is the novella \"The Death of Ivan Ilyich.\""
-    n "You pack the book in your bag and venture out."
+    n "You pack the book in your bag along with the French textbook and venture out."
 
     stop music fadeout 1.0
 
@@ -1599,12 +1621,16 @@ label secondDayOfClass:
     show box with Dissolve(.2):
         ypos 0
 
-    n "As fate would have it, the teacher of this class is the same lady who gave the orientation speech the other day."
-    n "She already has a slideshow set up on the projector."
+    n "You step into a large lecture hall with a projector already beaming a desktop onto a screen at the front. Students trickle in until the room is full."
+    n "A couple minutes before class is scheduled to begin, a woman comes in through a door near the podium."
+    n "To your dismay, the teacher of this class is the same lady who gave the orientation speech the other day."
+    n "You don't think you made the best first impression the other day. Hopefully she doesn't hold a grudge."
+    n "She double clicks a file and brings up a slideshow."
 
     show ellen teacher happy at norm with dissolve
 
-    ellen @ say "Good morning and welcome to Introduction to World Literature!"
+    ellen @ say "Good morning and welcome to World Literature I!"
+    ellen @ say "Today we'll go over the syllabus and what you can expect from this class. Then we'll finish up with some discussion on the assigned reading!"
 
     n "She clicks a button and the slideshow advances to the next slide, going over some information about herself."
     
@@ -1621,11 +1647,14 @@ label secondDayOfClass:
 
     show ellen teacher neutral at norm
 
-    ellen @ say "Ahem where was I? Oh yes, this course will introduce you to literature throughout history and from many different cultures."
+    ellen @ say "Ahem where was I? Oh yes, this course will introduce you to literature across a variety of different cultures throughout different time periods."
+    ellen @ say "In the interest of time, most of the reading will be on the short side, or at least limited to excerpts from longer works."
     ellen @ say "In case you didn't get my email, you'll be responsible for procuring your own books, starting with a favorite of mine, Tolstoy's \"The Death of Ivan Ilyich!\""
-    ellen @ say "You won't have a test on it until the end of next week but I'll expect you all to have been reading it and contributing to the discussions in class."
+    ellen @ say "You won't have a test on it until the end of next week but I'll expect you all to read the assigned chapters every night and keep up with the discussions in class."
 
-    n "Miss Ellen goes over some more of her expectations before starting with the lesson, explaining the historical context and some biographical information on the author."
+    n "Miss Ellen gives an overview of the rest of the books you'll be reading and how she'll be grading responses to open ended questions."
+    n "Somehow she manages to stretch it to half the duration of the class time before starting with the lesson."
+    n "She explains the historical context and some biographical information regarding the first assigned story."
 
     ellen @ say "Leo Tolstoy is considered one of the greatest authors of all time, his works often taking on philosophical questions like 'What is the meaning of death?'"
     ellen @ say "That, in fact, is the main topic of his novella \"The Death of Ivan Ilyich!\""
@@ -1647,7 +1676,7 @@ label secondDayOfClass:
     hide ellen with dissolve
 
     n "You pack your things and stand up."
-    n "Next up is French class. You always wanted to learn another language, and it takes care of some elective credits."
+    n "Next up is French class. You always wanted to learn another language. Unfortunately the classes for all the good languages were already filled."
     
     stop music fadeout 1.0
 
@@ -1660,21 +1689,30 @@ label secondDayOfClass:
 
     show celestine neutral at norm with dissolve
 
-    celestine @ say "Bon après-midi! I am Mrs. Celestine and as you can tell I'll be your French teacher for this semester, and hopefully the next one as well!"
+    celestine @ say "Bon après-midi! I am Mrs. Celestine and I'll be your French teacher for this semester, and hopefully the next one as well if you decide to stick with it!"
 
-    n "Her introduction is cut short as the door opens and Claire bursts in."
+    n "You become distracted from her introduction by the strange ripples that seem to appear out of nowhere in the translucent bottle of water on the professor's desk."
+    n "As the water starts to bounce more violently in the glass, you hear a rhythmic low pitched thud gradually getting louder."
+    n "A moment later, the door crashes open and a wall of fluff squeezes through the doorframe."
 
-    show claire sweater embarassed at norm with moveinleft:
+    if metClaire == True:
+        n "Isn't that Claire?"
+        n "What a coincidence you have a class with her."
+    else:
+        n "You've seen that fat rabbit before. She's the ditzy girl from orientation night."
+        
+    show claire outdoors embarassed at norm with moveinleft:
         xzoom -1
         xpos -650
 
     claire @ say "*Huff huff* Sorry I'm late!"
     
     celestine @ say "No worries! I'm just glad you arrived at all!"
+    celestine @ say "Anywho, go ahead and take a seat and we'll begin introductions!"
     
     #show claire sweater neutral
 
-    n "Claire makes her way over to the desks and looks to you."
+    n "Claire makes her way over to the desks and looks you dead in the eye."
 
     show claire sweater neutral at norm with move:
         xpos 560
@@ -1683,22 +1721,39 @@ label secondDayOfClass:
 
     show claire sweater neutral at flipleft
 
-    if fratsoro == "frat":
-        claire @ say "Hey, mind if I sit next to you?"
-
-        player "Not at all."
-    elif fratsoro == "soro":
-        claire @ say "[name], you're in this class too? You should have told me!"
-
-        player "I didn't know you were taking French!"
+    if metClaire == False:
+        claire @ say "Heyyy cutie~"
+        claire @ say "Mind if I sit next to you?"
+        
+        menu:
+            "Sure?":
+                player "I guess not?"
+                
+                claire @ say "Good, cause I was gonna sit here anyway."
+            "Go right ahead!":
+                $ clairePoints =+ 1
+                player "Go ahead! Here lemme get that for you."
+                
+                n "You pull the chair out for her, just to be nice."
+                
+                claire @ say "Such a gentleman! Ksksksks!"
+        
+        claire @ say "I'm Claire bee tee double you~"
+         
+        n "The plastic of the chair squeals and groans under the weight of the oversized rabbit with the bun's buns barely even able fit on the seat."
+        n "Not that you were staring, it's just hard to ignore an object so immense it bends space and time and curves the path of the photons straight into your pupils."
+    else:
+        claire @ say "OMG [name]! You're in this class too??? How unexpected!"
         
         show claire sweater lusty
 
         claire @ say "Imma sit next to you, k?~"
         
+        #player "I guess I can't stop you."
+        
         show claire sweater neutral
 
-    n "Claire takes the seat next to yours and starts rummaging around in her bag."
+        n "Claire takes the seat next to yours and starts rummaging around in her bag."
 
     hide claire with dissolve
 
@@ -1708,7 +1763,7 @@ label secondDayOfClass:
     celestine @ say "Learning languages opens up so many opportunities you'd otherwise never have!"
     celestine @ say "I love to travel and I always learn a bit of the native language and dialect before going so I can converse with the locals."
     celestine @ say "It's especially helpful for finding the best restaurants in a particular area hehe!"
-    celestine @ say "I'll be sure to share some stories from my journeys around the world throughout the semester but for now, I'd like to hear some things about you guys!"
+    celestine @ say "I'll be sure to share some stories from my travels throughout the semester but for now, I'd like to hear some things about you guys!"
     celestine @ say "What brings you all to French 101?"
 
     pause .2
@@ -1722,13 +1777,12 @@ label secondDayOfClass:
     show claire sweater derp at norm with dissolve:
         xpos 560
 
-    claire @ say "Umm, I dunno, I kinda just picked it on a whim! I guess I like to try new things and leave things to chance!"
+    claire @ say "Umm like, I dunno, I kinda just picked it on a whim! I guess I like to try new things and leave things to chance!"
 
     hide claire with dissolve
 
-    celestine @ say "That mindset has lead me to some very... intéressante places in the world."
+    celestine @ say "Good! That mindset has lead me to some very... intéressante places in the world."
     celestine @ say "Next up, you there!"
-
 
     menu:
         celestine "{cps=0}Next up, you there!{/cps}"
