@@ -1787,44 +1787,56 @@ label secondDayOfClass:
     menu:
         celestine "{cps=0}Next up, you there!{/cps}"
         "Same as Claire, it was random.":
-            #finished
             $ clairePoints = clairePoints + 1
             n "You shrug."
 
-            player "Same as Claire, it was random."
+            player "Same as Claire, it was just kind of random and all the other language classes were taken."
 
             show celestine happy
 
             celestine @ say "Ah, perhaps it was fate then!"
-
-            player "Fate?"
-
-            show celestine neutral
+            celestine @ say "Do you believe in fate?"
             
-            celestine @ say "We're all destined to be in a certain place at a certain time, are we not?"
-            celestine @ say "We often find ourselves in situations due to factors outside of our control but that's not to say you can't influence your fate!"
-            celestine @ say "Maybe you let fate roll the die and choose this class for you, but what you get out of it is still up to you!"
-            celestine @ say "You might say your choices are predetermined but is that truly the case? Is it not the results of your decisions following a deterministic pattern?"
-            celestine @ say" I believe your choices are nobody's but your own! Life is a story with branching paths you may not have created but you at least choose which ones you take."
-            celestine @ say "It may even be possible to take unintended paths if you're clever enough!"
+            menu:
+                "Not really":
+                    player "Like I was somehow meant to be here? Not really."
+                    
+                    show celestine neutral
+                    
+                    celestine @ say "Ah, but all the factors lined up to guide you here, did they not?"
+                "Kinda":
+                    player "Maybe kinda, I'm not sure."
+                    
+                    show celestine neutral
+                    
+                    celestine @ say "We often find ourselves in situations due to factors outside of our control, don't we?"
+                    
+            celestine @ say "Outside forces guide us to certain places at particular moments in time, which in turn funnels us into the next fated event."
+            celestine @ say "But that's not to say we are completely bound to a predetermined route!"        
+            celestine @ say "Rather, I believe there are set milestones in your life that you will reach, but you have some freedom in how you react to them *and* how you arrive at next one."
+            celestine @ say "Perhaps you let fate roll the die and choose this class for you, but what you get out of it is still up to you!"
+            celestine @ say "In other words, the amount of choices you can make are limited by others, but the decisions you make are yours alone!"
+            celestine @ say "Life is a story with branching paths you may not have written yourself, but you at least choose which ones you take."
+            #celestine @ say "It may even be possible to take unintended paths if you're clever enough!"
             
             player "I thought this was a French class, not a philosophy one."
 
             celestine @ say "Some of the most reknowned philosophers come from France you know~"
-            celestine @ say "Voltaire wrote a story called \"Zadig,\" which is French for Destiny and--"
-            celestine @ say "Oh sorry, I went on a bit of a tangent there! I do that from time to time. We best move on before class ends. Next student!"
+            celestine @ say "Voltaire wrote a story called \"Zadig,\" which is the French word for Destiny and--"
+            celestine @ say "Oh sorry, I went on a bit of a tangent there! I do that from time to time. We best move on before class ends."
 
             #n "Everything has a meaning? Could that really be true? Or are some things really just arbitrary?"
 
-        "Wanted to visit France someday.":
-            #finished
+        "Wanted to travel.":
             n "You shrug."
 
-            player "Wanted to visit France someday."
+            player "I guess I just wanted to visit France someday."
 
             celestine @ say "Oh là là! France is such a beautiful and worthwhile place to visit! I could go on for hours, telling you the best spots to go!"
             celestine @ say "France is pretty tourist friendly, but of course it helps a lot to know the language before going!"
             celestine @ say "Just like I was saying earlier, you can always find interesting conversation in new places, provided you know what they're saying!"
+            
+            
 
     n "The rest of the students give their reasons for being here, which ends up taking most of the class time."
     n "Mrs. Celestine only has a few minutes to go over the very basics of French like pronunciations and greetings."
@@ -1834,7 +1846,7 @@ label secondDayOfClass:
 
     hide celestine with dissolve
 
-    n "Claire turns to you with a grin."
+    n "Claire turns to you with a devious grin."
 
     show claire sweater wave at norm with dissolve:
         xpos 560
@@ -1844,8 +1856,8 @@ label secondDayOfClass:
     menu:
         claire say "{cps=0}Heyyyyy, wanna be study partners?{/cps}"
         "Sure, why not?":
-            #finished
-            $ clairePoints = clairePoints + 1
+            $ clairePoints =+ 1
+            
             player "Sure, why not?"
             
             show claire sweater overjoyed
@@ -1854,213 +1866,15 @@ label secondDayOfClass:
             
             show claire sweater embarassed
             
-            claire @ say "But I have to go to chemistry right now..."
+            claire @ say "I have to go to chemistry right now, but we can study later!"
 
             player "I had literature earlier so I'm done for the day."
             
             show claire sweater derp
 
             claire @ say "Great! That means you can walk me to my next class!"
-
-            stop music fadeout 1.0
-
-            scene bg campus with fade
-
-            show box with Dissolve(.2):
-                ypos 0
-
-            show claire sweater neutral at norm with dissolve:
-                xzoom -1
-                xpos -300
-                
-            play music "audio/music/Evan Schaeffer - Aqueduct.ogg" fadein .5
-
-            claire @ say "...and that was around the time I picked up sousaphone for my school's marching band and --"
             
-            show claire sweater surprised
-            
-            claire @ say "Hey is that Ava?"
-            
-            show claire sweater wave
-            
-            claire @ say "Avaaaa! Over here!!!"
-
-            n "Claire waves to the bird in the distance taking photos in your general direction."
-            n "She looks annoyed as she lowers her camera and walks over."
-            
-            show claire sweater neutral
-            show ava pose annoyed at norm with moveinright:
-                xpos 400
-
-            #ava @ say "You know, the point of street photography is to capture reality without the photographer interacting with their subjects."
-            #ava @ say "You know, the point of street photography is to capture reality without the photographer's influence."
-            #ava @ say "I can't really do that with you looking directly at the camera and flailing your arms."
-            ava @ say "You know, street photography is sorta like wildlife photography."
-            
-            show claire sweater surprised
-
-            claire @ say "What do you mean?"
-
-            ava @ say "It's about capturing the moment in as natural a state as possible. Me and my camera are supposed to be invisible."
-            
-            show claire sweater cry
-
-            claire @ say "Oh did I ruin your shot? Sorry..."
-            
-            show ava pose happy
-
-            ava @ say "It's no big deal, I was just warming up anyway."
-            ava @ say "I see you brought a friend."
-            
-            show claire sweater neutral
-
-            claire @ say "Yup! Me and [name] here have French together so we're gonna be study buddies!"
-
-            ava @ say "Is that so? I took French in high school but I could never retain any of it."
-            
-            show claire sweater giggle
-            
-            claire @ say "How do you not remember your native tongue?"
-            
-            show ava pose concerned
-            
-            ava @ say "What? I hatched in Oregon."
-            
-            show claire sweater surprised
-
-            claire @ say "You mean... you're not French?"
-            
-            ava @ say "?"
-            ava @ say "No? Why would you think that I was?"
-            
-            show claire sweater embarassed
-            
-            claire @ say "It's just... you're artsy and your last name is Montblanc, like that mountain in France."
-            
-            show ava pose annoyed
-            
-            ava @ say "That doesn't mean *I've* ever been to France! That just means someone in my family was probably from there at some point!"
-            ava @ say "That's like me assuming you were born in the Netherlands just 'cause you're a Flemish giant rabbit!"
-            
-            claire @ say "Is that what I am??"
-            
-            show ava pose angry
-            
-            ava @ say "How do you not know these things?"
-            
-            show claire sweater derp
-            
-            #claire @ say "I guess I'm not all that smart huh..."
-            claire @ say "I guess I'm not such a clever bunny, huh..."
-            
-            show claire sweater surprised
-            
-            claire @ say "Oh, here's the science building! I'll catch you two later, k?"
-            
-            show claire sweater neutral 
-            show ava pose happy
-            claire @ say "How does lunch tomorrow sound?"
-
-            menu:
-                claire "{cps=0}How does lunch tomorrow sound?{/cps}"
-                "Sure!":
-                    #finished
-                    $ avaPoints = avaPoints + 1
-                    $ clairePoints = clairePoints + 1
-                    $ avalunch = True
-                    player "Sure, that sounds cool."
-
-                    show claire sweater overjoyed
-                    
-                    claire @ say "Yes!"
-                    
-                    n "Claire pulls you into a suffocating hug. Ava has to pry her off of you."
-                    
-                    show ava pose ohyou
-                    
-                    ava @ say "Come on Claire, we've got class to get to."
-                    
-                    show ava pose happy
-                    
-                    ava @ say "Bye [name]! We'll see you tomorrow!"
-                    
-                    player "Can't wait!"
-                    
-                    show claire sweater wave
-                    
-                    claire @ say "See you tomorrow!"
-                    
-                    n "Claire waves to you while Ava pushes her into the science building."
-                    
-                    show claire at offscreenleft:
-                        yalign 0
-                    show ava at offscreenleft:
-                        yalign 0
-                    with move
-                    
-                    n "The bird smiles to you before flapping her wings and taking off into the sky to wherever her own class is."
-                    
-                    show text "{color=c8f8ff} {/color}":
-                        ypos 46
-                        xpos 940
-                    
-                    #ava @ say "Bye [name]!{nw}"
-                    show text "{color=c8f8ff}Bye [name]!{/color}":
-                        ypos 46
-                        xpos 940
-
-                    show ava at offscreenright with MoveTransition(delay=.8):
-                        xzoom -1
-                        yalign .2
-
-                    hide text
-                    
-                    pause .6
-                    
-
-                    #ava @ say "Welp, I have to get to class as well. See you later, [name]!"
-                    
-                    #player "Salut!"
-                
-                    #ava @ say "?"
-                    #ava @ say "Oh haha French words."
-                    #ava @ say "Au revoir or however they say it."
-
-                "I already have plans":
-                    #untested
-                    $ avalunch = False
-                    $ roriPoints = roriPoints + 1
-                    player "Sorry, I already have plans."
-                    
-                    show claire sweater cry
-
-                    claire @ say "Oh... I guess you must be pretty busy. Maybe another time then?"
-                    
-                    player "Maybe."
-                    
-                    claire @ say "Maybe. Okay, yeah, maybe."
-                    claire @ say "See you later for real this time!"
-
-                    show claire sweater cry at offscreenleft with moveinleft:
-                        xzoom 1
-                        yalign 0
-
-                    n "Claire hurries off into the science building."
-
-                    ava @ say "What's her problem?"
-                    ava @ say "Whatever, she'll be fine. I've got a class to get to."
-                    ava @ say "See you around, [name]!"
-
-                    player "Later!"
-                    
-                    hide ava with dissolve
-
-            n "You're suddenly feeling very tired. Social interaction always makes you feel drained of energy. You decide to retire to your dorm."
-
-            stop music fadeout 1.0
-
         "I don't need a study partner.":
-            #untested
             player "I don't need a study partner."
             
             show claire sweater giggle
@@ -2072,213 +1886,419 @@ label secondDayOfClass:
             
             claire @ say "In that case you can be my tutor!"
 
-            player "That's not what I meant..."
-
-            stop music fadeout 1.0
-
-            scene bg campus with fade
-
-            show box with Dissolve(.2):
-                ypos 0
-
-            show claire sweater neutral at norm with dissolve:
-                xzoom -1
-                xpos -300
-                
-            play music "audio/music/Evan Schaeffer - Aqueduct.ogg" fadein .5
-
-            claire @ say "...and that was around the time I picked up sousaphone for my school's marching band and --"
+            player "That's not what I meant..."            
             
-            show claire sweater surprised
             
-            claire @ say "Hey is that Ava?"
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+    stop music fadeout 1.0
+
+    scene bg campus with fade
+
+    show box with Dissolve(.2):
+        ypos 0
+
+    show claire sweater neutral at norm with dissolve:
+        xzoom -1
+        xpos -300
+        
+    play music "audio/music/Evan Schaeffer - Aqueduct.ogg" fadein .5
+
+    claire @ say "...and that was around the time I picked up sousaphone for my school's marching band and --"
+    
+    show claire sweater surprised
+    
+    claire @ say "Ohmygosh it's Ava! She's like my best friend foreverrr!!!"
+    
+    show claire sweater wave
+    
+    claire @ say "Avaaaa! Over here!!!"
+
+    n "Claire waves to the bird in the distance holding a camera pointed in your general direction."
+    n "She seems annoyed as she looks over the viewfinder and flutters over."
+    
+    show claire sweater neutral
+    show ava pose annoyed at norm with moveinright:
+        xpos 400
+        
+    claire @ say "What's up?"
+
+    #ava @ say "You know, the point of street photography is to capture reality without the photographer interacting with their subjects."
+    #ava @ say "You know, the point of street photography is to capture reality without the photographer's influence."
+    #ava @ say "I can't really do that with you looking directly at the camera and flailing your arms."
+    ava @ say "You know, street photography is sorta like wildlife photography."
+    
+    show claire sweater surprised
+
+    claire @ say "What do you mean?"
+
+    ava @ say "It's about capturing the moment in as natural a state as possible. Me and my camera are supposed to be invisible."
+    
+    show claire sweater cry
+
+    claire @ say "Oh did I ruin your shot? Sorry..."
+    
+    show ava pose happy
+
+    ava @ say "It's no big deal, I was just warming up anyway."
+    ava @ say "I see you brought a friend."
+    #if metAva:
+    #else:
+    
+    show claire sweater neutral
+
+    claire @ say "Yup! Me and [name] here have French together so we're gonna be study buddies!"
+
+    ava @ say "Is that so? I took French in high school but I could never retain any of it."
+    
+    show claire sweater giggle
+    
+    claire @ say "How do you not remember your native tongue?"
+    
+    show ava pose concerned
+    
+    ava @ say "What? I hatched in Oregon."
+    
+    show claire sweater surprised
+
+    claire @ say "You mean... you're not French?"
+    
+    ava @ say "?"
+    ava @ say "No? Why would you think that I was?"
+    
+    show claire sweater embarassed
+    
+    claire @ say "It's just... you're artsy and your last name is Montblanc, like that mountain in France."
+    
+    show ava pose annoyed
+    
+    ava @ say "That doesn't mean *I've* ever been to France! That just means someone in my family was probably from there at some point!"
+    ava @ say "That's like me assuming you were born in the Netherlands just 'cause you're a Flemish giant rabbit!"
+    
+    claire @ say "Is that what I am??"
+    
+    show ava pose angry
+    
+    ava @ say "How do you not know these things?"
+    
+    show claire sweater derp
+    
+    #claire @ say "I guess I'm not all that smart huh..."
+    claire @ say "I guess I'm not such a clever bunny, huh..."
+    
+    show claire sweater surprised
+    
+    claire @ say "Oh, here's the science building! I'll catch you two later, k?"
+    
+    show claire sweater neutral 
+    show ava pose happy
+    claire @ say "How does lunch tomorrow sound?"
+
+    menu:
+        claire "{cps=0}How does lunch tomorrow sound?{/cps}"
+        "Sure!":
+            #finished
+            $ avaPoints = avaPoints + 1
+            $ clairePoints = clairePoints + 1
+            $ avalunch = True
+            player "Sure, that sounds cool."
+
+            show claire sweater overjoyed
+            
+            claire @ say "Yes!"
+            
+            n "Claire pulls you into a suffocating hug. Ava has to pry her off of you."
+            
+            show ava pose ohyou
+            
+            ava @ say "Come on Claire, we've got class to get to."
+            
+            show ava pose happy
+            
+            ava @ say "Bye [name]! We'll see you tomorrow!"
+            
+            player "Can't wait!"
             
             show claire sweater wave
             
-            claire @ say "Avaaaa! Over here!!!"
-
-            n "Claire waves to the bird in the distance taking photos in your general direction."
-            n "She looks annoyed as she lowers her camera and walks over."
+            claire @ say "See you tomorrow!"
             
-            show claire sweater neutral
-            show ava pose annoyed at norm with moveinright:
-                xpos 400
-
-            #ava @ say "You know, the point of street photography is to capture reality without the photographer interacting with their subjects."
-            #ava @ say "You know, the point of street photography is to capture reality without the photographer's influence."
-            #ava @ say "I can't really do that with you looking directly at the camera and flailing your arms."
-            ava @ say "You know, street photography is sorta like wildlife photography."
+            n "Claire waves to you while Ava pushes her into the science building."
             
-            show claire sweater surprised
+            show claire at offscreenleft:
+                yalign 0
+            show ava at offscreenleft:
+                yalign 0
+            with move
+            
+            n "The bird smiles to you before flapping her wings and taking off into the sky to wherever her own class is."
+            
+            show text "{color=c8f8ff} {/color}":
+                ypos 46
+                xpos 940
+            
+            #ava @ say "Bye [name]!{nw}"
+            show text "{color=c8f8ff}Bye [name]!{/color}":
+                ypos 46
+                xpos 940
 
-            claire @ say "What do you mean?"
+            show ava at offscreenright with MoveTransition(delay=.8):
+                xzoom -1
+                yalign .2
 
-            ava @ say "It's about capturing the moment in as natural a state as possible. Me and my camera are supposed to be invisible."
+            hide text
+            
+            pause .6
+            
+
+            #ava @ say "Welp, I have to get to class as well. See you later, [name]!"
+            
+            #player "Salut!"
+        
+            #ava @ say "?"
+            #ava @ say "Oh haha French words."
+            #ava @ say "Au revoir or however they say it."
+
+        "I already have plans":
+            #untested
+            $ avalunch = False
+            $ roriPoints = roriPoints + 1
+            player "Sorry, I already have plans."
             
             show claire sweater cry
 
-            claire @ say "Oh did I ruin your shot? Sorry..."
+            claire @ say "Oh... I guess you must be pretty busy. Maybe another time then?"
             
-            show ava pose happy
-
-            ava @ say "It's no big deal, I was just warming up anyway."
-            ava @ say "I see you brought a friend."
+            player "Maybe."
             
-            show claire sweater neutral
+            claire @ say "Maybe. Okay, yeah, maybe."
+            claire @ say "See you later for real this time!"
 
-            claire @ say "Yup! Me and [name] here have French together so we're gonna be study buddies!"
+            show claire sweater cry at offscreenleft with moveinleft:
+                xzoom 1
+                yalign 0
 
-            ava @ say "Is that so? I took French in high school but I could never retain any of it."
+            n "Claire hurries off into the science building."
 
-            show claire sweater pose neutral
+            ava @ say "What's her problem?"
+            ava @ say "Whatever, she'll be fine. I've got a class to get to."
+            ava @ say "See you around, [name]!"
 
-            claire @ say "Ksksksks hopefully we won't end up the same way!"
-            claire @ say "*Sigh*"
-            claire @ say "I'd just love to visit Paris one day!"
-
-            ava @ say "The only thing I remember is they say it like \"Pah ree\" over there."
-
-            player "Then why'd they put an \"s\" at the end of it?"
-
-            n "Ava shrugs."
+            player "Later!"
             
-            show ava bored
+            hide ava with dissolve
 
-            ava @ say "You have to ignore half the letters when it comes to French."
+    n "You're suddenly feeling very tired. Social interaction always makes you feel drained of energy. You decide to retire to your dorm."
 
-            claire @ say "I guess so!"
+    stop music fadeout 1.0
+
+
+
+        
             
-            show claire sweater surprised
             
-            #claire @ say "Wait, Ava, aren't you *from* France??"
-            claire @ say "To be honest, this whole time I thought you were from France!"
             
+            
+            
+            
+            
+    claire @ say "Hey is that Ava?"
+    
+    show claire sweater wave
+    
+    claire @ say "Avaaaa! Over here!!!"
+
+    n "Claire waves to the bird in the distance taking photos in your general direction."
+    n "She looks annoyed as she lowers her camera and walks over."
+    
+    show claire sweater neutral
+    show ava pose annoyed at norm with moveinright:
+        xpos 400
+
+    #ava @ say "You know, the point of street photography is to capture reality without the photographer interacting with their subjects."
+    #ava @ say "You know, the point of street photography is to capture reality without the photographer's influence."
+    #ava @ say "I can't really do that with you looking directly at the camera and flailing your arms."
+    ava @ say "You know, street photography is sorta like wildlife photography."
+    
+    show claire sweater surprised
+
+    claire @ say "What do you mean?"
+
+    ava @ say "It's about capturing the moment in as natural a state as possible. Me and my camera are supposed to be invisible."
+    
+    show claire sweater cry
+
+    claire @ say "Oh did I ruin your shot? Sorry..."
+    
+    show ava pose happy
+
+    ava @ say "It's no big deal, I was just warming up anyway."
+    ava @ say "I see you brought a friend."
+    
+    show claire sweater neutral
+
+    claire @ say "Yup! Me and [name] here have French together so we're gonna be study buddies!"
+
+    ava @ say "Is that so? I took French in high school but I could never retain any of it."
+
+    show claire sweater pose neutral
+
+    claire @ say "Ksksksks hopefully we won't end up the same way!"
+    claire @ say "*Sigh*"
+    claire @ say "I'd just love to visit Paris one day!"
+
+    ava @ say "The only thing I remember is they say it like \"Pah ree\" over there."
+
+    player "Then why'd they put an \"s\" at the end of it?"
+
+    n "Ava shrugs."
+    
+    show ava bored
+
+    ava @ say "You have to ignore half the letters when it comes to French."
+
+    claire @ say "I guess so!"
+    
+    show claire sweater surprised
+    
+    #claire @ say "Wait, Ava, aren't you *from* France??"
+    claire @ say "To be honest, this whole time I thought you were from France!"
+    
+    ava @ say "?"
+    ava @ say "No? Where'd you get that idea?"
+    
+    show claire sweater neutral
+    
+    claire @ say "Cause you're artsy and your last name is Montblanc? As in that tall mountain in France?"
+    
+    show ava normal neutral
+    
+    ava @ say "Huh, is that where it comes from?"
+    
+    show ava angry
+    
+    ava @ say "Wait, did you just assume my nationality because I'm 'artsy?'"
+    
+    show claire sweater embarassed
+    
+    claire @ say "I mean, I just thought uhhh..."
+    claire @ say "Oop well here's the science building, gotta go, see you later!"
+    
+    #show claire at offscreenleft with move
+    show claire at hopaway
+    
+    #make little animation of claire 'hopping' away
+    
+    show ava normal neutral
+    
+    n "Claire hops away as if Ava were a bird of prey about to catch and fly off with her."
+    n "Even though she probably weighs quadruple Ava's weight."
+    n "Animal people instincts are funny like that."
+    n "Suddenly she turns on her heel and hops right back."
+    
+    #show claire sweater neutral at norm with dissolve:
+    #    xzoom -1
+    #    xpos -180
+    show claire sweater neutral at hopback
+    
+    pause .7
+    
+    claire @ say "Oh, before I forget..."
+    claire @ say "[name], would you like to have lunch with us tomorrow?"
+
+    menu:
+        claire @ say "{cps=0}[name], would you like to have lunch with us tomorrow?{/cps}"
+        "Sure!":
+            $ avaPoints = avaPoints + 1
+            $ clairePoints = clairePoints + 1
+            $ avalunch = True
+            player "Sure, that sounds cool."
+
+            show claire sweater overjoyed
+            
+            claire @ say "Yes!"
+            
+            n "Claire pulls you into a suffocating hug. Ava has to pry her off of you."
+            
+            ava @ say "Come on Claire, we've got class to get to."
+            
+            show claire sweater wave
+            
+            claire @ say "See you tomorrow, [name]!"
+        
+            player "Salut!"
+    
             ava @ say "?"
-            ava @ say "No? Where'd you get that idea?"
+            ava @ say "Oh haha French words."
+            ava @ say "Au revoir or however they say it."
             
-            show claire sweater neutral
+            n "Claire waves to you while Ava pushes her into the science building."
             
-            claire @ say "Cause you're artsy and your last name is Montblanc? As in that tall mountain in France?"
+            show claire at offscreenleft:
+                yalign 0
+            show ava at offscreenleft:
+                yalign 0
+            with move
             
-            show ava normal neutral
+            n "The bird smiles to you before flapping her wings and taking off into the sky to wherever her own class is."
             
-            ava @ say "Huh, is that where it comes from?"
+            show text "{color=c8f8ff} {/color}":
+                ypos 46
+                xpos 940
             
-            show ava angry
-            
-            ava @ say "Wait, did you just assume my nationality because I'm 'artsy?'"
-            
-            show claire sweater embarassed
-            
-            claire @ say "I mean, I just thought uhhh..."
-            claire @ say "Oop well here's the science building, gotta go, see you later!"
-            
-            #show claire at offscreenleft with move
-            show claire at hopaway
-            
-            #make little animation of claire 'hopping' away
-            
-            show ava normal neutral
-            
-            n "Claire hops away as if Ava were a bird of prey about to catch and fly off with her."
-            n "Even though she probably weighs quadruple Ava's weight."
-            n "Animal people instincts are funny like that."
-            n "Suddenly she turns on her heel and hops right back."
-            
-            #show claire sweater neutral at norm with dissolve:
-            #    xzoom -1
-            #    xpos -180
-            show claire sweater neutral at hopback
-            
-            pause .7
-            
-            claire @ say "Oh, before I forget..."
-            claire @ say "[name], would you like to have lunch with us tomorrow?"
+            #ava @ say "Bye [name]!{nw}"
+            show text "{color=c8f8ff}Bye [name]!{/color}":
+                ypos 46
+                xpos 940
 
-            menu:
-                claire @ say "{cps=0}[name], would you like to have lunch with us tomorrow?{/cps}"
-                "Sure!":
-                    $ avaPoints = avaPoints + 1
-                    $ clairePoints = clairePoints + 1
-                    $ avalunch = True
-                    player "Sure, that sounds cool."
+            show ava at offscreenright with MoveTransition(delay=.8):
+                xzoom -1
+                yalign .2
 
-                    show claire sweater overjoyed
-                    
-                    claire @ say "Yes!"
-                    
-                    n "Claire pulls you into a suffocating hug. Ava has to pry her off of you."
-                    
-                    ava @ say "Come on Claire, we've got class to get to."
-                    
-                    show claire sweater wave
-                    
-                    claire @ say "See you tomorrow, [name]!"
-                
-                    player "Salut!"
+            hide text
             
-                    ava @ say "?"
-                    ava @ say "Oh haha French words."
-                    ava @ say "Au revoir or however they say it."
-                    
-                    n "Claire waves to you while Ava pushes her into the science building."
-                    
-                    show claire at offscreenleft:
-                        yalign 0
-                    show ava at offscreenleft:
-                        yalign 0
-                    with move
-                    
-                    n "The bird smiles to you before flapping her wings and taking off into the sky to wherever her own class is."
-                    
-                    show text "{color=c8f8ff} {/color}":
-                        ypos 46
-                        xpos 940
-                    
-                    #ava @ say "Bye [name]!{nw}"
-                    show text "{color=c8f8ff}Bye [name]!{/color}":
-                        ypos 46
-                        xpos 940
+            pause .6
 
-                    show ava at offscreenright with MoveTransition(delay=.8):
-                        xzoom -1
-                        yalign .2
-
-                    hide text
-                    
-                    pause .6
-
-                "I already have plans":
-                    $ avalunch = False
-                    $ roriPoints = roriPoints + 1
-                    player "Sorry, I already have plans."
-                    
-                    show claire sweater cry
-
-                    claire @ say "Oh... I guess you must be pretty busy. Maybe another time then?"
-                    
-                    player "Maybe."
-                    
-                    claire @ say "Maybe. Okay, yeah, maybe."
-                    claire @ say "See you later for real this time!"
-
-                    show claire sweater cry at offscreenleft with moveinleft:
-                        xzoom 1
-                        yalign 0
-
-                    n "Claire hurries off into the science building."
-
-                    ava @ say "What's her problem?"
-                    ava @ say "Whatever, she'll be fine. I've got a class to get to."
-                    ava @ say "See you around, [name]!"
-
-                    player "Later!"
-                    
-                    hide ava with dissolve
-
-            n "You're suddenly feeling very tired. Social interaction always makes you feel drained of energy. You decide to retire to your dorm."
+        "I already have plans":
+            $ avalunch = False
+            $ roriPoints = roriPoints + 1
+            player "Sorry, I already have plans."
             
-            stop music fadeout 1.0
+            show claire sweater cry
+
+            claire @ say "Oh... I guess you must be pretty busy. Maybe another time then?"
+            
+            player "Maybe."
+            
+            claire @ say "Maybe. Okay, yeah, maybe."
+            claire @ say "See you later for real this time!"
+
+            show claire sweater cry at offscreenleft with moveinleft:
+                xzoom 1
+                yalign 0
+
+            n "Claire hurries off into the science building."
+
+            ava @ say "What's her problem?"
+            ava @ say "Whatever, she'll be fine. I've got a class to get to."
+            ava @ say "See you around, [name]!"
+
+            player "Later!"
+            
+            hide ava with dissolve
+
+    n "You're suddenly feeling very tired. Social interaction always makes you feel drained of energy. You decide to retire to your dorm."
+    
+    stop music fadeout 1.0
 
     scene bg codadorm with fade
 
