@@ -2129,7 +2129,6 @@ label thirdDayOfClass:
         "Be a productive member of society":
             n "You'll have time to rest when you're dead. Or tonight, whichever comes first."
             n "Either way, these classes aren't going to attend themselves."
-            
     
     stop music fadeout .5
 
@@ -2140,54 +2139,28 @@ label thirdDayOfClass:
     show box with Dissolve(.2):
         ypos 0
 
-    n "Time to learn about some ancient civilizations."
+    n "Time to learn about the lore of the world."
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    n "You sit in the same spot as last time, though your project partner is nowhere to be found, even as Mr. Rothbauer shows up."
-
     show rothbauer at norm with dissolve
     
-    show rose neutral pendant at offscreenright:
-        yalign 0
+    rothbauer @ say "Good day, class! Today we will be looking at some of the other civilizations that had cropped up around the dawn of humanized history."
+    rothbauer @ say "Let's start with one of their closest genetic relatives, the chimpanzees!"
+    rothbauer @ say "The civilized apes at this time were living quite similarly to their feral counterparts, who already live in impressively social tribes."
+    rothbauer @ say "It's thought that the key difference was the ability to develop sophisticated language that allowed them to become more organized."
+    rothbauer @ say "Structure brought order, something common to all functional civilizations."
 
-    rothbauer @ say "Good day class! Let's see who's been reading ahead!"
-    rothbauer @ say "Can anyone tell me what major event happened in Egypt at around 2500 BCE?"
-
-    show rose neutral pendant with move:
-        yalign 0
-        xpos 600
-
-    rose @ say "That would be Artyek's rebellion, leading to the overthrow of the pharaoh and rise of the first non-human leader of a major civilization."
-
-    n "Without missing a beat, Rose answers the question as soon as she steps into the classroom."
+    n "The lecture continues, describing a few early primate based societies."
     
-
-    show rothbauer at flipright
-
-    pause (.15)
-
-    rothbauer @ say "Yes, that's exactly right. Though ultimately short-lived, King Artyek's reign ignited the progression of how anthromorphs were perceived in a human dominated society."
-    rothbauer @ say "Similar uprisings would occur around the world over the next thousand years or so which we'll get into later."
-    rothbauer @ say "Very good, Rose, thank you."
-
-    hide rose
-    hide rothbauer
-    with dissolve
-
-    n "Rose takes her seat and Mr. Rothbauer then asks the class to open their books as he begins his lesson."
-    n "You notice that most of your classmates don't really seem interested in the subject matter but Rose is eager to answer questions and seems to know her stuff."
-    n "Maybe she really doesn't need your help on the project after all. You'd probably just slow her down."
-
-    #stop music fadeout .5
+    rothbauer @ say "That's all for today! Be sure to read up on the bonobos in your textbook! If you want to pass the quiz that is, hint hint."
+    
+    n "You pack your things and get ready for your next class. On your way out, you decide to ask Rose about what you should do for the group project."
+    
+    player "Hey, what civilization are we doing for the-"
+    
+    rose @ say "Don't talk to me."
+    
+    n "She walks off without even giving you a glance."
+    n "Already off to a better start than every other group project you've been a part of."
     
 label thirdDayOfClassStats:
     scene bg lecturehall with fade
@@ -2196,6 +2169,12 @@ label thirdDayOfClassStats:
 
     show box with Dissolve(.2):
         ypos 0
+        
+        
+        
+        
+        
+    
 
     n "You arrive to statistics a little early and decide to take the opportunity to read through the textbook after realizing you'd failed to do so last night."
 
