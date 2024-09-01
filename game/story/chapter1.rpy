@@ -1036,7 +1036,7 @@ label exploring_campus:
                 
                 gunner @ say "The one with all the buff dudes with ghosts that punch really fast and are also buff dudes half the time."
                 
-                player "Jojo's Weird Adventure?"
+                player "Jojo's Strange Journey?"
                 
                 n "Rori nods his head."
                 n "Damn, you thought you could defend him but that one is undoubtedly pretty gay."
@@ -1151,6 +1151,7 @@ label exploring_campus:
                     n "The barista clenches her eyes shut as she puts a claw to the light switch."
                     n "When the lights come on, she winces and slowly opens her eyes."
                 "Leave them off":
+                    ###$ mishkaPoints=+1
                     player "It's fine, you can leave them off. It's comfier this way."
                     
                     #mishka @ say ""
@@ -2091,9 +2092,9 @@ label thirdDayOfClass:
     show box with Dissolve(.2):
         ypos 0
 
-    n "Dragging your ass out of bed at the unfathomably early hour of...
+    n "Dragging your ass out of bed at the unfathomably early hour of..."
     n "You check the time on your phone."
-    n "...9:30AM"
+    n "...9:00AM?!"
     n "My god, the sun probably isn't even up. You could stand to lie back down for a few more minutes. Catch a few more Z's so you can start making A's."
     
     $ bedpilled = False
@@ -2113,7 +2114,7 @@ label thirdDayOfClass:
             
             scene bg black with fade
             
-            pause 1.0
+            pause 0.9
             
             scene bg codadorm with fade
             
@@ -2170,33 +2171,21 @@ label thirdDayOfClassStats:
     show box with Dissolve(.2):
         ypos 0
         
-        
-        
-        
-        
-    
-
-    n "You arrive to statistics a little early and decide to take the opportunity to read through the textbook after realizing you'd failed to do so last night."
-
     show gunner neutral at norm with dissolve
-
-    gunner @ say "Hey bro! Whatchya readin'?"
-
-    n "Gunner suddenly pops up out of nowhere, startling you."
-
-    player "Oh! I didn't see you there, Gunner. I was just trying to prepare for today's lesson."
-
-    gunner @ say "Oh yeah that sounds like a good idea. I should probably do that too..."
-
-    hide gunner with dissolve
-
-    n "He slinks off to his desk and takes his book out of his bag, studying it intently in the minutes before Mrs. Herschel arrives."
-
+    
+    gunner @ say "Sup [name]!"
+    gunner @ say "You ready to fuck up some mathematics?"
+    
+    player "I have no idea what that's supposed to mean."
+    
+    gunner @ say "It's just an expression."
+    
     show herschel at norm with dissolve
 
     herschel @ say "Good afternoon class!"
-    herschel @ say "I hope you're mentally alert because this is where the material starts to get a little hard..."
-    herschel @ say "...and without a solid foundation of the principles of probability, you're going to be struggling for the rest of the semester."
+    herschel @ say "We have a lot to go over and precious little time, so let's jump straight into it!"
+    #herschel @ say "I hope you're mentally alert because this is where the material starts to get a little hard..."
+    #herschel @ say "...and without a solid foundation of the principles of probability, you're going to be struggling for the rest of the semester."
     herschel @ say "Recall from yesterday, the intersection of two events is equal to the product of the probability of event A and event B."
 
     n "She writes the formula on the board."
@@ -2206,11 +2195,11 @@ label thirdDayOfClassStats:
 
     n "She writes another formula on the board."
 
-    herschel @ say "The probability of A and B divided by the probability of B."
+    herschel @ say "The probability of A and B together divided by just the probability of B."
     herschel @ say "Alternatively it can often be more useful to rearrange this into the probability of A and B is equal to the probability of A given B multiplied by B."
     herschel @ say "Let me give you an example...."
 
-    n "Mrs. Herschel works out out to solve the probability of drawing two queens in a row from a deck of cards."
+    n "Mrs. Herschel explains how to solve the probability of drawing two queens in a row from a deck of cards."
     n "Gunner leans over and whispers to you."
 
     show gunner neutral at norm with moveinleft:
@@ -2219,7 +2208,19 @@ label thirdDayOfClassStats:
 
     gunner @ say "Psst [name], did you understand any of that?"
 
-    player "Sort of? The book probably explains it better..."
+    menu:
+        "Of course."
+            player "Yeah, it's real basic stuff."
+            
+            gunner @ say "Really? How the fuck can you move the letters around like that?"
+            
+            player "It's simple algebra."
+            
+            gunner @ say "Who do I look like, Isaac Newton?"
+        "Not really."
+            player "Not really. She's going through it so quickly..."
+            
+            gunner @ say "I know right? This bitch needs to slow down."
 
     hide gunner with dissolve
 
@@ -2237,10 +2238,18 @@ label thirdDayOfClassStats:
         ypos 0
 
     n "Gunner stayed behind to talk to Mrs. Herschel while you and the rest of the class left."
-
+    
     if avaClaireLunch == True:
-        #finished
-        n "You're supposed to have lunch with Ava and Claire today but unfortunately forgot to ask where, or even for their phone numbers so you're left wandering around and hoping you'll bump into them."
+        n "You don't have any more classes today but weren't you supposed to do something else?"
+        n "That's right, you're having lunch with Ava and Claire? But where exactly?"
+        n "It dawns on you that you never settled on a time nor location. You didn't even get their numbers to coordinate this little rendevous."
+        n "Perhaps if you wander around campus for a while you'll run into them. It can't be that hard to spot Claire among a crowd. Ava might be harder to find though."
+        
+        
+        
+        
+        
+        
         n "Just when you're about to call it quits, you spot Claire's ears sticking up among a crowd of students."
 
         player "Hey, Claire, over here!"
@@ -2458,7 +2467,6 @@ label thirdDayOfClassStats:
         
         ava @ say "What? Who?!"
         
-
         claire @ say "That Gunner boy duh! Ksksksksksks!"
         
         show ava bored
@@ -2647,7 +2655,6 @@ label thirdDayOfClassStats:
         call phone_end from _call_phone_end
 
     else:
-        ###not yet playtested
         n "As you're walking around campus trying to decide a good place to eat, Gunner comes running up behind you."
 
         show gunner neutral at norm with dissolve
@@ -2781,21 +2788,6 @@ label thirdDayOfClassStats:
 
         claire @ say "Oh that's pretty simple!"
         claire @ say "Just not intuitive like calculus or trigonometry."
-        #claire @ say "The axiomatic mathematical formalization is extremely subtle, and without a solid grasp of derivative calculus most of the functions will go over a typical student's head."
-        #claire @ say "There's also Pascal's essentialist outlook, which is deftly woven into his theories -- his personal philosophy draws heavily from the literature of Galileo Galilei, for instance."
-        #claire @ say "The fans understand this stuff; they have the intellectual capacity to truly appreciate the depths of these mathematical definitions..."
-        #claire @ say "...to realize they're not just explanations for natural phenomena- they say something deep about LIFE."
-        #claire @ say "As a consequence people who dislike probability & statistics truly ARE plebians -- of course they wouldn't appreciate, for instance, the humor in Pascal's existential catchphrase \"Man is only a reed...but he is a thinking reed\""
-        #claire @ say "..."
-
-        #gunner @ say "..."
-
-        #player "..."
-
-        #claire @ say "And yes, by the way, I DO have a probability and statistics tattoo. And no, you cannot see it."
-        #claire @ say "It's for the ladies' eyes only~"
-        #claire @ say "And even then they have to demonstrate they're within 5 IQ points of my own (preferably lower) beforehand."
-        ###author's note: adapting this copypasta was funnier in my head compared to how it turned out
 
         ###offscreenleft
         mishka @ say "Order for Gunner and [name], ready for pickup!"
