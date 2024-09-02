@@ -2101,30 +2101,8 @@ label thirdDayOfClass:
     
     menu:
         "Go back to bed":
-            $ bedpilled = True
-            
-            #results in you skipping history but having more time to do stuff after class
-            n "Without a doubt, the best thing you can do is take care of yourself."
-            n "And taking care of yourself means hitting the snooze button from time to time."
-            n "By your calculations, five more minutes of shuteye translates to at least an hour of alertness and productivity in the day."
-            n "Can you really refuse such a lucrative offer? That's more than a 10x return on investment!"
-            n "Yes, it's best to return to your comfy fortress underneath those blankets."
-            n "It would be foolish to fall for the sunk cost fallacy line of thinking that you *must* continue your day right now just because you've already gotten out of bed."
-            n "You crawl into the cotton's warm embrace and go for round two in the ring of slumber."
-            
-            scene bg black with fade
-            
-            pause 0.9
-            
-            scene bg codadorm with fade
-            
-            n "Five minutes turned into an hour in the snap of your fingers."
-            n "Time's imperceptibly slow march suddenly lurched forward while you were asleep to stab you in the back when you were at your most vulnerable."
-            n "Your eyes open and focus in on your clock. History class is halfway over by now but you might make it to Statistics."
-            n "Although you do feel slightly more energized, you forgot to account for diminishing returns."
-            n "Plus you now have to pay back your debt to the sleep economy by getting less than an optimal amount of sleep later."
-            n "Or you could go to bed earlier, but then you'd miss out on... {i}activities.{/i}"
-            n "Just something to consider. For now, you need to get ready and go to class."
+            call sleepingIn
+            #this class skip is lenient and results in only missing the first one of the day
             
             jump thirdDayOfClassStats
         "Be a productive member of society":
@@ -2209,7 +2187,7 @@ label thirdDayOfClassStats:
     gunner @ say "Psst [name], did you understand any of that?"
 
     menu:
-        "Of course."
+        "Of course.":
             player "Yeah, it's real basic stuff."
             
             gunner @ say "Really? How the fuck can you move the letters around like that?"
@@ -2217,7 +2195,7 @@ label thirdDayOfClassStats:
             player "It's simple algebra."
             
             gunner @ say "Who do I look like, Isaac Newton?"
-        "Not really."
+        "Not really.":
             player "Not really. She's going through it so quickly..."
             
             gunner @ say "I know right? This bitch needs to slow down."
@@ -2242,17 +2220,12 @@ label thirdDayOfClassStats:
     if avaClaireLunch == True:
         n "You don't have any more classes today but weren't you supposed to do something else?"
         n "That's right, you're having lunch with Ava and Claire? But where exactly?"
-        n "It dawns on you that you never settled on a time nor location. You didn't even get their numbers to coordinate this little rendevous."
+        n "It dawns on you that you never settled on a time nor location. You didn't get their numbers to coordinate this little rendevous."
+        n "You don't even know what classes they have."
         n "Perhaps if you wander around campus for a while you'll run into them. It can't be that hard to spot Claire among a crowd. Ava might be harder to find though."
+        n "Ah there she is, towering above everyone else. She reminds you of a great white shark swimming through a school of fish who disperse stay out of her path."
         
-        
-        
-        
-        
-        
-        n "Just when you're about to call it quits, you spot Claire's ears sticking up among a crowd of students."
-
-        player "Hey, Claire, over here!"
+        player "Claire! Over here!"
 
         n "Her ears turn in your direction and she comes hopping toward you with Ava fluttering along by her side."
 
@@ -2295,9 +2268,7 @@ label thirdDayOfClassStats:
         show claire sweater neutral
         show ava concerned
 
-        player "No, it's a local restaurant. I think it's called Coffee Zone? It's tucked away behind the library and it was pretty quiet when I went there."
-        
-        player "They have sandwiches and stuff and I could go for a coffee."
+        player "No, the one behind the library. Coffee Zone I think? It was pretty quiet when I went there a few days ago."
 
         claire @ say "I've never heard of it but that sounds good!"
         
@@ -2312,7 +2283,7 @@ label thirdDayOfClassStats:
         show box with Dissolve(.2):
             ypos 0
 
-        n "The cafe is nice and empty save for the barista and a feline sitting at a table reading a textbook while listening to his headphones."
+        n "The cafe is vacant save for the barista and a feline sitting at a table reading a textbook while listening to his headphones."
         n "As you walk past, you recognize him as one of your classmates. He must have ran straight here after talking with Mrs. Herschel."
 
         show gunner neutral at norm with dissolve:

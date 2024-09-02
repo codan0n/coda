@@ -1420,6 +1420,8 @@ layeredimage volginova neutral:
 label start:
     # variables
     $ dating = ""
+    $ currentWeather = "sunny"
+    $ daysSinceRain = 1
     $ gardenvisit = False
     $ dndnight = False
     $ gaveCinRoll = False
