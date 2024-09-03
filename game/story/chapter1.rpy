@@ -28,7 +28,6 @@ label chapter1:
     "Your parents died of that damn disease three years ago. Since then you haven't really done anything."
     "This could be a good opportunity to start fresh."
     
-    #your parents died of that damn disease three years ago.
     #yes this bit is just a silent hill 2 reference
     
     scene bg black with fade
@@ -2284,16 +2283,14 @@ label thirdDayOfClassStats:
             ypos 0
 
         n "The cafe is vacant save for the barista and a feline sitting at a table reading a textbook while listening to his headphones."
-        n "As you walk past, you recognize him as one of your classmates. He must have ran straight here after talking with Mrs. Herschel."
+        n "He notices you when you walk in and waves you over."
 
         show gunner neutral at norm with dissolve:
             xzoom -1
 
-        gunner @ say "Hey [name]! Fancy meeting you here! I see you brought some lovely ladies as well!"
-
         player "Gunner? What are you doing here?"
 
-        gunner @ say "I like to come here to study 'cause it's quiet and the smell of coffee keeps me awake."
+        gunner @ say "I like to come here to study 'cause the smell of coffee keeps me awake."
         
         show gunner with move:
             xpos -375
@@ -2321,20 +2318,64 @@ label thirdDayOfClassStats:
         
         show ava pose happy
 
-        gunner @ say "Nah, it's all good! I'd talk more but I'm *this* close to figuring out his problem and don't wanna lose my train of thought."
+        gunner @ say "It's all good, I could use a break from this anyhow."
         
-        show claire sweater neutral
+        player "Riiiight..."
         
-        ava @ say "Aww, good luck! We'll leave you to it!"
+        n "It's been less than 15 minutes since class ended, so he couldn't have been studying for long."
         
-        gunner @ say "See you around, enjoy your lunch!"
-
-        show gunner neutral at offscreenleft with moveinleft:
-            yalign 0
+        gunner @ say "You all want some coffee? It'll be my treat~"
+        
+        player "We actually stopped by to get lunch."
+        
+        #shrug sprite
+        gunner @ say "No problem, order whatever you want."
+        gunner @ say "I accidentally withdrew too much cash and now my wallet barely fits in my pocket, so I don't mind."
+        
+        $ acceptedGunnersMoney = False
+        
+        menu:
+            "Decline":
+                player "I can pay for myself."
+                
+                gunner @ say "Heh suit yourself."
+                
+                n "Gunner leans in and whispers to you."
+                
+                gunner @ say "Wouldn't want these chicks to think you're poor, I get it."                
+            "Accept":
+                $ acceptedGunnersMoney = True
+                
+                n "Maybe Gunner's cool after all."
+                
+                player "I'd never turn down free food. Thanks man."
+                
+                gunner @ say "Of course! What kind of friend would I be if I didn't offer to cover something as small as lunch?"
+        
+        gunner @ say "Ladies? What about you?"
+        
+        claire @ say "I'll take you up on that offer! What a sweet guy!"
+        
+        ava @ say "That would be very kind of you~"
+        
+        gunner @ say "Aw don't sweat it!"
+        gunner @ say "Go ahead and order while I finish this homework problem."
+        
+        n "He reaches into his pocket and pulls out his massive bulging wallet."
+        
+        gunner @ say "This should cover it. Just give the change to the barista as a tip."
+        
+        player "Sure. We'll be right back."
+        
+        hide gunner with dissolve
+        
+        n "Gunner gave you like $100. How much does he think lunch costs?"
+        n "Maybe he figured Claire would need a lot."
+        
+        #either take credit for the tip or say it was gunner's idea
+        
         show mishka neutral at offscreenleft:
             yalign 0
-
-        n "Gunner returns to his table while you, Claire and Ava approach the counter."
 
         show mishka neutral at norm with move:
             xzoom -1
@@ -2346,85 +2387,215 @@ label thirdDayOfClassStats:
         
         show mishka neutral
 
-        player "Hi Mishka! Yeah we're just stopping by for lunch."
+        player "Hi Mishka! Yeah we're just stopping by to get something to eat after class."
 
         claire @ say "Ohmygosh your accent is so cute! Tih rooskie?"
 
         show mishka sad wave
 
-        mishka @ say "Nyet, no ya nyemnogo govaryu po-rooskie..."
+        mishka @ say "Nyet, no ya nyemnogo govaryu po-Rooskie..."
         
         show mishka depressed
         
-        mishka @ say "I am from a country that no longer exists unfortunately."
+        n "Mishka turns to show the Ukrainian flag patch on her jacket."
         
-        n "Mishka turns to show the flag patch on her jacket."
-        
-        mishka @ say "Currently it is part of Ukraina but it has been occupied by Russian forces at many times since I was little."
-        mishka @ say "...So I tend to speak mixture Ookrainskoy ee Russiyskoy."
-        #I grew up near border between Russia and Ukraine so I tend to blend the two together."
+        mishka @ say "I am from a village near the border of Ookrainie ta Rossie."
+        mishka @ say "So perhaps some Rossiskie has infected my way of speaking."
 
-        claire @ say "Ahh, mnyeh zshal uhh... kak eto skazat... sleeshad eto. Ya nyemnogo znayu tolkuh russkie, no slihshal, shto ukrainskie pokhozh."
+        claire @ say "Ahh, mnyeh zshal uhh... kak eto skazat... sleeshad eto. Ya nyemnogo znayu tolkuh Russkie, no slihshal, shto Ookrainskie pokhozh."
         
         show mishka neutral
 
-        mishka @ say "Nu vih dobre tse hovoryte!"
+        mishka @ say "Nu vih dobre tse hovoryt!"
 
         claire @ say "Spasibo!"
 
-        n "You're left dumbfounded as to what they're saying. You had no idea Claire knew Russian. If she can learn a hard language like that, French should be a breeze for her."
+        n "You're left dumbfounded as to what they're saying. You had no idea Claire knew Russian. If she can learn a complicated language like that, French should be a breeze for her."
 
         mishka @ say "Now then! What I can get for you?"
-
-        n "You place your order then turn back to Claire and Ava."
-
-        player "You guys can go ahead and order, I'll pay for it."
-
-        claire @ say "Aww, you don't have to do that!"
         
-        ava @ say "Yeah, we can pay for ourselves."
+        if acceptedGunnersMoney == False:
+            n "You place your order and swipe your card then step aside so Ava and Claire can place theirs."
+        else:
+            n "You place your order then step aside so Ava and Claire can place theirs."
+            
+        n "When they're done, you slip Mishka the bills Gunner gave you."
+            
+        player "Keep the change."
+        
+        n "Mishka's eyes go wide as she subtracts the amount owed and is still left with a hefty sum."
+        
+        mishka @ say "Are you certain? This is a big amount of money to just give away!"
+        mishka @ say "Usually people just leave behind the coins."
 
         menu:
-            claire "{cps=0}Yeah, we can pay for ourselves.{/cps}"
-            "Alright then":
-                #finished
-                player "Alright, just thought I'd offer."
-
-                n "You pay for your meal then move out of the way so Ava and Claire can order theirs."
-
-                mishka @ say "Thanks! I'll have that ready for you all shortly!"
-
-                hide mishka with dissolve
-
-            "No really, I got it.":
-                #finished
-                $ avaPoints = avaPoints + 1
-                $ clairePoints = clairePoints + 1
-                player "No really, I got it, don't worry about it."
+            "It was Gunner's idea":
+                player "It was his idea."
                 
-                show ava pose ohyou
-
-                ava @ say "Well if you insist~"
+                n "You gesture back toward Gunner."
                 
-                show claire sweater pose laugh
+                mishka @ say "Oh! Could you tell him dyakooyoo vam for me?"
+
+                player "Uhh..."
                 
-                claire @ say "Jeez, [name] you're so pushy ksksksksks!"
+                claire @ say "Don't worry, I got it~"
+            "It's nothing, really.":
+                player "It's nothing really. You deserve it for your hard work."
                 
-                show claire sweater neutral -pose
-                show ava pose happy
-
-                n "You move out of the way so Ava and Claire can order, then pay with your debit card."
+                mishka @ say "Oh my, well if you think so! Dyakooyoo vam haha!"
                 
-                show mishka silly wink
+                player "Haha right uhh... Claire?"
+                
+                n "Claire whispers what to say into your ear."
+                
+                player "Bood laska...? Did I pronounce that right?"
+                
+                mishka @ say "Close enough!"
 
-                mishka @ say "Thanks! I'll have that ready for you all shortly!"
+        mishka @ say "I will get started on your orders and have them ready for you at the end of the counter shortly!"
+        
+        hide mishka with dissolve
+        
+        n "You return to Gunner's table and sit beside him while you wait. He's packed his textbook and notes into his bag."
+        n "Ava and Claire take the seats across from you."
+        
+        claire @ say "Thanks again for lunch~"
+        
+        ava @ say "Yeah, especially since we're basically strangers!"
+        
+        gunner @ say "Hey, any friend of [name]'s is a friend of mine!"
+        gunner @ say "Besides, what better way to get to know someone than over lunch?"
+        gunner @ say "You two freshmen? I haven't seen you around before."
+        
+        ava @ say "Yup! I can't believe I actually got accepted here of all places!"
+        
+        claire @ say "I know right?? It's like a dream come true!"
+        
+        player "Yeah Harmonia is pretty cool I guess. Never thought I'd end up *here.*"
+        
+        ava @ say "So, what are you majoring in Gunner?"
+        
+        gunner @ say "Political science. It's not my passion or anything but what else is the son of a wealthy oil baron supposed to do?"
+        gunner @ say "What about you?"
+        
+        ava @ say "Oh just photography. I have an eye for it and thought I could make connections here to build a career out of it. I'd love to travel and just shoot people all day~"
+        ava @ say "With my camera I mean..!"
+        
+        claire @ say "Ksksksks y'all are so cute with your dreams and plans! And here I am going in raw with my undecided major!"
+        claire @ say "There's so many options, I can't just pick one thing to specialize in for the rest of my life!!"
+        
+        ava @ say "Well, what are your hobbies?"
+        
+        claire @ say "Um um I don't know, I like doing everything and trying new things?"
+        
+        ava @ say "That's not a hobby."
 
-                hide mishka with dissolve
-
-        show ava with move:
-            xpos 100
-
-        n "You find a table and sit across from Ava and Claire while you wait."
+        gunner @ say "How about... golfing?"
+        
+        claire @ say "Got bored of it after getting a hole in one on every course in my state."
+        
+        ava @ say "You ever try drawing?
+        
+        claire @ say "Already drew everything I wanted to draw."
+        
+        gunner @ say "Fishing?"
+        
+        claire @ say "My fishing career peaked when I harpooned a 600 pound tuna in my rowboat and spent 3 days fighting sharks to bring it back home."
+        
+        ava @ say "Cooking?"
+        
+        claire @ say "Had a good run with a critically acclaimed 5 season cooking show."
+        
+        gunner @ say "Music?"
+        
+        claire @ say "Never looked back after dropping a single that topped the charts for a few months."
+        
+        ava @ say "Fashion?"
+        
+        claire @ say "Banned from the industry after trolling a runway show with an all plus-sized lineup."
+        
+        gunner @ say "Guns?"
+        
+        claire @ say "I use my gold medal from the Olympics shooting contest as a coaster."
+        
+        n "Wow, she's already done it all and she's not even in her 20s. She's like the total opposite of you."
+        
+        gunner @ say "Could always make an Onlyfawns account. I know *tons* of guys who would pay to see you."
+        
+        claire @ say "Ksksks you think so?~"
+        claire @ say "Sorry, but the big bunny boobas are not for sale~"
+        
+        gunner @ say "What do you think [name]? What are some of your hobbies that Claire might enjoy?"
+        
+        n "Browsing internet image boards is not something you can admit to enjoying in front of normies."
+        n "Quickly, you have to come up with a cooler hobby."
+        
+        menu:
+            "Climbing":
+                player "I like to climb stuff."
+                
+                ava @ say "What, like mountains?"
+                
+                gunner @ say "Or rock walls?"
+                
+                player "Uhh both. Buildings too."
+                
+                claire @ say "Wow that sounds pretty cool!"
+                claire @ say "You gotta show us sometime!"
+                
+                player "I'd love to but I'm currently recovering from an injury. Fell like 30 feet while freeclimbing. Into a pit full of venomous snakes. Barely survived."
+                
+                ava @ say "Aww, hope you get better soon."
+                
+                claire @ say "It must be fo much fun, but can you imagine my fat ass scaling a cliff? The rocks would crumble under my weight ksksksks!"
+                
+            "Driving":
+                ###you end up watching initial D and playing racing sims
+                #later on someone has to drive. "does anyone know how to drive manual?"
+                player "..."
+                player "......"
+                player "........."
+                player "... I drive."
+                
+                n "Why did you say that? You don't even have a car."
+                #n "You barely even have a driver's license. It's set to expire this month"
+                n "Acting cool and stoic about it somehow garnered the fascination of your peers however."
+                
+                claire @ say "Whoa, like a racecar driver?"
+                
+                player "..."
+                player "Something like that."
+                
+                gunner @ say "Or maybe a stunt driver?"
+                
+                player "..."
+                player "Getting closer."
+                
+                ava @ say "Don't tell us you're a getaway driver."
+                
+                player "..."
+                player "Bingo."
+                
+                
+                
+                
+            "Bushcraft":
+                n ""
+                #outdoors survival stuff like uh chopping down trees and building shelter
+                #the only kind of survival stuff you've done is in Meincraft
+                ###if you choose this option, you start looking into that hobby and can build a fire for claire later on
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        #gunner gets up to get the food
         
         show claire sweater giggle
 
@@ -2471,6 +2642,11 @@ label thirdDayOfClassStats:
         hide ava
         hide claire
         with dissolve
+        
+        
+        
+        
+        
 
         n "Ava continues to get more flustered as Claire teases her until Mishka calls you back to the counter to grab your food."
 
