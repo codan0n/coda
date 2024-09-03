@@ -1420,6 +1420,8 @@ layeredimage volginova neutral:
 label start:
     # variables
     $ dating = ""
+    $ currentWeather = "sunny"
+    $ daysSinceRain = 1
     $ gardenvisit = False
     $ dndnight = False
     $ gaveCinRoll = False
@@ -1645,10 +1647,13 @@ label start:
 #    n "fin"
 
 call chapter1
-    #___thursday1
+    
 label sickday:
+    #___thursday1
+    ###this day will need to be rewritten so the player fainting in class happens 1 week later. For now, continue going to class, setting up a routine, introduce the weather system on week 2 or during the weekend. Maybe move the gunner rori rooftop scene to this weekend. Choose what to study over the weekend. in week 2, choose to either study or hang out after classes. 
+    ###at this point, it's been a while since we've seen Rori. Give him a scene on this day. Ask how his classes are going and what he's up to. Maybe get coffee. Ask Rose if you should start working on the project.
     #sickday
-    #writing done, sprites my require adjustment
+    
 
     scene bg codadorm with fade
 
@@ -22897,11 +22902,6 @@ label trish1:
     
     jump cont1
     
-    
-    
-    
-    
-
 label cont1:
 
     stop music fadeout 1.0
@@ -23085,107 +23085,9 @@ label cont1:
             show bg static3
             pause .03
 
-    jump credits
+    jump ending
 
-
-    ###have gunner as the positive reinforcement bro during protag's rehabilitation
-
-        #"Don't answer phone":
-       #     n "Whatever they have to say can't be good news. You're sure it can wait until after your date."
-         #   n "You don't wanna have your day ruined just yet."
-         #   n "Besides, you're busy living your life to the fullest like that nurse told you to do."
-         #   n "You press the reject button and put it away, moving on to where you're supposed to meet with your date."
-
-          #  hide phonecall with dissolve
-
-
-
-
-    #relationship has been going well until player's doctor appointment
-    #player shuts themselves away from everyone until school threatens to kick him out and their date convinces them that's no way to live
-
-
-    #date later comments on your smell
-
-
-    #have your date text you, just some "how was your day" stuff
-    #get text from date asking to hang out, out on your way there when you encounter trish, followed by phone call from nurse
-    #can choose to go to hospital right then and there or wait after date
-    #if you wait, something bad happens to you medically
-    #'guardian angel' looking over you
-    #pass out during your date
-
-
-    #choice to either break up or stay silent
-
-    #after coda finds out they're dying faster and locks themselves in their room, Rose stops by to drop off homework, talks him out of it.
-                #rose brings up her best friend in high school died from disease too and she shut herself away from everyone after that incident
-                #player is hesitant to form relationships knowing they're gonna be dead soon
-                # rose realizes player's pain, sees her old friend in him and decides not to let them be alone
-                #rose @ say "Even if I'll be alone, doesn't mean you have to be too..."
-
-
-    # drama with coda's disease
-    # finds out pills are killing him faster
-    #^ been skipping classes for the past week until date convinces you to go back to class
-    # have another week go by and then halloween party
-    #date promises to take you to party if you go to class
-
-
-    # saturday 10
-    # go to halloween party with date.
-    # claire goes as a slutty nurse
-    # ava goes as a mummy
-    # rori goes as Link from zelda
-    # rose goes as vampire
-    # gunner goes as a ghost
-    # ellen goes as slutty devil. no top, just tape over her nipples. Ok maybe a fishnet top. Devil horns. Devil tailplug.
-    # mishka goes as a witch
-    # mishka hates parties and gets mad at you if you go without her
-    #alternatively she's doing some witchcraft thing and wants you to be there
-    # or mishhka has a sudden depression attack
-    # mishka says she doesn't like parties cause they give her anxiety but wanted to go with you to get you out of your depression
-    # if you're dating ellen, she dresses up and comes along. However, the school has found out about them being together.
-    # shit goes south
-    # rori gets drunk and flirts with other people
-    # ava
-    # claire has a breakdown and feels like everyone hates her
-    # rose runs into someone from her high school who teases her for being a boy in a skirt. She breaks his nose.
-    # ellen is fine but calls the next day because school found her out. Not at the halloween party but if they find about that too she's in real trouble. Says she needs to lay low and avoid you for a while
-    #player gets mad, "What happened to not caring about that stuff?"
-    #ellen starts to worry about her future after the high of pretending to be a student wears off
-    # mishka has anxiety attack, later talks about her suicidal tendencies
-
-    #after halloween party, have a trippy dream sequence involving your date
-
-    #ACT 3
-    #reconciliation
-    #picking wrong choices gets you points for bad end
-    #
-
-
-    # saturday 11
-    # major date
-
-    # in ellen's case have to decide whether or not to break it off. Go out with a bang? She quits? Gets fired? Decides to travel the country. If player has 'bad' end they can join her.
-
-    # time skip to end of semester. Player either passes or fails classes and decides to quit or stay in school
-
-    # saturday 9
-
-
-    # alternate endings for good/bad student and (good/bad relationship?)
-
-    # epilogue
-    # for bad end, player returns to harmonia after a couple years and sees old friends
-    # for good end, they graduate and still dating partner
-
-
-
-
-
-
-label credits:
+label ending:
 
     scene bg black with fade
 
