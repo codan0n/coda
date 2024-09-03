@@ -2494,7 +2494,7 @@ label thirdDayOfClassStats:
         
         claire @ say "Got bored of it after getting a hole in one on every course in my state."
         
-        ava @ say "You ever try drawing?
+        ava @ say "You ever try drawing?"
         
         claire @ say "Already drew everything I wanted to draw."
         
@@ -2576,26 +2576,44 @@ label thirdDayOfClassStats:
                 player "..."
                 player "Bingo."
                 
+                claire @ say "Ohmygosh that's so cool!!"
+                claire @ say "You're like a secret underground criminal on the run from the police!"
+                
+                ava @ say "That must be so exciting!!"
+                
+                gunner @ say "Heh, I know who I'm calling if I decide to rob a bank."
+                
                 
                 
                 
             "Bushcraft":
-                n ""
-                #outdoors survival stuff like uh chopping down trees and building shelter
-                #the only kind of survival stuff you've done is in Meincraft
                 ###if you choose this option, you start looking into that hobby and can build a fire for claire later on
+                
+                n "What's a word nobody actually uses? Maybe you can confuse them to avoid having to talk about it."
+                
+                player "I do bushcraft."
+                
+                claire @ say "Like outdoors survival stuff?"
+                
+                n "Well shit, you should have known Claire would have knowledge of esoteric camping lingo."
+                
+                player "Er yeah, chopping down trees and building shelter... making fires in thunderstorms... hunting and foraging for food."
+                
+                n "The only survival you've ever done is in Meincraft. It's close enough, right?"
+                
+                claire @ say "I've done a little bit of that! It was fun! I'd love to delve deeper and do some real survival!"
+                
+                ava @ say "There you go! New hobby!"
+                
+                gunner @ say "Yeah but it's not like you can major in camping."
+                
+                ava @ say "Maybe she can be a park ranger or... one of those search and rescuers."
         
+        mishka @ say "Orders for [name], Ava and Claire are ready!"
         
+        claire @ say "Oh, there's our food!"
         
-        
-        
-        
-        
-        
-        
-        
-        
-        #gunner gets up to get the food
+        gunner @ say "You all chill here, I'll go pick it up."
         
         show claire sweater giggle
 
@@ -2614,6 +2632,8 @@ label thirdDayOfClassStats:
         show ava bored
 
         ava @ say "Oh my god, I was not!"
+        
+        claire @ say "You were too!"
         
         show claire sweater neutral
 
@@ -2638,168 +2658,187 @@ label thirdDayOfClassStats:
         show ava waitwhat
 
         ava @ say "I didn't mean-!"
+        
+        n "You look back and see Gunner struggling to carry everything. To be fair, three cups is a challenge in itself. Adding food to the equation makes it nearly impossible."
+        n "As Claire teases an increasingly flustered Ava, you get up to help your feline friend."
 
         hide ava
         hide claire
         with dissolve
         
+        gunner @ say "Thanks bro. I underestimated how hard it would be to balance three hot coffees in one paw and the rest in the other."
         
+        player "No problem dude."
         
+        n "The two of you manage to bring it all to the table in one trip without dropping anything."
         
-        
-
-        n "Ava continues to get more flustered as Claire teases her until Mishka calls you back to the counter to grab your food."
-
-        show mishka neutral at norm with dissolve:
-            xzoom -1
-
-        mishka @ say "Enjoying the company?"
-
-        player "Huh? Oh haha, you could hear our conversation?"
-
-        n "She flicks her big rat ears."
-
-        mishka @ say "We can hear pretty well."
-        
-        show mishka anxious grin
-        
-        mishka @ say "Those two must be best friends to argue like that."
-
-        player "Something like that. Hopefully some food will calm them down."
-        
-        show mishka neutral
-
-        mishka @ say "Hm-hm. Here ya go, [name]. Take care!"
-
-        player "Thanks!"
-
-        hide mishka with dissolve
-        hide gunner
-
-        n "You awkwardly grab all the cups and plates at once and bring them back to the table."
-
-        show ava angry at norm:
-            xzoom -1
-            xpos -500
-        show claire sweater giggle at norm:
-            xpos 500
-        with dissolve
-        
-        show gunner at offscreenleft:
-            yalign 0
-            xzoom -1
-
-        n "As soon as you drop off the food and drinks, Ava and Claire's conversation instantly comes to a halt."
-        
-        show ava normal neutral
-        show claire sweater neutral
-
-        player "Bon appetit!"
+        gunner @ say "Bon appetit!"
 
         claire @ say "Ooh, that smells good~"
-        
-        show ava excited
-
-        ava @ say "It sure does~"
         
         show ava normal neutral
         
         claire @ say "What were we talking about just now?"
         
         ava @ say "Dunno. Don't care anymore."
+        
+        ###get gunner's phone number in class today, and get ava and claire's right after seeing them on campus today
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        ###alternate version where you get up to get the food and talk to mishka, then gunner comes and backs you up
+        #show mishka neutral at norm with dissolve:
+        #    xzoom -1
+        #
+        #mishka @ say "Enjoying the company?"
+        #
+        #player "Huh? Oh haha, you could hear our conversation?"
+        #
+        #n "She flicks her big rat ears."
+        #
+        #mishka @ say "We can hear pretty well."
+        #
+        #show mishka anxious grin
+        #
+        #mishka @ say "Those two must be best friends to argue like that."
+        #
+        #player "Something like that. Hopefully some food will calm them down."
+        #
+        #show mishka neutral
+        #
+        #mishka @ say "Hm-hm. Here ya go, [name]. Take care!"
+        #
+        #player "Thanks!"
+        #
+        #hide mishka with dissolve
+        #hide gunner
+        #
+        #n "You awkwardly grab all the cups and plates at once and bring them back to the table."
+        #
+        #show ava angry at norm:
+        #    xzoom -1
+        #    xpos -500
+        #show claire sweater giggle at norm:
+        #    xpos 500
+        #with dissolve
+        #
+        #show gunner at offscreenleft:
+        #    yalign 0
+        #    xzoom -1
+        #
+        #n "As soon as you drop off the food and drinks, Ava and Claire's conversation instantly comes to a halt."
+        #
+        #show ava normal neutral
+        #show claire sweater neutral
+
+        
 
         #hide ava
         #hide claire
         #with dissolve
 
-        n "You all dig into your meals, enjoying the atmosphere the cafe offers as well as the surprisingly good food."
-        n "As your pleasant lunch comes to an end and you're throwing away the trash, Gunner comes up to you with his bag slung over his shoulder."
-
-        show gunner neutral at norm with move:
-            xpos 1880
-
-        gunner @ say "Oh hey, [name], I'm heading out but lemme get your phone number! We can study together later or get lunch or whatever you wanna do."
-
-        player "Uh sure okay! Here."
-
-        n "You give him your phone number."
-
-        gunner @ say "Thanks! Talk to ya later!"
-
-        n "Gunner gives a wave and heads out of the cafe."
-
-        show gunner at offscreenright with move:
-            yalign 0
-            
-        show claire sweater giggle
-
-        claire @ say "Oh my god did you just get his number? Ava's gonna be so jealous~"
-        
-        show ava annoyed
-
-        ava @ say "Shush you!"
-        
-        show claire sweater neutral
-        show ava normal neutral
-
-        claire @ say "That reminds me, I oughta give you mine so we don't have to rely on randomly bumping into each other next time!"
-        
-        show ava at hop
-
-        ava @ say "Yeah, that would be a good idea. Here's mine too!"
-
-        n "You exchange numbers with Ava and Claire."
-
-        player "Cool! I'll text you guys later but for now I'm about ready to call it a day."
-
-        claire @ say "Yeah I feel that. This was super fun though!"
-
-        ava @ say "Yeah we should do it again sometime!"
-
-        player "For sure! See you in French tomorrow Claire!"
-
-        claire @ say "See ya, [name]!~"
-
-        ava @ say "Laters!"
-
-        n "You step outside and part ways back to your respective dorms."
-
-        stop music fadeout 1.0
-
-        scene bg codadorm with fade
-        
-        play music "audio/music/vylet - wish.ogg" fadein 0.5
-
-        show box with Dissolve(.2):
-            ypos 0
-
-        n "After winding down a bit in your dorm, you lie in bed and look at your phone."
-
-        call phone_start from _call_phone_start
-
-        call message_start("Gunner", "Hey [name]! I found some tutorials online that helped with the homework", "gunneravi.png") from _call_message_start
-
-        call reply_message("Oh yeah? I'm glad you got some help with them.") from _call_reply_message
-
-        call message("Gunner", "I was gonna ask if you could help me out but I didn't wanna ruin your date with those two cuties lmao", "gunneravi.png") from _call_message
-
-        call reply_message("Date????? Lmao") from _call_reply_message_1
-
-        call message("Gunner", "I know for a fact at least one of them has a thing for you lol", "gunneravi.png") from _call_message_1
-
-        call reply_message("Who????") from _call_reply_message_2
-
-        call message("Gunner", "I ain't no snitch", "gunneravi.png") from _call_message_2
-
-        call reply_message("Fine, keep your secrets :P") from _call_reply_message_3
-
-        call message("Gunner", "Heh you should consider yourself lucky", "gunneravi.png") from _call_message_3
-
-        call reply_message("Lol ok. I'm feeling pretty beat tho so I'm gonna go to bed now. Goodnight!") from _call_reply_message_4
-
-        call message("Gunner", "Night!", "gunneravi.png") from _call_message_4
-
-        call phone_end from _call_phone_end
+        #n "You all dig into your meals, enjoying the atmosphere the cafe offers as well as the surprisingly good food."
+        #n "As your pleasant lunch comes to an end and you're throwing away the trash, Gunner comes up to you with his bag slung over his shoulder."
+        #
+        #show gunner neutral at norm with move:
+        #    xpos 1880
+        #
+        #gunner @ say "Oh hey, [name], I'm heading out but lemme get your phone number! We can study together later or get lunch or whatever you wanna do."
+        #
+        #player "Uh sure okay! Here."
+        #
+        #n "You give him your phone number."
+        #
+        #gunner @ say "Thanks! Talk to ya later!"
+        #
+        #n "Gunner gives a wave and heads out of the cafe."
+        #
+        #show gunner at offscreenright with move:
+        #    yalign 0
+        #    
+        #show claire sweater giggle
+        #
+        #claire @ say "Oh my god did you just get his number? Ava's gonna be so jealous~"
+        #
+        #show ava annoyed
+        #
+        #ava @ say "Shush you!"
+        #
+        #show claire sweater neutral
+        #show ava normal neutral
+        #
+        #claire @ say "That reminds me, I oughta give you mine so we don't have to rely on randomly bumping into each other next time!"
+        #
+        #show ava at hop
+        #
+        #ava @ say "Yeah, that would be a good idea. Here's mine too!"
+        #
+        #n "You exchange numbers with Ava and Claire."
+        #
+        #player "Cool! I'll text you guys later but for now I'm about ready to call it a day."
+        #
+        #claire @ say "Yeah I feel that. This was super fun though!"
+        #
+        #ava @ say "Yeah we should do it again sometime!"
+        #
+        #player "For sure! See you in French tomorrow Claire!"
+        #
+        #claire @ say "See ya, [name]!~"
+        #
+        #ava @ say "Laters!"
+        #
+        #n "You step outside and part ways back to your respective dorms."
+        #
+        #stop music fadeout 1.0
+        #
+        #scene bg codadorm with fade
+        #
+        #play music "audio/music/vylet - wish.ogg" fadein 0.5
+        #
+        #show box with Dissolve(.2):
+        #    ypos 0
+        #
+        #n "After winding down a bit in your dorm, you lie in bed and look at your phone."
+        #
+        #call phone_start from _call_phone_start
+        #
+        #call message_start("Gunner", "Hey [name]! I found some tutorials online that helped with the homework", "gunneravi.png") from _call_message_start
+        #
+        #call reply_message("Oh yeah? I'm glad you got some help with them.") from _call_reply_message
+        #
+        #call message("Gunner", "I was gonna ask if you could help me out but I didn't wanna ruin your date with those two cuties lmao", "gunneravi.png") from _call_message
+        #
+        #call reply_message("Date????? Lmao") from _call_reply_message_1
+        #
+        #call message("Gunner", "I know for a fact at least one of them has a thing for you lol", "gunneravi.png") from _call_message_1
+        #
+        #call reply_message("Who????") from _call_reply_message_2
+        #
+        #call message("Gunner", "I ain't no snitch", "gunneravi.png") from _call_message_2
+        #
+        #call reply_message("Fine, keep your secrets :P") from _call_reply_message_3
+        #
+        #call message("Gunner", "Heh you should consider yourself lucky", "gunneravi.png") from _call_message_3
+        #
+        #call reply_message("Lol ok. I'm feeling pretty beat tho so I'm gonna go to bed now. Goodnight!") from _call_reply_message_4
+        #
+        #call message("Gunner", "Night!", "gunneravi.png") from _call_message_4
+        #
+        #call phone_end from _call_phone_end
 
     else:
         n "As you're walking around campus trying to decide a good place to eat, Gunner comes running up behind you."
