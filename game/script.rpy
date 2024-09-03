@@ -8966,6 +8966,9 @@ label ellen_feeding_ducks:
                         show ellen teacher melancholy
                         
                         ellen @ say "Try 41, dear."
+                        ###37
+                        ###hey, that's still prime
+                        ###mathematically speaking at least
                         ellen @ say "Obviously you weren't paying attention when I mentioned how long I'd been teaching here."
                         
                         player "No way. I'm gonna need to see your ID, miss."
