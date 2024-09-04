@@ -1371,6 +1371,8 @@ label firstDayOfClass:
 
     rothbauer @ say "Oh? Does the class not divide evenly? Hah, this is why I'm a history teacher and not a math one!"
     rothbauer @ say "Does anyone else not have a partner? What about you, Miss Kaczynski, who's group are you in?"
+    
+    n "Kaczynski huh? Is she related to the dean?"
 
     show rothbauer with move:
         xpos 250
@@ -1947,10 +1949,13 @@ label secondDayOfClass:
         
         ava @ say "Oh. Those."
         ava @ say "I'm more in it for the artistic qualities but I suppose street photography and reconaissance have their similarities."
+        
+        
+        
     else:
         ava @ say "I see you've found that boy you totally don't have a crush on."
         
-        claire @ say "Wh-who, [name]?? We just happened to have French together just now! I wasn't like stalking him or anything!"
+        claire @ say "Wh-who, [name]?? We just happened to have French together just now! I wasn't, like, stalking him or anything!"
         
         ava @ say "Sure~"
         
@@ -1959,7 +1964,9 @@ label secondDayOfClass:
         
     show claire sweater neutral
     
-    claire @ say "Oop, I have to be in class in a minute! We should all get lunch later!"
+    
+    
+    claire @ say "Oop, I have to be in class in a minute! But we should all get lunch later!"
     
     n "Ava shrugs."
     
@@ -1992,77 +1999,45 @@ label secondDayOfClass:
             
             show ava pose happy
             
-            ava @ say "Bye [name]! We'll see you tomorrow!"
+            claire @ say "Bye [name]! Wait lemme get your number!!!"
             ###(later) claire "I forgot we don't have class together on wednesdays and wouldn't see each other!"
-            
-            player "Can't wait!"
-            
-            show claire sweater wave
-            
-            claire @ say "Bye-byeeee!"
-            
-            n "Claire waves to you while Ava pushes her into the science building."
-            
-            show claire at offscreenleft:
-                yalign 0
-            show ava at offscreenleft:
-                yalign 0
-            with move
-            
-            n "The bird smiles to you before flapping her wings and taking off into the sky to wherever her own class is."
-            
-            show text "{color=c8f8ff} {/color}":
-                ypos 46
-                xpos 940
-            
-            #ava @ say "Bye [name]!{nw}"
-            show text "{color=c8f8ff}Bye [name]!{/color}":
-                ypos 46
-                xpos 940
-
-            show ava at offscreenright with MoveTransition(delay=.8):
-                xzoom -1
-                yalign .2
-
-            hide text
-            
-            pause .6
-            
-            #ava @ say "Welp, I have to get to class as well. See you later, [name]!"
-            
-            #player "Salut!"
-        
-            #ava @ say "?"
-            #ava @ say "Oh haha French words."
-            #ava @ say "Au revoir or however they say it."
 
         "I already have plans":
             $ avaClaireLunch = False
             $ roriPoints = roriPoints + 1
             
-            player "Sorry, I already have plans."
+            player "Sorry, I already have plans. Maybe another time?"
             
-            show claire sweater cry
-
-            claire @ say "Oh... I guess you must be pretty busy. Maybe another time then?"
+            claire @ say "Oh uh... sure! When are you free?"
             
-            player "Maybe."
+            player "Dunno."
             
-            claire @ say "Maybe. Okay, yeah, maybe."
-
-            show claire sweater cry at offscreenleft with moveinleft:
-                xzoom 1
-                yalign 0
-
-            n "Claire hurries off into the science building."
-
-            ava @ say "So dramatic..."
-            ava @ say "Whatever, she'll be fine. I've got a class to get to."
-            ava @ say "See you around, [name]!"
-
-            player "Later!"
             
-            hide ava with dissolve
+            
+            claire @ say "Oh..."
+            
+            
+            
+            claire @ say "Th-that's alright! Just gimme your number and we'll work something out later."
+            
+            #n "This bunny is desperate to get your phone number. Maybe she *does* have a crush on you."
+            n "What's the worst that could happen?"
+            
+    player "Sure, it's..."
+    
+    n "Claire and Ava type your digits into their phones."
+
+    ava @ say "We have to get to class now! We'll text you later!"
+    
+    player "See ya!"
+    
+    claire @ say "Byeee~"
+    
+    ava @ say "Later!"
+    
+    hide claire
+    hide ava
+    with dissolve
 
     stop music fadeout 1.0
 
@@ -2094,7 +2069,7 @@ label thirdDayOfClass:
     n "Dragging your ass out of bed at the unfathomably early hour of..."
     n "You check the time on your phone."
     n "...9:00AM?!"
-    n "My god, the sun probably isn't even up. You could stand to lie back down for a few more minutes. Catch a few more Z's so you can start making A's."
+    n "My god, the sun probably isn't even up yet. You could stand to lie back down for a few more minutes. Catch a few more Z's so you can start making A's."
     
     $ bedpilled = False
     
@@ -2156,6 +2131,20 @@ label thirdDayOfClassStats:
     player "I have no idea what that's supposed to mean."
     
     gunner @ say "It's just an expression."
+    gunner @ say "Hey before I forget, lemme get your number."
+    
+    player "What? Why?"
+    
+    gunner @ say "So we can help each other with homework problems."
+    gunner @ say "And y'know chat and stuff."
+    
+    n "You're not sure if Gunner will make for a good study partner but you can't think of a polite way to say no."
+    
+    player "Fine. Here."
+    
+    n "He types your number into his phone."
+    
+    gunner @ say "Shit, here comes Mrs. Herschel. She'll fail you if she sees you on your phone. I'll send you a text later."
     
     show herschel at norm with dissolve
 
@@ -2220,7 +2209,7 @@ label thirdDayOfClassStats:
         n "You don't have any more classes today but weren't you supposed to do something else?"
         n "That's right, you're having lunch with Ava and Claire? But where exactly?"
         n "It dawns on you that you never settled on a time nor location. You didn't get their numbers to coordinate this little rendevous."
-        n "You don't even know what classes they have."
+        n "Hopefully one of them texts you."
         n "Perhaps if you wander around campus for a while you'll run into them. It can't be that hard to spot Claire among a crowd. Ava might be harder to find though."
         n "Ah there she is, towering above everyone else. She reminds you of a great white shark swimming through a school of fish who disperse stay out of her path."
         
@@ -2682,8 +2671,13 @@ label thirdDayOfClassStats:
         
         ava @ say "Dunno. Don't care anymore."
         
-        ###get gunner's phone number in class today, and get ava and claire's right after seeing them on campus today
         
+        
+        
+        
+        ###get ava and claire's phone numbers right after seeing them on campus today
+        ###what if you declined lunch with them and don't see them after class?
+        ###maybe have you give them your number yesterday but you don't get theirs until later
         
         
         
