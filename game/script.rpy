@@ -1856,266 +1856,71 @@ label txt_ava_and_gunner:
 
     #play music "audio/music/Evan Schaeffer - Roll.ogg" fadein .5
 
-    call phone_start from _call_phone_start_47
-
-    call message_start("Ava", "Heyyyy [name] :>", "avaavi.png") from _call_message_start_57
-
-    call reply_message("That's a lot of y's") from _call_reply_message_203
-    call reply_message("Either you're into me or you want a favor") from _call_reply_message_204
-
-    call message("Ava", "Aaaaa you figured me out!", "avaavi.png") from _call_message_293
-    call message("Ava", "I was just wondering... if you could give me that catboy's number pls <3", "avaavi.png") from _call_message_294
-
-    call reply_message("You mean Gunner? Why didn't you ask him yourself?") from _call_reply_message_77
     
-    call message("Ava", "IDK how to ask a boy for his number out of the blue!", "avaavi.png") from _call_message_26
+
     
-    call reply_message("You just... ask? It's not difficult.") from _call_reply_message_80
+        
+    play audio "audio/sound effects/vibrate.ogg"
+
     
-    call message("Ava", "UGH it's not that simple!", "avaavi.png") from _call_message_99
     
-    call reply_message("It really is.") from _call_reply_message_82
-    call reply_message("But sure, I'll send it to you.") from _call_reply_message_88
-
-    call message("Ava", "Thxx pls don't tell claire tho XvX", "avaavi.png") from _call_message_295
-
-    call reply_message("Lol i won't") from _call_reply_message_206
-    call reply_message("You planning on asking gunner out?") from _call_reply_message_207
-
-    call message("Ava", "Idk", "avaavi.png") from _call_message_296
-    call message("Ava", "I mean he;s cute and all but", "avaavi.png") from _call_message_297
-    call message("Ava", "I literally don't even know him yet", "avaavi.png") from _call_message_298
-
-    call screen phone_reply("He's nice","hesnice","He's gay","hesgay")
-    #call screen phone_reply("He's nice","hesnice","He's alright","hesalright","He's gay","hesgay")
-
-    label hesnice:
-        #finished
-        #$ avaPoints = avaPoints - 1
-        call phone_after_menu from _call_phone_after_menu_10
-
-        call message_start("me", "He's nice", "testimage.png") from _call_message_start_58
-
-        call message("Ava", "You think so??", "avaavi.png") from _call_message_299
-
-        call reply_message("I mean I only just met him earlier this week but yeah?") from _call_reply_message_208
-
-        call message("Ava", "Okayy thanks :>!!!", "avaavi.png") from _call_message_300
-
-        call reply_message("No problem") from _call_reply_message_209
-
-        jump aftermenu3
-
-    label hesalright:
-        #finished
-        call phone_after_menu from _call_phone_after_menu_11
-
-        call message_start("me", "He's alright", "testimage.png") from _call_message_start_59
-
-        call message("Ava", "Hmm", "avaavi.png") from _call_message_301
-        call message("Ava", "Doesn't sound too convincing", "avaavi.png") from _call_message_302
-
-        call reply_message("Idk I only just met him earlier this week") from _call_reply_message_210
-
-        call message("Ava", "True...", "avaavi.png") from _call_message_303
-        call message("Ava", "Well thanks anyway!", "avaavi.png") from _call_message_304
-
-        call reply_message("No problem") from _call_reply_message_211
-
-        jump aftermenu3
     
-    label hesgay:
-        call phone_after_menu from _call_phone_after_menu_6
-        $ avaPoints = avaPoints + 1
-        
-        call message_start("me", "He's gay", "testimage.png") from _call_message_start_23
-        
-        call message("Ava", "Whaaaaaaat?!", "avaavi.png") from _call_message_100
-        call message("Ava", "No way!!!", "avaavi.png") from _call_message_103
-        
-        call reply_message("Yup it's true") from _call_reply_message_89
-        
-        call message("Ava", "How do you know??", "avaavi.png") from _call_message_106
-        
-        call reply_message("His boyfriend told me") from _call_reply_message_90
-        
-        call message("Ava", "Nuuuu ;-;", "avaavi.png") from _call_message_107
-        
-        call reply_message("What teh problem?") from _call_reply_message_91
-        
-        call message("Ava", "Nothing", "avaavi.png") from _call_message_108
-        call message("Ava", "Why are all the cute ones always gay >.<", "avaavi.png") from _call_message_115
-        
-        call reply_message("Shrug") from _call_reply_message_108
-        call reply_message("That's the way it goes") from _call_reply_message_109
-        
-        call message("Ava", "well... thanks for lettin me know", "avaavi.png") from _call_message_116
-        
-        call reply_message("Np") from _call_reply_message_183
-        
-        call phone_end from _call_phone_end_19
-        
-        n "How devilish of you."
-        n "You feel as though you've altered the course of history."
-        
-        play audio "audio/sound effects/vibrate.ogg"
+    
+    
+    
+    call message_start("Gunner", "Heyyyy [name] :3c", "gunneravi.png") from _call_message_start_24 
 
-        n "*buzz buzz*"
-        n "You look down at your phone and see Gunner just sent you a text."
+    call reply_message("What's up") from _call_reply_message_184 
 
-        call phone_start from _call_phone_start_17 
+    call message("Gunner", "Just wanted to see if you'd wanna hang out with me and my roommate tomorrow", "gunneravi.png") from _call_message_117 
+    call message("Gunner", "I'm bringing bear", "gunneravi.png") from _call_message_118 
+    call message("Gunner", "Beer*", "gunneravi.png") from _call_message_119 
 
-        call message_start("Gunner", "Heyyyy [name] :3c", "gunneravi.png") from _call_message_start_24 
+    call reply_message("Sure that sounds awesome") from _call_reply_message_185 
+    call reply_message("Where and when") from _call_reply_message_186 
 
-        call reply_message("What's up") from _call_reply_message_184 
+    call message("Gunner", "Meet us atop the literature building after sundown", "gunneravi.png") from _call_message_120 
 
-        call message("Gunner", "Just wanted to see if you'd wanna hang out with me and my roommate tomorrow", "gunneravi.png") from _call_message_117 
-        call message("Gunner", "I'm bringing bear", "gunneravi.png") from _call_message_118 
-        call message("Gunner", "Beer*", "gunneravi.png") from _call_message_119 
+    call reply_message("wtf that sounds kinda dangerous") from _call_reply_message_187 
+    call reply_message("what if we get caught") from _call_reply_message_188 
 
-        call reply_message("Sure that sounds awesome") from _call_reply_message_185 
-        call reply_message("Where and when") from _call_reply_message_186 
+    call message("Gunner", "Bro don't worry about it I used to do this like every week last year", "gunneravi.png") from _call_message_121 
+    call message("Gunner", "It'll be cool trust me", "gunneravi.png") from _call_message_124 
 
-        call message("Gunner", "Meet us atop the literature building after sundown", "gunneravi.png") from _call_message_120 
+    call reply_message("Hmm") from _call_reply_message_189 
+    call reply_message("Ok") from _call_reply_message_190 
+    call reply_message("I am willing to risk getting hazed for some shitty beer") from _call_reply_message_191 
 
-        call reply_message("wtf that sounds kinda dangerous") from _call_reply_message_187 
-        call reply_message("what if we get caught") from _call_reply_message_188 
+    call message("Gunner", "This isn't like a frat thing this is a \"i wanna hang out and get to know my bros\" thing", "gunneravi.png") from _call_message_147 
+    
+    
+    
+    
+    
+    
+    
+    stop music fadeout 1.0
+    stop sound fadeout 1.0
 
-        call message("Gunner", "Bro don't worry about it I used to do this like every week last year", "gunneravi.png") from _call_message_121 
-        call message("Gunner", "It'll be cool trust me", "gunneravi.png") from _call_message_124 
+    hide box
 
-        call reply_message("Hmm") from _call_reply_message_189 
-        call reply_message("Ok") from _call_reply_message_190 
-        call reply_message("I am willing to risk getting hazed for some shitty beer") from _call_reply_message_191 
+    scene bg black with fade
 
-        call message("Gunner", "This isn't like a frat thing this is a \"i wanna hang out and get to know my bros\" thing", "gunneravi.png") from _call_message_147 
-        call message("Gunner", "Also I was wondering if you could do me a favor", "gunneravi.png") from _call_message_148 
+    hide box
 
-        call reply_message("?") from _call_reply_message_192 
+    show bg calendar
+    show tfriday at norm
+    with Dissolve(.5)
 
-        call message("Gunner", "You have that bird chick's number right?", "gunneravi.png") from _call_message_149 
+    pause .6
+    show tforwardslash
+    pause .2
+    show tbackslash
 
-        call reply_message("Ava?") from _call_reply_message_205 
-
-        call message("Gunner", "Yeah! Would you mind sending it to me?", "gunneravi.png") from _call_message_150 
-
-        call reply_message("Why?") from _call_reply_message_230 
-
-        call message("Gunner", "Cause I wanna ask her out", "gunneravi.png") from _call_message_153 
-
-        call reply_message("By unsolicted text?") from _call_reply_message_231 
-
-        call message("Gunner", "Pshh no", "gunneravi.png") from _call_message_218 
-        call message("Gunner", "I'm too shy to text her first", "gunneravi.png") from _call_message_243 
-
-        call reply_message("Then why do you want her number?") from _call_reply_message_232 
-
-        call message("Gunner", "So i can stalk her pinstagram", "gunneravi.png") from _call_message_244 
-
-        call reply_message("U know she's a lesbian right?") from _call_reply_message_233 
-
-        call message("Gunner", "Whaaaaaat?!", "gunneravi.png") from _call_message_245 
-        call message("Gunner", "How do you know?", "gunneravi.png") from _call_message_246 
-        
-        call reply_message("I have french with her roommate") from _call_reply_message_234 
-        call reply_message("she told me") from _call_reply_message_235 
-
-        call message("Gunner", "Man that's gay", "gunneravi.png") from _call_message_247 
-        call message("Gunner", "Why are all the hot ones always lesbians", "gunneravi.png") from _call_message_248 
-
-        call reply_message("idk i guess it's hard to resist babes even if you're a girl yourself") from _call_reply_message_236 
-        
-        call message("Gunner", "I guess that makes sense", "gunneravi.png") from _call_message_249 
-        call message("Gunner", "I mean if I was a girl I'd be a raging lesbian too", "gunneravi.png") from _call_message_250 
-        call message("Gunner", "They'd call me Stacy Thunderpussy", "gunneravi.png") from _call_message_251 
-        call message("Gunner", "I'd have a harem of hot chicks I'd stolen from their boyfriends", "gunneravi.png") from _call_message_252 
-        
-        call reply_message("what an ambitious fantasy") from _call_reply_message_237 
-        
-        call message("Gunner", "Yeah I'm a real tour de force", "gunneravi.png") from _call_message_253 
-        
-        if fratsoro == "soro":
-            call message("Gunner", "Wait your a girl aren't you?", "gunneravi.png") from _call_message_254 
-            call message("Gunner", "Are you into girls too?", "gunneravi.png") from _call_message_255 
-            
-            call screen phone_reply("Yus","yuslol","Nop","ewno")
-            
-            label yuslol:
-                call phone_after_menu from _call_phone_after_menu_12
-                
-                call message_start("me", "Yus", "testimage.png") from _call_message_start_25
-                
-                call message("Gunner", "FUCK", "gunneravi.png") from _call_message_256 
-                call message("Gunner", "Leave some pussy for the rest of us will ya", "gunneravi.png") from _call_message_271 
-                
-                call reply_message("no promises lol") from _call_reply_message_238 
-                
-                n "You neglect to tell Gunner you've never even been close to getting laid in your life and you don't see that ever changing"
-                
-                call message("Gunner", "at least now I know who to ask for lesbian porn", "gunneravi.png") from _call_message_325 
-                
-                call reply_message("Yeah bro I got the good shit") from _call_reply_message_239 
-                
-                call message("Gunner", "Niiiiice >:3", "gunneravi.png") from _call_message_326 
-                call message("Gunner", "I gotta go do something rn, link me some kthxbai", "gunneravi.png") from _call_message_327 
-                
-                call reply_message("dw I got u") from _call_reply_message_240 
-                
-                call phone_end from _call_phone_end_33
-                
-                n "You pick a few images from your curated stash and send them over unencrypted SMS"
-                n "You're sure your assigned FBI glowie will appreciate your taste."
-                
-                
-            label ewno:
-                $ rosePoints = rosePoints + 1
-                
-                call phone_after_menu from _call_phone_after_menu_13
-                
-                call message_start("me", "nop", "testimage.png") from _call_message_start_39
-                call reply_message("I can't imagine myself with a girl") from _call_reply_message_241
-                call reply_message("I already have to put up with myself why would I want to have another girl in my life") from _call_reply_message_242
-                
-                call message("Gunner", "LMAOOO", "gunneravi.png") from _call_message_328 
-                
-                call reply_message("well I'll leave you to your lesbian fantasies") from _call_reply_message_243 
-                call reply_message("I have to go study") from _call_reply_message_244 
-            
-                call message("Gunner", "See ya!", "gunneravi.png") from _call_message_329 
-                
-                call phone_end from _call_phone_end_36
-        else:
-            call reply_message("well I'll leave you to your lesbian fantasies") from _call_reply_message_245 
-            call reply_message("I have to go study") from _call_reply_message_246 
-        
-            call message("Gunner", "See ya!", "gunneravi.png") from _call_message_330 
-            
-            call phone_end from _call_phone_end_37
-
-        n "Well this ought to be fun to watch play out."
-        
-        stop music fadeout 1.0
-        stop sound fadeout 1.0
-
-        hide box
-
-        scene bg black with fade
-
-        hide box
-
-        show bg calendar
-        show tfriday at norm
-        with Dissolve(.5)
-
-        pause .6
-        show tforwardslash
-        pause .2
-        show tbackslash
-
-        pause .7
-        
-        jump rooftop_party
-        
+    pause .7
+    
+    jump rooftop_party
+    
 
 label aftermenu3:
     call phone_end from _call_phone_end_51
