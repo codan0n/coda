@@ -2075,6 +2075,8 @@ label thirdDayOfClass:
     
     menu:
         "Go back to bed":
+            $ bedpilled = True
+            
             call sleepingIn
             #this class skip is lenient and results in only missing the first one of the day
             
@@ -3141,31 +3143,113 @@ label afterAvaText1:
         
         call phone_end
 
+    if bedpilled == True:
+        n "With your head resting on your pillow, you stare at the ceiling."
+        n "It's dark out and you have class in the morning but you're not tired enough for bed on account of sleeping in earlier."
+        n "There's no point in lying here wide awake when you could be doing anything else."
+        n "You could be a responsible student and study to make up for the class time you missed... or you could go out on a nightwalk on campus."
+        n "You know which one your heart is telling you."
         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        scene bg campus with fade
+        
+        n "The night air is cool with a constant brisk wind buffetting your jacket."
+        n "Gone is the hustle and bustle of the campus's daytime operations, replaced with a sense of isolation and abandonment."
+        n "With only the street lamps to light the way, your surroundings become an unfamiliar void where only the odd stranger lurks."
+        n "So it seems, until a friendly figure emerges from the shadows and locks eyes with you."
+        
+        show rori neutral with dissolve
+        
+        rori @ say "[name]? What are you doing out so late?"
+        
+        player "I could ask you the same thing."
+        
+        rori @ say "I'm just out for a walk. I always do this when I get stuck on something and need a moment away from it."
+        rori @ say "It lets me come back to it with a fresh perspective."
+        
+        player "Did you loonix install break again?"
+        
+        rori @ say "..."
+        rori @ say "... Yes."
+        rori @ say "B-but I can fix it!"
+        
+        player "Then why are you out here instead of fixing it?"
+        
+        rori @ say "Because I'm thinking."
+        
+        player "About?"
+        
+        rori @ say "About... well, nevermind. It's dumb."
+        
+        menu:
+            "It's probably not dumb":
+                player "If you're thinking about it so hard, it's probably not dumb."
+                
+                rori @ say "I dunno..."
+                rori @ say "I'm just wondering if I'm wasting my time."
+                
+                player "With the computer thing?"
+                
+                rori @ say "No, with ALL the computer things."
+                
+                player "I thought you wanted to be a programmer."
+                
+                rori @ say "I do but..."
+                rori @ say "Nevermind. See, I told you it was dumb."
+                
+                player "Hmm. I feel like I'm not seeing the full picture here."
+                
+                rori @ say "It's nothing, really. Just me worrying too much."
+                
+            "Think about something else then":
+                player "Have you tried thinking about something else?"
     
-    ###remember, if you slept in, you should get an option to do something at night
-    ###make it a nightwalk on campus where you bump into rori (since you see the other characters so much but not him)
+                rori @ say "Yeah but my thoughts usually end up back to wondering if I'm wasting my time."
+                
+                player "Why would you think that?"
+                
+                rori @ say "'Cause maybe I am? What if like a solar flare destroys all the electronics on Earth and then everything I've worked towards will be for nothing."
+                
+                player "Uhh yeah that would suck."
+                player "But is that really something worth worrying about?"
+                
+                rori @ say "Okay maybe that's a bit of an extreme example but I just feel like all the virtual stuff is..."
+                rori @ say "I dunno. You're right, I should think about something else."
+                
+        rori @ say "You never told me what you're doing out at this hour."
+        
+        player "I'm a nightwalker. It's what I do."
+        player "I guess it clears my mind. Not to mention it's comfy as fuck."
+        player "Not many people around and the darkness feels... liberating?"
+        player "I don't mean that in an edgy way I mean I feel like no one is watching me."
+        
+        rori @ say "Ohh yeah."
+        rori @ say "I guess that's why I prefer coming out at night rather than the day too."
+        rori @ say "Even if it is more... eerie."
+        
+        player "Yeah, never know what's out there. I'm not sure what's scarier, walking around the woods in darkness or being in the city at night."
+        
+        rori @ say "...Probably the city. I never leave home without a weapon."
+        
+        n "He pulls his hoof out from his jacket pocket and shows you the folded knife in his grasp before quickly shoving it back out of sight."
+        
+        player say "Good thinking."
+        
+        n "The two of you stand around awkwardly, not sure where to take the conversation next."
+        
+        rori @ say "Well uh, I'll see you later then, k?"
+        
+        player "Yeah I think this has been a successful nightwalk and I can go to bed now."
+        
+        rori @ say "Cool. Don't be afraid to say hi if you see me walking around at night again. I promise I won't stab you... But don't startle me just in case."
+        
+        player "Haha sure. Goodnight Rori."
+        
+        rori @ say "Goodnight [name]!"
+        
+        n "You continue in your separate directions and loop your way back to your dorm, where you have no trouble falling asleep."
     
-    
-    
-    
-    
-    
-    
+    else:
+        n "With your head resting on your pillow, you close your eyes and soon fall into slumber."
 
     stop music fadeout .5
 
@@ -3186,6 +3270,7 @@ label afterAvaText1:
 
     pause .7
 
+    
 
 
 
@@ -3194,6 +3279,14 @@ label afterAvaText1:
 
 
 
+
+
+    ###plans
+    ###thursday is a pretty normal class day (claire invites you to 'study' after french? claire "Ava get out unless you wanna join in on this 'study session'")
+    ###friday after class gunner invites you to the rooftop party happening on saturday
+    ###sunday it's raining and you find rose in the cafe
+    ###starting on monday weather is randomized and affects what you can do after class
+    ###pass out in class on thursday and take the next day off
 
 
 
