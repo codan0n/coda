@@ -1665,7 +1665,7 @@ label secondDayOfClass:
     hide ellen with dissolve
 
     n "You pull the book out of your bag and open your notebook to a fresh page."
-    n "Miss Ellen goes over the first few pages of the novella, explaining some things and asking the class for their thoughts along the way."
+    n "Miss Ellen goes over the first chapter of the novella, explaining some things and asking the class for their thoughts along the way."
     n "Time flies by quickly and the end of the hour is upon you before you realize it."
 
     show ellen teacher neutral at norm with dissolve
@@ -3280,33 +3280,20 @@ label thursday1:
         ypos 0
 
     show ellen teacher neutral at norm with dissolve
-
-    ###ellen talks a bit about the book and asks some questions
     
     ellen @ say "Good morning class, today we'll continue our discussion on The Death of Ivan Ilyich!"
-    ellen @ say "Recall from last class"
-    
-    
-    
-    
-    
-    
-    
-    
-    ellen @ say "...\"To say that Ivan Ilyich married because he loved his bride and found her sympathetic to his view of life..."
-    ellen @ say "...would be as incorrect as to say that he married because people of his society approved of his match.\""
-    ellen @ say "Alright, I think that's a perfect opportunity to give you young ones a bit of life advice since you're young and haven't been exposed to the real world much yet."
-    ellen @ say "Don't rush to get married! I know you might think you've found \"the one\" in your freshman literature class but you're barely even adults!"
-    ellen @ say "At this point in your life you're becoming an entirely new person every few years and you don't want to get stuck with somebody who will only drag you down in the end."
+    ellen @ say "We've seen that Ivan's social circle is more concerned with status and convenience than compassion."
+    ellen @ say "Now we'll get into the life that Ivan lived. Like his peers, his primary motives revolved around gaining approval from others and climbing the social ladder."
+    ellen @ say "Convinced by his associates, he entered a loveless marriage, that which he neglected in favor of his work."
+    ellen @ say "\"...within a year of his wedding, Ivan Ilych had realized that marriage... is in fact a very intricate and difficult affair...\""
+    ellen @ say "The more his wife expected of him, the more he retreated into his career... "
+    ellen @ say "Oh Tolstoy, how right you were all along. How disappointing marriage turned out to be."
     
     show ellen teacher sad
-    
-    ellen @ say "...And waste 15 years of your life you'll never get back! Goodness, if I hadn't married him, I..."
-    
-    #show ellen teacher intrigued
-    
+        
+    ellen @ say "If only I'd listened to you, maybe I wouldn't have wasted 15 years of my life...!"
     ellen @ say "Er... I'm sorry, that was unprofessional... Let's just forget about that and move on shall we?"
-    ellen @ say "...So Ivan Ilyich had deluded himself into thinking he was happy."
+    ellen @ say "...So Ivan Ilyich had deluded himself into thinking he was happy by ignoring his troubles and taking misplaced pride in an uncaring workplace."
     ellen @ say "But as we'll soon see, his life was anything but enjoyable and it was only as he laid dying did he realize his flawed perception of life..."
 
     show ellen sad
@@ -3324,11 +3311,11 @@ label thursday1:
         xpos 0
         xzoom -1
 
-    celestine @ say "Good morning class! It's such a lovely day to learn French, isn't it?"
+    celestine @ say "Good morning class! It's such a lovely day to learn some French, n'est-ce pas?"
     celestine @ say "Today we'll practice some common phrases like \"Comment ca va?\" and \"Bonne journée!\""
 
     n "She writes out some sentences on the board and explains their meanings along with how to pronounce them."
-    n "After getting the class to say them aloud a few times, she lets you all pair up with a partner and practice some basic chitchat with each other."
+    n "After getting the class to say them aloud a few times, she pairs you all up with a partner to practice some basic sentences with each other."
 
     celestine @ say "Go ahead and try making conversation with your partner! Don't be afraid of saying things wrong, you'll get it sooner or later!~"
     
@@ -3338,7 +3325,7 @@ label thursday1:
 
     hide celestine with dissolve
 
-    n "Claire pushes her desk next to yours."    
+    n "Claire pushes her desk next to yours."
 
     show claire sweater neutral:
         xpos 700
@@ -3363,27 +3350,47 @@ label thursday1:
     claire @ say "Heyyyy~"
     claire @ say "Oops, I mean bonjourrrr~"
 
-    player "Uhh... Salut comment ca va?"
+    player "Uhh... Salut, comment ca va?"
     
     show claire sweater derp
 
     claire @ say "Je suis tres bon! Comment allez-vous?"
+    
+    player "Bien, merci."
 
     n "Claire grins and leans closer, whispering something in your ear."
     
     show claire sweater leaning
 
     claire @ say "Je ne porte pas de culotte aujourd'hui~"
-
-    player "What?"
-    player "I mean, quoi?"
     
-    show claire sweater giggle
+    menu:
+        "Quoi?":
+            player "What?"
+            player "I mean, quoi?"
+            
+            show claire sweater giggle
 
-    claire @ say "Ksksksks don't worry about it!"
+            claire @ say "Ksksksks don't worry about it!"
+        "Moi non plus":
+            n "You flip through the pages of your book to find an appropriate response."
+            n "The closest you can find is this."
+            
+            player "Moi non plus."
+            
+            claire @ say "Q-quoi?"
+            claire @ say "Ksksksks tu es tellement drôle!"
+        "Montre-moi":
+            n "You flip through the pages of your book to find an appropriate response."
+            n "Ah, here's a page that shows a similar conversation."
+            
+            player "Montre-moi."
+            
+            claire @ say "Ksksksks retrouve-moi après les cours~"
 
     hide claire with dissolve
-
+    
+    n "You don't really know what just happened."
     n "You shrug and continue your French practice until Mrs. Celestine hands out some homework and dismisses the class."
 
     show celestine happy at norm with dissolve
@@ -3421,12 +3428,30 @@ label thursday1:
     menu:
         n "{cps=0}She says with a wink and playfully nudges you.{/cps=0}"
         "I'd love to!":
-            #finished
             $ clairePoints = clairePoints + 1
             
             #show claire sweater heyeah
             
             player "I'd love to!"
+            
+            
+            
+            
+            n "Claire grabs your hand and rushes you to her dorm."
+            
+            #you can take up claire's offer to 'study' in her dorm. when you get there, ava is there but claire kicks her out for some alone time. However the scene proceeds with the player being incredibly oblivious to claire's advances and simply tries to study.
+            
+            
+            
+            
+            
+            
+            call avaClaireDormIntro
+            
+            
+            
+            
+            
             ###but I have to study math tonight, I'm really behind
             player "*Yaaaawn*"
             player "...But I'm suddenly feeling really tired."
@@ -3448,9 +3473,8 @@ label thursday1:
 
             player "Au revoir~"
 
-        "I'm kinda busy":
-            #finished
-            player "Sorry, I'm kinda busy later."
+        "Maybe another time":
+            player "Sorry, I have somewhere to be."
             
             show claire sweater cry
 
@@ -3460,15 +3484,22 @@ label thursday1:
             
             show claire sweater derp
             
-            claire @ say "It's alright. I'll just uh, study with Ava."
+            claire @ say "It's alright. I'll just uh, see if Ava wants to study with me."
 
-            player "Oh? I didn't know Ava was studying French too now."
+            player "Oh? I didn't know you had any classes together."
 
-            claire @ say "She's not."
+            claire @ say "We don't."
 
             player "Hmm."
 
             n "What did she mean by this?"
+            
+            
+            
+            
+            
+            
+            
             n "Whatever, this conversation is taking too long when all you wanna do is go home and go to sleep."
             n "Better wrap things up as awkwardly as possible and gtfo."
 
