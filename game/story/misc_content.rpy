@@ -30,10 +30,14 @@ label roriDormIntro:
 label avaClaireDormIntro:
     $ avaClaireDormIntroSeen = True
     
-    "this is a description of Claire and Ava's dorm, to be played the first time you enter it."
-    "It's split into two halves with a bed on either end. What must be Ava's side is tidy with photography books and expensive camera gear on the desk."
-    "Whereas Claire's side is unkempt and disorganized. She has a tendency to leave her underwear in random places."
+    scene bg avadorm with fade
     
+    #"this is a description of Claire and Ava's dorm, to be played the first time you enter it."
+    
+    n "This is the first time you've ever been in a girl's room. This one being shared between Ava and Claire, their lifestyles are reflected in the stark contrast in their respective sides of the room."
+    n "Ava's side is tidy and clean with art books neatly stacked on the desk alongside expensive camera gear whereas Claire's half of the room is unkempt and disorganized."
+    n "She also has a tendency to leave her underwear in random places."
+    n "The duality of woman."
     
     return
     
