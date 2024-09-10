@@ -41,6 +41,8 @@ label chapter1:
     
     show box with Dissolve(.2):
         ypos 0
+        
+    show nicodemus neutral at norm with dissolve
     
     nicodemus "...that about concludes our tour of Harmonia's campus. What did you think? Not too pretentious, I hope! Bahahaha!"
     nicodemus "I'm reminded of when I was a new student here myself. A bit nervous but so full of wonder and excitement! It felt like anything was possible!"
@@ -120,9 +122,11 @@ label nicodemusQuestions:
             scene bg campus_sunny_day with dissolve    
             
             show box with Dissolve(.2):
-                ypos 0                
+                ypos 0      
+                
+            show nicodemus neutral at norm with dissolve
             
-            nicodemus "He was a dear friend, someone you could always count on. But as time went on, the burden of being the last of his kind got to him."
+            nicodemus "He was a good friend, someone you could always count on. But as time went on, the burden of being the last of his kind got to him."
             nicodemus "He withdrew himself from everyone and eventually withered away, like some forgotten flower. I'd hate for you to suffer the same fate."
             nicodemus "You see what I'm getting at, don't you?"
             
