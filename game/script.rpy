@@ -1649,11 +1649,16 @@ label start:
 call chapter1
     
 label sickday:
-    #___thursday1
-    ###this day will need to be rewritten so the player fainting in class happens 1 week later. For now, continue going to class, setting up a routine, introduce the weather system on week 2 or during the weekend. Maybe move the gunner rori rooftop scene to this weekend. Choose what to study over the weekend. in week 2, choose to either study or hang out after classes. 
+
+    ###this day will need to be rewritten so the player fainting in class happens 1 week later. in week 2, choose to either study or hang out after classes. 
     ###Ask Rose if you should start working on the project.
-    #sickday
     
+    
+    
+    
+    
+    
+    #thursday 2
 
     scene bg codadorm with fade
 
@@ -1723,7 +1728,7 @@ label sickday:
         ypos 0
     show bg lecturehall
 
-    ###make textbox all spikey and play a sound effect to show urgency
+    ###make textbox all spikey and play a sound effect to show urgency. or animate it shaking left to right
     ellen @ say "[name]! Are you alright?"
 
     stop music fadeout 1.0
@@ -1826,9 +1831,8 @@ label sickday:
     pause .7
 
 
-    #___friday1
-label txt_ava_and_gunner:
-    #
+    #___friday2
+
     scene bg codadorm with fade
 
     ##play sound "audio/ambient/morning birds.ogg" fadein 1.0
@@ -1849,1075 +1853,12 @@ label txt_ava_and_gunner:
     n "Before you know it, you've wasted the entire day watching video essays on things nobody cares about."
     n "Oh well, at least you're feeling better than yesterday."
 
-    play audio "audio/sound effects/vibrate.ogg"
-
-    n "*buzz buzz*"
-    n "Hm? Looks like you got a text message."
-
-    #play music "audio/music/Evan Schaeffer - Roll.ogg" fadein .5
-
-    
-
-    
-        
-    play audio "audio/sound effects/vibrate.ogg"
-
-    
-    
-    
-    
-    
-    
-    call message_start("Gunner", "Heyyyy [name] :3c", "gunneravi.png") from _call_message_start_24 
-
-    call reply_message("What's up") from _call_reply_message_184 
-
-    call message("Gunner", "Just wanted to see if you'd wanna hang out with me and my roommate tomorrow", "gunneravi.png") from _call_message_117 
-    call message("Gunner", "I'm bringing bear", "gunneravi.png") from _call_message_118 
-    call message("Gunner", "Beer*", "gunneravi.png") from _call_message_119 
-
-    call reply_message("Sure that sounds awesome") from _call_reply_message_185 
-    call reply_message("Where and when") from _call_reply_message_186 
-
-    call message("Gunner", "Meet us atop the literature building after sundown", "gunneravi.png") from _call_message_120 
-
-    call reply_message("wtf that sounds kinda dangerous") from _call_reply_message_187 
-    call reply_message("what if we get caught") from _call_reply_message_188 
-
-    call message("Gunner", "Bro don't worry about it I used to do this like every week last year", "gunneravi.png") from _call_message_121 
-    call message("Gunner", "It'll be cool trust me", "gunneravi.png") from _call_message_124 
-
-    call reply_message("Hmm") from _call_reply_message_189 
-    call reply_message("Ok") from _call_reply_message_190 
-    call reply_message("I am willing to risk getting hazed for some shitty beer") from _call_reply_message_191 
-
-    call message("Gunner", "This isn't like a frat thing this is a \"i wanna hang out and get to know my bros\" thing", "gunneravi.png") from _call_message_147 
-    
-    
-    
-    
-    
-    
-    
-    stop music fadeout 1.0
-    stop sound fadeout 1.0
-
-    hide box
-
-    scene bg black with fade
-
-    hide box
-
-    show bg calendar
-    show tfriday at norm
-    with Dissolve(.5)
-
-    pause .6
-    show tforwardslash
-    pause .2
-    show tbackslash
-
-    pause .7
-    
-    jump rooftop_party
-    
-
-label aftermenu3:
-    call phone_end from _call_phone_end_51
-
-    n "You wonder if you made the right choice. Honestly, you could see Gunner and Ava being a thing but also not really?"
-    n "You don't really know, you're not really a romantic unless you count the one girl you dated in high school who tried to murder you when you broke up with her."
-
-    play audio "audio/sound effects/vibrate.ogg"
-
-    n "*buzz buzz*"
-    n "You look down at your phone and see Gunner just sent you a text."
-
-    call phone_start from _call_phone_start_48
-
-    call message_start("Gunner", "Heyyyy [name] :3c", "gunneravi.png") from _call_message_start_60
-
-    call reply_message("What's up") from _call_reply_message_212
-
-    call message("Gunner", "Just wanted to see if you'd wanna hang out with me and my roommate tomorrow", "gunneravi.png") from _call_message_305
-    call message("Gunner", "I'm bringing bear", "gunneravi.png") from _call_message_306
-    call message("Gunner", "Beer*", "gunneravi.png") from _call_message_307
-
-    call reply_message("Sure that sounds awesome") from _call_reply_message_213
-    call reply_message("Where and when") from _call_reply_message_214
-
-    call message("Gunner", "Meet us atop the literature building after sundown", "gunneravi.png") from _call_message_308
-
-    call reply_message("wtf that sounds kinda dangerous") from _call_reply_message_215
-    call reply_message("what if we get caught") from _call_reply_message_216
-
-    call message("Gunner", "Bro don't worry about it I used to do this like every week last year", "gunneravi.png") from _call_message_309
-    call message("Gunner", "It'll be cool trust me", "gunneravi.png") from _call_message_310
-
-    call reply_message("Hmm") from _call_reply_message_217
-    call reply_message("Ok") from _call_reply_message_218
-    call reply_message("I am willing to risk getting hazed for some shitty beer") from _call_reply_message_219
-
-    call message("Gunner", "This isn't like a frat thing this is a \"i wanna hang out and get to know my bros\" thing", "gunneravi.png") from _call_message_311
-    call message("Gunner", "Also I was wondering if you could do me a favor", "gunneravi.png") from _call_message_312
-
-    call reply_message("?") from _call_reply_message_220
-
-    call message("Gunner", "You have that bird chick's number right?", "gunneravi.png") from _call_message_313
-
-    call reply_message("Ava?") from _call_reply_message_221
-
-    call message("Gunner", "Yeah! Would you mind sending it to me?", "gunneravi.png") from _call_message_314
-
-    call reply_message("Why?") from _call_reply_message_222
-
-    call message("Gunner", "Cause I wanna ask her out", "gunneravi.png") from _call_message_315
-
-    call reply_message("By unsolicted text?") from _call_reply_message_223
-
-    call message("Gunner", "Pshh no", "gunneravi.png") from _call_message_316
-    call message("Gunner", "I'm too shy to text her first", "gunneravi.png") from _call_message_317
-
-    call reply_message("Then why do you want her number?") from _call_reply_message_224
-
-    call message("Gunner", "So i can stalk her pinstagram", "gunneravi.png") from _call_message_318
-
-    call reply_message("Fair enough") from _call_reply_message_225
-
-    call message("Gunner", "Thanks bro you're the best!", "gunneravi.png") from _call_message_319
-
-    call reply_message("Np. See you tomorrow") from _call_reply_message_226
-
-    call message("Gunner", "See ya!", "gunneravi.png") from _call_message_320
-
-    call phone_end from _call_phone_end_52
-
-    n "Well this ought to be fun to watch play out."
-    n "Maybe you should have told Gunner that Ava had just asked for his number."
-    n "Nah, if it's meant to be, they'll figure it out."
-
-    stop music fadeout 1.0
-    stop sound fadeout 1.0
-
-    hide box
-
-    scene bg black with fade
-
-    hide box
-
-    show bg calendar
-    show tfriday at norm
-    with Dissolve(.5)
-
-    pause .6
-    show tforwardslash
-    pause .2
-    show tbackslash
-
-    pause .7
 
     #___saturday2
-label rooftop_party:
-    #
-    scene bg codadorm with fade
-
-    show box with Dissolve(.2):
-        ypos 0
-
-    n "You've been thinking about this roof party thing Gunner invited you to all day."
-    n "You keep flipping between wanting to go or just staying home."
-    n "You guess you should try new things. You've never even had a beer before."
-    n "What's the worst that could happen?"
-    n "If you don't like it you can always leave."
-    n "Fuck it, you can afford to not be a shut-in for one weekend, right?"
-
-    scene bg roof with fade
-
-    #play music "audio/Monkey Warhol - Boots & Pants (Instrumental Mix).mp3" fadein 1.0
-    #https://freemusicarchive.org/music/Monkey_Warhol/boots-pants-ep/boots-pants-instrumental-mix
-
-    play music "audio/music/Monkey Warhol - Boots & Pants (Sidekick Wave Instrumental Remix).ogg" fadein 1.0
-    #https://freemusicarchive.org/music/Monkey_Warhol/boots-pants-ep/boots-pants-sidekick-wave-instrumental-remix
-
-    show box with Dissolve(.2):
-        ypos 0
-
-    n "You arrive fashionably late, mostly as a result of you getting lost on the way here."
-    n "Even though you already knew where the literature building was, everything looks different when it's dark."
-    #n "You arrive fashionably late, mostly on account of you getting lost on the way here."
-    n "Luckily the obnoxious techno pop music coming from Gunner's bluefang speaker guided you in the right direction."
-    #bluefang? blueclaw?
-    n "There's actually quite a few people up here, complete with a couple making out in the stairway."
-    n "You spot Gunner on the other side of the roof and have push your way past a group of people dancing and grinding on each other to reach him."
-
-    show gunner neutral at norm with dissolve
-
-    gunner @ say "[name]!!!! Ya made it!"
-
-    player "Sup Gunner. Nice music."
-
-    gunner @ say "Thanks bro! Here, have a beer."
-
-    n "Gunner tosses a can vaguely in your direction. You don't even try to catch it cause his throw was so off that it just goes flying off the side of the building."
-    n "A second later you hear it explode on the concrete."
-
-    gunner @ say "Haha woops. Here's another one."
-
-    n "He digs another one out of a cooler and hands it to you."
-    
-    show rori neutral at offscreenleft:
-        yalign 0
-
-    player "Thanks. Hey, wasn't Rori supposed to be here?"
-
-    show rori neutral at norm:
-        xzoom -1
-        xpos 1500
-    show gunner neutral:
-        xpos 350
-    with move
-
-    n "Rori emerges from the mosh pit, looking dishevelled."
-    n "He adjusts his glasses and walks up to you."
-
-    #rori has been sticking by gunner awkwardly
-
-    rori @ say "Gunner! I looked away for like two seconds and lost track of you, man!"
-
-    gunner @ say "Ah there he is. He's been trailing me all night."
-    gunner @ say "You know you don't have to be my shadow, right? You're free to mingle with other people, make some friends."
-
-    show rori anxiety
-
-    rori @ say "M-make friends? How do I do that??"
-
-    gunner @ say "Bro, relax. Just have a beer and start talkin' to somebody."
-
-    rori @ say "I dunno..."
-
-    show rori neutral:
-        ypos 15
-        linear .15 ypos 0
-    
-    pause .15
-
-    rori @ say "Oh but hey [name]! Glad to see you here! How are you liking Harmonia so far?"
-    
-    gunner "{nw}"
-
-    show rori neutral:
-        xpos 1800
-    show gunner:
-        xpos 1800
-        yalign 0
-    with move
-
-    #do transitions where one sprite dissolves away and the other one moves into center view
-
-    player "It's pretty cool. I've never been around so many people so it's taking some time to adjust."
-
-    rori @ say "Same. Usually on a Saturday night I'd be installing a new loonix distro or tweaking config files."
-
-    show rori laughing
-
-    rori @ say "But this is kinda exciting!"
-
-    show rori anxiety
-    
-    rori @ say "A little nerve-wracking, but exciting!"
-
-    player "That's good to hear. I guess we're both getting new experiences."
-
-    show rori neutral
-
-    rori @ say "That's what college is supposed to be for!"
-
-    player "So they say!"
-
-    n "You take a sip of your beer and Gunner comes back with a new pack."
-
-    show gunner neutral at norm:
-        xpos 300
-    show rori:
-        xpos 1550
-    with move
-
-    gunner @ say "I'm back! Here Rori, take this."
-
-    n "Gunner shoves a can in to Rori's hand and pushes him back onto the dance floor."
-
-    rori @ say "Aaahhh Gunner stahp! I don't know how to daaaaaance..!"
-    
-    gunner "{nw}"
-
-    show gunner neutral at offscreenleft:
-        yalign 0
-    show rori neutral at offscreenleft:
-        yalign 0
-    with move
-
-    pause .1
-    
-    n "You look on as Rori disappears into the crowd."
-
-    show gunner neutral at norm with move:
-        xzoom -1
-        xpos 1555
-
-    gunner @ say "Sometimes ya gotta push the young ones out of the nest and watch them fly."
-
-    gunner @ say "Enjoying the beer?"
-
-    menu:
-        gunner "{cps=0}Enjoying the beer?{/cps}"
-        "Yeah":
-            #finished
-            player "Yeah man it's great."
-
-            gunner @ say "You don't have to lie bro, I know it tastes like piss."
-        "Tastes like piss.":
-            #finished
-            player "Tastes like piss."
-
-            gunner @ say "Hahaha yeah bro!"
-
-    gunner @ say "Want another?"
-
-    n "You shrug."
-
-    player "Sure why not."
-
-    n "You and Gunner stand around and chat with random guests between beers."
-    #n "Throughout the night Gunner keeps looking over his shoulder, even though there's nothing behind him other than the edge of the roof."
-    n "Throughout the night Gunner keeps looking up at the sky."
-
-    player "You okay?"
-
-    gunner @ say "Huh? Oh yeah. I'm just like, waiting for someone."
-
-    player "Is it Ava?"
-
-    gunner @ say "How'd you know???"
-    gunner @ say "Yeah it's Ava. I keep expecting her to fly up any moment now."
-    gunner @ say "...Aaaany moment now."
-
-    player "Cool, I didn't know you invited her."
-
-    gunner @ say "I didn't, actually."
-
-    player "What makes you think she'll show up then?"
-
-    gunner @ say "I dunno, maybe she's going for a night flight and sees this cool party going on on the roof and she'll stop by and then we'll start talking and I'll offer her a beer and she'll say thanks and..."
-
-    n "You nod your head and tune out of the delusional words coming out of Gunner's mouth."
-    n "He leans up against the wall and rambles on and on."
-    n "Eventually he gets on the topic of school."
-
-    gunner @ say "...And it's like, okay Dad, I don't even want to go to college, but then he's like \"You either go and get an education or I ship you off to boot camp.\""
-
-    player "Damn, that's rough."
-
-    gunner @ say "I guess I can't complain too much though. He's paying for me to be here. A lot of people would kill to be in my position."
-    gunner @ say "I just"
-    gunner @ say "I dunno."
-    gunner @ say "He wants me to graduate and be like a marine corp officer or some shit."
-
-    player "He can't control what you do. You're an adult, you can do whatever you want."
-
-    gunner @ say "Yeah but he said he'll cut off my cash flow if I don't go with the major he picked out for me."
-
-    player "Which is?"
-
-    gunner @ say "Fuck man I don't even know what it's called. Administrative business management instructioneering or some bullshit."
-    gunner @ say "I'd rather do something creative and artsy but he'd disown me if I got \"one of those damn worthless liberal arts degrees.\""
-
-    menu:
-        gunner "{cps=0}I'd rather do something creative and artsy but he'd disown me if I got \"one of those damn worthless liberal arts degrees.\"{/cps=0}"
-        "Maybe he's got a point.":
-            #finished
-            player "Maybe he's got a point."
-            player "It'll be easier to land a job with a more practical degree."
-
-            n "Gunner sighs."
-
-            gunner @ say "I know but that's not the point."
-            gunner @ say "I'm an adult, dammit, I can make my own decisions."
-            gunner @ say "I don't wanna work at some corporate hellhole or push papers in the military. It's so... soulless, you know?"
-            gunner @ say "I'd be working for other people's interests, not my own!"
-            
-        "Maybe get a minor?":
-            #finished
-            player "Maybe you could get a minor in something you enjoy?"
-            player "Let your father be happy you got your super serious business degree while you work on your own thing."
-            player "That way you'll have a backup to fall back on if you become a starving artist."
-            #player "Leverage your major to kickstart your creative career."
-
-            gunner @ say "That could work."
-            gunner @ say "...If I wasn't already swamped with work and failing half my classes."
-
-    gunner @ say "Fuuuuck it, I don't wanna even think about it anymore."
-
-    n "Gunner hops up onto the guard rail, balancing on it with ease."
-
-    gunner @ say "I'm here to get drunk and find a qt avian gf!!!"
-
-    n "You hear a few cheers from behind you."
-
-    player "Hey, I'll drink to that."
-
-    show gunner neutral
-
-    gunner @ say "Hell yeah [name], I knew you were a bro from the moment I first saw ya!"
-
-    n "You and Gunner throw your heads back and down the rest of your drinks."
-
-    hide gunner with dissolve
-
-    n "You gotta admit, as the night has gone on, you've gradually become more relaxed and stopped worrying about every little thing."
-    n "You can just turn off your brain and enjoy the moment for once."
-    n "Maybe this is why people drink this stuff."
-    n "As you finish off your can, you notice your feline friend seems to have gone missing."
-
-    gunner @ say "Woooooo!"
-
-    player "...Gunner?"
-    player "Where'd you go?"
-
-    n "His voice echoes off the surrounding buildings but he's nowhere to be found."
-    n "Holy shit, did he just...?"
-    n "You hesitantly peek over the edge of the roof and look down."
-    n "A small crowd forms around you, sharing your curiosity."
-
-    stop music fadeout 1.0
-
-    n "\"Oh my gosh, did that guy just fall?\""
-    n "\"What the fuck, is he alright??\""
-    n "\"Did my boy Gunner just die?\""
-    n "Voices from the partygoers drown out your own thoughts but share your sentiment."
-    n "\"There he is!\""
-    n "Someone points down at a stumbling Gunner as he walks into the glow of a streetlight."
-
-    #show gunner neutral at norm with dissolve
-
-    gunner @ say "I'm okay! I landed on my feet!"
-
-    n "The crowd breathes a collective sigh of relief and the party goes on like nothing happened."
-
-    play music "audio/music/Monkey Warhol - Boots & Pants (Sidekick Wave Instrumental Remix).ogg" fadein 1.0
-
-    n "You wave down to Gunner and he waves back but suddenly jumps into some nearby bushes."
-
-    #hide gunner with dissolve
-
-    n "A few seconds later you feel your phone vibrate."
-
-    call phone_start from _call_phone_start_49
-
-    call message_start("Gunner", "oh shit i think the cops are here", "gunneravi.png") from _call_message_start_61
-    call message("Gunner", "grab rori and gtfo", "gunneravi.png") from _call_message_321
-
-    call phone_end from _call_phone_end_53
-
-    n "You're not gonna stick around and wait to get busted by the police, nor are you gonna get trampled by everyone on the way out by warning them of what's coming."
-    n "You push your way through the dancers and take Rori's hand."
-
-    show rori drunk at norm with dissolve:
-        xzoom -1
-        xpos 1555
-
-    player "Hey, we gotta go. Now."
-
-    rori @ say "Wha-? But I'm just starting to have fun!"
-
-    stop music fadeout 1.0
-
-    n "Ignoring his complaints, you drag him from the crowd and head down the stairway into the building."
-
-    scene bg schoolhallways with dissolve
-
-    play music "audio/music/Monkey Warhol - Boots & Pants (Instrumental Mix).ogg" fadein .5
-
-    show box with Dissolve(.2):
-        ypos 0
-
-    n "You peek around corners to make sure the coast is clear before hurrying down the corridors."
-    n "Looks like the cops already have the nearest staircase blocked in case someone like you tried sneaking away."
-    n "A security guard patrols the area around it but you don't think he saw you. You'll have to make your way to the stairway on the other side of the building."
-
-    show rori drunk at norm with dissolve
-
-    rori @ say "What the hell man?"
-
-    player "Shh!"
-
-    n "You pull the ram into a dark classroom and put your hand over his mouth."
-    n "A moment later you can hear the sound of boots in the hallway."
-    n "Rori fidgets in your grasp, trying to escape but you manage to hold him still until it's safe to go."
-
-    player "Sorry about that. Gunner warned me the cops were on their way."
-
-    rori @ say "Wha, for realll?"
-    rori @ say "We need to get outta here!!"
-    
-    player "What do you think I've been trying to do??"
-
-    hide rori with dissolve
-
-    n "You and Rori sneak away, avoiding the main entrance which was almost certainly guarded by some boomer rent-a-cop."
-
-    stop music fadeout .5
-
-    scene bg campus with dissolve
-
-    #play sound "audio/ambient/outdoors night crickets.ogg" fadein 1.0
-    play music "audio/music/vylet - wish.ogg"
-
-    show box with Dissolve(.2):
-        ypos 0
-    
-    show gunner at offscreenleft:
-        yalign 0
-    
-    show rori drunk with dissolve:
-        xpos 500
-
-    n "Once outside, you hear some rustling in the leaves and Gunner appears."
-
-    show gunner neutral at norm:
-        xzoom -1
-        xpos 1400
-    with move
-    
-    gunner @ say "Bros! You made it out alive!"
-
-    player "Gunner! How'd you survive that fall?"
-
-    gunner @ say "Don't you know cats don't take fall damage hahaha!"
-
-    #show rori at shudder
-
-    rori @ say "Shouldn't we have warned the others...?"
-
-    gunner @ say "Nah, y'all woulda got caught up in the mad dash to escape. Happened to me before."
-
-    player "Thanks for the warning."
-
-    rori @ say "Yeah, it probably doesn't look good having underaged drinking and trespassing on your record."
-
-    gunner @ say "Come on, let's get out of here before the cops do a full sweep."
-
-    rori @ say "Hmm..."
-
-    gunner @ say "What's wrong?"
-
-    rori @ say "I was kinda looking forward to this shindig."
-
-    gunner @ say "Well..."
-    gunner @ say "The night's still young! We can order pizza and play some games."
-    gunner @ say "[name], you're more than welcome to hang out at our dorm tonight!"
-
-    player "It's no wild college party, but that sounds pretty nice."
-
-    gunner @ say "Heck yeah!"
-    gunner @ say "Don't worry about chipping in for the food, I'll cover it. It's the least I could do after inviting you to this disaster."
-
-    hide rori
-    hide gunner
-    with dissolve
-
-    n "The three of you stumble back to the dorms, where you spend a few hours getting dunked on by the ram in various video games."
-    n "After they pass out you decide to head back to your dorm."
-
-    stop sound fadeout 1.0
-    stop music fadeout 1.0
-
-    scene bg codadorm with fade
-
-    show box with Dissolve(.2):
-        ypos 0
-
-    n "Tonight actually ended up being pretty fun."
-    n "You're glad you decided to get out for once."
-    n "You send Gunner and Rori a text thanking them for an awesome night before faceplanting into your pillow and instantly falling asleep."
-
-    hide box
-
-    scene bg black with fade
-
-    hide box
-
-    show bg calendar
-    show tsaturday at norm
-    with Dissolve(.5)
-
-    pause .6
-    show tforwardslash
-    pause .2
-    show tbackslash
-
-    pause .7
 
     #___sunday2
-label mere_cafe1:
-#
-    scene bg codadorm with fade
 
-    # include thunder sound effect
 
-    play music "audio/music/Evan Schaeffer - Whigg Meadow.ogg" fadein 1.0
-
-    show box with Dissolve(.2):
-        ypos 0
-
-    n "You're jolted awake by a sudden crash of thunder."
-    n "Dark clouds peek through your window, past the raindrops clinging to it."
-    n "Lovely day out, innit?"
-    n "More like a perfect day to sit inside and play a comfy game like Animal Village."
-    n "If only you still had your old consoles."
-    n "Now all you have is a supercomputer that fits in your hand that connects to an ever growing real-time database containing humanity's collective knowledge and culture."
-
-    show phonetwitter at norm with dissolve:
-        #ypos 1280
-        xpos 700
-        ypos 200
-
-    n "No, you would not like to create an account, fuck off."
-    n "Somehow the algorithm™ knows you spoke with a certain bunny and it automatically fills your home page with her posts."
-    n "*scroll scroll scroll*"
-    n "..."
-    n "This is really boring."
-    n "Younger you never would have imagined how cringe the future would be."
-
-    hide phonetwitter with dissolve
-
-    n "You take another look outside."
-    n "The rain is coming down harder than before."
-    n "Ah fuck it, better to be bored and sad outside than inside."
-    n "Grabbing a coat and umbrella, you head out to wander aimlessly for a few hours."
-    
-    stop music fadeout 1.0
-
-    scene bg cafe with fade
-
-    play music "audio/music/mere - coffeeLove.exe.ogg" fadein 1.0
-
-    show box with Dissolve(.2):
-        ypos 0
-
-    #n "Somehow you always end up here."
-    n "After a miserable stroll, you end up at the cafe."
-    #n "It feels homely in a way."
-    n "A hot drink sounds perfect for a day like today."
-    #n "It was just starting to come down hard again when you came in. Luckily you had brought an umbrella along."
-    n "As you're struggling to close your umbrella you nearly bump into someone standing near the door."
-
-    #show rose neutral at norm with moveinleft:
-    show rose neutral at norm with dissolve:
-        xalign .1
-        xzoom -1
-
-    rose @ say "Watch where you're going."
-
-    player "Sorry."
-
-    n "Rose walks past you but stops at the door."
-    
-    show rose unimpressed
-
-    rose @ say "Ugh, will this rain ever let up?"
-
-    player "Need to be somewhere?"
-
-    rose @ say "Yeah, anywhere but here."
-
-    player "Didn't you bring an umbrella?"
-
-    show rose angry
-
-    n "She glares at you."
-    n "You'll take that as a no."
-
-    menu:
-        n "{cps=0}You'll take that as a no.{/cps=0}"
-        "Offer your umbrella.":
-            #finished
-            $ goodEnd = goodEnd + 1
-            $ rosePoints = rosePoints + 1
-            $ gaveUmbrella = True
-            n "You can't let her go out in that storm without at least an umbrella."
-            n "You hold it out for her to take."
-
-            player "Here."
-
-            n "Rose scoffs."
-
-            rose @ say "What, you think I need your generosity?"
-
-            player "No but an umbrella would be nice to have, wouldn't it?"
-
-            n "She looks back to the increasing rain before snatching the umbrella from your hands."
-
-            rose @ say "Tch. Don't think I owe you anything for this."
-
-            player "Wouldn't dream of it."
-
-            hide rose with dissolve
-
-            n "Without even looking back she pushes the door open and walks out into the rain, nice and dry under your umbrella."
-            n "You're gonna get drenched if this rain doesn't stop by the time you're done with your coffee."
-            n "At least you won't smell like a wet trash panda."
-
-            n "Mishka waves to you as you approach the counter."
-
-            show mishka neutral at norm with dissolve
-
-            mishka @ say "Hey [name]! Good to see you still yet! Not many customers on day like this."
-
-            player "Hi Mishka! I'll have the same as last time please."
-
-            mishka @ say "Coming right up!"
-            
-            hide mishka with dissolve
-            
-            n "You chat with Mishka and relax in the cafe for a while but the rain only seems to get more intense."
-            n "Only after you get your coffee do you notice another set of fluffy ears in the cafe."
-            n "A pink furred rabbit is bobbing her(?) head to the beat on whatever's playing on her(??) headphones."
-            n "From where you're standing, you can see her(???) laptop screen. It's a clutter of strange graphs, bars, sliders and dials."
-            n "You figure it's an audio production program."
-            n "Pretty cool, but you feel like a creep watching other people's screens."
-            n "As you walk past them to find a table to sit at, you hear the familiar sound of a soda can being cracked open."
-            n "You glance over and watch the bunny pour the entire contents of a Blu Bull into their espresso."
-            n "Then she pulls out a bottle of Adderlol and dumps it in as well."
-            n "She catches you staring and waves to you with a soft smile on her face, then takes off her headphones."
-            
-            show mere neutral at norm with dissolve
-            
-            mere @ say "Sup."
-            
-            player "Sup. Uhh..."
-            
-            n "You look down at the name on the cup."
-            
-            player "...Mere?"
-            
-            mere @ say "It's pronounced Mere. It's short for Meredith."
-            
-            player "Oh nice. I just noticed you mixed together enough caffeine and amphetamine to kill an elephant."
-            
-            mere @ say "Haha I know right? It helps me relax."
-            
-            player "Have you tried just doing coke?"
-            
-            mere @ say "The drink or...?"
-            
-            player "Whichever works."
-            
-            mere @ say "I prefer the taste of Blu Bull. Whenever I take a sip it feels like I can fly~"
-            
-            player "No doubt you could hop to the moon if you chug enough."
-            
-            mere @ say "Oh that's the name of the song I'm writing right now!!"
-            mere @ say "Hop to the Moon. It's a blend of futurefunk and french house."
-            
-            player "I don't understand what that means but it sounds cool!"
-            
-            mere @ say "You like the song you're listening to right now?"
-            
-            player "Huh?"
-            
-            mere @ say "The one that's playing on the cafe speakers."
-            
-            player "Oh yeah, it's pretty catchy."
-            
-            mere @ say "I wrote it."
-            
-            player "For real?"
-            
-            n "She nods."
-            
-            player "That's awesome!"
-            player "Okay I need to ask cause my internal narration keeps getting confused. Are you a-"
-            
-            mere @ say "I'm a guy lol"
-            
-            player "Okay but the-"
-            
-            mere @ say "Yup, I wear a skirt. It's comfy. And I think it looks cute on me."
-            
-            menu:
-                mere "{cps=0}Yup, I wear a skirt. It's comfy. And I think it looks cute on me.{/cps}"
-                "It is cute on you.":
-                    #finished
-                    $ rosePoints = rosePoints + 1
-                    player "It is cute on you."
-                    
-                    mere @ say "Thanks!"
-                    mere @ say "And if your internal narration slips up and calls me a girl from time to time, I don't mind~"
-                    
-                    n "Oh thank goodness."
-                    n "You have a feeling that's going to be happening quite a lot."
-                "No further questions..":
-                    #finished
-                    player "Well alright then. No further questions."
-            
-                    mere @ say "But I don't mind if your internal narration slips up and calls me a girl from time to time~"
-                    
-                    n "You have a feeling that's going to be happening quite a lot."
-                "Boys shouldn't wear skirts":
-                    #untested
-                    #$ roseBias = True
-                    $ roriPoints =- 1
-                    $ clairePoints =- 1
-                    $ avaPoints =- 1
-                    $ ellenPoints =- 1
-                    
-                    player "Boys shouldn't wear skirts."
-                    
-                    mere "Why not?"
-                    
-                    player "Because they're for girls."
-                    
-                    mere "Says who?"
-                    
-                    player "Says... society."
-                    
-                    mere "Which society? The human one? Last I checked, they're on their way out."
-                    
-                    player "..."
-                    player "I just remembered I have to be somewhere."
-                    
-                    mere "Don't let the door hit you on your way out."
-                    
-                    hide mere with dissolve
-                    
-                    n "Damn furry femboys! Always so smug."
-                    n "You storm out of the building, braving the storm on your way back to your dorm."
-                    
-                    jump aftermere
-                    
-            
-            mere @ say "Wanna listen to some more of my songs?"
-            
-            player "Sure!"
-            
-            n "You grab a seat right next to his and he passes you the headphones."
-            
-            mere @ say "I call this one Interlewd."
-            
-            hide mere with dissolve
-            
-            n "You spend all afternoon chatting with Mere, listening to music and showing him a few of your favorites as well."
-            n "He even offers you a sip of his caffeinated concoction, which you regret immediately."
-            n "Your leg started twitching hours ago and still hasn't slowed down."
-            n "Eventually the laptop battery dies and your new friend has to go, but not before giving you her {a=https://merenotilde.bandcamp.com/}bandcloud{/a} link."
-            n "The rain had died down so you made your way back home only getting a little damp."
-        "Don't offer your umbrella.":
-            #untested
-            n "Sucks to suck but it's not your problem. Should have came prepared."
-            n "You shrug and go about your way. If she wants to act tough, she can stand to get a little wet."
-
-            hide rose with dissolve
-
-            n "Mishka waves to you as you approach the counter."
-
-            show mishka neutral at norm with dissolve
-
-            mishka @ say "Hey [name]! Good to see you still yet! Not many customers on day like this."
-
-            player "Hi Mishka! I'll have the same as last time please."
-
-            mishka @ say "Coming right up!"
-            
-            hide mishka with dissolve
-
-            n "You chat with Mishka and relax in the cafe for a while but the rain only seems to get more intense."
-            
-            n "Only after you get your coffee do you notice another set of fluffy ears in the cafe."
-            n "A pink furred rabbit is bobbing her(?) head to the beat on whatever's playing on her(??) headphones."
-            n "From where you're standing, you can see her(???) laptop screen. It's a clutter of strange graphs, bars, sliders and dials."
-            n "You figure it's an audio production program."
-            n "Pretty cool, but you feel like a creep watching other people's screens."
-            n "As you walk past them to find a table to sit at, you hear the familiar sound of a soda can being cracked open."
-            n "Naturally you glance over and watch in awe as the bunny pours the contents of a Blu Bull into their espresso."
-            n "And then she pulls out another one, cracks it open and dumps it in as well."
-            n "She catches you staring and waves to you with a soft smile on her face, then takes off her headphones."
-            
-            show mere neutral at norm with dissolve
-            
-            mere @ say "Sup."
-            
-            player "Sup. Uhh..."
-            
-            n "You look down at the name on the cup."
-            
-            player "...Mere?"
-            
-            mere @ say "It's pronounced Mere. It's short for Meredith."
-            
-            player "Oh nice. I just noticed you mixed together enough caffeine to kill an elephant."
-            
-            mere @ say "Haha I know right? It helps me relax."
-            
-            player "Have you tried just doing coke?"
-            
-            mere @ say "The drink or...?"
-            
-            player "Whichever works."
-            
-            mere @ say "I prefer the taste of Blu Bull. Whenever I take a sip it feels like I can fly~"
-            
-            player "No doubt you could hop to the moon if you chug enough."
-            
-            mere @ say "Oh that's the name of the song I'm writing right now!!"
-            mere @ say "Hop to the Moon. It's a blend of futurefunk and french house."
-            
-            player "I don't understand what that means but it sounds cool!"
-            
-            mere @ say "You like the song you're listening to right now?"
-            
-            player "Huh?"
-            
-            mere @ say "The one that's playing on the cafe speakers."
-            
-            player "Oh yeah, it's pretty catchy."
-            
-            mere @ say "I wrote it."
-            
-            player "For real?"
-            
-            n "She nods."
-            
-            player "That's awesome!"
-            player "Okay I need to ask cause my internal narration keeps getting confused. Are you a-"
-            
-            mere @ say "I'm a guy lol"
-            
-            player "Okay but the-"
-            
-            mere @ say "Yup, I wear a skirt. It's comfy. And I think it looks cute on me."
-            
-            menu:
-                mere "{cps=0}Yup, I wear a skirt. It's comfy. And I think it looks cute on me.{/cps}"
-                "It is cute on you.":
-                    #finished
-                    $ rosePoints = rosePoints + 1
-                    player "It is cute on you."
-                    
-                    mere @ say "Thanks!"
-                    mere @ say "And if your internal narration slips up and calls me a girl from time to time, I don't mind~"
-                    
-                    n "Oh thank goodness."
-                "No further questions..":
-                    #finished
-                    player "Well alright then. No further questions."
-            
-                    mere @ say "But I don't mind if your internal narration slips up and calls me a girl from time to time~"
-                    
-                    n "You have a feeling that's going to be happening quite a lot."
-                "Boys shouldn't wear skirts":
-                    #untested
-                    $ roseBias = True
-                    $ roriPoints =- 2
-                    $ clairePoints =- 1
-                    $ avaPoints =- 1
-                    $ ellenPoints =- 1
-                    
-                    player "Boys shouldn't wear skirts."
-                    
-                    mere "Why not?"
-                    
-                    player "Because they're for girls."
-                    
-                    mere "Says who?"
-                    
-                    player "Says... society."
-                    
-                    mere "Which society? The human one? Last I checked, they're on their way out."
-                    
-                    player "..."
-                    player "I just remembered I have to be somewhere."
-                    
-                    mere "Don't let the door hit you on your way out."
-                    
-                    hide mere with dissolve
-                    
-                    n "Damn furry femboys! Always so smug."
-                    n "You storm out of the building, braving the storm on your way back to your dorm."
-                    n "At least you have an umbrella, but the winds keep pulling on it and turning it inside out."
-                    
-                    jump aftermere
-            
-            
-            
-            mere @ say "Wanna listen to some more of my songs?"
-            
-            player "Sure!"
-            
-            n "You grab a seat right next to his and he passes you the headphones."
-            
-            mere @ say "I call this one Interlewd."
-            
-            hide mere with dissolve
-            
-            n "You spend all afternoon chatting with Mere, listening to music and showing him a few of your favorites as well."
-            n "He even offers you a sip of his caffeinated concoction, which you regret immediately."
-            n "Your leg started twitching hours ago and still hasn't slowed down."
-            n "Eventually the laptop battery dies and your new friend has to go, but not before giving you her {a=https://merenotilde.bandcamp.com/}bandcloud{/a} link."
-            n "Fortunately for you, Rose rejected your offer so you've still got an umbrella to stay dry under on the way back home."
-    
-label aftermere:
-    stop music fadeout 1.3
-
-    hide box
-
-    scene bg black with fade
-
-    hide box
-
-    show bg calendar
-    show tsunday at norm
-    with Dissolve(.5)
-
-    pause .6
-    show tforwardslash
-    pause .2
-    show tbackslash
-
-    pause .7
-
-    #___monday2
-
-    scene bg static1
-    pause .02
-    show bg static2
-    pause .02
-    show bg static1
-    pause .02
-    show bg static3
-    pause .02
-    show bg static2
-    pause .02
-    show bg static3
-    pause .02
-    show bg static1
-    pause .02
-    show bg static2
-    pause .02
-    show bg static1
-    pause .02
-    show bg static3
-    pause .02
-    show bg classroom
-    pause .05
-    show bg static1
-    pause .02
-    show bg static2
-    pause .02
-    show bg classroom
-    pause .08
-    show bg static3
-    pause .02
-    show bg classroom
 
     show box with Dissolve(.2):
         ypos 0
@@ -2952,42 +1893,7 @@ label gunner_rage:
     pause .03
     show bg classroom
 
-    rothbauer @ say "Who can tell me how anthromorphs could gain social status in Mesopotamian cultures?"
-
-    n "Rose raises her hand."
-    n "Mr. Rothbauer sighs."
-
-    rothbauer @ say "Anyone else...? No?"
-    rothbauer @ say "Go ahead Rose."
-
-    show rose at norm:
-        xpos 1350
-        xzoom -1
-    show rothbauer:
-        xpos 300
-    with move
-
-    rose @ say "By marrying a human."
-
-    rothbauer @ say "Correct! King Besul is credited as popularizing the idea of interspecies marriage..."
-    rothbauer @ say "...which lead to the advancement of anthromorphs from a slave class to, well they were still mostly slaves."
-    rothbauer @ say "But they could now climb the social ladder into whatever caste their human spouse occupied!"
-    rothbauer @ say "Very good, Rose! You always have the right answers! Moving on..."
-
-    scene bg static1
-    pause .02
-    show bg static2
-    pause .02
-    show bg static3
-    pause .02
-    show bg static1
-    pause .02
-    show bg static2
-    pause .02
-    show bg static1
-    pause .02
-    show bg static3
-
+   
     scene bg lecturehall
 
     play music "audio/music/mere - schooldaze faster.ogg" fadein 1.5
@@ -3046,20 +1952,19 @@ label gunner_rage:
     n "Gunner sulks next to you quietly as the two you walk away from the math building."
 
     gunner @ say "..."
-    gunner @ say "GOD FUCKING DAMMIT"
-    gunner @ say "Why didn't you tell me class had started?!"
+    gunner @ say "GOD FUCKING DAMMIT I HATE THAT BITCH"
 
     #show gunner angry
 
     player "Whoa what?"
 
-    gunner @ say "Earlier when Mrs. Herschel got onto me for not paying attention!"
+    gunner @ say "Earlier when Mrs. Herschel got onto me!"
     gunner @ say "Fucking boomers."
     gunner @ say "She's probably just mad music wasn't invented yet back when she was a student!"
 
     n "Gunner punches the brick wall of a building you were passing by."
 
-    player "Raptor Jesus that looks like it hurt! You alright bro?"
+    player "Holy shit that looked like it hurt! You alright bro?"
 
     n "Gunner takes a few breaths and recomposes himself."
 
@@ -3135,11 +2040,6 @@ label ellen_rage:
     stop music fadeout .9
 
 
-
-
-
-
-
     
     scene bg codadorm with fade
 
@@ -3202,56 +2102,6 @@ label passout:
 
     hide box
 
-    show bg static1
-    pause .02
-    show bg static2
-    pause .02
-    show bg campus
-    pause .05
-    show bg static3
-    pause .02
-    show bg static1
-    pause .02
-    show bg static1
-    pause .02
-    show bg static3
-    pause .02
-    show bg static1
-    pause .02
-    show bg static2
-    pause .02
-    show bg static3
-    pause .02
-    show bg static1
-    pause .02
-    show bg static1
-    pause .02
-    show bg static2
-    pause .02
-    show bg static3
-    pause .02
-    show bg static1
-    pause .02
-    show bg static1
-    pause .02
-    show bg static3
-    pause .02
-    show bg static1
-    pause .02
-    show bg static2
-    pause .02
-    show bg static3
-    pause .02
-    show bg static1
-    pause .02
-    show bg static1
-    pause .02
-    show bg static2
-    pause .02
-    show bg static3
-    pause .02
-    show bg static1
-    pause .02
 
     #___thursday2
 label hospital_bound:
@@ -5101,38 +3951,6 @@ label history_quiz:
 
     pause .6
 
-    scene bg static1
-    pause .02
-    show bg static2
-    pause .02
-    show bg static1
-    pause .02
-    show bg static3
-    pause .02
-    show bg static2
-    pause .02
-    show bg codadorm
-    pause .1
-    show bg static3
-    pause .02
-    show bg static1
-    pause .02
-    show bg static2
-    pause .02
-    show bg static1
-    pause .02
-    show bg static3
-    pause .02
-    show bg classroom
-    pause .05
-    show bg static1
-    pause .02
-    show bg static2
-    pause .02
-    show bg classroom
-    pause .08
-    show bg static3
-    pause .02
     show bg classroom
 
     #play music "audio/ai1.ogg" fadein 1.0
@@ -8256,79 +7074,7 @@ label movienight:
 
     hide box
     
-    #n "You're kind of nervous about posting it though."
-    #n "The account you posted it on has been untouched for years. You wonder how people will react to you coming back out of the blue with a new chapter."
-    #n "To be fair, it is written better than your old work."
-    #n "Maybe you should have just started something new from scratch. But you've already got this done so why not post it?"
-    #n "Fuck it, you'll just upload it. What's the worst than can happen?"
-    #n "You log in and are met with a fresh, new interface that is half as functional as the one you're used to."
-    #n "You even have to search up how to upload since it's not immediately clear after clicking different buttons for five minutes."
-    #n "Several dozen megabytes of unsolicited javascript later, the latest update is finally online and available to the public."
-    #n "How many of your subscribers are still active? They should all be getting a notification soon that you recently uploaded something."
-    #n "Are they gonna hate it? You did kind of go in a new direction... Maybe they'll actually appreciate it? Maybe not?"
-    #n "Fuck, this is making you anxious."
-    #n "Now you remember why you stopped doing this."
-    #n "You close the tab and try to forget about it."
-
-    #show bg static1
-    #pause .02
-    #show bg static2
-    #pause .02
-    #show bg codadorm
-
-    #n "You shut off your computer, rip out the battery and unplug it."
-
-    #show bg static3
-    #pause .03
-    #show bg codadorm
-
-    #n "You need a distraction."
-    #n "You've got some homework to catch up on. Yeah, that'll work."
-    #n "Not to mention the laundry you still need to do. And vacuuming the carpet."
-    #n "You should check but first you need to take your pills today before you forget. Where are they again?"
-    #n "You rummage around your bag for the bottle. Your hands tremble as you pop the top off and dump a couple out."
-    #n "As you're swallowing them, your phone buzzes, startling you and causing you to choke."
-
-    #player "*Ack!*"
     
-    ##with this newly added free day, maybe have awkward gunner and ava moment
-
-    ###add transparent static
-
-    #n "You chug an entire bottle of water trying to get it down."
-    #n "Even after you're sure you swallowed it you feel a hundred times worse."
-    #n "You check your phone. This better be something good to have almost killed you."
-    #n "Of course it's just a notification of a comment on your update. Someone just posted \"first\""
-    #n "You'd rip the battery out of your phone if you could still do that on modern phones."
-    #n "Instead you just mash the power button with the force of a million suns and shut it off before throwing it at your pillow."
-    #n "You don't know why you're so tense all of a sudden. This isn't the first time you've uploaded a new chapter."
-    #n "Maybe you're just more self aware and self conscious now."
-
-    #show bg static3
-    #pause .03
-    #show bg static2
-    #pause .02
-    #show bg static1
-    #pause .02
-    #show bg static2
-    #pause .02
-    #show bg codadorm
-    #pause .04
-    #show bg static2
-    #pause .02
-    #show bg static1
-    #pause .02
-    #show bg static3
-    #pause .02
-    #show bg codadorm
-
-    #n "You slump down in your desk chair and crack open a textbook, lazily flipping through the pages as you try not to imagine the comments you'll get in the coming days as people read your work."
-    #n "Why are you even concerned with what other people think? They're nobodies to you. They don't even know you."
-    #n "You usually don't even get many negative comments and the ones that are are obvious trolls."
-    #n "To be honest though, the positive comments don't really mean much to you."
-    #n "You don't know why, they just never really resonated with you. Probably cause they're coming from strangers."
-    #n "You guess you should just"
-
     stop music fadeout 1.0
 
     hide box
@@ -9343,28 +8089,6 @@ label vacation_planning1:
     
     #this is about the point where we should jump forward in time. play the rest of this scene at a later point when the player remembers.
 
-
-    scene bg static1
-    pause .02
-    show bg static2
-    pause .02
-    show bg static1
-    pause .02
-    show bg static3
-    pause .02
-    show bg static2
-    pause .02
-    show bg static3
-    pause .02
-    show bg static1
-    pause .02
-    show bg static2
-    pause .02
-    show bg static1
-    pause .02
-    show bg static3
-    pause .02
-    
     #wednesday 4
 label rori_belltower:
 
@@ -9619,24 +8343,7 @@ label rori_belltower:
     #with dissolve
 
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
     #___thursday4
-    
-    ###claire's birthday 
 
     
 
@@ -9902,38 +8609,6 @@ label hiking:
     scene bg codadorm with fade
     
     play music "audio/music/vylet - Destiny Station.ogg" 
-    
-    #n "Another Sunday."
-    #n "Sundays just give you anxiety about having to go to school the next day."
-    #n "How are you supposed to enjoy your weekend knowing that it's going to be over so soon?"
-    #n "What did you even have planned to do this weekend?"
-    #n "Oh right, nothing."
-    #n "You tend to go with whatever you feel like doing on any given day. Either that or one of your friends will invite you to do something."
-    #n "At least you got the next chapter of your story done."
-    #n "You wonder what your subscribers think of it, or if any of them still care to read it."
-    #n "You ended up posting it last night just before bed but you're hesitant to check on the comments."
-    #n "Screw it, you might as well get this over with. You open your laptop and refresh the page then scroll down to the comment section."
-    #n "\"Cool\" - cooldude438"
-    #n "\"gay.\" - Xx_fangfetishist_xX"
-    #n "The duality of man."
-    #n "\"wow this really made my day blah blah blah I used to read your stories way back in the day blah blah blah you're so amazing and I want to blah blah blah\" - d1ck_suck3r_562"
-    #n "There's always that one guy who will treat every post you make as the second coming of raptor Jesus. Let's see what else people have to say."
-    #n "\"Absolutely haram\" - deanon42"
-    #n "Okay, reasonable."
-    #n "\"Kill yourself\" - milkies69"
-    #n "Fair enough."
-    #n "\"Plebbit as fuck\" - smugpeppe55"
-    #n "THAT'S IT YOU CROSSED THE FUCKING LINE."
-    #n "You have to engage this troll with facts and logic and utterly annihilate him."
-    #n "Your pride is at sake."
-    #n "You click on the reply box and begin thinking out how you want to structure this post."
-    #n "After 30 minutes of typing up a storm, you hit send."
-    #n "Aaaaand the tab crashed. Great."
-    #n "When you reload it your 5 page essay on why you're so great is gone."
-    #n "Fuck it, you'll just reply \"no u\" and continue about your day."
-    #n "Satisfied in destroying this room temperature IQ individual, you get back to work on your story."
-    #n "It's become something of an obssession of yours lately. You don't know why you ever quit working on it. It's so much fun to write these characters you've come to love."
-    #n "After a few hours and barely a page of progress you get a text message."
     
     call phone_start from _call_phone_start_32 
 
@@ -12652,26 +11327,6 @@ label vacationday:
     n "Hopefully class is easy today cause you and your hangover are in no mood to learn."
     n "You make yourself presentable and walk out, head still throbbing."
 
-    show bg static1
-    pause .02
-    show bg static2
-    pause .02
-    show bg static3
-    pause .02
-    show bg campus
-    pause .03
-    show bg static2
-    pause .02
-    show bg static1
-    pause .02
-    show bg codadorm
-    pause .03
-    show bg static1
-    pause .02
-    show bg static2
-    pause .02
-    show bg static3
-    pause .02
     show bg campus
 
     show bg calendar
@@ -12684,8 +11339,6 @@ label vacationday:
     show tbackslash
 
     pause .7
-
-
 
     scene bg black with fade
 
@@ -20754,46 +19407,6 @@ label next01:
     n "Your body is probably just going through withdrawal or something since you've become so dependent on them, it expects one every few hours."
     n "You twist open the cap on the bottle and knock one back, chasing it down with a sip of water."
 
-    show bg static1
-    pause .02
-    show bg static3
-    pause .02
-    show bg static1
-    pause .02
-    show bg static2
-    pause .02
-
-    show bg codadorm
-    pause .03
-
-    show bg static1
-    pause .02
-    show bg static2
-    pause .02
-
-    show bg codadorm
-    pause .04
-
-    show bg static1
-    pause .02
-    show bg static3
-    pause .02
-    show bg static1
-    pause .02
-    show bg static2
-    pause .02
-    show bg static1
-    pause .02
-    show bg static2
-    pause .02
-    show bg static3
-    pause .02
-    show bg static1
-    pause .02
-    show bg static2
-    pause .02
-    show bg static3
-    pause .02
 
     show bg codadorm
 
@@ -20801,39 +19414,10 @@ label next01:
     n "Ahh, much better."
 
 
-    show bg static1
-    pause .02
-    show bg static2
-    pause .02
 
     show bg codadorm
 
     n "Circa 400 AD, the Roman Empire saw bloody conflict as the subjugated classes, mostly comprised of anthromorphs though aided considerably by human benefactors..."
-
-    show bg static1
-    pause .02
-    show bg static2
-    pause .02
-
-    show bg codadorm
-    pause .09
-
-    show bg static1
-    pause .02
-    show bg static2
-    pause .02
-
-    show bg codadorm
-    pause .03
-
-    show bg static1
-    pause .02
-    show bg static3
-    pause .02
-    show bg static2
-    pause .02
-    show bg static1
-    pause .02
 
     show bg codadorm
 
@@ -20849,15 +19433,6 @@ label next01:
 
     n "Parlais vous francais?"
 
-    show bg static1
-    pause .02
-    show bg static2
-    pause .02
-    show bg codadorm
-    pause .04
-    show bg static3
-    pause .02
-    show bg static2
 
     #sudden cut to codadorm night version
     show bg codadorm
