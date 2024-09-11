@@ -3430,6 +3430,7 @@ label thursday1:
     menu:
         n "{cps=0}She says with a wink and playfully nudges you.{/cps=0}"
         "I'd love to!":
+            $ frenchSkill =+ 1
             $ clairePoints = clairePoints + 1
             
             player "I'd love to!"
@@ -3456,7 +3457,7 @@ label thursday1:
             ava @ say "I'll just uh, give you two some privacy."
             
             n "Ava grabs her bag and flutters out of the room."
-            n "Without hesitation, Claire pins you between her warm soft body and the cold hard wall. She has a crazed look in her eyes and all you've got is your notebook to protect you."
+            n "Without hesitation, Claire pins you between her warm soft body and the cold hard wall. She has a crazed look in her eyes and all you've got is your textbook to protect you."
             
             claire @ say "So~ Where did you want to begin~"
             
@@ -3470,19 +3471,90 @@ label thursday1:
             
             claire @ say "Laisse-moi t'apprendre~"
             
-            n "Claire lifts you off your feet and sets you down in a chair. She brushes aside a pair of panties on the desk and slams your notebook down where it was."
+            n "Claire lifts you off your feet and sets you down in a chair. She brushes aside a pair of panties on the desk and slams your textbook down where it was."
+            n "You feel something heavy and squishy rest atop your head as she leans over you."
             
+            claire @ say "Il fait chaud ici, n'est-ce pas?"
             
+            n "You think she's saying something about it being hot? You flip open your book and look around for an appropriate response."
             
+            player "Uhh... oui assez chaud."
             
+            claire @ say "Ça te dérange si j'enlève mon pull?"
+            
+            n "She tugs at the bottom of her sweater, airing out the heat beneath the fabric."
+            n "It's becoming difficult to keep track of the conversation as she uses more words you don't know."
+            n "She must have been reading ahead."
+            n "All you can offer is a basic observation about the sweater."
+            ###in later scenes if you've studied more you can say better things
+            
+            player "C'est un beau pull. Ça te va bien."
+            
+            claire @ say "Hrmm..."
+            
+            n "Claire racks her claws against the table impatiently while thinking."
+            
+            claire @ say "Il fait tellement chaud que je pourrais m'évanouir! Allons au lit!~"
+            
+            n "Before you have time to translate, you're hoisted out of the chair and thrown onto Claire's bed, face up."
+            n "In the blink of an eye, the bunny pounces on top of you, thankfully propping herself up on her paws so as to not crush your frail human body."
+            n "Without your textbook to protect you, you'll have an even harder time navigating this strange conversation. You're still unfamiliar with the customs of France but Claire seems to be guiding you."
+            n "Perhap if you study more in your free time you'll have a better grasp on things."
+            
+            player "Is this how people normally talk in France?"
+            
+            claire @ say "...From what I've read, yes."
+            claire @ say "Maintenant, ne sois pas si timide~"
+            
+            scene bg black with fade
+            
+            pause .8
+            
+            scene bg avadorm with fade
+            
+            n "An eternity passes with you and your study partner frequently changing position and whispering broken French to each other in this hot and sweaty room."
+            n "Though the odd body language still confuses you, you feel like you've learned a few new words and grammatical rules."
+            n "You've ended up lying on your back with your head in Claire's lap while she strokes your hair."
+            n "It's an incredibly soothing feeling. You could fall asleep right here."
+            n "You let out a yawn and check the time on your phone."
+
+            player "Man, it's getting late. I should get back to my dorm and get ready for tomorrow."
+            
+            n "You sit up, roll out of bed, and begin collecting your belongings."
+            
+            player "This was actually kinda fun. Like the whole 'roleplaying in French' thing. And I learned a lot!"
+            player "We should do this again sometime!"
             
             claire @ say "...Seriously?"
             
-            #you can take up claire's offer to 'study' in her dorm. when you get there, ava is there but claire kicks her out for some alone time. However the scene proceeds with the player being incredibly oblivious to claire's advances and simply tries to study.
+            player "What?"
             
+            claire @ say "Nothing... I had fun too."
             
+            n "She seems disappointed. Was there something else she wanted to do?"
             
+            claire @ say "Maybe next time we can do something... more fun than studying?~"
             
+            n "Ohh she probably means playing video games."
+            ###download some french translated games for next time
+            
+            player "Sure, we can play around next time."
+            
+            claire @ say "Okay <3"
+            claire @ say "Yay <3"
+            
+            player "See you in class!"
+            
+            claire @ say "À un de ces quatre!"
+            
+            hide claire with dissolve
+            
+            scene bg codadorm with fade
+            
+            n "You didn't mean to bore her with all that school work."
+            n "You should download some games on your laptop to bring next time. Maybe you can get some that are translated in French so you can still learn while playing them."
+            
+            jump thursday1End
             
 
         "Maybe another time":
@@ -3490,7 +3562,7 @@ label thursday1:
             
             show claire sweater cry
 
-            n "Claire looks extremely disappointed."
+            n "Claire looks extremely disheartened."
 
             claire @ say "Aww..."
             
@@ -3505,30 +3577,22 @@ label thursday1:
             player "Hmm."
 
             n "What did she mean by this?"
+            n "The air around you has suddenly gotten uncomfortable. You're just gonna excuse yourself and go back to your dorm."
             
+            player "Alright, time to go. I'll see you in class."
             
+            claire @ say "Yeah... See you later."
             
-            
-            
-            
-            
-            n "Whatever, this conversation is taking too long when all you wanna do is go home and go to sleep."
-            n "Better wrap things up as awkwardly as possible and gtfo."
-
-            player "Well, I'll see ya later."
-            
-            show claire sweater wave
-
-            claire @ say "Yeah, see ya."
-
             n "You wave goodbye and turn in the direction of your dorm, purposely avoiding Ava's sightline as she approaches Claire."
+            
+            jump thursdayNight1Study
             
         "Sorry, I'm not into fat chicks.":
             #$ claireBias = True
-            $ roriPoints =- 1
-            $ avaPoints =- 1
-            $ ellenPoints =- 1
-            $ rosePoints =- 1
+            #$ roriPoints =- 1
+            #$ avaPoints =- 1
+            #$ ellenPoints =- 1
+            #$ rosePoints =- 1
             
             player "Sorry, I'm not into fat chicks."
             
@@ -3540,22 +3604,67 @@ label thursday1:
             
             claire @ say "Oh, I get it..."
             claire @ say "Forget I asked."
-            claire @ say "I'll see you around, [name]."
+            claire @ say "I'll see you in class, [name]."
             
             hide claire with dissolve
             
             n "Claire sullenly walks off."
             n "Was it something you said?"
             
-    stop music fadeout 1.0
-    stop sound fadeout 1.0
+            stop music fadeout 1.0
+            stop sound fadeout 1.0
+            
+            jump thursdayNight1Study
     
     
+label thursdayNight1Study:
+    scene bg codadorm with fade
+    
+    n "Back in your comfy zone."
+    n "There's enough time in the day left to study a topic before bed."
+    #or you could be a slacker and do some leisure activity
+    n "What should you study?"
+    
+    menu:
+        "French":
+            $ frenchSkill =+ 1
+            n "You pick up your French textbook and practice some lessons."
+        "Literature":
+            $ literatureSkill =+ 1
+            n "You open your totally legally acquired epub of The Death of Ivan Ilyich and start reading."
+        "History":
+            $ historySkill =+ 1
+            n "You crack open your History textbook and read up on some ancient cultures."
+        "Statistics":
+            $ statsSkill =+ 1
+            n "You flip open your statistics book and open a calculator app to crunch some numbers."
+            
+    n "After some time, you feel more confident in your understanding of the topic."
+    n "You spent quite some time though and now it's time for bed."
     
     
-    
-    
+label thursday1End:
+    scene bg black with fade
 
+    n "You do your usual nightly routine and crawl under the blankets to rest until the next day."
+
+    scene bg black with fade
+
+    hide box
+
+    show bg calendar
+    show tthursday at norm
+    with Dissolve(.5)
+
+    pause .6
+    show tforwardslash
+    pause .2
+    show tbackslash
+
+    pause .7
+
+label friday1:
+    
 
 
 
