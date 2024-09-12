@@ -3567,7 +3567,7 @@ label thursday1:
 
     ###plans
     ###friday after class gunner invites you to the rooftop party happening on saturday
-    
+        ###skip over friday classes
     
     
     
