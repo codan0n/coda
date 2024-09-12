@@ -1435,6 +1435,10 @@ label start:
     $ clairephonewhat = ""
     $ clairephonethx = ""
     $ roriparty = ""
+    $ statsSkill = 0
+    $ frenchSkill = 0
+    $ historySkill = 0
+    $ literatureSkill = 0
     $ roriPoints = 0
     $ ellenPoints = 0
     $ rosePoints = 0
