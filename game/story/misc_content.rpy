@@ -4,8 +4,13 @@ label roriDormIntro:
     
     scene bg roridorm with dissolve
     
+    show box with Dissolve(.2):
+        ypos 0
+    
     n "Scattered throughout Rori's dorm are various electronics that heat the room to rival a sauna."
     n "The glow of several CRT monitors displaying vintage anime pierces your retinas. Toxic fumes from a soldering iron linger in the air, making you cough. The whirring of fans could drown out the sound of a jet engine."
+    
+    show rori neutral at norm with dissolve
     
     rori "Sorry about the mess. Housing pays for power so I hooked up a few crypto mining ASICs to generate some passive income."
     
@@ -19,7 +24,7 @@ label roriDormIntro:
             player "Based electricity thief."
             
             rori "It's not stealing if they're giving it away for free."
-            rori "If they didn't want me using 6000 watts, they shouldn't have given me so many electric sockets."
+            rori "If they didn't want me using 11000 watts, they shouldn't have given me so many electric sockets."
             
             player "I don't think they accounted for daisy chaining power strips like that. Seems like a fire hazard."
             
@@ -28,11 +33,13 @@ label roriDormIntro:
     return
     
 label avaClaireDormIntro:
+    #"this is a description of Claire and Ava's dorm, to be played the first time you enter it."
     $ avaClaireDormIntroSeen = True
     
     scene bg avadorm with fade
     
-    #"this is a description of Claire and Ava's dorm, to be played the first time you enter it."
+    show box with Dissolve(.2):
+        ypos 0
     
     n "This is the first time you've ever been in a girl's room. This one being shared between Ava and Claire, their lifestyles are reflected in the stark contrast in their respective sides of the room."
     n "Ava's side is tidy and clean with art books neatly stacked on the desk alongside expensive camera gear whereas Claire's half of the room is unkempt and disorganized."

@@ -695,7 +695,7 @@ label college_orientation:
                 
                 rori @ say "Ugh, I'm gonna have to load up a live CD and chroot into this and dig around to find the problem."
                 
-                player "Average linux boot process."
+                player "Typical linux boot process."
                 
                 rori @ say "Haha yeah... Sorry about this but I doubt I'll be able to get this running tonight."
                 
@@ -1033,6 +1033,11 @@ label exploring_campus:
         
         n "Rori tenses up but doesn't say anything. He's like a deer in headlights, except he's a ram and the headlights are an accusation of being gay."
         
+        show gunner:
+            xoffset 575
+        show rori:
+            xoffset -175
+        
         menu:
             "Which anime?":
                 player "Which anime was it?"
@@ -1146,18 +1151,24 @@ label exploring_campus:
             mishka "It's just how I like things. I can turn the lights on if you like."
             
             menu:
+                mishka "{cps=0}It's just how I like things. I can turn the lights on if you like.{/cps=0}"
                 "Please do":
                     player "Please do. I can't see anything in this darkness."
                     
-                    mishka @ say "Very well."
+                    mishka @ say "Duzhe dobre."
                     
                     n "The barista clenches her eyes shut as she puts a claw to the light switch."
                     n "When the lights come on, she winces and slowly opens her eyes."
+                    
+                    mishka @ say "Now what can I get for you?"
                 "Leave them off":
-                    ###$ mishkaPoints=+1
+                    $ mishkaPoints =+ 1
+                    
                     player "It's fine, you can leave them off. It's comfier this way."
                     
-                    #mishka @ say ""
+                    n "She seems pleased with your response."
+                    
+                    mishka @ say "Now what can I get for you?"
         "Place your order":
             player "Yeah can I get uhh...."
 
@@ -3154,12 +3165,15 @@ label afterAvaText1:
         
         scene bg campus with fade
         
+        show box with Dissolve(.2):
+            ypos 0
+        
         n "The night air is cool with a constant brisk wind buffetting your jacket."
         n "Gone is the hustle and bustle of the campus's daytime operations, replaced with a sense of isolation and abandonment."
         n "With only the street lamps to light the way, your surroundings become an unfamiliar void where only the odd stranger lurks."
         n "So it seems, until a friendly figure emerges from the shadows and locks eyes with you."
         
-        show rori neutral with dissolve
+        show rori neutral at norm with dissolve
         
         rori @ say "[name]? What are you doing out so late?"
         
@@ -3448,13 +3462,30 @@ label thursday1:
             call avaClaireDormIntro
             
             n "Ava is lying on her bed reading a magazine while listening to headphones."
-            n "She turned her eyes over to you when when Claire crashed through the doorway."
+            n "She turned her eyes over to you when when Claire crashed through the doorway."            
+            
+            show ava reaching concerned at norm with dissolve:
+                xoffset -600
+                xzoom -1
             
             ava @ say "Heya Claire. You alright?"
             
-            claire "Ava, get out unless you wanna join in on this 'study session' [name] and I are about to have."
+            show claire sweater neutral at norm with dissolve:
+                xoffset 500
+            
+            claire @ say "Ava, get out."
+            
+            show claire sweater leaning
+            
+            claire @ say "...unless you wanna join in on this 'study session' [name] and I are about to have."
+            
+            show ava reaching embarassed 
             
             ava @ say "I'll just uh, give you two some privacy."
+            ava "{nw}"
+            
+            show ava with move:
+                xpos 2000
             
             n "Ava grabs her bag and flutters out of the room."
             n "Without hesitation, Claire pins you between her warm soft body and the cold hard wall. She has a crazed look in her eyes and all you've got is your textbook to protect you."
@@ -4449,8 +4480,5 @@ label sunday2Evening:
 
 jump chapter2start
     
-    ###CHAPTER 2
-    ###starting on monday weather is randomized and affects what you can do after class
-    ###pass out in class on thursday and take the next day off
 
-    return
+    #return
