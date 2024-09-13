@@ -3664,21 +3664,27 @@ label thursday1End:
     pause .7
 
 label friday1:
+    scene bg codadorm with fade
     
-
-
-
-
-
-    ###plans
-    ###friday after class gunner invites you to the rooftop party happening on saturday
+    n "You've made it to the end of your first week back in school."
+    n "Just have to get today's classes knocked out, then you'll be free for two whole days."
     
+    scene bg black with fade
     
+    pause .7
     
+    scene bg campus with fade
     
+    n "You're blessed with a relatively quick and painless classroom experience and are done with your obligations for the day."
+    n "Now you'll have to find some way to occupy yourself for the weekend."
+    n "Probably something indoors, at least for now, seeing as how those storm clouds in the distance are fast approaching."
+    n "The wind is picking up and you can already see flashes of lightning."
+    n "Better hurry to your dorm before it starts raining too."
     
+    scene bg codadorm with fade
     
-    
+    n "After a long week, you decide you're deserving of some carefree relaxation while the storm rages outside."
+    n "At some point you get a text from Gunner."
     
     play audio "audio/sound effects/vibrate.ogg"
    
@@ -3690,10 +3696,11 @@ label friday1:
     call message("Gunner", "I'm bringing bear", "gunneravi.png") from _call_message_118 
     call message("Gunner", "Beer*", "gunneravi.png") from _call_message_119 
 
-    call reply_message("Sure that sounds awesome") from _call_reply_message_185 
+    call reply_message("Maybe, if I'm not doing anything") from _call_reply_message_185 
     call reply_message("Where and when") from _call_reply_message_186 
 
     call message("Gunner", "Meet us atop the literature building after sundown", "gunneravi.png") from _call_message_120 
+    call message("Gunner", "There's gonna be a party up there as long as it's not still raining", "gunneravi.png") 
 
     call reply_message("wtf that sounds kinda dangerous") from _call_reply_message_187 
     call reply_message("what if we get caught") from _call_reply_message_188 
@@ -3701,33 +3708,40 @@ label friday1:
     call message("Gunner", "Bro don't worry about it I used to do this like every week last year", "gunneravi.png") from _call_message_121 
     call message("Gunner", "It'll be cool trust me", "gunneravi.png") from _call_message_124 
 
-    call reply_message("Hmm") from _call_reply_message_189 
-    call reply_message("Ok") from _call_reply_message_190 
-    call reply_message("I am willing to risk getting hazed for some shitty beer") from _call_reply_message_191 
+    call reply_message("Hmm") from _call_reply_message_189  
+    call reply_message("Am I willing to risk getting hazed for some shitty beer tho") from _call_reply_message_191 
 
     call message("Gunner", "This isn't like a frat thing this is a \"i wanna hang out and get to know my bros\" thing", "gunneravi.png") from _call_message_147 
     
+    call reply_message("how thoughtful") 
+    call reply_message("I'll try and be there i guess") 
+
+    call message("Gunner", "Alright dude, hope you can make it", "gunneravi.png") 
     
+    call phone_end
     
+    n "That gives you something to do tomorrow if you get too bored."
+    n "The hours pass by in leisure until the urge to sleep becomes too hard to resist."
     
-    
-    
-    
-    
-    
-    
-    
-    
-    ###saturday go to rooftop party
-    
-    
-    
-    
-    
-    
-    
+    scene bg black with fade
+
+    hide box
+
+    show bg calendar
+    show tfriday at norm
+    with Dissolve(.5)
+
+    pause .6
+    show tforwardslash
+    pause .2
+    show tbackslash
+
+    pause .7
+
 label rooftop_party:
-    #
+    ###saturday go to rooftop party or hang with ava at cinema club
+    # saturday 2
+    
     scene bg codadorm with fade
 
     show box with Dissolve(.2):
@@ -3735,7 +3749,7 @@ label rooftop_party:
 
     n "You've been thinking about this roof party thing Gunner invited you to all day."
     n "You keep flipping between wanting to go or just staying home."
-    n "You guess you should try new things. You've never even had a beer before."
+    n "You guess you should try new things while you're here. You've never even had a beer before. Hard to buy when you're only 20."
     n "What's the worst that could happen?"
     n "If you don't like it you can always leave."
     n "Fuck it, you can afford to not be a shut-in for one weekend, right?"
@@ -3751,12 +3765,9 @@ label rooftop_party:
     show box with Dissolve(.2):
         ypos 0
 
-    n "You arrive fashionably late, mostly as a result of you getting lost on the way here."
-    n "Even though you already knew where the literature building was, everything looks different when it's dark."
-    #n "You arrive fashionably late, mostly on account of you getting lost on the way here."
-    n "Luckily the obnoxious techno pop music coming from Gunner's bluefang speaker guided you in the right direction."
-    #bluefang? blueclaw?
-    n "There's actually quite a few people up here, complete with a couple making out in the stairway."
+    n "Looks like the party's already started. Neon strobe lights highlight flashes of people dancing while obnoxious techno pop music blasts through a low quality bluefang speaker."
+    n "Clouds still cover the sky but you don't hear thunder and it hasn't rained all day. You still have to watch out for the puddles from the previous day."
+    n "At least, you hope those are just puddles of rainwater and not something else."
     n "You spot Gunner on the other side of the roof and have push your way past a group of people dancing and grinding on each other to reach him."
 
     show gunner neutral at norm with dissolve
@@ -3768,7 +3779,7 @@ label rooftop_party:
     gunner @ say "Thanks bro! Here, have a beer."
 
     n "Gunner tosses a can vaguely in your direction. You don't even try to catch it cause his throw was so off that it just goes flying off the side of the building."
-    n "A second later you hear it explode on the concrete."
+    n "A couple seconds later you hear it explode on the concrete."
 
     gunner @ say "Haha woops. Here's another one."
 
@@ -3789,12 +3800,10 @@ label rooftop_party:
     n "Rori emerges from the mosh pit, looking dishevelled."
     n "He adjusts his glasses and walks up to you."
 
-    #rori has been sticking by gunner awkwardly
-
-    rori @ say "Gunner! I looked away for like two seconds and lost track of you, man!"
+    rori @ say "Gunner! I looked away for like two seconds and lost track of you!"
 
     gunner @ say "Ah there he is. He's been trailing me all night."
-    gunner @ say "You know you don't have to be my shadow, right? You're free to mingle with other people, make some friends."
+    gunner @ say "You know you don't have to be my shadow, right? You're free to mingle with other people. Go make some friends."
 
     show rori anxiety
 
@@ -3821,7 +3830,7 @@ label rooftop_party:
         yalign 0
     with move
 
-    #do transitions where one sprite dissolves away and the other one moves into center view
+    ###do transitions where one sprite dissolves away and the other one moves into center view
 
     player "It's pretty cool. I've never been around so many people so it's taking some time to adjust."
 
@@ -3841,7 +3850,7 @@ label rooftop_party:
 
     rori @ say "That's what college is supposed to be for!"
 
-    player "So they say!"
+    player "So they say."
 
     n "You take a sip of your beer and Gunner comes back with a new pack."
 
@@ -3853,9 +3862,9 @@ label rooftop_party:
 
     gunner @ say "I'm back! Here Rori, take this."
 
-    n "Gunner shoves a can in to Rori's hand and pushes him back onto the dance floor."
+    n "Gunner shoves a can in to Rori's hooves and pushes him back onto the dance floor."
 
-    rori @ say "Aaahhh Gunner stahp! I don't know how to daaaaaance..!"
+    rori @ say "Noooo stoppp! I don't know how to daaaaaance..!"
     
     gunner "{nw}"
 
@@ -3874,21 +3883,18 @@ label rooftop_party:
         xpos 1555
 
     gunner @ say "Sometimes ya gotta push the young ones out of the nest and watch them fly."
-
     gunner @ say "Enjoying the beer?"
 
     menu:
         gunner "{cps=0}Enjoying the beer?{/cps}"
         "Yeah":
-            #finished
             player "Yeah man it's great."
 
             gunner @ say "You don't have to lie bro, I know it tastes like piss."
         "Tastes like piss.":
-            #finished
             player "Tastes like piss."
 
-            gunner @ say "Hahaha yeah bro!"
+            gunner @ say "Hahaha I know right!"
 
     gunner @ say "Want another?"
 
@@ -3922,7 +3928,7 @@ label rooftop_party:
     n "He leans up against the wall and rambles on and on."
     n "Eventually he gets on the topic of school."
 
-    gunner @ say "...And it's like, okay Dad, I don't even want to go to college, but then he's like \"You either go and get an education or I ship you off to boot camp.\""
+    gunner @ say "...And it's like, okay Dad, I didn't even want to go to college, but then he's like \"You either go and get an education or I ship you off to boot camp.\""
 
     player "Damn, that's rough."
 
@@ -3934,41 +3940,34 @@ label rooftop_party:
     player "He can't control what you do. You're an adult, you can do whatever you want."
 
     gunner @ say "Yeah but he said he'll cut off my cash flow if I don't go with the major he picked out for me."
-
-    player "Which is?"
-
-    gunner @ say "Fuck man I don't even know what it's called. Administrative business management instructioneering or some bullshit."
-    gunner @ say "I'd rather do something creative and artsy but he'd disown me if I got \"one of those damn worthless liberal arts degrees.\""
+    gunner @ say "I'd rather try doing something creative and artsy but he'd disown me if I got \"one of those damn worthless liberal arts degrees.\""
 
     menu:
-        gunner "{cps=0}I'd rather do something creative and artsy but he'd disown me if I got \"one of those damn worthless liberal arts degrees.\"{/cps=0}"
+        gunner "{cps=0}I'd rather try doing something creative and artsy but he'd disown me if I got \"one of those damn worthless liberal arts degrees.\"{/cps=0}"
         "Maybe he's got a point.":
-            #finished
             player "Maybe he's got a point."
             player "It'll be easier to land a job with a more practical degree."
 
             n "Gunner sighs."
 
-            gunner @ say "I know but that's not the point."
-            gunner @ say "I'm an adult, dammit, I can make my own decisions."
-            gunner @ say "I don't wanna work at some corporate hellhole or push papers in the military. It's so... soulless, you know?"
-            gunner @ say "I'd be working for other people's interests, not my own!"
+            gunner @ say "I know but that's not-."
+            gunner @ say "Fuck it, I'm an adult! I can make my own decisions!"
+            gunner @ say "I don't wanna work at some corporate hellhole or push papers in the military!"
+            gunner @ say "Fuck working for other people's interests!"
             
         "Maybe get a minor?":
-            #finished
             player "Maybe you could get a minor in something you enjoy?"
-            player "Let your father be happy you got your super serious business degree while you work on your own thing."
+            player "Let your father be happy you got your serious big boy degree while you work on your own thing."
             player "That way you'll have a backup to fall back on if you become a starving artist."
-            #player "Leverage your major to kickstart your creative career."
 
             gunner @ say "That could work."
-            gunner @ say "...If I wasn't already swamped with work and failing half my classes."
+            gunner @ say "...If I wasn't already swamped with studies and failing half my classes."
 
-    gunner @ say "Fuuuuck it, I don't wanna even think about it anymore."
+    gunner @ say "Damn it, I don't wanna even think about it anymore."
 
-    n "Gunner hops up onto the guard rail, balancing on it with ease."
+    n "Gunner hops up onto the guard rail, balancing on it with feline precision."
 
-    gunner @ say "I'm here to get drunk and find a qt avian gf!!!"
+    gunner @ say "I'm here to get drunk and find a cute avian girlfriend!!!"
 
     n "You hear a few cheers from behind you."
 
@@ -3985,21 +3984,21 @@ label rooftop_party:
     n "You gotta admit, as the night has gone on, you've gradually become more relaxed and stopped worrying about every little thing."
     n "You can just turn off your brain and enjoy the moment for once."
     n "Maybe this is why people drink this stuff."
-    n "As you finish off your can, you notice your feline friend seems to have gone missing."
+    n "As you finish off your can, you notice Gunner is missing."
 
     gunner @ say "Woooooo!"
 
     player "...Gunner?"
-    player "Where'd you go?"
+    player "Where'd you go?!"
 
-    n "His voice echoes off the surrounding buildings but he's nowhere to be found."
+    n "His voice echoed off the surrounding buildings but he's nowhere to be found."
     n "Holy shit, did he just...?"
     n "You hesitantly peek over the edge of the roof and look down."
     n "A small crowd forms around you, sharing your curiosity."
 
     stop music fadeout 1.0
 
-    n "\"Oh my gosh, did that guy just fall?\""
+    n "\"Oh my gosh, did that guy fall off?\""
     n "\"What the fuck, is he alright??\""
     n "\"Did my boy Gunner just die?\""
     n "Voices from the partygoers drown out your own thoughts but share your sentiment."
@@ -4010,7 +4009,7 @@ label rooftop_party:
 
     gunner @ say "I'm okay! I landed on my feet!"
 
-    n "The crowd breathes a collective sigh of relief and the party goes on like nothing happened."
+    n "The crowd lets out a triumphant cheer and the party goes on like nothing happened."
 
     play music "audio/music/Monkey Warhol - Boots & Pants (Sidekick Wave Instrumental Remix).ogg" fadein 1.0
 
@@ -4027,8 +4026,8 @@ label rooftop_party:
 
     call phone_end from _call_phone_end_53
 
-    n "You're not gonna stick around and wait to get busted by the police, nor are you gonna get trampled by everyone on the way out by warning them of what's coming."
-    n "You push your way through the dancers and take Rori's hand."
+    n "Gotta get out of here before the police bust everyone."
+    n "You push your way past the drunken dancers and take Rori's hoof."
 
     show rori drunk at norm with dissolve:
         xzoom -1
@@ -4072,7 +4071,7 @@ label rooftop_party:
 
     hide rori with dissolve
 
-    n "You and Rori sneak away, avoiding the main entrance which was almost certainly guarded by some boomer rent-a-cop."
+    n "You and Rori peek around the corner and commence sneaking away, avoiding the main entrance which was almost certainly guarded by some boomer rent-a-cop."
 
     stop music fadeout .5
 
@@ -4101,13 +4100,13 @@ label rooftop_party:
 
     player "Gunner! How'd you survive that fall?"
 
-    gunner @ say "Don't you know cats don't take fall damage hahaha!"
+    gunner @ say "Don't you know cats don't take fall damage? Hahaha!"
 
     #show rori at shudder
 
     rori @ say "Shouldn't we have warned the others...?"
 
-    gunner @ say "Nah, y'all woulda got caught up in the mad dash to escape. Happened to me before."
+    gunner @ say "Nah, y'all woulda got caught up in the mad dash to escape and probably gotten trampled. Happened to me before."
 
     player "Thanks for the warning."
 
@@ -4119,7 +4118,7 @@ label rooftop_party:
 
     gunner @ say "What's wrong?"
 
-    rori @ say "I was kinda looking forward to this shindig."
+    rori @ say "I was kinda having fun up there. Shame it had to end so suddenly."
 
     gunner @ say "Well..."
     gunner @ say "The night's still young! We can order pizza and play some games."
@@ -4127,29 +4126,13 @@ label rooftop_party:
 
     player "It's no wild college party, but that sounds pretty nice."
 
-    gunner @ say "Heck yeah!"
-    gunner @ say "Don't worry about chipping in for the food, I'll cover it. It's the least I could do after inviting you to this disaster."
+    gunner @ say "Hell yeah!"
 
     hide rori
     hide gunner
     with dissolve
 
-    n "The three of you stumble back to the dorms, where you spend a few hours getting dunked on by the ram in various video games."
-    n "After they pass out you decide to head back to your dorm."
-
-    stop sound fadeout 1.0
-    stop music fadeout 1.0
-
-    scene bg codadorm with fade
-
-    show box with Dissolve(.2):
-        ypos 0
-
-    n "Tonight actually ended up being pretty fun."
-    n "You're glad you decided to get out for once."
-    n "You send Gunner and Rori a text thanking them for an awesome night before faceplanting into your pillow and instantly falling asleep."
-
-    hide box
+    n "The three of you stumble back to the dorms, where you spend a few hours getting dunked on by Rori in various video games."
 
     scene bg black with fade
 
@@ -4166,22 +4149,16 @@ label rooftop_party:
 
     pause .7
 
+label sunday2:
+    scene bg roridorm with fade
     
+    n "Your head pulsates with the inconvenience of a minor hangover, enough to make your conscious existence miserable."
+    n "Looking around, it seems you'd fallen asleep in Rori and Gunner's dorm. They're passed out in their respective beds."
+    n "No reason to stick around. You feel groggy and sweaty and gross and you need a shower and some coffee as soon as possible."
     
-    
-    
-    
-    
-    
-    
-    
+    ###new ending where you fall alseep and wake up the next day in rori's dorm. they're still asleep so you go out alone. a bit hungover, you decide to stop by your dorm to shower then head out and get a coffee.
 
-    ###sunday it's raining and you find rose in the cafe
-    
-    
-    
-    
-    
+
     
     label mere_cafe1:
 #
