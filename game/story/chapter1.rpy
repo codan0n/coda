@@ -110,7 +110,7 @@ label nicodemusQuestions:
                     
                     nicodemus "No one has, not for a few decades. At least, not a living specimen."
                     nicodemus "I'm afraid they've gone extinct."
-                "They're gone, aren't they?":
+                "They're all gone, aren't they?":
                     show box with Dissolve(.2):
                         ypos 0
         
@@ -1528,7 +1528,7 @@ label firstDayOfClass:
                 
                 n "He evidently doesn't pick up on your sarcasm, because there isn't a hint of irony in his response."
                 
-                gunner @ say "I know right? I don't get why people like, choose to be poor? It's weird."
+                gunner @ say "I know right? I don't get why people choose to be poor. It's weird."
 
         gunner @ say "I'm Gunner by the way! What's your name?"
         
@@ -3669,7 +3669,7 @@ label thursday1End:
 
 label friday1:
     
-
+    ###it looks like it's about to storm hard so you just go home
 
 
 
