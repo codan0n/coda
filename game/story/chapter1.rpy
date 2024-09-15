@@ -4482,7 +4482,7 @@ label sunday2Evening:
 
     pause .7
 
-jump chapter2start
+    jump chapter2start
     
 
     #return

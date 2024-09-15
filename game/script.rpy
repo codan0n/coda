@@ -1654,7 +1654,6 @@ call chapter1
     
 label sickday:
 
-    ###this day will need to be rewritten so the player fainting in class happens 1 week later. in week 2, choose to either study or hang out after classes. 
     ###Ask Rose if you should start working on the project.
     
     
