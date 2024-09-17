@@ -1148,7 +1148,7 @@ label exploring_campus:
         "Why are the lights off?":
             player "Why are the lights off? Is the shop open?"
             
-            mishka "It's just how I like things. I can turn the lights on if you like."
+            mishka "It's just how I like things. I can turn them on if you like."
             
             menu:
                 mishka "{cps=0}It's just how I like things. I can turn the lights on if you like.{/cps=0}"
