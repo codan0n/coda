@@ -7239,6 +7239,7 @@ label ellen_feeding_ducks:
                 show ellen teacher neutral
                 
                 ellen @ say "And just how old do you think I am?"
+                ###make this scene happen on ellen's birthday
                 
                 menu:
                     ellen "{cps=0}And just how old do you think I am?{/cps}"
