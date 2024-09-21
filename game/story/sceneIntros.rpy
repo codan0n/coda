@@ -82,3 +82,59 @@ label sleepingIn:
     
     
 
+label runningTrackIntro:
+    $ trackDiscovered = True
+
+    "Before you lies a grassy field encircled by an elliptical ring made of some synthetic material. Bleachers stand tall parallel to the long axis of the ring."
+    "Soccer goals rest on the ends of the field, though no game is being played at the moment. Runners jog along the ellipse, speeding past those on their cool down laps walking along the outer edge."
+    "Off to the side is a section where various exercise machines and equipment are being used by athletic students. There's even a rock climbing wall over there."
+    "You must have wandered into the sports side of campus."
+    "Maybe you should start that fitness arc you've been postponing."
+    "But where do you even start? You didn't bring clothes to run in today but you could at least take a look at the machines and figure out how they work, right?"
+    "You hesitantly approach the workout area and walk past some folk who are stretching."
+    "It feels like they're staring out you. You must look so out of place. Everyone here is lean or muscular or both."
+    "You just try to ignore everything around you and get to an available machine."
+    "Ah, here's one."
+    "...Now how the hell does it work?"
+    "So you sit on the bench and... your arms go... here?"
+    "Wait no, you think it's actually for your legs."
+    "It's not moving. How do you get it to move? Does it go the other way?"
+    "Fffffuck, that cute girl over there is definitely getting the ick from watching you."
+    "Mission abort, you repeat, mission abort. You can't do this. You need a buddy to teach you how not to embarrass yourself here."
+    "You dismount the machine and retreat in shame."
+    
+    return
+    
+label forestIntro:
+    $ forestDiscoverd = True
+
+    "At the edge of campus lies a forest with an inviting dirt trail leading into it."
+    "Might as well see where it goes."
+    "It goes... into the woods."
+    "You don't know what you expected."
+    "Every now and then you come across a fellow student walking along the trail, but it's otherwise a quiet and serene experience."
+    "The sounds of nature echo in the distance from wild birds bickering among themselves to squirrels skittering along branches."
+    "You occasionally catch sight of deer grazing among the grass but they vanish into the trees upon spotting you."
+    "After walking for about a mile, the path ends, having looped back to the university campus."
+    "Such a peaceful walk has left you feeling rejuvinated and calm at the same time."
+    
+    return
+    
+
+label arboretumIntro:
+    $ arboretumDiscovered = True
+
+    ""
+
+    return
+    
+label mainStreetIntro:
+    $ townDiscovered = True
+    #$ locationsAvailable.remove("townLocation")
+
+    "A short walk off campus brings you to a commercial area. The streets are lined with restaurants and a variety of shops ranging from fashion to books, gift shops, electronics, art stores, antiques, and more."
+    "It gets overwhelming quickly and you can hardly decide which shops to stop at."
+    "Just doing some window shopping is enough to satisfy your curiousity for the most part."
+    ""
+    
+    return

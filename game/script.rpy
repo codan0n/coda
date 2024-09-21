@@ -1431,6 +1431,11 @@ label start:
     $ heher = ""
     $ hisher = ""
     $ himher = ""
+    
+    $ forestDiscoverd = False
+    $ arboretumDiscovered = False
+    $ trackDiscovered = False
+    $ townDiscovered = False
     $ avaClaireLunch = False
     $ clairephonewhat = ""
     $ clairephonethx = ""
@@ -1444,6 +1449,16 @@ label start:
     $ rosePoints = 0
     $ avaPoints = 0
     $ clairePoints = 0
+    
+    $ afterClassExploration = ["mainStreetIntro", "arboretumIntro", "forestIntro", "runningTrackIntro"]
+    $ townEvents = ["celestineTea", "linaTown"]
+    $ trackEvents = ["gunnerTrack", "roriTrack"]
+    $ forestEvents = ["roseForest" "claireForest"]
+    $ arboretumEvents = ["mishkaArboretum", "avaArboretum"]
+    $ cafeEvents = ["deanCafe", "ellenCafe"]
+    $ nightEvents = ["gunnerNight", "avaNight", "claireNight", "mishkaNight", "roseNight", "avaGunnerNight", "roriNight"]
+    #$ locationsAvailable = ["forestLocation", "arboretumLocation", "townLocation", "trackLocation"]
+    
     $ clairepath = False
     $ avapath = False
     $ roripath = False
