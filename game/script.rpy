@@ -1432,7 +1432,7 @@ label start:
     $ hisher = ""
     $ himher = ""
     
-    $ forestDiscoverd = False
+    $ forestDiscovered = False
     $ arboretumDiscovered = False
     $ trackDiscovered = False
     $ townDiscovered = False
@@ -1451,7 +1451,7 @@ label start:
     $ clairePoints = 0
     
     $ afterClassExploration = ["mainStreetIntro", "arboretumIntro", "forestIntro", "runningTrackIntro"]
-    $ townEvents = ["celestineTea", "linaTown"]
+    $ townEvents = ["celestineTown", "linaTown"]
     $ trackEvents = ["gunnerTrack", "roriTrack"]
     $ forestEvents = ["roseForest" "claireForest"]
     $ arboretumEvents = ["mishkaArboretum", "avaArboretum"]

@@ -1,6 +1,9 @@
 label chapter1:
     stop music fadeout .5
     
+    "Coda is a purely fictional story created by a diverse team with various different backgrounds and beliefs. The events and views of some characters do not necessarily reflect those of the creators."
+    "Viewer discretion is advised."
+    
     scene bg letter with fade
     
     show box with Dissolve(.2):
@@ -1725,8 +1728,11 @@ label secondDayOfClass:
 
     claire @ say "*Huff huff* Sorry I'm late!"
     
-    celestine @ say "No worries! I'm just glad you arrived at all!"
-    celestine @ say "Anywho, go ahead and take a seat and we'll begin introductions!"
+    celestine @ say "Pas de soucis! You must be Madame Whitney!"
+    
+    claire @ say "Ksksksks just Claire is fine!"
+    
+    celestine @ say "Very well! Please take a seat and we'll begin introductions!"
     
     #show claire sweater neutral
 
@@ -1775,7 +1781,8 @@ label secondDayOfClass:
 
     hide claire with dissolve
 
-    celestine @ say "Génial! Looks like everyone is present now! I'll say a few things about myself, then you can all tell me about yourselves and why you decided to learn French!"
+    celestine @ say "Génial! Looks like everyone is present and accounted for!"
+    celestine @ say "I'll say a few things about myself, then you can all tell me about yourselves and why you decided to learn French!"
     celestine @ say "I was born in France and learned both French and English before moving to America at a young age."
     celestine @ say "In high school I studied Arcoonian, then in college I learned a bit of Pandarianese."
     celestine @ say "Learning languages opens up so many opportunities you'd otherwise never have!"
