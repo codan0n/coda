@@ -11,6 +11,8 @@ label afterClassOptions:
                     $ randomSelected = renpy.random.choice(afterClassExploration)
                     
                     call expression randomSelected
+                    
+                    call dormSleep
                 
                 "Town" if townDiscovered == True:
                     #if there are town events available, do one and then return to dorm for the night. If not, play a generic scene and let the player choose another location
@@ -19,6 +21,8 @@ label afterClassOptions:
                         $ randomSelected = renpy.random.choice(townEvents)
                         
                         call expression randomSelected
+                        
+                        call dormSleep
                         
                     else:
                         "You wander around town but don't find anything interesting to do."
@@ -29,6 +33,9 @@ label afterClassOptions:
                         $ randomSelected = renpy.random.choice(trackEvents)
                         
                         call expression randomSelected
+                        
+                        call dormSleep
+
                         
                     else:
                         "You wander around the fitness area but don't find anything interesting to do."
@@ -41,6 +48,8 @@ label afterClassOptions:
                         
                         call expression randomSelected
                         
+                        call dormSleep
+                        
                     else:
                         "You wander around the forest but don't find anything interesting to do."
                         
@@ -52,6 +61,8 @@ label afterClassOptions:
                         
                         call expression randomSelected
                         
+                        call dormSleep
+                        
                     else:
                         "You wander around the arboretum but don't find anything interesting to do."
                         
@@ -62,6 +73,8 @@ label afterClassOptions:
                         
                         call expression randomSelected
                         
+                        call dormSleep
+                        
                     else:
                         "You get something to snack on at the cafe but don't find anything interesting to do."
                         
@@ -70,9 +83,47 @@ label afterClassOptions:
                 "Go back":
                     "jump afterClassOptions"
         "Study at dorm":
-            "you go back to your dorm to study"
+            "You decide to return to your dorm early and get some studying in."
+            
+            call dormStudy
             
     return
+    
+    
+label dormSleep:
+    scene bg codadorm with fade
+
+    "The day is just about over. All you can do now is get ready for bed."
+
+    return
+    
+label dormStudy:
+    scene bg codadorm with fade
+
+    n "There's still some time to study before you have to go to bed."
+    n "What should you study?"
+    
+    menu:
+        "French":
+            $ frenchSkill =+ 1
+            n "You pick up your French textbook and practice some lessons."
+        "Literature":
+            $ literatureSkill =+ 1
+            n "You open your totally legally acquired epub of The Death of Ivan Ilyich and start reading."
+        "History":
+            $ historySkill =+ 1
+            n "You crack open your History textbook and read up on some ancient cultures."
+        "Statistics":
+            $ statsSkill =+ 1
+            n "You flip open your statistics book and open a calculator app to crunch some numbers."
+            
+    n "It took a while, but you now feel more confident in your understanding of the topic."
+    n "It's gotten late. Time to get ready for bed."    
+    
+    scene bg black with fade    
+    
+    return
+
     
 label nightWalks:
     #50% chance for generic scene, 50% chance for specific one if there are any available. Can choose who to hang out with if you've done first part of their arc?
