@@ -12,7 +12,7 @@ label roriDormIntro:
     
     show rori neutral at norm with dissolve
     
-    rori "Sorry about the mess. Housing pays for power so I hooked up a few crypto mining ASICs to generate some passive income."
+    rori "Sorry about the mess. The university pays for power so I hooked up a few crypto mining ASICs to generate some passive income."
     
     menu:
         "And kill the environment.":

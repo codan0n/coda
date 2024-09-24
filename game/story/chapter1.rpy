@@ -17,7 +17,7 @@ label chapter1:
     "Did they send this by mistake?"
     "But it's signed by the dean himself."
     
-    "\"Congratulations! You have been admitted to Harmonia University starting in Fall 2021.\""
+    "\"Congratulations! You have been admitted to Harmonia University's undergraduate program starting this Fall.\""
     "\"We invite you to one of the highest ranked learning institutions in the world to experience a plethora of exciting opportunities!\""
     "\"Our passionate staff will prepare you for a lifetime of success. Join us as you step into the next chapter of your life!\""
     
@@ -32,7 +32,7 @@ label chapter1:
     "It's strange, but can you really say no?"
     "Might as well go for it. There's nothing left for you at home anymore."
     #there's no reason to stay home anymore
-    "Your parents died of that damn disease three years ago. Since then you haven't really done anything."
+    "Your parents died of that damn disease three years ago. Since then you haven't really done anything with your life."
     "This could be a good opportunity to start fresh."
     
     #yes this bit is just a silent hill 2 reference
@@ -53,7 +53,8 @@ label chapter1:
     
     nicodemus "...that about concludes our tour of Harmonia's campus. What did you think? Not too pretentious, I hope! Bahahaha!"
     nicodemus "I'm reminded of when I was a new student here myself. A bit nervous but so full of wonder and excitement! It felt like anything was possible!"
-    nicodemus "Forging lifelong friendships! Making a name for myself in the academic community! Joining clubs and causing a ruckus! Why, I even found love sitting under that cedar tree over there."
+    nicodemus "Forging lifelong friendships! Making a name for myself in the academic community! Joining clubs and causing a ruckus!"
+    nicodemus "Why, I even found the love of my life sitting under that cedar tree over there."
     nicodemus "My point is, anybody can blow through four years of university, get their diploma and proceed with their life like it never even happened."
     nicodemus "But I implore you to really make the most of what you've been given!"
     nicodemus "Study hard but take some time to search for something that makes you happy, whether that's being with friends or making your mark on society or just living in the moment!"
@@ -85,6 +86,10 @@ label nicodemusQuestions:
             player "I never submitted an application."
             
             nicodemus "We keep tabs on \'persons of interest.\' You know, brilliant young students with bright futures to send ads in the mail to. They make for great alumni."
+            
+            player "Me? Some sort of prodigy?"
+            
+            nicodemus "Well you *are* the smartest human on Earth at the moment."
             
             player "So I'm just here for the optics? For your marketing team to brag about how the college is so diverse it has a human?"
             
@@ -156,7 +161,7 @@ label nicodemusQuestions:
             nicodemus "Someone to stand around and look wise."
             nicodemus "The departments handle all the number crunching and recomendations, I just give the final authorization."
             nicodemus "So I don't mind getting out of the office to have a pleasant chat with the students."
-            nicodemus "Feel free to break me out of that prison from time to time to talk about whatever's on your mind."
+            nicodemus "Feel free to break me out of that prison from time to time to discuss whatever's on your mind."
             nicodemus "It's also a great photo opportunity."
             
             "He points to a photographer in the distance, crouched beside a water fountain trying to look inconspicuous with his giant telephoto lens pointed at you."
@@ -182,6 +187,8 @@ label movingOn:
     nicodemus "I'm glad I could be of service! Now then, if you'll excuse me..."
     
     "Nicodemus gives you a warm smile before slowly trodding away."
+    
+    hide nicodemus with dissolve
     
     "Even as the sun began to set, the campus was swarming with freshly admitted students either in tour groups or exploring their new surroundings on their own."
     "You don't have much time to spare, so you make your way to the building where your scheduled orientation is soon to take place."
@@ -292,7 +299,7 @@ label college_orientation:
                 nameValid = False
             #if not name:
             if name == "":
-                name = "Coda"
+                name = "Huey"
                 nameValid = True
 
         if nameValid == True:
@@ -645,22 +652,24 @@ label college_orientation:
     
     show rori anxiety
     
-    rori @ say "I haven't had it online in over 48 hours. I hope my package manager doesn't break my xorg session again..."
+    rori @ say "I haven't had it online in over 48 hours. I hope my package manager doesn't break my Xorg session again..."
 
     if calledRoriNerd == False:
         menu:
-            "Need some help with that?":
+            "Cool, you use Loonix?":
                 $ roriPoints =+ 1
             
-                player "Need some help with that?"
+                player "You use Loonix? That's so cool."
                 
-                n "Rori thinks for a moment before answering."
+                rori @ say "Of course! Using an operating system that respects your freedom is just so comfy!"
+                rori @ say "And I can customize it however I want!"
                 
-                rori "Hmm... I usually don't have people over but..."
-                rori "When else am I gonna get a chance to show off my riced out minimal window manager setup?"
-                rori "We can play some games and stuff too."
+                n "Rori lowers his voice and asks shyly."
                 
-                player "Lead the way."
+                rori @ say "Um, do you wanna see my riced out tiling window manager setup?"
+                rori @ say "We can play some games and stuff too."
+                
+                player "Sure. Lead the way."
                 
                 call roriDormIntro
                 
@@ -675,7 +684,8 @@ label college_orientation:
                 
                 player "Probably crushing pussy while we hook up a gaming computer."
                 
-                rori @ say "Now lets see if this works. I'm a bit worried about my SSD's firmware acting janky after the last update."
+                rori @ say "Yup. Pass me that displayport cable please."
+                rori @ say "Now let's see if this works. I'm a bit worried about my SSD's firmware acting janky after the last update."
                         
                 n "Rori goes over to the desk and hooks up a few wires to the desktop tower. When he presses the power button, a rainbow of LEDS shine through the glass panel of the case."
                 n "A moment later, the monitor wakes up and a stream of debug messages scrolls across the monitor."
@@ -686,7 +696,7 @@ label college_orientation:
                 
                 n "Rori pushes up his glasses and smirks."
                 
-                rori @ say "16 terabytes of anime bluray rips, 4.5 terabytes of games, 750 gigabytes of jpop, and a couple gigs of source code."
+                rori @ say "16 terabytes of anime bluray rips, 4.5 terabytes of games, 750 gigabytes of jpop, and a couple gigs of leaked source code."
                 
                 player "All legally acquired?"
     
@@ -722,7 +732,7 @@ label college_orientation:
                 
                 rori @ say "What games?"
                 
-                player "Damn, you're right."
+                player "Oh yeah lol"
                 
                 rori @ say "I'll have this computer fixed and ready to go next time, I swear. I think something might have gotten corrupted during transport."
                 
@@ -800,7 +810,7 @@ label exploring_campus:
     n "Luckily classes don't start until tomorrow, so you can get away with sleeping in. For now."
     n "You'll have to sort out your sleep schedule the painful way soon."
     n "However, your primary concern at the moment is the breakfast situation."
-    n "You've subsisted on nothign but granola bars during your journey to Harmonia, and it's high time you got a warm meal."
+    n "You've subsisted on nothing but granola bars during your journey to Harmonia, and it's high time you got a warm meal."
     n "You roll out of bed and take a quick shower, impatiently doing the bare minimum to make yourself presentable before heading out to find some food."
 
     stop music fadeout 1.0
@@ -814,10 +824,11 @@ label exploring_campus:
 
     n "It's a bright and sunny day with students bumbling about... {i}socializing{/i}, as if their normie instincts extract vital nourishment from it."
     n "You unfortunately stumble into what must be the hub of social activity on campus today: club registration."
-    n "Booths line the street with banners advertising the different clubs and organizations the university has to offer."
+    n "Tables and booths line the street with banners advertising the different clubs and organizations the university has to offer."
     n "There's one for the botany club, debate club, algae bee tea club,  {a=https://4chan.org/trash/hmofa}/hmofa/{/a} club, anime club, vidya club, golf club, and so on."
     n "Going straight across is the quickest way to the restaurants, so you head in with your eyes forward."
     n "You know the moment you look at any of them, some representative will drag you into an involuntary conversation."
+    n "Almost there... Almost... Just a few more meters."
     
     $ metGunner = False
     $ metClaire = False
@@ -832,7 +843,7 @@ label exploring_campus:
         $ metClaire = True
         $ metAva = True
         n "You almost managed to get to the end without being harassed by anybody."
-        n "Surprisingly it wasn't a booth attendant, rather it's the chatty girls you saw the day prior."
+        n "Surprisingly it wasn't a club representative, rather it's the chatty girls you saw the day prior."
         
         show claire sweater neutral at offscreenright:
                 yalign 0
@@ -885,7 +896,7 @@ label exploring_campus:
         
         claire @ say "So what brings you out here, [name]? Looking to join a club?"
 
-        player "More like looking for a place to get breakfast, but I ended up here somehow."
+        player "More like looking for a place to get breakfa- err, lunch, but I ended up here somehow."
 
         ava @ say "One booth was giving out free donuts but they ran out pretty quick."
 
@@ -914,7 +925,7 @@ label exploring_campus:
         player "I don't think they'd let me in."
         
         claire @ say "Why not? It's current year!"
-        claire @ say "We can hit on sorority sluts! Ksksksksks!"
+        claire @ say "We can infiltrate their organization and hit on all the sorority sluts! Ksksksksks!"
         
         ava @ say "Pass."
         
@@ -930,7 +941,7 @@ label exploring_campus:
                 
                 claire @ say "No way, you could totally pass for a girl with a little makeup!"
                 
-                player "Uh, thanks..."
+                player "Uh, thanks?"
                 
                 #claire @ say "That's the spirit!"
                 
@@ -1158,7 +1169,7 @@ label exploring_campus:
             mishka "It's just how I like things. I can turn them on if you like."
             
             menu:
-                mishka "{cps=0}It's just how I like things. I can turn the lights on if you like.{/cps=0}"
+                mishka "{cps=0}It's just how I like things. I can turn them on if you like.{/cps=0}"
                 "Please do":
                     player "Please do. I can't see anything in this darkness."
                     
@@ -1552,7 +1563,7 @@ label firstDayOfClass:
         n "It seems he's more concerned with his own status and appearance."
         
         gunner @ say "[name], huh? Lemme tell you a funny story."
-        gunner @ say "This building was used for the feminism studies college last semester. They switched it over to math over the summer."
+        gunner @ say "This building was used for the feminist studies college last semester. They switched it over to math over the summer."
         gunner @ say "So when I saw I had stats here my first thought was \"The hell? Are we gonna learn how to find the hypotenuse while folding laundry or something?\""
         
         menu:
@@ -1657,7 +1668,7 @@ label secondDayOfClass:
     
     show ellen teacher neutral
 
-    ellen @ say "My name is Miss Ellen and I've been teaching at Harmonia for 13 years so I like to think I've gotten quite good at it!"
+    ellen @ say "My name is Miss Ellen and I've been teaching at Harmonia for about a decade so I like to think I've gotten quite good at it!"
 
     show ellen teacher sad at shudder
 
@@ -2236,8 +2247,7 @@ label thirdDayOfClassStats:
     if avaClaireLunch == True:
         n "You don't have any more classes today but weren't you supposed to do something else?"
         n "That's right, you're having lunch with Ava and Claire? But where exactly?"
-        n "It dawns on you that you never settled on a time nor location. You didn't get their numbers to coordinate this little rendevous."
-        n "Hopefully one of them texts you."
+        n "It dawns on you that you never settled on a time nor location. You gave them your number but you forgot to plug in your phone last night so it's dead."
         n "Perhaps if you wander around campus for a while you'll run into them. It can't be that hard to spot Claire among a crowd. Ava might be harder to find though."
         n "Ah there she is, towering above everyone else. She reminds you of a great white shark swimming through a school of fish who disperse stay out of her path."
         
@@ -2261,12 +2271,13 @@ label thirdDayOfClassStats:
         ava @ say "Hey [name]! We were afraid we'd never find you haha!"
         
         show ava normal neutral
-
-        player "Same! You coulda told me where we were gonna eat at least!"
+        
+        player "Sorry, my phone's dead."
+        player "So where are we going to eat?"
 
         show claire sweater heyeah
         
-        claire @ say "Aaaaaa sorry!! We still haven't even decided!"
+        claire @ say "We still haven't decided yet!"
 
         ava @ say "Claire keeps shooting down my ideas!"
         
@@ -2701,7 +2712,7 @@ label avaClaireGunnerLunch:
     
     ava @ say "Fashion?"
     
-    claire @ say "Banned from the industry after trolling a runway show with an all plus-sized lineup."
+    claire @ say "Banned from the industry after trolling a high end runway show with an all plus-sized lineup."
     
     gunner @ say "Guns?"
     
@@ -3423,7 +3434,7 @@ label thursday1:
     show celestine happy at norm with dissolve
 
     celestine @ say "Good work class! I can tell you're already making so much progress!"
-    celestine @ say "Keep it up, and do your best on the homework! Some of it may be challenging but I'd like for you to give it your best shot without using online translators!"
+    celestine @ say "Keep it up, and do your best on the homework! Some of it may be challenging but I'd like for you to give it your best shot without using translation software!"
     celestine @ say "Passez une merveilleuse journée!"
 
     stop music fadeout 1.0
@@ -3463,9 +3474,9 @@ label thursday1:
             claire @ say "Ohmygosh really??"
             claire @ say "Let's go then!"
             
-            player "What right now? Don't you have class?"
+            player "What right now? Don't you have chemistry?"
             
-            claire @ say "No time like the present!"
+            claire @ say "We can study our 'chemistry' while we practice French~"
             
             n "Wow she's really eager to study."
             n "Claire grabs your hand and rushes you to her dorm."
@@ -3509,7 +3520,8 @@ label thursday1:
             claire @ say "Ksksksks you're so adorable, acting committed to the role~"
             
             n "Role?"
-            n "Claire seems to think you're roleplaying as a tourist in France needing help with the language. You guess you'll play along."
+            n "Claire seems to think you're roleplaying like the textbook suggests."
+            n "You recall a scenario where one of you acts as a tourist in France needing help with the language. You guess you'll play along."
             
             claire @ say "Laisse-moi t'apprendre~"
             

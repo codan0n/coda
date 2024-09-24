@@ -222,8 +222,58 @@ label week2Tuesday:
 
     show box with Dissolve(.2):
         ypos 0
+        
+    show rothbauer at norm with dissolve
 
-    "After today's history lecture, Mr. Rothbauer stops you before you can leave."
+    rothbauer @ say "Good morning class! I hope you're prepared for today's quiz!"
+
+    player "Wha-? Quiz?"
+
+    show rose neutral pendant at norm with dissolve:
+        xpos -540
+        xzoom -1
+
+    rose @ say "It's listed on the syllabus."
+
+    player "He could have at least given us a reminder."
+
+    rose @ say "Sucks to suck."
+    
+    rothbauer @ say "When you're finished, set your paper down on my desk and you'll be free to leave after that."
+
+    hide rothbauer
+    hide rose
+    with dissolve
+
+    n "Rothbauer passes out the quiz sheets and you rack your brain trying to remember what he taught over the past week and a half."
+    n "Your eyes wander over to Rose's desk and you can totally see her answers."
+    n "You stretch and yawn, taking the opportunity to check if Mr. Rothbauer is watching."
+    n "He's not."
+
+    menu:
+        n "{cps=0}He's not.{/cps}"
+        "Look at Rose's answers.":
+            $ rosePoints = rosePoints - 1
+            $ badEnd = badEnd + 1
+            n "Any way to pass, right? It's not like history is that important anyway."
+            n "You sneak a few glances at Rose's sheet until she seems to notice."
+
+            if gaveUmbrella == True:
+                n "Rose gives you an angry look but decides to move her paper a little closer so you can read it more easily."
+                n "Is this thanks for giving her your umbrella the other day?"
+                n "You need to ask her to return that some time."
+                n "You quickly copy as many of her answers as you can."
+            else:
+                n "Rose covers up her sheet with her arm."
+                n "Welp, there goes any chance of you passing this quiz."
+
+        "Don't look at Rose's answers.":
+            n "Maybe you shouldn't cheat, partly because it's morally wrong and partly because Rose would probably kill you if she caught you."
+   
+    n "Rose finishes before anyone else and turns in her sheet when you're only halfway done."
+    n "You spend the rest of the class's duration trying to fill in the remaining blanks."
+    n "When time runs out, you stand up and turn in your quiz."
+    n "On your way out, Mr. Rothbauer stops you before you can leave."
     
     show rothbauer at center with dissolve
     
@@ -244,11 +294,65 @@ label week2Tuesday:
         ypos 0
 
     n "For some reason, you can barely concentrate in Statistics today."
+    n "Your head is pounding and your vision blurry."
     n "You look down at your notebook and it's all just illegible scribbles and a few drool stains."
 
     show gunner neutral at center with dissolve
     
-    gunner @ say "Dude, you still alive? You don't look so good."
+    gunner @ say "Bro, you still alive? You don't look so good."
+    
+    player "Ugh, this headache is killing me. I feel like I'm about to throw up."
+    
+    gunner @ say "Hang in there dude, class'll be over in like five minutes."
+    
+    n "Somehow you manage to endure five agonizing minutes that seem to last hours."
+    n "Once class is over, you try to stand up but it's like your legs are gelatin."
+    n "Gunner notices you struggling and comes to help you up."
+    
+    gunner @ say "How wasted did you get last night to come to class this hungover?"
+    
+    player "I didn't drink anything last night! I dunno where this is all coming from."
+    
+    gunner @ say "Maybe you ate something bad? You should take it easy for the rest of the day my guy."
+    gunner @ say "C'mon, I'll take you to your dorm."
+    
+    scene bg codadorm with fade
+    
+    n "Gunner practically drags you across campus to your dorm where he tucks you into bed and reads you a bedtime story."
+    n "Okay you're pretty sure you hallucinated that last part but the point is you're in bed and rapidly falling asleep."
+    
+    gunner @ say "Hope you feel better soon. Text me if you need anything!"
+    
+    player "Thanks. See you in class if I survive."
+    
+    gunner @ say "Later!"
+    
+    scene bg black with fade
+
+    hide box
+
+    show bg calendar
+    show twednesday at norm
+    with Dissolve(.5)
+
+    pause .6
+    show tforwardslash
+    pause .2
+    show tbackslash
+
+    pause .7
+    
+    #thursday 2
+
+    scene bg codadorm with fade
+
+    show box with Dissolve(.2):
+        ypos 0
+    
+    #play music "audio/ambient/morning birds.ogg" fadein 0.1
+    
+    
+    
     
     
     
@@ -261,39 +365,187 @@ label week2Tuesday:
     
     
 
+    n "You take a deep breath of the morning air coming through the window you left cracked open and roll out of bed."
+
+    #play music "music/darkambient.wav" fadein .0
+
+    show bg static1
+    pause .05
+
+    show bg codadormshake
     
+    #play music "audio/music/vylet - Cavern Lurker.ogg" fadein 0.5
+
+    n "Whoa... suddenly you don't feel right..."
+    n "The whole room is spinning..."
+    n "..."
+
+    show bg codadorm with dissolve
     
-    call afterClassOptions
+    stop music fadeout 1.5
+
+    n "It's over now."
     
-    "go to sleep"
+    #play music "audio/ambient/morning birds.ogg" fadein 0.1
+
+    n "What was that all about? Did you roll out of bed too quickly or something?"
+    n "Strange, but you feel normal now."
+    n "Oops, better hurry with your daily routine. Wouldn't wanna be late to class!"
+
+    play music "audio/music/mere - retrograde.ogg" fadein .5
+
+    scene bg lecturehall with fade
+
+    show box with Dissolve(.2):
+        ypos 0
+
+    show ellen teacher neutral at norm with dissolve
+
+    ellen @ say "Good afternoon class! I hope you've been keeping up with your reading because we've got a lot to cover today!"
+
+    n "Miss Ellen starts to go on about the chapters we were supposed to have read for today but for some reason you can hardly concentrate on what she's saying."
+    n "You start to feel strange again..."
+
+    #play music "music/darkambient.wav" fadein .0
+
+    n "The room starts to spin and you lose your sense of balance."
+
+    stop music fadeout .5
+
+    hide ellen
+    hide box
+
+    show bg static1
+    pause .05
+    show bg static2
+    pause .05
+    show bg static3
+    pause .05
+
+    show box:
+        ypos 0
+    show bg lecturehall
+
+    ###make textbox all spikey and play a sound effect to show urgency. or animate it shaking left to right
+    ellen @ say "[name]! Are you alright?"
+
+    stop music fadeout 1.0
+
+    n "You snap out of your dizzy spell but find that you've fallen out of your seat with the whole class looking at you."
+    n "Ellen is looking down at you with a look of genuine concern."
+
+    show ellen teacher sad at norm with dissolve
+
+    play music "audio/ambient/indoors people talking.ogg" fadein .5
+
+    show ellen teacher sad
+
+    ellen @ say "[name]?"
     
-    call afterClassOptions
+    show ellen sad at shudder
     
-    "go to sleep"
+    ellen @ say "You collapsed all of a sudden..."
+    ellen @ say "Do you need a doctor??"
+
+    show ellen teacher sad
+
+    n "You pull yourself back into your seat and shake your head."
+
+    player "N-no, that won't be necessary. I'm fine."
+
+    ellen @ say "Are you sure? It's not every day a student of mine passes out like that."
+
+    player "Y-yeah, I think I'm just dehydrated or something."
+
+    show ellen teacher neutral:
+        ypos 10
+        linear .1 ypos 0
+        
+    pause .1
+
+    ellen @ say "Hmm. You better drink more!"
+    ellen @ say "And just to be on the safe side, I want you to go home and get some rest. You're excused from class today."
+
+    n "A day off? Sounds too good to be true. You decide to take her up on the offer before she changes her mind."
+
+    player "Err, thanks."
+
+    n "You pack your things and head out the door, stumbling on the stairs on your way out."
+
+    ellen @ say "Be sure to read the assigned chapters for next time!"
+
+    show ellen
+
+    stop music fadeout 1.0
+
+    scene bg codadorm with fade
+
+    show box with Dissolve(.2):
+        ypos 0
+
+    play music "audio/ambient/morning birds.ogg" fadein 0.1
+
+    n "What a strange day. You feel like you could have continued on with class but these dizzy spells hit you with no warning."
+    n "You do feel a bit tired though. Maybe a nap would fix everything."
+    n "You climb into bed but as soon as you close your eyes your phone buzzes."
+
+    call phone_start from _call_phone_start_2
+
+    call message_start("Claire", "Where r u ?", "claireavi.png") from _call_message_start_2
+
+    call reply_message("Not feeling well. Had to skip class today.") from _call_reply_message_8
+
+    call message("Claire", "Aw :( hope u get well soon", "claireavi.png") from _call_message_8
+
+    call reply_message("Thanks :)") from _call_reply_message_9
+    call reply_message("Gonna try and sleep it off. Text yo u later.") from _call_reply_message_10
+
+    call message("Claire", "K, let me know if I can do anything.", "claireavi.png") from _call_message_9
+
+    call phone_end from _call_phone_end_2
+
+    n "You put phone on the nightstand and roll away from it."
+
+    stop music fadeout 1.0
+
+    n "You start to feel funny again."
+    n "You take a deep breath and close your eyes, hoping you'll fall asleep before it hits you again."
+
+    hide box
+
+    scene bg black with fade
+
+    hide box
+
+    show bg calendar
+    show tthursday at norm
+    with Dissolve(.5)
+
+    pause .6
+    show tforwardslash
+    pause .2
+    show tbackslash
+
+    pause .7
+
+    #___friday2
+
+    scene bg codadorm with fade
+
+    ##play sound "audio/ambient/morning birds.ogg" fadein 1.0
+    play music "audio/music/vylet - yeah i'm ok thanks for asking.ogg" fadein 1.0
+    #play music "audio/exports/【Music】こんにちは! ♡ [lQQkCtUahHE].opus"
     
-    call afterClassOptions
-    
-    "go to sleep"
-    
-    call afterClassOptions
-    
-    "go to sleep"
-    
-    call afterClassOptions
-    
-    "go to sleep"    
-    
-    call afterClassOptions
-    
-    "go to sleep"    
-    
-    call afterClassOptions
-    
-    "go to sleep"    
-    
-    call afterClassOptions
-    
-    "go to sleep"    
-    call afterClassOptions
-    
-    "go to sleep"
+
+    show box with Dissolve(.2):
+        ypos 0
+
+    n "You wake up feeling more tired than when you fell asleep."
+    n "Bright sunlight streaks through your window, directly into your eyes. What time is it?"
+    n "Eventually you muster enough energy to reach for your phone."
+    n "It's already noon."
+    n "Apparently you slept through your alarm."
+    n "Welp, it's too late to bother going to class. Might as well stay in and relax."
+    n "..."
+    n "Before you know it, you've wasted the entire day watching video essays on things nobody cares about."
+    n "Oh well, at least you're feeling better than yesterday."
