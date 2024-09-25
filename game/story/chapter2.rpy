@@ -351,32 +351,12 @@ label week2Tuesday:
     
     #play music "audio/ambient/morning birds.ogg" fadein 0.1
     
+    n "Stirring from your slumber, you take a deep breath and stretch."
+    n "You seem to have slept off whatever was ailing you last night but something still feels off."
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-    n "You take a deep breath of the morning air coming through the window you left cracked open and roll out of bed."
-
-    #play music "music/darkambient.wav" fadein .0
-
-    show bg static1
-    pause .05
-
     show bg codadormshake
     
-    #play music "audio/music/vylet - Cavern Lurker.ogg" fadein 0.5
-
-    n "Whoa... suddenly you don't feel right..."
+    n "As you throw the blanket off you and take your first steps of the day, a sudden dizziness overtakes you."
     n "The whole room is spinning..."
     n "..."
 
@@ -385,12 +365,9 @@ label week2Tuesday:
     stop music fadeout 1.5
 
     n "It's over now."
-    
-    #play music "audio/ambient/morning birds.ogg" fadein 0.1
-
-    n "What was that all about? Did you roll out of bed too quickly or something?"
+    n "What was that all about? Did you get up too quickly or something?"
     n "Strange, but you feel normal now."
-    n "Oops, better hurry with your daily routine. Wouldn't wanna be late to class!"
+    n "You do your usual morning routine and pack your bag for today's classes."
 
     play music "audio/music/mere - retrograde.ogg" fadein .5
 
@@ -401,7 +378,7 @@ label week2Tuesday:
 
     show ellen teacher neutral at norm with dissolve
 
-    ellen @ say "Good afternoon class! I hope you've been keeping up with your reading because we've got a lot to cover today!"
+    ellen @ say "Today we'll be starting a new book, this time from "
 
     n "Miss Ellen starts to go on about the chapters we were supposed to have read for today but for some reason you can hardly concentrate on what she's saying."
     n "You start to feel strange again..."

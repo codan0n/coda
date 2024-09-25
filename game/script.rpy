@@ -1668,12 +1668,6 @@ label start:
 call chapter1
     
 label sickday:
-    #___saturday2
-
-    #___sunday2
-
-
-
     show box with Dissolve(.2):
         ypos 0
 label gunner_rage:
