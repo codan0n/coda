@@ -289,7 +289,7 @@ label college_orientation:
                 nameValid = False
             #if not name:
             if name == "":
-                name = "Coda"
+                name = "Huey"
                 nameValid = True
 
         if nameValid == True:
@@ -1336,7 +1336,11 @@ label firstDayOfClass:
 
     show rothbauer at norm with dissolve
 
-    rothbauer @ say "Ah, nice of you to join us. You must be [name]."
+    rothbauer @ say "Ah, nice of you to join us. You must be..."
+    
+    n "He flips through the papers on his desk."
+    
+    rothbauer @ say "... Mister [name] Mann, correct? Did I say that right?"
     rothbauer @ say "I'll let your tardiness slide since it's the first day, but please make more of an effort to be on time in the future."
     rothbauer @ say "Go ahead and take a seat."
 
@@ -1726,6 +1730,7 @@ label secondDayOfClass:
     claire @ say "*Huff huff* Sorry I'm late!"
     
     celestine @ say "No worries! I'm just glad you arrived at all!"
+    ###ah please join us sil vous plais, madame,whitney
     celestine @ say "Anywho, go ahead and take a seat and we'll begin introductions!"
     
     #show claire sweater neutral
