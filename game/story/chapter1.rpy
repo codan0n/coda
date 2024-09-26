@@ -3741,6 +3741,8 @@ label friday1:
     n "At some point you get a text from Gunner."
     
     play audio "audio/sound effects/vibrate.ogg"
+    
+    call phone_start
    
     call message_start("Gunner", "Heyyyy [name] :3c", "gunneravi.png") from _call_message_start_24 
 

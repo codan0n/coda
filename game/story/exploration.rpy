@@ -6,7 +6,7 @@ label afterClassOptions:
             "Where do you want to go?"
 
             menu:
-                "Explore" if afterClassExploration: #if trackDiscovered == False or arboretumDiscovered == False or townDiscovered == False or forestDiscovered == False: #if locationsAvailable == False:
+                "Explore" if afterClassExploration: #if trackDiscovered == False or gardenDiscovered == False or townDiscovered == False or forestDiscovered == False: #if locationsAvailable == False:
                 
                     $ randomSelected = renpy.random.choice(afterClassExploration)
                     
@@ -55,16 +55,16 @@ label afterClassOptions:
                         
                         jump afterClassOptions
                 
-                "Arboretum" if arboretumDiscovered == True:
-                    if arboretumEvents:
-                        $ randomSelected = renpy.random.choice(arboretumEvents)
+                "Garden" if gardenDiscovered == True:
+                    if gardenEvents:
+                        $ randomSelected = renpy.random.choice(gardenEvents)
                         
                         call expression randomSelected
                         
                         call dormSleep
                         
                     else:
-                        "You wander around the arboretum but don't find anything interesting to do."
+                        "You wander around the botanical garden but don't find anything interesting to do."
                         
                         jump afterClassOptions
                 "Cafe":
@@ -134,13 +134,13 @@ label nightWalks:
     
     return
 
-label mishkaArboretum:
-    "mishka arboretum scene"
+label mishkaGarden:
+    "mishka garden scene"
 
     return
     
-label avaArboretum:
-    "ava arboretum scene"
+label avaGarden:
+    "ava garden scene"
     
     return
     

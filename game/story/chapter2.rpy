@@ -602,8 +602,234 @@ label week2Tuesday:
     
     $ townEvents.append("avaGarden")
     
-    n ""
+    $ avaClaireGarden = True
+        
+    n "Claire and Ava are already waiting for you at your usual hangout spot."
     
+    show ava neutral
+    show claire sweater neutral
     
+    ava @ say "[name]!! You're here!"
     
+    claire @ say "I'm so glad you could make it!"
+    
+    player ""
+    
+
+    scene bg garden with fade
+
+    show box with Dissolve(.2):
+        ypos 0
+
+    #play music "audio/music/vylet pony - Reading at Night.ogg" fadein 1.0
+    play music "audio/music/vylet - tenderness.ogg" fadein 1.0
+
+    n "You make your way to the botanical gardens. It's easy to spot from a distance thanks to the vibrant colors of all the flowers."
+    
+    if gardenDiscovered == True:
+        n "This is the same garden you've visited before, just at one of the other entrances. The area is quite expansive and you haven't been to this part before."
+
+    show ava normal neutral at norm:
+        #xzoom -1
+        xpos 375
+    show claire outdoors neutral at norm:
+        xzoom -1
+        xpos -400
+    with dissolve
+
+    claire @ say "Hey [name]!!! Glad you could make it!"
+
+    ava @ say "It's such a lovely day to go for a walk in the gardens, isn't it?"
+
+    player "It sure is. Better than being cooped up in my dorm all day."
+
+    ava @ say "Sunlight is good for you. Not just for your skin but also your mental health."
+
+    player "Huh. I didn't know that."
+
+    n "Maybe that's why you've always been depressed."
+
+    claire @ say "Just be careful not to get a sunburn! And remember to stay hydrated UwU"
+
+    player "What... was that sound you just made?"
+
+    claire @ say "What? UwU?"
+
+    player "Nevermind. Ready to go?"
+
+    claire @ say "Wait!!! I need to take a selfie first so my followers will know I'm like, into nature and stuff!"
+
+    n "Ava stifles a giggle and holds up her camera."
+
+    ava @ say "Don't worry, I'll be sure to get plenty of shots of you~"
+
+    claire @ say "Ksksksks thaaaaaanks~"
+
+    n "You roll your eyes but can't help but smile as you lead the group onward into the gardens."
+    n "Before long, you're surrounded by a variety of shrubs and flowers to the point where you can't even see any of the university buildings anymore."
+    n "Ava frequently stops to take photos of the plants, getting particularly excited when she catches a hummingbird or butterfly sipping from a flower."
+
+    ava @ say "Ooh, I have these in my garden back home. It's called a cardinal flower. Can you guess why?"
+
+    player "Cause it's red like male cardinals?"
+
+    ava @ say "Yup! Such a pretty red~"
+
+    claire @ say "She's got a thing for cardinal boys~"
+
+    show ava annoyed
+
+    ava @ say "Shush up, I do not!"
+
+    claire @ say "Ksksksks! Just teasin'!"
+    
+    show ava normal neutral
+
+    n "Ava provides more fun facts about various plants as you go along."
+    n "Eventually you come to a bench with an arch over it with vines growing all over."
+
+    claire @ say "Whew, can we take a break?"
+
+    ava @ say "Yeah, my legs are killing me."
+
+    player "Same."
+
+    n "Claire and Ava sit under the arch and begin reviewing the photos they've taken."
+    n "There's only room for two so you just lean against a nearby tree, taking sips of water from your bottle and watching the bees zoom around."
+
+    claire @ say "Hey [name], you wanna get a shot of us under the arch?"
+
+    ava @ say "I'll let you use my camera as long as you promise not to drop it. It costs more than a semester's worth of tuition."
+
+    player "Sure but I don't really know how to use one of those fancy cameras."
+
+    ava @ say "Don't worry, I'll set it to auto. All you have to do is point and click the button."
+
+    n "Ava flicks some switches and dials on the camera before handing it over to you."
+    n "You take a few steps back, compose your shot and click the button with a satisfying shutter sound."
+    
+    claire @ say "How'd it turn out? Lemme see lemme see lemme see!!"
+    
+    n "You turn the camera around and show Claire."
+    
+    show claire outdoors heyeah
+    
+    claire @ say "Ohmygosh we look great! This is just the perfect day, isn't it!"
+
+    n "Ava gets up and gestures to the bench."
+    
+    show claire outdoors neutral
+
+    ava @ say "Ok now it's your turn, [name]!"
+
+    menu:
+        ava "{cps=0}Ok now it's your turn, [name]!{/cps}"
+        "I don't like getting my picture taken.":
+            #finished
+            player "Sorry, I don't like getting my picture taken."
+
+            ava @ say "It's alright, I understand. I'm kinda the same way haha! But I've been getting more comfortable with it."
+        "Okay!":
+            #finished
+            $ clairePoints = clairePoints + 1
+            player "Okay!"
+
+            n "You sit down next to Claire and smile for the camera."
+            n "Just before Ava takes the shot, Claire wraps her arm around you, pulling you in close."
+
+            ava @ say "Aww, you two look so cute~"
+
+            claire @ say "Lemme see!"
+
+            n "Ava comes around and shows you the picture. Your face has a look of surprise mixed with fear."
+
+            player "..."
+
+            ava @ say "I'll send you both a copy later."
+
+        "Alright but I'm getting my picture taken with you next.":
+            #finished
+            $ clairePoints = clairePoints - 1
+            $ avaPoints = avaPoints + 1
+            player "Alright but I'm getting my picture taken with you next."
+
+            show ava overjoyed
+
+            ava @ say "Who, me??"
+
+            n "She looks to Claire, as if seeking her approval."
+
+            claire @ say "Sure, go for it!"
+            
+            show ava normal neutral
+
+            n "Ava stands back to take a shot of you and Claire."
+
+            ava @ say "Say cheese~"
+
+            n "You smile for the photo and Ava clicks the shutter button."
+
+            ava @ say "Aww, you two look so cute~"
+
+            claire @ say "I bet!~"
+
+            n "Ava comes around and shows you the picture. It's definitely a better shot than you could have taken with your phone."
+
+            ava @ say "Alright, I guess it's my turn! Lemme just set the camera up real quick for you Claire."
+
+            n "Ava adjusts some dials and hands the camera to Claire who backs up a few steps. She has to bend over a bit to frame the shot."
+            n "Claire motions for you to get closer together and Ava scoots more toward you, enough that you can just barely feel her feathers brushing up against you skin."
+            
+            show ava portrait neutral
+
+            claire @ say "One... two... three!"
+
+            n "You smile for the camera and Claire releases the shutter."
+            
+            claire @ say "Got it!"
+            
+            show ava normal neutral
+
+            n "Ava excitedly flutters over to see how it turned out."
+
+            ava @ say "Come here [name], check it out!"
+
+            n "You think you both look a little bashful in the shot but you like it more than the other shot."
+
+            player "Cool! Can you send me a copy later?"
+
+            ava @ say "Of course!"
+
+    player "Right then, shall we continue our little adventure?"
+
+    ava @ say "Sure! I think I'm all rested up and ready to go!"
+
+    claire @ say "Sounds good to me!"
+
+    n "The three of you explore the gardens some more before looping back around to the entrance."
+
+    claire @ say "Whew that sure was fun, wasn't it?"
+
+    ava @ say "Yup! And I got plenty of great pics~"
+
+    player "Yeah, this was more enjoyable than I thought it was gonna be."
+
+    claire @ say "There's more gardens and trails and stuff in the area we can go to later if you want!"
+
+    ava @ say "Mountaintop views in the morning are a favorite shooting location of mine~"
+
+    player "We'll see if I'm ever up early enough for that..."
+
+    hide ava
+    hide claire
+    with dissolve
+
+    n "As you part ways back to your respective dorms, Claire and Ava surprise you with a hug."
+    n "You can't remember the last time you've been hugged so it really catches you off guard, but you end up wishing it lasted longer."
+    n "Hanging out with Ava and Claire really lightened your mood. You totally forgot about everything going south in your life for a while."
+    n "Only once you're by yourself again do you start to feel sad again but even then something's changed."
+    n "You realize you have a group of friends to enjoy spending time with. It doesn't even feel like a waste of time, rather it's probably the most worthwhile thing you can do."
+
+
+
     
