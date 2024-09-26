@@ -1422,7 +1422,7 @@ label start:
     $ dating = ""
     $ currentWeather = "sunny"
     $ daysSinceRain = 1
-    $ gardenvisit = False
+    $ avaClaireGarden = False
     $ dndnight = False
     $ gaveCinRoll = False
     $ studied = ""
@@ -1433,7 +1433,7 @@ label start:
     $ himher = ""
     
     $ forestDiscovered = False
-    $ arboretumDiscovered = False
+    $ gardenDiscovered = False
     $ trackDiscovered = False
     $ townDiscovered = False
     $ avaClaireLunch = False
@@ -1450,14 +1450,14 @@ label start:
     $ avaPoints = 0
     $ clairePoints = 0
     
-    $ afterClassExploration = ["mainStreetIntro", "arboretumIntro", "forestIntro", "runningTrackIntro"]
+    $ afterClassExploration = ["mainStreetIntro", "gardenIntro", "forestIntro", "runningTrackIntro"]
     $ townEvents = ["celestineTown", "linaTown"]
     $ trackEvents = ["gunnerTrack", "roriTrack"]
     $ forestEvents = ["roseForest" "claireForest"]
-    $ arboretumEvents = ["mishkaArboretum", "avaArboretum"]
+    $ gardenEvents = ["mishkaGarden"]
     $ cafeEvents = ["deanCafe", "ellenCafe"]
     $ nightEvents = ["gunnerNight", "avaNight", "claireNight", "mishkaNight", "roseNight", "avaGunnerNight", "roriNight"]
-    #$ locationsAvailable = ["forestLocation", "arboretumLocation", "townLocation", "trackLocation"]
+    #$ locationsAvailable = ["forestLocation", "gardenLocation", "townLocation", "trackLocation"]
     
     $ clairepath = False
     $ avapath = False
@@ -1834,7 +1834,7 @@ label ellen_rage:
 
     n "Mornings are already starting to blend together. It's all the same, you wake up, get ready for class and head out."
     n "Not much room for variation other than which dinosaurs you get in your dino egg oatmeal."
-    n "You loved those sugary \"eggs\" as a kid, but tragically you went through an edgy teen phase where you refused to eat such an immature meal."
+    n "You loved those sugary \"eggs\" as a kid, but tragically you went through an edgy teen phase where you refused to eat such a silly meal."
     n "Now that you're an adult you've come to the conclusion that dinosaur egg oatmeal is based as fuck."
     n "That satisfying crunch and blast of flavor puts it well in the god tiers of breakfasts."
     #n "You usually end up eating most of the sugary \"eggs\" before they hatch"
@@ -11973,234 +11973,8 @@ label friendly_hangout:
         stop music fadeout 1.3
 
     else:
-        #finished
-        $ gardenvisit = True
+        ""
         
-        n "Ava and Claire have always had your back, even when you don't want them to."
-        n "They're always fun to hang out with, despite their incessant bickering."
-        
-        call phone_start from _call_phone_start_15
-
-        call message_start("me", "Sure, that sounds nice and relaxing. What time?", "testimage.png") from _call_message_start_19
-
-        call message("Claire", "Awesome! We wer just about to head out now!~", "claireavi.png") from _call_message_136
-
-        call reply_message("Aight I'll meet you there") from _call_reply_message_103
-
-        call phone_end from _call_phone_end_16
-
-        n "Not wanting to keep them waiting, you rush to get ready and head out to the botanical gardens on the edge of the campus."
-
-        scene bg garden with fade
-
-        show box with Dissolve(.2):
-            ypos 0
-
-        #play music "audio/music/vylet pony - Reading at Night.ogg" fadein 1.0
-        play music "audio/music/vylet - tenderness.ogg" fadein 1.0
-
-        n "You make your way to the botanical gardens. It's easy to spot from a distance thanks to the vibrant colors of all the flowers."
-
-        show ava normal neutral at norm:
-            #xzoom -1
-            xpos 375
-        show claire outdoors neutral at norm:
-            xzoom -1
-            xpos -400
-        with dissolve
-
-        claire @ say "Hey [name]!!! Glad you could make it!"
-
-        ava @ say "It's such a lovely day to go for a walk in the gardens, isn't it?"
-
-        player "It sure is. Better than being cooped up in my dorm all day."
-
-        ava @ say "Sunlight is good for you. Not just for your skin but also your mental health."
-
-        player "Huh. I didn't know that."
-
-        n "Maybe that's why you've always been depressed."
-
-        claire @ say "Just be careful not to get a sunburn! And remember to stay hydrated UwU"
-
-        player "What... was that sound you just made?"
-
-        claire @ say "What? UwU?"
-
-        player "Nevermind. Ready to go?"
-
-        claire @ say "Wait!!! I need to take a selfie first so my followers will know I'm like, into nature and stuff!"
-
-        n "Ava stifles a giggle and holds up her camera."
-
-        ava @ say "Don't worry, I'll be sure to get plenty of shots of you~"
-
-        claire @ say "Ksksksks thaaaaaanks~"
-
-        n "You roll your eyes but can't help but smile as you lead the group onward into the gardens."
-        n "Before long, you're surrounded by a variety of shrubs and flowers to the point where you can't even see any of the university buildings anymore."
-        n "Ava frequently stops to take photos of the plants, getting particularly excited when she catches a hummingbird or butterfly sipping from a flower."
-
-        ava @ say "Ooh, I have these in my garden back home. It's called a cardinal flower. Can you guess why?"
-
-        player "Cause it's red like male cardinals?"
-
-        ava @ say "Yup! Such a pretty red~"
-
-        claire @ say "She's got a thing for cardinal boys~"
-
-        show ava annoyed
-
-        ava @ say "Shush up, I do not!"
-
-        claire @ say "Ksksksks! Just teasin'!"
-        
-        show ava normal neutral
-
-        n "Ava provides more fun facts about various plants as you go along."
-        n "Eventually you come to a bench with an arch over it with vines growing all over."
-
-        claire @ say "Whew, can we take a break?"
-
-        ava @ say "Yeah, my legs are killing me."
-
-        player "Same."
-
-        n "Claire and Ava sit under the arch and begin reviewing the photos they've taken."
-        n "There's only room for two so you just lean against a nearby tree, taking sips of water from your bottle and watching the bees zoom around."
-
-        claire @ say "Hey [name], you wanna get a shot of us under the arch?"
-
-        ava @ say "I'll let you use my camera as long as you promise not to drop it. It costs more than a semester's worth of tuition."
-
-        player "Sure but I don't really know how to use one of those fancy cameras."
-
-        ava @ say "Don't worry, I'll set it to auto. All you have to do is point and click the button."
-
-        n "Ava flicks some switches and dials on the camera before handing it over to you."
-        n "You take a few steps back, compose your shot and click the button with a satisfying shutter sound."
-        
-        claire @ say "How'd it turn out? Lemme see lemme see lemme see!!"
-        
-        n "You turn the camera around and show Claire."
-        
-        show claire outdoors heyeah
-        
-        claire @ say "Ohmygosh we look great! This is just the perfect day, isn't it!"
-
-        n "Ava gets up and gestures to the bench."
-        
-        show claire outdoors neutral
-
-        ava @ say "Ok now it's your turn, [name]!"
-
-        menu:
-            ava "{cps=0}Ok now it's your turn, [name]!{/cps}"
-            "I don't like getting my picture taken.":
-                #finished
-                player "Sorry, I don't like getting my picture taken."
-
-                ava @ say "It's alright, I understand. I'm kinda the same way haha! But I've been getting more comfortable with it."
-            "Okay!":
-                #finished
-                $ clairePoints = clairePoints + 1
-                player "Okay!"
-
-                n "You sit down next to Claire and smile for the camera."
-                n "Just before Ava takes the shot, Claire wraps her arm around you, pulling you in close."
-
-                ava @ say "Aww, you two look so cute~"
-
-                claire @ say "Lemme see!"
-
-                n "Ava comes around and shows you the picture. Your face has a look of surprise mixed with fear."
-
-                player "..."
-
-                ava @ say "I'll send you both a copy later."
-
-            "Alright but I'm getting my picture taken with you next.":
-                #finished
-                $ clairePoints = clairePoints - 1
-                $ avaPoints = avaPoints + 1
-                player "Alright but I'm getting my picture taken with you next."
-
-                show ava overjoyed
-
-                ava @ say "Who, me??"
-
-                n "She looks to Claire, as if seeking her approval."
-
-                claire @ say "Sure, go for it!"
-                
-                show ava normal neutral
-
-                n "Ava stands back to take a shot of you and Claire."
-
-                ava @ say "Say cheese~"
-
-                n "You smile for the photo and Ava clicks the shutter button."
-
-                ava @ say "Aww, you two look so cute~"
-
-                claire @ say "I bet!~"
-
-                n "Ava comes around and shows you the picture. It's definitely a better shot than you could have taken with your phone."
-
-                ava @ say "Alright, I guess it's my turn! Lemme just set the camera up real quick for you Claire."
-
-                n "Ava adjusts some dials and hands the camera to Claire who backs up a few steps. She has to bend over a bit to frame the shot."
-                n "Claire motions for you to get closer together and Ava scoots more toward you, enough that you can just barely feel her feathers brushing up against you skin."
-                
-                show ava portrait neutral
-
-                claire @ say "One... two... three!"
-
-                n "You smile for the camera and Claire releases the shutter."
-                
-                claire @ say "Got it!"
-                
-                show ava normal neutral
-
-                n "Ava excitedly flutters over to see how it turned out."
-
-                ava @ say "Come here [name], check it out!"
-
-                n "You think you both look a little bashful in the shot but you like it more than the other shot."
-
-                player "Cool! Can you send me a copy later?"
-
-                ava @ say "Of course!"
-
-        player "Right then, shall we continue our little adventure?"
-
-        ava @ say "Sure! I think I'm all rested up and ready to go!"
-
-        claire @ say "Sounds good to me!"
-
-        n "The three of you explore the gardens some more before looping back around to the entrance."
-
-        claire @ say "Whew that sure was fun, wasn't it?"
-
-        ava @ say "Yup! And I got plenty of great pics~"
-
-        player "Yeah, this was more enjoyable than I thought it was gonna be."
-
-        claire @ say "There's more gardens and trails and stuff in the area we can go to later if you want!"
-
-        ava @ say "Mountaintop views in the morning are a favorite shooting location of mine~"
-
-        player "We'll see if I'm ever up early enough for that..."
-
-        hide ava
-        hide claire
-        with dissolve
-
-        n "As you part ways back to your respective dorms, Claire and Ava surprise you with a hug."
-        n "You can't remember the last time you've been hugged so it really catches you off guard, but you end up wishing it lasted longer."
-        n "Hanging out with Ava and Claire really lightened your mood. You totally forgot about everything going south in your life for a while."
-        n "Only once you're by yourself again do you start to feel sad again but even then something's changed."
-        n "You realize you have a group of friends to enjoy spending time with. It doesn't even feel like a waste of time, rather it's probably the most worthwhile thing you can do."
 
         stop music fadeout 1.3
 
