@@ -378,12 +378,13 @@ label week2Tuesday:
 
     show ellen teacher neutral at norm with dissolve
 
-    ellen @ say "Today we'll be starting a new book, this time from "
-
-    n "Miss Ellen starts to go on about the chapters we were supposed to have read for today but for some reason you can hardly concentrate on what she's saying."
-    n "You start to feel strange again..."
-
-    #play music "music/darkambient.wav" fadein .0
+    ellen @ say "Today we'll be starting a new story, this time originating from ancient Greece in the 5th century BCE."
+    ellen @ say "It is the archetypal hero's journey so often found in literature that succeeded it, as well as in our own lives!"
+    ellen @ say "This is the tale first told by Homer, \"The Odyssey!\""
+    ellen @ say "What's especially interesting about these old poems passed down through oral tradition rather than written word, is that every generation adds their own spin."
+    ellen @ say "So the version we'll be reading today is not the same as the original, but is instead an accumulation of the values of various cultures throughout time."
+    
+    n "Miss Ellen describes some of the historical context and impact of the story but it all blends together into a jumble of incomprehensible words as your brain once again falls into a stupor."
 
     n "The room starts to spin and you lose your sense of balance."
 
@@ -443,7 +444,7 @@ label week2Tuesday:
     ellen @ say "Hmm. You better drink more!"
     ellen @ say "And just to be on the safe side, I want you to go home and get some rest. You're excused from class today."
 
-    n "A day off? Sounds too good to be true. You decide to take her up on the offer before she changes her mind."
+    #n "A day off? Sounds too good to be true. You decide to take her up on the offer before she changes her mind."
 
     player "Err, thanks."
 
@@ -462,9 +463,37 @@ label week2Tuesday:
 
     play music "audio/ambient/morning birds.ogg" fadein 0.1
 
-    n "What a strange day. You feel like you could have continued on with class but these dizzy spells hit you with no warning."
-    n "You do feel a bit tired though. Maybe a nap would fix everything."
-    n "You climb into bed but as soon as you close your eyes your phone buzzes."
+    n "You feel like you could have continued on with class but these dizzy spells hit you with no warning. Perhaps it's best if you lie down for a while."
+    n "You can listen to music and chill and get some homework done."
+    
+    menu:
+        "Arcoonian book":
+            $ rosePoints += 1
+            
+            n "You take a look at the book Mr. Rothbauer gave you, \"The Rise and Fall of the Arcoonians.\""
+            n "Skimming through its pages, you glean some information about their culture and role in ancient North America."
+            n "Their society followed the principles of scholarly warriors who loosely ruled the continent."
+            n "Honor, self reliance, freedom, sustainability, and harmony with nature were some of their ideals."
+            n "Suffering and rising above one's particular life challenges were glamorized as being noble."
+            n "Arcoonians fostered a fiercly individualist mindset that idealized liberty and sovereign freedom."
+            n "Despite being united under general governance, battles between settlements were common. It's unclear what they fought over but the ruling class believed that it \"culled the weak.\""
+        "French":
+            $ frenchSkill =+ 1
+            n "You pick up your French textbook and practice some lessons."
+        "Literature":
+            $ literatureSkill =+ 1
+            n "You open your totally legally acquired epub of The Odyssey and start reading."
+        "History":
+            $ historySkill =+ 1
+            n "You crack open your History textbook and read up on some ancient cultures."
+        "Statistics":
+            $ statsSkill =+ 1
+            n "You flip open your statistics book and open a calculator app to crunch some numbers."
+    
+    
+    n "You're starting to feel exhausted, both physicall and mentally."
+    n "You set aside your reading materials and nestle under your blanket."
+    n "A few seconds after closing your eyes, your phone buzzes."
 
     call phone_start from _call_phone_start_2
 
@@ -481,7 +510,7 @@ label week2Tuesday:
 
     call phone_end from _call_phone_end_2
 
-    n "You put phone on the nightstand and roll away from it."
+    n "You set your phone on silent and put it on the nightstand."
 
     stop music fadeout 1.0
 
@@ -517,12 +546,64 @@ label week2Tuesday:
     show box with Dissolve(.2):
         ypos 0
 
-    n "You wake up feeling more tired than when you fell asleep."
-    n "Bright sunlight streaks through your window, directly into your eyes. What time is it?"
-    n "Eventually you muster enough energy to reach for your phone."
-    n "It's already noon."
-    n "Apparently you slept through your alarm."
-    n "Welp, it's too late to bother going to class. Might as well stay in and relax."
-    n "..."
-    n "Before you know it, you've wasted the entire day watching video essays on things nobody cares about."
-    n "Oh well, at least you're feeling better than yesterday."
+    n "You wake up feeling more tired than when you fell asleep but the bright sunlight streaming through the window urges you to get up."
+    n "You reach for your phone and check the time. It's already past noon."
+    n "Stats class is ending right about now."
+    n "No use going out today. Might as well stay in and recover from this mystery illness that's plaguing you."
+    n "You actually don't feel terrible right now but who knows if it will flare up again later."
+    
+    call phone_start
+    
+    call message_start("Ava", "Hey [name]! Claire told me you were feeling under the weather", "avaavi.png") 
+    call message("Ava", "but if you're feelin better this weekend wanna go somewhere with us?", "avaavi.png") 
+
+    call reply_message("I don't feel so bad today") 
+    call reply_message("I think I'll be fine tomorrow")
+    call reply_message("Where you going?")
+    
+    call message("Ava", "I'm not sure!", "avaavi.png") 
+    call message("Ava", "Claire says she picked out a spot", "avaavi.png") 
+    call message("Ava", "'Somewhere special' she says", "avaavi.png") 
+    call message("Ava", "Whatever that means", "avaavi.png") 
+    
+    call reply_message("Interesting...")
+    call reply_message("sure, I'll go")
+    
+    call message("Ava", "Yay ^v^", "avaavi.png") 
+    call message("Ava", "I'll let her know", "avaavi.png") 
+    call message("Ava", "meet us tomorrow at noon where we usually meet after class", "avaavi.png") 
+    
+    call reply_message("k")
+    
+    call phone_end
+    
+    n "You wonder where this special place that Claire wants you to go to is."
+    n "Hopefully you're feeling good enough to go tomorrow."
+    n "You'll just take it easy today and be well rested for the next day."    
+    
+    stop music fadeout 1.0
+
+    scene bg black with fade
+
+    hide box
+
+    show bg calendar
+    show tfriday at norm
+    with Dissolve(.5)
+
+    pause .6
+    show tforwardslash
+    pause .2
+    show tbackslash
+
+    pause .7
+    
+    scene bg campus with fade
+    
+    $ townEvents.append("avaGarden")
+    
+    n ""
+    
+    
+    
+    

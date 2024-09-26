@@ -1640,7 +1640,7 @@ label secondDayOfClass:
         ypos 0
 
     n "You roll out of bed and start your morning ritual in preparation for class."
-    n "Today you have World Literature and then French Language 101."
+    n "Today you have Literature and then French Language."
     n "A couple weeks ago you received an email with the books you'll need. The first one you'll be going over in literature is the novella \"The Death of Ivan Ilyich.\""
     n "You pack the book in your bag along with the French textbook and venture out."
 
@@ -1661,7 +1661,7 @@ label secondDayOfClass:
 
     show ellen teacher happy at norm with dissolve
 
-    ellen @ say "Good morning and welcome to World Literature I!"
+    ellen @ say "Good morning and welcome to Literature I!"
     ellen @ say "Today we'll go over the syllabus and what you can expect from this class. Then we'll finish up with some discussion on the assigned reading!"
 
     n "She clicks a button and the slideshow advances to the next slide, going over some information about herself."

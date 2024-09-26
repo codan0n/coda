@@ -1422,7 +1422,7 @@ label start:
     $ dating = ""
     $ currentWeather = "sunny"
     $ daysSinceRain = 1
-    $ gardenvisit = False
+    $ avaClaireGarden = False
     $ dndnight = False
     $ gaveCinRoll = False
     $ studied = ""
@@ -1433,7 +1433,7 @@ label start:
     $ himher = ""
     
     $ forestDiscovered = False
-    $ arboretumDiscovered = False
+    $ gardenDiscovered = False
     $ trackDiscovered = False
     $ townDiscovered = False
     $ avaClaireLunch = False
@@ -1450,14 +1450,14 @@ label start:
     $ avaPoints = 0
     $ clairePoints = 0
     
-    $ afterClassExploration = ["mainStreetIntro", "arboretumIntro", "forestIntro", "runningTrackIntro"]
+    $ afterClassExploration = ["mainStreetIntro", "gardenIntro", "forestIntro", "runningTrackIntro"]
     $ townEvents = ["celestineTown", "linaTown"]
     $ trackEvents = ["gunnerTrack", "roriTrack"]
     $ forestEvents = ["roseForest" "claireForest"]
-    $ arboretumEvents = ["mishkaArboretum", "avaArboretum"]
+    $ gardenEvents = ["mishkaGarden"]
     $ cafeEvents = ["deanCafe", "ellenCafe"]
     $ nightEvents = ["gunnerNight", "avaNight", "claireNight", "mishkaNight", "roseNight", "avaGunnerNight", "roriNight"]
-    #$ locationsAvailable = ["forestLocation", "arboretumLocation", "townLocation", "trackLocation"]
+    #$ locationsAvailable = ["forestLocation", "gardenLocation", "townLocation", "trackLocation"]
     
     $ clairepath = False
     $ avapath = False
@@ -1667,9 +1667,6 @@ label start:
 
 call chapter1
     
-label sickday:
-    show box with Dissolve(.2):
-        ypos 0
 label gunner_rage:
     n "Wait, how did you get here again?"
     
@@ -1837,7 +1834,7 @@ label ellen_rage:
 
     n "Mornings are already starting to blend together. It's all the same, you wake up, get ready for class and head out."
     n "Not much room for variation other than which dinosaurs you get in your dino egg oatmeal."
-    n "You loved those sugary \"eggs\" as a kid, but tragically you went through an edgy teen phase where you refused to eat such an immature meal."
+    n "You loved those sugary \"eggs\" as a kid, but tragically you went through an edgy teen phase where you refused to eat such a silly meal."
     n "Now that you're an adult you've come to the conclusion that dinosaur egg oatmeal is based as fuck."
     n "That satisfying crunch and blast of flavor puts it well in the god tiers of breakfasts."
     #n "You usually end up eating most of the sugary \"eggs\" before they hatch"
@@ -11976,8 +11973,7 @@ label friendly_hangout:
         stop music fadeout 1.3
 
     else:
-        #finished
-        $ gardenvisit = True
+        $ avaClaireGarden = True
         
         n "Ava and Claire have always had your back, even when you don't want them to."
         n "They're always fun to hang out with, despite their incessant bickering."
@@ -12003,6 +11999,9 @@ label friendly_hangout:
         play music "audio/music/vylet - tenderness.ogg" fadein 1.0
 
         n "You make your way to the botanical gardens. It's easy to spot from a distance thanks to the vibrant colors of all the flowers."
+        
+        if gardenDiscovered == True:
+            n "This is the same garden you've visited before, just at one of the other entrances. The area is quite expansive and you haven't been to this part before."
 
         show ava normal neutral at norm:
             #xzoom -1
