@@ -671,6 +671,8 @@ label college_orientation:
                 
                 player "Sure. Lead the way."
                 
+                n "Rori seems excited to have someone to nerd out with as he takes you to his dorm."
+                
                 call roriDormIntro
                 
                 player "Do you have a roommate? I get the feeling those aren't yours."
@@ -1642,7 +1644,7 @@ label secondDayOfClass:
     n "You roll out of bed and start your morning ritual in preparation for class."
     n "Today you have Literature and then French Language."
     n "A couple weeks ago you received an email with the books you'll need. The first one you'll be going over in literature is the novella \"The Death of Ivan Ilyich.\""
-    n "You pack the book in your bag along with the French textbook and venture out."
+    n "You pack your ebook reader that's loaded with all the books you could find on the pirate bay into your bag along with the French textbook and venture out."
 
     stop music fadeout 1.0
 
@@ -2572,7 +2574,7 @@ label thirdDayOfClassStats:
         
         n "Seems he has other things on his mind. You don't really care if you end up studying with him or not as long as you get a free lunch."
         
-        player "Sure."
+        player "Fine."
         
         gunner @ say "Perfect! Why don't we all sit together then! I'm Gunner by the way. [name] and I have stats class together."
 

@@ -571,7 +571,7 @@ label week2Tuesday:
     
     call message("Ava", "Yay ^v^", "avaavi.png") 
     call message("Ava", "I'll let her know", "avaavi.png") 
-    call message("Ava", "meet us tomorrow at noon where we usually meet after class", "avaavi.png") 
+    call message("Ava", "meet us tomorrow at around 9 where we usually meet after class", "avaavi.png") 
     
     call reply_message("k")
     
@@ -613,18 +613,29 @@ label week2Tuesday:
     
     claire @ say "I'm so glad you could make it!"
     
-    player ""
+    player "Heh, glad I'm feeling well enough to... what is it that we're doing exactly?"
     
-
-    scene bg garden with fade
+    claire @ say "There's like this huuuuuge garden on the other side of campus so I thought it would be fun to get lost in it with my pals~"
+    
+    ava @ say "Ooh that does sound like fun! I bet it's super pretty too! Glad I brought my camera~"
+    
+    claire @ say "As if you ever go anywhere without that thing ksksksksk!"
+    
+    ava @ say "True~"
+    
+    player "Shall we get going then?"
+    
+    claire @ say "Yeah!"
+    
+    n "Claire leads you across campus to the gardens. It's easy to spot from a distance thanks to the vibrant colors of all the flowers."
+    
+    scene bg garden with dissolve
 
     show box with Dissolve(.2):
         ypos 0
 
     #play music "audio/music/vylet pony - Reading at Night.ogg" fadein 1.0
     play music "audio/music/vylet - tenderness.ogg" fadein 1.0
-
-    n "You make your way to the botanical gardens. It's easy to spot from a distance thanks to the vibrant colors of all the flowers."
     
     if gardenDiscovered == True:
         n "This is the same garden you've visited before, just at one of the other entrances. The area is quite expansive and you haven't been to this part before."
@@ -637,17 +648,17 @@ label week2Tuesday:
         xpos -400
     with dissolve
 
-    claire @ say "Hey [name]!!! Glad you could make it!"
+    n "Claire hops around whimsically from one plant to another, sniffing the flowers and admiring the multitude of plants."
 
-    ava @ say "It's such a lovely day to go for a walk in the gardens, isn't it?"
+    claire @ say "It's such a lovely day to go for a walk in the gardens, isn't it?"
 
-    player "It sure is. Better than being cooped up in my dorm all day."
+    player "Yeah, I guess it's better than being cooped up in my dorm all day."
 
     ava @ say "Sunlight is good for you. Not just for your skin but also your mental health."
 
     player "Huh. I didn't know that."
 
-    n "Maybe that's why you've always been depressed."
+    #n "Maybe that's why you've always been depressed."
 
     claire @ say "Just be careful not to get a sunburn! And remember to stay hydrated UwU"
 
@@ -655,23 +666,19 @@ label week2Tuesday:
 
     claire @ say "What? UwU?"
 
-    player "Nevermind. Ready to go?"
+    player "Nevermind. Which way should we go? There's like a dozen branching paths."
 
-    claire @ say "Wait!!! I need to take a selfie first so my followers will know I'm like, into nature and stuff!"
+    claire @ say "Hmm, let's gooooo... this way!"
 
-    n "Ava stifles a giggle and holds up her camera."
-
-    ava @ say "Don't worry, I'll be sure to get plenty of shots of you~"
-
-    claire @ say "Ksksksks thaaaaaanks~"
-
-    n "You roll your eyes but can't help but smile as you lead the group onward into the gardens."
+    n "She seems to pick a direction at random and pulls you and Ava along with her, deep into the garden."
     n "Before long, you're surrounded by a variety of shrubs and flowers to the point where you can't even see any of the university buildings anymore."
-    n "Ava frequently stops to take photos of the plants, getting particularly excited when she catches a hummingbird or butterfly sipping from a flower."
-
+    n "Ava managed to escape to take photos of plants, getting particularly excited when she catches a hummingbird or butterfly sipping from a flower, but Claire maintains her death grip on your hand."
+    
     ava @ say "Ooh, I have these in my garden back home. It's called a cardinal flower. Can you guess why?"
 
-    player "Cause it's red like male cardinals?"
+    player "Cause it's red like cardinals?"
+    
+    claire @ say "Only the males~"
 
     ava @ say "Yup! Such a pretty red~"
 
@@ -684,6 +691,10 @@ label week2Tuesday:
     claire @ say "Ksksksks! Just teasin'!"
     
     show ava normal neutral
+
+
+
+
 
     n "Ava provides more fun facts about various plants as you go along."
     n "Eventually you come to a bench with an arch over it with vines growing all over."
