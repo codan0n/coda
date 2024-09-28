@@ -377,7 +377,7 @@ label week2Tuesday:
 
     show ellen teacher neutral at norm with dissolve
 
-    ellen @ say "Today we'll be starting a new book, this time from "
+    ellen @ say "Today we'll be starting a new book, this time originating from "
 
     n "Miss Ellen starts to go on about the chapters we were supposed to have read for today but for some reason you can hardly concentrate on what she's saying."
     n "You start to feel strange again..."
