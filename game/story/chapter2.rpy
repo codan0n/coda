@@ -377,12 +377,13 @@ label week2Tuesday:
 
     show ellen teacher neutral at norm with dissolve
 
-    ellen @ say "Today we'll be starting a new book, this time originating from "
-
-    n "Miss Ellen starts to go on about the chapters we were supposed to have read for today but for some reason you can hardly concentrate on what she's saying."
-    n "You start to feel strange again..."
-
-    #play music "music/darkambient.wav" fadein .0
+    ellen @ say "Today we'll be starting a new story, this time originating from ancient Greece in the 5th century BCE."
+    ellen @ say "It is the archetypal hero's journey so often found in literature that succeeded it, as well as in our own lives!"
+    ellen @ say "This is the tale first told by Homer, \"The Odyssey!\""
+    ellen @ say "What's especially interesting about these old poems passed down through oral tradition rather than written word, is that every generation adds their own spin."
+    ellen @ say "So the version we'll be reading today is not the same as the original, but is instead an accumulation of the values of various cultures throughout time."
+    
+    n "Miss Ellen describes some of the historical context and impact of the story but it all blends together into a jumble of incomprehensible words as your brain once again falls into a stupor."
 
     n "The room starts to spin and you lose your sense of balance."
 
@@ -442,7 +443,7 @@ label week2Tuesday:
     ellen @ say "Hmm. You better drink more!"
     ellen @ say "And just to be on the safe side, I want you to go home and get some rest. You're excused from class today."
 
-    n "A day off? Sounds too good to be true. You decide to take her up on the offer before she changes her mind."
+    #n "A day off? Sounds too good to be true. You decide to take her up on the offer before she changes her mind."
 
     player "Err, thanks."
 
@@ -461,9 +462,37 @@ label week2Tuesday:
 
     play music "audio/ambient/morning birds.ogg" fadein 0.1
 
-    n "What a strange day. You feel like you could have continued on with class but these dizzy spells hit you with no warning."
-    n "You do feel a bit tired though. Maybe a nap would fix everything."
-    n "You climb into bed but as soon as you close your eyes your phone buzzes."
+    n "You feel like you could have continued on with class but these dizzy spells hit you with no warning. Perhaps it's best if you lie down for a while."
+    n "You can listen to music and chill and get some homework done."
+    
+    menu:
+        "Arcoonian book":
+            $ rosePoints += 1
+            
+            n "You take a look at the book Mr. Rothbauer gave you, \"The Rise and Fall of the Arcoonians.\""
+            n "Skimming through its pages, you glean some information about their culture and role in ancient North America."
+            n "Their society followed the principles of scholarly warriors who loosely ruled the continent."
+            n "Honor, self reliance, freedom, sustainability, and harmony with nature were some of their ideals."
+            n "Suffering and rising above one's particular life challenges were glamorized as being noble."
+            n "Arcoonians fostered a fiercly individualist mindset that idealized liberty and sovereign freedom."
+            n "Despite being united under general governance, battles between settlements were common. It's unclear what they fought over but the ruling class believed that it \"culled the weak.\""
+        "French":
+            $ frenchSkill =+ 1
+            n "You pick up your French textbook and practice some lessons."
+        "Literature":
+            $ literatureSkill =+ 1
+            n "You open your totally legally acquired epub of The Odyssey and start reading."
+        "History":
+            $ historySkill =+ 1
+            n "You crack open your History textbook and read up on some ancient cultures."
+        "Statistics":
+            $ statsSkill =+ 1
+            n "You flip open your statistics book and open a calculator app to crunch some numbers."
+    
+    
+    n "You're starting to feel exhausted, both physicall and mentally."
+    n "You set aside your reading materials and nestle under your blanket."
+    n "A few seconds after closing your eyes, your phone buzzes."
 
     call phone_start from _call_phone_start_2
 
@@ -480,7 +509,7 @@ label week2Tuesday:
 
     call phone_end from _call_phone_end_2
 
-    n "You put phone on the nightstand and roll away from it."
+    n "You set your phone on silent and put it on the nightstand."
 
     stop music fadeout 1.0
 
@@ -516,13 +545,290 @@ label week2Tuesday:
     show box with Dissolve(.2):
         ypos 0
 
-    n "You wake up feeling more tired than when you fell asleep."
-    n "Bright sunlight streaks through your window, directly into your eyes. What time is it?"
-    n "Eventually you muster enough energy to reach for your phone."
-    n "It's already noon."
-    n "Apparently you slept through your alarm."
-    n "Welp, it's too late to bother going to class. Might as well stay in and relax."
-    n "..."
-    n "Before you know it, you've wasted the entire day watching video essays on things nobody cares about."
-    n "Oh well, at least you're feeling better than yesterday."
+    n "You wake up feeling more tired than when you fell asleep but the bright sunlight streaming through the window urges you to get up."
+    n "You reach for your phone and check the time. It's already past noon."
+    n "Stats class is ending right about now."
+    n "No use going out today. Might as well stay in and recover from this mystery illness that's plaguing you."
+    n "You actually don't feel terrible right now but who knows if it will flare up again later."
+    
+    call phone_start
+    
+    call message_start("Ava", "Hey [name]! Claire told me you were feeling under the weather", "avaavi.png") 
+    call message("Ava", "but if you're feelin better this weekend wanna go somewhere with us?", "avaavi.png") 
 
+    call reply_message("I don't feel so bad today") 
+    call reply_message("I think I'll be fine tomorrow")
+    call reply_message("Where you going?")
+    
+    call message("Ava", "I'm not sure!", "avaavi.png") 
+    call message("Ava", "Claire says she picked out a spot", "avaavi.png") 
+    call message("Ava", "'Somewhere special' she says", "avaavi.png") 
+    call message("Ava", "Whatever that means", "avaavi.png") 
+    
+    call reply_message("Interesting...")
+    call reply_message("sure, I'll go")
+    
+    call message("Ava", "Yay ^v^", "avaavi.png") 
+    call message("Ava", "I'll let her know", "avaavi.png") 
+    call message("Ava", "meet us tomorrow at noon where we usually meet after class", "avaavi.png") 
+    
+    call reply_message("k")
+    
+    call phone_end
+    
+    n "You wonder where this special place that Claire wants you to go to is."
+    n "Hopefully you're feeling good enough to go tomorrow."
+    n "You'll just take it easy today and be well rested for the next day."    
+    
+    stop music fadeout 1.0
+
+    scene bg black with fade
+
+    hide box
+
+    show bg calendar
+    show tfriday at norm
+    with Dissolve(.5)
+
+    pause .6
+    show tforwardslash
+    pause .2
+    show tbackslash
+
+    pause .7
+    
+    scene bg campus with fade
+    
+    $ townEvents.append("avaGarden")
+    
+    $ avaClaireGarden = True
+        
+    n "Claire and Ava are already waiting for you at your usual hangout spot."
+    
+    show ava neutral
+    show claire sweater neutral
+    
+    ava @ say "[name]!! You're here!"
+    
+    claire @ say "I'm so glad you could make it!"
+    
+    player ""
+    
+
+    scene bg garden with fade
+
+    show box with Dissolve(.2):
+        ypos 0
+
+    #play music "audio/music/vylet pony - Reading at Night.ogg" fadein 1.0
+    play music "audio/music/vylet - tenderness.ogg" fadein 1.0
+
+    n "You make your way to the botanical gardens. It's easy to spot from a distance thanks to the vibrant colors of all the flowers."
+    
+    if gardenDiscovered == True:
+        n "This is the same garden you've visited before, just at one of the other entrances. The area is quite expansive and you haven't been to this part before."
+
+    show ava normal neutral at norm:
+        #xzoom -1
+        xpos 375
+    show claire outdoors neutral at norm:
+        xzoom -1
+        xpos -400
+    with dissolve
+
+    claire @ say "Hey [name]!!! Glad you could make it!"
+
+    ava @ say "It's such a lovely day to go for a walk in the gardens, isn't it?"
+
+    player "It sure is. Better than being cooped up in my dorm all day."
+
+    ava @ say "Sunlight is good for you. Not just for your skin but also your mental health."
+
+    player "Huh. I didn't know that."
+
+    n "Maybe that's why you've always been depressed."
+
+    claire @ say "Just be careful not to get a sunburn! And remember to stay hydrated UwU"
+
+    player "What... was that sound you just made?"
+
+    claire @ say "What? UwU?"
+
+    player "Nevermind. Ready to go?"
+
+    claire @ say "Wait!!! I need to take a selfie first so my followers will know I'm like, into nature and stuff!"
+
+    n "Ava stifles a giggle and holds up her camera."
+
+    ava @ say "Don't worry, I'll be sure to get plenty of shots of you~"
+
+    claire @ say "Ksksksks thaaaaaanks~"
+
+    n "You roll your eyes but can't help but smile as you lead the group onward into the gardens."
+    n "Before long, you're surrounded by a variety of shrubs and flowers to the point where you can't even see any of the university buildings anymore."
+    n "Ava frequently stops to take photos of the plants, getting particularly excited when she catches a hummingbird or butterfly sipping from a flower."
+
+    ava @ say "Ooh, I have these in my garden back home. It's called a cardinal flower. Can you guess why?"
+
+    player "Cause it's red like male cardinals?"
+
+    ava @ say "Yup! Such a pretty red~"
+
+    claire @ say "She's got a thing for cardinal boys~"
+
+    show ava annoyed
+
+    ava @ say "Shush up, I do not!"
+
+    claire @ say "Ksksksks! Just teasin'!"
+    
+    show ava normal neutral
+
+    n "Ava provides more fun facts about various plants as you go along."
+    n "Eventually you come to a bench with an arch over it with vines growing all over."
+
+    claire @ say "Whew, can we take a break?"
+
+    ava @ say "Yeah, my legs are killing me."
+
+    player "Same."
+
+    n "Claire and Ava sit under the arch and begin reviewing the photos they've taken."
+    n "There's only room for two so you just lean against a nearby tree, taking sips of water from your bottle and watching the bees zoom around."
+
+    claire @ say "Hey [name], you wanna get a shot of us under the arch?"
+
+    ava @ say "I'll let you use my camera as long as you promise not to drop it. It costs more than a semester's worth of tuition."
+
+    player "Sure but I don't really know how to use one of those fancy cameras."
+
+    ava @ say "Don't worry, I'll set it to auto. All you have to do is point and click the button."
+
+    n "Ava flicks some switches and dials on the camera before handing it over to you."
+    n "You take a few steps back, compose your shot and click the button with a satisfying shutter sound."
+    
+    claire @ say "How'd it turn out? Lemme see lemme see lemme see!!"
+    
+    n "You turn the camera around and show Claire."
+    
+    show claire outdoors heyeah
+    
+    claire @ say "Ohmygosh we look great! This is just the perfect day, isn't it!"
+
+    n "Ava gets up and gestures to the bench."
+    
+    show claire outdoors neutral
+
+    ava @ say "Ok now it's your turn, [name]!"
+
+    menu:
+        ava "{cps=0}Ok now it's your turn, [name]!{/cps}"
+        "I don't like getting my picture taken.":
+            #finished
+            player "Sorry, I don't like getting my picture taken."
+
+            ava @ say "It's alright, I understand. I'm kinda the same way haha! But I've been getting more comfortable with it."
+        "Okay!":
+            #finished
+            $ clairePoints = clairePoints + 1
+            player "Okay!"
+
+            n "You sit down next to Claire and smile for the camera."
+            n "Just before Ava takes the shot, Claire wraps her arm around you, pulling you in close."
+
+            ava @ say "Aww, you two look so cute~"
+
+            claire @ say "Lemme see!"
+
+            n "Ava comes around and shows you the picture. Your face has a look of surprise mixed with fear."
+
+            player "..."
+
+            ava @ say "I'll send you both a copy later."
+
+        "Alright but I'm getting my picture taken with you next.":
+            #finished
+            $ clairePoints = clairePoints - 1
+            $ avaPoints = avaPoints + 1
+            player "Alright but I'm getting my picture taken with you next."
+
+            show ava overjoyed
+
+            ava @ say "Who, me??"
+
+            n "She looks to Claire, as if seeking her approval."
+
+            claire @ say "Sure, go for it!"
+            
+            show ava normal neutral
+
+            n "Ava stands back to take a shot of you and Claire."
+
+            ava @ say "Say cheese~"
+
+            n "You smile for the photo and Ava clicks the shutter button."
+
+            ava @ say "Aww, you two look so cute~"
+
+            claire @ say "I bet!~"
+
+            n "Ava comes around and shows you the picture. It's definitely a better shot than you could have taken with your phone."
+
+            ava @ say "Alright, I guess it's my turn! Lemme just set the camera up real quick for you Claire."
+
+            n "Ava adjusts some dials and hands the camera to Claire who backs up a few steps. She has to bend over a bit to frame the shot."
+            n "Claire motions for you to get closer together and Ava scoots more toward you, enough that you can just barely feel her feathers brushing up against you skin."
+            
+            show ava portrait neutral
+
+            claire @ say "One... two... three!"
+
+            n "You smile for the camera and Claire releases the shutter."
+            
+            claire @ say "Got it!"
+            
+            show ava normal neutral
+
+            n "Ava excitedly flutters over to see how it turned out."
+
+            ava @ say "Come here [name], check it out!"
+
+            n "You think you both look a little bashful in the shot but you like it more than the other shot."
+
+            player "Cool! Can you send me a copy later?"
+
+            ava @ say "Of course!"
+
+    player "Right then, shall we continue our little adventure?"
+
+    ava @ say "Sure! I think I'm all rested up and ready to go!"
+
+    claire @ say "Sounds good to me!"
+
+    n "The three of you explore the gardens some more before looping back around to the entrance."
+
+    claire @ say "Whew that sure was fun, wasn't it?"
+
+    ava @ say "Yup! And I got plenty of great pics~"
+
+    player "Yeah, this was more enjoyable than I thought it was gonna be."
+
+    claire @ say "There's more gardens and trails and stuff in the area we can go to later if you want!"
+
+    ava @ say "Mountaintop views in the morning are a favorite shooting location of mine~"
+
+    player "We'll see if I'm ever up early enough for that..."
+
+    hide ava
+    hide claire
+    with dissolve
+
+    n "As you part ways back to your respective dorms, Claire and Ava surprise you with a hug."
+    n "You can't remember the last time you've been hugged so it really catches you off guard, but you end up wishing it lasted longer."
+    n "Hanging out with Ava and Claire really lightened your mood. You totally forgot about everything going south in your life for a while."
+    n "Only once you're by yourself again do you start to feel sad again but even then something's changed."
+    n "You realize you have a group of friends to enjoy spending time with. It doesn't even feel like a waste of time, rather it's probably the most worthwhile thing you can do."
+
+
+
+    

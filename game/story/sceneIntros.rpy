@@ -123,18 +123,23 @@ label forestIntro:
     return
     
 
-label arboretumIntro:
-    $ arboretumDiscovered = True
-    $ afterClassExploration.remove("arboretumIntro")
+label gardenIntro:
+    $ gardenDiscovered = True
+    $ afterClassExploration.remove("gardenIntro")
     
-    "Along one edge of campus lies a nature walk area where a variety of flowers, bushes and trees surround the intertwining paths like a labrynth."
-    "Plaques mark the plants with their scientific names and some information about them, providing insight to their life cycles and uses."
-    "It's a pleasant journey, watching bees and butterflies fly around collecting nectar and pollen, attracted by the sweet aromas."
-    "The path just keeps going. At some point you crossed a bridge overlooking a stream, and later come across the pond it feeds into."
-    "You watched the fish and turtles from a dock, then continued studying the flora while passing by greenhouses and gazebos."
-    "Surprisingly there aren't many others walking these paths. It's a nice place to get away from everything and enjoy some peace and quiet among nature."
-    "Eventually you make it out of the maze, though you're pretty sure you didn't see everything the arboretum has to offer."
-    "It'll have to wait for another day."
+    n "Along one edge of campus lies a botanical garden where a variety of flowers, bushes and trees surround the intertwining paths like a labrynth."
+    
+    if avaClaireGarden == True:
+        n "This is where you spent a lovely day with Ava and Claire, though you must have taken a different trail that time."
+    
+    n "Plaques mark the plants with their scientific names and some information about them, providing insight to their life cycles and uses."
+    n "It's a pleasant walk, watching bees and butterflies fly around collecting nectar and pollen, attracted by the sweet aromas."
+    n "The path goes on for a while, and it feels like you'll never escape."
+    n "At some point you crossed a bridge overlooking a stream, and later come across the pond it feeds into."
+    n "You watched the fish and turtles from a dock, then continued your journey through the flora while passing by greenhouses and gazebos."
+    n "Surprisingly there aren't many others walking these paths. It's a nice place to get away from everything and enjoy some peace and quiet among nature."
+    n "Eventually you make it out of the maze, though you're pretty sure you didn't see everything the garden has to offer."
+    n "It'll have to wait for another day."
 
     return
     
