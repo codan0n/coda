@@ -2699,25 +2699,30 @@ label avaClaireGunnerLunch:
     
     claire @ say "Got bored of it after getting a hole in one on every course in my state."
     
-    ava @ say "You ever try drawing?"
+    ava @ say "Ever try drawing?"
     
-    claire @ say "Already drew everything I wanted to draw."
+    #claire @ say "Already drew everything I wanted to draw."
+    claire @ say "Spent a year drawing all my ideas."
     
     gunner @ say "Fishing?"
     
-    claire @ say "My fishing career peaked when I harpooned a 600 pound tuna in my rowboat and spent 3 days fighting sharks to bring it back home."
+    #claire @ say "My fishing career peaked when I harpooned a 600 pound tuna in my rowboat and spent 3 days fighting sharks to bring it back home."
+    claire @ say "Already caught so many fish, I started reeling in undiscovered species."
     
     ava @ say "Cooking?"
     
-    claire @ say "Had a good run with a critically acclaimed 5 season cooking show."
+    claire @ say "Had a good run with a critically acclaimed cooking show that lasted for 5 seasons."
     
     gunner @ say "Music?"
     
     claire @ say "Never looked back after dropping a single that topped the charts for a few months."
     
-    ava @ say "Fashion?"
+    #ava @ say "Fashion?"
+    #claire @ say "Banned from the industry after trolling a high end runway show with an all plus-sized lineup."
     
-    claire @ say "Banned from the industry after trolling a high end runway show with an all plus-sized lineup."
+    ava @ say "Acting?"
+    
+    claire @ say "Blacklisted from the industry for... reasons."
     
     gunner @ say "Guns?"
     
