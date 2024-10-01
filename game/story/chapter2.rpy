@@ -375,6 +375,8 @@ label week2Tuesday:
 
     show box with Dissolve(.2):
         ypos 0
+        
+    $ currentbook = "The Odyssey"
 
     show ellen teacher neutral at norm with dissolve
 
@@ -482,7 +484,7 @@ label week2Tuesday:
             n "You pick up your French textbook and practice some lessons."
         "Literature":
             $ literatureSkill =+ 1
-            n "You open your totally legally acquired epub of The Odyssey and start reading."
+            n "You open your totally legally acquired epub of [currentbook] and start reading."
         "History":
             $ historySkill =+ 1
             n "You crack open your History textbook and read up on some ancient cultures."
@@ -692,32 +694,28 @@ label week2Tuesday:
     
     show ava normal neutral
 
+    n "Ava and Claire continue to bicker and share fun plant facts as you go along."
+    n "After a while, you come to a bench with an arch over it with vines growing all over."
 
+    ava @ say "Whew, it's gettin' kinda hot! Can we take a break?"
 
-
-
-    n "Ava provides more fun facts about various plants as you go along."
-    n "Eventually you come to a bench with an arch over it with vines growing all over."
-
-    claire @ say "Whew, can we take a break?"
-
-    ava @ say "Yeah, my legs are killing me."
+    claire @ say "Yeah, my legs are killing me!"
 
     player "Same."
 
-    n "Claire and Ava sit under the arch and begin reviewing the photos they've taken."
+    n "Claire and Ava sit under the arch and begin reviewing the photos they've taken so far."
     n "There's only room for two so you just lean against a nearby tree, taking sips of water from your bottle and watching the bees zoom around."
 
     claire @ say "Hey [name], you wanna get a shot of us under the arch?"
 
-    ava @ say "I'll let you use my camera as long as you promise not to drop it. It costs more than a semester's worth of tuition."
+    ava @ say "I'll let you use my camera as long as you promise not to drop it. It costs more than a semester's worth of tuition!"
 
-    player "Sure but I don't really know how to use one of those fancy cameras."
+    player "Sure, but I don't really know how to use one of those fancy cameras."
 
-    ava @ say "Don't worry, I'll set it to auto. All you have to do is point and click the button."
+    ava @ say "Don't worry, I'll preset the exposure settings. All you have to do is point and click the button."
 
     n "Ava flicks some switches and dials on the camera before handing it over to you."
-    n "You take a few steps back, compose your shot and click the button with a satisfying shutter sound."
+    n "You take a few steps back, compose your shot and press the button with a satisfying shutter sound."
     
     claire @ say "How'd it turn out? Lemme see lemme see lemme see!!"
     
@@ -736,32 +734,31 @@ label week2Tuesday:
     menu:
         ava "{cps=0}Ok now it's your turn, [name]!{/cps}"
         "I don't like getting my picture taken.":
-            #finished
             player "Sorry, I don't like getting my picture taken."
 
-            ava @ say "It's alright, I understand. I'm kinda the same way haha! But I've been getting more comfortable with it."
+            ava @ say "I understand. I'm kinda the same way haha! But I've been getting more comfortable with it."
+            
+            n "Claire lets out a disappointed sigh but doesn't say anything."
         "Okay!":
-            #finished
             $ clairePoints = clairePoints + 1
+            
             player "Okay!"
 
             n "You sit down next to Claire and smile for the camera."
             n "Just before Ava takes the shot, Claire wraps her arm around you, pulling you in close."
 
-            ava @ say "Aww, you two look so cute~"
+            ava @ say "Aww, you two are so cute~"
 
-            claire @ say "Lemme see!"
+            claire @ say "Show us the pic!"
 
-            n "Ava comes around and shows you the picture. Your face has a look of surprise mixed with fear."
+            n "Ava comes around and shows you the picture. Your face has a look of surprise mixed with fear as Claire's sudden death grip took hold of you."
 
-            player "..."
-
-            ava @ say "I'll send you both a copy later."
-
+            player "Great..."
         "Alright but I'm getting my picture taken with you next.":
             #finished
             $ clairePoints = clairePoints - 1
             $ avaPoints = avaPoints + 1
+            
             player "Alright but I'm getting my picture taken with you next."
 
             show ava overjoyed
@@ -786,10 +783,11 @@ label week2Tuesday:
 
             n "Ava comes around and shows you the picture. It's definitely a better shot than you could have taken with your phone."
 
-            ava @ say "Alright, I guess it's my turn! Lemme just set the camera up real quick for you Claire."
+            ava @ say "Alright, I guess it's my turn! Here you go Claire."
 
-            n "Ava adjusts some dials and hands the camera to Claire who backs up a few steps. She has to bend over a bit to frame the shot."
-            n "Claire motions for you to get closer together and Ava scoots more toward you, enough that you can just barely feel her feathers brushing up against you skin."
+            n "Ava racks the zoom ring, presumably to set the shot up for a closeup. No need for a wide angle when Claire is out of the frame."
+            n "She hands the camera to the bunny and sits down beside you. Claire hops back and has to bend over a bit to frame the shot."
+            n "Claire motions for you to get closer together and Ava scoots more toward you, enough that you can feel her feathers brushing up against you skin."
             
             show ava portrait neutral
 
@@ -807,40 +805,38 @@ label week2Tuesday:
 
             n "You think you both look a little bashful in the shot but you like it more than the other shot."
 
-            player "Cool! Can you send me a copy later?"
+            player "Aww nice!"
 
-            ava @ say "Of course!"
+            ava @ say "The sunlight coming from behind really worked in our favor."
+            
+            player "For sure. It makes your feathers glow so nicely!"
+            
+            ava @ say "You think so?"
+            
+            n "Ava shyly smiles, turning away from you."
 
-    player "Right then, shall we continue our little adventure?"
+    claire @ say "Right then, shall we continue our little adventure?"
 
     ava @ say "Sure! I think I'm all rested up and ready to go!"
 
-    claire @ say "Sounds good to me!"
+    player "Sounds good to me!"
 
-    n "The three of you explore the gardens some more before looping back around to the entrance."
+    n "The three of you spend the rest of the day getting lost in the gardens, laughing, and having an all around good time."
+    n "Eventually you find your way back to the entrance where you bid adieu and return to your respective dorms for the day."
 
-    claire @ say "Whew that sure was fun, wasn't it?"
+    hide box
 
-    ava @ say "Yup! And I got plenty of great pics~"
+    show bg calendar
+    show tsaturday at norm
+    with Dissolve(.5)
 
-    player "Yeah, this was more enjoyable than I thought it was gonna be."
+    pause .6
+    show tforwardslash
+    pause .2
+    show tbackslash
 
-    claire @ say "There's more gardens and trails and stuff in the area we can go to later if you want!"
+    pause .7
 
-    ava @ say "Mountaintop views in the morning are a favorite shooting location of mine~"
-
-    player "We'll see if I'm ever up early enough for that..."
-
-    hide ava
-    hide claire
-    with dissolve
-
-    n "As you part ways back to your respective dorms, Claire and Ava surprise you with a hug."
-    n "You can't remember the last time you've been hugged so it really catches you off guard, but you end up wishing it lasted longer."
-    n "Hanging out with Ava and Claire really lightened your mood. You totally forgot about everything going south in your life for a while."
-    n "Only once you're by yourself again do you start to feel sad again but even then something's changed."
-    n "You realize you have a group of friends to enjoy spending time with. It doesn't even feel like a waste of time, rather it's probably the most worthwhile thing you can do."
-
-
-
+    scene bg codadorm with fade
     
+    n "You've fallen behind on homework and assigned reading"

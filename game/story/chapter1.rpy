@@ -1549,7 +1549,7 @@ label firstDayOfClass:
                 player "No, it's just weird you would think I give a shit about your yacht."
                 
                 gunner @ say "Ohh sorry, sorry! You're more of a helicopter guy I see, my mistake."
-                gunner @ say "My family doesn't have one of those yet but maybe I'll ask for one for my birthday."
+                gunner @ say "Man, I need to get one of those for myself. Maybe I'll ask for one for my birthday."
             "Wow money is so cool.":
                 player "Wow money is just so cool, isn't it?"
                 
