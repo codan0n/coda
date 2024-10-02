@@ -839,4 +839,7 @@ label week2Tuesday:
 
     scene bg codadorm with fade
     
+    show box with Dissolve(.2):
+        ypos 0
+    
     n "You've fallen behind on homework and assigned reading"

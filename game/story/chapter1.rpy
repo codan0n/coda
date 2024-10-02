@@ -3,6 +3,7 @@ label chapter1:
     
     "Coda is a purely fictional story created by a diverse team with various different backgrounds and beliefs. The events and views of some characters do not necessarily reflect those of the creators."
     "Viewer discretion is advised."
+    "Please note that this is a work in progress build that is unfinished in many places."
     
     scene bg letter with fade
     
@@ -2963,6 +2964,8 @@ label avaClaireGunnerLunch:
         ypos 0
 
     n "After winding down a bit in your dorm, you lie in bed and look at your phone."
+    
+    $ cafeEvents.append("claireCafe")
 
     call phone_start from _call_phone_start_1
 
@@ -3568,6 +3571,9 @@ label thursday1:
             
             scene bg avadorm with fade
             
+            show box with Dissolve(.2):
+                ypos 0
+            
             n "An eternity passes with you and your study partner frequently changing position and whispering broken French to each other in this hot and sweaty room."
             n "Though the odd body language still confuses you, you feel like you've learned a few new words and grammatical rules."
             n "You've ended up lying on your back with your head in Claire's lap while she strokes your hair."
@@ -3607,12 +3613,14 @@ label thursday1:
             
             scene bg codadorm with fade
             
+            show box with Dissolve(.2):
+                ypos 0
+            
             n "You didn't mean to bore her with all that school work."
             n "You should download some games on your laptop to bring next time. Maybe you can get some that are translated in French so you can still learn while playing them."
             
             jump thursday1End
             
-
         "Maybe another time":
             player "Sorry, I have somewhere to be."
             
@@ -3722,6 +3730,9 @@ label thursday1End:
 label friday1:
     scene bg codadorm with fade
     
+    show box with Dissolve(.2):
+        ypos 0
+    
     n "You've made it to the end of your first week back in school."
     n "Just have to get today's classes knocked out, then you'll be free for two whole days."
     
@@ -3731,6 +3742,9 @@ label friday1:
     
     scene bg campus with fade
     
+    show box with Dissolve(.2):
+        ypos 0
+    
     n "You're blessed with a relatively quick and painless classroom experience and are done with your obligations for the day."
     n "Now you'll have to find some way to occupy yourself for the weekend."
     n "Probably something indoors, at least for now, seeing as how those storm clouds in the distance are fast approaching."
@@ -3739,8 +3753,13 @@ label friday1:
     
     scene bg codadorm with fade
     
+    show box with Dissolve(.2):
+        ypos 0
+    
     n "After a long week, you decide you're deserving of some carefree relaxation while the storm rages outside."
     n "At some point you get a text from Gunner."
+    
+    hide box
     
     play audio "audio/sound effects/vibrate.ogg"
     
@@ -3797,7 +3816,6 @@ label friday1:
     pause .7
 
 label rooftop_party:
-    ###saturday go to rooftop party or hang with ava at cinema club
     # saturday 2
     
     scene bg codadorm with fade

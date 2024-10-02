@@ -69,6 +69,9 @@ label sleepingIn:
     pause 0.9
     
     scene bg codadorm with fade
+
+    show box with Dissolve(.2):
+        ypos 0
     
     n "Five minutes turned into an hour in the snap of your fingers."
     n "Time's imperceptibly slow march suddenly lurched forward while you were asleep to stab you in the back when you were at your most vulnerable."
