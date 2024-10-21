@@ -729,7 +729,6 @@ label week2Tuesday:
 
             ava @ say "It's alright, I understand. I'm kinda the same way haha! But I've been getting more comfortable with it."
         "Okay!":
-            #finished
             $ clairePoints = clairePoints + 1
             player "Okay!"
 
@@ -747,7 +746,6 @@ label week2Tuesday:
             ava @ say "I'll send you both a copy later."
 
         "Alright but I'm getting my picture taken with you next.":
-            #finished
             $ clairePoints = clairePoints - 1
             $ avaPoints = avaPoints + 1
             player "Alright but I'm getting my picture taken with you next."
@@ -794,10 +792,6 @@ label week2Tuesday:
             ava @ say "Come here [name], check it out!"
 
             n "You think you both look a little bashful in the shot but you like it more than the other shot."
-
-            player "Cool! Can you send me a copy later?"
-
-            ava @ say "Of course!"
 
     player "Right then, shall we continue our little adventure?"
 
