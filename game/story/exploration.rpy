@@ -81,7 +81,10 @@ label afterClassOptions:
                         "You get something to snack on at the cafe but don't find anything interesting to do."
                         
                         jump afterClassOptions
-                    
+                "Library":
+                    "add library to this list where you can get double points for studies"
+                        
+                    jump afterClassOptions
                 "Go back":
                     "jump afterClassOptions"
         "Study at dorm":

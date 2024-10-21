@@ -1,4 +1,74 @@
 label chapter1:
+
+#    "test"
+#    init:
+#        $ timer_range = 0
+#        $ timer_jump = 0
+#    
+#    transform alpha_dissolve:
+#        alpha 0.0
+#        linear 0.5 alpha 1.0
+#        on hide:
+#            linear 0.5 alpha 0
+#        # This is to fade the bar in and out, and is only required once in your script
+#
+#    screen countdown:
+#        timer 0.01 repeat True action If(time > 0, true=SetVariable('time', time - 0.01), false=[Hide('countdown'), Jump(timer_jump)])
+#        bar value time range timer_range xalign 0.5 yalign 0.9 xmaximum 300 at alpha_dissolve # This is the timer bar.
+#        
+#label movingMenu1:
+#    
+#    $ time = .5
+#    $ timer_range = .5
+#    $ timer_jump = 'movingMenu2'
+#    show screen countdown
+#    
+#    menu:
+#        "Choice 1":
+#            hide screen countdown
+#            "You chose 'Choice 1'"
+#            jump menu1_end
+#        "Choice 2":
+#            hide screen countdown
+#            "You chose 'Choice 2'"
+#            jump menu1_end
+#   
+#label menu1_slow:
+#    "You didn't choose anything."
+#    
+#label menu1_end:
+#    "Anyway, let's do something else."
+#    
+#label movingMenu2:
+#    
+#    $ time = .5
+#    $ timer_range = .5
+#    $ timer_jump = 'movingMenu1'
+#    show screen countdown
+#    
+#    menu:
+#        "Choice 1":
+#            hide screen countdown
+#            "You chose 'Choice 1'"
+#            jump menu2_end
+#        "\[correct\]Choice 2":
+#            hide screen countdown
+#            "You chose 'Choice 2'"
+#            jump menu2_end
+#   
+#label menu2_slow:
+#    "You didn't choose anything."
+#    
+#label menu2_end:
+#    "Anyway, let's do something else."
+#    
+#        
+#    
+#    
+#    
+#    "end test"
+
+
     stop music fadeout .5
     
     "Coda is a purely fictional story created by a diverse team with various different backgrounds and beliefs. The events and views of some characters do not necessarily reflect those of the creators."
