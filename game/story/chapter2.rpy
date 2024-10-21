@@ -754,7 +754,6 @@ label week2Tuesday:
 
             player "Great..."
         "Alright but I'm getting my picture taken with you next.":
-            #finished
             $ clairePoints = clairePoints - 1
             $ avaPoints = avaPoints + 1
             
@@ -804,6 +803,7 @@ label week2Tuesday:
 
             n "You think you both look a little bashful in the shot but you like it more than the other shot."
 
+<<<<<<< HEAD
             player "Aww nice!"
 
             ava @ say "The sunlight coming from behind really worked in our favor."
@@ -815,6 +815,9 @@ label week2Tuesday:
             n "Ava shyly smiles, turning away from you."
 
     claire @ say "Right then, shall we continue our little adventure?"
+=======
+    player "Right then, shall we continue our little adventure?"
+>>>>>>> origin/ravenstaging
 
     ava @ say "Sure! I think I'm all rested up and ready to go!"
 
