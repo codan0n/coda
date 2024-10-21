@@ -1129,7 +1129,76 @@ label week2Tuesday:
             
         "Gunner's right, we should all commit a crime":
             player "Gunner's right, commiting crime is fun."
+            
+            gunner @ say "Exactly! What better way to bond with the bros than getting into some comic mischief?"
+            
+            rori @ say "Hm."
+            rori @ say "As long as it's not anything extreme, I guess I'll join in."
+            
+            gunner @ say "Right, no breaking into the White House today."
         "\[Gay\] Maybe we shouldn't become criminals":
             player "Can't we just be gay and not do crime?"
+            
+            gunner @ say "Where's the fun in that?"
+            gunner @ say "You guys are so boooooring!"
+            
+            rori @ say "H-hey, I'm sure we can find a fun crime to commit!"
+            
         "\[Not Gay\] Maybe we shouldn't become criminals":
-            player "Maybe we could just do something fun and legal?"
+            player "Maybe we could just do something legal?"
+            
+            gunner @ say "Where's the fun in that?"
+            gunner @ say "You guys are so boooooring!"
+            
+            rori @ say "H-hey, I'm sure we can find a fun crime to commit!"
+            
+    player "Hmm... What's a good crime?"
+    
+    rori @ say "It has to be victimless. Like piracy."
+    
+    gunner @ say "Bruh have you seen what Somali pirates do?"
+    
+    rori @ say "No I mean like downloading movies for free."
+    
+    player "Is there any other way to download them?"
+    
+    gunner @ say "Can we please not do some made up digital crime? The whole point of this is to get away from that nerdy stuff."
+    
+    rori @ say "Okay tough guy, what are your ideas?"
+    
+    gunner @ say "We could rob a bank!"
+    gunner @ say "[name] can be our getaway driver!"
+    
+    player "I thought we *weren't* gonna be harming anyone."
+    
+    gunner @ say "Bank money is federally insured. Nobody loses a cent!"
+    
+    rori @ say "What about the taxpayers?"
+    
+    gunner @ say "The government just reprints what gets stolen. It's like it never even happened."
+    
+    rori @ say "Still sounds too risky."
+    
+    player "What if we were vigilantes?"
+    
+    rori @ say "Like Robinhood, stealing from the rich and giving to the poor?"
+    
+    gunner @ say "But [name], I am the rich."
+    
+    rori @ say "Okay then you can be like Catman."
+    
+    gunner @ say "A loaded superhero who commits crime? You might be onto something."
+    
+    player "Maybe we should start with something small. Like if we see someone steal a lady's purse we can beat him up and take his wallet."
+    
+    gunner @ say "That's perfect! Now we just have to wait for some thug to commit a robbery in broad daylight on this wealthy college campus with cops who drive by every 5 minutes."
+    
+    rori @ say "Keep on the lookout boys, we've got crimes to... wait are we doing crime or stopping it?"
+    
+    player "Both I think?"
+    
+    
+    
+    
+    
+    #then end up knocking down a bag of pretzels stuck in a vending machine in a hallway and giving it to wild rats
