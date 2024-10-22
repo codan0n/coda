@@ -82,7 +82,7 @@ label afterClassOptions:
                         
                         jump afterClassOptions
                 "Library":
-                    "add library to this list where you can get double points for studies"
+                    call libraryEvent
                         
                     jump afterClassOptions
                 "Go back":
@@ -94,6 +94,27 @@ label afterClassOptions:
             
     return
     
+label libraryEvent:
+    n "You haul your books and papers to the library to get some homework and studying done in peace."
+    n "What topic should you cover?"
+    
+    menu:
+        "French":
+            $ frenchSkill =+ 2
+            n "You pick up your French textbook and practice some lessons."
+        "Literature":
+            $ literatureSkill =+ 2
+            n "You open your totally legally acquired epub of [currentbook] and start reading."
+        "History":
+            $ historySkill =+ 2
+            n "You crack open your History textbook and read up on some ancient cultures."
+        "Statistics":
+            $ statsSkill =+ 2
+            n "You flip open your statistics book and open a calculator app to crunch some numbers."
+            
+    n "Without the distractions in place you feel like you learned more than you normally do."
+    
+    return
     
 label dormSleep:
     scene bg codadorm with fade
@@ -190,7 +211,28 @@ label roseForest:
 
 label roriTrack:
     "rori track scene"
+    #only on cloudy and overcast days
+    
+    n "You once again make your way to the fitness area on the off chance you might feel motivated to work out."
+    n "It seems you weren't the only one with that idea."
+    n "Standing around as awkwardly as you usually do at the gym, Rori notices your presence and jogs up to you."
+    
+    show rori neutral with dissolve
+    
+    rori @ say "Hey name! Didn't expect to find you here."
+    
+    player "Yeah I didn't think I'd see you here either."
+    
+    rori @ say "Gunner somehow convinced me I need to start working out if I wanna maintain my -ahem- \"twinkish figure.\""
+    
+    
+    
+    
+    
+    
+    
     #use some workout machines with rori
+    
     return
     
 

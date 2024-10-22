@@ -803,7 +803,6 @@ label week2Tuesday:
 
             n "You think you both look a little bashful in the shot but you like it more than the other shot."
 
-<<<<<<< HEAD
             player "Aww nice!"
 
             ava @ say "The sunlight coming from behind really worked in our favor."
@@ -815,9 +814,6 @@ label week2Tuesday:
             n "Ava shyly smiles, turning away from you."
 
     claire @ say "Right then, shall we continue our little adventure?"
-=======
-    player "Right then, shall we continue our little adventure?"
->>>>>>> origin/ravenstaging
 
     ava @ say "Sure! I think I'm all rested up and ready to go!"
 
@@ -1201,4 +1197,3 @@ label week2Tuesday:
     
     
     
-    #then end up knocking down a bag of pretzels stuck in a vending machine in a hallway and giving it to wild rats
