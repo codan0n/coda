@@ -374,6 +374,8 @@ label week2Tuesday:
 
     show box with Dissolve(.2):
         ypos 0
+        
+    $ currentbook = "The Odyssey"
 
     show ellen teacher neutral at norm with dissolve
 
@@ -481,7 +483,7 @@ label week2Tuesday:
             n "You pick up your French textbook and practice some lessons."
         "Literature":
             $ literatureSkill =+ 1
-            n "You open your totally legally acquired epub of The Odyssey and start reading."
+            n "You open your totally legally acquired epub of [currentbook] and start reading."
         "History":
             $ historySkill =+ 1
             n "You crack open your History textbook and read up on some ancient cultures."
@@ -570,7 +572,7 @@ label week2Tuesday:
     
     call message("Ava", "Yay ^v^", "avaavi.png") 
     call message("Ava", "I'll let her know", "avaavi.png") 
-    call message("Ava", "meet us tomorrow at noon where we usually meet after class", "avaavi.png") 
+    call message("Ava", "meet us tomorrow at around 9 where we usually meet after class", "avaavi.png") 
     
     call reply_message("k")
     
@@ -612,18 +614,29 @@ label week2Tuesday:
     
     claire @ say "I'm so glad you could make it!"
     
-    player ""
+    player "Heh, glad I'm feeling well enough to... what is it that we're doing exactly?"
     
-
-    scene bg garden with fade
+    claire @ say "There's like this huuuuuge garden on the other side of campus so I thought it would be fun to get lost in it with my pals~"
+    
+    ava @ say "Ooh that does sound like fun! I bet it's super pretty too! Glad I brought my camera~"
+    
+    claire @ say "As if you ever go anywhere without that thing ksksksksk!"
+    
+    ava @ say "True~"
+    
+    player "Shall we get going then?"
+    
+    claire @ say "Yeah!"
+    
+    n "Claire leads you across campus to the gardens. It's easy to spot from a distance thanks to the vibrant colors of all the flowers."
+    
+    scene bg garden with dissolve
 
     show box with Dissolve(.2):
         ypos 0
 
     #play music "audio/music/vylet pony - Reading at Night.ogg" fadein 1.0
     play music "audio/music/vylet - tenderness.ogg" fadein 1.0
-
-    n "You make your way to the botanical gardens. It's easy to spot from a distance thanks to the vibrant colors of all the flowers."
     
     if gardenDiscovered == True:
         n "This is the same garden you've visited before, just at one of the other entrances. The area is quite expansive and you haven't been to this part before."
@@ -636,17 +649,17 @@ label week2Tuesday:
         xpos -400
     with dissolve
 
-    claire @ say "Hey [name]!!! Glad you could make it!"
+    n "Claire hops around whimsically from one plant to another, sniffing the flowers and admiring the multitude of plants."
 
-    ava @ say "It's such a lovely day to go for a walk in the gardens, isn't it?"
+    claire @ say "It's such a lovely day to go for a walk in the gardens, isn't it?"
 
-    player "It sure is. Better than being cooped up in my dorm all day."
+    player "Yeah, I guess it's better than being cooped up in my dorm all day."
 
     ava @ say "Sunlight is good for you. Not just for your skin but also your mental health."
 
     player "Huh. I didn't know that."
 
-    n "Maybe that's why you've always been depressed."
+    #n "Maybe that's why you've always been depressed."
 
     claire @ say "Just be careful not to get a sunburn! And remember to stay hydrated UwU"
 
@@ -654,23 +667,19 @@ label week2Tuesday:
 
     claire @ say "What? UwU?"
 
-    player "Nevermind. Ready to go?"
+    player "Nevermind. Which way should we go? There's like a dozen branching paths."
 
-    claire @ say "Wait!!! I need to take a selfie first so my followers will know I'm like, into nature and stuff!"
+    claire @ say "Hmm, let's gooooo... this way!"
 
-    n "Ava stifles a giggle and holds up her camera."
-
-    ava @ say "Don't worry, I'll be sure to get plenty of shots of you~"
-
-    claire @ say "Ksksksks thaaaaaanks~"
-
-    n "You roll your eyes but can't help but smile as you lead the group onward into the gardens."
+    n "She seems to pick a direction at random and pulls you and Ava along with her, deep into the garden."
     n "Before long, you're surrounded by a variety of shrubs and flowers to the point where you can't even see any of the university buildings anymore."
-    n "Ava frequently stops to take photos of the plants, getting particularly excited when she catches a hummingbird or butterfly sipping from a flower."
-
+    n "Ava managed to escape to take photos of plants, getting particularly excited when she catches a hummingbird or butterfly sipping from a flower, but Claire maintains her death grip on your hand."
+    
     ava @ say "Ooh, I have these in my garden back home. It's called a cardinal flower. Can you guess why?"
 
-    player "Cause it's red like male cardinals?"
+    player "Cause it's red like cardinals?"
+    
+    claire @ say "Only the males~"
 
     ava @ say "Yup! Such a pretty red~"
 
@@ -684,28 +693,28 @@ label week2Tuesday:
     
     show ava normal neutral
 
-    n "Ava provides more fun facts about various plants as you go along."
-    n "Eventually you come to a bench with an arch over it with vines growing all over."
+    n "Ava and Claire continue to bicker and share fun plant facts as you go along."
+    n "After a while, you come to a bench with an arch over it with vines growing all over."
 
-    claire @ say "Whew, can we take a break?"
+    ava @ say "Whew, it's gettin' kinda hot! Can we take a break?"
 
-    ava @ say "Yeah, my legs are killing me."
+    claire @ say "Yeah, my legs are killing me!"
 
     player "Same."
 
-    n "Claire and Ava sit under the arch and begin reviewing the photos they've taken."
+    n "Claire and Ava sit under the arch and begin reviewing the photos they've taken so far."
     n "There's only room for two so you just lean against a nearby tree, taking sips of water from your bottle and watching the bees zoom around."
 
     claire @ say "Hey [name], you wanna get a shot of us under the arch?"
 
-    ava @ say "I'll let you use my camera as long as you promise not to drop it. It costs more than a semester's worth of tuition."
+    ava @ say "I'll let you use my camera as long as you promise not to drop it. It costs more than a semester's worth of tuition!"
 
-    player "Sure but I don't really know how to use one of those fancy cameras."
+    player "Sure, but I don't really know how to use one of those fancy cameras."
 
-    ava @ say "Don't worry, I'll set it to auto. All you have to do is point and click the button."
+    ava @ say "Don't worry, I'll preset the exposure settings. All you have to do is point and click the button."
 
     n "Ava flicks some switches and dials on the camera before handing it over to you."
-    n "You take a few steps back, compose your shot and click the button with a satisfying shutter sound."
+    n "You take a few steps back, compose your shot and press the button with a satisfying shutter sound."
     
     claire @ say "How'd it turn out? Lemme see lemme see lemme see!!"
     
@@ -724,30 +733,30 @@ label week2Tuesday:
     menu:
         ava "{cps=0}Ok now it's your turn, [name]!{/cps}"
         "I don't like getting my picture taken.":
-            #finished
             player "Sorry, I don't like getting my picture taken."
 
-            ava @ say "It's alright, I understand. I'm kinda the same way haha! But I've been getting more comfortable with it."
+            ava @ say "I understand. I'm kinda the same way haha! But I've been getting more comfortable with it."
+            
+            n "Claire lets out a disappointed sigh but doesn't say anything."
         "Okay!":
             $ clairePoints = clairePoints + 1
+            
             player "Okay!"
 
             n "You sit down next to Claire and smile for the camera."
             n "Just before Ava takes the shot, Claire wraps her arm around you, pulling you in close."
 
-            ava @ say "Aww, you two look so cute~"
+            ava @ say "Aww, you two are so cute~"
 
-            claire @ say "Lemme see!"
+            claire @ say "Show us the pic!"
 
-            n "Ava comes around and shows you the picture. Your face has a look of surprise mixed with fear."
+            n "Ava comes around and shows you the picture. Your face has a look of surprise mixed with fear as Claire's sudden death grip took hold of you."
 
-            player "..."
-
-            ava @ say "I'll send you both a copy later."
-
+            player "Great..."
         "Alright but I'm getting my picture taken with you next.":
             $ clairePoints = clairePoints - 1
             $ avaPoints = avaPoints + 1
+            
             player "Alright but I'm getting my picture taken with you next."
 
             show ava overjoyed
@@ -772,10 +781,11 @@ label week2Tuesday:
 
             n "Ava comes around and shows you the picture. It's definitely a better shot than you could have taken with your phone."
 
-            ava @ say "Alright, I guess it's my turn! Lemme just set the camera up real quick for you Claire."
+            ava @ say "Alright, I guess it's my turn! Here you go Claire."
 
-            n "Ava adjusts some dials and hands the camera to Claire who backs up a few steps. She has to bend over a bit to frame the shot."
-            n "Claire motions for you to get closer together and Ava scoots more toward you, enough that you can just barely feel her feathers brushing up against you skin."
+            n "Ava racks the zoom ring, presumably to set the shot up for a closeup. No need for a wide angle when Claire is out of the frame."
+            n "She hands the camera to the bunny and sits down beside you. Claire hops back and has to bend over a bit to frame the shot."
+            n "Claire motions for you to get closer together and Ava scoots more toward you, enough that you can feel her feathers brushing up against you skin."
             
             show ava portrait neutral
 
@@ -793,36 +803,402 @@ label week2Tuesday:
 
             n "You think you both look a little bashful in the shot but you like it more than the other shot."
 
+<<<<<<< HEAD
+            player "Aww nice!"
+
+            ava @ say "The sunlight coming from behind really worked in our favor."
+            
+            player "For sure. It makes your feathers glow so nicely!"
+            
+            ava @ say "You think so?"
+            
+            n "Ava shyly smiles, turning away from you."
+
+    claire @ say "Right then, shall we continue our little adventure?"
+=======
     player "Right then, shall we continue our little adventure?"
+>>>>>>> origin/ravenstaging
 
     ava @ say "Sure! I think I'm all rested up and ready to go!"
 
-    claire @ say "Sounds good to me!"
+    player "Sounds good to me!"
 
-    n "The three of you explore the gardens some more before looping back around to the entrance."
+    n "The three of you spend the rest of the day getting lost in the gardens, laughing, and having an all around good time."
+    n "Eventually you find your way back to the entrance where you bid adieu and return to your respective dorms for the day."
 
-    claire @ say "Whew that sure was fun, wasn't it?"
+    hide box
 
-    ava @ say "Yup! And I got plenty of great pics~"
+    show bg calendar
+    show tsaturday at norm
+    with Dissolve(.5)
 
-    player "Yeah, this was more enjoyable than I thought it was gonna be."
+    pause .6
+    show tforwardslash
+    pause .2
+    show tbackslash
 
-    claire @ say "There's more gardens and trails and stuff in the area we can go to later if you want!"
+    pause .7
 
-    ava @ say "Mountaintop views in the morning are a favorite shooting location of mine~"
-
-    player "We'll see if I'm ever up early enough for that..."
-
-    hide ava
-    hide claire
-    with dissolve
-
-    n "As you part ways back to your respective dorms, Claire and Ava surprise you with a hug."
-    n "You can't remember the last time you've been hugged so it really catches you off guard, but you end up wishing it lasted longer."
-    n "Hanging out with Ava and Claire really lightened your mood. You totally forgot about everything going south in your life for a while."
-    n "Only once you're by yourself again do you start to feel sad again but even then something's changed."
-    n "You realize you have a group of friends to enjoy spending time with. It doesn't even feel like a waste of time, rather it's probably the most worthwhile thing you can do."
-
-
-
+    scene bg codadorm with fade
     
+    show box with Dissolve(.2):
+        ypos 0
+    
+    n "You've fallen behind on homework and assigned reading. It's too easy to get distracted when you have the luxury of staying in your dorm without pants on."
+    n "Maybe you need a place to study. Somewhere quiet. The library perhaps?"
+    n "You pull back the curtain to check the weather just in time for a lightning strike to flashbang you."
+    n "A roar of thunder rattles the building, soon followed by a flurry of water droplets pelting the window."
+    n "...Better bring a rain coat."
+    
+    scene bg library with fade
+    
+    play music "audio/music/Vylet Pony - Cozy Pone.ogg" fadein .5
+    
+    show box with Dissolve(.2):
+        ypos 0
+        
+    n "Wandering the labyrinth that is Harmonia's famously huge library, you happen to see someone you know out of the corner of your eye."
+    n "No one else you've seen emits more 'goth bitch' vibes than her. You could smell her haunted graveyard perfume before you even turned the corner."
+    n "She's just sitting there flipping through some oversized history book with her little paws."
+    n "Didn't you have something for her?"
+    n "Oh yeah, the book Mr. Rothbauer gave you! Is it still in your backpack?"
+    n "While you're unzipping its pouches and digging through papers, Rose closes her book and begins to walk away."
+
+    player "Rose! Wait up!"
+
+    show rose armscrossed neutral at norm with dissolve:
+        xzoom -1
+
+    rose @ say "Hm? Oh, it's you. What do you want?"
+
+    n "You pull the tattered book from your bag and hold it out for her."
+    
+    n "She seems confused at first but quickly snatches it from your grasp and continues on her way."
+
+    player "Not even a 'thank you?'"
+
+    show rose angry -armscrossed
+
+    n "Rose snaps back around and glares at you."
+
+    rose @ say "I told you I don't need your help. Now leave me alone."
+
+    n "You pull a few loose papers from the pocket the book was in."
+
+    player "What about these pages that fell out? Do you want those too?"
+
+    show rose furious
+
+    rose @ say "Give those to me. Now."
+
+    menu:
+        rose "{cps=0}Give those to me. Now.{/cps=0}"
+        "Only if you let me write a page of the project":
+            $ goodEnd = goodEnd + 1
+            
+            n "You might end up regretting this later but you feel bad for making Rose do all the work."
+            n "You have to at least put in a minimal effort."
+            
+            player "You can have them only if you let me write a page of the project."
+            
+            show rose unimpressed
+
+            rose @ say "Not gonna happen."
+
+            player "I guess you'll never read these rare first hand accounts from..."
+
+            n "You take a look at the pages, unfolding a crease that had formed on one."
+
+            player "The Midwest Arcoonia tribe...?"
+            
+            show rose angry
+
+            rose @ say "Get your filthy human hands off those!"
+
+            n "She tries to take them but your superior opposable thumbs refuse to let go."
+
+            player "Careful, you don't wanna rip them by accident."
+            
+            show rose armscrossed furious
+
+            rose @ say "Ugh, fine! ONE page, that's it!"
+
+            n "You let go of the papers with a smirk on your face."
+
+            player "Deal!"
+            
+            n "Rose snatches the pages and turns away from you."
+            
+            rose @ say "What the hell is this?!"
+            
+            n "Rose throws the papers right back into your face."
+            n "Crude doodles and barely legible class notes drift past your eyes on their way to the floor."
+            
+            player "Woops, I guess those weren't pages that fell out of the book after all! Just my history notes~"
+            
+            rose @ say "Ugh! Go to hell."
+
+            show rose armscrossed neutral at flipleft
+                
+            pause .25
+                
+            hide rose with dissolve
+            
+            n "That went well."
+            n "You find a table to sit at and crack open some books."
+        "I'll trade them for something.":
+            $ roseTrade = True
+            
+            player "Sure but you have to give me something in return."
+
+            rose @ say "Are you out of your mind?! I'm not giving you anything!"
+
+            player "I guess you'll never read these rare first hand accounts from..."
+
+            n "You take a look at the pages."
+
+            player "The Midwest Arcoonia tribe...?"
+            
+            show rose angry
+
+            rose @ say "Get your filthy human hands off those!"
+
+            n "She tries to take them but your superior opposable thumbs refuse to let go."
+
+            player "Careful, you don't wanna rip them by accident."
+            
+            show rose unimpressed
+
+            rose @ say "Ugh, unbelievable."
+            rose @ say "..."
+            rose @ say "*sigh*"
+            
+            show rose smug
+            
+            rose @ say "Fine, I'll give you something."
+            rose @ say "Close your eyes."
+            
+            player "What is it?"
+            
+            rose @ say "Don't worry about it. Just close your eyes and relax. And lean down a little for me."
+            
+            scene bg black with dissolve
+            
+            n "You close your eyes as instructed. You're not sure whether to be anxious or excited."
+            n "Is she getting closer? Your heart is racing. You're practically choking on her perfume."
+            n "You feel something gently touching your cheek."
+            n "Is that... Rose's paw?"
+            n "You suddenly feel claws raking down your face, slicing into your skin."
+            n "Your eyes shoot open and you reach up to your face with your hand to check if you're bleeding."
+            n "You guess it was her paw after all."
+                        
+            scene bg library with dissolve
+            
+            show box with Dissolve(.2):
+                ypos 0
+                
+            player "Ahh fuck! What the hell?!"
+            
+            n "While you're staring at your bloody fingers, Rose takes the opportunity to snatch the sheets of paper from your other hand."
+            
+            show rose unimpressed at norm with dissolve
+            
+            rose @ say "What did you expect?"
+            rose @ say "Life's not like one of your creepy animes. Learn to treat people properly or don't be surprised if you end up dead like the rest of your species sooner than later."
+            rose @ say "It's a raccoon's world now and you're just living in it."
+
+            hide rose with dissolve
+            
+            n "Holy hell that stung."
+            n "Both the scratch and the insult."
+            n "She better not have given you rabies just now."
+            n "You walk away in shame to the restroom to clean yourself up."
+            n "After cleaning the blood off your cheek, you find a table to sit at and crack open some books."
+            
+    n "What should you study?"
+    
+    menu:
+        "French":
+            $ frenchSkill =+ 2
+            n "You pick up your French textbook and practice some lessons."
+        "Literature":
+            $ literatureSkill =+ 2
+            n "You open your totally legally acquired epub of [currentbook] and start reading."
+        "History":
+            $ historySkill =+ 2
+            n "You crack open your History textbook and read up on some ancient cultures."
+        "Statistics":
+            $ statsSkill =+ 2
+            n "You flip open your statistics book and open a calculator app to crunch some numbers."
+            
+    n "Without the distractions in place you feel like you learned more than you normally do."
+    n "On your way out, a bulletin board catches your eye."
+    n "A variety of flashy advertisements, events, and other announcements adorn the wall."
+    n "Might as well take a quick look and see if anything interesting is coming up soon."
+    
+    label bulletinboard1:
+        menu:
+            n "{cps=0}Might as well take a quick look and see if anything interesting is coming up soon.{/cps}"
+            "Local Student Dies...":
+                n "You take a look at a newspaper clipping pinned to the board and move aside a piece of paper covering the rest of the headline."
+                n "The full text is \"Local Student Dies in Horrific Vaping Accident\""
+                n "Apparently he vaped so much he died. That's pretty much all there is to the story."
+                n "Well if the cringe of being caught vaping wasn't enough to deter you from trying it, this cautionary tale will surely prevent you from even considering it."
+                
+                jump bulletinboard1
+            "Gayest Pride Parade Ever":
+                n "\"Come join the Gay Gay Homosexual Gay Club's 5th annual queerfest!\""
+                n "It's a flyer for an upcoming traffic obstruction event... that happened 6 months ago."
+                n "All the text is obnoxiously rainbow colored. All of it."
+                n "How many times can they fit the word \"gay\" on a 4x5 inch sheet of paper?"
+                n "You haven't been bombarded with this word this much since playing on Xbawks Live in middle school."
+                
+                jump bulletinboard1
+            "Sick of Being a Furry?":
+                n "\"Hate how your fur/feathers/scales look?\""
+                n "\"Wish you had beautiful soft skin?\""
+                n "\"Look no further than the humansona workshop every 3th Tuesday after a full moon at 2:14AM where we engage in roleplay with our inner human personas!\""
+                n "This is borderline offensive to you."
+                
+                jump bulletinboard1
+            "Generic Anti Suicide Poster":
+                n "It literally says \"Generic Anti Suicide Poster\""
+                n "It has a stock image of an office worker standing on his desk with a noose around his neck and giving a thumbs up."
+                n "Oh my god it even has a watermark." 
+                n "I guess they couldn't be bothered to put any effort into making this."
+                n "The guy in charge of designing it probably killed himself and they had to outsource it."
+                
+                jump bulletinboard1
+            "Quit reading":
+                n "That's enough reading for one day. You've got places to do and things to be."
+
+    stop music fadeout 1.3
+
+    scene bg campus with fade
+
+    show box with Dissolve(.2):
+        ypos 0
+
+    "The following day..."
+    
+    show gunner neutral with dissolve
+    
+    gunner "Yeah so then I'm like \"fuck you\" and oh hi Rori!"
+    
+    n "Gunner started following you after class and telling you frat boy stories until you came across Rori sitting on the grass working on something on his laptop."
+    
+    rori @ say "Waaah!"
+    
+    n "It seems you've startled him."
+    
+    rori @ say "Oh it's just you."
+    rori @ say "I was just really deep into some spaghetti code and so focused on it I didn't see you there!"
+    
+    gunner @ say "Bruh you are *always* on your laptop fiddling with some command line shit."
+    gunner @ say "Why don't you ever I dunno, live your life?"
+    
+    rori @ say "This *is* my life."
+    
+    gunner @ say "That is so sad."
+    gunner @ say "[name] we gotta intervene. I can't stand to see my roommate like this."
+    
+    player "What do you propose we do?"
+    
+    gunner @ say "I dunno, how's that saying go? \"Be a faggot, break the law?\""
+    
+    rori @ say "I think you mean \"Be gay, do crime.\""
+    
+    gunner @ say "Exactly! Let's commit a crime!"
+    gunner @ say "No homo."
+    
+    rori @ say "W-why would I wanna do that?"
+    
+    gunner @ say "Cause it'll be fun? Back me up, [name]."
+    
+    menu:
+        "Gunner's right, we should all be gay":
+            player "Gunner's right, we should all be gay."
+            
+            gunner @ say "What?! That's not...!"
+            
+            n "Rori laughs at your response and Gunner's reaction."
+            
+            rori @ say "Alright I'm in. Can't be gay without a little crime, right?"
+            
+            player "Only in certain countries!"
+            
+        "Gunner's right, we should all commit a crime":
+            player "Gunner's right, commiting crime is fun."
+            
+            gunner @ say "Exactly! What better way to bond with the bros than getting into some comic mischief?"
+            
+            rori @ say "Hm."
+            rori @ say "As long as it's not anything extreme, I guess I'll join in."
+            
+            gunner @ say "Right, no breaking into the White House today."
+        "\[Gay\] Maybe we shouldn't become criminals":
+            player "Can't we just be gay and not do crime?"
+            
+            gunner @ say "Where's the fun in that?"
+            gunner @ say "You guys are so boooooring!"
+            
+            rori @ say "H-hey, I'm sure we can find a fun crime to commit!"
+            
+        "\[Not Gay\] Maybe we shouldn't become criminals":
+            player "Maybe we could just do something legal?"
+            
+            gunner @ say "Where's the fun in that?"
+            gunner @ say "You guys are so boooooring!"
+            
+            rori @ say "H-hey, I'm sure we can find a fun crime to commit!"
+            
+    player "Hmm... What's a good crime?"
+    
+    rori @ say "It has to be victimless. Like piracy."
+    
+    gunner @ say "Bruh have you seen what Somali pirates do?"
+    
+    rori @ say "No I mean like downloading movies for free."
+    
+    player "Is there any other way to download them?"
+    
+    gunner @ say "Can we please not do some made up digital crime? The whole point of this is to get away from that nerdy stuff."
+    
+    rori @ say "Okay tough guy, what are your ideas?"
+    
+    gunner @ say "We could rob a bank!"
+    gunner @ say "[name] can be our getaway driver!"
+    
+    player "I thought we *weren't* gonna be harming anyone."
+    
+    gunner @ say "Bank money is federally insured. Nobody loses a cent!"
+    
+    rori @ say "What about the taxpayers?"
+    
+    gunner @ say "The government just reprints what gets stolen. It's like it never even happened."
+    
+    rori @ say "Still sounds too risky."
+    
+    player "What if we were vigilantes?"
+    
+    rori @ say "Like Robinhood, stealing from the rich and giving to the poor?"
+    
+    gunner @ say "But [name], I am the rich."
+    
+    rori @ say "Okay then you can be like Catman."
+    
+    gunner @ say "A loaded superhero who commits crime? You might be onto something."
+    
+    player "Maybe we should start with something small. Like if we see someone steal a lady's purse we can beat him up and take his wallet."
+    
+    gunner @ say "That's perfect! Now we just have to wait for some thug to commit a robbery in broad daylight on this wealthy college campus with cops who drive by every 5 minutes."
+    
+    rori @ say "Keep on the lookout boys, we've got crimes to... wait are we doing crime or stopping it?"
+    
+    player "Both I think?"
+    
+    
+    
+    
+    
+    #then end up knocking down a bag of pretzels stuck in a vending machine in a hallway and giving it to wild rats

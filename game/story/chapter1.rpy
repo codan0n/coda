@@ -1,8 +1,79 @@
 label chapter1:
+
+#    "test"
+#    init:
+#        $ timer_range = 0
+#        $ timer_jump = 0
+#    
+#    transform alpha_dissolve:
+#        alpha 0.0
+#        linear 0.5 alpha 1.0
+#        on hide:
+#            linear 0.5 alpha 0
+#        # This is to fade the bar in and out, and is only required once in your script
+#
+#    screen countdown:
+#        timer 0.01 repeat True action If(time > 0, true=SetVariable('time', time - 0.01), false=[Hide('countdown'), Jump(timer_jump)])
+#        bar value time range timer_range xalign 0.5 yalign 0.9 xmaximum 300 at alpha_dissolve # This is the timer bar.
+#        
+#label movingMenu1:
+#    
+#    $ time = .5
+#    $ timer_range = .5
+#    $ timer_jump = 'movingMenu2'
+#    show screen countdown
+#    
+#    menu:
+#        "Choice 1":
+#            hide screen countdown
+#            "You chose 'Choice 1'"
+#            jump menu1_end
+#        "Choice 2":
+#            hide screen countdown
+#            "You chose 'Choice 2'"
+#            jump menu1_end
+#   
+#label menu1_slow:
+#    "You didn't choose anything."
+#    
+#label menu1_end:
+#    "Anyway, let's do something else."
+#    
+#label movingMenu2:
+#    
+#    $ time = .5
+#    $ timer_range = .5
+#    $ timer_jump = 'movingMenu1'
+#    show screen countdown
+#    
+#    menu:
+#        "Choice 1":
+#            hide screen countdown
+#            "You chose 'Choice 1'"
+#            jump menu2_end
+#        "\[correct\]Choice 2":
+#            hide screen countdown
+#            "You chose 'Choice 2'"
+#            jump menu2_end
+#   
+#label menu2_slow:
+#    "You didn't choose anything."
+#    
+#label menu2_end:
+#    "Anyway, let's do something else."
+#    
+#        
+#    
+#    
+#    
+#    "end test"
+
+
     stop music fadeout .5
     
     "Coda is a purely fictional story created by a diverse team with various different backgrounds and beliefs. The events and views of some characters do not necessarily reflect those of the creators."
     "Viewer discretion is advised."
+    "Please note that this is a work in progress build that is unfinished in many places."
     
     scene bg letter with fade
     
@@ -670,6 +741,8 @@ label college_orientation:
                 rori @ say "We can play some games and stuff too."
                 
                 player "Sure. Lead the way."
+                
+                n "Rori seems excited to have someone to nerd out with as he takes you to his dorm."
                 
                 call roriDormIntro
                 
@@ -1551,7 +1624,7 @@ label firstDayOfClass:
                 player "No, it's just weird you would think I give a shit about your yacht."
                 
                 gunner @ say "Ohh sorry, sorry! You're more of a helicopter guy I see, my mistake."
-                gunner @ say "My family doesn't have one of those yet but maybe I'll ask for one for my birthday."
+                gunner @ say "Man, I need to get one of those for myself. Maybe I'll ask for one for my birthday."
             "Wow money is so cool.":
                 player "Wow money is just so cool, isn't it?"
                 
@@ -1646,7 +1719,7 @@ label secondDayOfClass:
     n "You roll out of bed and start your morning ritual in preparation for class."
     n "Today you have Literature and then French Language."
     n "A couple weeks ago you received an email with the books you'll need. The first one you'll be going over in literature is the novella \"The Death of Ivan Ilyich.\""
-    n "You pack the book in your bag along with the French textbook and venture out."
+    n "You pack your ebook reader that's loaded with all the books you could find on the pirate bay into your bag along with the French textbook and venture out."
 
     stop music fadeout 1.0
 
@@ -2577,7 +2650,7 @@ label thirdDayOfClassStats:
         
         n "Seems he has other things on his mind. You don't really care if you end up studying with him or not as long as you get a free lunch."
         
-        player "Sure."
+        player "Fine."
         
         gunner @ say "Perfect! Why don't we all sit together then! I'm Gunner by the way. [name] and I have stats class together."
 
@@ -2971,6 +3044,8 @@ label avaClaireGunnerLunch:
         ypos 0
 
     n "After winding down a bit in your dorm, you lie in bed and look at your phone."
+    
+    $ cafeEvents.append("claireCafe")
 
     call phone_start from _call_phone_start_1
 
@@ -3576,6 +3651,9 @@ label thursday1:
             
             scene bg avadorm with fade
             
+            show box with Dissolve(.2):
+                ypos 0
+            
             n "An eternity passes with you and your study partner frequently changing position and whispering broken French to each other in this hot and sweaty room."
             n "Though the odd body language still confuses you, you feel like you've learned a few new words and grammatical rules."
             n "You've ended up lying on your back with your head in Claire's lap while she strokes your hair."
@@ -3615,12 +3693,14 @@ label thursday1:
             
             scene bg codadorm with fade
             
+            show box with Dissolve(.2):
+                ypos 0
+            
             n "You didn't mean to bore her with all that school work."
             n "You should download some games on your laptop to bring next time. Maybe you can get some that are translated in French so you can still learn while playing them."
             
             jump thursday1End
             
-
         "Maybe another time":
             player "Sorry, I have somewhere to be."
             
@@ -3730,6 +3810,9 @@ label thursday1End:
 label friday1:
     scene bg codadorm with fade
     
+    show box with Dissolve(.2):
+        ypos 0
+    
     n "You've made it to the end of your first week back in school."
     n "Just have to get today's classes knocked out, then you'll be free for two whole days."
     
@@ -3739,6 +3822,9 @@ label friday1:
     
     scene bg campus with fade
     
+    show box with Dissolve(.2):
+        ypos 0
+    
     n "You're blessed with a relatively quick and painless classroom experience and are done with your obligations for the day."
     n "Now you'll have to find some way to occupy yourself for the weekend."
     n "Probably something indoors, at least for now, seeing as how those storm clouds in the distance are fast approaching."
@@ -3747,8 +3833,13 @@ label friday1:
     
     scene bg codadorm with fade
     
+    show box with Dissolve(.2):
+        ypos 0
+    
     n "After a long week, you decide you're deserving of some carefree relaxation while the storm rages outside."
     n "At some point you get a text from Gunner."
+    
+    hide box
     
     play audio "audio/sound effects/vibrate.ogg"
     
@@ -3805,7 +3896,6 @@ label friday1:
     pause .7
 
 label rooftop_party:
-    ###saturday go to rooftop party or hang with ava at cinema club
     # saturday 2
     
     scene bg codadorm with fade
