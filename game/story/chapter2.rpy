@@ -1252,10 +1252,272 @@ label week2Tuesday:
     
     n "You bang your fist against the glass in frustration one last time and that seems to do the trick. Without any fanfare, the bag plops down into the receiving area."
     
+    gunner @ say "WE DID IT BOYS!!!!"
+
+    rori @ say "Huzzah!"
     
-    #then end up knocking down a bag of pretzels stuck in a vending machine in a hallway and giving it to wild rats
+    n "You reach in and grab your prize."
+    
+    player "Let us enjoy the spoils of our hardships, lads!"
+    
+    n "You rip open the top and reach in to grab a salty treat to chomp down on."
+    
+    player "Aww what the fuck? They're stale."
+    
+    gunner @ say "No way. Lemme try!"
+    gunner @ say "Ugh. Nope. Not worth it."
+    
+    n "Rori takes the bag and bites into a pretzel as well and gives an unsatisfactory grimace."
+    
+    rori @ say "Hmm. Just barely inedible."
+    
+    player "After all that work. Disappointing."
+    
+    rori @ say "Hey what's that?"
+    
+    n "You look to where Rori is pointing. In the shadows something skitters across the floor."
+    
+    gunner @ say "Is that a rat?"
+    
+    n "Gunner pounces at it but it runs under the vending machine."
+    
+    rori @ say "Dude cut it out! He's just a little guy."
+    rori @ say "He's probably just out looking for food. Here you go, have some pretzels."
+    
+    n "Rori places the bag on the ground with the open end facing the machine. Lightning quick, the rat comes out and snatches it, dragging it back into its lair."
+    n "You, Gunner and Rori crouch down and peek into the gap between the floor and vending machine."
+    n "Rori flashes the light from his phone, revealing a ragged grey rat digging through the bag and nibbling on pretzels."
+    n "It ravenously chews through them, ignoring your gaze."
+    
+    rori @ say "Aww. Cute lil' guy."
+    
+    gunner @ say "Yeesh, I didn't know Harmonia had a rat problem."
+    
+    rori @ say "He's just trying to survive."
+    
+    player "Let's leave him to enjoy his feast."
+    
+    rori @ say "Yeah, I think that's enough crime for one day."
+    
+    scene bg campus with dissolve
+    
+    gunner @ say "Well this was a waste. I was looking forward to some quality law breaking time with my bros."
+    
+    player "Eh, I thought it was a fun little sidequest."
+    
+    rori @ say "Perhaps the real crimes were the friends we made along the way."
+    
+    gunner @ say "Heh maybe you're right."
+    
+    n "Gunner yawns."
+    
+    gunner @ say "Man, I still gotta work on some homework before bed. We'll have to do some more illegal shit later."
+    
+    player "For sure."
+    
+    rori @ say "Yeah, I guess we'll be heading back to our dorms now. See you later [name]! This was a lot of fun!"
+    
+    player "Hell yeah. See you guys later."
+    
+    gunner @ say "Later man!"
+    
+    stop music fadeout 1.0
+
+    hide box
+
+    scene bg black with fade
+
+    hide box
+
+    show bg calendar
+    show tmonday at norm
+    with Dissolve(.5)
+
+    pause .6
+    show tforwardslash
+    pause .2
+    show tbackslash
+
+    pause .7
+
     
     
+    
+    
+    
+label beauty_and_the_beast:
+
+    scene bg codadorm with fade
+
+    play music "audio/ambient/morning birds.ogg" fadein 0.1
+    #play music "audio/music/Evan Schaeffer - React.ogg" fadein 1.0
+
+    show box with Dissolve(.2):
+        ypos 0
+
+    n "You wake up fairly early, yet feeling well rested."
+    n "That's a first."
+    n "Stretching, you reach for your phone and see you have a new message."
+
+    call phone_start from _call_phone_start_11
+
+    call message_start("Claire", "Bonjour [name]! Excited for French today? c:", "claireavi.png") from _call_message_start_15
+
+    call reply_message("Should I be?") from _call_reply_message_94
+
+    call message("Claire", "We're gonna watch a french movie in class lol", "claireavi.png") from _call_message_125
+
+    call reply_message("Aw sweet!") from _call_reply_message_95
+    call reply_message("In that case yes I am excited for french today") from _call_reply_message_96
+
+    call message("Claire", "Ye we're gonna watch an old black and white version of beauty and the beast from like the 40's", "claireavi.png") from _call_message_126
+    call message("Claire", "It's one of my favorite stories so it'll be cool to see this version of it ^w^", "claireavi.png") from _call_message_127
+
+    call reply_message("lol I can't wait") from _call_reply_message_97
+    call reply_message("I like chill movie days") from _call_reply_message_98
+
+    call message("Claire", "I'd be down for some movies and chill at my dorm if you want~", "claireavi.png") from _call_message_128
+    call message("Claire", "I'm sure Ava wouldn't mind", "claireavi.png") from _call_message_129
+    call message("Claire", "She might even join in~", "claireavi.png") from _call_message_351
+    #call message("Claire", "Or at least watch", "claireavi.png")
+
+    call reply_message("Better yet we could all just hang at my dorm") from _call_reply_message_99
+    call reply_message("It gets lonely here cause I'm by myself") from _call_reply_message_100
+
+    call message("Claire", "That works too~", "claireavi.png") from _call_message_130
+
+    call reply_message("I have to get ready to go to literature now. See you in a couple hours!") from _call_reply_message_101
+
+    call message("Claire", "Au revoir!", "claireavi.png") from _call_message_131
+
+    call phone_end from _call_phone_end_12
+
+    
+
+    play music "audio/music/mere - retrograde.ogg" fadein .5
+
+    show box with Dissolve(.2):
+        ypos 0
+
+    n "As you walk into French class you notice the projector displaying the DVD menu for the film Claire mentioned you were gonna watch today."
+    n "Not even a BlueyRay... Where does Harmonia's budget even go towards??"
+
+    show claire sweater wave at norm with dissolve:
+        xpos 300
+
+    claire @ say "Hey [name]! Glad you could make it today!"
+
+    player "Hey Claire! Yeah, I really wasn't feeling too good the other day..."
+    
+    show claire sweater neutral
+
+    claire @ say "Being sick is the wooooorst! I'm happy you're feeling better!"
+
+    player "Tell me about it..."
+
+    hide claire with dissolve
+
+    show celestine happy at norm with dissolve
+
+    celestine @ say "Good afternoon class! Today we're going to be watching a favorite of mine, Beauty and the Beast!"
+    
+    show celestine neutral
+    
+    celestine @ say "I'm sure you're all familiar with the story, so you should be able to follow along and hopefully pick out some of the words they use."
+    celestine @ say "It's good you were able to join us today, [name]! It would have been a shame for you to miss such a masterpiece."
+    celestine @ say "Oh and it's a wonderful learning opportunity as well! I'm a firm believer that watching movies in another language is extremely helpful for familiarizing yourself with the language!"
+    
+    show celestine happy
+    
+    celestine @ say "Without further adieu, let's get into it!"
+
+    hide celestine with dissolve
+
+    n "Mrs. Celestine turns off the lights and hits play on the menu."
+    ##n "During the film, you notice Claire idly sketching something in her notebook but it's too dark for you to tell what."
+    n "The plot is generally the same as the animated version you watched as a kid but in terms of live action versions, this one is clearly superior to the more recent one."
+    n "The lack of color makes the castle a lot spookier than it has any right to be, but you guess a little creepiness should be expected from a movie about a horrific beast."
+    n "Mrs. Celestine interjects throughout the film to point out some interesting facts and translate a few not-so-obvious parts."
+    n "Overall it's an interesting take on the story and it was fun trying to piece together sentences in a language you're barely versed in."
+
+    show celestine neutral at norm with dissolve
+        #xzoom -1
+
+    celestine @ say "C'est la fin! What did you all think of it?"
+
+    show claire sweater neutral at norm with dissolve:
+        xpos 670
+
+    show celestine at flipright
+
+    claire @ say "I liked it! I picked up a few words they were saying and could infer what they were saying pretty well I think."
+
+    celestine @ say "Tres bon! I may pick a few more movies to show in class in the coming months..."
+    celestine @ say "But for now, enjoy your afternoon! You're all dismissed!"
+
+    stop music fadeout 1.0
+
+    scene bg campus with fade
+
+    #play music "audio/ai19.ogg" fadein 1.0
+    play music "audio/music/Evan Schaeffer - Aqueduct.ogg" fadein .5
+
+    show claire sweater pose lusty alert at norm with dissolve:
+        xzoom -1
+        xpos 0
+
+    show box with Dissolve(.2):
+        ypos 0
+    
+    show ava at offscreenright:
+        yalign 0
+
+    claire @ say "...That was a pretty good movie, wasn't it? I'm a sucker for any kind of romantic film!"
+
+    player "Yeah, it wasn't bad. I'd sooner re-watch the animated version though."
+    
+    show claire sweater overjoyed
+
+    claire @ say "The animated version will always hold a special place in my heart ksksksks!"
+    gunner "{nw}"
+
+    show ava casual happy at norm:
+        xpos 320
+    show claire:
+        xpos -330
+    with move
+
+    ava @ say "Hey guys, how was class?"
+    
+    show claire sweater neutral
+    
+    player "We just got done watching La Belle et la Bête."
+    
+    show ava casual concerned
+
+    n "Ava looks confused for a bit before figuring it out."
+    
+    show ava casual daydream
+
+    ava @ say "Ah right, French class."
+
+    claire @ say "How was philosophy?"
+    
+    show ava casual annoyed
+
+    ava @ say "Boring. It's all stuff I've already learned. I can't believe they didn't take my credits from high school."
+
+    claire @ say "Aww... at least you don't have to worry about your grade if you already know all the material!"
+    
+    show ava casual unimpressed
+    
+    ava @ say "Yeah. Honestly I might just start skipping class."
+    
+    player @ say "Just remember to show up when there's an exam."
+    
+    show ava casual happy
+    
+    ava @ say "Of course!"
     
     
     
