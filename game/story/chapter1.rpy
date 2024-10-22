@@ -1,5 +1,28 @@
 label chapter1:
 
+    "test"
+    
+    scene bg campus with fade
+    
+    show gunner neutral at left
+    show rori neutral at right
+    
+    gunner @ say "gunner speaking"
+    
+    rori  @ say "rori speaking" 
+    
+    gunner "gunner speaking"
+    
+    rori "rori speaking"
+    
+    gunner "gunner speaking"
+    
+    rori "rori speaking"
+    
+    
+    
+    "endtest"
+
 #    "test"
 #    init:
 #        $ timer_range = 0
@@ -2495,7 +2518,7 @@ label thirdDayOfClassStats:
 
         claire @ say "Ohmygosh your accent is so cute! Tih rooskie?"
 
-        show mishka sad wave
+        show mishka sadwave
 
         mishka @ say "Nyet, no ya nyemnogo govaryu po-Rooskie..."
         

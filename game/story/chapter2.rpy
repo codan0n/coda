@@ -803,7 +803,6 @@ label week2Tuesday:
 
             n "You think you both look a little bashful in the shot but you like it more than the other shot."
 
-<<<<<<< HEAD
             player "Aww nice!"
 
             ava @ say "The sunlight coming from behind really worked in our favor."
@@ -815,9 +814,6 @@ label week2Tuesday:
             n "Ava shyly smiles, turning away from you."
 
     claire @ say "Right then, shall we continue our little adventure?"
-=======
-    player "Right then, shall we continue our little adventure?"
->>>>>>> origin/ravenstaging
 
     ava @ say "Sure! I think I'm all rested up and ready to go!"
 
@@ -1105,11 +1101,21 @@ label week2Tuesday:
     player "What do you propose we do?"
     
     gunner @ say "I dunno, how's that saying go? \"Be a faggot, break the law?\""
+
+    show rori sleepy:
+        xpos 1080
+        ypos 150
+    show gunner neutral:
+        xpos 450
+        yoffset 350
+        xzoom -1
     
     rori @ say "I think you mean \"Be gay, do crime.\""
     
     gunner @ say "Exactly! Let's commit a crime!"
     gunner @ say "No homo."
+    
+    show rori anxiety
     
     rori @ say "W-why would I wanna do that?"
     
@@ -1187,7 +1193,7 @@ label week2Tuesday:
     
     rori @ say "Okay then you can be like Catman."
     
-    gunner @ say "A loaded superhero who commits crime? You might be onto something."
+    gunner @ say "A loaded superhero who fights crime with crime? You might be onto something."
     
     player "Maybe we should start with something small. Like if we see someone steal a lady's purse we can beat him up and take his wallet."
     
@@ -1197,8 +1203,60 @@ label week2Tuesday:
     
     player "Both I think?"
     
+    gunner @ say "I say neither at this rate!"
+    gunner @ say "Come on, crimes aren't just gonna come to us! We gotta go to the crimes!"
     
+    n "Gunner picks a seemingly random direction and confidently marches off. You look to Rori and the two of you wordlessly agree to follow him."
     
+    scene bg classroom with fade
+    
+    n "Hours passed with nary a crime to commit nor one to prevent. You've searched the university high and low but the problem is that there are just too many cameras and not enough potential victims."
+    n "As hope fades away, a glimmer shines in some forgotten corner, drawing you towards it."
+    
+    player "Guys... You're gonna wanna see this."
+    
+    n "With perked up ears, Gunner and Rori trail behind you to a vending machine, one of many found throughout the hallways of Harmonia."
+    n "But this one is different."
+    n "Lodged between the glass and the shelves inside is a sad looking bag of pretzels someone had clearly paid for but been scammed by the unreliable mechanism."
+    
+    gunner @ say "Just look at how close that bag is to falling! You could blow on it and it'd come down!"
+    
+    rori @ say "Would it even be a crime to take it? It's already been paid for."
+    
+    n "Rori reaches his hoof into the slot at the bottom and tries fishing the bag out but is unable to reach far enough in."
+    
+    player "Check it."
+    
+    n "You point to the sticker on the case that says \"DO NOT SHAKE VENDING MACHINE\"."
+    
+    player "Are you thinking what I'm thinking?"
+    
+    n "Rori stands back up and rubs his chin."
+    
+    rori @ say "Hmm. That definitely counts as a crime, right?"
+    
+    gunner @ say "I mean, we'd be liable for any damages to property or personel as a result of giving this bitch a shake, wouldn't we?"
+    
+    player "Sure sounds like criminal activity to me."
+    
+    gunner @ say "Gentlemen? Shall we?"
+    
+    n "With a collective nod, the three of you go on the offensive, kicking, shoving and jostling the machine. The pretzels hang tantalizingly but hold steady through your barrage."
+    n "You're all left panting and exhausted, losing the will to continue this fight and slumping against the machine."
+    
+    gunner @ say "Gah! It's hopeless! It's stuck in there!"
+    
+    rori @ say "Hold on, I might have a few quarters. We can probably get two bags for the price of one."
+    
+    player "To hell with that! We didn't come this far just to be law abiding citizens did we?!"
+    
+    n "You bang your fist against the glass in frustration one last time and that seems to do the trick. Without any fanfare, the bag plops down into the receiving area."
     
     
     #then end up knocking down a bag of pretzels stuck in a vending machine in a hallway and giving it to wild rats
+    
+    
+    
+    
+    
+    

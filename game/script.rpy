@@ -1,4 +1,14 @@
 init python:
+
+
+
+
+
+
+
+
+
+
     def claire_voice(event, interact=True, **kwargs):
         if not interact:
             return
@@ -991,6 +1001,14 @@ layeredimage gunner neutral:
     group saying:
         attribute say:
             "images/characters/gunnersays.png"
+
+layeredimage gunner neutralold:
+    at sprite_highlight('gunner')
+    always:
+        'images/characters/gunner neutralold.png'
+    group saying:
+        attribute say:
+            "images/characters/gunnersays.png"
             
 
 layeredimage herschel:
@@ -1248,6 +1266,27 @@ layeredimage rori neutral:
     at sprite_highlight('rori')
     always:
         'images/characters/rori neutral.png'
+    group saying:
+        attribute say:
+            "images/characters/rorisays.png"
+layeredimage rori sleepy:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori sleepy.png'
+    group saying:
+        attribute say:
+            "images/characters/rorisays.png"
+layeredimage rori concerned:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori concerned.png'
+    group saying:
+        attribute say:
+            "images/characters/rorisays.png"
+layeredimage rori neutral blushing:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori neutral blushing.png'
     group saying:
         attribute say:
             "images/characters/rorisays.png"
@@ -19947,7 +19986,7 @@ label ending:
     n "Thanks for playing!"
     n "More to come in a future update!"
     n "Credits in the about section on the main menu."
-
+    n "sprite highlighting code: Sodora"
 #    n "Writing: - Codanon, anonymous"
 #
 #    n "Art: anonymous, @birdsarealright, @lizardsart89, @_zokhan, @_ronvi/@wiskors, @majisuta022, @rexhastala, @spakka5, @baronboar, machapigeon, Mono/Proton, Loanshark, @videobun_art, @PennsArtStudio, @ljesak, @Katnay3, @BaronBoar, Nevrax Design Team"

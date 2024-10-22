@@ -94,13 +94,11 @@ init -10 python:
     #       Used by SpriteFocus's __call__ function to determine which sprites to put in talking and non-talking states
     def name_callback(event, interact=True, name=None, **kwargs):
         global speaking_char
-        
-        
-
         if event == "begin":
             speaking_char = name
-                
-            #****my edit********
+            
+            
+        #****my edit********
         if speaking_char == "other1":
             if not interact:
                 return
@@ -109,7 +107,7 @@ init -10 python:
             elif event == "slow_done":
                 renpy.sound.stop()    
         
-        if speaking_char == "claire":
+        elif speaking_char == "claire":
             if not interact:
                 return
             if event == "show_done":
@@ -117,7 +115,7 @@ init -10 python:
             elif event == "slow_done":
                 renpy.sound.stop()
                 
-        if speaking_char == "gunner":
+        elif speaking_char == "gunner":
             if not interact:
                 return
             if event == "show_done":
@@ -125,7 +123,7 @@ init -10 python:
             elif event == "slow_done":
                 renpy.sound.stop()        
         
-        if speaking_char == "mishka":
+        elif speaking_char == "mishka":
             if not interact:
                 return
             if event == "show_done":
@@ -133,7 +131,7 @@ init -10 python:
             elif event == "slow_done":
                 renpy.sound.stop()
                 
-        if speaking_char == "rori":
+        elif speaking_char == "rori":
             if not interact:
                 return
             if event == "show_done":
@@ -141,7 +139,7 @@ init -10 python:
             elif event == "slow_done":
                 renpy.sound.stop()
                 
-        if speaking_char == "rose":
+        elif speaking_char == "rose":
             if not interact:
                 return
             if event == "show_done":
@@ -149,7 +147,7 @@ init -10 python:
             elif event == "slow_done":
                 renpy.sound.stop()
             
-        if speaking_char == "ellen":
+        elif speaking_char == "ellen":
             if not interact:
                 return
             if event == "show_done":
@@ -157,7 +155,7 @@ init -10 python:
             elif event == "slow_done":
                 renpy.sound.stop()
                 
-        if speaking_char == "ava":
+        elif speaking_char == "ava":
             if not interact:
                 return
             if event == "show_done":
@@ -165,7 +163,7 @@ init -10 python:
             elif event == "slow_done":
                 renpy.sound.stop()
                 
-        if speaking_char == "player":
+        elif speaking_char == "player":
             if not interact:
                 return
             if event == "show_done":
@@ -173,7 +171,7 @@ init -10 python:
             elif event == "slow_done":
                 renpy.sound.stop()
                 
-        if speaking_char == "n":
+        elif speaking_char == "n":
             if not interact:
                 return
             if event == "show_done":
@@ -182,6 +180,14 @@ init -10 python:
                 renpy.sound.stop()
         
         #********end my edit*********
+            
+            
+            
+            
+            
+            
+            
+            
 
     # Used to help make sprite_tf more reusable while still using the function statement in the ATL
     class SpriteFocus(object):
@@ -190,11 +196,6 @@ init -10 python:
         #             that is written to speaking_char in the character callback.
         def __init__(self, char_name):
             self.char_name = char_name
-            
-            
-            
-
-            
 
         ## Main function ##
         # trans - Renpy transform object that we'll manipulate
@@ -207,22 +208,13 @@ init -10 python:
             #### Setup ####
             global sprite_focus, speaking_char # Get the global variables we defined earlier
             char_name = self.char_name # Just to save having self.char_name everywhere
-                
-
-            
-            
-            
-            
-            
-            
-            
             # Add an entry for our char_name if it's not in the dictionary yet
             if char_name not in sprite_focus:
                 sprite_focus[char_name] = False
-            anim_length = 0.16       # How long (in seconds) the animation will last
-            bright_change = 0.030    # How much the brightness changes
-            sat_change = 0.10        # How much the saturation changes
-            zoom_change = 0.004    # How much the zoom changes
+            anim_length = 0.2       # How long (in seconds) the animation will last
+            bright_change = 0.08    # How much the brightness changes
+            sat_change = 0.2        # How much the saturation changes
+            zoom_change = 0.0025    # How much the zoom changes
             # - y_change is mostly here because the Minotaur Hotel sprites were made to be kept level with
             #   the bottom of the screen. The zoom change causes them to rise slightly
             #   above it. So I apply a small yoffset to keep them in place.
@@ -283,8 +275,7 @@ init -10 python:
             #   For example, if the talking non-talking version has the sprite moved down 10 pixels,
             #   the talking version should start from 10 pixels down and rise up.
             if is_talking: # Apply the talking transformation
-                #trans.matrixcolor = SaturationMatrix((1.0-sat_change) + curr_ease * sat_change) * BrightnessMatrix(-bright_change + curr_ease * bright_change)
-                #trans.matrixcolor = SaturationMatrix((1.0-sat_change) + curr_ease * sat_change) * BrightnessMatrix(0)
+                trans.matrixcolor = SaturationMatrix((1.0-sat_change) + curr_ease * sat_change) * BrightnessMatrix(-bright_change + curr_ease * bright_change)
                 trans.zoom = min(curr_ease * zoom_change + (1.0-zoom_change), 1.0)
                 trans.yoffset = y_change - curr_ease * y_change # Delete here if you removed y_change earlier
             else:           # Apply the not-talking transformation
