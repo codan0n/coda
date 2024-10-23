@@ -1340,11 +1340,6 @@ label week2Tuesday:
 
     pause .7
 
-    
-    
-    
-    
-    
 label beauty_and_the_beast:
 
     scene bg codadorm with fade
@@ -1355,8 +1350,7 @@ label beauty_and_the_beast:
     show box with Dissolve(.2):
         ypos 0
 
-    n "You wake up fairly early, yet feeling well rested."
-    n "That's a first."
+    n "You're woken up with a text from Claire."
     n "Stretching, you reach for your phone and see you have a new message."
 
     call phone_start from _call_phone_start_11
