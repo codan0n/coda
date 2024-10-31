@@ -1,27 +1,27 @@
 label chapter1:
 
-    "test"
-    
-    scene bg campus with fade
-    
-    show gunner neutral at left
-    show rori neutral at right
-    
-    gunner @ say "gunner speaking"
-    
-    rori  @ say "rori speaking" 
-    
-    gunner "gunner speaking"
-    
-    rori "rori speaking"
-    
-    gunner "gunner speaking"
-    
-    rori "rori speaking"
-    
-    
-    
-    "endtest"
+#    "test"
+#    
+#    scene bg campus with fade
+#    
+#    show gunner neutral at left
+#    show rori neutral at right
+#    
+#    gunner @ say "gunner speaking"
+#    
+#    rori  @ say "rori speaking" 
+#    
+#    gunner "gunner speaking"
+#    
+#    rori "rori speaking"
+#    
+#    gunner "gunner speaking"
+#    
+#    rori "rori speaking"
+#    
+#    
+#    
+#    "endtest"
 
 #    "test"
 #    init:
@@ -103,37 +103,37 @@ label chapter1:
     show box with Dissolve(.2):
         ypos 0
 
-    "You got a letter."
-    "The name on the envelope said \"Harmonia University.\""
-    "It's rediculous... Could it really be true?"
-    "Such a prestegious university wants you...?"
-    "You never even applied."
-    "Did they send this by mistake?"
-    "But it's signed by the dean himself."
+    n "You got a letter."
+    n "The name on the envelope said \"Harmonia University.\""
+    n "It's rediculous... Could it really be true?"
+    n "Such a prestegious university wants you...?"
+    n "You never even applied."
+    n "Did they send this by mistake?"
+    n "But it's signed by the dean himself."
     
-    "\"Congratulations! You have been admitted to Harmonia University's undergraduate program starting this Fall.\""
-    "\"We invite you to one of the highest ranked learning institutions in the world to experience a plethora of exciting opportunities!\""
-    "\"Our passionate staff will prepare you for a lifetime of success. Join us as you step into the next chapter of your life!\""
+    n "\"Congratulations! You have been admitted to Harmonia University's undergraduate program starting this Fall.\""
+    n "\"We invite you to one of the highest ranked learning institutions in the world to experience a plethora of exciting opportunities!\""
+    n "\"Our passionate staff will prepare you for a lifetime of success. Join us as you step into the next chapter of your life!\""
     
-    "It goes on for a while, full of marketing buzzwords and diversity statistics."
-    "There's a note at the bottom."
+    n "It goes on for a while, full of marketing buzzwords and diversity statistics."
+    n "There's a note at the bottom."
     
-    "\"Given your situation, I would like to personally welcome you and offer you a tour of the campus myself. It would be an honor to have you among us.\""
-    "\"I have arranged comfortable living accomodations for you, so that you may focus on getting the most out of your education. Your scholarship will cover all your necessities and then some.\""
-    "\"On behalf of Harmonia University, we eagerly await your arrival.\""
-    "\"Nicodemus Kaczynski\nDean of Harmonia University\""
+    n "\"Given your situation, I would like to personally welcome you and offer you a tour of the campus myself. It would be an honor to have you among us.\""
+    n "\"I have arranged comfortable living accomodations for you, so that you may focus on getting the most out of your education. Your scholarship will cover all your necessities and then some.\""
+    n "\"On behalf of Harmonia University, we eagerly await your arrival.\""
+    n "\"Nicodemus Kaczynski\nDean of Harmonia University\""
     
-    "It's strange, but can you really say no?"
-    "Might as well go for it. There's nothing left for you at home anymore."
+    n "It's strange, but can you really say no?"
+    n "Might as well go for it. There's nothing left for you at home anymore."
     #there's no reason to stay home anymore
-    "Your parents died of that damn disease three years ago. Since then you haven't really done anything with your life."
-    "This could be a good opportunity to start fresh."
+    n "Your parents died of that damn disease three years ago. Since then you haven't really done anything with your life."
+    n "This could be a good opportunity to start fresh."
     
     #yes this bit is just a silent hill 2 reference
     
     scene bg black with fade
     
-    "A few weeks later"
+    n "A few weeks later"
     
     ########
     
@@ -155,9 +155,9 @@ label chapter1:
     nicodemus "Find what's important to you!"
     nicodemus "Now then, do you have any questions, young lad?"
     
-    "To be honest, you weren't really paying attention for the past hour until now."
-    "The dean is a short raccoon who wears an old timey but distinguished suit. A pair of small spectacles rests at the edge of his snout. He carries a cane but doesn't lean on it too much."
-    "He's like a caricature of a kind old grandpa who tells war stories but leaves the gorey parts out."
+    n "To be honest, you weren't really paying attention for the past hour until now."
+    n "The dean is a short raccoon who wears an old timey but distinguished suit. A pair of small spectacles rests at the edge of his snout. He carries a cane but doesn't lean on it too much."
+    n "He's like a caricature of a kind old grandpa who tells war stories but leaves the gorey parts out."
     n "He seems like a nice guy and all, but you just can't escape the feeling like you don't belong here."
     
     $ name = "player"
@@ -191,7 +191,7 @@ label nicodemusQuestions:
             nicodemus "That is, at least on paper, the official reason for how I brought you on board."
             nicodemus "The actual reason has more to do with..."
             
-            "He hesitates, seemingly unsure of what words to use."
+            n "He hesitates, seemingly unsure of what words to use."
             
             nicodemus "You see, your predicament reminded me of an old friend of mine. Are you familiar with the Tasmanian tiger?"
             
@@ -220,10 +220,10 @@ label nicodemusQuestions:
                     
                     nicodemus "Yes, they went exctinct decades ago. There's not even a color photograph of one."
                     
-            "\"Extinct.\""
-            "The word sends chills down your spine."
-            "You've been trying not to think about it, but that's what your species will be once you die."
-            "All that will be left of you are stories and photographs."
+            n "\"Extinct.\""
+            n "The word sends chills down your spine."
+            n "You've been trying not to think about it, but that's what your species will be once you die."
+            n "All that will be left of you are stories and photographs."
             
             scene bg campus_sunny_day with dissolve    
             
@@ -236,7 +236,7 @@ label nicodemusQuestions:
             nicodemus "He withdrew himself from everyone and eventually withered away, like some forgotten flower. I'd hate for you to suffer the same fate."
             nicodemus "You see what I'm getting at, don't you?"
             
-            "You give a somber nod."
+            n "You give a somber nod."
         "Will I fit in?" if questionFitIn == False:
             $ questionFitIn = True
             
@@ -258,7 +258,7 @@ label nicodemusQuestions:
             nicodemus "Feel free to break me out of that prison from time to time to discuss whatever's on your mind."
             nicodemus "It's also a great photo opportunity."
             
-            "He points to a photographer in the distance, crouched beside a water fountain trying to look inconspicuous with his giant telephoto lens pointed at you."
+            n "He points to a photographer in the distance, crouched beside a water fountain trying to look inconspicuous with his giant telephoto lens pointed at you."
         "That's all" if questionAsked == True:
             player "That's all."
             
@@ -280,15 +280,15 @@ label movingOn:
     
     nicodemus "I'm glad I could be of service! Now then, if you'll excuse me..."
     
-    "Nicodemus gives you a warm smile before slowly trodding away."
+    n "Nicodemus gives you a warm smile before slowly trodding away."
     
     hide nicodemus with dissolve
     
-    "Even as the sun began to set, the campus was swarming with freshly admitted students either in tour groups or exploring their new surroundings on their own."
-    "You don't have much time to spare, so you make your way to the building where your scheduled orientation is soon to take place."
+    n "Even as the sun began to set, the campus was swarming with freshly admitted students either in tour groups or exploring their new surroundings on their own."
+    n "You don't have much time to spare, so you make your way to the building where your scheduled orientation is soon to take place."
 
 label college_orientation:
-        #ACT 1
+    #ACT 1
     #___saturday1
 
     play sound "audio/sound effects/door opening.wav"
@@ -299,7 +299,6 @@ label college_orientation:
         ypos 0
 
     play music "audio/ambient/indoors people talking.ogg" fadein 1.5
-    
     
     #n "You had some trouble finding the building you're supposed to be in but managed to make it just in time."
     n "After checking in, you were directed to a lecture hall where several others are already seated and chatting amongst themselves."
@@ -312,7 +311,7 @@ label college_orientation:
     #n "It's not working."
     n "Eventually a woman walks up to the podium and the voices around you quiet down."
 
-    show ellen teacher neutral at norm with Dissolve(.5)
+    show margaret neutral at norm with Dissolve(.5)
 
     stop music fadeout 2.0
 

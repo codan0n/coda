@@ -1,14 +1,5 @@
 init python:
 
-
-
-
-
-
-
-
-
-
     def claire_voice(event, interact=True, **kwargs):
         if not interact:
             return
@@ -173,7 +164,7 @@ define fortune = Character("Fortune", image="fortune", what_color="d0dbff", call
 define creature = Character("Creature", image="fortune", what_color="d0dbff", what_font="dudu.ttf")
 define lina = Character("lina", image="lina", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
 define waitress = Character("waitress", image="lina", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
-define nicodemus = Character("Nicodemus", image="nicodemus", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
+define nicodemus = Character("Nicodemus", image="nicodemus", what_color="d0dbff", callback=name_callback, cb_name = "nicodemus", what_font="dudu.ttf")
 
 #old mishka text color a4cffc
 #old gunner color #ffb7d3, reuse for lina?
@@ -198,10 +189,10 @@ define config.say_attribute_transition_layer = "master"
 #    always:
 #        'testimage'
 
-layeredimage adam:
-    at sprite_highlight('adam')
+layeredimage nicodemus neutral:
+    at sprite_highlight('nicodemus')
     always:
-        'images/characters/adam.png'
+        'images/characters/nicodemus neutral.png'
     group saying:
         attribute say:
             "images/characters/celestinesays.png"
