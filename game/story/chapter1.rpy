@@ -1,28 +1,28 @@
 label chapter1:
 
-    "test"
-    
-    scene bg campus with fade
-    
-    show gunner neutral at left
-    show rori neutral at right
-    
-    gunner @ say "gunner speaking"
-    
-    rori  @ say "rori speaking" 
-    
-    gunner "gunner speaking"
-    
-    rori "rori speaking"
-    
-    gunner "gunner speaking"
-    
-    rori "rori speaking"
-    
-    
-    
-    "endtest"
-
+#    "test"
+#    
+#    scene bg campus with fade
+#    
+#    show gunner neutral at left
+#    show rori neutral at right
+#    
+#    gunner @ say "gunner speaking"
+#    
+#    rori  @ say "rori speaking" 
+#    
+#    gunner "gunner speaking"
+#    
+#    rori "rori speaking"
+#    
+#    gunner "gunner speaking"
+#    
+#    rori "rori speaking"
+#    
+#    
+#    
+#    "endtest"
+#
 #    "test"
 #    init:
 #        $ timer_range = 0
@@ -312,18 +312,18 @@ label college_orientation:
     #n "It's not working."
     n "Eventually a woman walks up to the podium and the voices around you quiet down."
 
-    show ellen teacher neutral at norm with Dissolve(.5)
+    show margaret neutral at norm with Dissolve(.5)
 
     stop music fadeout 2.0
 
     ellen @ say "            Ahem            "
 
-    show ellen teacher happy
+    show margaret happy
 
     ellen @ say "Welcome to Harmonia University, new students! My name is Margaret Ellen and I'm very excited to introduce you to the next chapter of your lives!"
     ellen @ say "This orientation marks the beginning of your journey into the finest acadamia has to offer! Everything you'll learn and experience over the next four years starts here."
 
-    hide ellen
+    hide margaret
     with dissolve
 
     n "You start to tune out of what she's saying. It's just boring introductory formalities anyway."
@@ -345,7 +345,7 @@ label college_orientation:
     
     hide rori with dissolve
 
-    show ellen teacher neutral at norm with dissolve
+    show margaret neutral at norm with dissolve
 
     ellen @ say "...If you haven't already, go ahead and introduce yourselves to those sitting around you!"
     ellen @ say "Go on, don't be shy!"
@@ -513,7 +513,7 @@ label college_orientation:
 
     hide rori with dissolve
 
-    show ellen teacher neutral at norm with dissolve
+    show margaret neutral at norm with dissolve
 
     stop music fadeout 2.0
 
@@ -522,7 +522,7 @@ label college_orientation:
 
     n "Ms. Ellen points to a girl toward the back of the room."
     
-    show ellen teacher happy
+    show margaret happy
 
     ellen @ say "You there! With the camera!"
 
@@ -540,7 +540,7 @@ label college_orientation:
 
     hide ava with dissolve
 
-    show ellen teacher neutral at norm with dissolve
+    show margaret neutral at norm with dissolve
 
     ellen @ say "Very good! Next, how abouuuuutttt..."
     
@@ -549,7 +549,7 @@ label college_orientation:
         
     pause .3
 
-    show ellen teacher neutral at flipright
+    show margaret neutral at flipright
     
     pause .3
     
@@ -584,13 +584,13 @@ label college_orientation:
 
     hide claire with dissolve
 
-    show ellen teacher neutral at norm with dissolve:
+    show margaret neutral at norm with dissolve:
         xzoom -1
         xpos -50
 
     ellen @ say "Nicely done! We'll do a couple more. Let's see..."
 
-    show ellen teacher neutral at flipleft
+    show margaret neutral at flipleft
     
     pause .6
 
@@ -606,13 +606,13 @@ label college_orientation:
     player "Hi, my name's [name] and I'm also an undecided major, mostly for the same reason. I guess something that's interesting about me is that I'm the last human on Earth."
     player "Which is probably the reason I got accepted here with a full scholarship, cause it sure wasn't my grades."
 
-    show ellen teacher melancholy
+    show margaret melancholy
 
     n "That gets a few chuckles from the room, but Ms. Ellen just glares at you."
 
     ellen @ say "Yes well... very good, thank you [name]. Moving on."
     
-    show ellen teacher neutral
+    show margaret neutral
 
     n "Ms. Ellen gives a few more announcements before wrapping up her speech and dismissing you all."
 
@@ -1759,25 +1759,25 @@ label secondDayOfClass:
     n "You don't think you made the best first impression the other day. Hopefully she doesn't hold a grudge."
     n "She double clicks a file and brings up a slideshow."
 
-    show ellen teacher happy at norm with dissolve
+    show margaret happy at norm with dissolve
 
     ellen @ say "Good morning and welcome to Literature I!"
     ellen @ say "Today we'll go over the syllabus and what you can expect from this class. Then we'll finish up with some discussion on the assigned reading!"
 
     n "She clicks a button and the slideshow advances to the next slide, going over some information about herself."
     
-    show ellen teacher neutral
+    show margaret neutral
 
     ellen @ say "My name is Miss Ellen and I've been teaching at Harmonia for about a decade so I like to think I've gotten quite good at it!"
 
-    show ellen teacher sad at shudder
+    show margaret sad at shudder
 
     ellen @ say "Oop, ignore the Mrs. in front of my name on the slide... I guess I forgot to update that..."
     ellen @ say "Haha recently divorced... you know how it goes..."
 
     n "She quickly advances forward a few more slides."
 
-    show ellen teacher neutral at norm
+    show margaret neutral at norm
 
     ellen @ say "Ahem where was I? Oh yes, this course will introduce you to literature across a variety of different cultures throughout different time periods."
     ellen @ say "In the interest of time, most of the reading will be on the short side, or at least limited to excerpts from longer works."
@@ -1801,7 +1801,7 @@ label secondDayOfClass:
     n "Miss Ellen goes over the first chapter of the novella, explaining some things and asking the class for their thoughts along the way."
     n "Time flies by quickly and the end of the hour is upon you before you realize it."
 
-    show ellen teacher neutral at norm with dissolve
+    show margaret neutral at norm with dissolve
 
     ellen @ say "That's all for today! We'll continue this discussion next time! Have a nice day!"
 
@@ -3425,7 +3425,7 @@ label thursday1:
     show box with Dissolve(.2):
         ypos 0
 
-    show ellen teacher neutral at norm with dissolve
+    show margaret neutral at norm with dissolve
     
     ellen @ say "Good morning class, today we'll continue our discussion on The Death of Ivan Ilyich!"
     ellen @ say "We've seen that Ivan's social circle is more concerned with status and convenience than compassion."
@@ -3435,7 +3435,7 @@ label thursday1:
     ellen @ say "The more his wife expected of him, the more he retreated into his career... "
     ellen @ say "Oh Tolstoy, how right you were all along. How disappointing marriage turned out to be."
     
-    show ellen teacher sad
+    show margaret sad
         
     ellen @ say "If only I'd listened to you, maybe I wouldn't have wasted 15 years of my life...!"
     ellen @ say "Er... I'm sorry, that was unprofessional... Let's just forget about that and move on shall we?"

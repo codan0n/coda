@@ -814,115 +814,115 @@ layeredimage claire swimsuit leaning:
         attribute say:
             "images/characters/clairesays.png"
 
-layeredimage ellen teacher neutral:
+layeredimage margaret neutral:
     at sprite_highlight('ellen')
     always:
-        'images/characters/ellen teacher neutral.png'
+        'images/characters/margaret neutral.png'
     group saying:
         attribute say:
             "images/characters/ellenteachersays.png"
-layeredimage ellen teacher tailwag flattered:
+layeredimage margaret tailwag flattered:
     at sprite_highlight('ellen')
     always:
-        'images/characters/ellen teacher tailwag flattered.png'
+        'images/characters/margaret tailwag flattered.png'
     group saying:
         attribute say:
             "images/characters/ellenteachersays.png"
-layeredimage ellen teacher tailwag happy:
+layeredimage margaret tailwag happy:
     at sprite_highlight('ellen')
     always:
-        'images/characters/ellen teacher tailwag happy.png'
+        'images/characters/margaret tailwag happy.png'
     group saying:
         attribute say:
             "images/characters/ellenteachersays.png"
-layeredimage ellen teacher sad smoking:
+layeredimage margaret sad smoking:
     at sprite_highlight('ellen')
     always:
-        'images/characters/ellen teacher sad smoking.png'
+        'images/characters/margaret sad smoking.png'
     group saying:
         attribute say:
             "images/characters/ellenteachersays.png"
-layeredimage ellen teacher smoking intrigued:
+layeredimage margaret smoking intrigued:
     at sprite_highlight('ellen')
     always:
-        'images/characters/ellen teacher smoking intrigued.png'
+        'images/characters/margaret smoking intrigued.png'
     group saying:
         attribute say:
             "images/characters/ellenteachersays.png"
-layeredimage ellen teacher smoking laugh:
+layeredimage margaret smoking laugh:
     at sprite_highlight('ellen')
     always:
-        'images/characters/ellen teacher smoking laugh.png'
+        'images/characters/margaret smoking laugh.png'
     group saying:
         attribute say:
             "images/characters/ellenteachersays.png"
-layeredimage ellen teacher flattered:
+layeredimage margaret flattered:
     at sprite_highlight('ellen')
     always:
-        'images/characters/ellen teacher flattered.png'
+        'images/characters/margaret flattered.png'
     group saying:
         attribute say:
             "images/characters/ellenteachersays.png"
-layeredimage ellen teacher tailwag neutral:
+layeredimage margaret tailwag neutral:
     at sprite_highlight('ellen')
     always:
-        'images/characters/ellen teacher tailwag neutral.png'
+        'images/characters/margaret tailwag neutral.png'
     group saying:
         attribute say:
             "images/characters/ellenteachersays.png"
-layeredimage ellen teacher tailwag flattered:
+layeredimage margaret tailwag flattered:
     at sprite_highlight('ellen')
     always:
-        'images/characters/ellen teacher tailwag flattered.png'
+        'images/characters/margaret tailwag flattered.png'
     group saying:
         attribute say:
             "images/characters/ellenteachersays.png"
-layeredimage ellen teacher tailwag happy:
+layeredimage margaret tailwag happy:
     at sprite_highlight('ellen')
     always:
-        'images/characters/ellen teacher tailwag happy.png'
+        'images/characters/margaret tailwag happy.png'
     group saying:
         attribute say:
             "images/characters/ellenteachersays.png"
-layeredimage ellen teacher intrigued:
+layeredimage margaret intrigued:
     at sprite_highlight('ellen')
     always:
-        'images/characters/ellen teacher intrigued.png'
+        'images/characters/margaret intrigued.png'
     group saying:
         attribute say:
             "images/characters/ellenteachersays.png"
-layeredimage ellen teacher melancholy:
+layeredimage margaret melancholy:
     at sprite_highlight('ellen')
     always:
-        'images/characters/ellen teacher melancholy.png'
+        'images/characters/margaret melancholy.png'
     group saying:
         attribute say:
             "images/characters/ellenteachersays.png"
-layeredimage ellen teacher happy:
+layeredimage margaret happy:
     at sprite_highlight('ellen')
     always:
-        'images/characters/ellen teacher happy.png'
+        'images/characters/margaret happy.png'
     group saying:
         attribute say:
             "images/characters/ellenteachersays.png"
-layeredimage ellen teacher sad:
+layeredimage margaret sad:
     at sprite_highlight('ellen')
     always:
-        'images/characters/ellen teacher sad.png'
+        'images/characters/margaret sad.png'
     group saying:
         attribute say:
             "images/characters/ellenteachersays.png"
-layeredimage ellen teacher smoking neutral:
+layeredimage margaret smoking neutral:
     at sprite_highlight('ellen')
     always:
-        'images/characters/ellen teacher smoking neutral.png'
+        'images/characters/margaret smoking neutral.png'
     group saying:
         attribute say:
             "images/characters/ellenteachersays.png"
-layeredimage ellen teacher sadsmoking:
+layeredimage margaret sadsmoking:
     at sprite_highlight('ellen')
     always:
-        'images/characters/ellen teacher sad smoking.png'
+        'images/characters/margaret sad smoking.png'
     group saying:
         attribute say:
             "images/characters/ellenteachersays.png"
@@ -3142,7 +3142,7 @@ label monty_hall:
     
     show mishka neutral
     
-    show ellen teacher neutral at offscreenright:
+    show margaret neutral at offscreenright:
         yalign 0
     
     #hide mishka with dissolve
@@ -3151,7 +3151,7 @@ label monty_hall:
     
     pause .2
 
-    show ellen teacher neutral:
+    show margaret neutral:
         xpos 350
     show mishka:
         xpos -440
@@ -3161,21 +3161,21 @@ label monty_hall:
 
     player "Yes ma'am. I ended up going to the hospital and they gave me some pills so I won't pass out in your class anymore."
     
-    show ellen teacher happy
+    show margaret happy
 
     ellen @ say "That's good to hear! I'd certainly hope you're feeling well today since we're having a quiz!"
 
     player "Err, quiz?"
 
-    show ellen teacher sad
+    show margaret sad
 
     ellen @ say "Oh didn't anybody let you know?"
     
-    show ellen teacher neutral
+    show margaret neutral
     
     ellen @ say "You should be fine though, as long as you've been keeping up with your reading."
     
-    show ellen teacher happy
+    show margaret happy
     
     ellen @ say "Now if you'll excuse me, I'm going to get one of those delicious cinnamon buns. What better way to start autumn, right?"
     #ellen @ say "Why, I'd kill for them! Figuratively, of course!"
@@ -3200,7 +3200,7 @@ label monty_hall:
             
             show mishka happy
 
-            show ellen teacher neutral
+            show margaret neutral
             
             mishka @ say "Aww how sweet of you!"
 
@@ -3210,13 +3210,13 @@ label monty_hall:
 
             player "No really, I just remembered I'm not supposed to eat sugary things when I'm on these pills so..."
 
-            show ellen teacher intrigued 
+            show margaret intrigued 
             
             ellen @ say "Hmm..."
 
             n "Miss Ellen looks around."
             
-            show ellen teacher melancholy
+            show margaret melancholy
 
             ellen @ say "Well, I suppose I could, just this once..."
 
@@ -3225,7 +3225,7 @@ label monty_hall:
 
             n "You hand over the bag."
             
-            show ellen teacher neutral
+            show margaret neutral
 
             ellen @ say "Aww, thanks [name]!"
 
@@ -3253,7 +3253,7 @@ label monty_hall:
             show box with Dissolve(.2):
                 ypos 0
 
-            show ellen teacher neutral at norm with dissolve
+            show margaret neutral at norm with dissolve
 
             ellen @ say "Good morning class! I hope you studied well for today's quiz!"
 
@@ -3303,7 +3303,7 @@ label monty_hall:
             
             play music "audio/music/mere - retrograde.ogg" fadein .5
 
-            show ellen teacher neutral at norm with dissolve
+            show margaret neutral at norm with dissolve
 
             show box with Dissolve(.2):
                 ypos 0
@@ -3324,11 +3324,11 @@ label monty_hall:
 
     ellen @ say "...Is that everyone's?"
     
-    show ellen teacher melancholy
+    show margaret melancholy
     
     ellen @ say "Very good, what do you say we call it a day?"
     
-    show ellen teacher neutral
+    show margaret neutral
     
     ellen @ say "I don't want to overload your brains with too much stress. If you felt like this quiz was difficult, take this opportunity to reassess how you study."
     ellen @ say "And be sure to read every page assigned to you! There are no shortcuts when it comes to literature!"
@@ -3690,15 +3690,15 @@ label liberation_eve:
     show box with Dissolve(.2):
         ypos 0
 
-    show ellen teacher neutral at norm with dissolve
+    show margaret neutral at norm with dissolve
 
     ellen @ say "Good morning class!"
     
-    show ellen teacher happy
+    show margaret happy
     
     ellen @ say "I'm sure you're all as excited about the long weekend as I am so how does a short day sound?"
     
-    show ellen teacher melancholy
+    show margaret melancholy
 
     n "The class erupts into a half-hearted cheer followed by a dull murmur that takes a while for Ms. Ellen to calm down."
 
@@ -3706,14 +3706,14 @@ label liberation_eve:
 
     n "She rubs her temples like she has a migraine until the class quiets down."
 
-    show ellen teacher sad
+    show margaret sad
 
     ellen @ say "Ugh..."
     ellen @ say "Let's get this over with..."
 
     n "Ms. Ellen sluggishly gives her lesson but cuts it off after 15 minutes."
     
-    show ellen teacher neutral
+    show margaret neutral
 
     ellen @ say "You know what? I think that's enough for today. Enjoy your weekend, everybody!"
 
@@ -6761,7 +6761,7 @@ label ellen_feeding_ducks:
     n "Upon closer inspection, it turns out to be Ms. Ellen!"
     n "Without thinking, you decide to sit next to her. All the animals scatter as you approach and Ms. Ellen raises her head."
     
-    show ellen teacher sad at norm with dissolve
+    show margaret sad at norm with dissolve
     
     ellen @ say "Hm? Oh it's you."
     
@@ -6804,17 +6804,17 @@ label ellen_feeding_ducks:
                 
                 player "You lucky dog."
                 
-                show ellen teacher happy
+                show margaret happy
                 
                 ellen @ say "Hehehehe~"
                 
-                show ellen teacher neutral
+                show margaret neutral
                 
                 ellen @ say "You won't have to do that much to pass my class. Just listening to me rant is enough for me. It's a lot cheaper than therapy, that's for sure."
                 
                 n "Ms. Ellen sighs."
                 
-                show ellen teacher sad
+                show margaret sad
                 
                 ellen @ say "I like to think I make my own paths in life, for better or worse."
                 ellen @ say "Though I can't help but feel I've been on a streak of bad decisions for quite a long time."
@@ -6834,7 +6834,7 @@ label ellen_feeding_ducks:
                 #untested
                 player "Wow, a professor openly telling me to be academically dishonest?"
                 
-                show ellen teacher happy
+                show margaret happy
                 
                 ellen @ say "It's more likely than you think."
                 
@@ -6842,11 +6842,11 @@ label ellen_feeding_ducks:
                 
                 ellen @ say "Do it again and I'll fail you."
                 
-                show ellen teacher melancholy
+                show margaret melancholy
                 
                 ellen @ say "It's true though, I've long since lost the passion for teaching, if it ever existed in the first place. My knowledge of literature has never gotten anyone anywhere."
                 
-                show ellen teacher sad 
+                show margaret sad 
                 
                 ellen @ say "Every English major I taught ended up killing themselves or wanting to."
                 
@@ -6865,7 +6865,7 @@ label ellen_feeding_ducks:
                 
                 ellen @ say "You get used to a certain amount and then you can never go back."
                 
-                show ellen teacher neutral
+                show margaret neutral
                 
                 ellen @ say "And just how old do you think I am?"
                 ###make this scene happen on ellen's birthday
@@ -6879,17 +6879,17 @@ label ellen_feeding_ducks:
                         
                         n "Miss Ellen snickers."
                         
-                        show ellen teacher happy
+                        show margaret happy
                         
                         ellen @ say "Either you're flattering me or you don't know what a woman in her late 20s looks like."
                         
                         player "Hey, I'm pretty sure I've seen students who look older than you!"
                         
-                        show ellen teacher neutral
+                        show margaret neutral
                         
                         ellen @ say "Those are graduate students, dear. It's not enough to get a Bachelor's degree these days, you need at least a Master's if you want a good job."
                         
-                        show ellen teacher melancholy
+                        show margaret melancholy
                         
                         ellen @ say "There's something comedically tragic to see one of my undergrads return after a couple of years to get another fancy piece of paper."
                         #ellen @ say "And this may come as a surprise, but not everybody starts college the moment they graduate from high school."
@@ -6897,13 +6897,13 @@ label ellen_feeding_ducks:
                         
                         player "Aww, wouldn't you be glad to see me again?"
                         
-                        show ellen teacher happy
+                        show margaret happy
                         
                         ellen @ say "Not if you keep snatching my cinnamon rolls!"
                         
                         player "You're gonna hold that over me forever, aren't you?"
                         
-                        show ellen teacher neutral
+                        show margaret neutral
                         
                         ellen @ say "Maybe!"
                         ellen @ say "Hehehehe!"
@@ -6911,18 +6911,18 @@ label ellen_feeding_ducks:
                         
                         player "Only if you're still as beautiful."
                         
-                        show ellen teacher intrigued
+                        show margaret intrigued
                         
                         ellen @ say "..."
                         
-                        show ellen teacher happy 
+                        show margaret happy 
                         
                         ellen @ say "Oh psh! Hehehehe you're really quite a joker, aren't you?"
                         ellen @ say "Smart move. Only the fool can be spared the queen's wrath after all~"
                         
                         player "Hahaha really though, I think it would be cool to see you again after this semester. Maybe we could get coffee or something?"
                         
-                        show ellen teacher neutral
+                        show margaret neutral
                         
                         ellen @ say "Careful [name], it almost sounds like you're flirting with your professor!~"
                         
@@ -6936,7 +6936,7 @@ label ellen_feeding_ducks:
                     "30s":
                         player "Early 30s I guess?"
                         
-                        show ellen teacher melancholy
+                        show margaret melancholy
                         
                         ellen @ say "Try 41, dear."
                         ###37
@@ -6946,11 +6946,11 @@ label ellen_feeding_ducks:
                         
                         player "No way. I'm gonna need to see your ID, miss."
                         
-                        show ellen teacher happy
+                        show margaret happy
                         
                         ellen @ say "Hehehehe I can't remember the last time I got carded buying wine."
                         
-                        show ellen teacher tailwag flattered
+                        show margaret tailwag flattered
                         
                         ellen @ say "I appreciate the compliment though~"
                         
@@ -6958,37 +6958,37 @@ label ellen_feeding_ducks:
                         
                         player "It's the least I could do after snatching your cinnamon roll. You were right, they're to die for."
                         
-                        show ellen teacher neutral -tailwag
+                        show margaret neutral -tailwag
                         
                         ellen @ say "Or to kill for!"
                         
-                        #show ellen teacher experimental wip
+                        #show margaret experimental wip
                         
                         n "She playfully bares her teeth and growls."
                         
-                        show ellen teacher happy
+                        show margaret happy
                         
                         ellen @ say "Hehehe I'm just kidding. You're too cute to kill."
                         
                         player "Me? Cute? And here I thought I was ghastly and ragged."
                         
-                        show ellen teacher sad
+                        show margaret sad
                         
                         ellen @ say "Woops, did that really slip out of my mouth? I meant cute like uhh..."
                         
-                        show ellen teacher melancholy
+                        show margaret melancholy
                         
                         ellen @ say  "Like one of these baby ducks!"
                         
                         player "Thanks? I think?"
                         
-                        show ellen teacher neutral
+                        show margaret neutral
                         
                         ellen @ say "Don't think too much about it."
                         
                         n "Ellen reclines against the bench and sighs."
                         
-                        show ellen teacher melancholy
+                        show margaret melancholy
                         
                         ellen @ say "It's nice to get to talk to one of my students like this."
                         ellen @ say "Most are either intimidated by me or just see me as an obstacle to their degree."
@@ -6997,14 +6997,14 @@ label ellen_feeding_ducks:
                         player "I just come to class out of habit and sometimes I learn interesting things."
                         player "I like hearing your rants about authors' beliefs."
                         
-                        show ellen teacher flattered
+                        show margaret flattered
                         
                         ellen @ say "Oh really? I always feel so embarrassed after those little tirades! I suppose I just can't help myself."
                         
                         #player "Your personality comes through your teaching. I guess all teachers are like that but usually it comes across as 'wow this lady is a huge bitch.'"
                         player "I guess literature would lend itself most to expression. Not much room for interpretation in statistics or French."
                         
-                        show ellen teacher neutral
+                        show margaret neutral
                         
                         ellen @ say "Au contraire, le langage limite nos pensées."
                         
@@ -7041,7 +7041,7 @@ label ellen_feeding_ducks:
                         ellen @ say "Eventually you find the pair of glasses that are right for you."
                         ellen @ say "For me, reading stories and trying to understand the feelings behind the authors made my world view the clearest so I specialized in that!"
                         
-                        show ellen teacher happy
+                        show margaret happy
                         
                         ellen @ say "There's so much you can feel without having the words to express it. And if you don't have the words, you can get stuck not understanding what you're feeling!"
                         #ellen @ say "A professor is more dignified and deserves greater respect!"
@@ -7050,19 +7050,19 @@ label ellen_feeding_ducks:
                             #a teacher is a glorified babysitter, a professor sets expectations for how to act like an adult
                         #ellen @ say "You might wanna read that essay by George Orwell on how your thoughts are limited by your language."
                         
-                        show ellen teacher neutral
+                        show margaret neutral
                         
                         ellen @ say "There's a fascinating essay by George Orwell you might consider reading on how your thoughts are limited by your language."
                         
                         player "Maybe I'll read it someday when I'm not studying four different subjects at once."
                         
-                        show ellen teacher happy
+                        show margaret happy
                         
                         ellen @ say "Perhaps I'll just have to assign it to you then~"
                     "40s":
                         player "You're not old until you're like, grandma age."
                         
-                        show ellen teacher sad
+                        show margaret sad
                         
                         n "Miss Ellen sighs."
                         
@@ -7074,7 +7074,7 @@ label ellen_feeding_ducks:
                         
                         player "It's fine. I mean, isn't it awkward of me to walk up to my literature professor and while she's feeding ducks?"
                         
-                        show ellen teacher neutral
+                        show margaret neutral
                         
                         ellen @ say "Not really! This is how people made friends before we had technology to enslave our minds after all."
                         
@@ -7086,17 +7086,17 @@ label ellen_feeding_ducks:
                         ellen @ say "I think we could be friends even with you as my student. People forget that such things were common a hundred years ago. It still happens in a lot of other countries!"
                         ellen @ say "A community can be composed of anyone who enjoys each other's company, regardless of status."
                         
-                        show ellen teacher melancholy
+                        show margaret melancholy
                         
                         ellen @ say "You're quite an interesting person and can make good conversation. That's really all I need."
                         
                         player "Wow, that's kinda sweet of you to say! I guess you kinda are like a kind old grandma hahah!"
                         
-                        show ellen teacher flattered
+                        show margaret flattered
                         
                         ellen @ say "Well, let's not say that..."
                         
-                        show ellen teacher neutral
+                        show margaret neutral
                         
                         ellen @ say "But don't be afraid to say hi whenever you see me~"
                         
@@ -7127,17 +7127,17 @@ label ellen_feeding_ducks:
                     player "They're a part of nature, so perhaps they're inherently, I don't know, beautiful or something?"
                     player "And we're technically a part of that nature so they're like our siblings. Little duck siblings."
                     
-                    show ellen teacher neutral
+                    show margaret neutral
                     
                     n "You catch Ms. Ellen smirking."
                     
-                    show ellen teacher happy
+                    show margaret happy
                     
                     ellen @ say "Do yourself a favor and drop philosophy class."
                     
                     player "I'm not even taking philosophy!"
                     
-                    show ellen teacher neutral
+                    show margaret neutral
                     
                     ellen @ say "In that case, consider trying it out next semester~"
                     ellen @ say "You might learn a thing or two hehehe."
@@ -7160,23 +7160,23 @@ label ellen_feeding_ducks:
                     #ellen @ say "Now at least that sounds exciting~"
                     #ellen @ say "Hehehe I'm just kidding~"
                     
-                    show ellen teacher sad
+                    show margaret sad
                     
                     ellen @ say "But now I'm old and stuck on this path."
                     
                     player "You're only what, like 30? You've got time."
                     
-                    show ellen teacher neutral
+                    show margaret neutral
                     
                     ellen @ say "Try 41, dear."
                     
-                    show ellen teacher tailwag flattered
+                    show margaret tailwag flattered
                     
                     ellen @ say "I appreciate the compliment though~"
                     
                     n "You can hear her tail brushing against the back of the bench as it wags happily."
                     
-                    show ellen teacher sad
+                    show margaret sad
                     
                     ellen @ say "Oh, if only I could go back in time, but with all the wisdom I've accumulated over the years..."
                     
@@ -7189,7 +7189,7 @@ label ellen_feeding_ducks:
                     player "Oh."
                     player "..."
                     
-                    show ellen teacher neutral
+                    show margaret neutral
                     
                     ellen "You wanna try?"
                     
@@ -7231,7 +7231,7 @@ label ellen_feeding_ducks:
 
     n "You sit with Ellen for a few more minutes, making idle talk and feeding ducks until you run out of bread."
     
-    show ellen teacher melancholy
+    show margaret melancholy
             
     ellen @ say "Thanks for sitting and talking with me. It really made my day worthwhile."
     ellen @ say "There's more to you that makes you special than just being the last human."        
@@ -7242,7 +7242,7 @@ label ellen_feeding_ducks:
     
     player "I'm glad you think so. I try. Well no, I don't really try. I just want to live a comfortable life and be happy with others."
 
-    show ellen teacher neutral
+    show margaret neutral
     
     ellen @ say "Perhaps that's all you need to do."
     
@@ -11103,7 +11103,7 @@ label ellen_rooftop1:
     
     n "The stairwell lead you up to the rooftop, where you're immediately met with a puff of cigarette smoke blowing into your face."
 
-    show ellen teacher smoking intrigued at norm with dissolve
+    show margaret smoking intrigued at norm with dissolve
 
     ellen @ say "Hm? [name]? You shouldn't be up here."
 
@@ -11111,13 +11111,13 @@ label ellen_rooftop1:
 
     player "I'm pretty sure you're not supposed to be up here either."
     
-    show ellen teacher smoking laugh
+    show margaret smoking laugh
 
     ellen @ say "Pah, ya got me. I promise not to rat you out if you don't say anything."
 
     player "Deal."
     
-    show ellen teacher smoking neutral
+    show margaret smoking neutral
 
     n "You lean on the wall next to her."
 
@@ -11131,7 +11131,7 @@ label ellen_rooftop1:
 
     player "Like what?"
     
-    show ellen teacher sad smoking
+    show margaret sad smoking
 
     ellen @ say "Private things."
 
@@ -11180,7 +11180,7 @@ label ellen_rooftop1:
 
             n "Miss Ellen throws her cigarette to the ground and steps on it."
 
-            show ellen teacher smoking neutral
+            show margaret smoking neutral
 
             ellen @ say "If you wanna talk about it more, my number's on the syllabus. I'll listen to whatever you have to say."
         "Don't wanna talk about it.":
@@ -11191,7 +11191,7 @@ label ellen_rooftop1:
 
             n "Miss Ellen throws her cigarette to the ground and steps on it."
             
-            show ellen teacher smoking neutral
+            show margaret smoking neutral
 
             ellen @ say "I can tell something's seriously bothering you though. My number's on the syllabus if you ever wanna talk."
 
@@ -11371,7 +11371,7 @@ label spicy_restaurant:
     ##shows everyone
     #show rose neutral at norm:
     #    xpos 100
-    #show ellen teacher neutral at norm:
+    #show margaret neutral at norm:
     #    xzoom -1
     #    xpos -300
     #show ellen student neutral at norm:
@@ -15105,7 +15105,7 @@ label monday6:
                     n "A few people are staying behind to talk to the writers but you're more interested in going about the rest of your day."
                     n "Your plans come to a screeching halt when Miss Ellen stops you near the exit."
 
-                    show ellen teacher neutral at norm with dissolve
+                    show margaret neutral at norm with dissolve
 
                     ellen @ say "[name]! I'm so glad you could make it! What did you think? Quite inspirational, wouldn't you agree?"
 
@@ -15146,13 +15146,13 @@ label monday6:
                                 n "Did she just forget about you?"
                                 n "Just as you're considering going home, Miss Ellen comes up the stairs and pulls out a cigarette carton."
 
-                                show ellen teacher neutral at norm with dissolve
+                                show margaret neutral at norm with dissolve
 
                                 ellen @ say "Want one?"
 
                                 player "I'm good."
 
-                                show ellen teacher smoking neutral
+                                show margaret smoking neutral
 
                                 n "She lights one up and blows out a cloud of smoke."
 
@@ -15259,7 +15259,7 @@ label monday6:
 
                                         ellen @ say "Oh please, there's no need to be so formal you know!"
                                         
-                                        show ellen teacher smoking neutral
+                                        show margaret smoking neutral
                                         
                                         ellen @ say "Just call me Ellen from now on when it's just the two of us~"
                                         ellen @ say "Unless you *prefer* to call me Miss hehehe~"
@@ -18169,7 +18169,7 @@ label next01:
     #play music "audio/ai21.ogg" fadein .5
     play music "audio/music/mere - retrograde.ogg" fadein .5
 
-    show ellen teacher neutral at norm with dissolve
+    show margaret neutral at norm with dissolve
 
     ellen @ say "...and that about covers the review for Tuesday's midterm!"
     ellen @ say "Study hard and do your best! I wish you all good luck!"
@@ -18178,13 +18178,13 @@ label next01:
 
     n "The other students pack their things and file out of the room, but as usual you stay behind to talk to Miss Ellen."
 
-    show ellen teacher neutral at norm with dissolve
+    show margaret neutral at norm with dissolve
 
     n "Miss Ellen looks around to make sure there aren't any other students nearby."
 
-    show ellen teacher at flipright
+    show margaret at flipright
     pause .8
-    show ellen teacher at flipleft:
+    show margaret at flipleft:
         xzoom 1
     pause .5
 
@@ -18192,7 +18192,7 @@ label next01:
 
     player "I have to go to French next but I can be up there right after."
 
-    show ellen teacher sad
+    show margaret sad
 
     ellen @ say "Aww, don't you wanna skip class to hang out with me?~"
 
@@ -18201,13 +18201,13 @@ label next01:
         "I could do that":
             player "I could do that."
             
-            show ellen teacher neutral
+            show margaret neutral
 
             ellen @ say "Ya sure?"
 
             player "Yeah, that class isn't too hard. I can afford to miss a few days."
 
-            show ellen teacher neutral
+            show margaret neutral
             pause .1
 
             ellen @ say "In that case, what are we waiting for?"
@@ -18234,14 +18234,14 @@ label next01:
             n "You wait around for a few minutes, texting Claire with an excuse for missing class before Ellen shows up."
             n "Before even saying anything she pulls out her cigarettes and lights one up."
 
-            show ellen teacher smoking neutral at norm with dissolve
+            show margaret smoking neutral at norm with dissolve
 
             ellen @ say "Want one?"
 
         "I shouldn't...":
             player "I mean yeah but..."
             
-            show ellen teacher neutral
+            show margaret neutral
 
             ###change this, since now ellen and celestine are friends
             #ellen @ say "Ahh, I get it, you wouldn't wanna miss out on seeing... Mrs. Celestine, was it?"
@@ -18250,16 +18250,16 @@ label next01:
 
             player "Wh-what?! No, that's not what I-"
 
-            show ellen teacher neutral at hop
+            show margaret neutral at hop
 
             pause .1
             
-            show ellen teacher happy
+            show margaret happy
 
             #ellen @ say "No worries! I'll save ya a spot~"
             ellen @ say "Hehe I'm just teasin'! Don't worry, I'll stick around a while~"
             
-            show ellen teacher neutral
+            show margaret neutral
             
             ellen @ say "Go ahead and learn some French before coming up to the roof."
             ellen @ say "Just don't keep me waiting too long~"
@@ -18337,7 +18337,7 @@ label next01:
             n "After class, you make your way back to the literature building to meet with Miss Ellen."
             n "You could already smell her cigarette smoke as you came up the stairway."
 
-            show ellen teacher smoking neutral at norm with dissolve
+            show margaret smoking neutral at norm with dissolve
 
             ellen @ say "Sup."
 
@@ -18383,7 +18383,7 @@ label next01:
 
     n "Ellen inhales the last bit from her cigarrete before throwing it to the ground and nodding."
     
-    show ellen teacher neutral -smoking
+    show margaret neutral -smoking
 
     ellen @ say "Yup. Same."
 
@@ -18395,7 +18395,7 @@ label next01:
     player "I dunno, I sat down to study and somehow lost consciousness while staying awake and time seemed to melt away and like..."
     player "It all feels like a dream now and I can barely remember it."
 
-    show ellen teacher sad
+    show margaret sad
 
     ellen @ say "Hmm."
     ellen @ say "That is actually concerning."
@@ -18406,7 +18406,7 @@ label next01:
     player "It's not like they're gonna magically cure me."
     player "If I have a choice between rotting away in a hospital bed hooked up to life support or just trying to live a normal life that'll be cut short whenever, I'd choose the latter."
 
-    show ellen teacher neutral
+    show margaret neutral
 
     ellen @ say "Yeah."
     ellen @ say "I don't blame you, if those doctors graduated from here they're probably full of shit."
@@ -18422,15 +18422,15 @@ label next01:
 
     player "Hey I've gotta go. I'm supposed to meet up with some friends at Coffee Zone in a bit."
     
-    show ellen teacher melancholy
+    show margaret melancholy
 
     ellen @ say "Is that so?"
     
-    show ellen teacher happy
+    show margaret happy
     
     ellen @ say "Well don't let me keep you!"
     
-    show ellen teacher neutral 
+    show margaret neutral 
     
     ellen @ say "I'm gonna hang around up here for a while longer."
 
@@ -18439,7 +18439,7 @@ label next01:
 
     ellen @ say "Of course, hun."
     
-    show ellen teacher sad 
+    show margaret sad 
     
     ellen @ say "I'm a pretty lousy professor but at least I can make a difference to one of my students."
     ellen @ say "Even if it is just unlicensed therapy sessions on the roof."
