@@ -144,15 +144,15 @@ label chapter1:
         
     show nicodemus neutral at norm with dissolve
     
-    nicodemus "...that about concludes our tour of Harmonia's campus. What did you think? Not too pretentious, I hope! Bahahaha!"
-    nicodemus "I'm reminded of when I was a new student here myself. A bit nervous but so full of wonder and excitement! It felt like anything was possible!"
-    nicodemus "Forging lifelong friendships! Making a name for myself in the academic community! Joining clubs and causing a ruckus!"
-    nicodemus "Why, I even found the love of my life sitting under that cedar tree over there."
-    nicodemus "My point is, anybody can blow through four years of university, get their diploma and proceed with their life like it never even happened."
-    nicodemus "But I implore you to really make the most of what you've been given!"
-    nicodemus "Study hard but take some time to search for something that makes you happy, whether that's being with friends or making your mark on society or just living in the moment!"
-    nicodemus "Find what's important to you!"
-    nicodemus "Now then, do you have any questions, young lad?"
+    nicodemus @ say "...that about concludes our tour of Harmonia's campus. What did you think? Not too pretentious, I hope! Bahahaha!"
+    nicodemus @ say "I'm reminded of when I was a new student here myself. A bit nervous but so full of wonder and excitement! It felt like anything was possible!"
+    nicodemus @ say "Forging lifelong friendships! Making a name for myself in the academic community! Joining clubs and causing a ruckus!"
+    nicodemus @ say "Why, I even found the love of my life sitting under that cedar tree over there."
+    nicodemus @ say "My point is, anybody can blow through four years of university, get their diploma and proceed with their life like it never even happened."
+    nicodemus @ say "But I implore you to really make the most of what you've been given!"
+    nicodemus @ say "Study hard but take some time to search for something that makes you happy, whether that's being with friends or making your mark on society or just living in the moment!"
+    nicodemus @ say "Find what's important to you!"
+    nicodemus @ say "Now then, do you have any questions, young lad?"
     
     n "To be honest, you weren't really paying attention for the past hour until now."
     n "The dean is a short raccoon who wears an old timey but distinguished suit. A pair of small spectacles rests at the edge of his snout. He carries a cane but doesn't lean on it too much."
@@ -178,21 +178,21 @@ label nicodemusQuestions:
             player "I'm grateful to be here, but I don't understand *why* I'm even here."
             player "I never submitted an application."
             
-            nicodemus "We keep tabs on \'persons of interest.\' You know, brilliant young students with bright futures to send ads in the mail to. They make for great alumni."
+            nicodemus @ say "We keep tabs on \'persons of interest.\' You know, brilliant young students with bright futures to send ads in the mail to. They make for great alumni."
             
             player "Me? Some sort of prodigy?"
             
-            nicodemus "Well you *are* the smartest human on Earth at the moment."
+            nicodemus @ say "Well you *are* the smartest human on Earth at the moment."
             
             player "So I'm just here for the optics? For your marketing team to brag about how the college is so diverse it has a human?"
             
-            nicodemus "Precisely."
-            nicodemus "That is, at least on paper, the official reason for how I brought you on board."
-            nicodemus "The actual reason has more to do with..."
+            nicodemus @ say "Precisely."
+            nicodemus @ say "That is, at least on paper, the official reason for how I brought you on board."
+            nicodemus @ say "The actual reason has more to do with..."
             
             n "He hesitates, seemingly unsure of what words to use."
             
-            nicodemus "You see, your predicament reminded me of an old friend of mine. Are you familiar with the Tasmanian tiger?"
+            nicodemus @ say "You see, your predicament reminded me of an old friend of mine. Are you familiar with the Tasmanian tiger?"
             
             "The dean reaches into his coat pocket and pulls out a photograph."
             
@@ -209,15 +209,15 @@ label nicodemusQuestions:
                     
                     player "Never seen them before."
                     
-                    nicodemus "No one has, not for a few decades. At least, not a living specimen."
-                    nicodemus "I'm afraid they've gone extinct."
+                    nicodemus @ say "No one has, not for a few decades. At least, not a living specimen."
+                    nicodemus @ say "I'm afraid they've gone extinct."
                 "They're all gone, aren't they?":
                     show box with Dissolve(.2):
                         ypos 0
         
                     player "They're not around anymore, right?"
                     
-                    nicodemus "Yes, they went exctinct decades ago. There's not even a color photograph of one."
+                    nicodemus @ say "Yes, they went exctinct decades ago. There's not even a color photograph of one."
                     
             n "\"Extinct.\""
             n "The word sends chills down your spine."
@@ -231,9 +231,9 @@ label nicodemusQuestions:
                 
             show nicodemus neutral at norm with dissolve
             
-            nicodemus "He was a good friend, someone you could always count on. But as time went on, the burden of being the last of his kind got to him."
-            nicodemus "He withdrew himself from everyone and eventually withered away, like some forgotten flower. I'd hate for you to suffer the same fate."
-            nicodemus "You see what I'm getting at, don't you?"
+            nicodemus @ say "He was a good friend, someone you could always count on. But as time went on, the burden of being the last of his kind got to him."
+            nicodemus @ say "He withdrew himself from everyone and eventually withered away, like some forgotten flower. I'd hate for you to suffer the same fate."
+            nicodemus @ say "You see what I'm getting at, don't you?"
             
             n "You give a somber nod."
         "Will I fit in?" if questionFitIn == False:
@@ -241,21 +241,21 @@ label nicodemusQuestions:
             
             player "I'm not sure I really fit in here. This seems like the kind of university you only get into if you come from old money."
             
-            nicodemus "That was certainly true back in the day, but we've been getting more inclusive over the years. We'll take any money now, not just old money heh."
-            nicodemus "So don't feel bad if you don't come from the wealthiest household. Money won't buy you honest friends."
-            nicodemus "Just treat people with the kindness and respect they deserve and give them a chance. You're bound to find your niche sooner or later."
+            nicodemus @ say "That was certainly true back in the day, but we've been getting more inclusive over the years. We'll take any money now, not just old money heh."
+            nicodemus @ say "So don't feel bad if you don't come from the wealthiest household. Money won't buy you honest friends."
+            nicodemus @ say "Just treat people with the kindness and respect they deserve and give them a chance. You're bound to find your niche sooner or later."
         "What's with the tour?" if questionTour == False:
             $ questionTour = True
             
             player "A dean like you must be pretty busy. Why'd you take the time out of your day to personally give *me* a tour of the campus?"
             
-            nicodemus "Less busy than you'd imagine! I may run the show around here but the show mostly takes care of itself."
-            nicodemus "I mostly just sign documents and attend meetings. People look to me for approval, but I'm really just acting as a figurehead most of the time."
-            nicodemus "Someone to stand around and look wise."
-            nicodemus "The departments handle all the number crunching and recomendations, I just give the final authorization."
-            nicodemus "So I don't mind getting out of the office to have a pleasant chat with the students."
-            nicodemus "Feel free to break me out of that prison from time to time to discuss whatever's on your mind."
-            nicodemus "It's also a great photo opportunity."
+            nicodemus @ say "Less busy than you'd imagine! I may run the show around here but the show mostly takes care of itself."
+            nicodemus @ say "I mostly just sign documents and attend meetings. People look to me for approval, but I'm really just acting as a figurehead most of the time."
+            nicodemus @ say "Someone to stand around and look wise."
+            nicodemus @ say "The departments handle all the number crunching and recomendations, I just give the final authorization."
+            nicodemus @ say "So I don't mind getting out of the office to have a pleasant chat with the students."
+            nicodemus @ say "Feel free to break me out of that prison from time to time to discuss whatever's on your mind."
+            nicodemus @ say "It's also a great photo opportunity."
             
             n "He points to a photographer in the distance, crouched beside a water fountain trying to look inconspicuous with his giant telephoto lens pointed at you."
         "That's all" if questionAsked == True:
@@ -267,17 +267,17 @@ label nicodemusQuestions:
     
     $ questionText = "Was that all you wanted to ask?"
         
-    nicodemus "Was that all you wanted to ask?"
+    nicodemus @ say "Was that all you wanted to ask?"
         
     jump nicodemusQuestions
         
 label movingOn:
-    nicodemus "Very well! I'll let you have a break from my ramblings. I believe your orientation is coming up soon. You remember how to get there? Good."
-    nicodemus "It was a pleasure to finally meet you in person! You seem like a real stand up guy and I have no doubt you'll find success and whatever else you're looking for during your time at Harmonia!"
+    nicodemus @ say "Very well! I'll let you have a break from my ramblings. I believe your orientation is coming up soon. You remember how to get there? Good."
+    nicodemus @ say "It was a pleasure to finally meet you in person! You seem like a real stand up guy and I have no doubt you'll find success and whatever else you're looking for during your time at Harmonia!"
     
     player "Thanks. It was nice to be welcomed by the dean himself."
     
-    nicodemus "I'm glad I could be of service! Now then, if you'll excuse me..."
+    nicodemus @ say "I'm glad I could be of service! Now then, if you'll excuse me..."
     
     n "Nicodemus gives you a warm smile before slowly trodding away."
     
