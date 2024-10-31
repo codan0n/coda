@@ -203,8 +203,12 @@ layeredimage nicodemus neutral:
     always:
         'images/characters/nicodemus neutral.png'
     group saying:
+        #xysize(1920,1080)
+        xzoom .9
+        yzoom .75
+        pos (600,209)
         attribute say:
-            "images/characters/celestinesays.png"
+            "images/bubble.png"
 
 layeredimage ava typical neutral:
     at sprite_highlight('ava')
@@ -218,337 +222,340 @@ layeredimage ava typical happy:
     always:
         'images/characters/ava/ava typical happy.png'
     group saying:
+        xzoom .9
+        yzoom .75
+        pos (600,209)
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava twopiece pants unimpressed:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava twopiece pants unimpressed.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava twopiece pants smile:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava twopiece pants smile.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava twopiece smile:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava twopiece smile.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava twopiece flattered:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava twopiece flattered.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava portrait overjoyed:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava portrait overjoyed.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava suggestive:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava suggestive.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava portrait smile:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava portrait smile.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava portrait concerned:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava portrait concerned.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava casual flattered:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava casual flattered.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava glowy unimpressed:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava glowy unimpressed.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava unimpressedbrowless:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava unimpressedbrowless.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava reaching concerned:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava reaching concerned.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava pose unimpressed:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava pose unimpressed.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava flattered:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava flattered.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava embarassed:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava embarassed.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava smile:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava smile.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava unimpressed:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava unimpressed.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava reaching concerned:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava reaching concerned.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava reaching embarassed:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava reaching embarassed.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava motivated:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava motivated.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava casual happy:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava casual happy.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava seriously:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava seriously.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava pose smile:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava pose smile.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava casual smile:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava casual smile.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava casual angry:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava casual angry.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava casual overjoyed:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava casual overjoyed.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava casual unimpressed:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava casual unimpressed.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava casual annoyed:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava casual annoyed.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava casual concerned:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava casual concerned.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava casual daydream:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava casual daydream.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava unsure:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava unsure.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava concerned:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava concerned.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava waitwhat:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava waitwhat.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava pose flattered:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava pose flattered.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava pose happy:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava pose happy.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava pose ohyou:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava pose ohyou.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava pose angry:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava pose angry.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava pose concerned:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava pose concerned.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava pose annoyed:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava pose annoyed.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava bored:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava bored.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava excited:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava excited.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava angry:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava angry.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava annoyed:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava annoyed.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava neutral:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava neutral.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava portrait neutral:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava portrait neutral.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava overjoyed:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava overjoyed.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava tipsy:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava tipsy.png'
     group saying:
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 
 
 layeredimage celestine neutral:
@@ -557,14 +564,14 @@ layeredimage celestine neutral:
         'images/characters/celestine/celestine neutral.png'
     group saying:
         attribute say:
-            "images/characters/celestine/celestinesays.png"
+            "images/bubble.png"
 layeredimage celestine happy:
     at sprite_highlight('celestine')
     always:
         'images/characters/celestine/celestine neutral.png'
     group saying:
         attribute say:
-            "images/characters/celestine/celestinesays.png"
+            "images/bubble.png"
 
 layeredimage claire sweater neutral:
     at sprite_highlight('claire')
@@ -572,35 +579,35 @@ layeredimage claire sweater neutral:
         'images/characters/claire/claire sweater neutral.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"
+            "images/bubble.png"
 layeredimage claire swimsuit sad:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire swimsuit sad.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"
+            "images/bubble.png"
 layeredimage claire sweater pose neutral:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire sweater pose neutral.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"
+            "images/bubble.png"
 layeredimage claire outdoors derp:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire outdoors derp.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"
+            "images/bubble.png"
 layeredimage claire swimsuit lusty:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire swimsuit lusty.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"
+            "images/bubble.png"
 
 layeredimage claire swimsuit flannel neutral:
     at sprite_highlight('claire')
@@ -608,77 +615,77 @@ layeredimage claire swimsuit flannel neutral:
         'images/characters/claire/claire swimsuit flannel neutral.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"
+            "images/bubble.png"
 layeredimage claire sweater pose lusty:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire sweater pose lusty.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"
+            "images/bubble.png"
 layeredimage claire sweater pose lusty alert:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire sweater pose lusty alert.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"
+            "images/bubble.png"
 layeredimage claire outdoors lusty:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire outdoors lusty.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"
+            "images/bubble.png"
 layeredimage claire outdoors embarassed:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire outdoors embarassed.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"
+            "images/bubble.png"
 layeredimage claire outdoors horny:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire outdoors horny.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"
+            "images/bubble.png"
 layeredimage claire outdoors derp:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire outdoors derp.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"
+            "images/bubble.png"
 layeredimage claire outdoors heyeah:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire heyeah.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"
+            "images/bubble.png"
 layeredimage claire outdoors sad:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire outdoors sad.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"
+            "images/bubble.png"
 layeredimage claire sweater wave lusty alert:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire sweater wave lusty alert.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"
+            "images/bubble.png"
 layeredimage claire sweater neutral alert:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire sweater neutral alert.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"
+            "images/bubble.png"
 
 layeredimage claire sweater pose laugh:
     at sprite_highlight('claire')
@@ -686,140 +693,140 @@ layeredimage claire sweater pose laugh:
         'images/characters/claire/claire sweater pose laugh.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"
+            "images/bubble.png"
 layeredimage claire sweater pose lusty alert:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire sweater pose lusty alert.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"
+            "images/bubble.png"
 layeredimage claire sweater lusty alert:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire sweater lusty alert.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"
+            "images/bubble.png"
 layeredimage claire sweater lusty:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire sweater lusty.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"
+            "images/bubble.png"
 layeredimage claire sweater cry:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire sweater cry.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"
+            "images/bubble.png"
 layeredimage claire sweater derp:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire sweater derp.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"
+            "images/bubble.png"
 layeredimage claire sweater embarassed:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire sweater embarassed.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"            
+            "images/bubble.png"            
 layeredimage claire sweater giggle:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire sweater giggle.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"
+            "images/bubble.png"
 layeredimage claire sweater heyeah:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire sweater heyeah.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"
+            "images/bubble.png"
 layeredimage claire sweater leaning:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire sweater leaning.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"            
+            "images/bubble.png"            
 layeredimage claire sweater overjoyed:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire sweater overjoyed.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"            
+            "images/bubble.png"            
 layeredimage claire sweater surprised:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire sweater surprised.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"
+            "images/bubble.png"
 layeredimage claire sweater wave:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire sweater wave.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"
+            "images/bubble.png"
 layeredimage claire outdoors neutral:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire outdoors neutral.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"
+            "images/bubble.png"
 layeredimage claire outdoors surprised:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire outdoors surprised.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"
+            "images/bubble.png"
 layeredimage claire outdoors heyeah:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire outdoors heyeah.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"
+            "images/bubble.png"
 layeredimage claire swimsuit neutral:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire swimsuit neutral.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"
+            "images/bubble.png"
 layeredimage claire swimsuit surprised:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire swimsuit surprised.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"
+            "images/bubble.png"
 layeredimage claire swimsuit heyeah:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire swimsuit heyeah.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"
+            "images/bubble.png"
 layeredimage claire swimsuit leaning:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire swimsuit leaning.png'
     group saying:
         attribute say:
-            "images/characters/claire/clairesays.png"
+            "images/bubble.png"
 
 layeredimage margaret neutral:
     at sprite_highlight('margaret')
@@ -827,112 +834,112 @@ layeredimage margaret neutral:
         'images/characters/margaret/margaret neutral.png'
     group saying:
         attribute say:
-            "images/characters/margaret/margaretsays.png"
+            "images/bubble.png"
 layeredimage margaret tailwag flattered:
     at sprite_highlight('margaret')
     always:
         'images/characters/margaret/margaret tailwag flattered.png'
     group saying:
         attribute say:
-            "images/characters/margaret/margaretsays.png"
+            "images/bubble.png"
 layeredimage margaret tailwag happy:
     at sprite_highlight('margaret')
     always:
         'images/characters/margaret/margaret tailwag happy.png'
     group saying:
         attribute say:
-            "images/characters/margaret/margaretsays.png"
+            "images/bubble.png"
 layeredimage margaret sad smoking:
     at sprite_highlight('margaret')
     always:
         'images/characters/margaret/margaret sad smoking.png'
     group saying:
         attribute say:
-            "images/characters/margaret/margaretsays.png"
+            "images/bubble.png"
 layeredimage margaret smoking intrigued:
     at sprite_highlight('margaret')
     always:
         'images/characters/margaret/margaret smoking intrigued.png'
     group saying:
         attribute say:
-            "images/characters/margaret/margaretsays.png"
+            "images/bubble.png"
 layeredimage margaret smoking laugh:
     at sprite_highlight('margaret')
     always:
         'images/characters/margaret/margaret smoking laugh.png'
     group saying:
         attribute say:
-            "images/characters/margaret/margaretsays.png"
+            "images/bubble.png"
 layeredimage margaret flattered:
     at sprite_highlight('margaret')
     always:
         'images/characters/margaret/margaret flattered.png'
     group saying:
         attribute say:
-            "images/characters/margaret/margaretsays.png"
+            "images/bubble.png"
 layeredimage margaret tailwag neutral:
     at sprite_highlight('margaret')
     always:
         'images/characters/margaret/margaret tailwag neutral.png'
     group saying:
         attribute say:
-            "images/characters/margaret/margaretsays.png"
+            "images/bubble.png"
 layeredimage margaret tailwag flattered:
     at sprite_highlight('margaret')
     always:
         'images/characters/margaret/margaret tailwag flattered.png'
     group saying:
         attribute say:
-            "images/characters/margaret/margaretsays.png"
+            "images/bubble.png"
 layeredimage margaret tailwag happy:
     at sprite_highlight('margaret')
     always:
         'images/characters/margaret/margaret tailwag happy.png'
     group saying:
         attribute say:
-            "images/characters/margaret/margaretsays.png"
+            "images/bubble.png"
 layeredimage margaret intrigued:
     at sprite_highlight('margaret')
     always:
         'images/characters/margaret/margaret intrigued.png'
     group saying:
         attribute say:
-            "images/characters/margaret/margaretsays.png"
+            "images/bubble.png"
 layeredimage margaret melancholy:
     at sprite_highlight('margaret')
     always:
         'images/characters/margaret/margaret melancholy.png'
     group saying:
         attribute say:
-            "images/characters/margaret/margaretsays.png"
+            "images/bubble.png"
 layeredimage margaret happy:
     at sprite_highlight('margaret')
     always:
         'images/characters/margaret/margaret happy.png'
     group saying:
         attribute say:
-            "images/characters/margaret/margaretsays.png"
+            "images/bubble.png"
 layeredimage margaret sad:
     at sprite_highlight('margaret')
     always:
         'images/characters/margaret/margaret sad.png'
     group saying:
         attribute say:
-            "images/characters/margaret/margaretsays.png"
+            "images/bubble.png"
 layeredimage margaret smoking neutral:
     at sprite_highlight('margaret')
     always:
         'images/characters/margaret/margaret smoking neutral.png'
     group saying:
         attribute say:
-            "images/characters/margaret/margaretsays.png"
+            "images/bubble.png"
 layeredimage margaret sadsmoking:
     at sprite_highlight('margaret')
     always:
         'images/characters/margaret/margaret sad smoking.png'
     group saying:
         attribute say:
-            "images/characters/margaret/margaretsays.png"
+            "images/bubble.png"
 
 layeredimage ellen neutral:
     at sprite_highlight('ellen')
@@ -940,56 +947,56 @@ layeredimage ellen neutral:
         'images/characters/ellen/ellen neutral.png'
     group saying:
         attribute say:
-            "images/characters/ellen/ellensays.png"
+            "images/bubble.png"
 layeredimage ellen happy:
     at sprite_highlight('ellen')
     always:
         'images/characters/ellen/ellen happy.png'
     group saying:
         attribute say:
-            "images/characters/ellen/ellensays.png"
+            "images/bubble.png"
 layeredimage ellen proud:
     at sprite_highlight('ellen')
     always:
         'images/characters/ellen/ellen proud.png'
     group saying:
         attribute say:
-            "images/characters/ellen/ellensays.png"
+            "images/bubble.png"
 layeredimage ellen smug:
     at sprite_highlight('ellen')
     always:
         'images/characters/ellen/ellen smug.png'
     group saying:
         attribute say:
-            "images/characters/ellen/ellensays.png"
+            "images/bubble.png"
 layeredimage ellen overjoyed:
     at sprite_highlight('ellen')
     always:
         'images/characters/ellen/ellen overjoyed.png'
     group saying:
         attribute say:
-            "images/characters/ellen/ellensays.png"
+            "images/bubble.png"
 layeredimage ellen skates:
     at sprite_highlight('ellen')
     always:
         'images/characters/ellen/ellen skates.png'
     group saying:
         attribute say:
-            "images/characters/ellen/ellensays.png"
+            "images/bubble.png"
 layeredimage ellen annoyed:
     at sprite_highlight('ellen')
     always:
         'images/characters/ellen/ellen annoyed.png'
     group saying:
         attribute say:
-            "images/characters/ellen/ellensays.png"
+            "images/bubble.png"
 layeredimage ellen laugh:
     at sprite_highlight('ellen')
     always:
         'images/characters/ellen/ellen laugh.png'
     group saying:
         attribute say:
-            "images/characters/ellen/ellensays.png"
+            "images/bubble.png"
             
             
 layeredimage fortune:
@@ -998,7 +1005,7 @@ layeredimage fortune:
         'images/characters/fortune.png'
     group saying:
         attribute say:
-            "images/characters/celestinesays.png"
+            "images/bubble.png"
             
             
 layeredimage gunner neutral:
@@ -1007,16 +1014,8 @@ layeredimage gunner neutral:
         'images/characters/gunner neutral.png'
     group saying:
         attribute say:
-            "images/characters/gunnersays.png"
-
-layeredimage gunner neutralold:
-    at sprite_highlight('gunner')
-    always:
-        'images/characters/gunner neutralold.png'
-    group saying:
-        attribute say:
-            "images/characters/gunnersays.png"
-            
+            "images/bubble.png"
+        
 
 layeredimage herschel:
     at sprite_highlight('herschel')
@@ -1024,7 +1023,7 @@ layeredimage herschel:
         'images/characters/herschel.png'
     group saying:
         attribute say:
-            "images/characters/celestinesays.png"
+            "images/bubble.png"
             
 
 layeredimage lina:
@@ -1033,7 +1032,7 @@ layeredimage lina:
         'images/characters/lina.png'
     group saying:
         attribute say:
-            "images/characters/celestinesays.png"
+            "images/bubble.png"
 
 
             
@@ -1043,7 +1042,7 @@ layeredimage mere neutral:
         'images/characters/mere/mere.png'
     group saying:
         attribute say:
-            "images/characters/mere/meresays.png"
+            "images/bubble.png"
 
             
             
@@ -1053,196 +1052,196 @@ layeredimage mishka neutral:
         'images/characters/mishka/mishka neutral.png'
     group saying:
         attribute say:
-            "images/characters/mishka/mishkasays.png"
+            "images/bubble.png"
 layeredimage mishka teasing:
     at sprite_highlight('mishka')
     always:
         'images/characters/mishka/mishka teasing.png'
     group saying:
         attribute say:
-            "images/characters/mishka/mishkasays.png"
+            "images/bubble.png"
 layeredimage mishka saddest:
     at sprite_highlight('mishka')
     always:
         'images/characters/mishka/mishka saddest.png'
     group saying:
         attribute say:
-            "images/characters/mishka/mishkasays.png"
+            "images/bubble.png"
 layeredimage mishka shy:
     at sprite_highlight('mishka')
     always:
         'images/characters/mishka/mishka shy.png'
     group saying:
         attribute say:
-            "images/characters/mishka/mishkasays.png"
+            "images/bubble.png"
 layeredimage mishka shy smile:
     at sprite_highlight('mishka')
     always:
         'images/characters/mishka/mishka shy smile.png'
     group saying:
         attribute say:
-            "images/characters/mishka/mishkasays.png"
+            "images/bubble.png"
 layeredimage mishka cute:
     at sprite_highlight('mishka')
     always:
         'images/characters/mishka/mishka cute.png'
     group saying:
         attribute say:
-            "images/characters/mishka/mishkasays.png"
+            "images/bubble.png"
 layeredimage mishka nya:
     at sprite_highlight('mishka')
     always:
         'images/characters/mishka/mishka nya.png'
     group saying:
         attribute say:
-            "images/characters/mishka/mishkasays.png"
+            "images/bubble.png"
 layeredimage mishka despondent:
     at sprite_highlight('mishka')
     always:
         'images/characters/mishka/mishka despondent.png'
     group saying:
         attribute say:
-            "images/characters/mishka/mishkasays.png"
+            "images/bubble.png"
 layeredimage mishka hopeful:
     at sprite_highlight('mishka')
     always:
         'images/characters/mishka/mishka hopeful.png'
     group saying:
         attribute say:
-            "images/characters/mishka/mishkasays.png"
+            "images/bubble.png"
 layeredimage mishka happy wink:
     at sprite_highlight('mishka')
     always:
         'images/characters/mishka/mishka happy wink.png'
     group saying:
         attribute say:
-            "images/characters/mishka/mishkasays.png"
+            "images/bubble.png"
 layeredimage mishka winki:
     at sprite_highlight('mishka')
     always:
         'images/characters/mishka/mishka winki.png'
     group saying:
         attribute say:
-            "images/characters/mishka/mishkasays.png"
+            "images/bubble.png"
 layeredimage mishka anxious:
     at sprite_highlight('mishka')
     always:
         'images/characters/mishka/mishka anxious.png'
     group saying:
         attribute say:
-            "images/characters/mishka/mishkasays.png"
+            "images/bubble.png"
 layeredimage mishka anxious grin:
     at sprite_highlight('mishka')
     always:
         'images/characters/mishka/mishka anxious grin.png'
     group saying:
         attribute say:
-            "images/characters/mishka/mishkasays.png"
+            "images/bubble.png"
 layeredimage mishka shy grin:
     at sprite_highlight('mishka')
     always:
         'images/characters/mishka/mishka shy grin.png'
     group saying:
         attribute say:
-            "images/characters/mishka/mishkasays.png"
+            "images/bubble.png"
 layeredimage mishka shy:
     at sprite_highlight('mishka')
     always:
         'images/characters/mishka/mishka shy.png'
     group saying:
         attribute say:
-            "images/characters/mishka/mishkasays.png"
+            "images/bubble.png"
 layeredimage mishka silly wink:
     at sprite_highlight('mishka')
     always:
         'images/characters/mishka/mishka silly wink.png'
     group saying:
         attribute say:
-            "images/characters/mishka/mishkasays.png"
+            "images/bubble.png"
 layeredimage mishka sad wave:
     at sprite_highlight('mishka')
     always:
         'images/characters/mishka/mishka sad wave.png'
     group saying:
         attribute say:
-            "images/characters/mishka/mishkasays.png"
+            "images/bubble.png"
 layeredimage mishka overjoyed:
     at sprite_highlight('mishka')
     always:
         'images/characters/mishka/mishka overjoyed.png'
     group saying:
         attribute say:
-            "images/characters/mishka/mishkasays.png"
+            "images/bubble.png"
 layeredimage mishka happy:
     at sprite_highlight('mishka')
     always:
         'images/characters/mishka/mishka happy.png'
     group saying:
         attribute say:
-            "images/characters/mishka/mishkasays.png"
+            "images/bubble.png"
 layeredimage mishka ceremonial neutral:
     at sprite_highlight('mishka')
     always:
         'images/characters/mishka/mishka ceremonial.png'
     group saying:
         attribute say:
-            "images/characters/mishka/mishkasays.png"
+            "images/bubble.png"
 layeredimage mishka derp:
     at sprite_highlight('mishka')
     always:
         'images/characters/mishka/mishka derp.png'
     group saying:
         attribute say:
-            "images/characters/mishka/mishkasays.png"    
+            "images/bubble.png"    
 layeredimage mishka ceremonial happy:
     at sprite_highlight('mishka')
     always:
         'images/characters/mishka/mishka hap ceremonial.png'
     group saying:
         attribute say:
-            "images/characters/mishka/mishkasays.png"
+            "images/bubble.png"
 layeredimage mishka hat neutral:
     at sprite_highlight('mishka')
     always:
         'images/characters/mishka/mishka hat neutral.png'
     group saying:
         attribute say:
-            "images/characters/mishka/mishkasays.png"
+            "images/bubble.png"
 layeredimage mishka hat happy:
     at sprite_highlight('mishka')
     always:
         'images/characters/mishka/mishka hat happy.png'
     group saying:
         attribute say:
-            "images/characters/mishka/mishkasays.png"
+            "images/bubble.png"
 layeredimage mishka hat sad:
     at sprite_highlight('mishka')
     always:
         'images/characters/mishka/mishka hat sad.png'
     group saying:
         attribute say:
-            "images/characters/mishka/mishkasays.png"
+            "images/bubble.png"
 layeredimage mishka hat depressed:
     at sprite_highlight('mishka')
     always:
         'images/characters/mishka/mishka hat depressed.png'
     group saying:
         attribute say:
-            "images/characters/mishka/mishkasays.png"
+            "images/bubble.png"
 layeredimage mishka sad:
     at sprite_highlight('mishka')
     always:
         'images/characters/mishka/mishka sad.png'
     group saying:
         attribute say:
-            "images/characters/mishka/mishkasays.png"
+            "images/bubble.png"
 layeredimage mishka depressed:
     at sprite_highlight('mishka')
     always:
         'images/characters/mishka/mishka depressed.png'
     group saying:
         attribute say:
-            "images/characters/mishka/mishkasays.png"
+            "images/bubble.png"
             
             
 layeredimage kitsuragi:
@@ -1251,7 +1250,7 @@ layeredimage kitsuragi:
         'images/characters/kitsuragi.png'
     group saying:
         attribute say:
-            "images/characters/celestinesays.png"
+            "images/bubble.png"
 
 
 layeredimage olivia neutral:
@@ -1260,14 +1259,14 @@ layeredimage olivia neutral:
         'images/characters/olivia neutral.png'
     group saying:
         attribute say:
-            "images/characters/oliviasays.png"
+            "images/bubble.png"
 layeredimage olivia looking:
     at sprite_highlight('olivia')
     always:
         'images/characters/olivia looking.png'
     group saying:
         attribute say:
-            "images/characters/oliviasays.png"
+            "images/bubble.png"
     
 layeredimage rori neutral:
     at sprite_highlight('rori')
@@ -1275,63 +1274,62 @@ layeredimage rori neutral:
         'images/characters/rori/rori neutral.png'
     group saying:
         attribute say:
-            "images/characters/rori/rorisays.png"
+            "images/bubble.png"
 layeredimage rori sleepy:
     at sprite_highlight('rori')
     always:
         'images/characters/rori/rori sleepy.png'
     group saying:
         attribute say:
-            "images/characters/rori/rorisays.png"
+            "images/bubble.png"
 layeredimage rori concerned:
     at sprite_highlight('rori')
     always:
         'images/characters/rori/rori concerned.png'
     group saying:
         attribute say:
-            "images/characters/rori/rorisays.png"
+            "images/bubble.png"
 layeredimage rori neutral blushing:
     at sprite_highlight('rori')
     always:
         'images/characters/rori/rori neutral blushing.png'
     group saying:
         attribute say:
-            "images/characters/rori/rorisays.png"
+            "images/bubble.png"
 layeredimage rori anxiety:
     at sprite_highlight('rori')
     always:
         'images/characters/rori/rori anxiety.png'
     group saying:
         attribute say:
-            "images/characters/rori/rorisays.png"
+            "images/bubble.png"
 layeredimage rori drunk:
     at sprite_highlight('rori')
     always:
         'images/characters/rori/rori drunk.png'
     group saying:
         attribute say:
-            "images/characters/rori/rorisays.png"            
+            "images/bubble.png"            
 layeredimage rori pantslessdrunk:
     at sprite_highlight('rori')
     always:
         'images/characters/rori/rori pantslessdrunk.png'
     group saying:
         attribute say:
-            "images/characters/rori/rorisays.png"            
 layeredimage rori laugh:
     at sprite_highlight('rori')
     always:
         'images/characters/rori/rori laugh.png'
     group saying:
         attribute say:
-            "images/characters/rori/rorisays.png"            
+            "images/bubble.png"            
 layeredimage rori pantsless:
     at sprite_highlight('rori')
     always:
         'images/characters/rori/rori pantsless.png'
     group saying:
         attribute say:
-            "images/characters/rori/rorisays.png"
+            "images/bubble.png"
 
 
 
@@ -1341,63 +1339,63 @@ layeredimage rose neutral:
         'images/characters/rose/rose neutral.png'
     group saying:
         attribute say:
-            "images/characters/rose/rosesays.png"
+            "images/bubble.png"
 layeredimage rose flustered:
     at sprite_highlight('rose')
     always:
         'images/characters/rose/rose flustered.png'
     group saying:
         attribute say:
-            "images/characters/rose/rosesays.png"
+            "images/bubble.png"
 layeredimage rose armscrossed smug:
     at sprite_highlight('rose')
     always:
         'images/characters/rose/rose armscrossed smug.png'
     group saying:
         attribute say:
-            "images/characters/rose/rosesays.png"
+            "images/bubble.png"
 layeredimage rose armscrossed grin:
     at sprite_highlight('rose')
     always:
         'images/characters/rose/rose armscrossed grin.png'
     group saying:
         attribute say:
-            "images/characters/rose/rosesays.png"
+            "images/bubble.png"
 layeredimage rose armscrossed neutral:
     at sprite_highlight('rose')
     always:
         'images/characters/rose/rose armscrossed neutral.png'
     group saying:
         attribute say:
-            "images/characters/rose/rosesays.png"
+            "images/bubble.png"
 layeredimage rose armscrossed angry:
     at sprite_highlight('rose')
     always:
         'images/characters/rose/rose armscrossed angry.png'
     group saying:
         attribute say:
-            "images/characters/rose/rosesays.png"
+            "images/bubble.png"
 layeredimage rose armscrossed furious:
     at sprite_highlight('rose')
     always:
         'images/characters/rose/rose armscrossed furious.png'
     group saying:
         attribute say:
-            "images/characters/rose/rosesays.png"
+            "images/bubble.png"
 layeredimage rose neutral pendant:
     at sprite_highlight('rose')
     always:
         'images/characters/rose/rose neutral pendant.png'
     group saying:
         attribute say:
-            "images/characters/rose/rosesays.png"
+            "images/bubble.png"
 layeredimage rose angry:
     at sprite_highlight('rose')
     always:
         'images/characters/rose/rose angry.png'
     group saying:
         attribute say:
-            "images/characters/rose/rosesays.png"
+            "images/bubble.png"
     group knifing:
         attribute roseknife:
             "images/characters/rose/roseknife.png"
@@ -1407,35 +1405,35 @@ layeredimage rose furious:
         'images/characters/rose/rose furious.png'
     group saying:
         attribute say:
-            "images/characters/rose/rosesays.png"
+            "images/bubble.png"
 layeredimage rose smug:
     at sprite_highlight('smug')
     always:
         'images/characters/rose/rose smug.png'
     group saying:
         attribute say:
-            "images/characters/rose/rosesays.png"
+            "images/bubble.png"
 layeredimage rose grin:
     at sprite_highlight('rose')
     always:
         'images/characters/rose/rose grin.png'
     group saying:
         attribute say:
-            "images/characters/rose/rosesays.png"
+            "images/bubble.png"
 layeredimage rose unimpressed:
     at sprite_highlight('rose')
     always:
         'images/characters/rose/rose unimpressed.png'
     group saying:
         attribute say:
-            "images/characters/rose/rosesays.png"
+            "images/bubble.png"
 layeredimage rose athletic:
     at sprite_highlight('rose')
     always:
         'images/characters/rose/rose athletic.png'
     group saying:
         attribute say:
-            "images/characters/rose/rosesays.png"
+            "images/bubble.png"
         
     
 layeredimage rothbauer:
@@ -1444,7 +1442,7 @@ layeredimage rothbauer:
         'images/characters/rothbauer.png'
     group saying:
         attribute say:
-            "images/characters/rothbauersays.png"
+            "images/bubble.png"
             
 layeredimage trish neutral:
     at sprite_highlight('trish')
@@ -1452,7 +1450,7 @@ layeredimage trish neutral:
         'images/characters/trish neutral.png'
     group saying:
         attribute say:
-            "images/characters/trishsays.png"
+            "images/bubble.png"
 
 layeredimage volginova neutral:
     at sprite_highlight('volginova')
@@ -1460,7 +1458,7 @@ layeredimage volginova neutral:
         'images/characters/volginova neutral.png'
     group saying:
         attribute say:
-            "images/characters/volginovasays.png"
+            "images/bubble.png"
    
 
 label start:
