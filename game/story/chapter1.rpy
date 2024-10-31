@@ -142,7 +142,7 @@ label chapter1:
     show box with Dissolve(.2):
         ypos 0
         
-    show nicodemus neutral at norm with dissolve
+    show nicodemus neutral at center with dissolve
     
     nicodemus @ say "...that about concludes our tour of Harmonia's campus. What did you think? Not too pretentious, I hope! Bahahaha!"
     nicodemus @ say "I'm reminded of when I was a new student here myself. A bit nervous but so full of wonder and excitement! It felt like anything was possible!"
@@ -229,7 +229,7 @@ label nicodemusQuestions:
             show box with Dissolve(.2):
                 ypos 0      
                 
-            show nicodemus neutral at norm with dissolve
+            show nicodemus neutral at center with dissolve
             
             nicodemus @ say "He was a good friend, someone you could always count on. But as time went on, the burden of being the last of his kind got to him."
             nicodemus @ say "He withdrew himself from everyone and eventually withered away, like some forgotten flower. I'd hate for you to suffer the same fate."
@@ -499,7 +499,7 @@ label college_orientation:
 
             rori @ say "Haha thanks but I'm actually not sure about that. It's a pretty broad field and I don't exactly know where I'm gonna end up."
 
-            show rori anxiety
+            show rori anxious
 
             rori @ say "I wouldn't wanna end up administrating some boring office's network, ya know? I got into computers cause I wanted to live in like a science fiction world."
 
@@ -539,10 +539,9 @@ label college_orientation:
 
     show ava typical happy at left:
         ypos y_ava
+        xoffset 75
         xzoom -1
     with dissolve
-    
-    ""
     
     ava @ say "Um hi...! My name's Ava and, as you might have guessed, I'm a photography major! I often go out into nature and shoot wildlife and landscapes, but I also dabble in street photography."
     
@@ -550,35 +549,55 @@ label college_orientation:
     
     ava @ say "I like the idea of capturing rare moments in time that disappear as quickly as they come."
     #ava @ say "I like the idea of capturing the rarely seen or overlooked aspects of life!"
+    
+    show ava happy
+    
     ava @ say "Umm, I don't know what else to say? I just kind of like experimenting and finding new ways to view things."
 
     hide ava with dissolve
 
-    show margaret neutral at norm with dissolve
+    show margaret neutral at center with dissolve:
+        ypos y_margaret
 
     margaret @ say "Very good! Next, how abouuuuutttt..."
     
-    show margaret with move:
-        xpos -175
+    pause .05
+    
+    margaret "{nw}"
+    
+    pause .05
         
-    pause .3
+    #pause .3
 
     show margaret neutral at flipright
     
     pause .3
     
+    #show margaret with move:
+    #    xzoom -1
+    #    xoffset 500
+        
+    pause .3
+    
+    show margaret neutral at flipleft
+    
+    pause .2
+    
     show margaret with move:
-        ypos 0
-        xzoom -1
-        xpos 110
+        ypos y_margaret
+        xoffset -250
         
     pause .4
+    
+    margaret @ say "Hmm..."
+    
+    show margaret neutral at flipright
     
     margaret @ say "You, in the pink sweater!"
 
     hide margaret with dissolve
 
-    show claire sweater surprised at norm with dissolve:
+    show claire sweater surprised at center with dissolve:
         xpos 0
 
     claire @ say "        Moi?        "
@@ -598,9 +617,10 @@ label college_orientation:
 
     hide claire with dissolve
 
-    show margaret neutral at norm with dissolve:
+    show margaret neutral at center with dissolve:
         xzoom -1
-        xpos -50
+        xoffset -170
+        ypos y_margaret
 
     margaret @ say "Nicely done! We'll do a couple more. Let's see..."
 
@@ -608,7 +628,7 @@ label college_orientation:
     
     pause .6
 
-    margaret @ say "Hmm..."
+    margaret @ say "..."
     margaret @ say "How about you!"
 
     n "Of course she had to pick you. You pretend to think she's pointing at someone else."
@@ -643,16 +663,17 @@ label college_orientation:
     #n "You can't help but feel it was an empty gesture though. He made sure to get you a room all to yourself, as if that wouldn't make you feel more alone."
     n "On your way out, you overhear some familiar voices."
 
-    show ava typical neutral:
-        xpos 485
-    show claire sweater wave at norm:
+    show ava typical happy at center:
+        xoffset 400
+        ypos y_ava
+    show claire sweater wave at center:
         xzoom -1
         xpos -350
     with dissolve
 
     claire @ say "Hey! Cool camera! Is that a nifty fifty on it?"
     
-    show ava portrait neutral
+    show ava profile whimsical
 
     ava @ say "Thanks! I never leave home without it! Fifty millimeter is just so versatile!"
 
@@ -660,13 +681,15 @@ label college_orientation:
 
     claire @ say "What dorm are you in? I'm in Saint Mary Hall."
     
-    show ava typical neutral
+    show ava typical excited
 
     ava @ say "No way! I'm in there too! What room number?"
+    
+    show ava happy
 
     claire @ say "209A!"
     
-    show ava excited
+    show ava overjoyed
 
     ava @ say "Me too!!!"
 
@@ -700,7 +723,8 @@ label college_orientation:
 
     n "Rori sees you slinking off and calls out your name."
 
-    show rori neutral at norm with dissolve
+    show rori neutral at center with dissolve:
+        ypos y_rori
 
     rori @ say "Hey! [name]!"
     rori @ say "Leaving already?"
@@ -709,21 +733,29 @@ label college_orientation:
 
     rori @ say "Where's your par-"
 
-    show rori anxiety
+    show rori anxious
 
     rori @ say "...Oh. Sorry."
+    
+    player "..."
 
     #n "You just look at him the same way a janitor would look at a child who was projectile vomitting across three tables in the cafeteria."
 
-    show rori neutral
+    show rori yawn lookingaway blush
 
     rori @ say "A-anyway...! I'm staying in Edgar Hall! What dorm do you live in?"
+    
+    show rori flattered blushing
 
     player "I'm over in Swanson."
+    
+    show rori happy
 
     rori @ say "Ah, I heard that's the rich people's building."
 
     player "Rich or endangered."
+    
+    show rori cheery
 
     rori @ say "Hah, yeah I guess..."
 
@@ -734,7 +766,7 @@ label college_orientation:
 
     n "Rori looks around, seemingly unsure of what to say."
 
-    show rori anxiety at shudder
+    show rori anxious at shudder
 
     #rori @ say "M-my parents didn't come either... They just bought me a plane ticket and told me to come back with a degree or don't come back at all."
     rori @ say "M-my parents didn't come either... They just bought me a plane ticket and told me not to contact them until I had a PhD."
@@ -758,14 +790,17 @@ label college_orientation:
 
     rori @ say "Well, I guess I'll see you around. I have to unpack my desktop and run some updates."
     
-    show rori anxiety
+    show rori anxious
     
-    rori @ say "I haven't had it online in over 48 hours. I hope my package manager doesn't break my Xorg session again..."
+    rori @ say "I haven't had it online in over 48 hours and I need to run some updates. I hope my package manager doesn't break my Xorg session again..."
 
     if calledRoriNerd == False:
+        rori "{cps=0}I haven't had it online in over 48 hours and I need to run some updates. I hope my package manager doesn't break my Xorg session again...{/cps}"
         menu:
             "Cool, you use Loonix?":
                 $ roriPoints =+ 1
+                
+                show rori neutral
             
                 player "You use Loonix? That's so cool."
                 
@@ -774,7 +809,10 @@ label college_orientation:
                 
                 n "Rori lowers his voice and asks shyly."
                 
-                rori @ say "Um, do you wanna see my riced out tiling window manager setup?"
+                show rori smile lookingaway blush
+                
+                rori @ say "Um, would you like to see my riced out tiling window manager setup?"
+                rori @ say "I just rewrote my conf files from scratch a couple weeks ago."
                 rori @ say "We can play some games and stuff too."
                 
                 player "Sure. Lead the way."
@@ -789,40 +827,58 @@ label college_orientation:
                 
                 player "Plus the whole bunk bed setup."
                 
-                rori @ say "Hm? Oh yeah, those are my jock roommate's. He's a sophomore so he didn't have to do the orientation today."
+                rori @ say "Hm? Oh yeah, those belong to my jock roommate. He's a sophomore so he didn't have to do the orientation today."
+                
+                show rori sleepy
+                
                 rori @ say "He's probably out at some party right now, I dunno."
                 
                 player "Probably crushing pussy while we hook up a gaming computer."
                 
-                rori @ say "Yup. Pass me that displayport cable please."
+                show rori neutral
+                
+                rori @ say "Yup. But I'd rather be doing this."
+                rori @ say "Pass me that displayport cable please."
                 rori @ say "Now let's see if this works. I'm a bit worried about my SSD's firmware acting janky after the last update."
                         
-                n "Rori goes over to the desk and hooks up a few wires to the desktop tower. When he presses the power button, a rainbow of LEDS shine through the glass panel of the case."
+                n "Rori reaches behind the desk and hooks up a few wires to the desktop tower. When he presses the power button, a rainbow of LEDS shine through the glass panel of the case."
                 n "A moment later, the monitor wakes up and a stream of debug messages scrolls across the monitor."
                 n "It stops and prompts him to enter a password. You avert your eyes out of respect for his privacy."
                 n "Yet you can't help but notice the rapid fire clattering of his mechanical keyboard goes on for half a minute before he presses the enter key."
                 
                 player "Damn, your password must be longer than the Pentagon's. What you hiding on that hard drive?"
                 
+                show rori smile lookingaway
+                
                 n "Rori pushes up his glasses and smirks."
                 
                 rori @ say "16 terabytes of anime bluray rips, 4.5 terabytes of games, 750 gigabytes of jpop, and a couple gigs of leaked source code."
                 
                 player "All legally acquired?"
+                
+                show rori happy
     
                 rori @ say "Legal in my VPN's host country!"
                 
                 player "Nice."
                 
+                show rori anxious
+                
                 rori @ say "Oh what the hell is this?"
                 rori @ say "Error: Cryptsetup couldn't resolve device. /dev/nvme0n1p3 is not a valid LUKS device."
-                rori @ say "It was working fine 2 days ago."
+                rori @ say "Argh, it was working fine a couple days ago!"
                 
                 player "RIP."
                 
-                rori @ say "Ugh, I'm gonna have to load up a live CD and chroot into this and dig around to find the problem."
+                show rori sleepy
+                
+                rori @ say "This stupid cheap SSD has been flipping bits since I bought it."
+                rori @ say "I'm gonna have to load up a live CD and chroot into this and dig around to find the problem."
+                rori @ say "I might as well reinstall the OS at this point."
                 
                 player "Typical linux boot process."
+                
+                show rori neutral
                 
                 rori @ say "Haha yeah... Sorry about this but I doubt I'll be able to get this running tonight."
                 
@@ -832,14 +888,15 @@ label college_orientation:
                 
                 rori @ say "No games."
 
+                n "You point to a console shoved under the desk."
+
                 player "What about that?"
                 
-                n "You point to a console shoved under the desk."
-                
-                rori @ say "The PS3? I use it as a blueyray player."
+                rori @ say "My PS3? I use it as a blueyray player. Or a more often a doorstop."
                 
                 player "Doesn't it play games too?"
                 
+                rori @ say "It's technically capable of it but..."
                 rori @ say "What games?"
                 
                 player "Oh yeah lol"
@@ -854,9 +911,13 @@ label college_orientation:
                 jump playerDormOrientationDay
                 
             "Have fun with that.":
+                show rori neutral
+            
                 player "Have fun with that. Later."
                 
     else:
+        show rori neutral
+        
         player "Have fun with that. Later."
     
     rori @ say "Laters!"
@@ -887,7 +948,7 @@ label playerDormOrientationDay:
     n "Home sweet home for the next four years."
     n "You had packed as much from home as you could carry in your suitcases but haven't had a chance to unpack yet."
     n "It'll have to wait until tomorrow. You're way too tired to bother with it right now."
-    n "Without even bothering to kick off your shoes, you flop directly onto your bed and instantly fall asleep."
+    n "You quickly get ready for bed and flop directly onto the covers, falling asleep instantly."
 
     hide box
 
@@ -896,7 +957,7 @@ label playerDormOrientationDay:
     hide box
 
     show bg calendar
-    show tsaturday at norm
+    show tsaturday at center
     with Dissolve(.5)
 
     pause .6
@@ -960,10 +1021,10 @@ label exploring_campus:
         show ava typical neutral at offscreenleft:
             yalign 0
 
-        show claire sweater neutral at norm:
+        show claire sweater neutral at center:
             xalign 0
             xpos 400
-        show ava typical neutral at norm:
+        show ava typical neutral at center:
             xalign 0
             xzoom -1
             xpos -400
@@ -1109,7 +1170,8 @@ label exploring_campus:
         $ metGunner = True
         n "You almost made it to the end without getting poached by some aggressive salesman."
         
-        show gunner neutral at norm with dissolve
+        show gunner neutral at center with dissolve:
+            ypos y_gunner
 
         gunner @ say "Hey there! I saw you checkin' out the frats and thought you should know Alpha Alpha Alpha is the best one!"
         
@@ -1134,24 +1196,33 @@ label exploring_campus:
         
         n "You attempt to maneuver around the cat only to bump into someone else."
         
-        show rori neutral:
+        show rori neutral at center:
             xzoom -1
-            xpos -400
+            xpos 275
+            ypos y_rori
         
         rori @ say "Oh, hello again [name]!"
         rori @ say "I see you've met my roommate."
         
         gunner @ say "Rori! I'm begging you, join my frat!"
-        gunner @ say "If I don't get enough new recruits, they're gonna duct tape me to the ceiling again!"
+        gunner @ say "If I don't get enough new recruits, the boys are gonna duct tape me to the ceiling again!"
+        
+        show rori sleepy
         
         rori @ say "Hrm... already doesn't sound like it's for me."
         rori @ say "What do you even do in a frat?"
 
-        gunner @ say "Let's see, we uh... haze new members, drink cheap beer, hit on sorority chicks, play sports..."
+        gunner @ say "Cool bro stuff like uhh... hazing new members, drinking cheap beer, hitting on sorority chicks, playing sports..."
+        
+        show rori soyface smug
         
         rori @ say "Right... I don't think any of that appeals to me."
         
+        show rori sleepy
+        
         gunner @ say "There's also a bunch of hot guys and stuff."
+        
+        show rori anxious
         
         rori @ say "Wha-? I-I don't see what that has to do with anything!"
         
@@ -1161,12 +1232,8 @@ label exploring_campus:
         
         n "Rori tenses up but doesn't say anything. He's like a deer in headlights, except he's a ram and the headlights are an accusation of being gay."
         
-        show gunner:
-            xoffset 575
-        show rori:
-            xoffset -175
-        
         menu:
+            "{cps=0}Rori tenses up but doesn't say anything. He's like a deer in headlights, except he's a ram and the headlights are an accusation of being gay.{/cps}"
             "Which anime?":
                 player "Which anime was it?"
                 
@@ -1187,6 +1254,8 @@ label exploring_campus:
                 
                 gunner @ say "Relax, it's just a bit of banter."
                 gunner @ say "Seriously though, some Alphas are jacked. They practically live at the gym."
+        
+        show rori worried
                 
         rori @ say "Thanks for the offer but I'm more into... sensitive guys I guess?"
         
@@ -1194,23 +1263,28 @@ label exploring_campus:
         gunner @ say "Look, can I just put your names down? You don't have to show up but the more people who sign on, the more money we get from the university."
         gunner @ say "You'll get access to benefits like sports tickets and exclusive parties and stuff. Oh and we have monthly game tournaments!"
         
+        show rori concerned
+        
         n "That last part caught Rori's attention."
         
         rori @ say "Tournaments? What do you play?"
         
         gunner @ say "Usually the yearly Call of Battlefield: Modern Football but sometimes someone will bring in some weird ass Japanese game none of us have ever heard of hahaha!"
         
+        show rori sleepy
+        
         n "Rori looks disappointed then shrugs."
         
-        rori @ say "Fine, whatever. At least I can probably sell the sports tickets."
+        rori @ say "Fine, whatever. Sign me up I guess. At least I can probably sell the sports tickets."
         
-        gunner @ say "Sweet! Just sign here! And if I come across any uhh... emotional guys? I'll send them your way!"
+        gunner @ say "Sweet! I just need your signature here! And if I come across any uhh... emotional guys? I'll send them your way!"
         
         rori @ say "Suuuure..."
         
         gunner @ say "What about you? You down?"
         
         menu:
+            gunner "{cps=0}What about you? You down?{/cps}"
             "Join":
                 player "Yeah but only for the free stuff."
                 
@@ -1260,11 +1334,12 @@ label exploring_campus:
     #n "Calming music plays from the speakers mounted to the walls. This would be a nice place to study."
     n "After giving it a lookover, you decide what you want and walk up to place your order."
 
-    show mishka neutral at norm with dissolve
+    show mishka neutral at center with dissolve:
+        ypos y_mishka
 
     mishka @ say "Privyet, welcome to Coffee Zona..."
     
-    #show mishka derp
+    show mishka shy
     
     mishka @ say "...er, Zone!"
     
@@ -1273,6 +1348,7 @@ label exploring_campus:
     mishka @ say "How can I help you?"
     
     menu:
+        mishka "{cps=0}How can I help you?{/cps}"
         "Why are the lights off?":
             player "Why are the lights off? Is the shop open?"
             
@@ -1303,12 +1379,19 @@ label exploring_campus:
     n "You give the barista your order and swipe your card on the machine."
 
     mishka @ say "And can I get a name for you?"
+    
+    show mishka nervous
+    
     mishka @ say "Not that I really need it since we're the only ones in here."
     mishka @ say "But it would be nice to have irregardless."
 
     player "      [name].      "
+    
+    show mishka happy
 
     mishka @ say "Alright [name], I'll have your order ready for you soon!"
+    
+    show mishka neutral
 
     player "Thanks uhh..."
 
@@ -1346,8 +1429,12 @@ label exploring_campus:
             n "You've pirated enough Russian malware to be able to sound out the letters."
             
             player "Thanks uhh, Meesh...ka! Am I saying that right?"
+            
+            show mishka happy
 
             mishka @ say "Yup! Not many Mishkas around here, are there?"
+            
+            show mishka neutral
 
             player "Nope, you're the first I've ever met. Then again, I did just move here."
 
@@ -1362,18 +1449,25 @@ label exploring_campus:
     player "I sure hope so. I wasn't really planning on going to college in the first place, but I also wasn't planning on not going, you know?"
     player "But now I'm here and I still don't know what I'm doing."
 
+    show mishka shy sad
+
     mishka @ say "Many students feel same way. Life can be that way sometimes. You just have to make the best of it while you're here."
+    
+    show mishka neutral eyesclosed
+    
     mishka @ say "For now, enjoy coffee and blini!"
 
+    show mishka neutral -eyesclosed
+    
     n "Mishka hands you a steaming hot cup and a box."
 
     player "Thanks! And I appreciate the advice!"
     
-    show mishka overjoyed
+    show mishka mousey wink right
 
     mishka @ say "Nyema problyema! Come back soon, it gets pretty lonely here!"
     
-    show mishka neutral
+    show mishka neutral -right
 
     player "For sure!"
 
@@ -1421,7 +1515,7 @@ label exploring_campus:
     hide box
 
     show bg calendar
-    show tsunday at norm
+    show tsunday at center
     with Dissolve(.5)
 
     pause .6
@@ -1458,7 +1552,8 @@ label firstDayOfClass:
     n "You vastly overestimated your ability to get around campus quickly and arrive ten minutes late to your history class."
     n "All eyes are on you as you bust through the doorway."
 
-    show rothbauer at norm with dissolve
+    show rothbauer at center with dissolve:
+        ypos y_roth
 
     rothbauer @ say "Ah, nice of you to join us. You must be..."
     
@@ -1483,9 +1578,9 @@ label firstDayOfClass:
 
     player "Hey uh, wanna be partners?"
     
-    show rose neutral at norm with dissolve:
-        xzoom -1
-        xpos -400
+    show rose skirt armscrossed dismissive pendant at center with dissolve:
+        xoffset -200
+        ypos y_rose
     
     rose @ say "    Psh.    "
     rose @ say "     No.     "
@@ -1506,7 +1601,7 @@ label firstDayOfClass:
     #n "You try partnering up with some others but as usual you get ignored."
     n "You take another look at that raccoon girl. She didn't even attempt to talk to any of the other students. She's just staring out the window."
     
-    show rothbauer at norm with dissolve
+    show rothbauer at center with dissolve
 
     rothbauer @ say "Hopefully everyone's found a group by now."
 
@@ -1524,7 +1619,7 @@ label firstDayOfClass:
     show rothbauer with move:
         xpos 250
         
-    show rose neutral at norm with dissolve:
+    show rose neutral at center with dissolve:
         xzoom -1
         xpos -550
 
@@ -1600,7 +1695,7 @@ label firstDayOfClass:
     if metGunner == True:
         n "Along the way you bump into a familiar feline."
 
-        show gunner neutral at norm with dissolve
+        show gunner neutral at center with dissolve
 
         gunner @ say "Sup, [name]! Where ya goin'?"
 
@@ -1648,7 +1743,7 @@ label firstDayOfClass:
         n "Nobody else is brave enough to sit in the front row, leaving you no choice but to take a seat there."
         n "Somone sits right next to you and starts chatting you up like you're best friends."
         
-        show gunner neutral at norm with dissolve
+        show gunner neutral at center with dissolve
         
         gunner @ say "Yeah so summer vacation was pretty lit. Went on this week long fishing trip on my dad's yacht with the bros and my portfolio is up 20\% from the start of the quarter."
 
@@ -1697,7 +1792,7 @@ label firstDayOfClass:
 
     herschel @ say "Good afternoon everyone! My name is Mrs. Herschel and I'm very excited to teach probability and statistics again this year!"
 
-    show gunner neutral at norm with dissolve:
+    show gunner neutral at center with dissolve:
         xzoom -1
         xpos -500
 
@@ -1734,7 +1829,7 @@ label firstDayOfClass:
     hide box
 
     show bg calendar
-    show tmonday at norm
+    show tmonday at center
     with Dissolve(.5)
 
     pause .6
@@ -1773,7 +1868,7 @@ label secondDayOfClass:
     n "You don't think you made the best first impression the other day. Hopefully she doesn't hold a grudge."
     n "She double clicks a file and brings up a slideshow."
 
-    show margaret happy at norm with dissolve
+    show margaret happy at center with dissolve
 
     margaret @ say "Good morning and welcome to Literature I!"
     margaret @ say "Today we'll go over the syllabus and what you can expect from this class. Then we'll finish up with some discussion on the assigned reading!"
@@ -1791,7 +1886,7 @@ label secondDayOfClass:
 
     n "She quickly advances forward a few more slides."
 
-    show margaret neutral at norm
+    show margaret neutral at center
 
     margaret @ say "Ahem where was I? Oh yes, this course will introduce you to literature across a variety of different cultures throughout different time periods."
     margaret @ say "In the interest of time, most of the reading will be on the short side, or at least limited to excerpts from longer works."
@@ -1815,7 +1910,7 @@ label secondDayOfClass:
     n "Miss Ellen goes over the first chapter of the novella, explaining some things and asking the class for their thoughts along the way."
     n "Time flies by quickly and the end of the hour is upon you before you realize it."
 
-    show margaret neutral at norm with dissolve
+    show margaret neutral at center with dissolve
 
     margaret @ say "That's all for today! We'll continue this discussion next time! Have a nice day!"
 
@@ -1833,7 +1928,7 @@ label secondDayOfClass:
     show box with Dissolve(.2):
         ypos 0
 
-    show celestine neutral at norm with dissolve
+    show celestine neutral at center with dissolve
 
     celestine @ say "Bon après-midi! I am Mrs. Celestine and I'll be your French teacher for this semester, and hopefully the next one as well if you decide to stick with it!"
 
@@ -1847,7 +1942,7 @@ label secondDayOfClass:
     else:
         n "You've seen that fat rabbit before. She's the ditzy girl from orientation night."
         
-    show claire outdoors embarassed at norm with moveinleft:
+    show claire outdoors embarassed at center with moveinleft:
         xzoom -1
         xpos -650
 
@@ -1864,7 +1959,7 @@ label secondDayOfClass:
 
     n "Claire makes her way over to the desks and looks you dead in the eye."
 
-    show claire sweater neutral at norm with move:
+    show claire sweater neutral at center with move:
         xpos 560
 
     pause .05
@@ -1925,7 +2020,7 @@ label secondDayOfClass:
 
     celestine @ say "Starting with you, since you were late!"
 
-    show claire sweater derp at norm with dissolve:
+    show claire sweater derp at center with dissolve:
         xpos 560
 
     claire @ say "Umm like, I dunno, I kinda just picked it on a whim! I guess I like to try new things and leave things to chance!"
@@ -1999,7 +2094,7 @@ label secondDayOfClass:
 
     n "Claire turns to you with a devious grin."
 
-    show claire sweater wave at norm with dissolve:
+    show claire sweater wave at center with dissolve:
         xpos 560
 
     claire @ say "Heyyyyy, wanna be study partners?"
@@ -2046,7 +2141,7 @@ label secondDayOfClass:
     show box with Dissolve(.2):
         ypos 0
 
-    show claire sweater neutral at norm with dissolve:
+    show claire sweater neutral at center with dissolve:
         xzoom -1
         xpos -300
         
@@ -2066,7 +2161,7 @@ label secondDayOfClass:
     n "She seems annoyed as she looks over the viewfinder and flutters over."
     
     show claire sweater neutral
-    show ava pose annoyed at norm with moveinright:
+    show ava pose annoyed at center with moveinright:
         xpos 400
         
     claire @ say "What's up?"
@@ -2196,7 +2291,7 @@ label secondDayOfClass:
     hide box
 
     show bg calendar
-    show ttuesday at norm
+    show ttuesday at center
     with Dissolve(.5)
 
     pause .6
@@ -2246,7 +2341,7 @@ label thirdDayOfClass:
 
     n "Time to learn about the lore of the world."
     
-    show rothbauer at norm with dissolve
+    show rothbauer at center with dissolve
     
     rothbauer @ say "Good day, class! Today we will be looking at some of the other civilizations that had cropped up around the dawn of humanized history."
     rothbauer @ say "Let's start with one of their closest genetic relatives, the chimpanzees!"
@@ -2277,7 +2372,7 @@ label thirdDayOfClassStats:
     show box with Dissolve(.2):
         ypos 0
         
-    show gunner neutral at norm with dissolve
+    show gunner neutral at center with dissolve
     
     gunner @ say "Sup [name]!"
     gunner @ say "You ready to fuck up some mathematics?"
@@ -2300,7 +2395,7 @@ label thirdDayOfClassStats:
     
     gunner @ say "Shit, here comes Mrs. Herschel. She'll fail you if she sees you on your phone. I'll send you a text later."
     
-    show herschel at norm with dissolve
+    show herschel at center with dissolve
 
     herschel @ say "Good afternoon class!"
     herschel @ say "We have a lot to go over and precious little time, so let's jump straight into it!"
@@ -2322,7 +2417,7 @@ label thirdDayOfClassStats:
     n "Mrs. Herschel explains how to solve the probability of drawing two queens in a row from a deck of cards."
     n "Gunner leans over and whispers to you."
 
-    show gunner neutral at norm with moveinleft:
+    show gunner neutral at center with moveinleft:
         xzoom -1
         xpos -550
 
@@ -2370,9 +2465,9 @@ label thirdDayOfClassStats:
 
         n "Her ears turn in your direction and she comes hopping toward you with Ava fluttering along by her side."
 
-        show claire sweater overjoyed at norm:
+        show claire sweater overjoyed at center:
             xpos 500
-        show ava typical neutral at norm:
+        show ava typical neutral at center:
             xzoom -1
             xpos -450
         with dissolve
@@ -2428,7 +2523,7 @@ label thirdDayOfClassStats:
         n "The cafe is vacant save for the barista and a feline sitting at a table reading a textbook while listening to his headphones."
         n "He notices you when you walk in and waves you over."
 
-        show gunner neutral at norm with dissolve:
+        show gunner neutral at center with dissolve:
             xzoom -1
 
         player "Gunner? What are you doing here?"
@@ -2438,10 +2533,10 @@ label thirdDayOfClassStats:
         show gunner with move:
             xpos -375
         
-        show claire sweater neutral at norm:
+        show claire sweater neutral at center:
             #xpos 475
             xpos 575
-        show ava typical neutral at norm:
+        show ava typical neutral at center:
         #    xpos 680
             xpos 300
         
@@ -2518,7 +2613,7 @@ label thirdDayOfClassStats:
         show mishka neutral at offscreenleft:
             yalign 0
 
-        show mishka neutral at norm with move:
+        show mishka neutral at center with move:
             xzoom -1
             xpos 1450
             
@@ -2604,7 +2699,7 @@ label thirdDayOfClassStats:
     else:
         n "As you're walking around campus thinking about where to get lunch, Gunner comes running up behind you."
 
-        show gunner neutral at norm with dissolve
+        show gunner neutral at center with dissolve
 
         gunner @ say "[name]! Wait up!"
 
@@ -2639,7 +2734,7 @@ label thirdDayOfClassStats:
         show box with Dissolve(.2):
             ypos 0
 
-        show gunner neutral at norm with moveinright
+        show gunner neutral at center with moveinright
         
         show mishka neutral:
             yalign 0
@@ -2936,7 +3031,7 @@ label avaClaireGunnerLunch:
         n "It's the least you could do since Gunner paid for it. And you don't want to let him show off anymore."
         n "You stand up and walk over to the counter."
         
-        show mishka neutral at norm with dissolve:
+        show mishka neutral at center with dissolve:
             xzoom -1
         
         mishka @ say "Enjoying the company?"
@@ -3317,7 +3412,7 @@ label afterAvaText1:
         n "With only the street lamps to light the way, your surroundings become an unfamiliar void where only the odd stranger lurks."
         n "So it seems, until a friendly figure emerges from the shadows and locks eyes with you."
         
-        show rori neutral at norm with dissolve
+        show rori neutral at center with dissolve
         
         rori @ say "[name]? What are you doing out so late?"
         
@@ -3420,7 +3515,7 @@ label afterAvaText1:
     hide box
 
     show bg calendar
-    show twednesday at norm
+    show twednesday at center
     with Dissolve(.5)
 
     pause .6
@@ -3439,7 +3534,7 @@ label thursday1:
     show box with Dissolve(.2):
         ypos 0
 
-    show margaret neutral at norm with dissolve
+    show margaret neutral at center with dissolve
     
     margaret @ say "Good morning class, today we'll continue our discussion on The Death of Ivan Ilyich!"
     margaret @ say "We've seen that Ivan's social circle is more concerned with status and convenience than compassion."
@@ -3467,7 +3562,7 @@ label thursday1:
 
     n "Miss Ellen sure seemed to be in a bad mood today, but Mrs. Celestine is bursting with energy."
 
-    show celestine neutral at norm:
+    show celestine neutral at center:
         xpos 0
         xzoom -1
 
@@ -3553,7 +3648,7 @@ label thursday1:
     n "You don't really know what just happened."
     n "You shrug and continue your French practice until Mrs. Celestine hands out some homework and dismisses the class."
 
-    show celestine happy at norm with dissolve
+    show celestine happy at center with dissolve
 
     celestine @ say "Good work class! I can tell you're already making so much progress!"
     celestine @ say "Keep it up, and do your best on the homework! Some of it may be challenging but I'd like for you to give it your best shot without using translation software!"
@@ -3574,7 +3669,7 @@ label thursday1:
 
     claire "[name]! Wait up!!!"
 
-    show claire sweater neutral at norm with move:
+    show claire sweater neutral at center with move:
         xpos 0
 
     claire @ say "Do ya wanna come over to my dorm to..."
@@ -3608,13 +3703,13 @@ label thursday1:
             n "Ava is lying on her bed reading a magazine while listening to headphones."
             n "She turned her eyes over to you when when Claire crashed through the doorway."            
             
-            show ava reaching concerned at norm with dissolve:
+            show ava reaching concerned at center with dissolve:
                 xoffset -600
                 xzoom -1
             
             ava @ say "Heya Claire. You alright?"
             
-            show claire sweater neutral at norm with dissolve:
+            show claire sweater neutral at center with dissolve:
                 xoffset 500
             
             claire @ say "Ava, get out."
@@ -3834,7 +3929,7 @@ label thursday1End:
     hide box
 
     show bg calendar
-    show tthursday at norm
+    show tthursday at center
     with Dissolve(.5)
 
     pause .6
@@ -3922,7 +4017,7 @@ label friday1:
     hide box
 
     show bg calendar
-    show tfriday at norm
+    show tfriday at center
     with Dissolve(.5)
 
     pause .6
@@ -3963,7 +4058,7 @@ label rooftop_party:
     n "At least, you hope those are just puddles of rainwater and not something else."
     n "You spot Gunner on the other side of the roof and have push your way past a group of people dancing and grinding on each other to reach him."
 
-    show gunner neutral at norm with dissolve
+    show gunner neutral at center with dissolve
 
     gunner @ say "[name]!!!! Ya made it!"
 
@@ -3983,7 +4078,7 @@ label rooftop_party:
 
     player "Thanks. Hey, wasn't Rori supposed to be here?"
 
-    show rori neutral at norm:
+    show rori neutral at center:
         xzoom -1
         xpos 1500
     show gunner neutral:
@@ -3998,7 +4093,7 @@ label rooftop_party:
     gunner @ say "Ah there he is. He's been trailing me all night."
     gunner @ say "You know you don't have to be my shadow, right? You're free to mingle with other people. Go make some friends."
 
-    show rori anxiety
+    show rori anxious
 
     rori @ say "M-make friends? How do I do that??"
 
@@ -4033,7 +4128,7 @@ label rooftop_party:
 
     rori @ say "But this is kinda exciting!"
 
-    show rori anxiety
+    show rori anxious
     
     rori @ say "A little nerve-wracking, but exciting!"
 
@@ -4047,7 +4142,7 @@ label rooftop_party:
 
     n "You take a sip of your beer and Gunner comes back with a new pack."
 
-    show gunner neutral at norm:
+    show gunner neutral at center:
         xpos 300
     show rori:
         xpos 1550
@@ -4071,7 +4166,7 @@ label rooftop_party:
     
     n "You look on as Rori disappears into the crowd."
 
-    show gunner neutral at norm with move:
+    show gunner neutral at center with move:
         xzoom -1
         xpos 1555
 
@@ -4198,7 +4293,7 @@ label rooftop_party:
     n "\"There he is!\""
     n "Someone points down at a stumbling Gunner as he walks into the glow of a streetlight."
 
-    #show gunner neutral at norm with dissolve
+    #show gunner neutral at center with dissolve
 
     gunner @ say "I'm okay! I landed on my feet!"
 
@@ -4222,7 +4317,7 @@ label rooftop_party:
     n "Gotta get out of here before the police bust everyone."
     n "You push your way past the drunken dancers and take Rori's hoof."
 
-    show rori drunk at norm with dissolve:
+    show rori drunk at center with dissolve:
         xzoom -1
         xpos 1555
 
@@ -4245,7 +4340,7 @@ label rooftop_party:
     n "Looks like the cops already have the nearest staircase blocked in case someone like you tried sneaking away."
     n "A security guard patrols the area around it but you don't think he saw you. You'll have to make your way to the stairway on the other side of the building."
 
-    show rori drunk at norm with dissolve
+    show rori drunk at center with dissolve
 
     rori @ say "What the hell man?"
 
@@ -4284,7 +4379,7 @@ label rooftop_party:
 
     n "Once outside, you hear some rustling in the leaves and Gunner appears."
 
-    show gunner neutral at norm:
+    show gunner neutral at center:
         xzoom -1
         xpos 1400
     with move
@@ -4332,7 +4427,7 @@ label rooftop_party:
     hide box
 
     show bg calendar
-    show tsaturday at norm
+    show tsaturday at center
     with Dissolve(.5)
 
     pause .6
@@ -4361,7 +4456,7 @@ label sunday2:
     n "It's started to pour down freezing cold rain outside, chilling you to the bone even underneath your umbrella."
     n "As you're closing the umbrella and stepping into the cafe, you nearly step on a tiny furry creature."
     
-    show rose neutral at norm with dissolve:
+    show rose neutral at center with dissolve:
         xalign .1
         xzoom -1
 
@@ -4421,7 +4516,7 @@ label sunday2:
 
             hide rose with dissolve
             
-    show mishka neutral at norm with dissolve
+    show mishka neutral at center with dissolve
 
     mishka @ say "Hey [name]! Good to see you still yet! Not many customers on days like these."
 
@@ -4453,7 +4548,7 @@ label sunday2:
     n "Is this rabbit concocting a suicide potion or something?"
     n "She looks around for something, twisting around to face you."
     
-    show mere neutral at norm with dissolve
+    show mere neutral at center with dissolve
     
     ###mere's blip voice is low pitched
     
@@ -4630,7 +4725,7 @@ label sunday2Evening:
     hide box
 
     show bg calendar
-    show tsunday at norm
+    show tsunday at center
     with Dissolve(.5)
 
     pause .6

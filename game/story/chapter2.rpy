@@ -24,7 +24,7 @@ label chapter2start:
     show box with Dissolve(.2):
         ypos 0
 
-    show rothbauer at norm with dissolve
+    show rothbauer at center with dissolve
 
     rothbauer @ say "Good morning, class!"
     rothbauer @ say "From today forward, we will be discussing the intersections of human civilizations with those of other anthromorphs! How exciting!"
@@ -105,7 +105,7 @@ label chapter2start:
     show box with Dissolve(.2):
         ypos 0
         
-    show herschel at norm with dissolve
+    show herschel at center with dissolve
     
     herschel @ say "Hello class, I hope you all had a pleasant weekend!"
     herschel @ say "Today we'll be going over Bayes' theorem, which is a way of determining probability of a cause from its effect."
@@ -129,7 +129,7 @@ label chapter2start:
     hide box
 
     show bg calendar
-    show tmonday at norm
+    show tmonday at center
     with Dissolve(.5)
 
     pause .6
@@ -147,7 +147,7 @@ label week2Tuesday:
     show box with Dissolve(.2):
         ypos 0
 
-    show margaret happy at norm with dissolve
+    show margaret happy at center with dissolve
 
     margaret @ say "Good morning everyone. Today we'll be finishing up The Death of Ivan Ilyich. I'll be sad to see him go but we have plenty of other great books to get through and so little time."
     margaret @ say "After Ivan falls and injures his side, he suffers from worsening pain that causes him to become irritable and further destabilize his relationship with his family."
@@ -170,7 +170,7 @@ label week2Tuesday:
     show box with Dissolve(.2):
         ypos 0
 
-    show celestine neutral at norm with dissolve
+    show celestine neutral at center with dissolve
 
     celestine @ say "Bonne journée, classe! How was your weekend? Have any of you encountered any French words in your day to day life you never noticed before?"
     
@@ -205,7 +205,7 @@ label week2Tuesday:
     hide box
 
     show bg calendar
-    show ttuesday at norm
+    show ttuesday at center
     with Dissolve(.5)
 
     pause .6
@@ -222,13 +222,13 @@ label week2Tuesday:
     show box with Dissolve(.2):
         ypos 0
         
-    show rothbauer at norm with dissolve
+    show rothbauer at center with dissolve
 
     rothbauer @ say "Good morning class! I hope you're prepared for today's quiz!"
 
     player "Wha-? Quiz?"
 
-    show rose neutral pendant at norm with dissolve:
+    show rose neutral pendant at center with dissolve:
         xpos -540
         xzoom -1
 
@@ -331,7 +331,7 @@ label week2Tuesday:
     hide box
 
     show bg calendar
-    show twednesday at norm
+    show twednesday at center
     with Dissolve(.5)
 
     pause .6
@@ -377,7 +377,7 @@ label week2Tuesday:
         
     $ currentbook = "The Odyssey"
 
-    show margaret neutral at norm with dissolve
+    show margaret neutral at center with dissolve
 
     margaret @ say "Today we'll be starting a new story, this time originating from ancient Greece in the 5th century BCE."
     margaret @ say "It is the archetypal hero's journey so often found in literature that succeeded it, as well as in our own lives!"
@@ -413,7 +413,7 @@ label week2Tuesday:
     n "You snap out of your dizzy spell but find that you've fallen out of your seat with the whole class looking at you."
     n "Ms. Ellen is looking down at you with a look of genuine concern."
 
-    show margaret sad at norm with dissolve
+    show margaret sad at center with dissolve
 
     play music "audio/ambient/indoors people talking.ogg" fadein .5
 
@@ -525,7 +525,7 @@ label week2Tuesday:
     hide box
 
     show bg calendar
-    show tthursday at norm
+    show tthursday at center
     with Dissolve(.5)
 
     pause .6
@@ -589,7 +589,7 @@ label week2Tuesday:
     hide box
 
     show bg calendar
-    show tfriday at norm
+    show tfriday at center
     with Dissolve(.5)
 
     pause .6
@@ -641,10 +641,10 @@ label week2Tuesday:
     if gardenDiscovered == True:
         n "This is the same garden you've visited before, just at one of the other entrances. The area is quite expansive and you haven't been to this part before."
 
-    show ava typical neutral at norm:
+    show ava typical neutral at center:
         #xzoom -1
         xpos 375
-    show claire outdoors neutral at norm:
+    show claire outdoors neutral at center:
         xzoom -1
         xpos -400
     with dissolve
@@ -825,7 +825,7 @@ label week2Tuesday:
     hide box
 
     show bg calendar
-    show tsaturday at norm
+    show tsaturday at center
     with Dissolve(.5)
 
     pause .6
@@ -862,7 +862,7 @@ label week2Tuesday:
 
     player "Rose! Wait up!"
 
-    show rose armscrossed neutral at norm with dissolve:
+    show rose armscrossed neutral at center with dissolve:
         xzoom -1
 
     rose @ say "Hm? Oh, it's you. What do you want?"
@@ -997,7 +997,7 @@ label week2Tuesday:
             
             n "While you're staring at your bloody fingers, Rose takes the opportunity to snatch the sheets of paper from your other hand."
             
-            show rose unimpressed at norm with dissolve
+            show rose unimpressed at center with dissolve
             
             rose @ say "What did you expect?"
             rose @ say "Life's not like one of your creepy animes. Learn to treat people properly or don't be surprised if you end up dead like the rest of your species sooner than later."
@@ -1115,7 +1115,7 @@ label week2Tuesday:
     gunner @ say "Exactly! Let's commit a crime!"
     gunner @ say "No homo."
     
-    show rori anxiety
+    show rori anxious
     
     rori @ say "W-why would I wanna do that?"
     
@@ -1330,7 +1330,7 @@ label week2Tuesday:
     hide box
 
     show bg calendar
-    show tmonday at norm
+    show tmonday at center
     with Dissolve(.5)
 
     pause .6
@@ -1396,7 +1396,7 @@ label beauty_and_the_beast:
     n "As you walk into French class you notice the projector displaying the DVD menu for the film Claire mentioned you were gonna watch today."
     n "Not even a BlueyRay... Where does Harmonia's budget even go towards??"
 
-    show claire sweater wave at norm with dissolve:
+    show claire sweater wave at center with dissolve:
         xpos 300
 
     claire @ say "Hey [name]! Glad you could make it today!"
@@ -1411,7 +1411,7 @@ label beauty_and_the_beast:
 
     hide claire with dissolve
 
-    show celestine happy at norm with dissolve
+    show celestine happy at center with dissolve
 
     celestine @ say "Good afternoon class! Today we're going to be watching a favorite of mine, Beauty and the Beast!"
     
@@ -1434,12 +1434,12 @@ label beauty_and_the_beast:
     n "Mrs. Celestine interjects throughout the film to point out some interesting facts and translate a few not-so-obvious parts."
     n "Overall it's an interesting take on the story and it was fun trying to piece together sentences in a language you're barely versed in."
 
-    show celestine neutral at norm with dissolve
+    show celestine neutral at center with dissolve
         #xzoom -1
 
     celestine @ say "C'est la fin! What did you all think of it?"
 
-    show claire sweater neutral at norm with dissolve:
+    show claire sweater neutral at center with dissolve:
         xpos 670
 
     show celestine at flipright
@@ -1456,7 +1456,7 @@ label beauty_and_the_beast:
     #play music "audio/ai19.ogg" fadein 1.0
     play music "audio/music/Evan Schaeffer - Aqueduct.ogg" fadein .5
 
-    show claire sweater pose lusty alert at norm with dissolve:
+    show claire sweater pose lusty alert at center with dissolve:
         xzoom -1
         xpos 0
 
@@ -1475,7 +1475,7 @@ label beauty_and_the_beast:
     claire @ say "The animated version will always hold a special place in my heart ksksksks!"
     gunner "{nw}"
 
-    show ava casual happy at norm:
+    show ava casual happy at center:
         xpos 320
     show claire:
         xpos -330

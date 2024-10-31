@@ -10,25 +10,39 @@ label roriDormIntro:
     n "Scattered throughout Rori's dorm are various electronics that heat the room to rival a sauna."
     n "The glow of several CRT monitors displaying vintage anime pierces your retinas. Toxic fumes from a soldering iron linger in the air, making you cough. The whirring of fans could drown out the sound of a jet engine."
     
-    show rori neutral at norm with dissolve
+    show rori neutral at left with dissolve:
+        xzoom -1
+        ypos y_rori
     
-    rori "Sorry about the mess. The university pays for power so I hooked up a few crypto mining ASICs to generate some passive income."
+    rori @ say "Sorry about the mess. The university pays for power so I hooked up a few crypto mining ASICs to generate some passive income."
     
     menu:
+        rori "{cps=0}Sorry about the mess. The university pays for power so I hooked up a few crypto mining ASICs to generate some passive income.{/cps}"
         "And kill the environment.":
             player "And destroy the environment in the process."
             
-            rori "A few kilowatts is nothing in the grand scheme of things."
-            rori "There's a nuclear power plant that generates plenty of electricty nearby."
+            show rori anxious
+            
+            rori @ say "H-hey, a few kilowatts is nothing in the grand scheme of things."
+            
+            show rori neutral
+            
+            rori @ say "Besides there's a nuclear power plant nearby that generates plenty of electricty."
         "Based electricity thief.":
             player "Based electricity thief."
             
-            rori "It's not stealing if they're giving it away for free."
-            rori "If they didn't want me using 11000 watts, they shouldn't have given me so many electric sockets."
+            show rori smile lookingaway
+            
+            rori @ say "It's not stealing if they're giving it away for free."
+            rori @ say "If they didn't want me using 11000 watts, they shouldn't have given me so many electric sockets."
             
             player "I don't think they accounted for daisy chaining power strips like that. Seems like a fire hazard."
             
-            rori "Good thing they have insurance then, and I have remote backups."
+            show rori happy
+            
+            rori @ say "Good thing they have insurance then, and I have remote backups."
+    
+    show rori neutral
     
     return
     

@@ -169,11 +169,12 @@ define nicodemus = Character("Nicodemus", image="nicodemus", what_color="d0dbff"
 
 define y_margaret = 1570
 define y_rori = 1565
-define y_rose = 1570
-define y_gunner = 1570
+define y_rose = 1400
+define y_gunner = 1485
 define y_claire = 1570
-define y_ava = 1630
-define y_mishka = 1570
+define y_ava = 1465
+define y_mishka = 1550
+define y_roth = 1550
 
 #old mishka text color a4cffc
 #old gunner color #ffb7d3, reuse for lina?
@@ -215,16 +216,19 @@ layeredimage ava typical neutral:
     always:
         'images/characters/ava/ava typical neutral.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
-            "images/characters/ava/avasays.png"
+            "images/bubble.png"
 layeredimage ava typical happy:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava typical happy.png'
     group saying:
         xzoom .9
-        yzoom .75
-        pos (600,209)
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
 layeredimage ava twopiece pants unimpressed:
@@ -232,6 +236,9 @@ layeredimage ava twopiece pants unimpressed:
     always:
         'images/characters/ava/ava twopiece pants unimpressed.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
 layeredimage ava twopiece pants smile:
@@ -239,6 +246,9 @@ layeredimage ava twopiece pants smile:
     always:
         'images/characters/ava/ava twopiece pants smile.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
 layeredimage ava twopiece smile:
@@ -246,6 +256,9 @@ layeredimage ava twopiece smile:
     always:
         'images/characters/ava/ava twopiece smile.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
 layeredimage ava twopiece flattered:
@@ -253,6 +266,9 @@ layeredimage ava twopiece flattered:
     always:
         'images/characters/ava/ava twopiece flattered.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
 layeredimage ava portrait overjoyed:
@@ -260,6 +276,9 @@ layeredimage ava portrait overjoyed:
     always:
         'images/characters/ava/ava portrait overjoyed.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
 layeredimage ava suggestive:
@@ -267,6 +286,9 @@ layeredimage ava suggestive:
     always:
         'images/characters/ava/ava suggestive.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
 layeredimage ava portrait smile:
@@ -274,6 +296,9 @@ layeredimage ava portrait smile:
     always:
         'images/characters/ava/ava portrait smile.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
 layeredimage ava portrait concerned:
@@ -281,6 +306,9 @@ layeredimage ava portrait concerned:
     always:
         'images/characters/ava/ava portrait concerned.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
 layeredimage ava casual flattered:
@@ -288,6 +316,9 @@ layeredimage ava casual flattered:
     always:
         'images/characters/ava/ava casual flattered.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
 layeredimage ava glowy unimpressed:
@@ -295,6 +326,9 @@ layeredimage ava glowy unimpressed:
     always:
         'images/characters/ava/ava glowy unimpressed.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
 layeredimage ava unimpressedbrowless:
@@ -302,6 +336,9 @@ layeredimage ava unimpressedbrowless:
     always:
         'images/characters/ava/ava unimpressedbrowless.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
 layeredimage ava reaching concerned:
@@ -309,6 +346,9 @@ layeredimage ava reaching concerned:
     always:
         'images/characters/ava/ava reaching concerned.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
 layeredimage ava pose unimpressed:
@@ -316,6 +356,9 @@ layeredimage ava pose unimpressed:
     always:
         'images/characters/ava/ava pose unimpressed.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
 layeredimage ava flattered:
@@ -323,6 +366,9 @@ layeredimage ava flattered:
     always:
         'images/characters/ava/ava flattered.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
 layeredimage ava embarassed:
@@ -330,6 +376,9 @@ layeredimage ava embarassed:
     always:
         'images/characters/ava/ava embarassed.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
 layeredimage ava smile:
@@ -337,6 +386,9 @@ layeredimage ava smile:
     always:
         'images/characters/ava/ava smile.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
 layeredimage ava unimpressed:
@@ -344,6 +396,9 @@ layeredimage ava unimpressed:
     always:
         'images/characters/ava/ava unimpressed.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
 layeredimage ava reaching concerned:
@@ -351,6 +406,9 @@ layeredimage ava reaching concerned:
     always:
         'images/characters/ava/ava reaching concerned.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
 layeredimage ava reaching embarassed:
@@ -358,6 +416,9 @@ layeredimage ava reaching embarassed:
     always:
         'images/characters/ava/ava reaching embarassed.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
 layeredimage ava motivated:
@@ -365,6 +426,9 @@ layeredimage ava motivated:
     always:
         'images/characters/ava/ava motivated.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
 layeredimage ava casual happy:
@@ -372,6 +436,9 @@ layeredimage ava casual happy:
     always:
         'images/characters/ava/ava casual happy.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
 layeredimage ava seriously:
@@ -379,90 +446,9 @@ layeredimage ava seriously:
     always:
         'images/characters/ava/ava seriously.png'
     group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage ava pose smile:
-    at sprite_highlight('ava')
-    always:
-        'images/characters/ava/ava pose smile.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage ava casual smile:
-    at sprite_highlight('ava')
-    always:
-        'images/characters/ava/ava casual smile.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage ava casual angry:
-    at sprite_highlight('ava')
-    always:
-        'images/characters/ava/ava casual angry.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage ava casual overjoyed:
-    at sprite_highlight('ava')
-    always:
-        'images/characters/ava/ava casual overjoyed.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage ava casual unimpressed:
-    at sprite_highlight('ava')
-    always:
-        'images/characters/ava/ava casual unimpressed.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage ava casual annoyed:
-    at sprite_highlight('ava')
-    always:
-        'images/characters/ava/ava casual annoyed.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage ava casual concerned:
-    at sprite_highlight('ava')
-    always:
-        'images/characters/ava/ava casual concerned.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage ava casual daydream:
-    at sprite_highlight('ava')
-    always:
-        'images/characters/ava/ava casual daydream.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage ava unsure:
-    at sprite_highlight('ava')
-    always:
-        'images/characters/ava/ava unsure.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage ava concerned:
-    at sprite_highlight('ava')
-    always:
-        'images/characters/ava/ava concerned.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage ava waitwhat:
-    at sprite_highlight('ava')
-    always:
-        'images/characters/ava/ava waitwhat.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage ava pose flattered:
-    at sprite_highlight('ava')
-    always:
-        'images/characters/ava/ava pose flattered.png'
-    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
 layeredimage ava pose happy:
@@ -470,6 +456,149 @@ layeredimage ava pose happy:
     always:
         'images/characters/ava/ava pose happy.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava profile whimsical:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava profile whimsical.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-135,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava profile happy:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava profile happy.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava casual smile:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava casual smile.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava casual angry:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava casual angry.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava casual overjoyed:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava casual overjoyed.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava casual unimpressed:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava casual unimpressed.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava casual annoyed:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava casual annoyed.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava casual concerned:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava casual concerned.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava casual daydream:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava casual daydream.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava unsure:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava unsure.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava concerned:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava concerned.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava waitwhat:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava waitwhat.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava pose flattered:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava pose flattered.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava pose happy:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava pose happy.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
 layeredimage ava pose ohyou:
@@ -477,6 +606,9 @@ layeredimage ava pose ohyou:
     always:
         'images/characters/ava/ava pose ohyou.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
 layeredimage ava pose angry:
@@ -484,6 +616,9 @@ layeredimage ava pose angry:
     always:
         'images/characters/ava/ava pose angry.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
 layeredimage ava pose concerned:
@@ -491,6 +626,9 @@ layeredimage ava pose concerned:
     always:
         'images/characters/ava/ava pose concerned.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
 layeredimage ava pose annoyed:
@@ -498,6 +636,9 @@ layeredimage ava pose annoyed:
     always:
         'images/characters/ava/ava pose annoyed.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
 layeredimage ava bored:
@@ -505,34 +646,49 @@ layeredimage ava bored:
     always:
         'images/characters/ava/ava bored.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
-layeredimage ava excited:
+layeredimage ava typical excited:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava/ava excited.png'
+        'images/characters/ava/ava typical excited.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
-layeredimage ava angry:
+layeredimage ava typical angry:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava/ava angry.png'
+        'images/characters/ava/ava typical angry.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
-layeredimage ava annoyed:
+layeredimage ava typical annoyed:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava/ava annoyed.png'
+        'images/characters/ava/ava typical annoyed.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
-layeredimage ava neutral:
+layeredimage ava typical neutral:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava/ava neutral.png'
+        'images/characters/ava/ava typical neutral.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
 layeredimage ava portrait neutral:
@@ -540,13 +696,19 @@ layeredimage ava portrait neutral:
     always:
         'images/characters/ava/ava portrait neutral.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
-layeredimage ava overjoyed:
+layeredimage ava typical overjoyed:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava/ava overjoyed.png'
+        'images/characters/ava/ava typical overjoyed.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
 layeredimage ava tipsy:
@@ -554,6 +716,9 @@ layeredimage ava tipsy:
     always:
         'images/characters/ava/ava tipsy.png'
     group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
         attribute say:
             "images/bubble.png"
 
@@ -825,6 +990,9 @@ layeredimage claire swimsuit leaning:
     always:
         'images/characters/claire/claire swimsuit leaning.png'
     group saying:
+        xzoom .9
+        yzoom .75
+        pos (0,88)
         attribute say:
             "images/bubble.png"
 
@@ -833,6 +1001,9 @@ layeredimage margaret neutral:
     always:
         'images/characters/margaret/margaret neutral.png'
     group saying:
+        xzoom .9
+        yzoom .75
+        pos (0,88)
         attribute say:
             "images/bubble.png"
 layeredimage margaret tailwag flattered:
@@ -840,6 +1011,9 @@ layeredimage margaret tailwag flattered:
     always:
         'images/characters/margaret/margaret tailwag flattered.png'
     group saying:
+        xzoom .9
+        yzoom .75
+        pos (0,88)
         attribute say:
             "images/bubble.png"
 layeredimage margaret tailwag happy:
@@ -847,6 +1021,9 @@ layeredimage margaret tailwag happy:
     always:
         'images/characters/margaret/margaret tailwag happy.png'
     group saying:
+        xzoom .9
+        yzoom .75
+        pos (0,88)
         attribute say:
             "images/bubble.png"
 layeredimage margaret sad smoking:
@@ -854,6 +1031,9 @@ layeredimage margaret sad smoking:
     always:
         'images/characters/margaret/margaret sad smoking.png'
     group saying:
+        xzoom .9
+        yzoom .75
+        pos (0,88)
         attribute say:
             "images/bubble.png"
 layeredimage margaret smoking intrigued:
@@ -861,6 +1041,9 @@ layeredimage margaret smoking intrigued:
     always:
         'images/characters/margaret/margaret smoking intrigued.png'
     group saying:
+        xzoom .9
+        yzoom .75
+        pos (0,88)
         attribute say:
             "images/bubble.png"
 layeredimage margaret smoking laugh:
@@ -868,6 +1051,9 @@ layeredimage margaret smoking laugh:
     always:
         'images/characters/margaret/margaret smoking laugh.png'
     group saying:
+        xzoom .9
+        yzoom .75
+        pos (0,88)
         attribute say:
             "images/bubble.png"
 layeredimage margaret flattered:
@@ -875,6 +1061,9 @@ layeredimage margaret flattered:
     always:
         'images/characters/margaret/margaret flattered.png'
     group saying:
+        xzoom .9
+        yzoom .75
+        pos (0,88)
         attribute say:
             "images/bubble.png"
 layeredimage margaret tailwag neutral:
@@ -882,6 +1071,9 @@ layeredimage margaret tailwag neutral:
     always:
         'images/characters/margaret/margaret tailwag neutral.png'
     group saying:
+        xzoom .9
+        yzoom .75
+        pos (0,88)
         attribute say:
             "images/bubble.png"
 layeredimage margaret tailwag flattered:
@@ -889,6 +1081,9 @@ layeredimage margaret tailwag flattered:
     always:
         'images/characters/margaret/margaret tailwag flattered.png'
     group saying:
+        xzoom .9
+        yzoom .75
+        pos (0,88)
         attribute say:
             "images/bubble.png"
 layeredimage margaret tailwag happy:
@@ -896,6 +1091,9 @@ layeredimage margaret tailwag happy:
     always:
         'images/characters/margaret/margaret tailwag happy.png'
     group saying:
+        xzoom .9
+        yzoom .75
+        pos (0,88)
         attribute say:
             "images/bubble.png"
 layeredimage margaret intrigued:
@@ -903,6 +1101,9 @@ layeredimage margaret intrigued:
     always:
         'images/characters/margaret/margaret intrigued.png'
     group saying:
+        xzoom .9
+        yzoom .75
+        pos (0,88)
         attribute say:
             "images/bubble.png"
 layeredimage margaret melancholy:
@@ -910,6 +1111,9 @@ layeredimage margaret melancholy:
     always:
         'images/characters/margaret/margaret melancholy.png'
     group saying:
+        xzoom .9
+        yzoom .75
+        pos (0,88)
         attribute say:
             "images/bubble.png"
 layeredimage margaret happy:
@@ -917,11 +1121,17 @@ layeredimage margaret happy:
     always:
         'images/characters/margaret/margaret happy.png'
     group saying:
+        xzoom .9
+        yzoom .75
+        pos (0,88)
         attribute say:
             "images/bubble.png"
 layeredimage margaret sad:
     at sprite_highlight('margaret')
     always:
+        xzoom .9
+        yzoom .75
+        pos (0,88)
         'images/characters/margaret/margaret sad.png'
     group saying:
         attribute say:
@@ -931,6 +1141,9 @@ layeredimage margaret smoking neutral:
     always:
         'images/characters/margaret/margaret smoking neutral.png'
     group saying:
+        xzoom .9
+        yzoom .75
+        pos (0,88)
         attribute say:
             "images/bubble.png"
 layeredimage margaret sadsmoking:
@@ -938,6 +1151,9 @@ layeredimage margaret sadsmoking:
     always:
         'images/characters/margaret/margaret sad smoking.png'
     group saying:
+        xzoom .9
+        yzoom .75
+        pos (0,88)
         attribute say:
             "images/bubble.png"
 
@@ -1013,6 +1229,9 @@ layeredimage gunner neutral:
     always:
         'images/characters/gunner neutral.png'
     group saying:
+        xzoom .9
+        yzoom .75
+        pos (545,223)
         attribute say:
             "images/bubble.png"
         
@@ -1051,6 +1270,19 @@ layeredimage mishka neutral:
     always:
         'images/characters/mishka/mishka neutral.png'
     group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka nervous:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka nervous.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
         attribute say:
             "images/bubble.png"
 layeredimage mishka teasing:
@@ -1058,6 +1290,9 @@ layeredimage mishka teasing:
     always:
         'images/characters/mishka/mishka teasing.png'
     group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
         attribute say:
             "images/bubble.png"
 layeredimage mishka saddest:
@@ -1065,6 +1300,9 @@ layeredimage mishka saddest:
     always:
         'images/characters/mishka/mishka saddest.png'
     group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
         attribute say:
             "images/bubble.png"
 layeredimage mishka shy:
@@ -1072,6 +1310,9 @@ layeredimage mishka shy:
     always:
         'images/characters/mishka/mishka shy.png'
     group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
         attribute say:
             "images/bubble.png"
 layeredimage mishka shy smile:
@@ -1079,6 +1320,9 @@ layeredimage mishka shy smile:
     always:
         'images/characters/mishka/mishka shy smile.png'
     group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
         attribute say:
             "images/bubble.png"
 layeredimage mishka cute:
@@ -1086,6 +1330,9 @@ layeredimage mishka cute:
     always:
         'images/characters/mishka/mishka cute.png'
     group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
         attribute say:
             "images/bubble.png"
 layeredimage mishka nya:
@@ -1093,6 +1340,9 @@ layeredimage mishka nya:
     always:
         'images/characters/mishka/mishka nya.png'
     group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
         attribute say:
             "images/bubble.png"
 layeredimage mishka despondent:
@@ -1100,6 +1350,9 @@ layeredimage mishka despondent:
     always:
         'images/characters/mishka/mishka despondent.png'
     group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
         attribute say:
             "images/bubble.png"
 layeredimage mishka hopeful:
@@ -1107,6 +1360,9 @@ layeredimage mishka hopeful:
     always:
         'images/characters/mishka/mishka hopeful.png'
     group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
         attribute say:
             "images/bubble.png"
 layeredimage mishka happy wink:
@@ -1114,6 +1370,9 @@ layeredimage mishka happy wink:
     always:
         'images/characters/mishka/mishka happy wink.png'
     group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
         attribute say:
             "images/bubble.png"
 layeredimage mishka winki:
@@ -1121,6 +1380,9 @@ layeredimage mishka winki:
     always:
         'images/characters/mishka/mishka winki.png'
     group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
         attribute say:
             "images/bubble.png"
 layeredimage mishka anxious:
@@ -1128,6 +1390,9 @@ layeredimage mishka anxious:
     always:
         'images/characters/mishka/mishka anxious.png'
     group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
         attribute say:
             "images/bubble.png"
 layeredimage mishka anxious grin:
@@ -1135,6 +1400,9 @@ layeredimage mishka anxious grin:
     always:
         'images/characters/mishka/mishka anxious grin.png'
     group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
         attribute say:
             "images/bubble.png"
 layeredimage mishka shy grin:
@@ -1142,6 +1410,9 @@ layeredimage mishka shy grin:
     always:
         'images/characters/mishka/mishka shy grin.png'
     group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
         attribute say:
             "images/bubble.png"
 layeredimage mishka shy:
@@ -1149,6 +1420,9 @@ layeredimage mishka shy:
     always:
         'images/characters/mishka/mishka shy.png'
     group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
         attribute say:
             "images/bubble.png"
 layeredimage mishka silly wink:
@@ -1156,6 +1430,9 @@ layeredimage mishka silly wink:
     always:
         'images/characters/mishka/mishka silly wink.png'
     group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
         attribute say:
             "images/bubble.png"
 layeredimage mishka sad wave:
@@ -1163,13 +1440,9 @@ layeredimage mishka sad wave:
     always:
         'images/characters/mishka/mishka sad wave.png'
     group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage mishka overjoyed:
-    at sprite_highlight('mishka')
-    always:
-        'images/characters/mishka/mishka overjoyed.png'
-    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
         attribute say:
             "images/bubble.png"
 layeredimage mishka happy:
@@ -1177,6 +1450,19 @@ layeredimage mishka happy:
     always:
         'images/characters/mishka/mishka happy.png'
     group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka mousey wink right:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka mousey wink right.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
         attribute say:
             "images/bubble.png"
 layeredimage mishka ceremonial neutral:
@@ -1184,6 +1470,9 @@ layeredimage mishka ceremonial neutral:
     always:
         'images/characters/mishka/mishka ceremonial.png'
     group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
         attribute say:
             "images/bubble.png"
 layeredimage mishka derp:
@@ -1191,6 +1480,9 @@ layeredimage mishka derp:
     always:
         'images/characters/mishka/mishka derp.png'
     group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
         attribute say:
             "images/bubble.png"    
 layeredimage mishka ceremonial happy:
@@ -1198,6 +1490,9 @@ layeredimage mishka ceremonial happy:
     always:
         'images/characters/mishka/mishka hap ceremonial.png'
     group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
         attribute say:
             "images/bubble.png"
 layeredimage mishka hat neutral:
@@ -1205,6 +1500,9 @@ layeredimage mishka hat neutral:
     always:
         'images/characters/mishka/mishka hat neutral.png'
     group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
         attribute say:
             "images/bubble.png"
 layeredimage mishka hat happy:
@@ -1212,6 +1510,9 @@ layeredimage mishka hat happy:
     always:
         'images/characters/mishka/mishka hat happy.png'
     group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
         attribute say:
             "images/bubble.png"
 layeredimage mishka hat sad:
@@ -1219,6 +1520,9 @@ layeredimage mishka hat sad:
     always:
         'images/characters/mishka/mishka hat sad.png'
     group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
         attribute say:
             "images/bubble.png"
 layeredimage mishka hat depressed:
@@ -1226,6 +1530,9 @@ layeredimage mishka hat depressed:
     always:
         'images/characters/mishka/mishka hat depressed.png'
     group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
         attribute say:
             "images/bubble.png"
 layeredimage mishka sad:
@@ -1233,6 +1540,9 @@ layeredimage mishka sad:
     always:
         'images/characters/mishka/mishka sad.png'
     group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
         attribute say:
             "images/bubble.png"
 layeredimage mishka depressed:
@@ -1240,6 +1550,29 @@ layeredimage mishka depressed:
     always:
         'images/characters/mishka/mishka depressed.png'
     group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka shy sad:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka shy sad.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka neutral eyesclosed:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka neutral eyesclosed.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
         attribute say:
             "images/bubble.png"
             
@@ -1273,13 +1606,9 @@ layeredimage rori neutral:
     always:
         'images/characters/rori/rori neutral.png'
     group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage rori sleepy:
-    at sprite_highlight('rori')
-    always:
-        'images/characters/rori/rori sleepy.png'
-    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
         attribute say:
             "images/bubble.png"
 layeredimage rori concerned:
@@ -1287,6 +1616,119 @@ layeredimage rori concerned:
     always:
         'images/characters/rori/rori concerned.png'
     group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori worried:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori worried.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori soyface smug:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori soyface smug.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori cheery:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori cheery.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori flattered blushing:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori flattered blushing.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori happy:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori happy.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori sleepy:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori sleepy.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori smile lookingaway:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori smile lookingaway.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori smile lookingaway blush:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori smile lookingaway blush.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori yawn lookingaway blush:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori yawn lookingaway blush.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori sleepy:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori sleepy.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori concerned:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori concerned.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
         attribute say:
             "images/bubble.png"
 layeredimage rori neutral blushing:
@@ -1294,13 +1736,19 @@ layeredimage rori neutral blushing:
     always:
         'images/characters/rori/rori neutral blushing.png'
     group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
         attribute say:
             "images/bubble.png"
-layeredimage rori anxiety:
+layeredimage rori anxious:
     at sprite_highlight('rori')
     always:
-        'images/characters/rori/rori anxiety.png'
+        'images/characters/rori/rori anxious.png'
     group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
         attribute say:
             "images/bubble.png"
 layeredimage rori drunk:
@@ -1308,6 +1756,9 @@ layeredimage rori drunk:
     always:
         'images/characters/rori/rori drunk.png'
     group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
         attribute say:
             "images/bubble.png"            
 layeredimage rori pantslessdrunk:
@@ -1315,12 +1766,19 @@ layeredimage rori pantslessdrunk:
     always:
         'images/characters/rori/rori pantslessdrunk.png'
     group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
         attribute say:
+            "images/bubble.png"            
 layeredimage rori laugh:
     at sprite_highlight('rori')
     always:
         'images/characters/rori/rori laugh.png'
     group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
         attribute say:
             "images/bubble.png"            
 layeredimage rori pantsless:
@@ -1328,6 +1786,9 @@ layeredimage rori pantsless:
     always:
         'images/characters/rori/rori pantsless.png'
     group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
         attribute say:
             "images/bubble.png"
 
@@ -1337,6 +1798,13 @@ layeredimage rose neutral:
     at sprite_highlight('rose')
     always:
         'images/characters/rose/rose neutral.png'
+    group saying:
+        attribute say:
+            "images/bubble.png"
+layeredimage rose skirt armscrossed dismissive pendant:
+    at sprite_highlight('rose')
+    always:
+        'images/characters/rose/rose skirt armscrossed dismissive pendant.png'
     group saying:
         attribute say:
             "images/bubble.png"
@@ -1537,10 +2005,9 @@ label start:
         linear .19 ypos 18
         linear .19 ypos 0
 
-
     transform hop:
-        ypos 15
-        linear .18 ypos 0
+        yoffset 15
+        linear .18 yoffset 0
         #linear .05 yalign 1.1
         #linear .1 yalign 1.0
 
@@ -1574,13 +2041,13 @@ label start:
         
 
     transform flipright:
-        ypos 20
+        yoffset 14
         xzoom -1
-        linear .17 yalign 0
+        linear .17 yoffset 0
     transform flipleft:
-        ypos 20
+        yoffset 14
         xzoom 1
-        linear .17 yalign 0
+        linear .17 yoffset 0
     transform fliphop:
         yalign 1.1
         xzoom -1
@@ -1638,20 +2105,20 @@ label start:
     
     
     
-    #show claire sw neu at norm:
+    #show claire sw neu at center:
     #    xpos -175
     #    xzoom -1
-    #show ellen neutral at norm:
+    #show ellen neutral at center:
     #    xpos -460
     #    xzoom -1
-    #show rose neutral at norm:
+    #show rose neutral at center:
     #    xpos -670
     #    xzoom -1
-    #show mishka neutraltral at norm:
+    #show mishka neutraltral at center:
     #    xpos 220
-    #show rori neutraltral at norm:
+    #show rori neutraltral at center:
     #    xpos 585
-    #show ava typical neutraltral at norm:
+    #show ava typical neutraltral at center:
     #    xpos 810
     
     #n "Choose your waifu"
@@ -1726,7 +2193,7 @@ label gunner_rage:
     
     play music "audio/music/mere - schooldaze.ogg" fadein 1.0
 
-    show rose neutral pendant at norm with moveinright
+    show rose neutral pendant at center with moveinright
 
     rose @ say "Are you gonna move or what? You're blocking the doorway."
 
@@ -1739,7 +2206,7 @@ label gunner_rage:
 
     n "Shortly afterward, Mr. Rothbauer comes in and begins the lesson for the day."
 
-    show rothbauer at norm with dissolve
+    show rothbauer at center with dissolve
 
     rothbauer @ say "Good morning, class!"
     rothbauer @ say "Today we'll be going over"
@@ -1760,11 +2227,11 @@ label gunner_rage:
     show box:
         ypos 0
 
-    show gunner neutral at norm:
+    show gunner neutral at center:
         xzoom -1
         xpos -475
 
-    show herschel at norm
+    show herschel at center
 
     herschel @ say "Ahem! Gunner!"
 
@@ -1802,7 +2269,7 @@ label gunner_rage:
 
     play music "audio/ambient/outdoors people talking.ogg" fadein .5
 
-    show gunner neutral at norm with dissolve:
+    show gunner neutral at center with dissolve:
         xzoom -1
 
     show box:
@@ -1866,7 +2333,7 @@ label gunner_rage:
     hide box
 
     show bg calendar
-    show tmonday at norm
+    show tmonday at center
     with Dissolve(.5)
 
     pause .6
@@ -1986,7 +2453,7 @@ label hospital_bound:
     n "You hear beeps from a heart monitor."
     n "You try to look around but your whole body is aching."
 
-    show rori neutral at norm with dissolve
+    show rori neutral at center with dissolve
 
     rori @ say "[name]? You're finally awake!"
     rori @ say "Wait right here, I'll go get the kitsuragi!"
@@ -2003,10 +2470,10 @@ label hospital_bound:
 
     n "He returns a few minutes later with a kitsuragi."
 
-    show rori neutral at norm:
+    show rori neutral at center:
         xzoom -1
         xpos 1400
-    show kitsuragi at norm:
+    show kitsuragi at center:
         xpos 450
     with move
 
@@ -2025,7 +2492,7 @@ label hospital_bound:
     player "Err kinda? I've been having dizzy spells since the other day and I passed out in class yesterday."
     player "And I've been feeling really thirsty all the time, even though I've been drinking a lot of water."
     
-    show rori anxiety
+    show rori anxious
 
     rori @ say "Y-you passed out in class?!"
 
@@ -2144,7 +2611,7 @@ label hospital_bound:
     n "..."
     n "Or you could feed your addiction to trolling on Sudanese ceremonial rug weaving image boards."
 
-    show phonechan1 at norm with dissolve:
+    show phonechan1 at center with dissolve:
         xpos 700
         ypos 200
 
@@ -2598,7 +3065,7 @@ label leaving_hospital:
     n "You reach over to the nightstand for your phone."
     n "Wait a second, didn't you drop it last night? How'd it end up back here?"
 
-    show kitsuragi at norm with dissolve:
+    show kitsuragi at center with dissolve:
         xpos 0
 
     kitsuragi @ say "Good morning, [name]. How are you feeling?"
@@ -2930,7 +3397,7 @@ label leaving_hospital:
     hide box
 
     show bg calendar
-    show tsunday at norm
+    show tsunday at center
     with Dissolve(.5)
 
     pause .6
@@ -2965,7 +3432,7 @@ label monty_hall:
     
     n "You drifted off into a daydream during class that was dispelled when you heard your name called."
     
-    show rothbauer at norm with dissolve:
+    show rothbauer at center with dissolve:
         xpos 0
 
     rothbauer @ say "[name], could you tell me why there's no class this Friday?"
@@ -2997,12 +3464,12 @@ label monty_hall:
     show box with Dissolve(.2):
         ypos 0
     
-    show herschel at norm with dissolve:
+    show herschel at center with dissolve:
         xpos 0
         
     herschel @ say "...alright, I think that's enough for today's lesson but we still have a bit of time leftover!"
     
-    show gunner neutral at norm with dissolve:
+    show gunner neutral at center with dissolve:
         xpos -550
         xzoom -1
     
@@ -3039,7 +3506,7 @@ label monty_hall:
             
             n "Gunner circles something and puts down his pencil."
             
-            show gunner neutral at norm with dissolve:
+            show gunner neutral at center with dissolve:
                 xpos -550
                 xzoom -1
             
@@ -3062,7 +3529,7 @@ label monty_hall:
             
             n "Before you can say anything, Gunner pipes up."
             
-            show gunner neutral at norm with dissolve:
+            show gunner neutral at center with dissolve:
                 xpos -550
                 xzoom -1
             
@@ -3095,7 +3562,7 @@ label monty_hall:
     scene bg black with fade
     
     show bg calendar
-    show tmonday at norm
+    show tmonday at center
     with Dissolve(.5)
 
     pause .6
@@ -3116,7 +3583,7 @@ label monty_hall:
 
     n "You decide to make a stop at the cafe on your way to class. They must have updated their menu because you can smell cinnamon and pumpkin spice in the air."
 
-    show mishka neutral at norm with dissolve:
+    show mishka neutral at center with dissolve:
         xzoom -1
         #xpos -440
         xpos 0
@@ -3258,7 +3725,7 @@ label monty_hall:
             show box with Dissolve(.2):
                 ypos 0
 
-            show margaret neutral at norm with dissolve
+            show margaret neutral at center with dissolve
 
             ellen @ say "Good morning class! I hope you studied well for today's quiz!"
 
@@ -3308,7 +3775,7 @@ label monty_hall:
             
             play music "audio/music/mere - retrograde.ogg" fadein .5
 
-            show margaret neutral at norm with dissolve
+            show margaret neutral at center with dissolve
 
             show box with Dissolve(.2):
                 ypos 0
@@ -3417,7 +3884,7 @@ label monty_hall:
                 xpos 600
             with move
 
-            show gunner neutral at norm with dissolve:
+            show gunner neutral at center with dissolve:
                 xzoom -1
                 
             show gunner:
@@ -3509,7 +3976,7 @@ label monty_hall:
                 xpos 600
             with move
 
-            show gunner neutral at norm with dissolve:
+            show gunner neutral at center with dissolve:
                 xzoom -1
                 
             show gunner:
@@ -3622,7 +4089,7 @@ label monty_hall:
     hide box
 
     show bg calendar
-    show ttuesday at norm
+    show ttuesday at center
     with Dissolve(.5)
 
     pause .6
@@ -3675,7 +4142,7 @@ label history_quiz:
     hide box
 
     show bg calendar
-    show twednesday at norm
+    show twednesday at center
     with Dissolve(.5)
 
     pause .6
@@ -3695,7 +4162,7 @@ label liberation_eve:
     show box with Dissolve(.2):
         ypos 0
 
-    show margaret neutral at norm with dissolve
+    show margaret neutral at center with dissolve
 
     ellen @ say "Good morning class!"
     
@@ -3735,7 +4202,7 @@ label liberation_eve:
     show box with Dissolve(.2):
         ypos 0
 
-    show celestine neutral at norm with dissolve
+    show celestine neutral at center with dissolve
 
     celestine @ say "Hello class! Happy Anthromorphs's Liberation Day Eve!!"
     celestine @ say "Obviously this is an American holiday but I wanted to go over related holidays other countries celebrate!"
@@ -3759,7 +4226,7 @@ label liberation_eve:
     stop music fadeout 1.0
 
     show bg calendar
-    show tthursday at norm
+    show tthursday at center
     with Dissolve(.5)
 
     pause .6
@@ -3834,7 +4301,7 @@ label liberation_day:
         n "Ava wasn't kidding when she said this place was abandoned."
         n "Graffiti lines the walls and weeds grow out of cracks in the concrete. You'd be afraid to enter a place like this alone, but luckily you have a dainty liberal arts student to protect you."
 
-        show ava typical neutral at norm with dissolve
+        show ava typical neutral at center with dissolve
 
         #ava @ say "Hey [name]! Glad you could make it!"
 
@@ -3859,7 +4326,7 @@ label liberation_day:
 
         player "That's not your usual camera, is it?"
         
-        show ava typical neutral at norm with dissolve:
+        show ava typical neutral at center with dissolve:
             xzoom -1
 
         ava @ say "Hm? Oh this?"
@@ -3913,7 +4380,7 @@ label liberation_day:
 
         player "I don't get it, what's so special about this?"
         
-        show ava unsure at norm with dissolve
+        show ava unsure at center with dissolve
 
         ava @ say "Oh right, I guess you wouldn't be able to see it with your weak human eyes."
         
@@ -3996,7 +4463,7 @@ label liberation_day:
         n "Ava crouches down and turns her camera 90 degrees to take a shot of it."
         n "Her feathers stick up and you jump a little when a loud noise comes from behind, echoing throughout the hall."
         
-        show ava pose concerned at norm with dissolve
+        show ava pose concerned at center with dissolve
         
         n "You speak in a hushed tone."
 
@@ -4036,7 +4503,7 @@ label liberation_day:
         #player "I wonder who they'd get to reenact me in the documentary? Maybe they'd shave a chimpanzee for it?"
         n "After a few minutes, Ava speaks up, still in a hushed tone."
         
-        show ava typical neutral at norm with dissolve
+        show ava typical neutral at center with dissolve
         
         ava @ say "I think whoever that was is gone. Or at least they didn't follow us."
         
@@ -4187,7 +4654,7 @@ label liberation_day:
         
         n "As you're trying to figure out which direction you came from, you notice Ava seems preoccupied with a corridor you hadn't explored."
         
-        show ava concerned at norm with dissolve:
+        show ava concerned at center with dissolve:
             xpos 0
         
         ava @ say "..."
@@ -4222,7 +4689,7 @@ label liberation_day:
         
         
         
-        #show ava unsure at norm:
+        #show ava unsure at center:
         #    ypos -3080
             
         #pause .1
@@ -4295,7 +4762,7 @@ label liberation_day:
         
         player "Ow."
         
-        show ava typical neutral at norm with dissolve:
+        show ava typical neutral at center with dissolve:
             xpos 300
             yalign 0
         
@@ -4364,12 +4831,12 @@ label liberation_day:
         
         play music "audio/music/Vylet Pony - lemonade.ogg" fadein 0.1
         
-        show kitsuragi at norm:
+        show kitsuragi at center:
             xpos -500
             xzoom -1
-        show gunner neutral at norm:
+        show gunner neutral at center:
             xpos 350
-        show ava typical neutral at norm:
+        show ava typical neutral at center:
             xpos 533
         with dissolve
         
@@ -4523,7 +4990,7 @@ label liberation_day:
                         hide box    
 
                         show bg calendar
-                        show tfriday at norm
+                        show tfriday at center
                         with Dissolve(.5)
 
                         pause .6
@@ -4584,7 +5051,7 @@ label liberation_day:
                         hide box    
 
                         show bg calendar
-                        show tfriday at norm
+                        show tfriday at center
                         with Dissolve(.5)
 
                         pause .6
@@ -4680,7 +5147,7 @@ label liberation_day:
                         n "Gunner went back to his own dorm and you left Ava to her own devices while you took a quick shower."
                         n "You step out of the steamy bathroom wearing some ultra comfy pajamas to cuddle up in. You turn your head and catch Ava preening her feathers on your bed."
                         
-                        show ava reaching embarassed at norm
+                        show ava reaching embarassed at center
                         
                         ava @ say "Aaa! [name], don't look!"
                         
@@ -4688,7 +5155,7 @@ label liberation_day:
                         
                         n "She turns away from you and quickly buttons up her shirt."
                         
-                        show ava annoyed at norm:
+                        show ava annoyed at center:
                             xpos 0
                         with dissolve
                         
@@ -4756,7 +5223,7 @@ label liberation_day:
                         hide box    
 
                         show bg calendar
-                        show tfriday at norm
+                        show tfriday at center
                         with Dissolve(.5)
 
                         pause .6
@@ -4781,7 +5248,7 @@ label liberation_day:
                             n "It's not even daylight out and she's stretching and chirping and tweeting."
                             n "She rolls over and rests a wing on you."
                             
-                            show ava typical neutral at norm:
+                            show ava typical neutral at center:
                                 yalign 0
                                 xzoom -1
                                 xpos -175
@@ -4850,7 +5317,7 @@ label liberation_day:
                             n "You're woken up earlier than usual by Ava's stirring."
                             n "It's not even daylight out and she's stretching and chirping and tweeting."
                             
-                            show ava typical neutral at norm:
+                            show ava typical neutral at center:
                                 yalign 0
                                 xzoom -1
                                 xpos -175
@@ -4927,10 +5394,10 @@ label liberation_day:
                         show box with Dissolve(.2):
                             ypos 0
                         
-                        show gunner neutral at norm:
+                        show gunner neutral at center:
                             xpos 300
                             xzoom -1
-                        show ava typical neutral at norm:
+                        show ava typical neutral at center:
                             xpos -300
                         with dissolve
                         
@@ -5057,7 +5524,7 @@ label liberation_day:
                         n "Somehow in the middle of the night you and Ava switched position so that she was in the middle of you two."
                         n "You guess this round of flirting with Ava ended up being a draw."
                         
-                        show ava typical neutral at norm:
+                        show ava typical neutral at center:
                             xpos -200
                             xzoom -1
                         with dissolve
@@ -5081,7 +5548,7 @@ label liberation_day:
                         n "It's still painful but you can deal with it."
                         n "Gunner begins to stir, stetching out his arms and yawning."
                         
-                        show gunner neutral at norm:
+                        show gunner neutral at center:
                             xpos 200
                         with dissolve
                         
@@ -5167,7 +5634,7 @@ label liberation_day:
                         hide box    
 
                         show bg calendar
-                        show tfriday at norm
+                        show tfriday at center
                         with Dissolve(.5)
 
                         pause .6
@@ -5214,7 +5681,7 @@ label liberation_day:
         
         n "A moment later a semi truck speeds through the street, right where you had stepped foot a mere fraction of a second ago."
         
-        show rose angry at norm with dissolve
+        show rose angry at center with dissolve
 
         rose @ say "How dumb are you? You would have been dead if I didn't just save your ass!"
 
@@ -5269,14 +5736,14 @@ label liberation_day:
         n "When the crowd disperses a lone figure in robes stands in the middle of the sidewalk."
         n "He turns around and looks down at you and Rose."
 
-        show fortune at norm with dissolve:
+        show fortune at center with dissolve:
             xpos 300
 
         fortune @ say "I've been expecting you."
 
         player "Huh? Who are you?"
 
-        show rose neutral at norm with dissolve:
+        show rose neutral at center with dissolve:
             xzoom -1
             xpos -300
 
@@ -5523,7 +5990,7 @@ label liberation_day:
         hide box    
 
         show bg calendar
-        show tfriday at norm
+        show tfriday at center
         with Dissolve(.5)
 
         pause .6
@@ -5570,7 +6037,7 @@ label dayafterurbexcont:
     n "What better place to write than a cafe?"
     n "You step up to the counter to order your required caffeinated beverage."
 
-    show mishka neutral at norm with dissolve:
+    show mishka neutral at center with dissolve:
         xzoom -1
         
     mishka @ say "Hello [name]! What it is I can get for you today?"
@@ -5588,7 +6055,7 @@ label dayafterurbexcont:
     #n "You order the usual and find a place to set up your laptop."
     n "As you're catching up on your insane writings, Mishka walks up to you with two drinks in her hands."
 
-    show mishka anxious grin at norm with move:
+    show mishka anxious grin at center with move:
         xzoom -1
         xpos 1750
 
@@ -5693,7 +6160,7 @@ label dayafterurbexcont:
             n "You bounce a few ideas off her and she gives some good feedback as well as a few ideas of her own."
             n "After you've spent a few hours at the cafe, you've got a near-final draft ready and your table is littered with empty coffee cups."
 
-            show mishka neutral at norm with dissolve:
+            show mishka neutral at center with dissolve:
                 xzoom -1
 
             mishka @ say "*Yaaaawn*"
@@ -5752,7 +6219,7 @@ label dayafterurbexcont:
             n "You had forgotten how much you really enjoyed this."
             n "After you've spent a few hours at the cafe, you've got a near-final draft ready and your table is littered with empty coffee cups."
 
-            show mishka despondent at norm with dissolve:
+            show mishka despondent at center with dissolve:
                 xzoom -1
 
             mishka @ say "*Yaaaawn*"
@@ -5794,7 +6261,7 @@ label dayafterurbexcont:
     hide box
 
     show bg calendar
-    show tsaturday at norm
+    show tsaturday at center
     with Dissolve(.5)
 
     pause .6
@@ -5839,10 +6306,10 @@ label movienight:
     
     pause .1
 
-    show gunner neutral at norm:
+    show gunner neutral at center:
         xzoom -1
         xpos 1550
-    show rori neutral at norm:
+    show rori neutral at center:
         xpos 1270
         xzoom -1
     with move
@@ -5866,9 +6333,9 @@ label movienight:
 
     n "You turn your head as you hear the door open behind you and a familiar bird and bunny walk in."
 
-    show ava typical neutral at norm:
+    show ava typical neutral at center:
         xpos 275
-    show claire sweater neutral at norm:
+    show claire sweater neutral at center:
         xpos 650
     with move
 
@@ -5892,7 +6359,7 @@ label movienight:
     
     claire @ say "Hiya! I don't think we've met! I'm Claire and this is Ava!"
     
-    show rori anxiety
+    show rori anxious
     show claire sweater neutral
 
     #ava @ say "Oh right! I remember seeing you with him before! Gunner was it?"
@@ -5970,7 +6437,7 @@ label movienight:
     #n "As usual, Mishka is there to greet you with a smile... or half of one. Maybe a third."
     n "As usual, Mishka is there to greet you."
 
-    show mishka shy at norm with dissolve:
+    show mishka shy at center with dissolve:
         xzoom -1
         xpos -400
 
@@ -5984,9 +6451,9 @@ label movienight:
 
     mishka @ say "And for you two?"
 
-    show ava typical neutral at norm:
+    show ava typical neutral at center:
         xpos 225
-    show claire sweater neutral at norm:
+    show claire sweater neutral at center:
         xpos 600
     with dissolve
 
@@ -6075,7 +6542,7 @@ label movienight:
         n "Maybe you should invite Mishka over as well. She's always had your back even though you've never even hung out with her."
     n "She walks over with your drinks right at the perfect time."
 
-    show mishka neutral at norm with dissolve:
+    show mishka neutral at center with dissolve:
         xzoom -1
         xpos -350
 
@@ -6147,10 +6614,10 @@ label movienight:
     hide claire
     with dissolve
 
-    show gunner neutral at norm:
+    show gunner neutral at center:
         xzoom -1
         xpos -300
-    show rori neutral at norm:
+    show rori neutral at center:
         xpos 400
     with dissolve
 
@@ -6178,10 +6645,10 @@ label movienight:
     hide rori
     with dissolve
 
-    show ava typical neutral at norm:
+    show ava typical neutral at center:
         xpos -350
         xzoom -1
-    show claire sweater neutral at norm:
+    show claire sweater neutral at center:
         xpos 350
         #xzoom -1
     with dissolve
@@ -6216,7 +6683,7 @@ label movienight:
     n "You hear some noise outside your door followed by knocking."
     n "Please let that be Rori."
 
-    show rori neutral at norm with dissolve
+    show rori neutral at center with dissolve
     
     play music "audio/music/Vylet Pony - Cozy Pone.ogg" fadein .5
     #play music "audio/music/vylet - リラックス.ogg" fadein .5
@@ -6253,13 +6720,13 @@ label movienight:
     ###hotline miami door sound effect
     n "As you turn the knob, Claire's fat bunny ass bursts through the doorway, knocking you onto the ground, semi-conscious."
 
-    show ava typical neutral at norm:
+    show ava typical neutral at center:
         xpos 50
         xzoom -1
-    show claire sweater wave at norm:
+    show claire sweater wave at center:
         xpos -450
         xzoom -1
-    show gunner neutral at norm:
+    show gunner neutral at center:
         xpos 650
     with dissolve
 
@@ -6302,7 +6769,7 @@ label movienight:
     ava @ say "Hey Rori! Was that Boku no Doki Doki Phantasm Gx; R-EVerSe?"
     
     show ava typical neutral
-    show rori neutral at norm:
+    show rori neutral at center:
         xpos 2000
 
     n "To your surprise, Ava is leaning over Rori, who is busy connecting the laptop to the television and has his anime folder open in clear view on the laptop screen."
@@ -6311,7 +6778,7 @@ label movienight:
         xpos -725
     show ava:
         xpos -375
-    show rori neutral at norm:
+    show rori neutral at center:
         xpos 150
     with move
 
@@ -6357,7 +6824,7 @@ label movienight:
             n "Surprisingly, Claire has not occupied your bed and has instead opted recline against it whilst sitting on the floor, her arm elbow deep in a bag of chips."
             n "You decide to join her down there and grab a handful of chips when she takes her paw out."
 
-            show claire sweater neutral at norm with dissolve
+            show claire sweater neutral at center with dissolve
 
             claire @ say "Sup."
 
@@ -6373,13 +6840,13 @@ label movienight:
             n "Gunner looks up from his phone as Rori hits the play button."
 
             show ava typical neutral at offscreenleft
-            show gunner neutral at norm with dissolve:
+            show gunner neutral at center with dissolve:
                 xpos -300
                 xzoom -1
 
             gunner @ say "Hmm, where to sit...?"
 
-            show ava overjoyed at norm with dissolve:
+            show ava overjoyed at center with dissolve:
                 xalign 0 
                 xpos 300
                 xzoom 1
@@ -6396,7 +6863,7 @@ label movienight:
                 
             pause .2
 
-            show gunner neutral at norm with move:
+            show gunner neutral at center with move:
                 xpos 470
                 
             pause .1
@@ -6410,7 +6877,7 @@ label movienight:
             hide ava
             with dissolve
 
-            #show gunner neutral at norm with dissolve:
+            #show gunner neutral at center with dissolve:
             #    xpos -180
             #    xzoom -1
 
@@ -6418,7 +6885,7 @@ label movienight:
 
             #gunner @ say "Based. Thank you [name]."
 
-            show claire sweater neutral alert at norm with dissolve
+            show claire sweater neutral alert at center with dissolve
 
             claire @ say "...and I figured those two would wanna sit together~"
 
@@ -6436,7 +6903,7 @@ label movienight:
 
             player "...I wouldn't mind that either."
 
-            show ava annoyed at norm with dissolve:
+            show ava annoyed at center with dissolve:
                 xpos 525
 
             ava @ say "Shh! The movie's starting!"
@@ -6471,7 +6938,7 @@ label movienight:
             
             n "She glides back down with her wings outstretched."
 
-            #show ava typical neutral at norm with move:
+            #show ava typical neutral at center with move:
                 #xzoom -1
             show ava with move:
                 ypos 50
@@ -6512,7 +6979,7 @@ label movienight:
             
             n "Gunner looks up from his phone."
             
-            show gunner neutral at norm with dissolve:
+            show gunner neutral at center with dissolve:
                 xpos 475
             
             gunner @ say "Damn, what did I miss?"
@@ -6528,7 +6995,7 @@ label movienight:
             gunner @ say "Hrm..."
             gunner @ say "[name], you got any more chairs around here?"
 
-            show claire sweater neutral alert at norm:
+            show claire sweater neutral alert at center:
                 xzoom -1
                 xpos -550
 
@@ -6564,7 +7031,7 @@ label movienight:
 
             n "Gunner grimaces and looks around for any alternatives."
             
-            show gunner neutral at norm with move:
+            show gunner neutral at center with move:
                 xpos -200
                 
             pause .01
@@ -6611,13 +7078,13 @@ label movienight:
 
             n "You approach Rori, who is sitting in your desk chair."
 
-            show rori neutral at norm with dissolve
+            show rori neutral at center with dissolve
 
             rori @ say "Oh, am I in your spot?"
 
             player "Yeah but it's no big deal."
 
-            show rori anxiety
+            show rori anxious
 
             rori @ say "Wh-whoa what are you-"
 
@@ -6629,14 +7096,14 @@ label movienight:
             
             show ava typical neutral at offscreenright
 
-            show gunner neutral at norm with dissolve:
+            show gunner neutral at center with dissolve:
                 xpos 450
 
             n "Gunner nods to you."
 
             gunner @ say "Establishing dominance in your home. A real alpha move, [name]."
 
-            show claire sweater neutral at norm with dissolve:
+            show claire sweater neutral at center with dissolve:
                 xzoom -1
                 xpos -500
 
@@ -6663,7 +7130,7 @@ label movienight:
 
             gunner @ say "Alright, now where do I sit?"
 
-            show ava typical neutral at norm with dissolve:
+            show ava typical neutral at center with dissolve:
                 xzoom -1
                 xpos -100
 
@@ -6673,7 +7140,7 @@ label movienight:
 
             n "The bird pats the spot on your bed beside her and Gunner pounces on it quite elegantly."
 
-            show gunner neutral at norm with move:
+            show gunner neutral at center with move:
                 xpos -270
 
             pause .1
@@ -6722,7 +7189,7 @@ label movienight:
     hide box
 
     show bg calendar
-    show tsunday at norm
+    show tsunday at center
     with Dissolve(.5)
 
     pause .6
@@ -6766,7 +7233,7 @@ label ellen_feeding_ducks:
     n "Upon closer inspection, it turns out to be Ms. Ellen!"
     n "Without thinking, you decide to sit next to her. All the animals scatter as you approach and Ms. Ellen raises her head."
     
-    show margaret sad at norm with dissolve
+    show margaret sad at center with dissolve
     
     ellen @ say "Hm? Oh it's you."
     
@@ -7268,7 +7735,7 @@ label rose_book:
     show box with Dissolve(.2):
         ypos 0
 
-    show rothbauer at norm with dissolve
+    show rothbauer at center with dissolve
 
     rothbauer @ say "...and that's ultimately how the Shang dynasty shaped ancient China and how a humble panda prevented a full scale civil war."
     rothbauer @ say "Class dismissed! Have a nice rest of your day!"
@@ -7277,7 +7744,7 @@ label rose_book:
 
     n "You shove your books into your bag and get up with the rest of the class to leave but Mr. Rothbauer stops you."
 
-    show rothbauer at norm with dissolve
+    show rothbauer at center with dissolve
 
     rothbauer @ say "Oh [name], do you have a moment?"
     rothbauer @ say "On Friday I mentioned a book that might help you and Rose with your project. It's quite rare and I'm pretty sure you won't find it in the library."
@@ -7302,7 +7769,7 @@ label rose_book:
 
     play music "audio/music/mere - schooldaze faster.ogg" fadein 1.5
 
-    show herschel at norm with dissolve
+    show herschel at center with dissolve
 
     show box with Dissolve(.2):
         ypos 0
@@ -7310,7 +7777,7 @@ label rose_book:
     herschel @ say "Good afternoon class! I hope you're all prepared for today's quiz!"
     herschel @ say "Gunner, you told [name] which topics to study, right?"
 
-    show gunner neutral at norm with dissolve:
+    show gunner neutral at center with dissolve:
         xzoom -1
         xpos -400
 
@@ -7344,7 +7811,7 @@ label rose_book:
         n "You can only remember what she taught when you were in class but that doesn't help when half the problems are from the homework you didn't do."
         n "You can only do your best and hope you pass."
 
-    show herschel at norm with dissolve
+    show herschel at center with dissolve
 
     herschel @ say "Time!"
     herschel @ say "Gunner, that means pencils down."
@@ -7353,7 +7820,7 @@ label rose_book:
 
     n "Gunner lets out a frustrated sigh and slams his pencil down as Mrs. Herschel comes to collect everyone's papers."
 
-    show gunner neutral at norm with dissolve:
+    show gunner neutral at center with dissolve:
         xzoom -1
         xpos -400
 
@@ -7371,7 +7838,7 @@ label rose_book:
 
         gunner @ say "This is so unfair. Not everyone is a math major!"
 
-    show herschel at norm with dissolve
+    show herschel at center with dissolve
 
     herschel @ say "Is that everybody's? Very good, I'll have these back to you and graded next class. For now let's go over cumulative distribution functions!"
 
@@ -7401,7 +7868,7 @@ label rose_book:
     scene bg black with fade
     
     show bg calendar
-    show tmonday at norm
+    show tmonday at center
     with Dissolve(.5)
 
     pause .6
@@ -7421,14 +7888,14 @@ label vacation_planning1:
     
     play music "audio/music/vylet - Ordinarily.ogg" fadein .5
     
-    show claire outdoors heyeah at norm with dissolve:
+    show claire outdoors heyeah at center with dissolve:
         xpos 500
     show ava annoyed at offscreenleft:
         yalign 0
         
     claire @ say "...and I'm like \"nooo, you didn't!\" and then she's like \"but I diiiiid\" and so I'm like-"
     
-    show ava annoyed at norm with move:
+    show ava annoyed at center with move:
         xpos 1500
         xzoom -1
         
@@ -7553,7 +8020,7 @@ label rori_belltower:
     #n "You open your eyes, feeling faint as if you just blacked out for a moment."
     #n "Standing over you is the one you were trying to reach, having descended to your elevation."
     
-    show rori neutral at norm
+    show rori neutral at center
     
     play music "audio/music/vylet - yeah i'm ok thanks for asking.ogg"
     
@@ -7574,7 +8041,7 @@ label rori_belltower:
     
     #player "Not planning on killing yourself?"
     
-    show rori anxiety
+    show rori anxious
     
     rori @ say "W-what? No! Why would I do that?"
     
@@ -7679,7 +8146,7 @@ label rori_belltower:
     #n "Rori helps you make your way down, as he effortlessly gets a foothold in the smallest of crevices and slightest of angles."
     #n "It's just as hard climbing down for you but he guides you to safety."
     
-    show rori neutral at norm with dissolve
+    show rori neutral at center with dissolve
     
     rori @ say "Thanks for sitting with me."
     rori @ say "I usually do it alone but it's nice to have someone to drink juice with and watch the sun set."
@@ -7716,7 +8183,7 @@ label rori_belltower:
     hide box
 
     show bg calendar
-    show twednesday at norm
+    show twednesday at center
     with Dissolve(.5)
 
     pause .6
@@ -7735,7 +8202,7 @@ label rori_belltower:
     
     #scene bg classroom with fade
 
-    #show rothbauer at norm with dissolve
+    #show rothbauer at center with dissolve
 
     #scene bg campus with fade
 
@@ -7744,8 +8211,8 @@ label rori_belltower:
     #n "It was another rough day in statistics. Poor Gunner had to stay behind and try justifying his homework answers to Mrs. Herschel in hopes of getting a passing grade."
     #n "As you step into the courtyard you bump into your beloved bunny buddy and feathered friend."
 
-    #show claire sweater neutral at norm
-    #show ava typical neutral at norm:
+    #show claire sweater neutral at center
+    #show ava typical neutral at center:
     #    xzoom -1
     #with dissolve
 
@@ -7857,10 +8324,10 @@ label hiking:
         #play music "audio/music/vylet - Oak Library.ogg" fadein 1.0
         
         
-        show claire outdoors neutral at norm:
+        show claire outdoors neutral at center:
             xpos -500
             xzoom -1
-        show rori neutral at norm:
+        show rori neutral at center:
             xpos 500
         with dissolve
         
@@ -7954,7 +8421,7 @@ label hiking:
         
         claire @ say "Hey! Don't eat our tinder!"
         
-        show rori anxiety
+        show rori anxious
         
         rori @ say "Sorry! I'm just hungry from all this walking!"
         
@@ -7985,7 +8452,7 @@ label hiking:
         claire @ say "And now we're ready to go!"
         claire @ say "Rori, would you do the honors? I got a lighter in one of my pockets."
         
-        show rori anxiety
+        show rori anxious
         
         n "Rori blushes like mad as he digs around Claire's pockets trying to find her lighter while she holds the bird's nest."
         n "You're not sure if you should be jealous."
@@ -8056,10 +8523,10 @@ label hiking:
         n "The sound of frantic footsteps crunching leaves and snapping twigs gets closer until two familiar faces show up in the light of the fire."
         
         
-        show ava unsure at norm:
+        show ava unsure at center:
             xpos -350
             xzoom -1
-        show gunner neutral at norm:
+        show gunner neutral at center:
             xpos -600
             xzoom -1
         with dissolve
@@ -8108,7 +8575,7 @@ label hiking:
         
         gunner @ say "Yeah, it was right there with its back to us right next to that tree right there!"
         
-        show rori anxiety
+        show rori anxious
         
         rori @ say "I mean, it was probably a mountain lion or something and you just missed it? Still pretty spooky."
         
@@ -8378,10 +8845,10 @@ label hiking:
             xpos 310        
         show rori neutral:
             xpos 600
-        show ava typical neutral at norm:
+        show ava typical neutral at center:
             xpos -350
             xzoom -1
-        show gunner neutral at norm:
+        show gunner neutral at center:
             xpos -600
             xzoom -1
         with dissolve
@@ -8511,7 +8978,7 @@ label hiking:
         show box with Dissolve(.2):
             ypos 0
         
-        show gunner neutral at norm:
+        show gunner neutral at center:
             xzoom -1
             xpos -400
         with dissolve
@@ -8528,7 +8995,7 @@ label hiking:
         
         n "You hear a rustling of leaves high above in the tree beside you. Shortly after, Ava swoops down and perches lightly on the ground."
         
-        show ava portrait neutral at norm with dissolve:
+        show ava portrait neutral at center with dissolve:
             xpos 300
         
         ava @ say "All done! I got some decent shots of the city lights from up there."
@@ -8700,7 +9167,7 @@ label hiking:
                 n "*click click click click*"
                 n "Ava takes several shots in quick succession, masking the soft footsteps as something approaches from behind."
                 
-                show gunner neutral at norm with dissolve:
+                show gunner neutral at center with dissolve:
                     xpos -300
                     xzoom -1
                 
@@ -8747,9 +9214,9 @@ label hiking:
                 
                 play music "audio/music/vylet - Over Equestria.ogg" fadein 1.0
                 
-                show claire outdoors neutral at norm:
+                show claire outdoors neutral at center:
                     xpos 700
-                show rori neutral at norm:
+                show rori neutral at center:
                     xpos 300
                 show ava typical neutral:
                     xpos -300
@@ -8791,7 +9258,7 @@ label hiking:
                 
                 gunner @ say "Yeah, it was right there with its back to us right next to that tree right there!"
                 
-                show rori anxiety
+                show rori anxious
                 
                 rori @ say "I mean, it was probably a mountain lion or something and you just missed it? Still pretty spooky."
                 
@@ -9136,7 +9603,7 @@ label hiking:
                 n "You squint your eyes and notice some rustling brush amidst the darkness."
                 n "Gunner stealthily claws his way up the tree to Ava's height and manages to catch sight of what she's shooting."
                 
-                show gunner neutral at norm:
+                show gunner neutral at center:
                     xpos -600
                     xzoom -1
                 
@@ -9169,9 +9636,9 @@ label hiking:
                 play music "audio/music/vylet - Over Equestria.ogg" fadein 1.0
                 
 
-                show claire outdoors neutral at norm:
+                show claire outdoors neutral at center:
                     xpos 700
-                show rori neutral at norm:
+                show rori neutral at center:
                     xpos 300
                 show ava typical neutral:
                     xpos -300
@@ -9212,7 +9679,7 @@ label hiking:
                 
                 gunner @ say "Yeah, it was right there with its back to us right next to that tree right there!"
                 
-                show rori anxiety
+                show rori anxious
                 
                 rori @ say "I mean, it was probably a mountain lion or something and you just missed it? Still pretty spooky."
                 
@@ -9330,7 +9797,7 @@ label hiking:
                 
                 claire @ say "Your head's on my tits dude."
                 
-                show rori anxiety
+                show rori anxious
                 
                 rori @ say "Wha? Oh my gosh, I didn't even mean to...!"
                 
@@ -9562,7 +10029,7 @@ label aftercuddlepuddle:
     hide box
 
     show bg calendar
-    show tsaturday at norm
+    show tsaturday at center
     with Dissolve(.5)
 
     pause .6
@@ -9614,10 +10081,10 @@ label vacationday:
 
     play music "audio/music/vylet - Oak Library.ogg" fadein 1.0
 
-    show ava typical neutral at norm:
+    show ava typical neutral at center:
         xzoom -1
         xpos 1440
-    show claire sweater neutral at norm:
+    show claire sweater neutral at center:
         xpos 460
     with move
 
@@ -9689,9 +10156,9 @@ label vacationday:
     n "With the sun starting to set, you make your way back to the dorms."
     n "Overall it was quite a pleasant day, but apparently the bird and bunny weren't done with you yet."
 
-    show ava typical neutral at norm:
+    show ava typical neutral at center:
         xpos 500
-    show claire sweater neutral at norm:
+    show claire sweater neutral at center:
         xzoom -1
         xpos -400
     with dissolve
@@ -9740,9 +10207,9 @@ label vacationday:
     show box:
         ypos 0
 
-    show ava typical neutral at norm:
+    show ava typical neutral at center:
         xpos 500
-    show claire sweater neutral at norm:
+    show claire sweater neutral at center:
         xzoom -1
         xpos -400
     with dissolve
@@ -9987,7 +10454,7 @@ label vacationday:
     hide box
 
     show bg calendar
-    show tmonday at norm
+    show tmonday at center
     with Dissolve(.5)
 
     pause .6
@@ -10014,7 +10481,7 @@ label vacationday:
     n "You clumsily roll over Claire's body on your way out of bed. She's sound asleep and doesn't notice you, even as you trip over the blanket and hit the ground."
     n "You slowly open the door, just a crack."
 
-    show gunner neutral at norm with dissolve:
+    show gunner neutral at center with dissolve:
         xzoom -1
 
     gunner @ say "Morning, [name]. You didn't show up to class last night so Mrs. Herschel wanted me to give you this homework-"
@@ -10025,7 +10492,7 @@ label vacationday:
 
     n "You hear rummaging behind you. You take a peek and see Ava's head pop up from behind Claire's body."
 
-    show ava waitwhat at norm with dissolve:
+    show ava waitwhat at center with dissolve:
         xpos 500
 
     show gunner neutral
@@ -10059,7 +10526,7 @@ label vacationday:
 
     #ava @ say "Mmh... What happened last night?"
 
-    show claire sweater embarassed at norm:
+    show claire sweater embarassed at center:
         xpos -350
         xzoom -1
     with dissolve
@@ -10118,7 +10585,7 @@ label vacationday:
     show bg campus
 
     show bg calendar
-    show ttuesday at norm
+    show ttuesday at center
     with Dissolve(.5)
 
     pause .6
@@ -10158,7 +10625,7 @@ label hospital_revisit:
     n "*Bzzzz*"
     n "Oh that's your phone. Who could be calling you now?"
 
-    show phonecall at norm with dissolve:
+    show phonecall at center with dissolve:
         #ypos 1280
         xpos 700
         ypos 200
@@ -10202,7 +10669,7 @@ label hospital_revisit:
     n "Before you know it, you're outside the hospital."
     n "You spot the kitsuragi smoking a cigarette at the side of the building."
 
-    show kitsuragi at norm with dissolve
+    show kitsuragi at center with dissolve
 
     kitsuragi @ say "Oh, you're earlier than I expected."
 
@@ -10220,7 +10687,7 @@ label hospital_revisit:
     show box with Dissolve(.2):
         ypos 0
 
-    show kitsuragi at norm with dissolve
+    show kitsuragi at center with dissolve
 
     n "The kitsuragi brings you inside and into a room similar to the one you stayed in over the weekend."
 
@@ -10436,7 +10903,7 @@ label hospital_revisit:
     hide box
 
     show bg calendar
-    show tfriday at norm
+    show tfriday at center
     with Dissolve(.5)
 
     pause .6
@@ -10471,7 +10938,7 @@ label cafe_comfort:
     n "Somehow you always end up at the cafe. Surprisingly it's still open at this hour."
     n "As usual, Mishka is there behind the counter ready to greet you and take your order."
 
-    show mishka neutral at norm with dissolve
+    show mishka neutral at center with dissolve
 
     mishka @ say "Hello [name]!"
     
@@ -10550,7 +11017,7 @@ label cafe_comfort:
     hide box
 
     show bg calendar
-    show tfriday at norm
+    show tfriday at center
     with Dissolve(.5)
 
     pause .6
@@ -10655,9 +11122,9 @@ label friendly_hangout:
         #play music "audio/exports/Feather [653254166].opus" fadein 1.0
         play music "audio/music/vylet - Oak Library.ogg" fadein 1.0
 
-        show rori neutral at norm:
+        show rori neutral at center:
             xpos 450
-        show gunner neutral at norm:
+        show gunner neutral at center:
             xzoom -1
             xpos -450
         with dissolve
@@ -10674,7 +11141,7 @@ label friendly_hangout:
 
         n "A voice comes from Rori's laptop."
 
-        show adam at norm with dissolve
+        show adam at center with dissolve
 
         adam @ say "Yup. I've been working on my wizard's stats all day."
 
@@ -11025,7 +11492,7 @@ label friendly_hangout:
     hide box
 
     show bg calendar
-    show tsaturday at norm
+    show tsaturday at center
     with Dissolve(.5)
 
     pause .6
@@ -11108,7 +11575,7 @@ label ellen_rooftop1:
     
     n "The stairwell lead you up to the rooftop, where you're immediately met with a puff of cigarette smoke blowing into your face."
 
-    show margaret smoking intrigued at norm with dissolve
+    show margaret smoking intrigued at center with dissolve
 
     ellen @ say "Hm? [name]? You shouldn't be up here."
 
@@ -11218,7 +11685,7 @@ label ellen_rooftop1:
 
     n "Miss Ellen hardly seemed to acknowledge your conversation during or after class but you're still left thinking about it."
 
-    show celestine neutral at norm with dissolve
+    show celestine neutral at center with dissolve
 
     celestine @ say "[name]? [name] are you paying attention?"
 
@@ -11228,7 +11695,7 @@ label ellen_rooftop1:
 
     player "Err..."
 
-    show claire sweater surprised at norm with dissolve:
+    show claire sweater surprised at center with dissolve:
         xpos 500
 
     claire @ say "J'ai oublié mes devoirs."
@@ -11251,7 +11718,7 @@ label ellen_rooftop1:
     hide box
 
     show bg calendar
-    show tmonday at norm
+    show tmonday at center
     with Dissolve(.5)
 
     pause .6
@@ -11277,9 +11744,9 @@ label spicy_restaurant:
     #n "You were kinda zonked out during class but at least you survived the week. Now you can go home and relax and not have to worry about social obligations for another few days."
     
     
-    show ava casual happy at norm:
+    show ava casual happy at center:
         xpos 400
-    show claire outdoors neutral at norm:
+    show claire outdoors neutral at center:
         xzoom -1
         xpos -400
     with dissolve
@@ -11364,7 +11831,7 @@ label spicy_restaurant:
     show gunner neutral:
         xpos -325
         xzoom -1
-    show rori neutral at norm:
+    show rori neutral at center:
         xpos -675
         xzoom -1
     show claire outdoors neutral:
@@ -11374,25 +11841,25 @@ label spicy_restaurant:
     with dissolve
     
     ##shows everyone
-    #show rose neutral at norm:
+    #show rose neutral at center:
     #    xpos 100
-    #show margaret neutral at norm:
+    #show margaret neutral at center:
     #    xzoom -1
     #    xpos -300
-    #show ellen neutral at norm:
+    #show ellen neutral at center:
     #    xzoom -1
     #    xpos -220
     #show gunner neutral:
     #    xpos -525
     #    xzoom -1
-    #show rori neutral at norm:
+    #show rori neutral at center:
     #    xpos -800
     #    xzoom -1
     #show claire sweater neutral:
     #    xpos 570
     #show ava typical neutral:
     #    xpos 850
-    #show mishka neutral at norm:
+    #show mishka neutral at center:
     #    xpos 350
     #with dissolve
     
@@ -11427,7 +11894,7 @@ label spicy_restaurant:
     
     n "You raise a brow and are about to ask what she meant when the waitress arrives and sets everyone's meals on the table."
     
-    #show waitress at norm with dissolve
+    #show waitress at center with dissolve
     
     waitress "Aaaand for you the spicy ramen bowl challenge! Please sign here so we're not liable for any damages to your short term or long term health. Good luck!"
     
@@ -11635,7 +12102,7 @@ label spicy_restaurant:
             #hide box
 
             #show bg calendar
-            #show tfriday at norm
+            #show tfriday at center
             #with Dissolve(.5)
 
             #pause .6
@@ -11655,7 +12122,7 @@ label spicy_restaurant:
             n "Urgh... you feel like death. Every breath you take hurts. You can't feel your tongue but you can feel your intestines are punishing you for your hubris."
             n "You can't remember a thing after winning your little contest last night. You must have passed out."
             
-            show kitsuragi at norm with dissolve
+            show kitsuragi at center with dissolve
             
             kitsuragi "Hello again [name]. I wish I could say it's nice to see you again, but the story your friends told me when they dragged you here has left me appalled by your stupidity."
             
@@ -12029,7 +12496,7 @@ label spicy_restaurant:
             hide box
 
             show bg calendar
-            show tfriday at norm
+            show tfriday at center
             with Dissolve(.5)
 
             pause .6
@@ -12101,14 +12568,14 @@ label history_reenactment:
         ypos 0    
     n "A few days later..."
 
-    show rothbauer at norm with dissolve
+    show rothbauer at center with dissolve
 
     rothbauer @ say "Good morning class!"
     rothbauer @ say "I don't want to run out of time like last class so we'll get right into group B's presentation today."
 
     n "Several students around you get up and walk to the front of the classroom."
 
-    show rose furious at norm with dissolve:
+    show rose furious at center with dissolve:
         xpos -500
         xzoom -1
 
@@ -12128,7 +12595,7 @@ label history_reenactment:
     n "Only thing is, you have no idea what part of history you're supposed to be in."
     n "All you know is that you're a human in a strange land and your execution is scheduled for right now o'clock."
 
-    show rose neutral at norm with dissolve
+    show rose neutral at center with dissolve
 
     rose @ say "You, ambassador for the humans from far beyond the great sea, have poisoned our water, burned our crops, murdered our people and stolen our knowledge!"
     rose @ say "For your crimes against the Arcoonia tribe, you shall be sentenced to death."
@@ -12172,7 +12639,7 @@ label history_reenactment:
     n "You don't know, you didn't read this chapter."
     n "The rest of the class awkwardly claps as you and your group take a bow and returns to their seats."
 
-    show rothbauer at norm with dissolve
+    show rothbauer at center with dissolve
 
     rothbauer @ say "Very good! I'm not sure as to the historical accuracy of the ambassador's final words, but I'm quite pleased with how this little presentation turned out!"
     rothbauer @ say "Indeed, when European settlers arrived in America, the existing societal structure was shaken up."
@@ -12195,7 +12662,7 @@ label main_date:
     hide box
 
     show bg calendar
-    show tthursday at norm
+    show tthursday at center
     with Dissolve(.5)
 
     pause .6
@@ -12473,7 +12940,7 @@ label saturday8:
         n "A short walk later you find yourself at Rori's dorm building."
         n "Gunner just happens to be walking out the door as you're about to head inside."
 
-        show gunner neutral at norm with dissolve
+        show gunner neutral at center with dissolve
 
         gunner @ say "Sup [name]. Where you goin'?"
 
@@ -12499,7 +12966,7 @@ label saturday8:
         show box with Dissolve(.2):
             ypos 0
 
-        show rori neutral at norm with dissolve
+        show rori neutral at center with dissolve
 
         rori @ say "Hey [name]! Come on in! I just got my computer hooked up to the TV and all the emulators configured."
         rori @ say "We can play pretty much any game you want!"
@@ -12508,7 +12975,7 @@ label saturday8:
 
         player "Sounds good. Wanna smash?"
 
-        show rori anxiety
+        show rori anxious
 
         rori @ say "Wh-what?"
 
@@ -12532,7 +12999,7 @@ label saturday8:
         n "You set up the rules and choose your character while Rori steps out of view."
         n "He returns a minute later and sits in his epic gamer chair with a fight stick on his lap."
 
-        show rori neutral at norm with move:
+        show rori neutral at center with move:
             xzoom -1
             xpos 1800
 
@@ -12635,7 +13102,7 @@ label saturday8:
 
                         n "With the worst possible timing, the door creaks open and Gunner pokes his head inside."
 
-                        show gunner neutral at norm with moveinright:
+                        show gunner neutral at center with moveinright:
                             xpos 550
 
                         gunner @ say "Hey guys are you done making out or whatever, I-"
@@ -12690,7 +13157,7 @@ label saturday8:
                                 n "After that it's hard to recall specific details, but you remember it was a fun night."
                                 n "You woke up in his bed with him in your arms, enjoying the snuggles while you wait for him to wake up."
 
-                                show rori pantsless at norm with dissolve
+                                show rori pantsless at center with dissolve
 
                                 rori @ say "*Yaaaawn*"
                                 rori @ say "God, I've got such a headache... Oh hey [name]."
@@ -12861,7 +13328,7 @@ label saturday8:
                         n "With the worst possible timing, the door creaks open and Gunner pokes his head inside."
                         n "You freeze, but Rori seems utterly unaware of Gunner's presence and gently paws at you."
 
-                        show gunner neutral at norm with moveinright:
+                        show gunner neutral at center with moveinright:
                             xpos 555
 
                         gunner @ say "Hey guys are you done making out or whatever, I-"
@@ -12916,7 +13383,7 @@ label saturday8:
                                 n "After that it's hard to recall specific details, but you remember it was a fun night."
                                 n "You woke up in his bed with him in your arms, enjoying the snuggles while you wait for him to wake up."
 
-                                show rori pantsless at norm with dissolve
+                                show rori pantsless at center with dissolve
 
                                 rori @ say "*Yaaaawn*"
                                 rori @ pantsless "God, I've got such a headache... Oh hey [name]."
@@ -13159,7 +13626,7 @@ label saturday8:
                         n "God damn this ram makes some adorable noises."
                         n "With the worst possible timing, the door creaks open and Gunner pokes his head inside."
 
-                        show gunner neutral at norm with moveinright:
+                        show gunner neutral at center with moveinright:
                             xpos 555
 
                         gunner @ say "Hey guys are you done making out or whatever, I-"
@@ -13218,7 +13685,7 @@ label saturday8:
                                 n "After that it's hard to recall specific details, but you remember it was a fun night."
                                 n "You woke up in his bed with him in your arms, enjoying the snuggles while you wait for him to wake up."
 
-                                show rori pantsless at norm with dissolve
+                                show rori pantsless at center with dissolve
 
                                 rori @ say "*Yaaaawn*"
                                 rori @ say "God, I've got such a headache... Oh hey [name]."
@@ -13394,7 +13861,7 @@ label saturday8:
                         n "You freeze, but Rori continues to casually paw at you, seemingly oblivious to Gunner's presence."
                         n "That or he just doesn't care."
 
-                        show gunner neutral at norm with moveinright:
+                        show gunner neutral at center with moveinright:
                             xpos 550
 
                         gunner @ say "Hey guys are you done making out or whatever, I-"
@@ -13457,7 +13924,7 @@ label saturday8:
                                 n "After that it's hard to recall specific details, but you remember it was a fun night."
                                 n "You woke up in his bed with him in your arms, enjoying the snuggles while you wait for him to wake up."
 
-                                show rori pantsless at norm with dissolve
+                                show rori pantsless at center with dissolve
 
                                 rori @ say "*Yaaaawn*"
                                 rori @ say "God, I've got such a headache... Oh hey [name]."
@@ -13569,7 +14036,7 @@ label saturday8:
                                 n "Whatever. You hastily put on your pants and tip toe toward the door."
                                 n "You feel bad about ditching him but you weren't planning on staying the night really don't feel like staying any longer."
 
-                                show rori pantsless at norm with dissolve
+                                show rori pantsless at center with dissolve
 
                                 rori @ say "*Yaaaawn*"
                                 rori @ say "God, I've got such a headache... Oh hey [name]."
@@ -13672,7 +14139,7 @@ label saturday8:
         
         #n "After the party..."
         
-        show ava typical neutral at norm with dissolve
+        show ava typical neutral at center with dissolve
         
         ava @ say "Whew! I think we got some great shots today!"
         
@@ -13706,7 +14173,7 @@ label saturday8:
         
         #n "After shooting with Ava, she invited you to her dorm to help develop her film shots."
         
-        show ava typical neutral at norm
+        show ava typical neutral at center
         
         ava @ say "Okay so developing film at home is sort of a tricky process."
         ava @ say "We'll be submerging the film in chemical baths for a while without any light so I hope you're not afraid of the dark!"
@@ -13859,7 +14326,7 @@ label saturday8:
                 show box with Dissolve(.2):
                     ypos 0
 
-                show ava typical neutral at norm with moveinleft:
+                show ava typical neutral at center with moveinleft:
                     xzoom -1
 
                 ava @ say "Check it out! It turned out pretty good, I'd say!"
@@ -13879,7 +14346,7 @@ label saturday8:
                 show ava with move:
                     xpos -200
 
-                show claire sweater neutral at norm with dissolve:
+                show claire sweater neutral at center with dissolve:
                     xpos 600
 
                 claire @ say "Get any interesting shots, Ava?~"
@@ -14034,7 +14501,7 @@ label saturday8:
                 show box with Dissolve(.2):
                     ypos 0
 
-                show ava concerned at norm with dissolve:
+                show ava concerned at center with dissolve:
                     xzoom -1
 
                 ava @ say "Oh noooo! They turned out wayyyy too exposed from being in the second chem bath too long!"
@@ -14042,12 +14509,12 @@ label saturday8:
                 show ava with move:
                     xpos -200
                     
-                show claire sweater cry at norm with dissolve:
+                show claire sweater cry at center with dissolve:
                     xpos 600
 
                 claire @ say "Aww, sorry to hear that..."
                 
-                show claire sweater derp at norm
+                show claire sweater derp at center
                 
                 claire @ say "But at least you two still had fun by the sound of it~"
                 
@@ -14183,7 +14650,7 @@ label saturday8:
 
         n "You turn your head and see Claire waving to you."
 
-        show claire outdoors neutral at norm with dissolve:
+        show claire outdoors neutral at center with dissolve:
             xzoom -1
 
         claire @ say "Ready to go?"
@@ -14203,7 +14670,7 @@ label saturday8:
 
         n "After a decent hike, you wind up at a pond at the base of a waterfall."
 
-        show claire outdoors derp at norm with dissolve
+        show claire outdoors derp at center with dissolve
 
         claire @ say "Here we are!~"
         
@@ -14236,7 +14703,7 @@ label saturday8:
                 
                 n "She notices your staring and, with a smirk, she makes a show of sticking out her rear as she takes off her pants."
 
-                show claire swimsuit leaning at norm with dissolve
+                show claire swimsuit leaning at center with dissolve
 
                 claire @ say "Now it's your turn to get changed~"
                 claire @ say "You did bring a swimsuit, yeah? Unless you were planning on skinny dipping ksksksks~"
@@ -14254,7 +14721,7 @@ label saturday8:
 
                 n "Well if she's inviting you to, it can't hurt to take a quick peek..."
 
-                show claire swimsuit leaning at norm with dissolve
+                show claire swimsuit leaning at center with dissolve
 
                 n "She strikes a pose as you look over to her."
                 n "Sweet raptor jesus does she rock that swimsuit."
@@ -14635,7 +15102,7 @@ label saturday8:
         n "After a couple hours you all decided to call it quits but Gunner said he had something to talk to you about."
         n "You stroll through the campus streets on your way back to your dorm with Gunner beside you."
 
-        show gunner neutral at norm with dissolve
+        show gunner neutral at center with dissolve
 
         gunner @ say "...Sooooo."
 
@@ -14743,7 +15210,7 @@ label monday6:
             
             n "Wait, did you just say that out loud?"
 
-            show rose unimpressed at norm with dissolve
+            show rose unimpressed at center with dissolve
 
             rose @ say "Ugh, what are you doing here?"
             rose @ say "Can't I have one place where you'll leave me alone?"
@@ -14926,7 +15393,7 @@ label monday6:
                     n "After scouring the shelves, you finally come across the history section."
                     n "You guess you really shouldn't be surprised to see Rose here, but the sight of her still startles you."
 
-                    show rose unimpressed at norm with dissolve
+                    show rose unimpressed at center with dissolve
 
                     rose @ say "Ugh, what are you doing here?"
                     rose @ say "Can't I have one place where you'll leave me alone?"
@@ -14986,7 +15453,7 @@ label monday6:
                             n "It doesn't look like there's a ladder available."
                             n "With a sigh you decide to help out, even if she'll hate you more for it. You set aside the paper for now and walk over."
 
-                            show rose neutral at norm with dissolve
+                            show rose neutral at center with dissolve
 
                             rose @ say "Dammit, they just had to put it all the way at the top!"
 
@@ -15110,7 +15577,7 @@ label monday6:
                     n "A few people are staying behind to talk to the writers but you're more interested in going about the rest of your day."
                     n "Your plans come to a screeching halt when Miss Ellen stops you near the exit."
 
-                    show margaret neutral at norm with dissolve
+                    show margaret neutral at center with dissolve
 
                     ellen @ say "[name]! I'm so glad you could make it! What did you think? Quite inspirational, wouldn't you agree?"
 
@@ -15151,7 +15618,7 @@ label monday6:
                                 n "Did she just forget about you?"
                                 n "Just as you're considering going home, Miss Ellen comes up the stairs and pulls out a cigarette carton."
 
-                                show margaret neutral at norm with dissolve
+                                show margaret neutral at center with dissolve
 
                                 ellen @ say "Want one?"
 
@@ -15369,7 +15836,7 @@ label mishkasunday:
 
     mishka @ say "[name]?"
 
-    show mishka despondent at norm with dissolve:
+    show mishka despondent at center with dissolve:
         xzoom -1
 
     n "Oh thank God."
@@ -15448,7 +15915,7 @@ label mishkasunday:
     n "You tried to order a water but she just said \"Nyet, vih pyote eto\" and poured you a glass of straight vodka without even carding you."
     n "After a few minutes, Mishka finally arrives. She's greeted with a warm hug by the hostess who directs her over to you."
 
-    show mishka happy at norm with dissolve
+    show mishka happy at center with dissolve
 
     mishka @ say "[name]! I'm so happy you made it!"
 
@@ -15464,7 +15931,7 @@ label mishkasunday:
 
     n "You chance a glance over to her and she gestures that she has her eye on you before walking up to the table with another glass."
 
-    show volginova neutral at norm with dissolve:
+    show volginova neutral at center with dissolve:
         xzoom -1
         xpos -500
 
@@ -15498,7 +15965,7 @@ label mishkasunday:
 
     n "A short while later, Volginova shows up with the appetizer Mishka ordered and places them on the table, then she just sort of... stands there intimidatingly."
 
-    show volginova neutral at norm with dissolve
+    show volginova neutral at center with dissolve
 
     volginova @ say "   ...   "
 
@@ -15523,7 +15990,7 @@ label mishkasunday:
 
     n "A moment later Mishka reappears, her cheery mood completely contrasting with Volginova."
 
-    show mishka saddest at norm with dissolve
+    show mishka saddest at center with dissolve
 
     mishka @ say "Huh? What's wrong, [name]? Are you not having good time?"
 
@@ -15580,7 +16047,7 @@ label mishkasunday:
 
     n "You and Mishka have a nice time bashing different countries and cultures until you've finished your meals and Volginova comes with a mint for the both of you."
 
-    show volginova neutral at norm with dissolve:
+    show volginova neutral at center with dissolve:
         xzoom -1
         xpos 1200
         
@@ -15671,7 +16138,7 @@ label mishka_rain_date:
     n "The smell of ozone and lavender fills your nose and you hear something scuttling near you."
     n "Before you can look over your shoulder, you feel a pair of petite arms wrap around your waist from behind."
 
-    show mishka hat happy at norm with dissolve
+    show mishka hat happy at center with dissolve
 
     mishka @ say "Gotchya! Heehee~"
 
@@ -15720,7 +16187,7 @@ label mishka_rain_date:
     n "She tells you stories about her life in Ukraine and how she had trouble adjusting to American lifestyle."
     n "In a way you can kind of relate, being from a small town yourself and having to get used to living in a populated area like Harmonia."
 
-    show mishka neutral hat at norm with dissolve
+    show mishka neutral hat at center with dissolve
 
     mishka @ say "Incoming!"
 
@@ -15794,7 +16261,7 @@ label mishka_rain_date:
 
     player "Mishka! Are you alright?"
 
-    show mishka happy hat at norm with dissolve
+    show mishka happy hat at center with dissolve
 
     mishka @ say "Ahah... Ahhh... ahahahaha..."
     
@@ -15869,7 +16336,7 @@ label posttimeskip:
         n "He's stuck blocking in the corner but his attempt to reverse the situation gets countered and ends with him getting knocked out."
         n "He sighs and sits back in his chair before giving his opponent a fist bump and unplugging his fight stick."
 
-        show rori neutral at norm with dissolve
+        show rori neutral at center with dissolve
 
         rori @ say "Welp. I'm out of the tournament."
 
@@ -15915,7 +16382,7 @@ label posttimeskip:
 
         player "Nah, I was staring at your ass."
         
-        show rori anxiety
+        show rori anxious
 
         rori @ say "Oh... my gosh [name]!"
 
@@ -15951,7 +16418,7 @@ label posttimeskip:
         n "You had snagged some chips and sodas from a vending machine and brought them over."
         n "You toss him a bag of pretzels and a can of bepis."
 
-        show rori neutral at norm with dissolve
+        show rori neutral at center with dissolve
 
         rori @ say "Thanks!"
 
@@ -15972,7 +16439,7 @@ label posttimeskip:
         n "These sweaty tryhards pick up on the fact you're a filthy casual and absolutely thrash you, taking out all your lives early on and leaving Rori to fend for himself."
         n "He takes out a few of their lives on his own but it's really just unfair for him to go two vs one like this and even he can't last long on his own."
 
-        show rori neutral at norm with dissolve
+        show rori neutral at center with dissolve
 
         rori @ say "Pah... That was rough..."
 
@@ -15998,7 +16465,7 @@ label posttimeskip:
         n "Your cheers are for naught however, as he ultimately loses the match."
         n "He gives his opponent a fist bump then walks over to you."
 
-        show rori neutral at norm with dissolve
+        show rori neutral at center with dissolve
 
         rori @ say "Sup. Of course you start watching as soon as I start losing haha"
 
@@ -16021,7 +16488,7 @@ label posttimeskip:
         hide box
 
         show bg calendar
-        show tsunday at norm
+        show tsunday at center
         with Dissolve(.5)
 
         pause .6
@@ -16058,7 +16525,7 @@ label posttimeskip:
         n "When you arrive, it feels like you've stepped into some sort of corporate cemetary full of zombies trudging from shop to shop to look at cheaply made goods."
         n "It's not at all like how TV shows portrayed it."
 
-        show claire outdoors neutral at norm with dissolve
+        show claire outdoors neutral at center with dissolve
 
         claire @ say "You said this is the first time you've ever been to a mall, right?"
         claire @ say "Well, what do you think??"
@@ -16111,7 +16578,7 @@ label posttimeskip:
                 n "Claire drags you up the escalator to the second floor and into the shop, where some edgy teens are loitering around."
                 n "It smells like cheap goth perfume in here."
 
-                show claire outdoors neutral at norm with dissolve
+                show claire outdoors neutral at center with dissolve
 
                 claire @ say "I remember buying so many hoodies from here in middle school!"
 
@@ -16173,7 +16640,7 @@ label posttimeskip:
                 n "You slide a twenty dollar bill his way and get a stack of tokens in return."
                 n "Claire wants to hop on the DDR machine first and tries putting in the tokens so hastily she drops some."
 
-                show claire outdoors neutral at norm with dissolve
+                show claire outdoors neutral at center with dissolve
 
                 claire @ say "Woops! Don't worry, I'll pick those up in a minute."
                 claire @ say "Which song do you wanna play?"
@@ -16265,7 +16732,7 @@ label posttimeskip:
 
 
 
-        show claire outdoors neutral at norm with dissolve
+        show claire outdoors neutral at center with dissolve
 
         claire @ say "Alright, we went somewhere you wanted to go, now it's my turn to pick a store!"
 
@@ -16278,7 +16745,7 @@ label posttimeskip:
         if fratsoro == "frat":
             n "Claire drags you off into a store you feel has no place in a mall where anybody can see you: the lingerie store."
 
-            show claire outdoors neutral at norm with dissolve
+            show claire outdoors neutral at center with dissolve
 
             claire @ say "What's wrong [name]? Why are you blushing so hard? It's just a clothing store."
 
@@ -16302,7 +16769,7 @@ label posttimeskip:
         else:
             n "Claire drags you off into a type of store you thought was just a myth: the lingerie store."
 
-            show claire outdoors neutral at norm with dissolve
+            show claire outdoors neutral at center with dissolve
                 #xzoom -1
 
             claire @ say "Hm? You alright?"
@@ -16368,7 +16835,7 @@ label posttimeskip:
         hide box
 
         show bg calendar
-        show tsunday at norm
+        show tsunday at center
         with Dissolve(.5)
 
         pause .6
@@ -16411,7 +16878,7 @@ label posttimeskip:
         n "You weren't in any state to pay much attention to it, especially since you had to skip your morning coffee."
         n "But she did bring you out here to teach you how to use a camera so you try to memorize the basic functions of the device and noob shooting techniques she shows you."
 
-        show ava typical neutral at norm with dissolve
+        show ava typical neutral at center with dissolve
 
         ava @ say "...and if you want more of the image in focus, you have to stop down the aperture, but remember to adjust the shutter speed or ISO to compensate for the loss of light!"
 
@@ -16434,7 +16901,7 @@ label posttimeskip:
         n "Trying to remember all the steps at once while also trying to be creative in your shot is harder than it sounds."
         n "You end up settling for a boring shot of the waterfall with some rocks in the foreground."
 
-        show ava typical neutral at norm with dissolve
+        show ava typical neutral at center with dissolve
 
         player "How's this?"
 
@@ -16457,7 +16924,7 @@ label posttimeskip:
         n "The shutter finally returns to its closed position and you can review your photo."
         n "The long exposure time blended the movement of the waterfall into long streaks of light. It looks like something you'd see on a calendar."
 
-        show ava typical neutral at norm with dissolve
+        show ava typical neutral at center with dissolve
 
         player "Huh. So that's how those pics are taken."
 
@@ -16482,7 +16949,7 @@ label posttimeskip:
         n "It starts out pretty tame, just her doing some midly artsy tasteful poses you might find on any art hoe's pinstagram."
         n "But then she kicks off her shoes and socks and flaps over to the big rock jutting out from the pond."
 
-        show ava typical neutral at norm with dissolve
+        show ava typical neutral at center with dissolve
 
         ava @ say "Hey, get a few shots of me up on this rock with the waterfall in the background!"
         ava @ say "That lens doesn't zoom very far so you'll have to get your feet wet!"
@@ -16502,14 +16969,14 @@ label posttimeskip:
         
         n "It's... Ava's shirt?"
         
-        show ava twopiece pants smile at norm with dissolve
+        show ava twopiece pants smile at center with dissolve
         
         #n "You pull it off and look up to see your bird gf posing topless (in an artsy way of course) with a blush on her face."
         #she's turned away from you, covers her breasts with her wing
         
         #n "(((author's note, this scene needs to be rewritten. also just imagine ava is nude here because the art isn't done yet.)))"
 
-        #show ava topless at norm with dissolve
+        #show ava topless at center with dissolve
 
         ava @ say "Well? You gonna just stare or take some shots?"
 
@@ -16542,7 +17009,7 @@ label posttimeskip:
         
         n "You shake the fabric off your head, this time it was Ava's pants."
         
-        show ava twopiece flattered at norm with dissolve:
+        show ava twopiece flattered at center with dissolve:
             xzoom -1
         
         ava @ say "Well? What do you think?"
@@ -16593,7 +17060,7 @@ label posttimeskip:
         #n "Wait, would Ava be into that?"
         n "You ended up filling Ava's 64GB SD card with shots, prompting you both to put your clothes back on and call it a day."
 
-        show ava smile at norm with dissolve
+        show ava smile at center with dissolve
 
         ava @ say "Whew! I've never managed to fill up that card in a single outing before!"
         
@@ -16618,7 +17085,7 @@ label posttimeskip:
         hide box
 
         show bg calendar
-        show tsunday at norm
+        show tsunday at center
         with Dissolve(.5)
 
         pause .6
@@ -16661,7 +17128,7 @@ label posttimeskip:
         n "Which turned out to be a win-win for you because she's introduced you to some really interesting metal bands this way."
         n "You look up and take the earbud out to see what she has to say."
 
-        show rose neutral at norm with dissolve
+        show rose neutral at center with dissolve
 
         rose @ say "Hey. Go buy me a coffee."
 
@@ -16713,7 +17180,7 @@ label posttimeskip:
         show box with Dissolve(.2):
             ypos 0
 
-        show rose neutral at norm with dissolve
+        show rose neutral at center with dissolve
 
         play music "audio/music/vylet - That Feeling I Get in my Heart.ogg" fadein 1.0
 
@@ -16761,7 +17228,7 @@ label posttimeskip:
         attendant "Welcome to Harmonia's Museum of History!"
         attendant "We're currently running a special where couples get in for the price of one!"
         
-        show rose neutral at norm with dissolve
+        show rose neutral at center with dissolve
 
         rose @ say "We're not a coup-"
 
@@ -16834,7 +17301,7 @@ label posttimeskip:
         n "The sun is starting to go down by the time you finish covering everything."
         n "As you're on your way out, Rose grabs your arm."
         
-        show rose flustered at norm with dissolve
+        show rose flustered at center with dissolve
 
         rose @ say "Hey... Thanks for coming here with me."
         rose @ say "I don't really have anyone else who'd wanna join me for something like this and I didn't wanna come alone like some kind of loser."
@@ -16890,7 +17357,7 @@ label posttimeskip:
         n "Your heart feels like it's about to burst out of your chest and yet you're entirely calm."
         n "The two of you softly sigh and moan as you explore each others' bodies until she suddenly stops you."
 
-        show rose neutral at norm with dissolve
+        show rose neutral at center with dissolve
 
         rose @ say "Wait, there's something I should..."
 
@@ -16934,7 +17401,7 @@ label posttimeskip:
         hide box
 
         show bg calendar
-        show tsunday at norm
+        show tsunday at center
         with Dissolve(.5)
 
         pause .6
@@ -16972,7 +17439,7 @@ label posttimeskip:
 
         n "You made sure to arrive an hour early so you wouldn't keep her waiting, but it seems she had the same idea."
 
-        show mishka ceremonial neutral at norm with dissolve
+        show mishka ceremonial neutral at center with dissolve
 
         #n "It looks nice but it clashes pretty hard with the American styled fair."
         #n "Not to mention she's making you feel underdressed compared to her more formal attire."
@@ -17171,7 +17638,7 @@ label posttimeskip:
 
         play music "audio/music/gymnopedies.ogg" 
 
-        show mishka ceremonial neutral at norm with dissolve
+        show mishka ceremonial neutral at center with dissolve
 
         mishka @ say "I had a wonderful night with you [name]!"
 
@@ -17276,7 +17743,7 @@ label posttimeskip:
             hide box
 
             show bg calendar
-            show tsunday at norm
+            show tsunday at center
             with Dissolve(.5)
 
             pause .6
@@ -17296,7 +17763,7 @@ label posttimeskip:
     show box with Dissolve(.2):
         ypos 0
 
-    show rothbauer at norm with dissolve
+    show rothbauer at center with dissolve
 
 
     if dating == "rose":
@@ -17311,7 +17778,7 @@ label posttimeskip:
         n "The only reason you even passed was because of Rose's help."
         n "You look to her. She looks so proud she taught an idiot like you so well."
         
-        show rose smug at norm with dissolve:
+        show rose smug at center with dissolve:
             xpos -500
             xzoom -1
 
@@ -17323,7 +17790,7 @@ label posttimeskip:
         rothbauer @ say "Ah, I remember back in the day before we had television and internet to entertain ourselves, my friends and I practically lived at the library!"
         rothbauer @ say "It brings me joy to see students like you taking your studies seriously! Could I ask you two to consider joining the tutorship program?"
 
-        #show rose neutral at norm with dissolve:
+        #show rose neutral at center with dissolve:
             #xzoom -1
             #xpos -350
             
@@ -17379,7 +17846,7 @@ label posttimeskip:
 
         n "Did he just glance your way?"
 
-        show rose neutral at norm with dissolve:
+        show rose neutral at center with dissolve:
             xzoom -1
             xpos -550
 
@@ -17393,7 +17860,7 @@ label posttimeskip:
 
     play music "audio/music/mere - schooldaze faster.ogg" fadein 1.5
 
-    show herschel at norm with dissolve
+    show herschel at center with dissolve
 
     show box with Dissolve(.2):
         ypos 0
@@ -17422,7 +17889,7 @@ label posttimeskip:
     show box with Dissolve(.2):
         ypos 0
 
-    show gunner neutral at norm with dissolve
+    show gunner neutral at center with dissolve
 
     player "At first I didn't think this class was too hard but now I completely empathize with you."
 
@@ -17497,7 +17964,7 @@ label posttimeskip:
         show box with Dissolve(.2):
             ypos 0
 
-        show mishka teasing at norm with dissolve
+        show mishka teasing at center with dissolve
 
         mishka @ say "I'll have that ready for you shortly, [name]!"
 
@@ -17519,7 +17986,7 @@ label posttimeskip:
         n "Is this just some student who happens to look, sound, and smell similar?"
         n "She notices you staring and grins."
 
-        show ellen smug at norm with dissolve
+        show ellen smug at center with dissolve
 
         ellen @ say "Heheheh"
         
@@ -17703,7 +18170,7 @@ label posttimeskip:
         n "This is definitely the strangest thing to have ever happened to you."
         n "As you go to throw away your cup, Mishka speaks up."
 
-        show mishka nya at norm with dissolve:
+        show mishka nya at center with dissolve:
             xzoom -1
 
         mishka @ say "Who was that? Perhaps someone you know..?"
@@ -17736,7 +18203,7 @@ label posttimeskip:
         hide box
 
         show bg calendar
-        show ttuesday at norm
+        show ttuesday at center
         with Dissolve(.5)
 
         pause .6
@@ -17781,7 +18248,7 @@ label posttimeskip:
 
         n "Ellen zooms past you and promptly falls off her skateboard."
 
-        show ellen laugh at norm with dissolve:
+        show ellen laugh at center with dissolve:
             xpos 50
 
         ellen @ say "I'm alright!"
@@ -17853,7 +18320,7 @@ label posttimeskip:
         n "She places her paws on your back and gives you a rough push, sending you rolling down the street before crashing into a trash can and being flung off onto the grass."
         n "You see stars for a while. When you come to, Ellen is standing over you."
 
-        show ellen laugh at norm with dissolve
+        show ellen laugh at center with dissolve
 
         ellen @ say "Whoa! That was totally gnarly dude!"
         
@@ -17886,7 +18353,7 @@ label posttimeskip:
         n "You even got to walk Ellen back to her car where you chatted some more before she gave you a parting smooch on the cheek."
         n "She even let you hold onto the skateboard for her until next time."
 
-        show ellen laugh at norm with dissolve
+        show ellen laugh at center with dissolve
 
         ellen @ say "You better impress me next time I see you on that board!"
 
@@ -18174,7 +18641,7 @@ label next01:
     #play music "audio/ai21.ogg" fadein .5
     play music "audio/music/mere - retrograde.ogg" fadein .5
 
-    show margaret neutral at norm with dissolve
+    show margaret neutral at center with dissolve
 
     ellen @ say "...and that about covers the review for Tuesday's midterm!"
     ellen @ say "Study hard and do your best! I wish you all good luck!"
@@ -18183,7 +18650,7 @@ label next01:
 
     n "The other students pack their things and file out of the room, but as usual you stay behind to talk to Miss Ellen."
 
-    show margaret neutral at norm with dissolve
+    show margaret neutral at center with dissolve
 
     n "Miss Ellen looks around to make sure there aren't any other students nearby."
 
@@ -18239,7 +18706,7 @@ label next01:
             n "You wait around for a few minutes, texting Claire with an excuse for missing class before Ellen shows up."
             n "Before even saying anything she pulls out her cigarettes and lights one up."
 
-            show margaret smoking neutral at norm with dissolve
+            show margaret smoking neutral at center with dissolve
 
             ellen @ say "Want one?"
 
@@ -18283,7 +18750,7 @@ label next01:
 
             play music "audio/music/mere - retrograde.ogg" fadein .5
 
-            show celestine neutral at norm with dissolve
+            show celestine neutral at center with dissolve
 
             show box with Dissolve(.2):
                 ypos 0
@@ -18306,7 +18773,7 @@ label next01:
                     celestine @ say "Hmm..."
                     celestine @ say "Claire, pourriez-vous donner des cours à [name], s'il vous plaît?"
 
-                    show claire sweater neutral at norm with dissolve:
+                    show claire sweater neutral at center with dissolve:
                         xzoom -1
                         xpos -300
 
@@ -18342,7 +18809,7 @@ label next01:
             n "After class, you make your way back to the literature building to meet with Miss Ellen."
             n "You could already smell her cigarette smoke as you came up the stairway."
 
-            show margaret smoking neutral at norm with dissolve
+            show margaret smoking neutral at center with dissolve
 
             ellen @ say "Sup."
 
@@ -18480,15 +18947,15 @@ label next01:
 
         n "You wave and walk over. Looks like everone already bought drinks."
 
-        show ava typical neutral at norm:
+        show ava typical neutral at center:
             xzoom -1
             xpos -520
-        show gunner neutral at norm:
+        show gunner neutral at center:
             xzoom -1
             xpos -700
-        show claire sweater neutral at norm:
+        show claire sweater neutral at center:
             xpos 500
-        show rori neutral at norm:
+        show rori neutral at center:
             xpos 700
         with dissolve
 
@@ -18510,7 +18977,7 @@ label next01:
 
         n "You walk up to the counter and see a familiar smiling face."
 
-        show mishka neutral at norm with dissolve
+        show mishka neutral at center with dissolve
 
         mishka @ say "Vitannya [name]! I see you brought a lot of friends with you today!"
 
@@ -18529,7 +18996,7 @@ label next01:
         n "You chat with your friends for a bit until Mishka calls your name."
         n "As you're carrying your drink back to the table, you see that somebody has taken your seat."
 
-        show ellen laugh at norm with dissolve
+        show ellen laugh at center with dissolve
 
         ellen @ say "[name]! Hey! Fancy meeting you here!"
         
@@ -18539,15 +19006,15 @@ label next01:
 
         player "Uh. Right. What a coincidence."
 
-        show ava typical neutral at norm:
+        show ava typical neutral at center:
             xzoom -1
             xpos -520
-        show gunner neutral at norm:
+        show gunner neutral at center:
             xzoom -1
             xpos -700
-        show claire sweater neutral at norm:
+        show claire sweater neutral at center:
             xpos 500
-        show rori neutral at norm:
+        show rori neutral at center:
             xpos 700
         with dissolve
 
@@ -18607,15 +19074,15 @@ label next01:
     if dating == "mishka":
         player "Hey guys!"
 
-        show ava typical neutral at norm:
+        show ava typical neutral at center:
             xzoom -1
             xpos -520
-        show gunner neutral at norm:
+        show gunner neutral at center:
             xzoom -1
             xpos -700
-        show claire sweater neutral at norm:
+        show claire sweater neutral at center:
             xpos 500
-        show rori neutral at norm:
+        show rori neutral at center:
             xpos 700
         with dissolve
         
@@ -18641,7 +19108,7 @@ label next01:
 
         n "You walk over to the counter where Mishka is hard at work making drinks."
 
-        show mishka neutral at norm with dissolve
+        show mishka neutral at center with dissolve
 
         player "Hey cutie. Come here often?"
         
@@ -18675,17 +19142,17 @@ label next01:
         n "You hang around the counter chatting with Mishka as she finishes up everyone's drinks."
         n "When she's done, you and her grab hold of them all and carry them over to the table your friends are sitting at."
 
-        show ava typical neutral at norm:
+        show ava typical neutral at center:
             xzoom -1
             xpos -520
-        show gunner neutral at norm:
+        show gunner neutral at center:
             xzoom -1
             xpos -700
-        show claire sweater neutral at norm:
+        show claire sweater neutral at center:
             xpos 500
-        show rori neutral at norm:
+        show rori neutral at center:
             xpos 700
-        show mishka neutral at norm:
+        show mishka neutral at center:
             xzoom -1
         with dissolve
 
@@ -18695,7 +19162,7 @@ label next01:
 
         mishka @ say "Dyakuyu!"
 
-        n "Mishka passes out drinks before getting settled in a seat norm next to yours."
+        n "Mishka passes out drinks before getting settled in a seat center next to yours."
 
         claire @ say "[name], aren't you two like, dating??"
 
@@ -18730,15 +19197,15 @@ label next01:
     if dating == "rose":
         player "Hey guys."
 
-        show ava typical neutral at norm:
+        show ava typical neutral at center:
             xzoom -1
             xpos -525
-        show gunner neutral at norm:
+        show gunner neutral at center:
             xzoom -1
             xpos -725
-        show rori neutral at norm:
+        show rori neutral at center:
             xpos 450
-        show claire sweater neutral at norm:
+        show claire sweater neutral at center:
             xpos 750
         with dissolve
 
@@ -18746,7 +19213,7 @@ label next01:
 
         n "Right on time, the door opens and Rose walks in. She looks around for you and hesitantly comes closer as she spots you and your group of friends."
 
-        show rose neutral at norm with dissolve:
+        show rose neutral at center with dissolve:
             xzoom -1
 
         rose @ say "..."
@@ -18827,7 +19294,7 @@ label next01:
         n "Well, this is going better than you expected."
         n "You herd your friends over to the counter where Mishka greets you with a smile."
 
-        show mishka neutral at norm with dissolve:
+        show mishka neutral at center with dissolve:
             xzoom -1
             xpos -575
 
@@ -18839,27 +19306,27 @@ label next01:
 
         player "The usual."
 
-        show rose neutral at norm with dissolve:
+        show rose neutral at center with dissolve:
             xpos -150
 
         rose "Coffee as black as my soul."
 
-        show claire sweater neutral at norm with dissolve:
+        show claire sweater neutral at center with dissolve:
             xpos 225
 
         claire @ say "A pumpkin spice latte for me please! And could you put honey and salt on it too?"
 
-        show ava typical neutral at norm with dissolve:
+        show ava typical neutral at center with dissolve:
             xpos 380
 
         ava @ say "I'll have a hazlenut cappucinno with whipped cream. Thanks!"
 
-        show gunner neutral at norm with dissolve:
+        show gunner neutral at center with dissolve:
             xpos 555
 
         gunner @ say "Can I get the mango passionfruit tea?"
 
-        show rori neutral at norm with dissolve:
+        show rori neutral at center with dissolve:
             xpos 800
 
         rori @ say "Uhh... I'll take a hot cocoa please."
@@ -18878,7 +19345,7 @@ label next01:
 
         gunner @ say "Fug, I don't get paid til next week."
 
-        show rori anxiety
+        show rori anxious
 
         rori @ say "Ah dang, I left my wallet at home."
         
@@ -18954,15 +19421,15 @@ label next01:
     if dating == "rori":
         n "You wave and walk over. Looks like everone already bought drinks."
 
-        show ava casual happy at norm:
+        show ava casual happy at center:
             xzoom -1
             xpos -520
-        show gunner neutral at norm:
+        show gunner neutral at center:
             xzoom -1
             xpos -700
-        show claire sweater neutral at norm:
+        show claire sweater neutral at center:
             xpos 500
-        show rori neutral at norm:
+        show rori neutral at center:
             xpos 700
         with dissolve
 
@@ -19036,15 +19503,15 @@ label next01:
     if dating == "ava":
         n "You wave and walk over. Looks like everone already bought drinks."
 
-        show rori neutral at norm:
+        show rori neutral at center:
             xzoom -1
             xpos -400
-        show gunner neutral at norm:
+        show gunner neutral at center:
             xzoom -1
             xpos -625
-        show claire sweater neutral at norm:
+        show claire sweater neutral at center:
             xpos 700
-        show ava casual happy at norm:
+        show ava casual happy at center:
             xpos 433
         with dissolve
 
@@ -19118,13 +19585,13 @@ label next01:
 
         n "You wave and walk over. Looks like everone already bought drinks."
 
-        show ava typical neutral at norm:
+        show ava typical neutral at center:
             xzoom -1
             xpos -500
-        show gunner neutral at norm:
+        show gunner neutral at center:
             xzoom -1
             xpos -700
-        show rori neutral at norm:
+        show rori neutral at center:
             xpos 600
         with dissolve
 
@@ -19133,7 +19600,7 @@ label next01:
 
         claire @ say "Right here!"
 
-        show claire sweater neutral at norm with dissolve
+        show claire sweater neutral at center with dissolve
 
         n "Claire walks up from behind you and surprises you with a hug."
         n "Ava giggles and quickly snaps a photo of you, trapped in Claire's fluffy clutches."
@@ -19162,9 +19629,9 @@ label next01:
         
         pause .25
 
-        show claire sweater neutral at norm:
+        show claire sweater neutral at center:
             xpos 400
-        show mishka neutral at norm:
+        show mishka neutral at center:
             xzoom -1
             xpos -400
         with dissolve
@@ -19211,15 +19678,15 @@ label next01:
         n "You swipe your credit card through the machine and chat with Mishka while she makes your drinks."
         n "When you head back to your table, Claire snags the only remaining seat."
 
-        show ava typical neutral at norm:
+        show ava typical neutral at center:
             xzoom -1
             xpos -500
-        show gunner neutral at norm:
+        show gunner neutral at center:
             xzoom -1
             xpos -700
-        show rori neutral at norm:
+        show rori neutral at center:
             xpos 600
-        show claire sweater neutral at norm
+        show claire sweater neutral at center
         with dissolve
 
         claire @ say "Oh noooo, where will you sit, [name]?"
@@ -19393,7 +19860,7 @@ label trish1:
     trish @ say "Oh my gosh are you okay???"
     #hide sayfarleft with Dissolve(.2)
     
-    show trish neutral at norm with dissolve:
+    show trish neutral at center with dissolve:
         xzoom -1
     
     n "Standing over you is the fattest possum you've seen in your life."
@@ -19636,7 +20103,7 @@ label cont1:
     n "Goddammit what now"
     n "You dig your phone out of your pocket and feel your heart sink as you see who's calling."
 
-    show phonecall at norm with dissolve:
+    show phonecall at center with dissolve:
         xpos 700
         ypos 200
 
@@ -19670,7 +20137,7 @@ label cont1:
 
     scene bg hospital with fade
 
-    show kitsuragi at norm with dissolve
+    show kitsuragi at center with dissolve
 
     show box with Dissolve(.2):
         ypos 0
