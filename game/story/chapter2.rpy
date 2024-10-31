@@ -641,7 +641,7 @@ label week2Tuesday:
     if gardenDiscovered == True:
         n "This is the same garden you've visited before, just at one of the other entrances. The area is quite expansive and you haven't been to this part before."
 
-    show ava normal neutral at norm:
+    show ava typical neutral at norm:
         #xzoom -1
         xpos 375
     show claire outdoors neutral at norm:
@@ -691,7 +691,7 @@ label week2Tuesday:
 
     claire @ say "Ksksksks! Just teasin'!"
     
-    show ava normal neutral
+    show ava typical neutral
 
     n "Ava and Claire continue to bicker and share fun plant facts as you go along."
     n "After a while, you come to a bench with an arch over it with vines growing all over."
@@ -767,7 +767,7 @@ label week2Tuesday:
 
             claire @ say "Sure, go for it!"
             
-            show ava normal neutral
+            show ava typical neutral
 
             n "Ava stands back to take a shot of you and Claire."
 
@@ -795,7 +795,7 @@ label week2Tuesday:
             
             claire @ say "Got it!"
             
-            show ava normal neutral
+            show ava typical neutral
 
             n "Ava excitedly flutters over to see how it turned out."
 

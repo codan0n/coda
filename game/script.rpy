@@ -172,7 +172,7 @@ define y_rori = 1565
 define y_rose = 1570
 define y_gunner = 1570
 define y_claire = 1570
-define y_ava = 1570
+define y_ava = 1630
 define y_mishka = 1570
 
 #old mishka text color a4cffc
@@ -206,10 +206,17 @@ layeredimage nicodemus neutral:
         attribute say:
             "images/characters/celestinesays.png"
 
-layeredimage ava normal neutral:
+layeredimage ava typical neutral:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava/ava normal neutral.png'
+        'images/characters/ava/ava typical neutral.png'
+    group saying:
+        attribute say:
+            "images/characters/ava/avasays.png"
+layeredimage ava typical happy:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava typical happy.png'
     group saying:
         attribute say:
             "images/characters/ava/avasays.png"
@@ -1311,10 +1318,10 @@ layeredimage rori pantslessdrunk:
     group saying:
         attribute say:
             "images/characters/rori/rorisays.png"            
-layeredimage rori laughing:
+layeredimage rori laugh:
     at sprite_highlight('rori')
     always:
-        'images/characters/rori/rori laughing.png'
+        'images/characters/rori/rori laugh.png'
     group saying:
         attribute say:
             "images/characters/rori/rorisays.png"            
@@ -1646,7 +1653,7 @@ label start:
     #    xpos 220
     #show rori neutraltral at norm:
     #    xpos 585
-    #show ava normal neutraltral at norm:
+    #show ava typical neutraltral at norm:
     #    xpos 810
     
     #n "Choose your waifu"
@@ -3829,7 +3836,7 @@ label liberation_day:
         n "Ava wasn't kidding when she said this place was abandoned."
         n "Graffiti lines the walls and weeds grow out of cracks in the concrete. You'd be afraid to enter a place like this alone, but luckily you have a dainty liberal arts student to protect you."
 
-        show ava normal neutral at norm with dissolve
+        show ava typical neutral at norm with dissolve
 
         #ava @ say "Hey [name]! Glad you could make it!"
 
@@ -3854,7 +3861,7 @@ label liberation_day:
 
         player "That's not your usual camera, is it?"
         
-        show ava normal neutral at norm with dissolve:
+        show ava typical neutral at norm with dissolve:
             xzoom -1
 
         ava @ say "Hm? Oh this?"
@@ -3868,7 +3875,7 @@ label liberation_day:
 
         n "She pulls a lever on the camera, loading the next frame."
         
-        show ava normal neutral
+        show ava typical neutral
 
         #ava @ say "But I also wanted to capture the feeling of those old historical photos with the inky blacks and softness to the frame."
         
@@ -4031,7 +4038,7 @@ label liberation_day:
         #player "I wonder who they'd get to reenact me in the documentary? Maybe they'd shave a chimpanzee for it?"
         n "After a few minutes, Ava speaks up, still in a hushed tone."
         
-        show ava normal neutral at norm with dissolve
+        show ava typical neutral at norm with dissolve
         
         ava @ say "I think whoever that was is gone. Or at least they didn't follow us."
         
@@ -4057,7 +4064,7 @@ label liberation_day:
             "What was the appeal?":
                 player "That's uh... quite unexpected. What's the appeal?"
                 
-                show ava normal neutral
+                show ava typical neutral
                 
                 ava @ say "I dunno, I guess the forbidden nature of it combined with the gruesomeness?"
                 ava @ say "A murderer is just an interesting type of person!"
@@ -4067,7 +4074,7 @@ label liberation_day:
             "Nah, I get it.":
                 player "I completely understand."
                 
-                show ava normal neutral
+                show ava typical neutral
                 
                 player "There's something sexy about someone who can straight up murder in cold blood."
                 player "That sort of evil is mesmerizing, isn't it?"
@@ -4130,7 +4137,7 @@ label liberation_day:
         
         ava @ say "Just the pretty ones~"
         
-        #show ava normal neutral
+        #show ava typical neutral
         
         #player "You'd be fun at one of those glowstick raves"
         
@@ -4253,7 +4260,7 @@ label liberation_day:
         
         player "Okay okay, let's just get out of here. Which is... that way I think? I'm not sure, this place is like a maze."
         
-        show ava normal neutral
+        show ava typical neutral
 
         n "You poke your heads out of the room you're in."
 
@@ -4290,7 +4297,7 @@ label liberation_day:
         
         player "Ow."
         
-        show ava normal neutral at norm with dissolve:
+        show ava typical neutral at norm with dissolve:
             xpos 300
             yalign 0
         
@@ -4364,7 +4371,7 @@ label liberation_day:
             xzoom -1
         show gunner neutral at norm:
             xpos 350
-        show ava normal neutral at norm:
+        show ava typical neutral at norm:
             xpos 533
         with dissolve
         
@@ -4408,7 +4415,7 @@ label liberation_day:
         
         ava @ say "Heh yeah... This place is even spookier than the old abandoned one, huh?"
         
-        show ava normal neutral
+        show ava typical neutral
         
         gunner @ say "You gonna stay the night here or go back to your dorm?"
         
@@ -4441,7 +4448,7 @@ label liberation_day:
                 
                 player "Heh will do~"
                 
-                show ava normal neutral
+                show ava typical neutral
                 
                 ava @ say "Take care, [name]. I'll see you later, k?"
                 
@@ -4703,7 +4710,7 @@ label liberation_day:
                         
                         player "Dang."
                         
-                        show ava normal neutral
+                        show ava typical neutral
                         
                         ava @ say "I came here for friendly clothes-on cuddling, nothing more."
                         
@@ -4735,7 +4742,7 @@ label liberation_day:
                         
                         ava @ say "We can just sleep next to each other if you want."
                         
-                        show ava normal neutral
+                        show ava typical neutral
                         
                         player "Deal. Now gimme back my arm before it needs to be amputated."
                         
@@ -4776,7 +4783,7 @@ label liberation_day:
                             n "It's not even daylight out and she's stretching and chirping and tweeting."
                             n "She rolls over and rests a wing on you."
                             
-                            show ava normal neutral at norm:
+                            show ava typical neutral at norm:
                                 yalign 0
                                 xzoom -1
                                 xpos -175
@@ -4793,7 +4800,7 @@ label liberation_day:
                             
                             player "We weren't even really snuggling."
                             
-                            show ava normal neutral
+                            show ava typical neutral
                             
                             ava @ say "Yeah but our bodies don't know that! It's the proximity that counts!"
                             
@@ -4815,7 +4822,7 @@ label liberation_day:
                             
                             player "Must be the endorphins."
                             
-                            show ava normal neutral
+                            show ava typical neutral
                             
                             #ava @ say "?"
                             #ava @ say "Oh, endorphins. Maybe!"
@@ -4826,7 +4833,7 @@ label liberation_day:
                             
                             player "Hey, where are you going?"
                             
-                            show ava normal neutral
+                            show ava typical neutral
                             
                             ava @ say "Got a busy day of shooting ahead of me!"
                             
@@ -4845,7 +4852,7 @@ label liberation_day:
                             n "You're woken up earlier than usual by Ava's stirring."
                             n "It's not even daylight out and she's stretching and chirping and tweeting."
                             
-                            show ava normal neutral at norm:
+                            show ava typical neutral at norm:
                                 yalign 0
                                 xzoom -1
                                 xpos -175
@@ -4925,7 +4932,7 @@ label liberation_day:
                         show gunner neutral at norm:
                             xpos 300
                             xzoom -1
-                        show ava normal neutral at norm:
+                        show ava typical neutral at norm:
                             xpos -300
                         with dissolve
                         
@@ -4937,7 +4944,7 @@ label liberation_day:
                         
                         player "Good question. I'm not a pro at this by any means."
                         
-                        show ava normal neutral
+                        show ava typical neutral
                         
                         n "You sit on your bed and try to recall just what you were thinking when you invited the whole love triangle to cuddle together."
                         n "Lost in thought, you don't notice your two snuggle buddies hopping onto the bed on either side of you."
@@ -5052,7 +5059,7 @@ label liberation_day:
                         n "Somehow in the middle of the night you and Ava switched position so that she was in the middle of you two."
                         n "You guess this round of flirting with Ava ended up being a draw."
                         
-                        show ava normal neutral at norm:
+                        show ava typical neutral at norm:
                             xpos -200
                             xzoom -1
                         with dissolve
@@ -5066,7 +5073,7 @@ label liberation_day:
                         
                         ava @ say "Amazingly well!"
                         
-                        show ava normal neutral
+                        show ava typical neutral
                         
                         ava @ say "How's your ankle?"
                         
@@ -5139,7 +5146,7 @@ label liberation_day:
                         n "Great, now you have to make up a schizo imaginary girlfriend to impress Ava."
                         n "Or make her jealous."
                         
-                        show ava normal neutral
+                        show ava typical neutral
                         
                         player "Let's get out of this hospital first. I'm already sick of being here."
                         
@@ -5854,14 +5861,14 @@ label movienight:
 
     rori @ say "It's... not."
 
-    show ava normal neutral at offscreenright:
+    show ava typical neutral at offscreenright:
         yalign 0
     show claire sweater neutral at offscreenright:
         yalign 0
 
     n "You turn your head as you hear the door open behind you and a familiar bird and bunny walk in."
 
-    show ava normal neutral at norm:
+    show ava typical neutral at norm:
         xpos 275
     show claire sweater neutral at norm:
         xpos 650
@@ -5935,7 +5942,7 @@ label movienight:
 
         claire @ say "Hey I hit on girls too."
         
-        show ava normal neutral
+        show ava typical neutral
 
         ava @ say "This is why I'm embarassed to go out in public with you."
 
@@ -5979,7 +5986,7 @@ label movienight:
 
     mishka @ say "And for you two?"
 
-    show ava normal neutral at norm:
+    show ava typical neutral at norm:
         xpos 225
     show claire sweater neutral at norm:
         xpos 600
@@ -6005,7 +6012,7 @@ label movienight:
     
     claire @ say "I gotta maintain my figure somehow!"
     
-    show ava normal neutral
+    show ava typical neutral
     
     ava @ say "I'll just have a mocha please!"
     
@@ -6042,7 +6049,7 @@ label movienight:
     player "I dunno, my dorm is kind of a wreck and I don't have anything to watch and"
     
     show claire sweater neutral
-    show ava normal neutral
+    show ava typical neutral
 
     claire @ say "Come on, you promised!"
 
@@ -6055,7 +6062,7 @@ label movienight:
     player "Am I being gaslit right now?"
     
     #show ava annoyed
-    show ava normal neutral
+    show ava typical neutral
     
     ava @ say "No, you definitely promised us a movie night at some point."
 
@@ -6157,7 +6164,7 @@ label movienight:
 
     player "To be honest I have no idea. I was just gonna download whatever comes up when I search 'guns cars explosions movie'"
     
-    show rori laughing
+    show rori laugh
 
     rori @ say "I've got a flash drive with a bunch of kinos we could watch!"
 
@@ -6173,7 +6180,7 @@ label movienight:
     hide rori
     with dissolve
 
-    show ava normal neutral at norm:
+    show ava typical neutral at norm:
         xpos -350
         xzoom -1
     show claire sweater neutral at norm:
@@ -6236,7 +6243,7 @@ label movienight:
 
     player "I thought you said you had some good movies..."
 
-    show rori laughing
+    show rori laugh
 
     rori @ say "These *are* good."
 
@@ -6248,7 +6255,7 @@ label movienight:
     ###hotline miami door sound effect
     n "As you turn the knob, Claire's fat bunny ass bursts through the doorway, knocking you onto the ground, semi-conscious."
 
-    show ava normal neutral at norm:
+    show ava typical neutral at norm:
         xpos 50
         xzoom -1
     show claire sweater wave at norm:
@@ -6296,7 +6303,7 @@ label movienight:
 
     ava @ say "Hey Rori! Was that Boku no Doki Doki Phantasm Gx; R-EVerSe?"
     
-    show ava normal neutral
+    show ava typical neutral
     show rori neutral at norm:
         xpos 2000
 
@@ -6367,7 +6374,7 @@ label movienight:
 
             n "Gunner looks up from his phone as Rori hits the play button."
 
-            show ava normal neutral at offscreenleft
+            show ava typical neutral at offscreenleft
             show gunner neutral at norm with dissolve:
                 xpos -300
                 xzoom -1
@@ -6466,7 +6473,7 @@ label movienight:
             
             n "She glides back down with her wings outstretched."
 
-            #show ava normal neutral at norm with move:
+            #show ava typical neutral at norm with move:
                 #xzoom -1
             show ava with move:
                 ypos 50
@@ -6622,7 +6629,7 @@ label movienight:
             
             n "The others stare and laugh as Rori tries to cover his blushing face."
             
-            show ava normal neutral at offscreenright
+            show ava typical neutral at offscreenright
 
             show gunner neutral at norm with dissolve:
                 xpos 450
@@ -6658,7 +6665,7 @@ label movienight:
 
             gunner @ say "Alright, now where do I sit?"
 
-            show ava normal neutral at norm with dissolve:
+            show ava typical neutral at norm with dissolve:
                 xzoom -1
                 xpos -100
 
@@ -7483,7 +7490,7 @@ label vacation_planning1:
     
     claire @ say "Ksksksks I was thinking we could all take a vacation day together~"
     
-    show ava normal neutral
+    show ava typical neutral
     
     player "Like a half-weekend in the middle of the week? What would we even do?"
     
@@ -7577,7 +7584,7 @@ label rori_belltower:
     
     #player "You were standing on the edge of a tall building alone!"
     
-    show rori laughing
+    show rori laugh
     
     #rori @ say "So? That doesn't mean I'm gonna jump!"
     
@@ -7597,7 +7604,7 @@ label rori_belltower:
     
     rori @ say "Very!"
     
-    show rori laughing
+    show rori laugh
     
     rori @ say "Baaaaah~"
     
@@ -7623,7 +7630,7 @@ label rori_belltower:
     n "This wall isn't gonna get the best of you. Fueled by your anger, you jump up and grab the horizontal bar and pull yourself to the top."
     n "It's terrifying to sit up here but if Rori can do it so can you."
     
-    show rori laughing
+    show rori laugh
     
     rori @ say "Hey, you did it!"
     
@@ -7740,7 +7747,7 @@ label rori_belltower:
     #n "As you step into the courtyard you bump into your beloved bunny buddy and feathered friend."
 
     #show claire sweater neutral at norm
-    #show ava normal neutral at norm:
+    #show ava typical neutral at norm:
     #    xzoom -1
     #with dissolve
 
@@ -8118,7 +8125,7 @@ label hiking:
         
         n "Ava switches off her camera."
         
-        show ava normal neutral
+        show ava typical neutral
         
         ava @ say "Of course! Anything supernatural can't be recorded digitally."
         ava @ say "I knew I should have brought my film camera today..."
@@ -8136,7 +8143,7 @@ label hiking:
         
         n "Claire throws another couple of sticks onto the flames."
         
-        show ava normal neutral
+        show ava typical neutral
         
         claire @ say "Might as well get cozy if we're gonna stay here a while!"
         
@@ -8199,7 +8206,7 @@ label hiking:
         
         rori @ say "Get a room you two!"
         
-        show ava normal neutral
+        show ava typical neutral
         show claire outdoors neutral
         
         gunner @ say "Says the guy with his head resting on the biggest tits in Harmonia."
@@ -8251,7 +8258,7 @@ label hiking:
         
         gunner @ say "She's bluffing! She knows there's no way Rori would try anything."
         
-        #show ava normal neutral
+        #show ava typical neutral
         
         claire @ say "You never know! Somebody might take up the offer!"
         
@@ -8373,7 +8380,7 @@ label hiking:
             xpos 310        
         show rori neutral:
             xpos 600
-        show ava normal neutral at norm:
+        show ava typical neutral at norm:
             xpos -350
             xzoom -1
         show gunner neutral at norm:
@@ -8395,7 +8402,7 @@ label hiking:
         
         ava @ say "Nothing like a nice cuddle to bring one's spirits up~"
         
-        show ava normal neutral
+        show ava typical neutral
         
         rori @ say "Yeah, this was quite a novel experience!"
         
@@ -8433,7 +8440,7 @@ label hiking:
         
         claire @ say "I'd say it's about time we get out of here."
         
-        show ava normal neutral
+        show ava typical neutral
         
         gunner @ say "We should be fine with the five of us travelling together."
         gunner @ say "Just have to make sure nobody gets picked off and skinwalkered."
@@ -8530,7 +8537,7 @@ label hiking:
         
         player "Great. Can we go home now?"
         
-        show ava normal neutral
+        show ava typical neutral
         
         ava @ say "Sure thing! Wait a sec, has anyone seen my lens cap?"
         
@@ -8585,7 +8592,7 @@ label hiking:
         
         ###if player talked about ghosts during the old hospital thing, have them talk about it more here
         
-        show ava normal neutral
+        show ava typical neutral
         
         gunner @ say "Whatever it is, it sounds like it's pissed."
         gunner @ say "We should leave before we get mauled, eaten, seduced or any combination of those by whatever lurks these woods at night!"
@@ -8674,7 +8681,7 @@ label hiking:
                 
                 ava @ say "I knew I could count on you~"
                 
-                show ava normal neutral
+                show ava typical neutral
                 
                 ava @ say "Come on, the sound was coming from that direction."
                 
@@ -8707,7 +8714,7 @@ label hiking:
                 
                 ava @ say "Shh!"
                 
-                show ava normal neutral
+                show ava typical neutral
                 
                 n "Ava looks down at her camera for a moment to adjust some settings."
                 n "When she puts the viewfinder back up to her face she seems to look around, confused."
@@ -8746,7 +8753,7 @@ label hiking:
                     xpos 700
                 show rori neutral at norm:
                     xpos 300
-                show ava normal neutral:
+                show ava typical neutral:
                     xpos -300
                     xzoom -1
                 show gunner neutral: 
@@ -8801,7 +8808,7 @@ label hiking:
                 
                 n "Ava switches off her camera."
                 
-                show ava normal neutral
+                show ava typical neutral
                 
                 ava @ say "Of course! Anything supernatural can't be recorded digitally."
                 ava @ say "I knew I should have brought my film camera today..."
@@ -8819,7 +8826,7 @@ label hiking:
                 
                 n "Claire throws another couple of sticks onto the flames."
                 
-                show ava normal neutral
+                show ava typical neutral
                 
                 claire @ say "Might as well get cozy if we're gonna stay here a while!"
                 
@@ -8883,7 +8890,7 @@ label hiking:
                 ava @ say "What?! You're the one with Rori's head between your tits!"
                 
                 show claire outdoors neutral                
-                show rori laughing
+                show rori laugh
                 
                 rori @ say "\[*Happy ram noises*\]"
                 
@@ -8996,7 +9003,7 @@ label hiking:
                     xpos 550
                 show rori neutral:
                     xpos 250
-                show ava normal neutral:
+                show ava typical neutral:
                     xpos -250
                     xzoom -1
                 show gunner neutral:
@@ -9040,7 +9047,7 @@ label hiking:
                 
                 n "Claire pulls everyone together for a tight hug."
                 
-                #show ava normal neutral
+                #show ava typical neutral
                 
                 claire @ say "I'm so glad I met you all <3"
                 
@@ -9054,7 +9061,7 @@ label hiking:
                 
                 claire @ say "I'd say it's about time we get out of here."
                 
-                show ava normal neutral
+                show ava typical neutral
                 
                 gunner @ say "We should be fine with the five of us travelling together."
                 gunner @ say "Just have to make sure nobody gets picked off and skinwalkered."
@@ -9168,7 +9175,7 @@ label hiking:
                     xpos 700
                 show rori neutral at norm:
                     xpos 300
-                show ava normal neutral:
+                show ava typical neutral:
                     xpos -300
                     xzoom -1
                 show gunner neutral: 
@@ -9222,7 +9229,7 @@ label hiking:
                 
                 n "Ava switches off her camera."
                 
-                show ava normal neutral
+                show ava typical neutral
                 
                 ava @ say "Of course! Anything supernatural can't be recorded digitally."
                 ava @ say "I knew I should have brought my film camera today..."
@@ -9240,7 +9247,7 @@ label hiking:
                 
                 n "Claire throws another couple of sticks onto the flames."
                 
-                show ava normal neutral
+                show ava typical neutral
                 show claire outdoors heyeah
                 
                 claire @ say "Might as well get cozy if we're gonna stay here a while!"
@@ -9600,7 +9607,7 @@ label vacationday:
 
     claire @ say "Or you could just open the door as you are right now :3"
 
-    show ava normal neutral at offscreenleft:
+    show ava typical neutral at offscreenleft:
         yalign 0
     show claire sweater neutral at offscreenright:
         yalign 0
@@ -9609,7 +9616,7 @@ label vacationday:
 
     play music "audio/music/vylet - Oak Library.ogg" fadein 1.0
 
-    show ava normal neutral at norm:
+    show ava typical neutral at norm:
         xzoom -1
         xpos 1440
     show claire sweater neutral at norm:
@@ -9642,7 +9649,7 @@ label vacationday:
     
     player "Did you just wake up and decide to do this?"
     
-    show ava normal neutral
+    show ava typical neutral
     show claire sweater surprised
 
     claire @ say "Oh my gosh do you really not remember?"
@@ -9684,7 +9691,7 @@ label vacationday:
     n "With the sun starting to set, you make your way back to the dorms."
     n "Overall it was quite a pleasant day, but apparently the bird and bunny weren't done with you yet."
 
-    show ava normal neutral at norm:
+    show ava typical neutral at norm:
         xpos 500
     show claire sweater neutral at norm:
         xzoom -1
@@ -9713,7 +9720,7 @@ label vacationday:
 
     ava @ say "Your dorm is so much nicer than ours! They gave you more room even though it's just you in here."
     
-    show ava normal neutral
+    show ava typical neutral
 
     player "Yeah but where are you two gonna sleep? I only have one bed."
     
@@ -9735,7 +9742,7 @@ label vacationday:
     show box:
         ypos 0
 
-    show ava normal neutral at norm:
+    show ava typical neutral at norm:
         xpos 500
     show claire sweater neutral at norm:
         xzoom -1
@@ -9785,7 +9792,7 @@ label vacationday:
 
     ava @ say "Go for it!"
     
-    show ava normal neutral
+    show ava typical neutral
 
     n "Whew, they fell for it. Now you just have to plug your laptop in and pick a normal anime..."
     n "Dammit Rori, why are all your file names in Japanese??"
@@ -9804,7 +9811,7 @@ label vacationday:
     
     claire @ say "Interesting choice~ Hurry up and fullscreen it, [name]~"
     
-    show ava normal neutral
+    show ava typical neutral
 
     n "It's too late now, the die has been cast and your fate is sealed."
     n "All you can do is sit on the bed between your friends and prepare for an awkward night."
@@ -9852,7 +9859,7 @@ label vacationday:
 
     ava @ say "Hehehe no, this is just how she is~"
     
-    show ava normal neutral
+    show ava typical neutral
 
     n "Claire plops down on the bed with a pack of soda and some plastic cups you had lying around, knocking both you and Ava into the air."
     n "When you come back down, the bunny wraps her arms around both you and Ava, the two of you on each side of her."
@@ -10079,7 +10086,7 @@ label vacationday:
     
     ava @ say "Anyway, I'm sure I had a good time with you [name]!"
     
-    show ava normal neutral
+    show ava typical neutral
     
     ava @ say "But me and Claire should really get back to our dorm and get ready for class."
     
@@ -11385,7 +11392,7 @@ label spicy_restaurant:
     #    xzoom -1
     #show claire sweater neutral:
     #    xpos 570
-    #show ava normal neutral:
+    #show ava typical neutral:
     #    xpos 850
     #show mishka neutral at norm:
     #    xpos 350
@@ -12509,7 +12516,7 @@ label saturday8:
 
         player "You have Super Smash Sisters on here don't you?"
 
-        show rori laughing
+        show rori laugh
 
         rori @ say "Oh... Oh right! Yeah haha!"
         
@@ -12539,7 +12546,7 @@ label saturday8:
         
         player "Well go easy on me, I'm not a pro gamer I don't even have a rainbow keyboard."
 
-        show rori laughing
+        show rori laugh
 
         rori @ say "Don't worry, my reflexes are gonna be slow tonight! Heh!"
 
@@ -13667,7 +13674,7 @@ label saturday8:
         
         #n "After the party..."
         
-        show ava normal neutral at norm with dissolve
+        show ava typical neutral at norm with dissolve
         
         ava @ say "Whew! I think we got some great shots today!"
         
@@ -13677,7 +13684,7 @@ label saturday8:
         
         ava @ say "Yup! I think it's fun! Breeee~"
         
-        show ava normal neutral
+        show ava typical neutral
         
         player "You gonna post some of your shots on pinsta tonight?"
         
@@ -13701,7 +13708,7 @@ label saturday8:
         
         #n "After shooting with Ava, she invited you to her dorm to help develop her film shots."
         
-        show ava normal neutral at norm
+        show ava typical neutral at norm
         
         ava @ say "Okay so developing film at home is sort of a tricky process."
         ava @ say "We'll be submerging the film in chemical baths for a while without any light so I hope you're not afraid of the dark!"
@@ -13712,7 +13719,7 @@ label saturday8:
 
         ava @ say "Exactly!"
         
-        show ava normal neutral
+        show ava typical neutral
         
         ava @ say "It has to be absolutely pitch black for this to work."
         ava @ say "I have the chemicals and stuff ready to go. We can draw the curtains and turn the lights off and go in the closet to develop these shots!"
@@ -13854,7 +13861,7 @@ label saturday8:
                 show box with Dissolve(.2):
                     ypos 0
 
-                show ava normal neutral at norm with moveinleft:
+                show ava typical neutral at norm with moveinleft:
                     xzoom -1
 
                 ava @ say "Check it out! It turned out pretty good, I'd say!"
@@ -13940,7 +13947,7 @@ label saturday8:
 
                 ava @ say "Oh shush you!"
                 
-                show ava normal neutral
+                show ava typical neutral
                 
                 ava @ say "Anyway, it's getting kinda late so I'll see you tomorrow, k?"
 
@@ -15874,7 +15881,7 @@ label posttimeskip:
 
         player "Well as long as you're having fun."
 
-        show rori laughing
+        show rori laugh
         
         rori @ say "I am!"
         
@@ -15897,7 +15904,7 @@ label posttimeskip:
 
         show rori at hop
         
-        show rori laughing
+        show rori laugh
         
         rori @ say "OOOOOOOHHHH!!!!"
         rori @ say "Did you see that?!"
@@ -15916,7 +15923,7 @@ label posttimeskip:
 
         player "What? It was more interesting than the game!"
         
-        show rori laughing
+        show rori laugh
 
         rori @ say "Pfft haha okay whatever you say~"
         
@@ -16406,7 +16413,7 @@ label posttimeskip:
         n "You weren't in any state to pay much attention to it, especially since you had to skip your morning coffee."
         n "But she did bring you out here to teach you how to use a camera so you try to memorize the basic functions of the device and noob shooting techniques she shows you."
 
-        show ava normal neutral at norm with dissolve
+        show ava typical neutral at norm with dissolve
 
         ava @ say "...and if you want more of the image in focus, you have to stop down the aperture, but remember to adjust the shutter speed or ISO to compensate for the loss of light!"
 
@@ -16429,7 +16436,7 @@ label posttimeskip:
         n "Trying to remember all the steps at once while also trying to be creative in your shot is harder than it sounds."
         n "You end up settling for a boring shot of the waterfall with some rocks in the foreground."
 
-        show ava normal neutral at norm with dissolve
+        show ava typical neutral at norm with dissolve
 
         player "How's this?"
 
@@ -16452,7 +16459,7 @@ label posttimeskip:
         n "The shutter finally returns to its closed position and you can review your photo."
         n "The long exposure time blended the movement of the waterfall into long streaks of light. It looks like something you'd see on a calendar."
 
-        show ava normal neutral at norm with dissolve
+        show ava typical neutral at norm with dissolve
 
         player "Huh. So that's how those pics are taken."
 
@@ -16477,7 +16484,7 @@ label posttimeskip:
         n "It starts out pretty tame, just her doing some midly artsy tasteful poses you might find on any art hoe's pinstagram."
         n "But then she kicks off her shoes and socks and flaps over to the big rock jutting out from the pond."
 
-        show ava normal neutral at norm with dissolve
+        show ava typical neutral at norm with dissolve
 
         ava @ say "Hey, get a few shots of me up on this rock with the waterfall in the background!"
         ava @ say "That lens doesn't zoom very far so you'll have to get your feet wet!"
@@ -18475,7 +18482,7 @@ label next01:
 
         n "You wave and walk over. Looks like everone already bought drinks."
 
-        show ava normal neutral at norm:
+        show ava typical neutral at norm:
             xzoom -1
             xpos -520
         show gunner neutral at norm:
@@ -18534,7 +18541,7 @@ label next01:
 
         player "Uh. Right. What a coincidence."
 
-        show ava normal neutral at norm:
+        show ava typical neutral at norm:
             xzoom -1
             xpos -520
         show gunner neutral at norm:
@@ -18602,7 +18609,7 @@ label next01:
     if dating == "mishka":
         player "Hey guys!"
 
-        show ava normal neutral at norm:
+        show ava typical neutral at norm:
             xzoom -1
             xpos -520
         show gunner neutral at norm:
@@ -18670,7 +18677,7 @@ label next01:
         n "You hang around the counter chatting with Mishka as she finishes up everyone's drinks."
         n "When she's done, you and her grab hold of them all and carry them over to the table your friends are sitting at."
 
-        show ava normal neutral at norm:
+        show ava typical neutral at norm:
             xzoom -1
             xpos -520
         show gunner neutral at norm:
@@ -18725,7 +18732,7 @@ label next01:
     if dating == "rose":
         player "Hey guys."
 
-        show ava normal neutral at norm:
+        show ava typical neutral at norm:
             xzoom -1
             xpos -525
         show gunner neutral at norm:
@@ -18844,7 +18851,7 @@ label next01:
 
         claire @ say "A pumpkin spice latte for me please! And could you put honey and salt on it too?"
 
-        show ava normal neutral at norm with dissolve:
+        show ava typical neutral at norm with dissolve:
             xpos 380
 
         ava @ say "I'll have a hazlenut cappucinno with whipped cream. Thanks!"
@@ -18886,7 +18893,7 @@ label next01:
         player "Ughhhh fiiiine. Put it all on my bill."
         
         show claire sweater heyeah
-        show rori laughing
+        show rori laugh
         show ava overjoyed
         
         claire @ say "Yayyy!!!"
@@ -19113,7 +19120,7 @@ label next01:
 
         n "You wave and walk over. Looks like everone already bought drinks."
 
-        show ava normal neutral at norm:
+        show ava typical neutral at norm:
             xzoom -1
             xpos -500
         show gunner neutral at norm:
@@ -19206,7 +19213,7 @@ label next01:
         n "You swipe your credit card through the machine and chat with Mishka while she makes your drinks."
         n "When you head back to your table, Claire snags the only remaining seat."
 
-        show ava normal neutral at norm:
+        show ava typical neutral at norm:
             xzoom -1
             xpos -500
         show gunner neutral at norm:

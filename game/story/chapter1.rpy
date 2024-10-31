@@ -332,11 +332,6 @@ label college_orientation:
     #n "Please deer god, you pray whoever it is doesn't sit there. You've had a rough day and don't want to have to make friends already."
     n "A moment later, a nerdy looking ram squeezes past you and sits in it."
     
-    
-        
-    #show rori with move:
-        #xoffset 200
-
     show rori neutral at center with moveinright:
         ypos y_rori
         xpos 1400
@@ -361,8 +356,9 @@ label college_orientation:
 
     play music "audio/ambient/indoors people talking.ogg" fadein 1.5
 
-    show rori neutral at norm with dissolve:
-        xpos 600
+    show rori neutral at center with dissolve:
+        ypos y_rori
+        xpos 1400
 
     rori @ say "Hey um... Gosh, I don't know how to do this."
     rori @ say "My name's Rori. What's yours?"
@@ -435,7 +431,7 @@ label college_orientation:
 
     player "I haven't really decided yet. Thought I'd figure it out while I'm here. What about you?"
 
-    show rori laughing
+    show rori laugh
 
     rori @ say "Computer engineering! I've always loved messing around with computers. I taught myself how to program since my high school didn't have any classes for it."
 
@@ -459,7 +455,7 @@ label college_orientation:
 
             player "Ugh, spare me the details. Please."
 
-            show rori laughing
+            show rori laugh
 
             rori @ say "Hahaha okay! It's actually pretty routine until you come across a bug, then it's like solving a puzzle."
 
@@ -492,7 +488,7 @@ label college_orientation:
 
             player "Damn. Well good luck with that."
 
-            show rori laughing
+            show rori laugh
 
             rori @ say "Thanks! I'll need it!"
 
@@ -523,7 +519,8 @@ label college_orientation:
 
     hide rori with dissolve
 
-    show margaret neutral at norm with dissolve
+    show margaret neutral at center with dissolve:
+        ypos y_margaret
 
     stop music fadeout 2.0
 
@@ -537,8 +534,15 @@ label college_orientation:
     margaret @ say "You there! With the camera!"
 
     hide margaret with dissolve
+    
+    pause .1
 
-    show ava normal neutral at norm with dissolve
+    show ava typical happy at left:
+        ypos y_ava
+        xzoom -1
+    with dissolve
+    
+    ""
     
     ava @ say "Um hi...! My name's Ava and, as you might have guessed, I'm a photography major! I often go out into nature and shoot wildlife and landscapes, but I also dabble in street photography."
     
@@ -639,7 +643,7 @@ label college_orientation:
     #n "You can't help but feel it was an empty gesture though. He made sure to get you a room all to yourself, as if that wouldn't make you feel more alone."
     n "On your way out, you overhear some familiar voices."
 
-    show ava normal neutral:
+    show ava typical neutral:
         xpos 485
     show claire sweater wave at norm:
         xzoom -1
@@ -656,7 +660,7 @@ label college_orientation:
 
     claire @ say "What dorm are you in? I'm in Saint Mary Hall."
     
-    show ava normal neutral
+    show ava typical neutral
 
     ava @ say "No way! I'm in there too! What room number?"
 
@@ -746,7 +750,7 @@ label college_orientation:
 
     player "That's a good attitude to have."
 
-    show rori laughing
+    show rori laugh
 
     rori @ say "I guess so!"
 
@@ -953,13 +957,13 @@ label exploring_campus:
         
         show claire sweater neutral at offscreenright:
                 yalign 0
-        show ava normal neutral at offscreenleft:
+        show ava typical neutral at offscreenleft:
             yalign 0
 
         show claire sweater neutral at norm:
             xalign 0
             xpos 400
-        show ava normal neutral at norm:
+        show ava typical neutral at norm:
             xalign 0
             xzoom -1
             xpos -400
@@ -971,7 +975,7 @@ label exploring_campus:
 
         ava @ say "She means the orientation."
         
-        show ava normal neutral
+        show ava typical neutral
 
         player "Nope, you must have me confused for the other human around here."
 
@@ -998,7 +1002,7 @@ label exploring_campus:
         ava @ say "Yup!"
         
         show claire sweater neutral
-        show ava normal neutral
+        show ava typical neutral
         
         claire @ say "So what brings you out here, [name]? Looking to join a club?"
 
@@ -1014,7 +1018,7 @@ label exploring_campus:
         
         ava @ say "Hehe you're not wrong!~"
         
-        show ava normal neutral
+        show ava typical neutral
 
         player "So have you signed up for anything so far?"
 
@@ -2368,7 +2372,7 @@ label thirdDayOfClassStats:
 
         show claire sweater overjoyed at norm:
             xpos 500
-        show ava normal neutral at norm:
+        show ava typical neutral at norm:
             xzoom -1
             xpos -450
         with dissolve
@@ -2381,7 +2385,7 @@ label thirdDayOfClassStats:
 
         ava @ say "Hey [name]! We were afraid we'd never find you haha!"
         
-        show ava normal neutral
+        show ava typical neutral
         
         player "Sorry, my phone's dead."
         player "So where are we going to eat?"
@@ -2437,7 +2441,7 @@ label thirdDayOfClassStats:
         show claire sweater neutral at norm:
             #xpos 475
             xpos 575
-        show ava normal neutral at norm:
+        show ava typical neutral at norm:
         #    xpos 680
             xpos 300
         
@@ -3031,7 +3035,7 @@ label avaClaireGunnerLunch:
 
     claire @ say "Ooh, that smells good~"
     
-    show ava normal neutral
+    show ava typical neutral
     
     claire @ say "What were we talking about just now?"
     
@@ -4025,7 +4029,7 @@ label rooftop_party:
 
     rori @ say "Same. Usually on a Saturday night I'd be installing a new loonix distro or tweaking config files."
 
-    show rori laughing
+    show rori laugh
 
     rori @ say "But this is kinda exciting!"
 
