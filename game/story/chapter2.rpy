@@ -147,7 +147,7 @@ label week2Tuesday:
     show box with Dissolve(.2):
         ypos 0
 
-    show ellen teacher happy at norm with dissolve
+    show margaret happy at norm with dissolve
 
     ellen @ say "Good morning everyone. Today we'll be finishing up The Death of Ivan Ilyich. I'll be sad to see him go but we have plenty of other great books to get through and so little time."
     ellen @ say "After Ivan falls and injures his side, he suffers from worsening pain that causes him to become irritable and further destabilize his relationship with his family."
@@ -377,7 +377,7 @@ label week2Tuesday:
         
     $ currentbook = "The Odyssey"
 
-    show ellen teacher neutral at norm with dissolve
+    show margaret neutral at norm with dissolve
 
     ellen @ say "Today we'll be starting a new story, this time originating from ancient Greece in the 5th century BCE."
     ellen @ say "It is the archetypal hero's journey so often found in literature that succeeded it, as well as in our own lives!"
@@ -413,11 +413,11 @@ label week2Tuesday:
     n "You snap out of your dizzy spell but find that you've fallen out of your seat with the whole class looking at you."
     n "Ellen is looking down at you with a look of genuine concern."
 
-    show ellen teacher sad at norm with dissolve
+    show margaret sad at norm with dissolve
 
     play music "audio/ambient/indoors people talking.ogg" fadein .5
 
-    show ellen teacher sad
+    show margaret sad
 
     ellen @ say "[name]?"
     
@@ -426,7 +426,7 @@ label week2Tuesday:
     ellen @ say "You collapsed all of a sudden..."
     ellen @ say "Do you need a doctor??"
 
-    show ellen teacher sad
+    show margaret sad
 
     n "You pull yourself back into your seat and shake your head."
 
@@ -436,7 +436,7 @@ label week2Tuesday:
 
     player "Y-yeah, I think I'm just dehydrated or something."
 
-    show ellen teacher neutral:
+    show margaret neutral:
         ypos 10
         linear .1 ypos 0
         
