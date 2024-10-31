@@ -149,19 +149,19 @@ label week2Tuesday:
 
     show margaret happy at norm with dissolve
 
-    ellen @ say "Good morning everyone. Today we'll be finishing up The Death of Ivan Ilyich. I'll be sad to see him go but we have plenty of other great books to get through and so little time."
-    ellen @ say "After Ivan falls and injures his side, he suffers from worsening pain that causes him to become irritable and further destabilize his relationship with his family."
-    ellen @ say "His condition eventually leaves him bedridden and unable to work. Faced with both his mortality and the loss of his sense of purpose, he reflects on what it truly means to die."
-    ellen @ say "He comes to realize that the perception of death revolves around the fulfillment of life one has made for themself."
-    ellen @ say "He had once believed he led a fulfilling life by acquiring prestige and status, but as he lay dying, none of his achievements mattered so much as the sympathy he received from his servant."
-    ellen @ say "Moved by its sheer authenticity, Ivan finally understood while on his deathbed that by pursuing his own interests, he had neglected to foster a caring family."
-    ellen @ say "Their relationship resembled that of business partners, where one is only good for the convenience and profits they bring in, but by this time Ivan was nothing but dead weight."
-    ellen @ say "His existence brought about an impersonal and artificial partnership that could only acknowledge each other as far as how one benefitted the other."
-    ellen @ say "And thus his death would be a relief to them."
+    margaret @ say "Good morning everyone. Today we'll be finishing up The Death of Ivan Ilyich. I'll be sad to see him go but we have plenty of other great books to get through and so little time."
+    margaret @ say "After Ivan falls and injures his side, he suffers from worsening pain that causes him to become irritable and further destabilize his relationship with his family."
+    margaret @ say "His condition eventually leaves him bedridden and unable to work. Faced with both his mortality and the loss of his sense of purpose, he reflects on what it truly means to die."
+    margaret @ say "He comes to realize that the perception of death revolves around the fulfillment of life one has made for themself."
+    margaret @ say "He had once believed he led a fulfilling life by acquiring prestige and status, but as he lay dying, none of his achievements mattered so much as the sympathy he received from his servant."
+    margaret @ say "Moved by its sheer authenticity, Ivan finally understood while on his deathbed that by pursuing his own interests, he had neglected to foster a caring family."
+    margaret @ say "Their relationship resembled that of business partners, where one is only good for the convenience and profits they bring in, but by this time Ivan was nothing but dead weight."
+    margaret @ say "His existence brought about an impersonal and artificial partnership that could only acknowledge each other as far as how one benefitted the other."
+    margaret @ say "And thus his death would be a relief to them."
     
     n "Damn, what a downer."
     n "You suppose that's about as happy an ending as you can get when it comes to Russian literature though."
-    n "Mrs. Ellen talks about some interpretations and gets some students' opinions before hinting that an analysis of life and death in Tolstoy's context will be on the test."
+    n "Ms. Ellen talks about some interpretations and gets some students' opinions before hinting that an analysis of life and death in Tolstoy's context will be on the test."
     
     scene bg classroom with fade
 
@@ -379,11 +379,11 @@ label week2Tuesday:
 
     show margaret neutral at norm with dissolve
 
-    ellen @ say "Today we'll be starting a new story, this time originating from ancient Greece in the 5th century BCE."
-    ellen @ say "It is the archetypal hero's journey so often found in literature that succeeded it, as well as in our own lives!"
-    ellen @ say "This is the tale first told by Homer, \"The Odyssey!\""
-    ellen @ say "What's especially interesting about these old poems passed down through oral tradition rather than written word, is that every generation adds their own spin."
-    ellen @ say "So the version we'll be reading today is not the same as the original, but is instead an accumulation of the values of various cultures throughout time."
+    margaret @ say "Today we'll be starting a new story, this time originating from ancient Greece in the 5th century BCE."
+    margaret @ say "It is the archetypal hero's journey so often found in literature that succeeded it, as well as in our own lives!"
+    margaret @ say "This is the tale first told by Homer, \"The Odyssey!\""
+    margaret @ say "What's especially interesting about these old poems passed down through oral tradition rather than written word, is that every generation adds their own spin."
+    margaret @ say "So the version we'll be reading today is not the same as the original, but is instead an accumulation of the values of various cultures throughout time."
     
     n "Miss Ellen describes some of the historical context and impact of the story but it all blends together into a jumble of incomprehensible words as your brain once again falls into a stupor."
 
@@ -391,7 +391,7 @@ label week2Tuesday:
 
     stop music fadeout .5
 
-    hide ellen
+    hide margaret
     hide box
 
     show bg static1
@@ -406,12 +406,12 @@ label week2Tuesday:
     show bg lecturehall
 
     ###make textbox all spikey and play a sound effect to show urgency. or animate it shaking left to right
-    ellen @ say "[name]! Are you alright?"
+    margaret @ say "[name]! Are you alright?"
 
     stop music fadeout 1.0
 
     n "You snap out of your dizzy spell but find that you've fallen out of your seat with the whole class looking at you."
-    n "Ellen is looking down at you with a look of genuine concern."
+    n "Ms. Ellen is looking down at you with a look of genuine concern."
 
     show margaret sad at norm with dissolve
 
@@ -419,12 +419,12 @@ label week2Tuesday:
 
     show margaret sad
 
-    ellen @ say "[name]?"
+    margaret @ say "[name]?"
     
-    show ellen sad at shudder
+    show margaret sad at shudder
     
-    ellen @ say "You collapsed all of a sudden..."
-    ellen @ say "Do you need a doctor??"
+    margaret @ say "You collapsed all of a sudden..."
+    margaret @ say "Do you need a doctor??"
 
     show margaret sad
 
@@ -432,7 +432,7 @@ label week2Tuesday:
 
     player "N-no, that won't be necessary. I'm fine."
 
-    ellen @ say "Are you sure? It's not every day a student of mine passes out like that."
+    margaret @ say "Are you sure? It's not every day a student of mine passes out like that."
 
     player "Y-yeah, I think I'm just dehydrated or something."
 
@@ -442,8 +442,8 @@ label week2Tuesday:
         
     pause .1
 
-    ellen @ say "Hmm. You better drink more!"
-    ellen @ say "And just to be on the safe side, I want you to go home and get some rest. You're excused from class today."
+    margaret @ say "Hmm. You better drink more!"
+    margaret @ say "And just to be on the safe side, I want you to go home and get some rest. You're excused from class today."
 
     #n "A day off? Sounds too good to be true. You decide to take her up on the offer before she changes her mind."
 
@@ -451,9 +451,9 @@ label week2Tuesday:
 
     n "You pack your things and head out the door, stumbling on the stairs on your way out."
 
-    ellen @ say "Be sure to read the assigned chapters for next time!"
+    margaret @ say "Be sure to read the assigned chapters for next time!"
 
-    show ellen
+    show margaret
 
     stop music fadeout 1.0
 

@@ -310,29 +310,37 @@ label college_orientation:
     #n "It's not working."
     n "Eventually a woman walks up to the podium and the voices around you quiet down."
 
-    show margaret neutral at norm with Dissolve(.5)
+    show margaret neutral at center with Dissolve(.5):
+        ypos y_margaret
 
     stop music fadeout 2.0
 
-    ellen @ say "            Ahem            "
+    margaret "saying without \@say"
+
+    margaret @ say "            Ahem            "
 
     show margaret happy
 
-    ellen @ say "Welcome to Harmonia University, new students! My name is Margaret Ellen and I'm very excited to introduce you to the next chapter of your lives!"
-    ellen @ say "This orientation marks the beginning of your journey into the finest acadamia has to offer! Everything you'll learn and experience over the next four years starts here."
+    margaret @ say "Welcome to Harmonia University, new students! My name is Margaret Ellen and I'm very excited to introduce you to the next chapter of your lives!"
+    margaret @ say "This orientation marks the beginning of your journey into the finest acadamia has to offer! Everything you'll learn and experience over the next four years starts here."
 
-    hide margaret
-    with dissolve
-
+    hide margaret with dissolve
+    
     n "You start to tune out of what she's saying. It's just boring introductory formalities anyway."
     n "You hear the door open, followed by hoofsteps coming down the stairs. Must have been a straggler who arrived late."
     n "The room's pretty full but there's another vacant seat next to yours."
     #n "Please deer god, you pray whoever it is doesn't sit there. You've had a rough day and don't want to have to make friends already."
     n "A moment later, a nerdy looking ram squeezes past you and sits in it."
-
-    show rori neutral at norm with moveinright:
-        xpos 600
     
+    
+        
+    #show rori with move:
+        #xoffset 200
+
+    show rori neutral at center with moveinright:
+        ypos y_rori
+        xpos 1400
+        
     pause .25
 
     rori @ say "D-did I miss anything?"
@@ -343,12 +351,13 @@ label college_orientation:
     
     hide rori with dissolve
 
-    show margaret neutral at norm with dissolve
+    show margaret neutral at center with dissolve:
+        ypos y_margaret
 
-    ellen @ say "...If you haven't already, go ahead and introduce yourselves to those sitting around you!"
-    ellen @ say "Go on, don't be shy!"
+    margaret @ say "...If you haven't already, go ahead and introduce yourselves to those sitting around you!"
+    margaret @ say "Go on, don't be shy!"
 
-    hide ellen with dissolve
+    hide margaret with dissolve
 
     play music "audio/ambient/indoors people talking.ogg" fadein 1.5
 
@@ -378,6 +387,9 @@ label college_orientation:
                 "Choose another name."
                 nameValid = False
             if name.upper() == "CLAIRE":
+                "Choose another name."
+                nameValid = False
+            if name.upper() == "MARGARET":
                 "Choose another name."
                 nameValid = False
             if name.upper() == "ELLEN":
@@ -515,16 +527,16 @@ label college_orientation:
 
     stop music fadeout 2.0
 
-    ellen @ say "Ahem. Now that you've become acquainted with your neighbors, I'd like to know more about you!"
-    ellen @ say "I'll pick a few students at random... Please say your name, what you're majoring in, and something about yourself."
+    margaret @ say "Ahem. Now that you've become acquainted with your neighbors, I'd like to know more about you!"
+    margaret @ say "I'll pick a few students at random... Please say your name, what you're majoring in, and something about yourself."
 
     n "Ms. Ellen points to a girl toward the back of the room."
     
     show margaret happy
 
-    ellen @ say "You there! With the camera!"
+    margaret @ say "You there! With the camera!"
 
-    hide ellen with dissolve
+    hide margaret with dissolve
 
     show ava normal neutral at norm with dissolve
     
@@ -540,9 +552,9 @@ label college_orientation:
 
     show margaret neutral at norm with dissolve
 
-    ellen @ say "Very good! Next, how abouuuuutttt..."
+    margaret @ say "Very good! Next, how abouuuuutttt..."
     
-    show ellen with move:
+    show margaret with move:
         xpos -175
         
     pause .3
@@ -551,16 +563,16 @@ label college_orientation:
     
     pause .3
     
-    show ellen with move:
+    show margaret with move:
         ypos 0
         xzoom -1
         xpos 110
         
     pause .4
     
-    ellen @ say "You, in the pink sweater!"
+    margaret @ say "You, in the pink sweater!"
 
-    hide ellen with dissolve
+    hide margaret with dissolve
 
     show claire sweater surprised at norm with dissolve:
         xpos 0
@@ -586,18 +598,18 @@ label college_orientation:
         xzoom -1
         xpos -50
 
-    ellen @ say "Nicely done! We'll do a couple more. Let's see..."
+    margaret @ say "Nicely done! We'll do a couple more. Let's see..."
 
     show margaret neutral at flipleft
     
     pause .6
 
-    ellen @ say "Hmm..."
-    ellen @ say "How about you!"
+    margaret @ say "Hmm..."
+    margaret @ say "How about you!"
 
     n "Of course she had to pick you. You pretend to think she's pointing at someone else."
 
-    ellen @ say "Yes, you! We don't bite, I promise!"
+    margaret @ say "Yes, you! We don't bite, I promise!"
 
     n "You let out a quiet sigh and rise from your seat."
 
@@ -608,15 +620,15 @@ label college_orientation:
 
     n "That gets a few chuckles from the room, but Ms. Ellen just glares at you."
 
-    ellen @ say "Yes well... very good, thank you [name]. Moving on."
+    margaret @ say "Yes well... very good, thank you [name]. Moving on."
     
     show margaret neutral
 
     n "Ms. Ellen gives a few more announcements before wrapping up her speech and dismissing you all."
 
-    ellen @ say "I hope you all have a wonderful time at Harmonia! That's all I have for you! You're free to go! Have a nice rest of your evening!"
+    margaret @ say "I hope you all have a wonderful time at Harmonia! That's all I have for you! You're free to go! Have a nice rest of your evening!"
 
-    hide ellen with dissolve
+    hide margaret with dissolve
     
     play music "audio/ambient/indoors people talking.ogg" fadein 1.5
 
@@ -1759,41 +1771,41 @@ label secondDayOfClass:
 
     show margaret happy at norm with dissolve
 
-    ellen @ say "Good morning and welcome to Literature I!"
-    ellen @ say "Today we'll go over the syllabus and what you can expect from this class. Then we'll finish up with some discussion on the assigned reading!"
+    margaret @ say "Good morning and welcome to Literature I!"
+    margaret @ say "Today we'll go over the syllabus and what you can expect from this class. Then we'll finish up with some discussion on the assigned reading!"
 
     n "She clicks a button and the slideshow advances to the next slide, going over some information about herself."
     
     show margaret neutral
 
-    ellen @ say "My name is Miss Ellen and I've been teaching at Harmonia for about a decade so I like to think I've gotten quite good at it!"
+    margaret @ say "My name is Miss Ellen and I've been teaching at Harmonia for about a decade so I like to think I've gotten quite good at it!"
 
     show margaret sad at shudder
 
-    ellen @ say "Oop, ignore the Mrs. in front of my name on the slide... I guess I forgot to update that..."
-    ellen @ say "Haha recently divorced... you know how it goes..."
+    margaret @ say "Oop, ignore the Mrs. in front of my name on the slide... I guess I forgot to update that..."
+    margaret @ say "Haha recently divorced... you know how it goes..."
 
     n "She quickly advances forward a few more slides."
 
     show margaret neutral at norm
 
-    ellen @ say "Ahem where was I? Oh yes, this course will introduce you to literature across a variety of different cultures throughout different time periods."
-    ellen @ say "In the interest of time, most of the reading will be on the short side, or at least limited to excerpts from longer works."
-    ellen @ say "In case you didn't get my email, you'll be responsible for procuring your own books, starting with a favorite of mine, Tolstoy's \"The Death of Ivan Ilyich!\""
-    ellen @ say "You won't have a test on it until the end of next week but I'll expect you all to read the assigned chapters every night and keep up with the discussions in class."
+    margaret @ say "Ahem where was I? Oh yes, this course will introduce you to literature across a variety of different cultures throughout different time periods."
+    margaret @ say "In the interest of time, most of the reading will be on the short side, or at least limited to excerpts from longer works."
+    margaret @ say "In case you didn't get my email, you'll be responsible for procuring your own books, starting with a favorite of mine, Tolstoy's \"The Death of Ivan Ilyich!\""
+    margaret @ say "You won't have a test on it until the end of next week but I'll expect you all to read the assigned chapters every night and keep up with the discussions in class."
 
     n "Miss Ellen gives an overview of the rest of the books you'll be reading and how she'll be grading responses to open ended questions."
     n "Somehow she manages to stretch it to half the duration of the class time before starting with the lesson."
     n "She explains the historical context and some biographical information regarding the first assigned story."
 
-    ellen @ say "Leo Tolstoy is considered one of the greatest authors of all time, his works often taking on philosophical questions like 'What is the meaning of death?'"
-    ellen @ say "That, in fact, is the main topic of his novella \"The Death of Ivan Ilyich!\""
-    ellen @ say "We'll dive into the life of a man as his life crumbles apart and he learns to deal with his inevitable death."
-    ellen @ say "Indeed, this wasn't the first time Tolstoy wrote on the subject of death, as he had earlier written \"A Confession,\" considering the possible interpretations and attitudes toward death."
-    ellen @ say "Although he struggled with his own mortality, Tolstoy seems to have come to a conclusion on what a good death means."
-    ellen @ say "Please open your books and we'll hop right in!"
+    margaret @ say "Leo Tolstoy is considered one of the greatest authors of all time, his works often taking on philosophical questions like 'What is the meaning of death?'"
+    margaret @ say "That, in fact, is the main topic of his novella \"The Death of Ivan Ilyich!\""
+    margaret @ say "We'll dive into the life of a man as his life crumbles apart and he learns to deal with his inevitable death."
+    margaret @ say "Indeed, this wasn't the first time Tolstoy wrote on the subject of death, as he had earlier written \"A Confession,\" considering the possible interpretations and attitudes toward death."
+    margaret @ say "Although he struggled with his own mortality, Tolstoy seems to have come to a conclusion on what a good death means."
+    margaret @ say "Please open your books and we'll hop right in!"
 
-    hide ellen with dissolve
+    hide margaret with dissolve
 
     n "You pull the book out of your bag and open your notebook to a fresh page."
     n "Miss Ellen goes over the first chapter of the novella, explaining some things and asking the class for their thoughts along the way."
@@ -1801,9 +1813,9 @@ label secondDayOfClass:
 
     show margaret neutral at norm with dissolve
 
-    ellen @ say "That's all for today! We'll continue this discussion next time! Have a nice day!"
+    margaret @ say "That's all for today! We'll continue this discussion next time! Have a nice day!"
 
-    hide ellen with dissolve
+    hide margaret with dissolve
 
     n "You pack your things and stand up."
     n "Next up is French class. You always wanted to learn another language. Unfortunately the classes for all the good languages were already filled."
@@ -3425,22 +3437,22 @@ label thursday1:
 
     show margaret neutral at norm with dissolve
     
-    ellen @ say "Good morning class, today we'll continue our discussion on The Death of Ivan Ilyich!"
-    ellen @ say "We've seen that Ivan's social circle is more concerned with status and convenience than compassion."
-    ellen @ say "Now we'll get into the life that Ivan lived. Like his peers, his primary motives revolved around gaining approval from others and climbing the social ladder."
-    ellen @ say "Convinced by his associates, he entered a loveless marriage, that which he neglected in favor of his work."
-    ellen @ say "\"...within a year of his wedding, Ivan Ilych had realized that marriage... is in fact a very intricate and difficult affair...\""
-    ellen @ say "The more his wife expected of him, the more he retreated into his career... "
-    ellen @ say "Oh Tolstoy, how right you were all along. How disappointing marriage turned out to be."
+    margaret @ say "Good morning class, today we'll continue our discussion on The Death of Ivan Ilyich!"
+    margaret @ say "We've seen that Ivan's social circle is more concerned with status and convenience than compassion."
+    margaret @ say "Now we'll get into the life that Ivan lived. Like his peers, his primary motives revolved around gaining approval from others and climbing the social ladder."
+    margaret @ say "Convinced by his associates, he entered a loveless marriage, that which he neglected in favor of his work."
+    margaret @ say "\"...within a year of his wedding, Ivan Ilych had realized that marriage... is in fact a very intricate and difficult affair...\""
+    margaret @ say "The more his wife expected of him, the more he retreated into his career... "
+    margaret @ say "Oh Tolstoy, how right you were all along. How disappointing marriage turned out to be."
     
     show margaret sad
         
-    ellen @ say "If only I'd listened to you, maybe I wouldn't have wasted 15 years of my life...!"
-    ellen @ say "Er... I'm sorry, that was unprofessional... Let's just forget about that and move on shall we?"
-    ellen @ say "...So Ivan Ilyich had deluded himself into thinking he was happy by ignoring his troubles and taking misplaced pride in an uncaring workplace."
-    ellen @ say "But as we'll soon see, his life was anything but enjoyable and it was only as he laid dying did he realize his flawed perception of life..."
+    margaret @ say "If only I'd listened to you, maybe I wouldn't have wasted 15 years of my life...!"
+    margaret @ say "Er... I'm sorry, that was unprofessional... Let's just forget about that and move on shall we?"
+    margaret @ say "...So Ivan Ilyich had deluded himself into thinking he was happy by ignoring his troubles and taking misplaced pride in an uncaring workplace."
+    margaret @ say "But as we'll soon see, his life was anything but enjoyable and it was only as he laid dying did he realize his flawed perception of life..."
 
-    show ellen sad
+    show margaret sad
 
     scene bg classroom with fade
 

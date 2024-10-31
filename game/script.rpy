@@ -45,12 +45,12 @@ init python:
         elif event == "slow_done":
             renpy.sound.stop()
 
-    def nurse_voice(event, interact=True, **kwargs):
+    def kitsuragi_voice(event, interact=True, **kwargs):
         if not interact:
             return
 
         if event == "show_done":
-            renpy.sound.play("audio/sound effects/nurse.wav")
+            renpy.sound.play("audio/sound effects/kitsuragi.wav")
         elif event == "slow_done":
             renpy.sound.stop()
 
@@ -117,7 +117,7 @@ init python:
             return
 
         if event == "show_done":
-            renpy.sound.play("audio/sound effects/ava.wav")
+            renpy.sound.play("audio/sound effects/ava/ava.wav")
         elif event == "slow_done":
             renpy.sound.stop()
 
@@ -146,7 +146,8 @@ define player = Character("testname", color="#95d29d", what_color="#a5ac61", cal
 define claire = Character("Claire", image="claire", color="#eeb1da", what_color="#ffd9f0", callback=name_callback, cb_name = "claire", what_font="dudu.ttf")
 define mere = Character("Mere", image="mere", color="#eeb1da", what_color="#d0dbff", callback=name_callback, cb_name = "other", what_font="dudu.ttf")
 define ava = Character("Ava", image="ava", color="#fbffc8", what_color="#c8f8ff", callback=name_callback, cb_name = "ava", what_font="dudu.ttf")
-define ellen = Character("Ms. Ellen", image="ellen", color="#b6e4d6", what_color="#ffe8b7", callback=name_callback, cb_name = "ellen", what_font="dudu.ttf")
+define ellen = Character("Ellen", image="ellen", color="#b6e4d6", what_color="#ffe8b7", callback=name_callback, cb_name = "ellen", what_font="dudu.ttf")
+define margaret = Character("Margaret", image="margaret", color="#b6e4d6", what_color="#ffe8b7", callback=name_callback, cb_name = "margaret", what_font="dudu.ttf")
 define mishka = Character("Mishka", image="mishka", color="#a4cffc", what_color="#dbc9f3", callback=name_callback, cb_name = "mishka", what_font="dudu.ttf")
 define rose = Character("Rose", image="rose", color="#dbb0ff", what_color="#b3a6ff", callback=name_callback, cb_name = "rose", what_font="dudu.ttf")
 define rori = Character("Rori", image="rori", color="#b5d0ff", what_color="#ddd4ac", callback=name_callback, cb_name = "rori", what_font="dudu.ttf")
@@ -154,7 +155,7 @@ define gunner = Character("Gunner", image="gunner", color="#f7d2ae", what_color=
 define rothbauer = Character("Mr. Rothbauer", image="rothbauer", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
 define herschel = Character("Mrs. Herschel", image="herschel", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
 define celestine = Character("Mrs. Celestine", image="celestine", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
-define nurse = Character("Nurse", image="nurse", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
+define kitsuragi = Character("kitsuragi", image="kitsuragi", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
 define volginova = Character("Volginova", image="volginova", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
 define adam = Character("Adam", image="adam", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
 define attendant = Character("Attendant", image="attendant", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
@@ -165,6 +166,14 @@ define creature = Character("Creature", image="fortune", what_color="d0dbff", wh
 define lina = Character("lina", image="lina", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
 define waitress = Character("waitress", image="lina", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
 define nicodemus = Character("Nicodemus", image="nicodemus", what_color="d0dbff", callback=name_callback, cb_name = "nicodemus", what_font="dudu.ttf")
+
+define y_margaret = 1570
+define y_rori = 1565
+define y_rose = 1570
+define y_gunner = 1570
+define y_claire = 1570
+define y_ava = 1570
+define y_mishka = 1570
 
 #old mishka text color a4cffc
 #old gunner color #ffb7d3, reuse for lina?
@@ -200,780 +209,780 @@ layeredimage nicodemus neutral:
 layeredimage ava normal neutral:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava normal neutral.png'
+        'images/characters/ava/ava normal neutral.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava twopiece pants unimpressed:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava twopiece pants unimpressed.png'
+        'images/characters/ava/ava twopiece pants unimpressed.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava twopiece pants smile:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava twopiece pants smile.png'
+        'images/characters/ava/ava twopiece pants smile.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava twopiece smile:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava twopiece smile.png'
+        'images/characters/ava/ava twopiece smile.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava twopiece flattered:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava twopiece flattered.png'
+        'images/characters/ava/ava twopiece flattered.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava portrait overjoyed:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava portrait overjoyed.png'
+        'images/characters/ava/ava portrait overjoyed.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava suggestive:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava suggestive.png'
+        'images/characters/ava/ava suggestive.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava portrait smile:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava portrait smile.png'
+        'images/characters/ava/ava portrait smile.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava portrait concerned:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava portrait concerned.png'
+        'images/characters/ava/ava portrait concerned.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava casual flattered:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava casual flattered.png'
+        'images/characters/ava/ava casual flattered.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava glowy unimpressed:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava glowy unimpressed.png'
+        'images/characters/ava/ava glowy unimpressed.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava unimpressedbrowless:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava unimpressedbrowless.png'
+        'images/characters/ava/ava unimpressedbrowless.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava reaching concerned:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava reaching concerned.png'
+        'images/characters/ava/ava reaching concerned.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava pose unimpressed:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava pose unimpressed.png'
+        'images/characters/ava/ava pose unimpressed.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava flattered:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava flattered.png'
+        'images/characters/ava/ava flattered.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava embarassed:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava embarassed.png'
+        'images/characters/ava/ava embarassed.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava smile:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava smile.png'
+        'images/characters/ava/ava smile.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava unimpressed:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava unimpressed.png'
+        'images/characters/ava/ava unimpressed.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava reaching concerned:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava reaching concerned.png'
+        'images/characters/ava/ava reaching concerned.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava reaching embarassed:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava reaching embarassed.png'
+        'images/characters/ava/ava reaching embarassed.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava motivated:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava motivated.png'
+        'images/characters/ava/ava motivated.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava casual happy:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava casual happy.png'
+        'images/characters/ava/ava casual happy.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava seriously:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava seriously.png'
+        'images/characters/ava/ava seriously.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava pose smile:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava pose smile.png'
+        'images/characters/ava/ava pose smile.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava casual smile:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava casual smile.png'
+        'images/characters/ava/ava casual smile.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava casual angry:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava casual angry.png'
+        'images/characters/ava/ava casual angry.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava casual overjoyed:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava casual overjoyed.png'
+        'images/characters/ava/ava casual overjoyed.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava casual unimpressed:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava casual unimpressed.png'
+        'images/characters/ava/ava casual unimpressed.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava casual annoyed:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava casual annoyed.png'
+        'images/characters/ava/ava casual annoyed.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava casual concerned:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava casual concerned.png'
+        'images/characters/ava/ava casual concerned.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava casual daydream:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava casual daydream.png'
+        'images/characters/ava/ava casual daydream.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava unsure:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava unsure.png'
+        'images/characters/ava/ava unsure.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava concerned:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava concerned.png'
+        'images/characters/ava/ava concerned.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava waitwhat:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava waitwhat.png'
+        'images/characters/ava/ava waitwhat.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava pose flattered:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava pose flattered.png'
+        'images/characters/ava/ava pose flattered.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava pose happy:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava pose happy.png'
+        'images/characters/ava/ava pose happy.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava pose ohyou:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava pose ohyou.png'
+        'images/characters/ava/ava pose ohyou.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava pose angry:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava pose angry.png'
+        'images/characters/ava/ava pose angry.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava pose concerned:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava pose concerned.png'
+        'images/characters/ava/ava pose concerned.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava pose annoyed:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava pose annoyed.png'
+        'images/characters/ava/ava pose annoyed.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava bored:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava bored.png'
+        'images/characters/ava/ava bored.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava excited:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava excited.png'
+        'images/characters/ava/ava excited.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava angry:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava angry.png'
+        'images/characters/ava/ava angry.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava annoyed:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava annoyed.png'
+        'images/characters/ava/ava annoyed.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava neutral:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava neutral.png'
+        'images/characters/ava/ava neutral.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava portrait neutral:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava portrait neutral.png'
+        'images/characters/ava/ava portrait neutral.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava overjoyed:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava overjoyed.png'
+        'images/characters/ava/ava overjoyed.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 layeredimage ava tipsy:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava tipsy.png'
+        'images/characters/ava/ava tipsy.png'
     group saying:
         attribute say:
-            "images/characters/avasays.png"
+            "images/characters/ava/avasays.png"
 
 
 layeredimage celestine neutral:
     at sprite_highlight('celestine')
     always:
-        'images/characters/celestine neutral.png'
+        'images/characters/celestine/celestine neutral.png'
     group saying:
         attribute say:
-            "images/characters/celestinesays.png"
+            "images/characters/celestine/celestinesays.png"
 layeredimage celestine happy:
     at sprite_highlight('celestine')
     always:
-        'images/characters/celestine neutral.png'
+        'images/characters/celestine/celestine neutral.png'
     group saying:
         attribute say:
-            "images/characters/celestinesays.png"
+            "images/characters/celestine/celestinesays.png"
 
 layeredimage claire sweater neutral:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire sweater neutral.png'
+        'images/characters/claire/claire sweater neutral.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"
+            "images/characters/claire/clairesays.png"
 layeredimage claire swimsuit sad:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire swimsuit sad.png'
+        'images/characters/claire/claire swimsuit sad.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"
+            "images/characters/claire/clairesays.png"
 layeredimage claire sweater pose neutral:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire sweater pose neutral.png'
+        'images/characters/claire/claire sweater pose neutral.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"
+            "images/characters/claire/clairesays.png"
 layeredimage claire outdoors derp:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire outdoors derp.png'
+        'images/characters/claire/claire outdoors derp.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"
+            "images/characters/claire/clairesays.png"
 layeredimage claire swimsuit lusty:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire swimsuit lusty.png'
+        'images/characters/claire/claire swimsuit lusty.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"
+            "images/characters/claire/clairesays.png"
 
 layeredimage claire swimsuit flannel neutral:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire swimsuit flannel neutral.png'
+        'images/characters/claire/claire swimsuit flannel neutral.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"
+            "images/characters/claire/clairesays.png"
 layeredimage claire sweater pose lusty:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire sweater pose lusty.png'
+        'images/characters/claire/claire sweater pose lusty.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"
+            "images/characters/claire/clairesays.png"
 layeredimage claire sweater pose lusty alert:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire sweater pose lusty alert.png'
+        'images/characters/claire/claire sweater pose lusty alert.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"
+            "images/characters/claire/clairesays.png"
 layeredimage claire outdoors lusty:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire outdoors lusty.png'
+        'images/characters/claire/claire outdoors lusty.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"
+            "images/characters/claire/clairesays.png"
 layeredimage claire outdoors embarassed:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire outdoors embarassed.png'
+        'images/characters/claire/claire outdoors embarassed.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"
+            "images/characters/claire/clairesays.png"
 layeredimage claire outdoors horny:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire outdoors horny.png'
+        'images/characters/claire/claire outdoors horny.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"
+            "images/characters/claire/clairesays.png"
 layeredimage claire outdoors derp:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire outdoors derp.png'
+        'images/characters/claire/claire outdoors derp.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"
+            "images/characters/claire/clairesays.png"
 layeredimage claire outdoors heyeah:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire heyeah.png'
+        'images/characters/claire/claire heyeah.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"
+            "images/characters/claire/clairesays.png"
 layeredimage claire outdoors sad:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire outdoors sad.png'
+        'images/characters/claire/claire outdoors sad.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"
+            "images/characters/claire/clairesays.png"
 layeredimage claire sweater wave lusty alert:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire sweater wave lusty alert.png'
+        'images/characters/claire/claire sweater wave lusty alert.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"
+            "images/characters/claire/clairesays.png"
 layeredimage claire sweater neutral alert:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire sweater neutral alert.png'
+        'images/characters/claire/claire sweater neutral alert.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"
+            "images/characters/claire/clairesays.png"
 
 layeredimage claire sweater pose laugh:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire sweater pose laugh.png'
+        'images/characters/claire/claire sweater pose laugh.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"
+            "images/characters/claire/clairesays.png"
 layeredimage claire sweater pose lusty alert:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire sweater pose lusty alert.png'
+        'images/characters/claire/claire sweater pose lusty alert.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"
+            "images/characters/claire/clairesays.png"
 layeredimage claire sweater lusty alert:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire sweater lusty alert.png'
+        'images/characters/claire/claire sweater lusty alert.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"
+            "images/characters/claire/clairesays.png"
 layeredimage claire sweater lusty:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire sweater lusty.png'
+        'images/characters/claire/claire sweater lusty.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"
+            "images/characters/claire/clairesays.png"
 layeredimage claire sweater cry:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire sweater cry.png'
+        'images/characters/claire/claire sweater cry.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"
+            "images/characters/claire/clairesays.png"
 layeredimage claire sweater derp:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire sweater derp.png'
+        'images/characters/claire/claire sweater derp.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"
+            "images/characters/claire/clairesays.png"
 layeredimage claire sweater embarassed:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire sweater embarassed.png'
+        'images/characters/claire/claire sweater embarassed.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"            
+            "images/characters/claire/clairesays.png"            
 layeredimage claire sweater giggle:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire sweater giggle.png'
+        'images/characters/claire/claire sweater giggle.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"
+            "images/characters/claire/clairesays.png"
 layeredimage claire sweater heyeah:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire sweater heyeah.png'
+        'images/characters/claire/claire sweater heyeah.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"
+            "images/characters/claire/clairesays.png"
 layeredimage claire sweater leaning:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire sweater leaning.png'
+        'images/characters/claire/claire sweater leaning.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"            
+            "images/characters/claire/clairesays.png"            
 layeredimage claire sweater overjoyed:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire sweater overjoyed.png'
+        'images/characters/claire/claire sweater overjoyed.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"            
+            "images/characters/claire/clairesays.png"            
 layeredimage claire sweater surprised:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire sweater surprised.png'
+        'images/characters/claire/claire sweater surprised.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"
+            "images/characters/claire/clairesays.png"
 layeredimage claire sweater wave:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire sweater wave.png'
+        'images/characters/claire/claire sweater wave.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"
+            "images/characters/claire/clairesays.png"
 layeredimage claire outdoors neutral:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire outdoors neutral.png'
+        'images/characters/claire/claire outdoors neutral.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"
+            "images/characters/claire/clairesays.png"
 layeredimage claire outdoors surprised:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire outdoors surprised.png'
+        'images/characters/claire/claire outdoors surprised.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"
+            "images/characters/claire/clairesays.png"
 layeredimage claire outdoors heyeah:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire outdoors heyeah.png'
+        'images/characters/claire/claire outdoors heyeah.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"
+            "images/characters/claire/clairesays.png"
 layeredimage claire swimsuit neutral:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire swimsuit neutral.png'
+        'images/characters/claire/claire swimsuit neutral.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"
+            "images/characters/claire/clairesays.png"
 layeredimage claire swimsuit surprised:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire swimsuit surprised.png'
+        'images/characters/claire/claire swimsuit surprised.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"
+            "images/characters/claire/clairesays.png"
 layeredimage claire swimsuit heyeah:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire swimsuit heyeah.png'
+        'images/characters/claire/claire swimsuit heyeah.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"
+            "images/characters/claire/clairesays.png"
 layeredimage claire swimsuit leaning:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire swimsuit leaning.png'
+        'images/characters/claire/claire swimsuit leaning.png'
     group saying:
         attribute say:
-            "images/characters/clairesays.png"
+            "images/characters/claire/clairesays.png"
 
 layeredimage margaret neutral:
-    at sprite_highlight('ellen')
+    at sprite_highlight('margaret')
     always:
-        'images/characters/margaret neutral.png'
+        'images/characters/margaret/margaret neutral.png'
     group saying:
         attribute say:
-            "images/characters/ellenteachersays.png"
+            "images/characters/margaret/margaretsays.png"
 layeredimage margaret tailwag flattered:
-    at sprite_highlight('ellen')
+    at sprite_highlight('margaret')
     always:
-        'images/characters/margaret tailwag flattered.png'
+        'images/characters/margaret/margaret tailwag flattered.png'
     group saying:
         attribute say:
-            "images/characters/ellenteachersays.png"
+            "images/characters/margaret/margaretsays.png"
 layeredimage margaret tailwag happy:
-    at sprite_highlight('ellen')
+    at sprite_highlight('margaret')
     always:
-        'images/characters/margaret tailwag happy.png'
+        'images/characters/margaret/margaret tailwag happy.png'
     group saying:
         attribute say:
-            "images/characters/ellenteachersays.png"
+            "images/characters/margaret/margaretsays.png"
 layeredimage margaret sad smoking:
-    at sprite_highlight('ellen')
+    at sprite_highlight('margaret')
     always:
-        'images/characters/margaret sad smoking.png'
+        'images/characters/margaret/margaret sad smoking.png'
     group saying:
         attribute say:
-            "images/characters/ellenteachersays.png"
+            "images/characters/margaret/margaretsays.png"
 layeredimage margaret smoking intrigued:
-    at sprite_highlight('ellen')
+    at sprite_highlight('margaret')
     always:
-        'images/characters/margaret smoking intrigued.png'
+        'images/characters/margaret/margaret smoking intrigued.png'
     group saying:
         attribute say:
-            "images/characters/ellenteachersays.png"
+            "images/characters/margaret/margaretsays.png"
 layeredimage margaret smoking laugh:
-    at sprite_highlight('ellen')
+    at sprite_highlight('margaret')
     always:
-        'images/characters/margaret smoking laugh.png'
+        'images/characters/margaret/margaret smoking laugh.png'
     group saying:
         attribute say:
-            "images/characters/ellenteachersays.png"
+            "images/characters/margaret/margaretsays.png"
 layeredimage margaret flattered:
-    at sprite_highlight('ellen')
+    at sprite_highlight('margaret')
     always:
-        'images/characters/margaret flattered.png'
+        'images/characters/margaret/margaret flattered.png'
     group saying:
         attribute say:
-            "images/characters/ellenteachersays.png"
+            "images/characters/margaret/margaretsays.png"
 layeredimage margaret tailwag neutral:
-    at sprite_highlight('ellen')
+    at sprite_highlight('margaret')
     always:
-        'images/characters/margaret tailwag neutral.png'
+        'images/characters/margaret/margaret tailwag neutral.png'
     group saying:
         attribute say:
-            "images/characters/ellenteachersays.png"
+            "images/characters/margaret/margaretsays.png"
 layeredimage margaret tailwag flattered:
-    at sprite_highlight('ellen')
+    at sprite_highlight('margaret')
     always:
-        'images/characters/margaret tailwag flattered.png'
+        'images/characters/margaret/margaret tailwag flattered.png'
     group saying:
         attribute say:
-            "images/characters/ellenteachersays.png"
+            "images/characters/margaret/margaretsays.png"
 layeredimage margaret tailwag happy:
-    at sprite_highlight('ellen')
+    at sprite_highlight('margaret')
     always:
-        'images/characters/margaret tailwag happy.png'
+        'images/characters/margaret/margaret tailwag happy.png'
     group saying:
         attribute say:
-            "images/characters/ellenteachersays.png"
+            "images/characters/margaret/margaretsays.png"
 layeredimage margaret intrigued:
-    at sprite_highlight('ellen')
+    at sprite_highlight('margaret')
     always:
-        'images/characters/margaret intrigued.png'
+        'images/characters/margaret/margaret intrigued.png'
     group saying:
         attribute say:
-            "images/characters/ellenteachersays.png"
+            "images/characters/margaret/margaretsays.png"
 layeredimage margaret melancholy:
-    at sprite_highlight('ellen')
+    at sprite_highlight('margaret')
     always:
-        'images/characters/margaret melancholy.png'
+        'images/characters/margaret/margaret melancholy.png'
     group saying:
         attribute say:
-            "images/characters/ellenteachersays.png"
+            "images/characters/margaret/margaretsays.png"
 layeredimage margaret happy:
-    at sprite_highlight('ellen')
+    at sprite_highlight('margaret')
     always:
-        'images/characters/margaret happy.png'
+        'images/characters/margaret/margaret happy.png'
     group saying:
         attribute say:
-            "images/characters/ellenteachersays.png"
+            "images/characters/margaret/margaretsays.png"
 layeredimage margaret sad:
-    at sprite_highlight('ellen')
+    at sprite_highlight('margaret')
     always:
-        'images/characters/margaret sad.png'
+        'images/characters/margaret/margaret sad.png'
     group saying:
         attribute say:
-            "images/characters/ellenteachersays.png"
+            "images/characters/margaret/margaretsays.png"
 layeredimage margaret smoking neutral:
-    at sprite_highlight('ellen')
+    at sprite_highlight('margaret')
     always:
-        'images/characters/margaret smoking neutral.png'
+        'images/characters/margaret/margaret smoking neutral.png'
     group saying:
         attribute say:
-            "images/characters/ellenteachersays.png"
+            "images/characters/margaret/margaretsays.png"
 layeredimage margaret sadsmoking:
-    at sprite_highlight('ellen')
+    at sprite_highlight('margaret')
     always:
-        'images/characters/margaret sad smoking.png'
+        'images/characters/margaret/margaret sad smoking.png'
     group saying:
         attribute say:
-            "images/characters/ellenteachersays.png"
+            "images/characters/margaret/margaretsays.png"
 
-layeredimage ellen student neutral:
+layeredimage ellen neutral:
     at sprite_highlight('ellen')
     always:
-        'images/characters/ellen student neutral.png'
+        'images/characters/ellen/ellen neutral.png'
     group saying:
         attribute say:
-            "images/characters/ellenstudentsays.png"
-layeredimage ellen student happy:
+            "images/characters/ellen/ellensays.png"
+layeredimage ellen happy:
     at sprite_highlight('ellen')
     always:
-        'images/characters/ellen student happy.png'
+        'images/characters/ellen/ellen happy.png'
     group saying:
         attribute say:
-            "images/characters/ellenstudentsays.png"
-layeredimage ellen student proud:
+            "images/characters/ellen/ellensays.png"
+layeredimage ellen proud:
     at sprite_highlight('ellen')
     always:
-        'images/characters/ellen student proud.png'
+        'images/characters/ellen/ellen proud.png'
     group saying:
         attribute say:
-            "images/characters/ellenstudentsays.png"
-layeredimage ellen student smug:
+            "images/characters/ellen/ellensays.png"
+layeredimage ellen smug:
     at sprite_highlight('ellen')
     always:
-        'images/characters/ellen student smug.png'
+        'images/characters/ellen/ellen smug.png'
     group saying:
         attribute say:
-            "images/characters/ellenstudentsays.png"
-layeredimage ellen student overjoyed:
+            "images/characters/ellen/ellensays.png"
+layeredimage ellen overjoyed:
     at sprite_highlight('ellen')
     always:
-        'images/characters/ellen student overjoyed.png'
+        'images/characters/ellen/ellen overjoyed.png'
     group saying:
         attribute say:
-            "images/characters/ellenstudentsays.png"
-layeredimage ellen student skates:
+            "images/characters/ellen/ellensays.png"
+layeredimage ellen skates:
     at sprite_highlight('ellen')
     always:
-        'images/characters/ellen student skates.png'
+        'images/characters/ellen/ellen skates.png'
     group saying:
         attribute say:
-            "images/characters/ellenstudentsays.png"
-layeredimage ellen student annoyed:
+            "images/characters/ellen/ellensays.png"
+layeredimage ellen annoyed:
     at sprite_highlight('ellen')
     always:
-        'images/characters/ellen student annoyed.png'
+        'images/characters/ellen/ellen annoyed.png'
     group saying:
         attribute say:
-            "images/characters/ellenstudentsays.png"
-layeredimage ellen student laugh:
+            "images/characters/ellen/ellensays.png"
+layeredimage ellen laugh:
     at sprite_highlight('ellen')
     always:
-        'images/characters/ellen student laugh.png'
+        'images/characters/ellen/ellen laugh.png'
     group saying:
         attribute say:
-            "images/characters/ellenstudentsays.png"
+            "images/characters/ellen/ellensays.png"
             
             
 layeredimage fortune:
@@ -1024,215 +1033,215 @@ layeredimage lina:
 layeredimage mere neutral:
     at sprite_highlight('mere')
     always:
-        'images/characters/mere.png'
+        'images/characters/mere/mere.png'
     group saying:
         attribute say:
-            "images/characters/meresays.png"
+            "images/characters/mere/meresays.png"
 
             
             
 layeredimage mishka neutral:
     at sprite_highlight('mishka')
     always:
-        'images/characters/mishka neutral.png'
+        'images/characters/mishka/mishka neutral.png'
     group saying:
         attribute say:
-            "images/characters/mishkasays.png"
+            "images/characters/mishka/mishkasays.png"
 layeredimage mishka teasing:
     at sprite_highlight('mishka')
     always:
-        'images/characters/mishka teasing.png'
+        'images/characters/mishka/mishka teasing.png'
     group saying:
         attribute say:
-            "images/characters/mishkasays.png"
+            "images/characters/mishka/mishkasays.png"
 layeredimage mishka saddest:
     at sprite_highlight('mishka')
     always:
-        'images/characters/mishka saddest.png'
+        'images/characters/mishka/mishka saddest.png'
     group saying:
         attribute say:
-            "images/characters/mishkasays.png"
+            "images/characters/mishka/mishkasays.png"
 layeredimage mishka shy:
     at sprite_highlight('mishka')
     always:
-        'images/characters/mishka shy.png'
+        'images/characters/mishka/mishka shy.png'
     group saying:
         attribute say:
-            "images/characters/mishkasays.png"
+            "images/characters/mishka/mishkasays.png"
 layeredimage mishka shy smile:
     at sprite_highlight('mishka')
     always:
-        'images/characters/mishka shy smile.png'
+        'images/characters/mishka/mishka shy smile.png'
     group saying:
         attribute say:
-            "images/characters/mishkasays.png"
+            "images/characters/mishka/mishkasays.png"
 layeredimage mishka cute:
     at sprite_highlight('mishka')
     always:
-        'images/characters/mishka cute.png'
+        'images/characters/mishka/mishka cute.png'
     group saying:
         attribute say:
-            "images/characters/mishkasays.png"
+            "images/characters/mishka/mishkasays.png"
 layeredimage mishka nya:
     at sprite_highlight('mishka')
     always:
-        'images/characters/mishka nya.png'
+        'images/characters/mishka/mishka nya.png'
     group saying:
         attribute say:
-            "images/characters/mishkasays.png"
+            "images/characters/mishka/mishkasays.png"
 layeredimage mishka despondent:
     at sprite_highlight('mishka')
     always:
-        'images/characters/mishka despondent.png'
+        'images/characters/mishka/mishka despondent.png'
     group saying:
         attribute say:
-            "images/characters/mishkasays.png"
+            "images/characters/mishka/mishkasays.png"
 layeredimage mishka hopeful:
     at sprite_highlight('mishka')
     always:
-        'images/characters/mishka hopeful.png'
+        'images/characters/mishka/mishka hopeful.png'
     group saying:
         attribute say:
-            "images/characters/mishkasays.png"
+            "images/characters/mishka/mishkasays.png"
 layeredimage mishka happy wink:
     at sprite_highlight('mishka')
     always:
-        'images/characters/mishka happy wink.png'
+        'images/characters/mishka/mishka happy wink.png'
     group saying:
         attribute say:
-            "images/characters/mishkasays.png"
+            "images/characters/mishka/mishkasays.png"
 layeredimage mishka winki:
     at sprite_highlight('mishka')
     always:
-        'images/characters/mishka winki.png'
+        'images/characters/mishka/mishka winki.png'
     group saying:
         attribute say:
-            "images/characters/mishkasays.png"
+            "images/characters/mishka/mishkasays.png"
 layeredimage mishka anxious:
     at sprite_highlight('mishka')
     always:
-        'images/characters/mishka anxious.png'
+        'images/characters/mishka/mishka anxious.png'
     group saying:
         attribute say:
-            "images/characters/mishkasays.png"
+            "images/characters/mishka/mishkasays.png"
 layeredimage mishka anxious grin:
     at sprite_highlight('mishka')
     always:
-        'images/characters/mishka anxious grin.png'
+        'images/characters/mishka/mishka anxious grin.png'
     group saying:
         attribute say:
-            "images/characters/mishkasays.png"
+            "images/characters/mishka/mishkasays.png"
 layeredimage mishka shy grin:
     at sprite_highlight('mishka')
     always:
-        'images/characters/mishka shy grin.png'
+        'images/characters/mishka/mishka shy grin.png'
     group saying:
         attribute say:
-            "images/characters/mishkasays.png"
+            "images/characters/mishka/mishkasays.png"
 layeredimage mishka shy:
     at sprite_highlight('mishka')
     always:
-        'images/characters/mishka shy.png'
+        'images/characters/mishka/mishka shy.png'
     group saying:
         attribute say:
-            "images/characters/mishkasays.png"
+            "images/characters/mishka/mishkasays.png"
 layeredimage mishka silly wink:
     at sprite_highlight('mishka')
     always:
-        'images/characters/mishka silly wink.png'
+        'images/characters/mishka/mishka silly wink.png'
     group saying:
         attribute say:
-            "images/characters/mishkasays.png"
+            "images/characters/mishka/mishkasays.png"
 layeredimage mishka sad wave:
     at sprite_highlight('mishka')
     always:
-        'images/characters/mishka sad wave.png'
+        'images/characters/mishka/mishka sad wave.png'
     group saying:
         attribute say:
-            "images/characters/mishkasays.png"
+            "images/characters/mishka/mishkasays.png"
 layeredimage mishka overjoyed:
     at sprite_highlight('mishka')
     always:
-        'images/characters/mishka overjoyed.png'
+        'images/characters/mishka/mishka overjoyed.png'
     group saying:
         attribute say:
-            "images/characters/mishkasays.png"
+            "images/characters/mishka/mishkasays.png"
 layeredimage mishka happy:
     at sprite_highlight('mishka')
     always:
-        'images/characters/mishka happy.png'
+        'images/characters/mishka/mishka happy.png'
     group saying:
         attribute say:
-            "images/characters/mishkasays.png"
+            "images/characters/mishka/mishkasays.png"
 layeredimage mishka ceremonial neutral:
     at sprite_highlight('mishka')
     always:
-        'images/characters/mishka ceremonial.png'
+        'images/characters/mishka/mishka ceremonial.png'
     group saying:
         attribute say:
-            "images/characters/mishkasays.png"
+            "images/characters/mishka/mishkasays.png"
 layeredimage mishka derp:
     at sprite_highlight('mishka')
     always:
-        'images/characters/mishka derp.png'
+        'images/characters/mishka/mishka derp.png'
     group saying:
         attribute say:
-            "images/characters/mishkasays.png"    
+            "images/characters/mishka/mishkasays.png"    
 layeredimage mishka ceremonial happy:
     at sprite_highlight('mishka')
     always:
-        'images/characters/mishka hap ceremonial.png'
+        'images/characters/mishka/mishka hap ceremonial.png'
     group saying:
         attribute say:
-            "images/characters/mishkasays.png"
+            "images/characters/mishka/mishkasays.png"
 layeredimage mishka hat neutral:
     at sprite_highlight('mishka')
     always:
-        'images/characters/mishka hat neutral.png'
+        'images/characters/mishka/mishka hat neutral.png'
     group saying:
         attribute say:
-            "images/characters/mishkasays.png"
+            "images/characters/mishka/mishkasays.png"
 layeredimage mishka hat happy:
     at sprite_highlight('mishka')
     always:
-        'images/characters/mishka hat happy.png'
+        'images/characters/mishka/mishka hat happy.png'
     group saying:
         attribute say:
-            "images/characters/mishkasays.png"
+            "images/characters/mishka/mishkasays.png"
 layeredimage mishka hat sad:
     at sprite_highlight('mishka')
     always:
-        'images/characters/mishka hat sad.png'
+        'images/characters/mishka/mishka hat sad.png'
     group saying:
         attribute say:
-            "images/characters/mishkasays.png"
+            "images/characters/mishka/mishkasays.png"
 layeredimage mishka hat depressed:
     at sprite_highlight('mishka')
     always:
-        'images/characters/mishka hat depressed.png'
+        'images/characters/mishka/mishka hat depressed.png'
     group saying:
         attribute say:
-            "images/characters/mishkasays.png"
+            "images/characters/mishka/mishkasays.png"
 layeredimage mishka sad:
     at sprite_highlight('mishka')
     always:
-        'images/characters/mishka sad.png'
+        'images/characters/mishka/mishka sad.png'
     group saying:
         attribute say:
-            "images/characters/mishkasays.png"
+            "images/characters/mishka/mishkasays.png"
 layeredimage mishka depressed:
     at sprite_highlight('mishka')
     always:
-        'images/characters/mishka depressed.png'
+        'images/characters/mishka/mishka depressed.png'
     group saying:
         attribute say:
-            "images/characters/mishkasays.png"
+            "images/characters/mishka/mishkasays.png"
             
             
-layeredimage nurse:
-    at sprite_highlight('nurse')
+layeredimage kitsuragi:
+    at sprite_highlight('kitsuragi')
     always:
-        'images/characters/nurse.png'
+        'images/characters/kitsuragi.png'
     group saying:
         attribute say:
             "images/characters/celestinesays.png"
@@ -1256,170 +1265,170 @@ layeredimage olivia looking:
 layeredimage rori neutral:
     at sprite_highlight('rori')
     always:
-        'images/characters/rori neutral.png'
+        'images/characters/rori/rori neutral.png'
     group saying:
         attribute say:
-            "images/characters/rorisays.png"
+            "images/characters/rori/rorisays.png"
 layeredimage rori sleepy:
     at sprite_highlight('rori')
     always:
-        'images/characters/rori sleepy.png'
+        'images/characters/rori/rori sleepy.png'
     group saying:
         attribute say:
-            "images/characters/rorisays.png"
+            "images/characters/rori/rorisays.png"
 layeredimage rori concerned:
     at sprite_highlight('rori')
     always:
-        'images/characters/rori concerned.png'
+        'images/characters/rori/rori concerned.png'
     group saying:
         attribute say:
-            "images/characters/rorisays.png"
+            "images/characters/rori/rorisays.png"
 layeredimage rori neutral blushing:
     at sprite_highlight('rori')
     always:
-        'images/characters/rori neutral blushing.png'
+        'images/characters/rori/rori neutral blushing.png'
     group saying:
         attribute say:
-            "images/characters/rorisays.png"
+            "images/characters/rori/rorisays.png"
 layeredimage rori anxiety:
     at sprite_highlight('rori')
     always:
-        'images/characters/rori anxiety.png'
+        'images/characters/rori/rori anxiety.png'
     group saying:
         attribute say:
-            "images/characters/rorisays.png"
+            "images/characters/rori/rorisays.png"
 layeredimage rori drunk:
     at sprite_highlight('rori')
     always:
-        'images/characters/rori drunk.png'
+        'images/characters/rori/rori drunk.png'
     group saying:
         attribute say:
-            "images/characters/rorisays.png"            
+            "images/characters/rori/rorisays.png"            
 layeredimage rori pantslessdrunk:
     at sprite_highlight('rori')
     always:
-        'images/characters/rori pantslessdrunk.png'
+        'images/characters/rori/rori pantslessdrunk.png'
     group saying:
         attribute say:
-            "images/characters/rorisays.png"            
+            "images/characters/rori/rorisays.png"            
 layeredimage rori laughing:
     at sprite_highlight('rori')
     always:
-        'images/characters/rori laughing.png'
+        'images/characters/rori/rori laughing.png'
     group saying:
         attribute say:
-            "images/characters/rorisays.png"            
+            "images/characters/rori/rorisays.png"            
 layeredimage rori pantsless:
     at sprite_highlight('rori')
     always:
-        'images/characters/rori pantsless.png'
+        'images/characters/rori/rori pantsless.png'
     group saying:
         attribute say:
-            "images/characters/rorisays.png"
+            "images/characters/rori/rorisays.png"
 
 
 
 layeredimage rose neutral:
     at sprite_highlight('rose')
     always:
-        'images/characters/rose neutral.png'
+        'images/characters/rose/rose neutral.png'
     group saying:
         attribute say:
-            "images/characters/rosesays.png"
+            "images/characters/rose/rosesays.png"
 layeredimage rose flustered:
     at sprite_highlight('rose')
     always:
-        'images/characters/rose flustered.png'
+        'images/characters/rose/rose flustered.png'
     group saying:
         attribute say:
-            "images/characters/rosesays.png"
+            "images/characters/rose/rosesays.png"
 layeredimage rose armscrossed smug:
     at sprite_highlight('rose')
     always:
-        'images/characters/rose armscrossed smug.png'
+        'images/characters/rose/rose armscrossed smug.png'
     group saying:
         attribute say:
-            "images/characters/rosesays.png"
+            "images/characters/rose/rosesays.png"
 layeredimage rose armscrossed grin:
     at sprite_highlight('rose')
     always:
-        'images/characters/rose armscrossed grin.png'
+        'images/characters/rose/rose armscrossed grin.png'
     group saying:
         attribute say:
-            "images/characters/rosesays.png"
+            "images/characters/rose/rosesays.png"
 layeredimage rose armscrossed neutral:
     at sprite_highlight('rose')
     always:
-        'images/characters/rose armscrossed neutral.png'
+        'images/characters/rose/rose armscrossed neutral.png'
     group saying:
         attribute say:
-            "images/characters/rosesays.png"
+            "images/characters/rose/rosesays.png"
 layeredimage rose armscrossed angry:
     at sprite_highlight('rose')
     always:
-        'images/characters/rose armscrossed angry.png'
+        'images/characters/rose/rose armscrossed angry.png'
     group saying:
         attribute say:
-            "images/characters/rosesays.png"
+            "images/characters/rose/rosesays.png"
 layeredimage rose armscrossed furious:
     at sprite_highlight('rose')
     always:
-        'images/characters/rose armscrossed furious.png'
+        'images/characters/rose/rose armscrossed furious.png'
     group saying:
         attribute say:
-            "images/characters/rosesays.png"
+            "images/characters/rose/rosesays.png"
 layeredimage rose neutral pendant:
     at sprite_highlight('rose')
     always:
-        'images/characters/rose neutral pendant.png'
+        'images/characters/rose/rose neutral pendant.png'
     group saying:
         attribute say:
-            "images/characters/rosesays.png"
+            "images/characters/rose/rosesays.png"
 layeredimage rose angry:
     at sprite_highlight('rose')
     always:
-        'images/characters/rose angry.png'
+        'images/characters/rose/rose angry.png'
     group saying:
         attribute say:
-            "images/characters/rosesays.png"
+            "images/characters/rose/rosesays.png"
     group knifing:
         attribute roseknife:
-            "images/characters/roseknife.png"
+            "images/characters/rose/roseknife.png"
 layeredimage rose furious:
     at sprite_highlight('rose')
     always:
-        'images/characters/rose furious.png'
+        'images/characters/rose/rose furious.png'
     group saying:
         attribute say:
-            "images/characters/rosesays.png"
+            "images/characters/rose/rosesays.png"
 layeredimage rose smug:
     at sprite_highlight('smug')
     always:
-        'images/characters/rose smug.png'
+        'images/characters/rose/rose smug.png'
     group saying:
         attribute say:
-            "images/characters/rosesays.png"
+            "images/characters/rose/rosesays.png"
 layeredimage rose grin:
     at sprite_highlight('rose')
     always:
-        'images/characters/rose grin.png'
+        'images/characters/rose/rose grin.png'
     group saying:
         attribute say:
-            "images/characters/rosesays.png"
+            "images/characters/rose/rosesays.png"
 layeredimage rose unimpressed:
     at sprite_highlight('rose')
     always:
-        'images/characters/rose unimpressed.png'
+        'images/characters/rose/rose unimpressed.png'
     group saying:
         attribute say:
-            "images/characters/rosesays.png"
+            "images/characters/rose/rosesays.png"
 layeredimage rose athletic:
     at sprite_highlight('rose')
     always:
-        'images/characters/rose athletic.png'
+        'images/characters/rose/rose athletic.png'
     group saying:
         attribute say:
-            "images/characters/rosesays.png"
+            "images/characters/rose/rosesays.png"
         
     
 layeredimage rothbauer:
@@ -1627,7 +1636,7 @@ label start:
     #show claire sw neu at norm:
     #    xpos -175
     #    xzoom -1
-    #show ellen student neutral at norm:
+    #show ellen neutral at norm:
     #    xpos -460
     #    xzoom -1
     #show rose neutral at norm:
@@ -1975,7 +1984,7 @@ label hospital_bound:
     show rori neutral at norm with dissolve
 
     rori @ say "[name]? You're finally awake!"
-    rori @ say "Wait right here, I'll go get the nurse!"
+    rori @ say "Wait right here, I'll go get the kitsuragi!"
     
     gunner "{nw}"
     show rori at offscreenleft with move:
@@ -1984,19 +1993,19 @@ label hospital_bound:
     n "Before you can even respond, he runs out of the room."
     n "Did he bring you here? How long have you been out?"
 
-    show nurse at offscreenright:
+    show kitsuragi at offscreenright:
         yalign 0
 
-    n "He returns a few minutes later with a nurse."
+    n "He returns a few minutes later with a kitsuragi."
 
     show rori neutral at norm:
         xzoom -1
         xpos 1400
-    show nurse at norm:
+    show kitsuragi at norm:
         xpos 450
     with move
 
-    nurse @ say "Hello, [name]. First thing's first, how are you feeling? You seem to have taken a nasty fall but I'm more concerned about what may have caused it in the first place."
+    kitsuragi @ say "Hello, [name]. First thing's first, how are you feeling? You seem to have taken a nasty fall but I'm more concerned about what may have caused it in the first place."
 
     player "Well... my body feels pretty sore in general and I feel exhausted and dehydrated."
 
@@ -2004,9 +2013,9 @@ label hospital_bound:
 
     n "Rori digs around in his backpack and hands you the bottle."
     n "You can barely reach your arm up to grasp it and opening the lid proves to be a challenge."
-    n "The nurse writes something on her clipboard."
+    n "The kitsuragi writes something on her clipboard."
 
-    nurse @ say "Have you been experiencing these symptoms or any other strange sensations lately?"
+    kitsuragi @ say "Have you been experiencing these symptoms or any other strange sensations lately?"
 
     player "Err kinda? I've been having dizzy spells since the other day and I passed out in class yesterday."
     player "And I've been feeling really thirsty all the time, even though I've been drinking a lot of water."
@@ -2015,15 +2024,15 @@ label hospital_bound:
 
     rori @ say "Y-you passed out in class?!"
 
-    nurse @ say "You realize that's a bit out of the ordinary, don't you?"
+    kitsuragi @ say "You realize that's a bit out of the ordinary, don't you?"
 
     player "I guess I figured it would just sorta fix itself if I ignored it..."
 
-    nurse @ say "Well I'm sorry to say that we're not gonna be able to release you in this condition. We'll need to take all sorts of tests to determine the cause of these dizzy spells."
+    kitsuragi @ say "Well I'm sorry to say that we're not gonna be able to release you in this condition. We'll need to take all sorts of tests to determine the cause of these dizzy spells."
 
     player "Oh..."
 
-    nurse @ say "You should thank your friend here. Not only did he carry you here, but he stayed overnight waiting for you to wake up."
+    kitsuragi @ say "You should thank your friend here. Not only did he carry you here, but he stayed overnight waiting for you to wake up."
 
     player "I guess that is a lot to do for someone you barely know... Thanks Rori."
     
@@ -2036,7 +2045,7 @@ label hospital_bound:
 
     #rori @ say "Yeah! I was starting to wonder if you'd ever wake up!"
 
-    nurse @ say "In any case, I would encourage you to return home, Rori. We'll keep a close eye on [name]."
+    kitsuragi @ say "In any case, I would encourage you to return home, Rori. We'll keep a close eye on [name]."
 
     rori @ say "Hmm... Alright."
 
@@ -2059,18 +2068,18 @@ label hospital_bound:
 
     hide rori with dissolve
 
-    n "The nurse waits for Rori to be out of earshot before sighing and turning to you."
+    n "The kitsuragi waits for Rori to be out of earshot before sighing and turning to you."
 
-    nurse @ say "Given your... situation..."
-    nurse @ say "I don't want to jump to conclusions, but you know what these symptoms remind me of?"
+    kitsuragi @ say "Given your... situation..."
+    kitsuragi @ say "I don't want to jump to conclusions, but you know what these symptoms remind me of?"
 
     player "Yeah... I figured it was only a matter of time but I never expected it to happen so soon."
 
-    nurse @ say "Hey, we still don't know it's that for sure. It could be anything."
-    nurse @ say "We'll get started on some tests soon. There's no point in worrying until we have a proper diagnosis."
-    nurse @ say "I'll be back in a little bit."
+    kitsuragi @ say "Hey, we still don't know it's that for sure. It could be anything."
+    kitsuragi @ say "We'll get started on some tests soon. There's no point in worrying until we have a proper diagnosis."
+    kitsuragi @ say "I'll be back in a little bit."
 
-    hide nurse with dissolve
+    hide kitsuragi with dissolve
 
     n "The disease that took your parents' lives, as well as the lives of billions of humans... could you be experiencing its effects?"
     n "Nihil syndrome... Not much is even known about it. Nobody knows where it came from, how it's contracted, or how to cure it."
@@ -2584,48 +2593,48 @@ label leaving_hospital:
     n "You reach over to the nightstand for your phone."
     n "Wait a second, didn't you drop it last night? How'd it end up back here?"
 
-    show nurse at norm with dissolve:
+    show kitsuragi at norm with dissolve:
         xpos 0
 
-    nurse @ say "Good morning, [name]. How are you feeling?"
+    kitsuragi @ say "Good morning, [name]. How are you feeling?"
 
     player "Better than last night. Had another one of those migraines but I'm fine now."
 
-    nurse @ say "Well I have some good news for you."
-    nurse @ say "While we don't know for certain what's causing these migraines and dizzy spells, we managed to get ahold of something that should reduce their intensity."
+    kitsuragi @ say "Well I have some good news for you."
+    kitsuragi @ say "While we don't know for certain what's causing these migraines and dizzy spells, we managed to get ahold of something that should reduce their intensity."
 
-    n "The nurse tosses a bottle of pills at you."
+    n "The kitsuragi tosses a bottle of pills at you."
 
-    nurse @ say "Read the instructions carefully otherwise ya might die."
-    nurse @ say "...I'm kidding! Well, kinda. Seriously, read the instructions. Two a day. Any more than that and you're bound to experience some strange side effects."
-    nurse @ say "Contact us immediately if you experience another one of these incidents."
+    kitsuragi @ say "Read the instructions carefully otherwise ya might die."
+    kitsuragi @ say "...I'm kidding! Well, kinda. Seriously, read the instructions. Two a day. Any more than that and you're bound to experience some strange side effects."
+    kitsuragi @ say "Contact us immediately if you experience another one of these incidents."
 
     player "You mean I'm free to go?"
 
-    nurse @ say "That's correct. We ask that you take it easy though since we don't know what exactly triggers the symptoms you've been experiencing."
-    nurse @ say "In the mean time, we'll continue our tests and we'll let you know as soon as we know anything."
+    kitsuragi @ say "That's correct. We ask that you take it easy though since we don't know what exactly triggers the symptoms you've been experiencing."
+    kitsuragi @ say "In the mean time, we'll continue our tests and we'll let you know as soon as we know anything."
 
     player "So you still don't know if I have nihil syndrome? Like, when would the tests show if I have it or not?"
 
-    nurse @ say "It's hard to say. We don't have all the equipment here to test for it so we had to send your blood across the country to find out."
-    nurse @ say "From what we can tell here though, you appear to be fine. I actually really doubt it's nihil. You said you started experiencing symptoms shortly after you moved here, right?"
-    nurse @ say "Well, city water isn't as pure as they'd like you to believe. If you can, try drinking bottled water or get one of those fancy filters."
+    kitsuragi @ say "It's hard to say. We don't have all the equipment here to test for it so we had to send your blood across the country to find out."
+    kitsuragi @ say "From what we can tell here though, you appear to be fine. I actually really doubt it's nihil. You said you started experiencing symptoms shortly after you moved here, right?"
+    kitsuragi @ say "Well, city water isn't as pure as they'd like you to believe. If you can, try drinking bottled water or get one of those fancy filters."
 
     player "Damn government putting chemicals in the water."
 
-    nurse @ say "Haha yeah."
+    kitsuragi @ say "Haha yeah."
 
     n "She helps you out of bed and makes sure you can walk before letting you loose."
 
-    nurse @ say "Stay safe, kid. Don't hesitate to call us with any questions you may have!"
+    kitsuragi @ say "Stay safe, kid. Don't hesitate to call us with any questions you may have!"
 
     player "Thanks. I'll let you know if anything comes up."
 
-    nurse @ say "You better!"
+    kitsuragi @ say "You better!"
 
-    hide nurse with dissolve
+    hide kitsuragi with dissolve
 
-    n "The nurse accompanies you to the lobby and sees you out."
+    n "The kitsuragi accompanies you to the lobby and sees you out."
 
     n "From there, you decide to head back to your dorm and chill in the comfort of your own home, away from that gross hospital."
 
@@ -2741,7 +2750,7 @@ label leaving_hospital:
         call phone_end from _call_phone_end_9
 
     n "You eat your cereal while watching videos, remembering to take one of your pills."
-    n "The nurse said to take it easy, so you're just gonna relax in bed all day."
+    n "The kitsuragi said to take it easy, so you're just gonna relax in bed all day."
     n "You should probably text Rori and let him know you're out of the hospital."
     n "It's literally the least you could do considering he took you there in the first place."
     n "How he even managed to carry you all the way there is pretty impressive."
@@ -4156,7 +4165,7 @@ label liberation_day:
         
         n "Her attempt at making light of the situation is appreciated but now that the adrenaline is wearing off, you're starting to feel excruciating pain."
         
-        player "Where's a nurse when you need one?"
+        player "Where's a kitsuragi when you need one?"
         
         ava @ say "Can you walk? We should get you to a real hospital asap."
         
@@ -4350,7 +4359,7 @@ label liberation_day:
         
         play music "audio/music/Vylet Pony - lemonade.ogg" fadein 0.1
         
-        show nurse at norm:
+        show kitsuragi at norm:
             xpos -500
             xzoom -1
         show gunner neutral at norm:
@@ -4359,8 +4368,8 @@ label liberation_day:
             xpos 533
         with dissolve
         
-        nurse @ say "Welp. I expected to see you again soon but not for something like this."
-        nurse @ say "You're lucky you have friends to drag your ass here all the time."
+        kitsuragi @ say "Welp. I expected to see you again soon but not for something like this."
+        kitsuragi @ say "You're lucky you have friends to drag your ass here all the time."
         
         player "It's a bonding experience."
         
@@ -4372,12 +4381,12 @@ label liberation_day:
         
         gunner @ say "You played your part in this happening too! I reckon you owe [name] something too!"
         
-        nurse @ say "I'll leave you all to figure that out on your own."
-        nurse @ say "[name], you're free to go whenever. Or you can stay the night, I don't care."
+        kitsuragi @ say "I'll leave you all to figure that out on your own."
+        kitsuragi @ say "[name], you're free to go whenever. Or you can stay the night, I don't care."
         
         n "You sip on the complimentary juice box she gave you for being brave while she twisted your foot back into place and nod."
         
-        hide nurse with dissolve
+        hide kitsuragi with dissolve
         
         show gunner with move:
             xpos 0
@@ -10149,22 +10158,22 @@ label hospital_revisit:
         xpos 700
         ypos 200
     
-    nurse @ say "Hello, I'm with Harmonia Medical Center. Is this [name]?"
+    kitsuragi @ say "Hello, I'm with Harmonia Medical Center. Is this [name]?"
 
-    n "You recognize that voice. It's the nurse who was taking care of you."
+    n "You recognize that voice. It's the kitsuragi who was taking care of you."
     n "Suddenly you don't feel so good anymore..."
 
     player "Er, yes. This is [name] speaking."
 
-    nurse @ say "Would you be available to come in and talk about your condition? The sooner the better."
+    kitsuragi @ say "Would you be available to come in and talk about your condition? The sooner the better."
 
     player "Um sure. Were you hoping for like, today?"
 
-    nurse @ say "Like now would be best."
+    kitsuragi @ say "Like now would be best."
 
     player "Okay... I'll be there in half an hour."
 
-    nurse @ say "Thank you. I'll see you soon."
+    kitsuragi @ say "Thank you. I'll see you soon."
 
     n "{i}Click.{/i}"
 
@@ -10186,15 +10195,15 @@ label hospital_revisit:
     n "You can't stop your brain from automatically assuming the worst."
     n "You barely pay attention to your surroundings while you walk."
     n "Before you know it, you're outside the hospital."
-    n "You spot the nurse smoking a cigarette at the side of the building."
+    n "You spot the kitsuragi smoking a cigarette at the side of the building."
 
-    show nurse at norm with dissolve
+    show kitsuragi at norm with dissolve
 
-    nurse @ say "Oh, you're earlier than I expected."
+    kitsuragi @ say "Oh, you're earlier than I expected."
 
     player "Yeah... Can we get this over with?"
 
-    nurse @ say "Of course. Come with me please."
+    kitsuragi @ say "Of course. Come with me please."
 
     stop music fadeout 1.0
 
@@ -10206,86 +10215,86 @@ label hospital_revisit:
     show box with Dissolve(.2):
         ypos 0
 
-    show nurse at norm with dissolve
+    show kitsuragi at norm with dissolve
 
-    n "The nurse brings you inside and into a room similar to the one you stayed in over the weekend."
+    n "The kitsuragi brings you inside and into a room similar to the one you stayed in over the weekend."
 
-    nurse @ say "I'm just gonna get the routine checkup bullshit out of the way quickly cause I'm sure you don't have time for this sort of thing."
+    kitsuragi @ say "I'm just gonna get the routine checkup bullshit out of the way quickly cause I'm sure you don't have time for this sort of thing."
 
     n "She wraps something around your arm and connects it to a machine that slowly inflates it."
     n "She takes a reading from the machine and writes it down before deflating the armband and removing it."
 
-    nurse @ say "Blood pressure's a bit high but that's expected."
-    nurse @ say "Any headaches, drowsiness, or nausea since Monday?"
+    kitsuragi @ say "Blood pressure's a bit high but that's expected."
+    kitsuragi @ say "Any headaches, drowsiness, or nausea since Monday?"
 
     player "No. If anything I've felt great these past few days."
 
-    nurse @ say "Well, at least those pills are working."
+    kitsuragi @ say "Well, at least those pills are working."
 
     player "I noticed I've been forgetting things more often though."
     player "Like, I literally won't know how I got to class sometimes."
     player "And occasionally I'll see static? And get that feeling like when you get up too fast after lying down for a while."
 
-    n "The nurse writes that down in a notepad then looks away and sighs."
+    n "The kitsuragi writes that down in a notepad then looks away and sighs."
 
-    nurse @ say "Look, there's no easy way to tell you this but the blood tests came back and..."
-    nurse @ say "And we can say with confidence that you do in fact have nihil syndrome."
+    kitsuragi @ say "Look, there's no easy way to tell you this but the blood tests came back and..."
+    kitsuragi @ say "And we can say with confidence that you do in fact have nihil syndrome."
 
     n "You feel your heart sink to the bottom of your stomach."
 
     #player "What?! No, redo the test! It was probably just a false positive!"
     player "What?! You said I was fine last time I was here!"
 
-    nurse @ say "I'm afraid we already ran tests multiple blood samples using different methods and they consistently tested positive."
+    kitsuragi @ say "I'm afraid we already ran tests multiple blood samples using different methods and they consistently tested positive."
 
     n "You slump in your seat, feeling like this is some sort of bad dream."
 
     player "So this means I'm gonna die soon, right?"
 
-    n "The nurse avoids eye contact, gesturing with her hands as she tries to come up with an answer for you."
+    n "The kitsuragi avoids eye contact, gesturing with her hands as she tries to come up with an answer for you."
 
-    nurse @ say "Well... since we caught it early... and there have been advancements in medicine... experimental technology could..."
+    kitsuragi @ say "Well... since we caught it early... and there have been advancements in medicine... experimental technology could..."
 
     player "Just- how long do you think I have?"
 
-    nurse @ say "...Five years? Maybe more, maybe less. I don't know. This disease isn't easy to predict."
+    kitsuragi @ say "...Five years? Maybe more, maybe less. I don't know. This disease isn't easy to predict."
 
     player "So just enough time to graduate college and keel over. Great."
 
-    nurse @ say "Hey, I'm not saying for sure you'll pass away anytime soon, that was just an estimate based on average cases."
-    nurse @ say "Some people went ten, fifteen, almost twenty years before it was their time."
-    nurse @ say "You may not be around for as long as you'd like but you can do a lot in the time you have left."
+    kitsuragi @ say "Hey, I'm not saying for sure you'll pass away anytime soon, that was just an estimate based on average cases."
+    kitsuragi @ say "Some people went ten, fifteen, almost twenty years before it was their time."
+    kitsuragi @ say "You may not be around for as long as you'd like but you can do a lot in the time you have left."
     
     player "Even if I do stay around longer than expected, it'll be a miserable existence."
     player "I've seen how the affected get. They're practically zombies. No more energy, fading memory, totally apathetic."
     
-    nurse @ say "My advice to you is to take advantage of every single day. Don't let any time go to waste. Enjoy your time here while it lasts."
-    nurse @ say "I guess that advice goes to everyone, but moreso in your case."
+    kitsuragi @ say "My advice to you is to take advantage of every single day. Don't let any time go to waste. Enjoy your time here while it lasts."
+    kitsuragi @ say "I guess that advice goes to everyone, but moreso in your case."
 
     player "So... that's it? \"You're dying, but make sure you spend your time wisely. Bye!\""
 
-    nurse @ say "Pretty much."
-    nurse @ say "My boss initially wanted to put you back in one of these beds so we could run more tests on you but I convinced him it would be pointless."
-    nurse @ say "You've got a life to live, a destiny to fulfill and such. No need to waste it in here. Do whatever you wanted to do."
+    kitsuragi @ say "Pretty much."
+    kitsuragi @ say "My boss initially wanted to put you back in one of these beds so we could run more tests on you but I convinced him it would be pointless."
+    kitsuragi @ say "You've got a life to live, a destiny to fulfill and such. No need to waste it in here. Do whatever you wanted to do."
 
     n "You look down, unsure of what do say or do."
 
-    nurse @ say "..."
-    nurse @ say "Look, I have a confession to make."
-    nurse @ say "I could see the signs from the first tests we ran on you."
-    nurse @ say "I intentionally mislead you and told you you probably didn't have the disease because I knew it would only depress you."
-    nurse @ say "And when you're running out of time, the last thing you need is depression."
-    nurse @ say "You've had nihil syndrome for who knows how long, but you could very well have lived the rest of your life without knowing."
-    nurse @ say "Don't let this drag you down. Just use this knowledge to prepare and do whatever you always wanted to do before the end of your life."
-    nurse @ say "I'm truly sorry, but that's the best advice I can give you."
+    kitsuragi @ say "..."
+    kitsuragi @ say "Look, I have a confession to make."
+    kitsuragi @ say "I could see the signs from the first tests we ran on you."
+    kitsuragi @ say "I intentionally mislead you and told you you probably didn't have the disease because I knew it would only depress you."
+    kitsuragi @ say "And when you're running out of time, the last thing you need is depression."
+    kitsuragi @ say "You've had nihil syndrome for who knows how long, but you could very well have lived the rest of your life without knowing."
+    kitsuragi @ say "Don't let this drag you down. Just use this knowledge to prepare and do whatever you always wanted to do before the end of your life."
+    kitsuragi @ say "I'm truly sorry, but that's the best advice I can give you."
 
     n "You want to argue but she's got a point."
     n "And besides, you really want to get out of this place as soon as possible."
 
     player "Fine. If that's all you have for me, then I'll be leaving. Thanks for the heads up."
 
-    nurse @ say "We'll continue to monitor your case and provide as much support as we can. Don't hesitate to call us if you feel strange in the slightest."
-    nurse @ say "Here's my card. Call me whenever you feel like, even if you just wanna talk or whatever."
+    kitsuragi @ say "We'll continue to monitor your case and provide as much support as we can. Don't hesitate to call us if you feel strange in the slightest."
+    kitsuragi @ say "Here's my card. Call me whenever you feel like, even if you just wanna talk or whatever."
 
     player "...Thanks."
 
@@ -11365,7 +11374,7 @@ label spicy_restaurant:
     #show margaret neutral at norm:
     #    xzoom -1
     #    xpos -300
-    #show ellen student neutral at norm:
+    #show ellen neutral at norm:
     #    xzoom -1
     #    xpos -220
     #show gunner neutral:
@@ -11641,23 +11650,23 @@ label spicy_restaurant:
             n "Urgh... you feel like death. Every breath you take hurts. You can't feel your tongue but you can feel your intestines are punishing you for your hubris."
             n "You can't remember a thing after winning your little contest last night. You must have passed out."
             
-            show nurse at norm with dissolve
+            show kitsuragi at norm with dissolve
             
-            nurse "Hello again [name]. I wish I could say it's nice to see you again, but the story your friends told me when they dragged you here has left me appalled by your stupidity."
+            kitsuragi "Hello again [name]. I wish I could say it's nice to see you again, but the story your friends told me when they dragged you here has left me appalled by your stupidity."
             
             player "It was worth it."
             
-            nurse "I'm sure it was."
-            nurse "Anyway, you may be dying but you could at least try not to reduce your lifespan any further."
+            kitsuragi "I'm sure it was."
+            kitsuragi "Anyway, you may be dying but you could at least try not to reduce your lifespan any further."
             
             player "How long am I gonna be stuck here this time?"
             
-            nurse "Now that you're awake you're free to go. I'm not gonna bother writing up a prescription but you can pick up some pills at the pharmacy. Just tell them I gave you the diagnosis 'butthurt.'"
-            nurse "Now get out of my hospital."
+            kitsuragi "Now that you're awake you're free to go. I'm not gonna bother writing up a prescription but you can pick up some pills at the pharmacy. Just tell them I gave you the diagnosis 'butthurt.'"
+            kitsuragi "Now get out of my hospital."
             
-            hide nurse with dissolve
+            hide kitsuragi with dissolve
             
-            n "The nurse leaves the room, leaving you to ponder your life decisions and muster the energy to get up, trying not to put undue stress on your abdomen on the way home."
+            n "The kitsuragi leaves the room, leaving you to ponder your life decisions and muster the energy to get up, trying not to put undue stress on your abdomen on the way home."
             
             scene bg codadorm with fade
             
@@ -17505,27 +17514,27 @@ label posttimeskip:
         n "Is this just some student who happens to look, sound, and smell similar?"
         n "She notices you staring and grins."
 
-        show ellen student smug at norm with dissolve
+        show ellen smug at norm with dissolve
 
         ellen @ say "Heheheh"
         
-        show ellen student neutral
+        show ellen neutral
         
         ellen @ say "Hi there!"
 
         player "Do I know you?"
         
-        show ellen student laugh
+        show ellen laugh
 
         ellen @ say "Maybe~ I recently transferred here!"
 
         player "...How recently exactly?"
         
-        show ellen student smug
+        show ellen smug
         
         ellen @ say "Hehehehe!"
         
-        show ellen student happy
+        show ellen happy
         
         ellen @ say "Hey, you're pretty cute~ Wanna sit with me?"
 
@@ -17535,7 +17544,7 @@ label posttimeskip:
 
         n "You grab your drink from the pickup counter and find a table to sit at."
         
-        show ellen student neutral
+        show ellen neutral
 
         ellen @ say "Oh, I think you grabbed my drink by mistake, [name]."
 
@@ -17545,11 +17554,11 @@ label posttimeskip:
 
         player "Riiiight. And what did you say your name was again?"
         
-        show ellen student laugh
+        show ellen laugh
 
         ellen @ say "Ellen~"
         
-        show ellen student neutral
+        show ellen neutral
 
         player "..."
         player "Okay what the hell is going on?"
@@ -17562,13 +17571,13 @@ label posttimeskip:
 
         player "I knew it! Why are you dressed like a student??"
         
-        show ellen student annoyed
+        show ellen annoyed
 
         ellen @ say "Keep your voice down! It's a disguise!"
 
         player "Why would you need a disguise?"
 
-        show ellen student proud
+        show ellen proud
 
         ellen @ say "So I can do this without getting fired~"
 
@@ -17582,35 +17591,35 @@ label posttimeskip:
 
         player "Miss Ellen, I don't-"
         
-        show ellen student neutral
+        show ellen neutral
 
         ellen @ say "It's just Ellen, hun~"
 
         player "*Ellen* I don't know if it' such a good idea for you to pose as a student and go around kissing other students."
         
-        show ellen student annoyed
+        show ellen annoyed
 
         ellen @ say "Hey, don't act like I'm smooching just any students! This getup is just for you!"
         
-        show ellen student neutral
+        show ellen neutral
         
         ellen @ say "And why shouldn't I have some fun? I'm well into my 40s and so far today's been the most exhilerating day of my life!"
         ellen @ say "Why should I abide by society's rules? They're just holding me back. It's not like I'm hurting anyone."
 
         player "Are you high right now?"
 
-        show ellen student laugh
+        show ellen laugh
 
         ellen @ say "I don't think so."
         
-        show ellen student overjoyed
+        show ellen overjoyed
         
         ellen @ say "Why, you wanna skip class and smoke some weed?"
 
         n "This is horrifying. This lady has clearly lost her mind and is trying to relive some twisted idea of a college freshman's wild party life."
         n "Did you cause this? She wasn't acting like this a month ago and she seems to have developed a thing for you."
         
-        show ellen student neutral
+        show ellen neutral
 
         ellen @ say "Hey, come on, chill out. What's the worst that could happen?"
 
@@ -17630,28 +17639,28 @@ label posttimeskip:
 
         player "There's no way that flimsy disguise is gonna work for more than a day."
 
-        show ellen student laugh
+        show ellen laugh
 
         ellen @ say "It worked on you, didn't it?"
         ellen @ say "If anyone asks, I'm Miss Ellen's neice."
 
         player "...Who happens to be named Ellen."
 
-        show ellen student smug
+        show ellen smug
 
         ellen @ say "Yes."
 
         player "...This is just crazy enough to work."
         player "But what even is your end goal? Like, why are you doing this?"
         
-        show ellen student neutral
+        show ellen neutral
 
         ellen @ say "Cause I wanna relive my life the way I want to! I don't wanna be the old Miss Ellen who's too scared to live on the edge, just hiding on the sidelines wallowing in depression."
         ellen @ say "I wanna feel young and fresh again! Like the world is full of opportunities and all I have to do is reach out and grab onto them!"
 
         player "I thought you said all that was bullshit."
         
-        show ellen student proud
+        show ellen proud
 
         ellen @ say "It is! But when you're young and confident you can make things happen!"
         ellen @ say "Plus, I've got the advantage of years of experience on my side~"
@@ -17671,12 +17680,12 @@ label posttimeskip:
         player "...Alright, fine. I'll play along. But I'm not gonna do anything with you that'll get me arrested."
         player "They said I only have about five years left in me. I ain't about to spend them rotting in jail."
 
-        show ellen student laugh
+        show ellen laugh
 
         ellen @ say "Deal! Thank you soooooo much [name]!"
         ellen @ say "I promise this'll be fun, for the both of us!"
         
-        show ellen student neutral
+        show ellen neutral
 
         n "Ellen's phone buzzes."
 
@@ -17684,7 +17693,7 @@ label posttimeskip:
 
         n "She stands up and grabs her backpack, bending over to give you a kiss on the cheek on her way out."
 
-        hide ellen student with dissolve
+        hide ellen with dissolve
 
         n "This is definitely the strangest thing to have ever happened to you."
         n "As you go to throw away your cup, Mishka speaks up."
@@ -17736,7 +17745,7 @@ label posttimeskip:
         
         play music "audio/music/vylet - Catching On.ogg" fadein 1.0
 
-        show ellen student neutral at offscreenright:
+        show ellen neutral at offscreenright:
             yalign 0
 
         show box with Dissolve(.2):
@@ -17747,32 +17756,32 @@ label posttimeskip:
 
         ellen @ say "[name]!! Wait up!!!"
 
-        show ellen student neutral at offscreenleft with move:
+        show ellen neutral at offscreenleft with move:
             yalign 0
 
         #show text "{color=b6e4d6}[name]!! Wait up!!!{/color}":
             #ypos 46
             #xpos 900
 
-        #show ellen studentsay at offscreenleft with MoveTransition(delay=1.5)
+        #show ellensay at offscreenleft with MoveTransition(delay=1.5)
 
         #hide text
 
         ellen @ say "How do I control this thing?!"
         gunner "{nw}"
 
-        show ellen student at offscreenright with move:
+        show ellen at offscreenright with move:
             xzoom -1
             yalign 0
 
         n "Ellen zooms past you and promptly falls off her skateboard."
 
-        show ellen student laugh at norm with dissolve:
+        show ellen laugh at norm with dissolve:
             xpos 50
 
         ellen @ say "I'm alright!"
         
-        show ellen student neutral
+        show ellen neutral
 
         player "Ellen? What are you doing? Don't you have a class to teach?"
 
@@ -17784,19 +17793,19 @@ label posttimeskip:
 
         player "Maybe if you're in middle or high school..."
         
-        show ellen student annoyed
+        show ellen annoyed
 
         ellen @ say "Oh don't be such a stick in the mud! Come teach me how to board!"
 
         player "What makes you think I know how to skateboard?"
 
-        show ellen student laugh
+        show ellen laugh
 
         ellen @ say "In that case we can learn together!"
 
         player "Can't we do this later? I have classes to attend."
 
-        show ellen student proud
+        show ellen proud
 
         ellen @ say "You'd rather sit in some stuffy classroom learning useless bullshit than have fun with me? Come on, we ain't gettin' any younger!"
 
@@ -17810,7 +17819,7 @@ label posttimeskip:
 
                 n "Ellen shoves the skateboard into your hands."
 
-                show ellen student laugh
+                show ellen laugh
 
                 ellen @ say "Now take off that heavy backpack and do a kickflip for me!"
 
@@ -17818,13 +17827,13 @@ label posttimeskip:
             "Fine, let's do this":
                 player "Fine, let's do this."
 
-                show ellen student laugh
+                show ellen laugh
 
                 ellen @ say "That's the spirit!"
 
                 n "You set your bag down and place the board on the ground before stepping on it."
 
-        show ellen student neutral
+        show ellen neutral
 
         n "You struggle to maintain your balance but you manage to stay on."
 
@@ -17839,22 +17848,22 @@ label posttimeskip:
         n "She places her paws on your back and gives you a rough push, sending you rolling down the street before crashing into a trash can and being flung off onto the grass."
         n "You see stars for a while. When you come to, Ellen is standing over you."
 
-        show ellen student laugh at norm with dissolve
+        show ellen laugh at norm with dissolve
 
         ellen @ say "Whoa! That was totally gnarly dude!"
         
-        show ellen student happy
+        show ellen happy
 
         n "You're starting to regret this."
         n "But you have to admit, this skateboarding this is more exhilerating than anything else you've done at Harmonia."
 
         player "Where's the board? I wanna give it another shot."
 
-        show ellen student laugh
+        show ellen laugh
 
         ellen @ say "Haha no way, it's my turn! Now on your feet, soldier, and check this out!"
 
-        show ellen student neutral
+        show ellen neutral
 
         n "Ellen helps you up before grabbing the board and standing on it. She moves one foot to the back edge of the board and stomps down, sending it and herself a few inches into the air."
 
@@ -17862,7 +17871,7 @@ label posttimeskip:
 
         player "Hell yeah! Show me how you did that!"
 
-        show ellen student laugh
+        show ellen laugh
 
         ellen @ say "Hahaha sure thing!"
 
@@ -17872,7 +17881,7 @@ label posttimeskip:
         n "You even got to walk Ellen back to her car where you chatted some more before she gave you a parting smooch on the cheek."
         n "She even let you hold onto the skateboard for her until next time."
 
-        show ellen student laugh at norm with dissolve
+        show ellen laugh at norm with dissolve
 
         ellen @ say "You better impress me next time I see you on that board!"
 
@@ -18515,11 +18524,11 @@ label next01:
         n "You chat with your friends for a bit until Mishka calls your name."
         n "As you're carrying your drink back to the table, you see that somebody has taken your seat."
 
-        show ellen student laugh at norm with dissolve
+        show ellen laugh at norm with dissolve
 
         ellen @ say "[name]! Hey! Fancy meeting you here!"
         
-        show ellen student neutral
+        show ellen neutral
 
         n "Before you can respond, she stands up and gives you a kiss on the cheek and steals your drink."
 
@@ -18552,13 +18561,13 @@ label next01:
 
         gunner @ say "I don't think I've seen you around campus but... you do seem kinda familiar. Have we met before?"
         
-        show ellen student happy
+        show ellen happy
 
         ellen @ say "O-oh umm... Probably not haha! I really don't go out that much and I'm usually the quiet kid in class!"
 
         gunner @ say "Oh... I could have sworn we had a class together last semester. Was it literature?"
         
-        show ellen student proud
+        show ellen proud
 
         ellen @ say "Nope! This is my first semester here!"
         ellen @ say "Isn't that right, [name]?"
@@ -19636,15 +19645,15 @@ label cont1:
 
     player "Hello?"
 
-    nurse @ say "Hello, [name]?"
+    kitsuragi @ say "Hello, [name]?"
 
     player "Y-yes?"
 
-    nurse @ say "We've got the results back from some additional tests we've been running and..."
+    kitsuragi @ say "We've got the results back from some additional tests we've been running and..."
 
     player "And?"
 
-    nurse @ say "It's better to talk about it in person. Do you have a moment? It's pretty urgent."
+    kitsuragi @ say "It's better to talk about it in person. Do you have a moment? It's pretty urgent."
 
     n "You let out a long sigh."
 
@@ -19656,43 +19665,43 @@ label cont1:
 
     scene bg hospital with fade
 
-    show nurse at norm with dissolve
+    show kitsuragi at norm with dissolve
 
     show box with Dissolve(.2):
         ypos 0
 
     play music "audio/music/gnossienne.ogg" fadein .5
 
-    nurse @ say "Thanks for coming in on such short notice. How are you feeling?"
+    kitsuragi @ say "Thanks for coming in on such short notice. How are you feeling?"
 
     player "Honestly fed up with this bullshit."
 
-    nurse @ say "That's understandable. I hate interrupting your life like this but I wouldn't do it if it wasn't important."
-    nurse @ say "The field of medicine is constantly changing as we learn new things and I'm afraid a recent discovery will have to change the way we treat you."
+    kitsuragi @ say "That's understandable. I hate interrupting your life like this but I wouldn't do it if it wasn't important."
+    kitsuragi @ say "The field of medicine is constantly changing as we learn new things and I'm afraid a recent discovery will have to change the way we treat you."
 
     player "So you've been treating me wrong this whole time?"
 
-    n "The nurse sighs."
+    n "The kitsuragi sighs."
 
-    nurse @ say "Unfortunately, yes."
-    nurse @ say "Did you bring that pill bottle I gave you last time?"
+    kitsuragi @ say "Unfortunately, yes."
+    kitsuragi @ say "Did you bring that pill bottle I gave you last time?"
 
     player "No, it's in my dorm."
 
-    nurse @ say "Well throw it out when you get back. There's evidence suggesting taking those will shorten your lifespan."
+    kitsuragi @ say "Well throw it out when you get back. There's evidence suggesting taking those will shorten your lifespan."
 
     player "What."
     player "The hell."
 
-    nurse @ say "Basically, the agreed upon theory is that the reason patients suffer from exhaustion is because their bodies are exerting themselves to stay alive for however long they've got left."
-    nurse @ say "The body only allocates enough resources for you to just stay awake, causing the drowsiness you felt."
-    nurse @ say "The pills we gave you overrode that, forcing your body to shift resources away from fighting the disease."
+    kitsuragi @ say "Basically, the agreed upon theory is that the reason patients suffer from exhaustion is because their bodies are exerting themselves to stay alive for however long they've got left."
+    kitsuragi @ say "The body only allocates enough resources for you to just stay awake, causing the drowsiness you felt."
+    kitsuragi @ say "The pills we gave you overrode that, forcing your body to shift resources away from fighting the disease."
 
     player "Okay, so I've been killing myself faster for the past month. Great."
     player "So what have you got for me now?"
 
-    nurse @ say "Nothing."
-    nurse @ say "At this point we don't really have anything that can help you in any way. I'm sorry."
+    kitsuragi @ say "Nothing."
+    kitsuragi @ say "At this point we don't really have anything that can help you in any way. I'm sorry."
 
     player "So that's it, huh?"
     player "You come into my life to tell me I've got an incurable disease, then sell me a pill so I'm not a walking corpse, only to take it away because it turned out to be poison?!"
@@ -19700,14 +19709,14 @@ label cont1:
     player "Y'know I would have preferred not knowing I was gonna die like this. It would have been a nice little surprise just after finishing my degree, but at least I could have enjoyed the time I had."
 
     n "You're left out of breath by the time you're done ranting."
-    n "The nurse just stands there, her expression unchanging."
+    n "The kitsuragi just stands there, her expression unchanging."
     n "Eventually she inhales to say something but you cut her off."
 
     player "Just shut up. Don't call me again unless you have a real cure."
 
-    hide nurse with dissolve
+    hide kitsuragi with dissolve
 
-    n "You get up and leave the room. As you walk past the nurse, you can see a hint of sympathy and regret in her eyes."
+    n "You get up and leave the room. As you walk past the kitsuragi, you can see a hint of sympathy and regret in her eyes."
     n "Not that it matters."
 
     scene bg codadorm with fade
@@ -19723,7 +19732,7 @@ label cont1:
     n "Why did you ever think you could escape that fate?"
     n "You flump down in your bed and take a deep breath."
     n "That helped clear your mind a bit."
-    n "You feel bad for blowing up on the nurse earlier. Obviously none of this is her fault and it's not like she can even do anything. She's just the messenger relaying the terrible news."
+    n "You feel bad for blowing up on the kitsuragi earlier. Obviously none of this is her fault and it's not like she can even do anything. She's just the messenger relaying the terrible news."
     n "That reminds you, you owe your date an explanation for cancelling at the last second."
     n "Wait, this doesn't feel right."
     n "All of this doesn't feel right."

@@ -154,6 +154,14 @@ init -10 python:
                 renpy.sound.play("audio/sound effects/ellen.wav")
             elif event == "slow_done":
                 renpy.sound.stop()
+        
+        elif speaking_char == "margaret":
+            if not interact:
+                return
+            if event == "show_done":
+                renpy.sound.play("audio/sound effects/ellen.wav")
+            elif event == "slow_done":
+                renpy.sound.stop()
                 
         elif speaking_char == "ava":
             if not interact:
