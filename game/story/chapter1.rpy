@@ -1170,6 +1170,7 @@ label exploring_campus:
         
         show gunner neutral at center with dissolve:
             ypos y_gunner
+            xoffset 350
 
         gunner @ say "Hey there! I saw you checkin' out the frats and thought you should know Alpha Alpha Alpha is the best one!"
         
@@ -1196,7 +1197,7 @@ label exploring_campus:
         
         show rori neutral at center:
             xzoom -1
-            xpos 275
+            xpos 325
             ypos y_rori
         
         rori @ say "Oh, hello again [name]!"
@@ -1210,7 +1211,7 @@ label exploring_campus:
         rori @ say "Hrm... already doesn't sound like it's for me."
         rori @ say "What do you even do in a frat?"
 
-        gunner @ say "Cool bro stuff like uhh... hazing new members, drinking cheap beer, hitting on sorority chicks, playing sports..."
+        gunner @ say "Cool bro stuff like uhh... hazing new members, drinking shitty beer, hitting on sorority chicks, playing sports..."
         
         show rori soyface smug
         
@@ -1577,7 +1578,7 @@ label firstDayOfClass:
     player "Hey uh, wanna be partners?"
     
     show rose skirt armscrossed dismissive pendant at center with dissolve:
-        xoffset -200
+        xoffset -350
         ypos y_rose
     
     rose @ say "    Psh.    "
@@ -1586,20 +1587,21 @@ label firstDayOfClass:
     n "She scooches her desk away from you and faces the other way."
 
     show rose with move:
-        linear .54 xpos -510
-    pause .15
+        linear .54 xoffset -500
+    pause .2
     show rose with move:
-        linear .54 xpos -750
-    pause .33
+        linear .54 xoffset -800
+    pause .4
     show rose with move:
-        linear .54 xpos -1700
+        linear .54 xoffset -1450
 
     n "Damn, maybe you came on too strong."
     n "You try partnering up with some others but it seems everyone's already established their own group."
     #n "You try partnering up with some others but as usual you get ignored."
     n "You take another look at that raccoon girl. She didn't even attempt to talk to any of the other students. She's just staring out the window."
     
-    show rothbauer at center with dissolve
+    show rothbauer at center with dissolve:
+        ypos y_roth
 
     rothbauer @ say "Hopefully everyone's found a group by now."
 
@@ -1615,18 +1617,18 @@ label firstDayOfClass:
     n "Kaczynski huh? Is she related to the dean?"
 
     show rothbauer with move:
-        xpos 250
+        xoffset 350
         
-    show rose neutral at center with dissolve:
-        xzoom -1
-        xpos -550
+    show rose skirt handonhip shy pendant at center with dissolve:
+        xoffset -450
+        ypos y_rose
 
     rose @ say "...Nobody's."
     rose @ say " And just call me Rose."
 
     rothbauer @ say "Very well, Rose, you and [name] can be a group of two then!"
     
-    show rose unimpressed
+    show rose skirt armscrossed dismissive pendant
 
     #rose @ say "Ugh. Do I have to?"
     rose @ say "I can do the assignment on my own."
@@ -1641,17 +1643,18 @@ label firstDayOfClass:
 
     n "While Rothbauer writes your names in his notebook you hear crumpling paper beside you."
     
-    show rose furious
-    
     n "You glance towards Rose and see her clenching her fist, balling up a sheet of paper."
     n "She turns to you and mutters something."
+    
+    show rose skirt furiouspose pendant
 
     rose @ say "To hell with that. I'll do it all on my own."
 
     hide rose with dissolve
     
     show rothbauer with move:
-        xpos 0
+        ypos y_roth
+        xoffset 0
 
     rothbauer @ say "Ahem well... now that that's settled, let's begin our first lesson!"
     rothbauer @ say "This course and the follow up World History II are designed to give you an understanding of how civilization has progressed alllll the way back from when the dinosaurs roamed the earth..."
@@ -1693,7 +1696,8 @@ label firstDayOfClass:
     if metGunner == True:
         n "Along the way you bump into a familiar feline."
 
-        show gunner neutral at center with dissolve
+        show gunner neutral at center with dissolve:
+            ypos y_gunner
 
         gunner @ say "Sup, [name]! Where ya goin'?"
 
@@ -1789,10 +1793,16 @@ label firstDayOfClass:
         xpos 0
 
     herschel @ say "Good afternoon everyone! My name is Mrs. Herschel and I'm very excited to teach probability and statistics again this year!"
+    pause .1
+    herschel "{nw}"
+    
+    show herschel with move:
+        xoffset 250
 
     show gunner neutral at center with dissolve:
         xzoom -1
-        xpos -500
+        ypos y_gunner
+        xoffset -450
 
     gunner @ say "Looking good, Mrs. Herschel! I'm very excited to learn probability and statistics again this year!"
 
@@ -1806,6 +1816,9 @@ label firstDayOfClass:
     gunner @ say "Oh yeah."
 
     hide gunner with dissolve
+    
+    show herschel with move:
+        xoffset 0
 
     herschel @ say "That reminds me, I wanted to point out this can be a very challenging class. I recommend spending half an hour every night studying the textbook and working through the example problems."
     #herschel @ say "That being said, feel free to ask as many questions as you'd like! If a student fails, then I've failed as a teacher after all."
@@ -1866,7 +1879,8 @@ label secondDayOfClass:
     n "You don't think you made the best first impression the other day. Hopefully she doesn't hold a grudge."
     n "She double clicks a file and brings up a slideshow."
 
-    show margaret happy at center with dissolve
+    show margaret happy at center with dissolve:
+        ypos y_margaret
 
     margaret @ say "Good morning and welcome to Literature I!"
     margaret @ say "Today we'll go over the syllabus and what you can expect from this class. Then we'll finish up with some discussion on the assigned reading!"
@@ -1884,7 +1898,7 @@ label secondDayOfClass:
 
     n "She quickly advances forward a few more slides."
 
-    show margaret neutral at center
+    show margaret neutral
 
     margaret @ say "Ahem where was I? Oh yes, this course will introduce you to literature across a variety of different cultures throughout different time periods."
     margaret @ say "In the interest of time, most of the reading will be on the short side, or at least limited to excerpts from longer works."
@@ -1908,7 +1922,8 @@ label secondDayOfClass:
     n "Miss Ellen goes over the first chapter of the novella, explaining some things and asking the class for their thoughts along the way."
     n "Time flies by quickly and the end of the hour is upon you before you realize it."
 
-    show margaret neutral at center with dissolve
+    show margaret neutral at center with dissolve:
+        ypos y_margaret
 
     margaret @ say "That's all for today! We'll continue this discussion next time! Have a nice day!"
 
@@ -1926,7 +1941,8 @@ label secondDayOfClass:
     show box with Dissolve(.2):
         ypos 0
 
-    show celestine neutral at center with dissolve
+    show celestine neutral at center with dissolve:
+        ypos y_celestine
 
     celestine @ say "Bon après-midi! I am Mrs. Celestine and I'll be your French teacher for this semester, and hopefully the next one as well if you decide to stick with it!"
 
@@ -2160,7 +2176,8 @@ label secondDayOfClass:
     
     show claire sweater neutral
     show ava pose annoyed at center with moveinright:
-        xpos 400
+        ypos y_ava
+        xoffset 375
         
     claire @ say "What's up?"
 
@@ -2176,9 +2193,11 @@ label secondDayOfClass:
 
     claire @ say "Oh did I ruin your shot? Sorry..."
     
-    show ava pose happy
+    show ava typical neutral
 
     ava @ say "It's no big deal, I was just warming up anyway."
+    
+    show ava typical happy
     
     if metAva == False:
         ava @ say "I see you brought a friend."
@@ -2188,11 +2207,18 @@ label secondDayOfClass:
         
         claire @ say "Ava is such a good photographer! She's like one of those surveillance birds, she really has an eye for that sort of thing!"
         
+        show ava typical shocked
+        
         ava @ say "Surveillance bird?! You mean a secretary bird??"
         
         claire @ say "No I mean like one of those birds the government uses to take secret spy photos!"
         
+        show ava typical unimpressed
+        
         ava @ say "Oh. Those."
+        
+        show ava typical unamused
+        
         ava @ say "I'm more in it for the artistic qualities but I suppose street photography and reconaissance have their similarities."
         
         
@@ -2216,6 +2242,8 @@ label secondDayOfClass:
     ava @ say "Today's no good for me. I have to do some club stuff."
     
     claire @ say "Tomorrow then?"
+    
+    show ava pose happy
     
     ava @ say "Works for me!"
     
@@ -2370,7 +2398,8 @@ label thirdDayOfClassStats:
     show box with Dissolve(.2):
         ypos 0
         
-    show gunner neutral at center with dissolve
+    show gunner neutral at center with dissolve:
+        ypos y_gunner
     
     gunner @ say "Sup [name]!"
     gunner @ say "You ready to fuck up some mathematics?"
@@ -2465,9 +2494,10 @@ label thirdDayOfClassStats:
 
         show claire sweater overjoyed at center:
             xpos 500
-        show ava typical neutral at center:
+        show ava typical happy at center:
             xzoom -1
-            xpos -450
+            xoffset -520
+            ypos y_ava
         with dissolve
         
         show claire sweater overjoyed
@@ -2478,7 +2508,7 @@ label thirdDayOfClassStats:
 
         ava @ say "Hey [name]! We were afraid we'd never find you haha!"
         
-        show ava typical neutral
+        show ava typical happy
         
         player "Sorry, my phone's dead."
         player "So where are we going to eat?"
@@ -2486,6 +2516,8 @@ label thirdDayOfClassStats:
         show claire sweater heyeah
         
         claire @ say "We still haven't decided yet!"
+        
+        show ava typical agitated
 
         ava @ say "Claire keeps shooting down my ideas!"
         
@@ -2496,7 +2528,7 @@ label thirdDayOfClassStats:
         player "How about the cafe?"
         
         show claire sweater surprised
-        show ava bored
+        show ava unimpressed
 
         ava @ say "You mean Starbees? That place is hella crowded all the time."
         
@@ -2523,20 +2555,26 @@ label thirdDayOfClassStats:
 
         show gunner neutral at center with dissolve:
             xzoom -1
+            ypos y_gunner
 
         player "Gunner? What are you doing here?"
 
         gunner @ say "I like to come here to study 'cause the smell of coffee keeps me awake."
+        gunner "{nw}"
+        
+        pause .1
         
         show gunner with move:
-            xpos -375
+            xoffset -430
+            
+        pause .1
         
         show claire sweater neutral at center:
             #xpos 475
             xpos 575
-        show ava typical neutral at center:
-        #    xpos 680
-            xpos 300
+        show ava typical happy at center:
+            ypos y_ava
+            xoffset 300
         
         with moveinright
 
@@ -2544,7 +2582,7 @@ label thirdDayOfClassStats:
 
         player "Oh, right. Claire, Ava, this is Gunner. We have statistics together."
         
-        show ava pose flattered
+        show ava pose shy
 
         ava @ say "Nice to meet you, Gunner!"
         
@@ -2603,17 +2641,15 @@ label thirdDayOfClassStats:
         
         hide gunner with dissolve
         
-        n "Gunner gave you like $100. How much does he think lunch costs?"
+        n "Gunner gave you like $200. How much does he think lunch costs?"
         n "Maybe he figured Claire would need a lot."
         
         #either take credit for the tip or say it was gunner's idea
-        
-        show mishka neutral at offscreenleft:
-            yalign 0
 
-        show mishka neutral at center with move:
+        show mishka neutral at center with moveinleft:
             xzoom -1
-            xpos 1450
+            xoffset -450
+            ypos y_mishka
             
         #show mishka overjoyed
 
@@ -2867,6 +2903,11 @@ label thirdDayOfClassStats:
         jump avaClaireGunnerLunch
 
 label avaClaireGunnerLunch:    
+    show gunner neutral at center with dissolve:
+        ypos y_gunner
+        xzoom -1
+        xoffset -550
+
     claire @ say "Thanks again for lunch~"
     
     ava @ say "Yeah, especially since we're basically strangers!"
@@ -3410,7 +3451,8 @@ label afterAvaText1:
         n "With only the street lamps to light the way, your surroundings become an unfamiliar void where only the odd stranger lurks."
         n "So it seems, until a friendly figure emerges from the shadows and locks eyes with you."
         
-        show rori neutral at center with dissolve
+        show rori neutral at center with dissolve:
+            ypos y_rori
         
         rori @ say "[name]? What are you doing out so late?"
         
@@ -3532,7 +3574,8 @@ label thursday1:
     show box with Dissolve(.2):
         ypos 0
 
-    show margaret neutral at center with dissolve
+    show margaret neutral at center with dissolve:
+        ypos y_margaret
     
     margaret @ say "Good morning class, today we'll continue our discussion on The Death of Ivan Ilyich!"
     margaret @ say "We've seen that Ivan's social circle is more concerned with status and convenience than compassion."
@@ -3561,7 +3604,7 @@ label thursday1:
     n "Miss Ellen sure seemed to be in a bad mood today, but Mrs. Celestine is bursting with energy."
 
     show celestine neutral at center:
-        xpos 0
+        ypos y_celestine
         xzoom -1
 
     celestine @ say "Good morning class! It's such a lovely day to learn some French, n'est-ce pas?"
@@ -3646,7 +3689,8 @@ label thursday1:
     n "You don't really know what just happened."
     n "You shrug and continue your French practice until Mrs. Celestine hands out some homework and dismisses the class."
 
-    show celestine happy at center with dissolve
+    show celestine happy at center with dissolve:
+        ypos y_celestine
 
     celestine @ say "Good work class! I can tell you're already making so much progress!"
     celestine @ say "Keep it up, and do your best on the homework! Some of it may be challenging but I'd like for you to give it your best shot without using translation software!"
@@ -4056,7 +4100,8 @@ label rooftop_party:
     n "At least, you hope those are just puddles of rainwater and not something else."
     n "You spot Gunner on the other side of the roof and have push your way past a group of people dancing and grinding on each other to reach him."
 
-    show gunner neutral at center with dissolve
+    show gunner neutral at center with dissolve:
+        ypos y_gunner
 
     gunner @ say "[name]!!!! Ya made it!"
 
@@ -4070,17 +4115,15 @@ label rooftop_party:
     gunner @ say "Haha woops. Here's another one."
 
     n "He digs another one out of a cooler and hands it to you."
-    
-    show rori neutral at offscreenleft:
-        yalign 0
 
     player "Thanks. Hey, wasn't Rori supposed to be here?"
 
     show rori neutral at center:
         xzoom -1
-        xpos 1500
+        xoffset -475
+        ypos y_rori
     show gunner neutral:
-        xpos 350
+        xoffset 450
     with move
 
     n "Rori emerges from the mosh pit, looking dishevelled."
@@ -4099,28 +4142,29 @@ label rooftop_party:
 
     rori @ say "I dunno..."
 
-    show rori neutral:
-        ypos 15
-        linear .15 ypos 0
+    show rori soyface at hop
     
     pause .15
 
     rori @ say "Oh but hey [name]! Glad to see you here! How are you liking Harmonia so far?"
     
+    show rori neutral
+    
     gunner "{nw}"
+    
+    pause .1
 
     show rori neutral:
-        xpos 1800
+        xoffset -275
     show gunner:
-        xpos 1800
-        yalign 0
+        xoffset 1700
     with move
 
     ###do transitions where one sprite dissolves away and the other one moves into center view
 
     player "It's pretty cool. I've never been around so many people so it's taking some time to adjust."
 
-    rori @ say "Same. Usually on a Saturday night I'd be installing a new loonix distro or tweaking config files."
+    rori @ say "Same. Usually on a Saturday night I'd be coding some game mods or painting figurines."
 
     show rori laugh
 
@@ -4141,9 +4185,10 @@ label rooftop_party:
     n "You take a sip of your beer and Gunner comes back with a new pack."
 
     show gunner neutral at center:
-        xpos 300
+        xoffset 425
+        ypos y_gunner
     show rori:
-        xpos 1550
+        xoffset -485
     with move
 
     gunner @ say "I'm back! Here Rori, take this."
@@ -4153,6 +4198,8 @@ label rooftop_party:
     rori @ say "Noooo stoppp! I don't know how to daaaaaance..!"
     
     gunner "{nw}"
+    
+    pause .1
 
     show gunner neutral at offscreenleft:
         yalign 0
@@ -4166,7 +4213,8 @@ label rooftop_party:
 
     show gunner neutral at center with move:
         xzoom -1
-        xpos 1555
+        xoffset 0 
+        ypos y_gunner
 
     gunner @ say "Sometimes ya gotta push the young ones out of the nest and watch them fly."
     gunner @ say "Enjoying the beer?"
@@ -4317,7 +4365,8 @@ label rooftop_party:
 
     show rori drunk at center with dissolve:
         xzoom -1
-        xpos 1555
+        xoffset 0
+        ypos y_rori
 
     player "Hey, we gotta go. Now."
 
@@ -4338,7 +4387,10 @@ label rooftop_party:
     n "Looks like the cops already have the nearest staircase blocked in case someone like you tried sneaking away."
     n "A security guard patrols the area around it but you don't think he saw you. You'll have to make your way to the stairway on the other side of the building."
 
-    show rori drunk at center with dissolve
+    show rori drunk at center with dissolve:
+        xzoom -1
+        xoffset 0
+        ypos y_rori
 
     rori @ say "What the hell man?"
 
@@ -4349,6 +4401,8 @@ label rooftop_party:
     n "Rori fidgets in your grasp, trying to escape but you manage to hold him still until it's safe to go."
 
     player "Sorry about that. Gunner warned me the cops were on their way."
+    
+    show rori drunk alert
 
     rori @ say "Wha, for realll?"
     rori @ say "We need to get outta here!!"
@@ -4372,14 +4426,16 @@ label rooftop_party:
     show gunner at offscreenleft:
         yalign 0
     
-    show rori drunk with dissolve:
-        xpos 500
+    show rori drunk at center with dissolve:
+        xoffset 500
+        ypos y_rori
 
     n "Once outside, you hear some rustling in the leaves and Gunner appears."
 
     show gunner neutral at center:
         xzoom -1
-        xpos 1400
+        ypos y_gunner
+        xoffset -400
     with move
     
     gunner @ say "Bros! You made it out alive!"
@@ -4438,6 +4494,9 @@ label rooftop_party:
 label sunday2:
     scene bg roridorm with fade
     
+    show box with Dissolve(.2):
+        ypos 0
+    
     n "Your head pulsates with the inconvenience of a minor hangover, enough to make your conscious existence miserable."
     n "Looking around, it seems you'd fallen asleep in Rori and Gunner's dorm. They're passed out in their respective beds."
     n "No reason to stick around. You feel groggy and sweaty and gross and you need a shower and some coffee as soon as possible."
@@ -4454,9 +4513,10 @@ label sunday2:
     n "It's started to pour down freezing cold rain outside, chilling you to the bone even underneath your umbrella."
     n "As you're closing the umbrella and stepping into the cafe, you nearly step on a tiny furry creature."
     
-    show rose neutral at center with dissolve:
-        xalign .1
+    show rose skirt handonhip annoyed at center with dissolve:
+        xoffset -400
         xzoom -1
+        ypos y_rose
 
     rose @ say "Watch where you're going."
 
