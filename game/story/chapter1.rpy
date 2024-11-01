@@ -1172,6 +1172,7 @@ label exploring_campus:
         
         show gunner neutral at center with dissolve:
             ypos y_gunner
+            xoffset 350
 
         gunner @ say "Hey there! I saw you checkin' out the frats and thought you should know Alpha Alpha Alpha is the best one!"
         
@@ -1198,7 +1199,7 @@ label exploring_campus:
         
         show rori neutral at center:
             xzoom -1
-            xpos 275
+            xpos 325
             ypos y_rori
         
         rori @ say "Oh, hello again [name]!"
@@ -1212,7 +1213,7 @@ label exploring_campus:
         rori @ say "Hrm... already doesn't sound like it's for me."
         rori @ say "What do you even do in a frat?"
 
-        gunner @ say "Cool bro stuff like uhh... hazing new members, drinking cheap beer, hitting on sorority chicks, playing sports..."
+        gunner @ say "Cool bro stuff like uhh... hazing new members, drinking shitty beer, hitting on sorority chicks, playing sports..."
         
         show rori soyface smug
         
