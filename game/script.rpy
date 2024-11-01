@@ -223,6 +223,16 @@ layeredimage ava typical neutral:
         pos (-80,-30)
         attribute say:
             "images/bubble.png"
+layeredimage ava pose shy:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava pose shy.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
 layeredimage ava typical agitated:
     at sprite_highlight('ava')
     always:
@@ -1683,6 +1693,26 @@ layeredimage rori soyface smug:
         pos (4,33)
         attribute say:
             "images/bubble.png"
+layeredimage rori soyface:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori soyface.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori drunk alert:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori drunk alert.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
 layeredimage rori cheery:
     at sprite_highlight('rori')
     always:
@@ -1836,6 +1866,17 @@ layeredimage rori pantsless:
 
 
 
+layeredimage rose skirt handonhip annoyed:
+    at sprite_highlight('rose')
+    always:
+        'images/characters/rose/rose skirt handonhip annoyed.png'
+        xzoom -1
+    group saying:
+        xzoom .9
+        yzoom .9
+        pos (625,-62)
+        attribute say:
+            "images/bubble.png"
 layeredimage rose skirt armscrossed dismissive pendant:
     at sprite_highlight('rose')
     always:
