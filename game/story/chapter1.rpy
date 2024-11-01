@@ -315,8 +315,6 @@ label college_orientation:
 
     stop music fadeout 2.0
 
-    margaret "saying without \@say"
-
     margaret @ say "            Ahem            "
 
     show margaret happy

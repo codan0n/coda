@@ -1350,8 +1350,8 @@ label beauty_and_the_beast:
     show box with Dissolve(.2):
         ypos 0
 
-    n "You're woken up with a text from Claire."
-    n "Stretching, you reach for your phone and see you have a new message."
+    n "You're woken up by a text notification."
+    n "Stretching, you reach for your phone and see you have a new message from Claire."
 
     call phone_start from _call_phone_start_11
 
@@ -1385,7 +1385,17 @@ label beauty_and_the_beast:
     call message("Claire", "Au revoir!", "claireavi.png") from _call_message_131
 
     call phone_end from _call_phone_end_12
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 
     play music "audio/music/mere - retrograde.ogg" fadein .5
