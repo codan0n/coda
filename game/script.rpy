@@ -154,7 +154,7 @@ define rori = Character("Rori", image="rori", color="#b5d0ff", what_color="#ddd4
 define gunner = Character("Gunner", image="gunner", color="#f7d2ae", what_color="#ff5497", callback=name_callback, cb_name = "gunner", what_font="dudu.ttf")
 define rothbauer = Character("Mr. Rothbauer", image="rothbauer", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
 define herschel = Character("Mrs. Herschel", image="herschel", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
-define celestine = Character("Mrs. Celestine", image="celestine", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
+define celestine = Character("Mrs. Celestine", image="celestine", what_color="d0dbff", callback=name_callback, cb_name = "celestine", what_font="dudu.ttf")
 define kitsuragi = Character("kitsuragi", image="kitsuragi", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
 define volginova = Character("Volginova", image="volginova", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
 define adam = Character("Adam", image="adam", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
@@ -171,6 +171,8 @@ define y_margaret = 1570
 define y_rori = 1565
 define y_rose = 1400
 define y_gunner = 1485
+define y_herschel = 1485
+define y_celestine = 1600
 define y_claire = 1570
 define y_ava = 1465
 define y_mishka = 1550
@@ -215,6 +217,46 @@ layeredimage ava typical neutral:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava typical neutral.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava typical agitated:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava typical agitated.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava typical unamused:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava typical unamused.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava typical unimpressed:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava typical unimpressed.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava typical shocked:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava typical shocked.png'
     group saying:
         xzoom .9
         yzoom 1.0
@@ -1129,11 +1171,11 @@ layeredimage margaret happy:
 layeredimage margaret sad:
     at sprite_highlight('margaret')
     always:
+        'images/characters/margaret/margaret sad.png'
+    group saying:
         xzoom .9
         yzoom .75
         pos (0,88)
-        'images/characters/margaret/margaret sad.png'
-    group saying:
         attribute say:
             "images/bubble.png"
 layeredimage margaret smoking neutral:
@@ -1794,115 +1836,47 @@ layeredimage rori pantsless:
 
 
 
-layeredimage rose neutral:
-    at sprite_highlight('rose')
-    always:
-        'images/characters/rose/rose neutral.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
 layeredimage rose skirt armscrossed dismissive pendant:
     at sprite_highlight('rose')
     always:
         'images/characters/rose/rose skirt armscrossed dismissive pendant.png'
     group saying:
+        xzoom -.9
+        yzoom .9
+        pos (625,-62)
         attribute say:
             "images/bubble.png"
-layeredimage rose flustered:
+layeredimage rose skirt armscrossed shy pendant:
     at sprite_highlight('rose')
     always:
-        'images/characters/rose/rose flustered.png'
+        'images/characters/rose/rose skirt armscrossed shy pendant.png'
     group saying:
+        xzoom -.9
+        yzoom .9
+        pos (625,-62)
         attribute say:
             "images/bubble.png"
-layeredimage rose armscrossed smug:
+layeredimage rose skirt handonhip shy pendant:
     at sprite_highlight('rose')
     always:
-        'images/characters/rose/rose armscrossed smug.png'
+        'images/characters/rose/rose skirt handonhip shy pendant.png'
     group saying:
+        xzoom -.9
+        yzoom .9
+        pos (625,-62)
         attribute say:
             "images/bubble.png"
-layeredimage rose armscrossed grin:
+layeredimage rose skirt furiouspose pendant:
     at sprite_highlight('rose')
     always:
-        'images/characters/rose/rose armscrossed grin.png'
+        'images/characters/rose/rose skirt furiouspose pendant.png'
     group saying:
+        xzoom -.9
+        yzoom .9
+        pos (625,-62)
         attribute say:
             "images/bubble.png"
-layeredimage rose armscrossed neutral:
-    at sprite_highlight('rose')
-    always:
-        'images/characters/rose/rose armscrossed neutral.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage rose armscrossed angry:
-    at sprite_highlight('rose')
-    always:
-        'images/characters/rose/rose armscrossed angry.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage rose armscrossed furious:
-    at sprite_highlight('rose')
-    always:
-        'images/characters/rose/rose armscrossed furious.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage rose neutral pendant:
-    at sprite_highlight('rose')
-    always:
-        'images/characters/rose/rose neutral pendant.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage rose angry:
-    at sprite_highlight('rose')
-    always:
-        'images/characters/rose/rose angry.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-    group knifing:
-        attribute roseknife:
-            "images/characters/rose/roseknife.png"
-layeredimage rose furious:
-    at sprite_highlight('rose')
-    always:
-        'images/characters/rose/rose furious.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage rose smug:
-    at sprite_highlight('smug')
-    always:
-        'images/characters/rose/rose smug.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage rose grin:
-    at sprite_highlight('rose')
-    always:
-        'images/characters/rose/rose grin.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage rose unimpressed:
-    at sprite_highlight('rose')
-    always:
-        'images/characters/rose/rose unimpressed.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage rose athletic:
-    at sprite_highlight('rose')
-    always:
-        'images/characters/rose/rose athletic.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-        
+
     
 layeredimage rothbauer:
     at sprite_highlight('rothbauer')
@@ -2056,6 +2030,7 @@ label start:
         ypos 1095
         xzoom 1
         linear .05 ypos 1080
+
 
     transform shudder:
         xoffset 5
