@@ -2826,7 +2826,7 @@ label thirdDayOfClassStats:
 
         claire @ say "Not to mention besties~"
         
-        ava @ say "As close to besties as we can be after knowing each other for less than a week."
+        ava @ say "As close to besties as we can be after knowing each other for less than a week haha."
         
         claire @ say "Is this what you meant when you said you'd be busy today, [name]?"
         claire @ say "You should have told me you were taking stats! I got an A in my advanced statistics and stochastic processes in high school! I'd be down to explain it to you guys!"

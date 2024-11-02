@@ -188,12 +188,146 @@ label nightWalks:
     
 label genericNightwalk:
     "You walk around campus but don't find anything interesting. It clears your mind and is refreshing to walk alone in the cool air."
+    "After a while it begins to feel a bit *too* lonely though."
+    "You'll have to enjoy an evening stroll with one of your friends next time."
     
     return
 
 label mishkaGarden:
-    "mishka garden scene"
-
+    $ gardenEvents.remove("mishkaGarden")
+    
+    #summer only?
+    #different scenes for each season?
+    
+    "Gonna check out the campus gardens. You paid for these flowers, might as well enjoy them."
+    "Well, your tuition paid for it, which was awarded to you for circumstances beyond your control, but regardless you're practically a stock holder in this situation."
+    "That is to say, you own these flowers as much as anyone else on this campus and you're going to stop and smell the roses dammit."
+    "When you find the rose bushes, the ground is littered with thorny stems that appear to have been cut."
+    "A nearby worker is trimming the pieces that have grown and intruded upon the walkway."
+    "She missed a few and one of them happened to brush against your leg, sticking its hooked thorn into your flesh."
+    
+    player "Ow! Fuck."
+    
+    "The worker turns around, wielding a pair of pruning shears."
+    
+    show mishka neutral with dissolve
+    
+    mishka @ say "Hm?"
+    mishka @ say "Oh, it's you."
+    mishka @ say "Please be careful, the roses bite."
+    
+    n "She comes over and snips the stem for you. You pull it out of your skin and toss it aside."
+    
+    player "Mishka? What are you doing here?"
+    
+    mishka @ say "Isn't it obvious? I'm cutting the roses so they don't attack anyone."
+    
+    player "Is this like, part of your cafe responsibilities?"
+    
+    mishka @ say "What? No!"
+    mishka @ say "I do this for enjoyment."
+    mishka @ say "The garden is managed by volunteers. It won't look as pretty if no one comes to help, so I do what I can."
+    
+    player "Must have a lot of volunteers then. This place is huge!"
+    
+    "Mishka shrugs."
+    
+    mishka @ say "Just me and a couple of others."
+    
+    "She steps back and looks at the field of trimmed roses and their fallen stems lying in the dirt."
+    
+    mishka @ say "And now to clean up this mess."
+    
+    n "Mishka begins picking up the debris with a gloved hand, piece by piece tossing them into a sack."
+    
+    menu:
+        "Offer to help":
+            "This is a lot for one person. If she can do it, so can you."
+            "You carefully pick up some rose stems from the ground, trying not to let their thorns dig into your supple flesh."
+            
+            mishka @ say "What are you doing?"
+            
+            player "Isn't it obvious? I'm helping clean up this area."
+            player "You said it was all volunteer work, right?"
+            
+            "Mishka's surprise fades away into a soft smile."
+            
+            mishka @ say "At least let me get you some gloves so you don't get pricked!"
+            
+            "The rat runs off to a shed to fetch supplies for you."
+            "When she comes back, she hands you a pair of gloves and a sack to toss the stems into."
+            
+            mishka @ say "There you go! Now you're officially a volunteer too haha!"
+            
+            player "At least for today."
+            
+            n "The two of you make good time going along and picking up the debris."
+            n "The thorns stick out through the fabric of the bag so you still have to be careful not to let it bump into you."
+            
+            player "Sure are a lot of roses, huh?"
+            
+            mishka @ say "Yes. I plant them every spring."
+            mishka @ say "I hate having to prune them in the summer but if I don't, they grow unruly."
+            mishka @ say "...And it's a lot of work."
+            
+            player "I can imagine..."
+            
+            n "After cleaning up, the two of you admire the scenery. The rose bushes look nice with their new haircut."
+            
+            mishka @ say "Thanks for helping! I would have been out here all day if not for you!"
+            
+            player "I figured. I couldn't just let you do it all on your own."
+            
+            mishka @ say "Consider your next coffee free hehe~"
+            
+            player "I guess volunteer work does pay after all!"
+            
+            mishka @ say "I still have a few more things to take care of before going home but it was nice seeing you, [name]."
+            
+            player "Yeah, it was nice seeing you too. I had no idea you did this sort of thing."
+            
+            mishka @ say "Well now you know haha!"
+            mishka @ say "I'm here a lot actually..."
+            
+            player "Maybe I'll see you here and help out again."
+            
+            mishka @ say "That would be great! The garden always needs more volunteers!"
+            mishka @ say "See you around!"
+            
+            player "See ya!"
+            
+            hide mishka with dissolve
+            
+            "Mishka hauls the bags full of rose trimmings into the shed."
+            "It's getting dark out. You should probably head back to your dorm."
+            
+        "You'll just get in the way":
+            "Not like you can help her anyway. Not without a pair of gloves."
+            "Instead you akwardly stand around, trying to think of something to say and not just stare at her while she works."
+    
+            player "Sure are a lot of roses, huh?"
+            
+            mishka @ say "Yes. I plant them every spring."
+            mishka @ say "I hate having to prune them in the summer but if I don't, they grow unruly."
+            mishka @ say "...And it's a lot of work."
+            
+            player "Well I don't wanna get in your way. I'll leave you to it then."
+            player "It's a very nice garden by the way!"
+            
+            mishka @ say "Thanks~"
+            mishka @ say "I try to make it better."
+            
+            player "You're doing a great job. See you at the cafe later, Mishka!"
+            
+            mishka @ say "See you!"
+            
+            hide mishka with dissolve
+            
+            
+    return
+    
+label trishGarden:
+    "trish garden scene"
     return
     
 label avaGarden:
@@ -210,7 +344,7 @@ label roseForest:
     return
 
 label roriTrack:
-    "rori track scene"
+    $ trackEvents.remove("roriTrack")
     #only on cloudy and overcast days
     
     n "You once again make your way to the fitness area on the off chance you might feel motivated to work out."
@@ -237,6 +371,7 @@ label roriTrack:
     
 
 label gunnerTrack:
+    $ trackEvents.remove("gunnerTrack")
     #check if gunnerTrack number x has been seen yet and play the next one. Use a day counter to prevent this scene from being able to be played 2 days in a row
     
     #$ gunnerTrackNumber += 1
