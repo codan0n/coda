@@ -142,7 +142,8 @@ label chapter1:
     show box with Dissolve(.2):
         ypos 0
         
-    show nicodemus neutral at center with dissolve
+    show nicodemus neutral at center with dissolve:
+        ypos y_nicodemus
     
     nicodemus @ say "...that about concludes our tour of Harmonia's campus. What did you think? Not too pretentious, I hope! Bahahaha!"
     nicodemus @ say "I'm reminded of when I was a new student here myself. A bit nervous but so full of wonder and excitement! It felt like anything was possible!"

@@ -199,6 +199,11 @@ label mishkaGarden:
     #summer only?
     #different scenes for each season?
     
+    scene bg garden with fade
+    
+    show box with Dissolve(.2):
+        ypos 0
+    
     "Gonna check out the campus gardens. You paid for these flowers, might as well enjoy them."
     "Well, your tuition paid for it, which was awarded to you for circumstances beyond your control, but regardless you're practically a stock holder in this situation."
     "That is to say, you own these flowers as much as anyone else on this campus and you're going to stop and smell the roses dammit."
@@ -210,7 +215,8 @@ label mishkaGarden:
     
     "The worker turns around, wielding a pair of pruning shears."
     
-    show mishka neutral with dissolve
+    show mishka neutral at center with dissolve:
+        ypos y_mishka
     
     mishka @ say "Hm?"
     mishka @ say "Oh, it's you."
@@ -234,7 +240,7 @@ label mishkaGarden:
     
     mishka @ say "Just me and a couple of others."
     
-    "She steps back and looks at the field of trimmed roses and their fallen stems lying in the dirt."
+    n "She steps back and looks at the field of trimmed roses and their fallen stems lying in the dirt."
     
     mishka @ say "And now to clean up this mess."
     
@@ -273,6 +279,8 @@ label mishkaGarden:
             player "I can imagine..."
             
             n "After cleaning up, the two of you admire the scenery. The rose bushes look nice with their new haircut."
+      
+            show mishka happy
             
             mishka @ say "Thanks for helping! I would have been out here all day if not for you!"
             

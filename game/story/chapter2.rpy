@@ -1396,6 +1396,135 @@ label beauty_and_the_beast:
     
     
     
+    #make ellen gentler
+    
+    n "Out of the corner of your eye you see Miss Ellen disappear into the stairwell."
+    n "That's odd, it looked like she was heading upstairs even though this is the top floor."
+    n "Curious, you decide to trail her."
+
+    scene bg roof with fade
+
+    #play music "audio/ai2.ogg" fadein 1.0
+    #play music "audio/music/Evan Schaeffer - Katje's Song.ogg" fadein 1.0
+    play music "audio/music/vylet - glamour.ogg"
+
+    show box with Dissolve(.2):
+        ypos 0
+
+    #n "On your way to class, you happened to pass by Miss Ellen. As you turned around to ask her a question, she disappeared around a corner."
+    #n "When you doubled back to catch up to her, you found the hallway she entered was empty. All that was there was the rooftop access stairway."
+    #n "Curious to see what business she had on the roof, you climbed the stairs and were met with a gust wind, blowing cigarette smoke directly into your face."
+    #n "It's pretty windy up here. A gust of wind suddenly blows what smells like cigarette smoke into your face."
+    
+    n "The stairwell lead you up to the rooftop, where you're immediately met with a puff of cigarette smoke blowing into your face."
+
+    show margaret smoking intrigued at center with dissolve
+
+    ellen @ say "Hm? [name]? You shouldn't be up here."
+
+    n "You point at the no smoking sign on the wall."
+
+    player "I'm pretty sure you're not supposed to be up here either."
+    
+    show margaret smoking laugh
+
+    ellen @ say "Pah, ya got me. I promise not to rat you out if you don't say anything."
+
+    player "Deal."
+    
+    show margaret smoking neutral
+
+    n "You lean on the wall next to her."
+
+    player "What are you doing up here anyway?"
+
+    ellen @ say "What's it look like? I'm relaxing."
+
+    player "Is teaching really that stressful?"
+
+    ellen @ say "Psh, hell no. But I've got other things on my mind."
+
+    player "Like what?"
+    
+    show margaret sad smoking
+
+    ellen @ say "Private things."
+
+    player "Oh."
+
+    ellen @ say "What about you?"
+
+    show ellen smoking
+
+    player "Oh I just came up cause the door was open and-"
+
+    ellen @ say "No I mean, what have you got going on."
+
+    player "Excuse me?"
+
+    ellen @ say "I've taught hundreds of students, I can tell when one of them is struggling with something in their life."
+    ellen @ say "Especially when they pass out and fall out of their chair in the middle of class."
+
+    player "Oh right. That."
+
+    menu:
+        player "{cps=0}Oh right. That.{/cps=0}"
+        "I'm dying":
+            #finished
+            $ ellenPoints = ellenPoints + 1
+
+            show bg static2
+            pause .02
+            show bg roof
+
+            player "I'm dying."
+
+            ellen @ say "..."
+
+            n "Ellen's expression doesn't change."
+
+            ellen @ say "What, for real?"
+
+            player "Yeah."
+
+            ellen @ say "Damn, that sucks."
+
+            player "Tell me about it."
+
+            ellen @ say "I'm kinda having a mid life crisis so I probably could, but class begins in 5 minutes."
+
+            n "Miss Ellen throws her cigarette to the ground and steps on it."
+
+            show margaret smoking neutral
+
+            ellen @ say "If you wanna talk about it more, my number's on the syllabus. I'll listen to whatever you have to say."
+        "Don't wanna talk about it.":
+            #finished
+            player "Umm, I dunno if I'm ready to talk about that with anyone yet."
+
+            ellen @ say "That's fair."
+
+            n "Miss Ellen throws her cigarette to the ground and steps on it."
+            
+            show margaret smoking neutral
+
+            ellen @ say "I can tell something's seriously bothering you though. My number's on the syllabus if you ever wanna talk."
+
+    n "She walks past you, her fluffy tail brushing against your arm as she descends the staircase back inside the building."
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 
     play music "audio/music/mere - retrograde.ogg" fadein .5
