@@ -11589,6 +11589,8 @@ label ellen_rooftop1:
     #n "Curious to see what business she had on the roof, you climbed the stairs and were met with a gust wind, blowing cigarette smoke directly into your face."
     #n "It's pretty windy up here. A gust of wind suddenly blows what smells like cigarette smoke into your face."
     
+    ###give ellen a gentler tone
+    
     n "The stairwell lead you up to the rooftop, where you're immediately met with a puff of cigarette smoke blowing into your face."
 
     show margaret smoking intrigued at center with dissolve
