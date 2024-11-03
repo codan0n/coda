@@ -142,7 +142,8 @@ label chapter1:
     show box with Dissolve(.2):
         ypos 0
         
-    show nicodemus neutral at center with dissolve
+    show nicodemus neutral at center with dissolve:
+        ypos y_nicodemus
     
     nicodemus @ say "...that about concludes our tour of Harmonia's campus. What did you think? Not too pretentious, I hope! Bahahaha!"
     nicodemus @ say "I'm reminded of when I was a new student here myself. A bit nervous but so full of wonder and excitement! It felt like anything was possible!"
@@ -2826,7 +2827,7 @@ label thirdDayOfClassStats:
 
         claire @ say "Not to mention besties~"
         
-        ava @ say "As close to besties as we can be after knowing each other for less than a week."
+        ava @ say "As close to besties as we can be after knowing each other for less than a week haha."
         
         claire @ say "Is this what you meant when you said you'd be busy today, [name]?"
         claire @ say "You should have told me you were taking stats! I got an A in my advanced statistics and stochastic processes in high school! I'd be down to explain it to you guys!"
