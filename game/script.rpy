@@ -1489,10 +1489,10 @@ layeredimage mishka silly wink:
         pos (-70,-7)
         attribute say:
             "images/bubble.png"
-layeredimage mishka sad wave:
+layeredimage mishka wave sad:
     at sprite_highlight('mishka')
     always:
-        'images/characters/mishka/mishka sad wave.png'
+        'images/characters/mishka/mishka wave sad.png'
     group saying:
         xzoom .95
         yzoom 1
@@ -1659,6 +1659,26 @@ layeredimage rori neutral:
     at sprite_highlight('rori')
     always:
         'images/characters/rori/rori neutral.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori neutral lookingaway:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori neutral lookingaway.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori sleepy blushing:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori sleepy blushing.png'
     group saying:
         xzoom .75
         yzoom .6
@@ -1872,9 +1892,8 @@ layeredimage rose skirt handonhip annoyed:
     at sprite_highlight('rose')
     always:
         'images/characters/rose/rose skirt handonhip annoyed.png'
-        xzoom -1
     group saying:
-        xzoom .9
+        xzoom -.9
         yzoom .9
         pos (625,-62)
         attribute say:
@@ -11536,6 +11555,56 @@ label friendly_hangout:
     #___thursday6
 label ellen_rooftop1:
     #finished
+    
+    
+    
+    
+    player "Oh right. That."
+
+    menu:
+        player "{cps=0}Oh right. That.{/cps=0}"
+        "I'm dying":
+            #finished
+            $ ellenPoints = ellenPoints + 1
+
+            show bg static2
+            pause .02
+            show bg roof
+
+            player "I'm dying."
+
+            ellen @ say "..."
+
+            n "Ellen's expression doesn't change."
+
+            ellen @ say "What, for real?"
+
+            player "Yeah."
+
+            ellen @ say "Damn, that sucks."
+
+            player "Tell me about it."
+
+            ellen @ say "I'm kinda having a mid life crisis so I probably could, but class begins in 5 minutes."
+
+            n "Miss Ellen throws her cigarette to the ground and steps on it."
+
+            show margaret smoking neutral
+
+            ellen @ say "If you wanna talk about it more, my number's on the syllabus. I'll listen to whatever you have to say."
+        "Don't wanna talk about it.":
+            #finished
+            player "Umm, I dunno if I'm ready to talk about that with anyone yet."
+
+            ellen @ say "That's fair."
+
+            n "Miss Ellen throws her cigarette to the ground and steps on it."
+            
+            show margaret smoking neutral
+
+            ellen @ say "I can tell something's seriously bothering you though. My number's on the syllabus if you ever wanna talk."
+
+    n "She walks past you, her fluffy tail brushing against your arm as she descends the staircase back inside the building."
 
     scene bg schoolhallways with fade
 

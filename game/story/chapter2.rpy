@@ -1386,41 +1386,32 @@ label beauty_and_the_beast:
 
     call phone_end from _call_phone_end_12
     
+    n "With that, you pack your things and get ready for class."
     
+    scene bg schoolhallways with fade
     
+    n "Looks like you're early today. So early that the previous class is still in session."
+    n "What else is there to do other than loiter around waiting for your class to begin?"
+    n "You wander around the halls, reading bulletin boards and mindlessly scrolling back and forth on your phone's home screen."
+    n "The vending machine on this floor is out of your preferred snack. Maybe the one on the floor below you has it in stock?"
+    n "As you push past the stairwell doors, you catch sight of an orange tail turning the corner on the stairs above."
+    n "That's odd, this is the top floor. All thats above here is the rooftop level."
+    n "Perhaps the rooftop access is unlocked? This warrants an investigation."
     
-    
-    
-    
-    
-    
-    
+    scene bg roof with fade
     
     #make ellen gentler
     
-    n "Out of the corner of your eye you see Miss Ellen disappear into the stairwell."
-    n "That's odd, it looked like she was heading upstairs even though this is the top floor."
-    n "Curious, you decide to trail her."
-
-    scene bg roof with fade
-
-    #play music "audio/ai2.ogg" fadein 1.0
-    #play music "audio/music/Evan Schaeffer - Katje's Song.ogg" fadein 1.0
     play music "audio/music/vylet - glamour.ogg"
 
     show box with Dissolve(.2):
         ypos 0
 
-    #n "On your way to class, you happened to pass by Miss Ellen. As you turned around to ask her a question, she disappeared around a corner."
-    #n "When you doubled back to catch up to her, you found the hallway she entered was empty. All that was there was the rooftop access stairway."
-    #n "Curious to see what business she had on the roof, you climbed the stairs and were met with a gust wind, blowing cigarette smoke directly into your face."
-    #n "It's pretty windy up here. A gust of wind suddenly blows what smells like cigarette smoke into your face."
+    n "A gust of wind blows into your face as you open the rooftop door, reeking of cigarette smoke."
     
-    n "The stairwell lead you up to the rooftop, where you're immediately met with a puff of cigarette smoke blowing into your face."
-
     show margaret smoking intrigued at center with dissolve
 
-    ellen @ say "Hm? [name]? You shouldn't be up here."
+    margaret @ say "Hm? [name]? You shouldn't be up here."
 
     n "You point at the no smoking sign on the wall."
 
@@ -1428,7 +1419,7 @@ label beauty_and_the_beast:
     
     show margaret smoking laugh
 
-    ellen @ say "Pah, ya got me. I promise not to rat you out if you don't say anything."
+    margaret @ say "Bah, ya got me. I promise not to rat you out if you don't say anything."
 
     player "Deal."
     
@@ -1438,101 +1429,76 @@ label beauty_and_the_beast:
 
     player "What are you doing up here anyway?"
 
-    ellen @ say "What's it look like? I'm relaxing."
+    margaret @ say "What's it look like? I'm on break."
 
-    player "Is teaching really that stressful?"
+    player "Didn't think you were the type to smoke."
+    
+    margaret @ say "I'm not. Or at least I wasn't. I've just got things on my mind."
 
-    ellen @ say "Psh, hell no. But I've got other things on my mind."
-
-    player "Like what?"
+    player "Such as?"
     
     show margaret sad smoking
 
-    ellen @ say "Private things."
+    margaret @ say "Private things."
 
     player "Oh."
 
-    ellen @ say "What about you?"
+    margaret @ say "What about you?"
 
-    show ellen smoking
+    show margaret smoking
 
-    player "Oh I just came up cause the door was open and-"
+    player "Oh I just came up here cause I was curious if the door was unlocked and-"
 
-    ellen @ say "No I mean, what have you got going on."
+    margaret @ say "No I mean, what have you got going on."
 
     player "Excuse me?"
 
-    ellen @ say "I've taught hundreds of students, I can tell when one of them is struggling with something in their life."
-    ellen @ say "Especially when they pass out and fall out of their chair in the middle of class."
-
-    player "Oh right. That."
-
-    menu:
-        player "{cps=0}Oh right. That.{/cps=0}"
-        "I'm dying":
-            #finished
-            $ ellenPoints = ellenPoints + 1
-
-            show bg static2
-            pause .02
-            show bg roof
-
-            player "I'm dying."
-
-            ellen @ say "..."
-
-            n "Ellen's expression doesn't change."
-
-            ellen @ say "What, for real?"
-
-            player "Yeah."
-
-            ellen @ say "Damn, that sucks."
-
-            player "Tell me about it."
-
-            ellen @ say "I'm kinda having a mid life crisis so I probably could, but class begins in 5 minutes."
-
-            n "Miss Ellen throws her cigarette to the ground and steps on it."
-
-            show margaret smoking neutral
-
-            ellen @ say "If you wanna talk about it more, my number's on the syllabus. I'll listen to whatever you have to say."
-        "Don't wanna talk about it.":
-            #finished
-            player "Umm, I dunno if I'm ready to talk about that with anyone yet."
-
-            ellen @ say "That's fair."
-
-            n "Miss Ellen throws her cigarette to the ground and steps on it."
-            
-            show margaret smoking neutral
-
-            ellen @ say "I can tell something's seriously bothering you though. My number's on the syllabus if you ever wanna talk."
-
-    n "She walks past you, her fluffy tail brushing against your arm as she descends the staircase back inside the building."
-
+    margaret @ say "I've taught hundreds of students, I can tell when one of them is struggling with something in their life."
+    margaret @ say "Especially when they pass out and fall out of their chair in the middle of class."
     
+    player "I don't... think anything is wrong?"
     
+    margaret @ say "Hm."
     
+    n "She takes a drag from her cigarette."
     
+    margaret @ say "Or perhaps you don't know yet?"
+    margaret @ say "In that case..."
     
+    n "She pushes her cigarette tip against the cool concrete wall, smothering it and letting it fall to the floor."
     
+    margaret @ say "Class is about to begin. See you there."
     
+    n "She walks past you, her fluffy tail brushing against your arm before she descends the staircase back into the building."
+    n "Stunned, you stand in the breeze, motionless and thoughtless."
+    n "What was that all about?"
+    n "You hardly have time to ponder it, you have to get to class."
     
+    scene bg lecturehall with fade
+
+    play music "audio/music/mere - retrograde.ogg" fadein .5
+
+    show box with Dissolve(.2):
+        ypos 0
+        
+    show margaret happy at center with dissolve:
+        ypos y_margaret
+        
+    margaret @ say "That's all for today! See you all later this week! And don't forget to read ahead!"
     
+    hide margaret with dissolve
     
-    
-    
-    
-    
+    n "You give Ms. Ellen a glance as you're walking out but she's busy with a stack of papers."
+    n "She didn't seem like herself on the roof earlier."
+    n "Or perhaps she's not herself when she's lecturing."
+    n "You kinda wanna talk to her more but you have to hurry to your next class."
 
     play music "audio/music/mere - retrograde.ogg" fadein .5
 
     show box with Dissolve(.2):
         ypos 0
 
-    n "As you walk into French class you notice the projector displaying the DVD menu for the film Claire mentioned you were gonna watch today."
+    n "As you walk into the classroom you notice the projector displaying the DVD menu for the film Claire mentioned you were gonna watch today."
     n "Not even a BlueyRay... Where does Harmonia's budget even go towards??"
 
     show claire sweater wave at center with dissolve:

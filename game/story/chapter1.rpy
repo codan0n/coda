@@ -230,7 +230,8 @@ label nicodemusQuestions:
             show box with Dissolve(.2):
                 ypos 0      
                 
-            show nicodemus neutral at center with dissolve
+            show nicodemus neutral at center with dissolve:
+                ypos y_nicodemus
             
             nicodemus @ say "He was a good friend, someone you could always count on. But as time went on, the burden of being the last of his kind got to him."
             nicodemus @ say "He withdrew himself from everyone and eventually withered away, like some forgotten flower. I'd hate for you to suffer the same fate."
@@ -1746,7 +1747,8 @@ label firstDayOfClass:
         n "Nobody else is brave enough to sit in the front row, leaving you no choice but to take a seat there."
         n "Somone sits right next to you and starts chatting you up like you're best friends."
         
-        show gunner neutral at center with dissolve
+        show gunner neutral at center with dissolve:
+            ypos y_gunner
         
         gunner @ say "Yeah so summer vacation was pretty lit. Went on this week long fishing trip on my dad's yacht with the bros and my portfolio is up 20\% from the start of the quarter."
 
@@ -2734,7 +2736,8 @@ label thirdDayOfClassStats:
     else:
         n "As you're walking around campus thinking about where to get lunch, Gunner comes running up behind you."
 
-        show gunner neutral at center with dissolve
+        show gunner neutral at center with dissolve:
+            ypos y_gunner
 
         gunner @ say "[name]! Wait up!"
 
@@ -2769,11 +2772,12 @@ label thirdDayOfClassStats:
         show box with Dissolve(.2):
             ypos 0
 
-        show gunner neutral at center with moveinright
+        show gunner neutral at center with moveinright:
+            ypos y_gunner
         
-        show mishka neutral:
-            yalign 0
-            xpos -1500
+        show mishka neutral at center:
+            xoffset -1700
+            ypos y_mishka
 
         gunner @ say "This is my secret study spot. I like coming here cause it's quiet and the smell of coffee keeps me awake."
         
@@ -3460,25 +3464,42 @@ label afterAvaText1:
         player "I could ask you the same thing."
         
         rori @ say "I'm just out for a walk. I always do this when I get stuck on something and need a moment away from it."
+        
+        show rori cheery
+        
         rori @ say "It lets me come back to it with a fresh perspective."
         
         player "Did you loonix install break again?"
         
+        show rori neutral
+        
         rori @ say "..."
+        
+        show rori sleepy blushing
+        
         rori @ say "... Yes."
+        
+        show rori neutral lookingaway
+        
         rori @ say "B-but I can fix it!"
         
         player "Then why are you out here instead of fixing it?"
         
+        show rori neutral -lookingaway
+        
         rori @ say "Because I'm thinking."
         
         player "About?"
+        
+        show rori anxious
         
         rori @ say "About... well, nevermind. It's dumb."
         
         menu:
             "It's probably not dumb":
                 player "If you're thinking about it so hard, it's probably not dumb."
+                
+                show rori concerned
                 
                 rori @ say "I dunno..."
                 rori @ say "I'm just wondering if I'm wasting my time."
@@ -3498,6 +3519,8 @@ label afterAvaText1:
                 
             "Think about something else then":
                 player "Have you tried thinking about something else?"
+                
+                show rori concerned
     
                 rori @ say "Yeah but my thoughts usually end up back to wondering if I'm wasting my time."
                 
@@ -4516,7 +4539,6 @@ label sunday2:
     
     show rose skirt handonhip annoyed at center with dissolve:
         xoffset -400
-        xzoom -1
         ypos y_rose
 
     rose @ say "Watch where you're going."
