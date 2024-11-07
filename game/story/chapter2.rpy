@@ -1779,6 +1779,12 @@ label hospital_bound:
         "Two days?!":
             player "Two days?! There goes my attendance record."
             
+            kitsuragi @ say "Your friend here waited by your side the whole time."
+            
+            player "Aww thanks Rori, you didn't have to do that."
+            
+            rori @ say "It's alright. I didn't want you to be alone."
+            
             kitsuragi @ say "You can get caught up on your studies over the weekend. There are more pressing matters to tend to right now."
         "I can walk fine":
             player "I can walk just fine. See?"
@@ -1793,35 +1799,11 @@ label hospital_bound:
             
             player "See? Perfectly normal."
             
+            kitsuragi @ say "Riiiight..."
             
-            
+    kitsuragi @ say "In any case, I would encourage you to return home, Rori. Don't worry, we'll keep a close eye on [name]."
 
-
-
-
-
-
-    # you were unconscious for a whole day
-    # doctor asks about your symptoms but you note that the hallucinations and schizophrenia run in the family
-    # can try to escape the hospital later but fail
-
-
-    kitsuragi @ say "You should thank your friend here. Not only did he carry you here, but he stayed overnight waiting for you to wake up."
-
-    player "I guess that is a lot to do for someone you barely know... Thanks Rori."
-    
-    show rori neutral
-
-    rori @ say "Oh it was nothing, really! If anything, you saved me from going to class!"
-
-    player "Heh. Yeah."
-    #player "Wait did you say you've been here since yesterday?"
-
-    #rori @ say "Yeah! I was starting to wonder if you'd ever wake up!"
-
-    kitsuragi @ say "In any case, I would encourage you to return home, Rori. We'll keep a close eye on [name]."
-
-    rori @ say "Hmm... Alright."
+    rori @ say "Aww... Alright."
 
     n "Rori looks somewhat disappointed but understanding."
 
@@ -1834,7 +1816,7 @@ label hospital_bound:
     n "You tell him your number and he types it into his contact list."
 
     rori @ say "Aaaaand done!"
-    rori @ say "Well, I'll let you get some rest now. Hope you feel better soon!"
+    rori @ say "See you later [name]. Hope you feel better soon!"
 
     player "Thanks Rori!"
 
@@ -1842,26 +1824,51 @@ label hospital_bound:
 
     hide rori with dissolve
 
-    n "The kitsuragi waits for Rori to be out of earshot before sighing and turning to you."
+    n "The doctor waits for Rori to be out of earshot before sighing and turning to you."
+    
+    kitsuragi @ say "Is there anything else you've experienced lately? Hallucinations perhaps?"
+    
+    player "Nah but schizophrenia does run in the family."
+    
+    kitsuragi @ say "I see."
+    
+    n "She produces a small pen light from her coat pocket and turns it on."
+    
+    kitsuragi @ say "Please bear with me. This will be uncomfortable but try to look straight ahead. You will be blinded momentarily but this won't cause permanent damage."
+    
+    n "You don't say anything. You just brace yourself and let the doctor shine a cool white beam of light directly into your eyes, one at a time."
+    n "The light shuts off but it takes a while for your vision to return."
+    
+    player "What did you see?"
+    
+    kitsuragi @ say "Hm."
+    
+    n "She's busy writing a long winded note on her clipboard, the sound of a ballpoint pen scratching against paper bouncing off the walls as you wait in unbearable anticipation."
+    n "Eventually, she clicks her pen and sighs."
 
     kitsuragi @ say "Given your... situation..."
     kitsuragi @ say "I don't want to jump to conclusions, but you know what these symptoms remind me of?"
 
-    player "Yeah... I figured it was only a matter of time but I never expected it to happen so soon."
+    player "Yeah..."
+    
+    n "You look down."
+    n "You had always known this moment would come, but nothing could ever prepare you for it. So you chose to ignore it until now."
+    n "Can't exactly ignore something that's staring you in the face, can you?"
+    
+    player "I figured it was only a matter of time but I never expected it to start so soon."
 
-    kitsuragi @ say "Hey, we still don't know it's that for sure. It could be anything."
+    kitsuragi @ say "Hey, all I have to go on is a hunch. I haven't even taken your blood for testing or anything yet."
     kitsuragi @ say "We'll get started on some tests soon. There's no point in worrying until we have a proper diagnosis."
     kitsuragi @ say "I'll be back in a little bit."
 
     hide kitsuragi with dissolve
-
-    n "The disease that took your parents' lives, as well as the lives of billions of humans... could you be experiencing its effects?"
-    n "Nihil syndrome... Not much is even known about it. Nobody knows where it came from, how it's contracted, or how to cure it."
-    n "It just showed up one day and only affects humans. Even people who were completely isolated somehow got infected."
-    n "Evidence suggests it's a flaw in your DNA, like a ticking time bomb for humanity but some claim it's alien in origin."
-    n "Others believe it's a government conspiracy to wipe out humanity. Or maybe it's retribution from God."
-    n "You don't really know what to believe."
+    
+    n "The disease that took your parents' lives, as well as the lives of billions of humans over the past one hundred and fifty years, rendering them to the brink of extinction... "
+    n "Has it come to take you as well?"
+    n "You were vaccinated against the most recent known strain when you were little, but it has a tendency to mutate rapidly."
     n "Maybe you are just jumping to conclusions. There's still no confirmation you have it. For now."
+    n "There's a knock on the door and Dr. Kitsuragi returns with a cart full of testing equipment."
+    n "This is going to take a while."
 
     #stop music fadeout 1.0
 
@@ -1870,7 +1877,6 @@ label hospital_bound:
     scene bg black with fade
 
     hide box
-
 
     #___friday2
 
@@ -1910,37 +1916,27 @@ label hospital_bound:
     call phone_end from _call_phone_end_3
 
     n "Gunner is probably still lost in that class. Maybe you should work on the homework so you don't fall too far behind."
-    n "..."
-    n "Or you could feed your addiction to trolling on Sudanese ceremonial rug weaving image boards."
 
-    show phonechan1 at center with dissolve:
-        xpos 700
-        ypos 200
+    
 
-    n "You could spend hours doing this."
-    n "In fact, you used to waste your life away on this god forsaken site every day."
-    n "You can't count the number of times you've been banned, but no bioluminescent government officials have shown up at your doorstep so you must be doing something right."
-    #n "As you scroll through, looking for (you)s, something catches your eye."
-    #n "Is that... fanart? Of that story you started writing and posting online in freshman year of high school?"
-    #n "Yup, it's unmistakable, that is definitely your ponysona you made for it. Hey, they were in style at the time."
-    #show ms paint pony on the chan
-    #n "But why would Anonymouse just randomly post that image? It has nothing to do with their post."
-    #n "Maybe they clicked it by accident."
-    #n "Why would they even have it on their hard drive?"
-    #n "Maybe they were a fan? But after all these years, it's hard to imagine someone still cares about that old thing, especially when you can barely remember it."
-    #n "You do remember abandoning it right after posting a gigantic cliffhanger though."
-    #n "Your fans are probably pissed about that lol"
-    #n "Life got in the way though."
-    #n "You got pretty far into development but like everything you've done, it's half baked and left to rot."
-    #n "All the ideas you had for the next update start to trickle back into your head."
-    #n "Maybe once you get out of this hellhole you'll search for that flash drive that had the latest draft on it."
-    #n "You spend a while reminiscing about the times you were semi-internet popular back in the days before you could become a millionaire making reaction videos to projects like this."
-    #n "Oh well. It's getting late. You should try and get some sleep."
+
+
+
+
+
+
+    #your bag is beside the bed, you reach over to unzip it
+    
+    
+    # can try to escape the hospital but fail
+    
+    
+    
+    
+    
     n "Time flies by and it starts getting late. You should try and get some sleep."
 
-    hide phonechan1 with dissolve
-
-    n "You put away your phone and make yourself as comfortable as you can in your dumb little hospital bed and close your eyes."
+    n "You put away your phone and make yourself as comfortable as you can in your tiny hospital bed and close your eyes."
     
     stop music fadeout 1.0
 
@@ -1950,13 +1946,9 @@ label hospital_bound:
 
     hide box
 
-
     #___saturday3
 
     scene bg hospital with fade
-
-    #play music "audio/ai8.ogg" fadein 1.0
-    #play music "audio/music/Evan Schaeffer - React.ogg" fadein 1.0
     
     show box with Dissolve(.2):
         ypos 0
