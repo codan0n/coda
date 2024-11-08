@@ -167,6 +167,7 @@ define lina = Character("lina", image="lina", what_color="d0dbff", callback=name
 define waitress = Character("waitress", image="lina", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
 define nicodemus = Character("Nicodemus", image="nicodemus", what_color="d0dbff", callback=name_callback, cb_name = "nicodemus", what_font="dudu.ttf")
 
+define y_olivia = 1570
 define y_margaret = 1570
 define y_rori = 1565
 define y_rose = 1400

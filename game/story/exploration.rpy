@@ -888,10 +888,11 @@ label oliviaCafe:
 
     n "She wheels herself over to the counter."
 
-    show olivia neutral at norm with move:
+    show olivia neutral at center with move:
         xpos 300
 
-    show mishka neutral at norm with dissolve:
+    show mishka neutral at center with dissolve:
+        ypos y_mishka
         xzoom -1
         xpos 1400
 
