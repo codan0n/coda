@@ -1172,7 +1172,7 @@ label exploring_campus:
         
         show gunner neutral at center with dissolve:
             ypos y_gunner
-            xoffset 350
+            xoffset 375
 
         gunner @ say "Hey there! I saw you checkin' out the frats and thought you should know Alpha Alpha Alpha is the best one!"
         
@@ -1199,7 +1199,7 @@ label exploring_campus:
         
         show rori neutral at center:
             xzoom -1
-            xpos 325
+            xpos 385
             ypos y_rori
         
         rori @ say "Oh, hello again [name]!"
@@ -2370,7 +2370,8 @@ label thirdDayOfClass:
 
     n "Time to learn about the lore of the world."
     
-    show rothbauer at center with dissolve
+    show rothbauer at center with dissolve:
+        ypos y_roth
     
     rothbauer @ say "Good day, class! Today we will be looking at some of the other civilizations that had cropped up around the dawn of humanized history."
     rothbauer @ say "Let's start with one of their closest genetic relatives, the chimpanzees!"
@@ -2425,7 +2426,8 @@ label thirdDayOfClassStats:
     
     gunner @ say "Shit, here comes Mrs. Herschel. She'll fail you if she sees you on your phone. I'll send you a text later."
     
-    show herschel at center with dissolve
+    show herschel at center with dissolve:
+        ypos y_herschel
 
     herschel @ say "Good afternoon class!"
     herschel @ say "We have a lot to go over and precious little time, so let's jump straight into it!"
@@ -3174,7 +3176,8 @@ label avaClaireGunnerLunch:
 
     claire @ say "Ooh, that smells good~"
     
-    show ava typical neutral
+    show ava typical neutral at center:
+        ypos y_ava
     
     claire @ say "What were we talking about just now?"
     
@@ -3221,7 +3224,7 @@ label avaClaireGunnerLunch:
 
     n "After winding down a bit in your dorm, you lie in bed and look at your phone."
     
-    $ cafeEvents.append("claireCafe")
+    ###$ cafeEvents.append("claireCafe")
 
     call phone_start from _call_phone_start_1
 
@@ -3770,6 +3773,7 @@ label thursday1:
             n "She turned her eyes over to you when when Claire crashed through the doorway."            
             
             show ava reaching concerned at center with dissolve:
+                ypos y_ava
                 xoffset -600
                 xzoom -1
             
@@ -4547,19 +4551,19 @@ label sunday2:
 
     n "Rose walks past you but stops at the door."
     
-    show rose unimpressed
+    show rose skirt armscrossed dismissive
 
     rose @ say "Ugh, will this rain ever let up?"
 
     player "Need to be somewhere?"
+    
+    show rose skirt armscrossed annoyed
 
     rose @ say "Yeah, anywhere but here."
 
     player "Didn't you bring an umbrella?"
 
-    show rose angry
-
-    n "She glares at you."
+    n "She silently glares at you."
     n "You'll take that as a no."
 
     menu:
@@ -4573,6 +4577,8 @@ label sunday2:
             n "You hold it out for her to take."
 
             player "Here."
+            
+            show rose dismissive
 
             n "Rose scoffs."
 
@@ -4581,6 +4587,8 @@ label sunday2:
             player "No but an umbrella would be nice to have, wouldn't it?"
 
             n "She looks back to the increasing rain before snatching the umbrella from your hands."
+            
+            show rose skirt fistsclenched angry
 
             rose @ say "Tch. Don't think I owe you anything for this."
 
@@ -4597,7 +4605,8 @@ label sunday2:
 
             hide rose with dissolve
             
-    show mishka neutral at center with dissolve
+    show mishka neutral at center with dissolve:
+        ypos y_mishka
 
     mishka @ say "Hey [name]! Good to see you still yet! Not many customers on days like these."
 
@@ -4612,7 +4621,8 @@ label sunday2:
     n "You slump over a table while waiting, listening to the roar of rainfall with the occasional rumble of thunder that shakes the building."
     n "Some moments later, Mishka stops by your table and sets down a ceramic mug filled with rich dark coffee."
     
-    show mishka neutral at center with dissolve
+    show mishka anxious wink right at center with dissolve:
+        ypos y_mishka
     
     mishka @ say "Hang in there."
     
@@ -4629,7 +4639,8 @@ label sunday2:
     n "Is this rabbit concocting a suicide potion or something?"
     n "She looks around for something, twisting around to face you."
     
-    show mere neutral at center with dissolve
+    show mere neutral at center with dissolve:
+        ypos y_mere
     
     ###mere's blip voice is low pitched
     
@@ -4766,7 +4777,8 @@ label sunday2:
     n "You've been twitching every few seconds from the moment you swallowed a drop."
     n "You hang around for a while until the cafe closes. A bit early but it is Sunday after all. Thankfully the rain has died down at this point."
     
-    show mere neutral with dissolve
+    show mere neutral at center with dissolve:
+        ypos y_mere
     
     mere @ say "Yoooo check out my {a=https://merenotilde.bandcamp.com/}band{/a}{a=https://soundcloud.com/MERENOTILDE/}cloud{/a} later, k?"
     
@@ -4780,6 +4792,9 @@ label sunday2:
 
 label sunday2Evening:
     scene bg codadorm with fade
+    
+    show box with Dissolve(.2):
+        ypos 0    
 
     n "There's still some time to study before you have to go to bed."
     n "What should you study?"

@@ -170,7 +170,8 @@ define nicodemus = Character("Nicodemus", image="nicodemus", what_color="d0dbff"
 define y_margaret = 1570
 define y_rori = 1565
 define y_rose = 1400
-define y_gunner = 1485
+define y_gunner = 1595
+define y_mere = 1200
 define y_herschel = 1485
 define y_celestine = 1600
 define y_claire = 1570
@@ -1281,11 +1282,11 @@ layeredimage fortune:
 layeredimage gunner neutral:
     at sprite_highlight('gunner')
     always:
-        'images/characters/gunner neutral.png'
+        'images/characters/gunner/gunner neutral.png'
     group saying:
-        xzoom .9
-        yzoom .75
-        pos (545,223)
+        xzoom .8
+        yzoom .72
+        pos (105,57)
         attribute say:
             "images/bubble.png"
         
@@ -1314,11 +1315,24 @@ layeredimage mere neutral:
     always:
         'images/characters/mere/mere.png'
     group saying:
+        xzoom .85
+        yzoom .75
+        pos (-110,57)
         attribute say:
             "images/bubble.png"
 
             
             
+layeredimage mishka anxious wink right:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka anxious wink right.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
 layeredimage mishka neutral:
     at sprite_highlight('mishka')
     always:
@@ -1888,6 +1902,36 @@ layeredimage rori pantsless:
 
 
 
+layeredimage rose skirt handonhip smug pendant:
+    at sprite_highlight('rose')
+    always:
+        'images/characters/rose/rose skirt handonhip smug pendant.png'
+    group saying:
+        xzoom -.9
+        yzoom .9
+        pos (625,-62)
+        attribute say:
+            "images/bubble.png"
+layeredimage rose skirt fistsclenched angry:
+    at sprite_highlight('rose')
+    always:
+        'images/characters/rose/rose skirt fistsclenched angry.png'
+    group saying:
+        xzoom -.9
+        yzoom .9
+        pos (625,-62)
+        attribute say:
+            "images/bubble.png"
+layeredimage rose skirt armscrossed annoyed:
+    at sprite_highlight('rose')
+    always:
+        'images/characters/rose/rose skirt armscrossed annoyed.png'
+    group saying:
+        xzoom -.9
+        yzoom .9
+        pos (625,-62)
+        attribute say:
+            "images/bubble.png"
 layeredimage rose skirt handonhip annoyed:
     at sprite_highlight('rose')
     always:
@@ -1902,6 +1946,16 @@ layeredimage rose skirt armscrossed dismissive pendant:
     at sprite_highlight('rose')
     always:
         'images/characters/rose/rose skirt armscrossed dismissive pendant.png'
+    group saying:
+        xzoom -.9
+        yzoom .9
+        pos (625,-62)
+        attribute say:
+            "images/bubble.png"
+layeredimage rose skirt armscrossed dismissive:
+    at sprite_highlight('rose')
+    always:
+        'images/characters/rose/rose skirt armscrossed dismissive.png'
     group saying:
         xzoom -.9
         yzoom .9

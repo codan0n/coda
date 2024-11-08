@@ -2,10 +2,8 @@ label chapter2start:
 
     ###CHAPTER 2
     ###weather is randomized (starting in week 3?) and affects what you can do after class
-    ###once a week you can sleep in and get a chance at a unique night scene
-    ###can also do night scenes on weekends more freely
-    ###feel weird wednesday afternoon after giving book to rose at library and go to bed early. change to you go home and give rose the book later. she berates you for taking so long.
-    ###pass out in class on thursday and take the next day off
+    ###once a week you can sleep in and get a chance at a unique night scene?
+    ###can also do night scenes on weekends more freely?
 
     scene bg codadorm with fade
 
@@ -24,7 +22,8 @@ label chapter2start:
     show box with Dissolve(.2):
         ypos 0
 
-    show rothbauer at center with dissolve
+    show rothbauer at center with dissolve:
+        ypos y_roth
 
     rothbauer @ say "Good morning, class!"
     rothbauer @ say "From today forward, we will be discussing the intersections of human civilizations with those of other anthromorphs! How exciting!"
@@ -73,7 +72,8 @@ label chapter2start:
     n "You have a feeling they saw catgirls as more than just friends."
     n "After class ends, you overhear Rose talking with the professor."
     
-    show rose neutral at left
+    show rose skirt handonhip shy pendant at left:
+        ypos y_rose
     
     rose @ say "About the group project..."
     rose @ say "I started working on researching Arcoonian civilization but couldn't find much in the library."
@@ -88,6 +88,8 @@ label chapter2start:
     rothbauer @ say "Hmm... You know, I think I have some books in my personal collection I could loan you."
     rothbauer @ say "Please be aware that the contents of them are... contested among historians."
     rothbauer @ say "But for the purposes of your project, I will consider them a valid source!"
+    
+    show rose skirt handonhip smug pendant
     
     rose @ say "Thank you, that would be a great help."
     
@@ -105,7 +107,8 @@ label chapter2start:
     show box with Dissolve(.2):
         ypos 0
         
-    show herschel at center with dissolve
+    show herschel at center with dissolve:
+        ypos y_herschel
     
     herschel @ say "Hello class, I hope you all had a pleasant weekend!"
     herschel @ say "Today we'll be going over Bayes' theorem, which is a way of determining probability of a cause from its effect."
@@ -118,6 +121,9 @@ label chapter2start:
     n "Mrs. Herschel goes through some problems, starting off with a basic one then adding further complexities to subsequent ones."
     
     scene bg campus with fade
+    
+    show box with Dissolve(.2):
+        ypos 0
     
     n "Gunner ran off after class, saying something about fraternity obligations."
     n "That leaves you free for the rest of the day."
@@ -1916,7 +1922,7 @@ label hospital_bound:
     call phone_end from _call_phone_end_3
 
     n "Gunner is probably still lost in that class. Maybe you should work on the homework so you don't fall too far behind."
-
+    n "You think you have all your textbooks in your bag."
     
 
 
