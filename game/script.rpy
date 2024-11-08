@@ -167,7 +167,7 @@ define lina = Character("lina", image="lina", what_color="d0dbff", callback=name
 define waitress = Character("waitress", image="lina", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
 define nicodemus = Character("Nicodemus", image="nicodemus", what_color="d0dbff", callback=name_callback, cb_name = "nicodemus", what_font="dudu.ttf")
 
-define y_olivia = 1570
+define y_olivia = 1500
 define y_margaret = 1570
 define y_rori = 1565
 define y_rose = 1400
@@ -176,6 +176,8 @@ define y_mere = 1200
 define y_herschel = 1485
 define y_celestine = 1600
 define y_claire = 1570
+define y_kitsuragi = 1570
+define y_lina = 1570
 define y_ava = 1465
 define y_mishka = 1550
 define y_roth = 1550
@@ -1324,6 +1326,16 @@ layeredimage mere neutral:
 
             
             
+layeredimage mishka neutral tongueout wink right:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka neutral tongueout wink right.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
 layeredimage mishka anxious wink right:
     at sprite_highlight('mishka')
     always:

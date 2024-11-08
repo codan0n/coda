@@ -359,7 +359,8 @@ label roriTrack:
     n "It seems you weren't the only one with that idea."
     n "Standing around as awkwardly as you usually do at the gym, Rori notices your presence and jogs up to you."
     
-    show rori neutral with dissolve
+    show rori neutral with dissolve:
+        ypos y_rori
     
     rori @ say "Hey name! Didn't expect to find you here."
     
@@ -391,6 +392,9 @@ label gunnerTrack:
     "He sharply inhales each time the bar comes down and steadily exhales as he extends his arms upward. His steady form allows him to move the barbell smoothly with grace."
     "After a few reps, he sets it on the rack and sits up. As he reaches for his water bottle he notices you awkwardly standing around and waves you over."
     
+    show gunner neutral at center with dissolve:
+        ypos y_gunner
+    
     gunner "Sup! I didn't expect to see you here!"
     
     player "What's that supposed to mean?"
@@ -400,7 +404,7 @@ label gunnerTrack:
     
     "He flexes his slender bicep as if to accentuate his point."
     
-    player "Man, how were you lifting that with those skinny arms? 2 plates? That's what, 180 pounds?"
+    player "Man, how were you lifting that with those skinny arms? 1 big plate on each side? That's what, 150 pounds?"
     
     gunner "Raw strength isn't everything, there's actually a lot of technique that goes into it!"
     gunner "Lemme show you."
@@ -471,7 +475,7 @@ label gunnerTrack:
             
             gunner "That's it! Down then up! Up! Don't you know which way up is?"
             
-            n "After letting you struggle trying to keep 200 pounds of steel from caving your chest in, Gunner decides to lend a helping paw and pull it off you."
+            n "After letting you struggle trying to keep the havy metal from caving your chest in, Gunner decides to lend a helping paw and pull it off you."
             n "You don't feel safe until the barbell is on the rack for a few seconds, then you ease off and let your arms ragdoll down."
             
             gunner "Jeez dude, you alright? I thought you would have been able to lift that."
@@ -487,10 +491,10 @@ label gunnerTrack:
             
             player "How long until I start seeing some gains?"
             
-        "Take some plates off":
-            n "There's no way you're lifting all that. You start by taking one plate off each side while Gunner snickers at you."
+        "Use lighter weights":
+            n "There's no way you're lifting all that. You start by taking the plates off and sliding on lighter ones while Gunner snickers at you."
             n "Fuck these are heavy. You're not even sure you'll be able to lift the bar after taking half the weight off."
-            n "You get underneath the bar, lining it up at about shoulder level then gripping the cold metal."
+            n "You lie back on the bench, lining up with the bar at about shoulder level then gripping the cold metal."
             n "You gradually apply force to it and at some point it suddenly rises off the rack."
             n "It's actually not that hard just keeping it in the air with your arms extended like this."
             
@@ -568,7 +572,8 @@ label linaTown:
     n "Beggars sure have gotten pretty advanced these days."
     n "When she finishes her song she waves to you. You should have expected this. You haven't donated anything yet but you're the only one who hadn't quickly moved on."
     
-    show lina at norm with dissolve
+    show lina at center with dissolve:
+        ypos y_lina
     
     lina @ say "Heya! I've seen you around before!"
     
@@ -889,12 +894,13 @@ label oliviaCafe:
     n "She wheels herself over to the counter."
 
     show olivia neutral at center with move:
-        xpos 300
+        xoffset 400
+        ypos y_olivia
 
     show mishka neutral at center with dissolve:
         ypos y_mishka
         xzoom -1
-        xpos 1400
+        xoffset -400
 
     olivia @ say "How's my second favorite rat?"
     
@@ -904,11 +910,11 @@ label oliviaCafe:
 
     olivia @ say "Uhh, horuh... horush... horrorshow... horuhshow? Is that how you say it?"
     
-    show mishka winki
+    show mishka neutral tongueout wink right
 
     mishka @ say "Mh-hm!"
     
-    #show mishka neutral
+    show mishka neutral -tongueout -wink -right
     
     mishka @ say "So what'll it be for you today?"
 
@@ -982,12 +988,14 @@ label oliviaCafe:
     n "You wander over to a table to sit and idly swipe through your phone's homescreen while Mishka works on the drinks."
     n "A short while later she calls the alligator girl up to take hers."
 
-    show mishka neutral at norm with dissolve
+    show mishka neutral at center with dissolve:
+        ypos y_mishka
 
     hide olivia
 
     show olivia neutral at offscreenleft:
         xzoom -1
+        ypos y_olivia
         yalign 0
 
     mishka @ say "Olivia!"

@@ -153,7 +153,8 @@ label week2Tuesday:
     show box with Dissolve(.2):
         ypos 0
 
-    show margaret happy at center with dissolve
+    show margaret happy at center with dissolve:
+        ypos y_margaret
 
     margaret @ say "Good morning everyone. Today we'll be finishing up The Death of Ivan Ilyich. I'll be sad to see him go but we have plenty of other great books to get through and so little time."
     margaret @ say "After Ivan falls and injures his side, he suffers from worsening pain that causes him to become irritable and further destabilize his relationship with his family."
@@ -176,7 +177,8 @@ label week2Tuesday:
     show box with Dissolve(.2):
         ypos 0
 
-    show celestine neutral at center with dissolve
+    show celestine neutral at center with dissolve:
+        ypos y_celestine
 
     celestine @ say "Bonne journée, classe! How was your weekend? Have any of you encountered any French words in your day to day life you never noticed before?"
     
@@ -228,7 +230,8 @@ label week2Tuesday:
     show box with Dissolve(.2):
         ypos 0
         
-    show rothbauer at center with dissolve
+    show rothbauer at center with dissolve:
+        ypos y_roth
 
     rothbauer @ say "Good morning class! I hope you're prepared for today's quiz!"
 
@@ -236,6 +239,7 @@ label week2Tuesday:
 
     show rose neutral pendant at center with dissolve:
         xpos -540
+        ypos y_rose
         xzoom -1
 
     rose @ say "It's listed on the syllabus."
@@ -280,7 +284,8 @@ label week2Tuesday:
     n "When time runs out, you stand up and turn in your quiz."
     n "On your way out, Mr. Rothbauer stops you before you can leave."
     
-    show rothbauer at center with dissolve
+    show rothbauer at center with dissolve:
+        ypos y_roth
     
     rothbauer @ say "Oh, [name], I almost forgot!"
     rothbauer @ say "I meant to give this to Rose earlier but she's already left it seems."
@@ -302,7 +307,8 @@ label week2Tuesday:
     n "Your head is pounding and your vision blurry."
     n "You look down at your notebook and it's all just illegible scribbles and a few drool stains."
 
-    show gunner neutral at center with dissolve
+    show gunner neutral at center with dissolve:
+        ypos y_gunner
     
     gunner @ say "Bro, you still alive? You don't look so good."
     
@@ -383,7 +389,8 @@ label week2Tuesday:
         
     $ currentbook = "The Odyssey"
 
-    show margaret neutral at center with dissolve
+    show margaret neutral at center with dissolve:
+        ypos y_margaret
 
     margaret @ say "Today we'll be starting a new story, this time originating from ancient Greece in the 5th century BCE."
     margaret @ say "It is the archetypal hero's journey so often found in literature that succeeded it, as well as in our own lives!"
@@ -419,7 +426,8 @@ label week2Tuesday:
     n "You snap out of your dizzy spell but find that you've fallen out of your seat with the whole class looking at you."
     n "Ms. Ellen is looking down at you with a look of genuine concern."
 
-    show margaret sad at center with dissolve
+    show margaret sad at center with dissolve:
+        ypos y_margaret
 
     play music "audio/ambient/indoors people talking.ogg" fadein .5
 
@@ -442,9 +450,7 @@ label week2Tuesday:
 
     player "Y-yeah, I think I'm just dehydrated or something."
 
-    show margaret neutral:
-        ypos 10
-        linear .1 ypos 0
+    show margaret neutral at hop
         
     pause .1
 
@@ -549,7 +555,6 @@ label week2Tuesday:
     play music "audio/music/vylet - yeah i'm ok thanks for asking.ogg" fadein 1.0
     #play music "audio/exports/【Music】こんにちは! ♡ [lQQkCtUahHE].opus"
     
-
     show box with Dissolve(.2):
         ypos 0
 
@@ -613,8 +618,10 @@ label week2Tuesday:
         
     n "Claire and Ava are already waiting for you at your usual hangout spot."
     
-    show ava neutral
-    show claire sweater neutral
+    show ava neutral:
+        ypos y_ava
+    show claire sweater neutral:
+        ypos y_claire
     
     ava @ say "[name]!! You're here!"
     
@@ -650,9 +657,11 @@ label week2Tuesday:
     show ava typical neutral at center:
         #xzoom -1
         xpos 375
+        ypos y_ava
     show claire outdoors neutral at center:
         xzoom -1
         xpos -400
+        ypos y_claire
     with dissolve
 
     n "Claire hops around whimsically from one plant to another, sniffing the flowers and admiring the multitude of plants."
@@ -869,6 +878,7 @@ label week2Tuesday:
     player "Rose! Wait up!"
 
     show rose armscrossed neutral at center with dissolve:
+        ypos y_rose
         xzoom -1
 
     rose @ say "Hm? Oh, it's you. What do you want?"
@@ -1003,7 +1013,8 @@ label week2Tuesday:
             
             n "While you're staring at your bloody fingers, Rose takes the opportunity to snatch the sheets of paper from your other hand."
             
-            show rose unimpressed at center with dissolve
+            show rose unimpressed at center with dissolve:
+                ypos y_rose
             
             rose @ say "What did you expect?"
             rose @ say "Life's not like one of your creepy animes. Learn to treat people properly or don't be surprised if you end up dead like the rest of your species sooner than later."
@@ -1083,13 +1094,17 @@ label week2Tuesday:
 
     "The following day..."
     
-    show gunner neutral with dissolve
+    show gunner neutral with dissolve:
+        ypos y_gunner
     
     gunner "Yeah so then I'm like \"fuck you\" and oh hi Rori!"
     
     n "Gunner started following you after class and telling you frat boy stories until you came across Rori sitting on the grass working on something on his laptop."
     
-    rori @ say "Waaah!"
+    show rori neutral at center:
+        ypos y_rori
+    
+    rori @ say "Aaah!"
     
     n "It seems you've startled him."
     
@@ -1523,7 +1538,8 @@ label beauty_and_the_beast:
 
     hide claire with dissolve
 
-    show celestine happy at center with dissolve
+    show celestine happy at center with dissolve:
+        ypos y_celestine
 
     celestine @ say "Good afternoon class! Today we're going to be watching a favorite of mine, Beauty and the Beast!"
     
@@ -1575,6 +1591,7 @@ label beauty_and_the_beast:
         ypos 0
     
     show ava at offscreenright:
+        ypos y_ava
         yalign 0
 
     claire @ say "...That was a pretty good movie, wasn't it? I'm a sucker for any kind of romantic film!"
@@ -1732,6 +1749,7 @@ label hospital_bound:
 
     show kitsuragi at offscreenright:
         yalign 0
+        ypos y_kitsuragi
 
     n "He returns a few minutes later with a panda lady wearing a doctor's coat and carrying a clipboard."
 
