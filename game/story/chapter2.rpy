@@ -195,6 +195,9 @@ label week2Tuesday:
     
     scene bg campus with fade
     
+    show box with Dissolve(.2):
+        ypos 0
+    
     show claire sweater neutral at center with dissolve
     
     claire @ say "Wish I could stay and chat [name] but I've got sorority duties to take care of today!"
@@ -237,10 +240,9 @@ label week2Tuesday:
 
     player "Wha-? Quiz?"
 
-    show rose neutral pendant at center with dissolve:
-        xpos -540
+    show rose skirt armscrossed shy pendant at center with dissolve:
+        xoffset -450
         ypos y_rose
-        xzoom -1
 
     rose @ say "It's listed on the syllabus."
 
@@ -329,14 +331,20 @@ label week2Tuesday:
     
     scene bg codadorm with fade
     
+    show box with Dissolve(.2):
+        ypos 0
+    
     n "Gunner practically drags you across campus to your dorm where he tucks you into bed and reads you a bedtime story."
     n "Okay you're pretty sure you hallucinated that last part but the point is you're in bed and rapidly falling asleep."
+    
+    show gunner neutral at center with dissolve:
+        ypos y_gunner
     
     gunner @ say "Hope you feel better soon. Text me if you need anything!"
     
     player "Thanks. See you in class if I survive."
     
-    gunner @ say "Later!"
+    gunner @ say "You better!"
     
     scene bg black with fade
 
@@ -612,6 +620,9 @@ label week2Tuesday:
     
     scene bg campus with fade
     
+    show box with Dissolve(.2):
+        ypos 0
+    
     $ townEvents.append("avaGarden")
     
     $ avaClaireGarden = True
@@ -863,6 +874,8 @@ label week2Tuesday:
     
     scene bg library with fade
     
+    $ libraryDiscovered = True
+    
     play music "audio/music/Vylet Pony - Cozy Pone.ogg" fadein .5
     
     show box with Dissolve(.2):
@@ -877,7 +890,7 @@ label week2Tuesday:
 
     player "Rose! Wait up!"
 
-    show rose armscrossed neutral at center with dissolve:
+    show rose armscrossed dismissive pendant at center with dissolve:
         ypos y_rose
         xzoom -1
 
@@ -889,7 +902,7 @@ label week2Tuesday:
 
     player "Not even a 'thank you?'"
 
-    show rose angry -armscrossed
+    show rose skirt fistsclenched angry pendant
 
     n "Rose snaps back around and glares at you."
 
@@ -899,7 +912,7 @@ label week2Tuesday:
 
     player "What about these pages that fell out? Do you want those too?"
 
-    show rose furious
+    show rose skirt furiouspose pendant
 
     rose @ say "Give those to me. Now."
 
@@ -1094,15 +1107,16 @@ label week2Tuesday:
 
     "The following day..."
     
-    show gunner neutral with dissolve:
+    show gunner neutral at center with dissolve:
         ypos y_gunner
     
     gunner "Yeah so then I'm like \"fuck you\" and oh hi Rori!"
     
     n "Gunner started following you after class and telling you frat boy stories until you came across Rori sitting on the grass working on something on his laptop."
     
-    show rori neutral at center:
+    show rori neutral at center with dissolve:
         ypos y_rori
+        xoffset 400
     
     rori @ say "Aaah!"
     

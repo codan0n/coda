@@ -144,7 +144,7 @@ define n = Character("", what_color="EEEEEE", callback=name_callback, cb_name = 
 #define player = Character("", color="#a4cffc", what_color="#a4cffc", callback=name_callback, cb_name = "player", what_font="dudu.ttf")
 define player = Character("testname", color="#95d29d", what_color="#a5ac61", callback=name_callback, cb_name = "player", what_font="dudu.ttf")
 define claire = Character("Claire", image="claire", color="#eeb1da", what_color="#ffd9f0", callback=name_callback, cb_name = "claire", what_font="dudu.ttf")
-define mere = Character("Mere", image="mere", color="#eeb1da", what_color="#d0dbff", callback=name_callback, cb_name = "other", what_font="dudu.ttf")
+define mere = Character("Mere", image="mere", color="#eeb1da", what_color="#d0dbff", callback=name_callback, cb_name = "mere", what_font="dudu.ttf")
 define ava = Character("Ava", image="ava", color="#fbffc8", what_color="#c8f8ff", callback=name_callback, cb_name = "ava", what_font="dudu.ttf")
 define ellen = Character("Ellen", image="ellen", color="#b6e4d6", what_color="#ffe8b7", callback=name_callback, cb_name = "ellen", what_font="dudu.ttf")
 define margaret = Character("Margaret", image="margaret", color="#b6e4d6", what_color="#ffe8b7", callback=name_callback, cb_name = "margaret", what_font="dudu.ttf")
@@ -153,14 +153,14 @@ define rose = Character("Rose", image="rose", color="#dbb0ff", what_color="#b3a6
 define rori = Character("Rori", image="rori", color="#b5d0ff", what_color="#ddd4ac", callback=name_callback, cb_name = "rori", what_font="dudu.ttf")
 define gunner = Character("Gunner", image="gunner", color="#f7d2ae", what_color="#ff5497", callback=name_callback, cb_name = "gunner", what_font="dudu.ttf")
 define rothbauer = Character("Mr. Rothbauer", image="rothbauer", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
-define herschel = Character("Mrs. Herschel", image="herschel", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
+define herschel = Character("Mrs. Herschel", image="herschel", what_color="d0dbff", callback=name_callback, cb_name = "herschel", what_font="dudu.ttf")
 define celestine = Character("Mrs. Celestine", image="celestine", what_color="d0dbff", callback=name_callback, cb_name = "celestine", what_font="dudu.ttf")
 define kitsuragi = Character("kitsuragi", image="kitsuragi", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
 define volginova = Character("Volginova", image="volginova", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
 define adam = Character("Adam", image="adam", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
 define attendant = Character("Attendant", image="attendant", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
-define trish = Character("Trish", image="trish", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
-define olivia = Character("Olivia", image="olivia", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
+define trish = Character("Trish", image="trish", what_color="d0dbff", callback=name_callback, cb_name = "trish", what_font="dudu.ttf")
+define olivia = Character("Olivia", image="olivia", what_color="d0dbff", callback=name_callback, cb_name = "olivia", what_font="dudu.ttf")
 define fortune = Character("Fortune", image="fortune", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
 define creature = Character("Creature", image="fortune", what_color="d0dbff", what_font="dudu.ttf")
 define lina = Character("lina", image="lina", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
@@ -1326,6 +1326,36 @@ layeredimage mere neutral:
 
             
             
+layeredimage mishka anxious smile:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka anxious smile.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka neutral wink right:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka neutral wink right.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka neutral wink left:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka neutral wink left.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
 layeredimage mishka neutral tongueout wink right:
     at sprite_highlight('mishka')
     always:
@@ -1915,6 +1945,46 @@ layeredimage rori pantsless:
 
 
 
+layeredimage rose skirt furiouspose pendant:
+    at sprite_highlight('rose')
+    always:
+        'images/characters/rose/rose skirt furiouspose pendant.png'
+    group saying:
+        xzoom -.9
+        yzoom .9
+        pos (625,-62)
+        attribute say:
+            "images/bubble.png"
+layeredimage rose skirt fistsclenched angry pendant:
+    at sprite_highlight('rose')
+    always:
+        'images/characters/rose/rose skirt fistsclenched angry pendant.png'
+    group saying:
+        xzoom -.9
+        yzoom .9
+        pos (625,-62)
+        attribute say:
+            "images/bubble.png"
+layeredimage rose skirt armscrossed dismissive:
+    at sprite_highlight('rose')
+    always:
+        'images/characters/rose/rose armscrossed dismissive.png'
+    group saying:
+        xzoom -.9
+        yzoom .9
+        pos (625,-62)
+        attribute say:
+            "images/bubble.png"
+layeredimage rose armscrossed dismissive pendant:
+    at sprite_highlight('rose')
+    always:
+        'images/characters/rose/rose skirt armscrossed dismissive pendant.png'
+    group saying:
+        xzoom -.9
+        yzoom .9
+        pos (625,-62)
+        attribute say:
+            "images/bubble.png"
 layeredimage rose skirt handonhip smug pendant:
     at sprite_highlight('rose')
     always:
@@ -2048,6 +2118,7 @@ label start:
     $ himher = ""
     
     $ forestDiscovered = False
+    $ libraryDiscovered = False
     $ gardenDiscovered = False
     $ trackDiscovered = False
     $ townDiscovered = False

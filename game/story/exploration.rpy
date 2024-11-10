@@ -81,10 +81,10 @@ label afterClassOptions:
                         "You get something to snack on at the cafe but don't find anything interesting to do."
                         
                         jump afterClassOptions
-                "Library":
+                "Library" if libraryDiscovered == True:
                     call libraryEvent
                         
-                    jump afterClassOptions
+                    jump dormSleep
                 "Go back":
                     "jump afterClassOptions"
         "Study at dorm":
@@ -95,7 +95,15 @@ label afterClassOptions:
     return
     
 label libraryEvent:
+    ###50% chance you'll bump into a friend here and won't study
+    
     n "You haul your books and papers to the library to get some homework and studying done in peace."
+    
+    scene bg library with fade
+    
+    show box with Dissolve(.2):
+        ypos 0
+    
     n "What topic should you cover?"
     
     menu:
@@ -118,6 +126,9 @@ label libraryEvent:
     
 label dormSleep:
     scene bg codadorm with fade
+    
+    show box with Dissolve(.2):
+        ypos 0
 
     "The day is just about over. All you can do now is get ready for bed."
 
@@ -941,7 +952,7 @@ label oliviaCafe:
         yalign 0
         
     show mishka with move:
-        xpos 1550
+        xoffset 0
 
     mishka @ say "Hey [name]! How are your affairs today?"
 
@@ -959,13 +970,13 @@ label oliviaCafe:
 
     player "Yeah, I'm in the mood for something really sweet."
     
-    show mishka anxious grin
+    show mishka neutral wink right
 
     mishka @ say "Hmm... I think I've got just the thing for you!"
 
     player "Really? What is it?"
     
-    show mishka silly wink
+    show mishka happy tongueout
 
     mishka @ say "It's a surprise!"
 
@@ -977,7 +988,7 @@ label oliviaCafe:
 
     n "You hold out your debit card and she swipes it through the machine."
     
-    show mishka neutral
+    show mishka neutral -wink -happy -right -tongueout
 
     mishka @ say "It'll be ready in just a minute!"
 
@@ -1037,7 +1048,7 @@ label oliviaCafe:
 
     player "Thank you!"
     
-    show mishka nya
+    show mishka nervous
 
     mishka @ say "I hope you enjoy! Tell me if you like it!"
 
@@ -1054,15 +1065,17 @@ label oliviaCafe:
 
     n "You hear angry rolling noises whoosh past you."
 
-    show mishka despondent at norm with dissolve:
+    show mishka despondent at center with dissolve:
         xzoom -1
-        xpos -350
-    show olivia neutral at norm with move:
+        ypos y_mishka
+        xoffset -350
+    show olivia neutral at center with move:
         xzoom 1
-        xpos 200
+        ypos y_olivia
+        xoffset 400
 
     olivia @ say "One sip was enough to give me diabetes! And I'm pretty sure I didn't ask for milk either."
-    olivia @ say "You ever heard of a reptile who drinks milk?"
+    olivia @ say "Who ever heard of a reptile who drinks milk?"
 
     n "You walk up to the counter."
     
@@ -1081,15 +1094,15 @@ label oliviaCafe:
     n "Olivia snatches the drink right out of your hand and takes a big gulp."
 
     olivia @ say "Ahhh... that's the stuff."
-    olivia @ say "Hey sorry for flipping out at you. You know how it is in the morning before you've had your coffee, am I right?"
+    olivia @ say "Hey sorry for flipping out at you. You know how it is before you've had your coffee, am I right?"
     
-    show mishka anxious grin
+    show mishka anxious smile -neutral -derp
 
     mishka @ say "O-of course!"
 
     olivia @ say "I'll see ya around, rat girl."
     
-    show mishka neutral
+    show mishka neutral -grin -anxious
 
     mishka @ say "Later gator!"
 
@@ -1137,7 +1150,7 @@ label oliviaCafe:
     n "Eager to finally taste this \"sugary bullshit\" you give it a good blow and take a sip as soon as she hands it to you."
     n "Mishka watches in anticipation as you hold the cup to your mouth."
 
-    show mishka anxious grin
+    show mishka anxious smile
     
     mishka @ say "Well? What do you think?"
 
@@ -1146,10 +1159,12 @@ label oliviaCafe:
 
     player "Mmh. It's... definitely unique."
     
-    show mishka cute
+    show mishka happy
 
     mishka @ say "It's something my mother used to make around Christmas time! Perfect for long Ukranian winters!"
     mishka @ say "I know it's kinda early for that but I thought you might like it!"
+    
+    show mishka anxious neutral
 
     n "You take another sip. Now that you know what to expect you can appreciate it more. It's thick and creamy and would be perfect next to a fireplace."
 
@@ -1161,7 +1176,7 @@ label oliviaCafe:
 
     player "Aww, that's really sweet of you! Any sweeter and I'd get diabetes."
     
-    show mishka nya
+    show mishka nervous
 
     mishka @ say "Heh... I do not know what that is..."
 
@@ -1187,17 +1202,6 @@ label oliviaCafe:
         ypos 0
 
     n "You tried your best to ration your drink on your walk back to your dorm to enjoy it longer, but you couldn't stop yourself from taking big sips and emptying it before you even reached the door."
-
-    show bg static1
-    pause .04
-    show bg static3
-    pause .02
-    show bg static2
-    pause .04
-    show bg static3
-    pause .02
-    show bg codadorm
-
     n "Oh well, that just gives you an excuse to go back to the cafe and see Mishka again soon."
     
     return
