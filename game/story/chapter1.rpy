@@ -1028,7 +1028,7 @@ label exploring_campus:
         show claire sweater happy at center:
             ypos y_claire
             xoffset 400
-        show ava typical neutral at center:
+        show ava typical happy at center:
             ypos y_ava
             xzoom -1
             xoffset -400
@@ -1036,11 +1036,11 @@ label exploring_campus:
 
         claire @ say "Holy Frith, it's you! You were at the thing last night, weren't you?"
         
-        show ava bored
+        show ava neutral
 
         ava @ say "She means the orientation."
         
-        show ava typical neutral
+        show ava typical happy
 
         player "Nope, you must have me confused for the other human around here."
 
@@ -1048,15 +1048,15 @@ label exploring_campus:
 
         claire @ say "Oh..."
         
-        show claire sweater surprised
+        show claire sweater surprised earsup
                     
         claire @ say "Oh!"
         
-        show claire sweater embarassed
+        show claire sweater flustered -earsup
         
         claire @ say "Duh!"
         
-        show claire sweater wave
+        show claire sweater happy wave
         
         claire @ say "What was your name again? [name]?"
 
@@ -1066,8 +1066,8 @@ label exploring_campus:
 
         ava @ say "Yup!"
         
-        show claire sweater neutral
-        show ava typical neutral
+        show claire sweater happy -wave
+        show ava typical happy
         
         claire @ say "So what brings you out here, [name]? Looking to join a club?"
 
@@ -1079,11 +1079,11 @@ label exploring_campus:
 
         claire @ say "I guess you could say the early bird gets the donut~"
         
-        show ava portrait neutral
+        show ava profile whimsical
         
         ava @ say "Hehe you're not wrong!~"
         
-        show ava typical neutral
+        show ava typical happy
 
         player "So have you signed up for anything so far?"
 
@@ -1093,11 +1093,15 @@ label exploring_campus:
 
         player "I'm not really interested in any of them."
         
+        show claire giggle
+        
         claire @ say "*gasp* We should all join a sorority!"
         
         ava @ say "What? Why?"
         
         player "I don't think they'd let me in."
+        
+        show claire happy
         
         claire @ say "Why not? It's current year!"
         claire @ say "We can infiltrate their organization and hit on all the sorority sluts! Ksksksksks!"
@@ -1985,7 +1989,8 @@ label secondDayOfClass:
 
     pause .05
 
-    show claire sweater neutral at flipleft
+    show claire sweater happy center:
+        ypos y_claire
 
     if metClaire == False:
         claire @ say "Heyyy cutie~"
