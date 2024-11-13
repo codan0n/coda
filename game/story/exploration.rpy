@@ -136,6 +136,9 @@ label dormSleep:
     
 label dormStudy:
     scene bg codadorm with fade
+    
+    show box with Dissolve(.2):
+        ypos 0
 
     n "There's still some time to study before you have to go to bed."
     n "What should you study?"

@@ -2016,13 +2016,13 @@ label secondDayOfClass:
     else:
         claire @ say "OMG [name]! You're in this class too??? How unexpected!"
         
-        show claire sweater lusty
+        show claire sweater suggestive
 
         claire @ say "Imma sit next to you, k?~"
         
         #player "I guess I can't stop you."
         
-        show claire sweater neutral
+        show claire sweater happy
 
         n "Claire takes the seat next to yours and starts rummaging around in her bag."
 
@@ -2047,7 +2047,7 @@ label secondDayOfClass:
     celestine @ say "Starting with you, since you were late!"
 
     show claire sweater derp at center with dissolve:
-        xpos 560
+        ypos y_claire
 
     claire @ say "Umm like, I dunno, I kinda just picked it on a whim! I guess I like to try new things and leave things to chance!"
 
@@ -2120,8 +2120,8 @@ label secondDayOfClass:
 
     n "Claire turns to you with a devious grin."
 
-    show claire sweater wave at center with dissolve:
-        xpos 560
+    show claire sweater wave happy at center with dissolve:
+        ypos y_claire
 
     claire @ say "Heyyyyy, wanna be study partners?"
 
@@ -2136,7 +2136,7 @@ label secondDayOfClass:
 
             claire @ say "Yay! I can't wait!"
             
-            show claire sweater embarassed
+            show claire sweater flustered
             
             claire @ say "I have to go to chemistry right now, but we can study later!"
 
@@ -2154,7 +2154,7 @@ label secondDayOfClass:
             #claire @ say "But I do!"
             claire @ say "Wow you must be really smart!"
             
-            show claire sweater heyeah
+            show claire sweater laughing
             
             claire @ say "In that case you can be my tutor!"
 
@@ -2167,26 +2167,26 @@ label secondDayOfClass:
     show box with Dissolve(.2):
         ypos 0
 
-    show claire sweater neutral at center with dissolve:
+    show claire sweater happy at center with dissolve:
         xzoom -1
-        xpos -300
+        ypos y_claire
         
     play music "audio/music/Evan Schaeffer - Aqueduct.ogg" fadein .5
 
     claire @ say "...and that was around the time I picked up sousaphone for my school's marching band and --"
     
-    show claire sweater surprised
+    show claire sweater surprised earsup
     
     claire @ say "Ohmygosh it's Ava! She's like my best friend foreverrr!!!"
     
-    show claire sweater wave
+    show claire sweater wave happy
     
     claire @ say "Avaaaa! Over here!!!"
 
     n "Claire waves to the bird in the distance holding a camera pointed in your general direction."
     n "She seems annoyed as she looks over the viewfinder and flutters over."
     
-    show claire sweater neutral
+    show claire sweater happy -wave
     show ava pose annoyed at center with moveinright:
         ypos y_ava
         xoffset 375
@@ -2201,7 +2201,7 @@ label secondDayOfClass:
 
     ava @ say "It's about capturing the moment in as natural a state as possible. Me and my camera are supposed to be invisible."
     
-    show claire sweater cry
+    show claire sweater sad
 
     claire @ say "Oh did I ruin your shot? Sorry..."
     
@@ -2245,7 +2245,7 @@ label secondDayOfClass:
         n "You get the feeling that some part of this conversation has flown over your head, but are struggling to decipher what these ladies could possibly be talking about."
         n "You had your suspicions that Claire might be into you, but Ava's exceptionally straightforward words have put that idea to rest."
         
-    show claire sweater neutral
+    show claire sweater happy
     
     claire @ say "Oop, I have to be in class in a minute! But we should all get lunch later!"
     
@@ -2263,12 +2263,12 @@ label secondDayOfClass:
 
     menu:
         claire "{cps=0}How does lunch tomorrow sound?{/cps}"
-        "Sure!":
+        "Heck yeah!":
             $ avaPoints =+ 1
             $ clairePoints =+ 1
             $ avaClaireLunch = True
             
-            player "Sure, that sounds nice."
+            player "Heck yeah, that sounds nice."
 
             show claire sweater overjoyed
             
@@ -2507,6 +2507,7 @@ label thirdDayOfClassStats:
         n "Her ears turn in your direction and she comes hopping toward you with Ava fluttering along by her side."
 
         show claire sweater overjoyed at center:
+            ypos y_claire
             xpos 500
         show ava typical happy at center:
             xzoom -1
@@ -2527,7 +2528,7 @@ label thirdDayOfClassStats:
         player "Sorry, my phone's dead."
         player "So where are we going to eat?"
 
-        show claire sweater heyeah
+        show claire sweater laughing
         
         claire @ say "We still haven't decided yet!"
         
@@ -2546,7 +2547,7 @@ label thirdDayOfClassStats:
 
         ava @ say "You mean Starbees? That place is hella crowded all the time."
         
-        show claire sweater neutral
+        show claire sweater happy
         show ava concerned
 
         player "No, the one behind the library. Coffee Zone I think? It was pretty quiet when I went there a few days ago."
@@ -2583,8 +2584,8 @@ label thirdDayOfClassStats:
             
         pause .1
         
-        show claire sweater neutral at center:
-            #xpos 475
+        show claire sweater happy at center:
+            ypos y_claire
             xpos 575
         show ava typical happy at center:
             ypos y_ava
@@ -2800,7 +2801,7 @@ label thirdDayOfClassStats:
 
         ava @ say "Ooh both of those sound pretty good."
         
-        show claire sweater neutral:
+        show claire sweater happy:
             xzoom 1
 
         claire @ say "Oh my gosh, look who it is! Heyyyy!!!~~~"
@@ -3144,7 +3145,7 @@ label avaClaireGunnerLunch:
         
         claire @ say "You were too!"
         
-        show claire sweater neutral
+        show claire sweater happy
 
         claire @ say "What do you think, [name]? Was she not looking at him with hearts in her eyes?"
         
@@ -3160,7 +3161,7 @@ label avaClaireGunnerLunch:
 
         ava @ say "Nuh uhhhh! Maybe he's cute but I don't even know anything about him!"
         
-        show claire sweater pose lusty alert
+        show claire sweater pose suggestive
 
         claire @ say "Oh so now you think he's cute?"
         
@@ -3651,33 +3652,33 @@ label thursday1:
 
     celestine @ say "Go ahead and try making conversation with your partner! Don't be afraid of saying things wrong, you'll get it sooner or later!~"
     
-    show claire sweater neutral:
-        yalign 0
+    show claire sweater happy:
+        ypos y_claire
         xpos 1400
 
     hide celestine with dissolve
 
     n "Claire pushes her desk next to yours."
 
-    show claire sweater neutral:
+    show claire sweater happy:
         xpos 700
     with move
     
     pause .2
     
-    show claire sweater neutral:
+    show claire sweater happy:
         xpos 480
     with move
     
     pause .2
     
-    show claire sweater neutral:
+    show claire sweater happy:
         xpos 300
     with move
 
     pause .1
 
-    show claire sweater wave
+    show claire sweater wave happy
 
     claire @ say "Heyyyy~"
     claire @ say "Oops, I mean bonjourrrr~"
@@ -3692,7 +3693,7 @@ label thursday1:
 
     n "Claire grins and leans closer, whispering something in your ear."
     
-    show claire sweater leaning
+    show claire sweater leaning suggestive
 
     claire @ say "Je ne porte pas de culotte aujourd'hui~"
     
@@ -3742,17 +3743,17 @@ label thursday1:
     show box:
         ypos 0
 
-    show claire sweater neutral at offscreenright:
-        yalign 0
+    show claire sweater happy at offscreenright:
+        ypos y_claire
 
     claire "[name]! Wait up!!!"
 
-    show claire sweater neutral at center with move:
-        xpos 0
+    show claire sweater happy at center with move:
+        ypos y_claire
 
     claire @ say "Do ya wanna come over to my dorm to..."
     
-    show claire sweater lusty alert
+    show claire sweater suggestive
     
     claire @ say "'...study?'"
 
@@ -3788,12 +3789,12 @@ label thursday1:
             
             ava @ say "Heya Claire. You alright?"
             
-            show claire sweater neutral at center with dissolve:
-                xoffset 500
+            show claire sweater happy at center with dissolve:
+                ypos y_claire
             
             claire @ say "Ava, get out."
             
-            show claire sweater leaning
+            show claire sweater leaning suggestive
             
             claire @ say "...unless you wanna join in on this 'study session' [name] and I are about to have."
             
@@ -3847,16 +3848,22 @@ label thursday1:
             claire @ say "Il fait tellement chaud que je pourrais m'évanouir! Allons au lit!~"
             
             n "Before you have time to translate, you're hoisted out of the chair and thrown onto Claire's bed, face up."
+            
+            scene claire pov edited with fade
+            
+            show box:
+                ypos 0
+            
             n "In the blink of an eye, the bunny pounces on top of you, thankfully propping herself up on her paws so as to not crush your frail human body."
             n "Without your textbook to protect you, you'll have an even harder time navigating this strange conversation. You're still unfamiliar with the customs of France but Claire seems to be guiding you."
             n "Perhap if you study more in your free time you'll have a better grasp on things."
             
             player "Is this how people normally talk in France?"
             
-            claire @ say "...From what I've read, yes."
-            claire @ say "Maintenant, ne sois pas si timide~"
+            claire "...From what I've read, yes."
+            claire "Maintenant, ne sois pas si timide~"
             
-            scene bg black with fade
+            scene bg black with dissolve
             
             pause .8
             
@@ -3870,6 +3877,9 @@ label thursday1:
             n "You've ended up lying on your back with your head in Claire's lap while she strokes your hair."
             n "It's an incredibly soothing feeling. You could fall asleep right here."
             n "You let out a yawn and check the time on your phone."
+            
+            show claire sweater happy at center with dissolve:
+                ypos y_claire
 
             player "Man, it's getting late. I should get back to my dorm and get ready for tomorrow."
             
@@ -3915,7 +3925,7 @@ label thursday1:
         "Maybe another time":
             player "Sorry, I have somewhere to be."
             
-            show claire sweater cry
+            show claire sweater sad
 
             n "Claire looks extremely disheartened."
 
@@ -3955,7 +3965,7 @@ label thursday1:
             
             claire @ say "Wha-?"
             
-            show claire sweater cry
+            show claire sweater sad
             
             claire @ say "Oh, I get it..."
             claire @ say "Forget I asked."

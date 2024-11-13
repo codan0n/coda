@@ -182,7 +182,8 @@ label week2Tuesday:
 
     celestine @ say "Bonne journée, classe! How was your weekend? Have any of you encountered any French words in your day to day life you never noticed before?"
     
-    show claire sweater neutral
+    show claire sweater happy:
+        ypos y_claire
     
     n "Claire waves her paw in the air energetically."
     
@@ -198,7 +199,8 @@ label week2Tuesday:
     show box with Dissolve(.2):
         ypos 0
     
-    show claire sweater neutral at center with dissolve
+    show claire sweater happy at center with dissolve:
+        ypos y_claire
     
     claire @ say "Wish I could stay and chat [name] but I've got sorority duties to take care of today!"
     claire @ say "See you later!"
@@ -207,9 +209,26 @@ label week2Tuesday:
     
     hide claire with dissolve 
     
-    n "That leaves your schedule free for the day."
+    n "Off in the distance you see Ava fluttering from perch to perch taking photos. She waves to you as she soars above and disappears over a building."
+    n "Seems like everyone has something to do today."
+    n "As you wander around campus pondering what to do with the rest of *your* day, you bump into ."
     
-    call afterClassOptions
+    show mishka neutral at center with dissolve:
+        ypos y_mishka
+    
+    
+    player "Oh hey Mishka. It's weird seeing you somewhere other than the cafe."
+    
+    #going somehwere?
+    #no I'm just on break. You?
+    #not doing much either
+    #awkward pause
+    #can ask her if she's doing anything this weekend
+    
+    
+    ###see mishka on break, talk to her, schedule a hangout this weekend, she doesn't have a phone
+    
+    
     
     scene bg black with fade
 
@@ -631,7 +650,7 @@ label week2Tuesday:
     
     show ava neutral:
         ypos y_ava
-    show claire sweater neutral:
+    show claire sweater happy:
         ypos y_claire
     
     ava @ say "[name]!! You're here!"
@@ -665,13 +684,13 @@ label week2Tuesday:
     if gardenDiscovered == True:
         n "This is the same garden you've visited before, just at one of the other entrances. The area is quite expansive and you haven't been to this part before."
 
-    show ava typical neutral at center:
+    show ava typical happy at center:
         #xzoom -1
-        xpos 375
+        xoffset 400
         ypos y_ava
-    show claire outdoors neutral at center:
+    show claire flannel happy at center:
         xzoom -1
-        xpos -400
+        xoffset -400
         ypos y_claire
     with dissolve
 
@@ -746,13 +765,13 @@ label week2Tuesday:
     
     n "You turn the camera around and show Claire."
     
-    show claire outdoors heyeah
+    show claire flannel laughing
     
     claire @ say "Ohmygosh we look great! This is just the perfect day, isn't it!"
 
     n "Ava gets up and gestures to the bench."
     
-    show claire outdoors neutral
+    show claire flannel happy
 
     ava @ say "Ok now it's your turn, [name]!"
 
@@ -1557,14 +1576,15 @@ label beauty_and_the_beast:
     n "As you walk into the classroom you notice the projector displaying the DVD menu for the film Claire mentioned you were gonna watch today."
     n "Not even a BlueyRay... Where does Harmonia's budget even go towards??"
 
-    show claire sweater wave at center with dissolve:
+    show claire sweater wave happy at center with dissolve:
         xpos 300
+        ypos y_claire
 
     claire @ say "Hey [name]! Glad you could make it today!"
 
     player "Hey Claire! Yeah, I really wasn't feeling too good the other day..."
     
-    show claire sweater neutral
+    show claire sweater happy
 
     claire @ say "Being sick is the wooooorst! I'm happy you're feeling better!"
 
@@ -1601,7 +1621,8 @@ label beauty_and_the_beast:
 
     celestine @ say "C'est la fin! What did you all think of it?"
 
-    show claire sweater neutral at center with dissolve:
+    show claire sweater happy at center with dissolve:
+        ypos y_claire
         xpos 670
 
     show celestine at flipright
@@ -1617,8 +1638,9 @@ label beauty_and_the_beast:
     
     play music "audio/music/Evan Schaeffer - Aqueduct.ogg" fadein .5
 
-    show claire sweater pose lusty alert at center with dissolve:
+    show claire sweater pose suggestive at center with dissolve:
         xzoom -1
+        ypos y_claire
         xpos 0
 
     show box with Dissolve(.2):
@@ -1645,7 +1667,7 @@ label beauty_and_the_beast:
 
     ava @ say "Hey guys, how was class?"
     
-    show claire sweater neutral
+    show claire sweater happy
     
     player "We just got done watching La Belle et la Bête."
     
@@ -1889,6 +1911,11 @@ label hospital_bound:
     player "Nah but schizophrenia does run in the family."
     
     kitsuragi @ say "I see."
+    kitsuragi @ say "And your memory? Are you have trouble remembering things?"
+    
+    player "Sometimes I end up somewhere without any recollection of *how* I got there. It feels like time is just skipping randomly."
+    
+    kitsuragi @ say "Mh-hm."
     
     n "She produces a small pen light from her coat pocket and turns it on."
     

@@ -3130,7 +3130,7 @@ label monty_hall:
             $ avaPoints += 1
             $ avahangout1 = True
             
-            show claire sweater neutral
+            show claire sweater happy
             
             player "That sounds fun! I'd love to go with you!"
             
@@ -3177,7 +3177,7 @@ label monty_hall:
             #n "Deer god you really can't stand being near women sometimes."
             n "Out of the corner of your eye you see Gunner approaching."
 
-            show claire sweater neutral:
+            show claire sweater happy:
                 xpos -600
             show ava casual happy:
                 xpos 600
@@ -3250,7 +3250,7 @@ label monty_hall:
         "I'll pass.":
             #untested
             $ rosePoints += 1
-            show claire sweater neutral
+            show claire sweater happy
             
             player "Sounds cool but I'll pass. I'm supposed to go to the parade in town to get extra credit in history."
             
@@ -3269,7 +3269,7 @@ label monty_hall:
 
             n "As if on cue, Gunner approaches."
 
-            show claire sweater neutral:
+            show claire sweater happy:
                 xpos -600
             show ava casual happy:
                 xpos 600
@@ -5627,14 +5627,14 @@ label movienight:
 
     show ava typical neutral at offscreenright:
         yalign 0
-    show claire sweater neutral at offscreenright:
+    show claire sweater happy at offscreenright:
         yalign 0
 
     n "You turn your head as you hear the door open behind you and a familiar bird and bunny walk in."
 
     show ava typical neutral at center:
         xpos 275
-    show claire sweater neutral at center:
+    show claire sweater happy at center:
         xpos 650
     with move
 
@@ -5659,7 +5659,7 @@ label movienight:
     claire @ say "Hiya! I don't think we've met! I'm Claire and this is Ava!"
     
     show rori anxious
-    show claire sweater neutral
+    show claire sweater happy
 
     #ava @ say "Oh right! I remember seeing you with him before! Gunner was it?"
 
@@ -5752,7 +5752,7 @@ label movienight:
 
     show ava typical neutral at center:
         xpos 225
-    show claire sweater neutral at center:
+    show claire sweater happy at center:
         xpos 600
     with dissolve
 
@@ -5767,7 +5767,7 @@ label movienight:
     
     n "Oh god they're all for her, aren't they?"
     
-    #show claire sweater neutral
+    #show claire sweater happy
     show ava pose ohyou
     
     ava @ say "Cinnamon buns for the bun~"
@@ -5780,7 +5780,7 @@ label movienight:
     
     ava @ say "I'll just have a mocha please!"
     
-    show claire sweater neutral
+    show claire sweater happy
     
     mishka @ say "Konyechnya! I'll have that ready for you all shortly!"
 
@@ -5812,7 +5812,7 @@ label movienight:
     
     player "I dunno, my dorm is kind of a wreck and I don't have anything to watch and"
     
-    show claire sweater neutral
+    show claire sweater happy
     show ava typical neutral
 
     claire @ say "Come on, you promised!"
@@ -5947,7 +5947,7 @@ label movienight:
     show ava typical neutral at center:
         xpos -350
         xzoom -1
-    show claire sweater neutral at center:
+    show claire sweater happy at center:
         xpos 350
         #xzoom -1
     with dissolve
@@ -6032,7 +6032,7 @@ label movienight:
     claire @ say "Heyyyy~"
     
     show ava pose ohyou
-    show claire sweater neutral
+    show claire sweater happy
 
     ava @ say "I hope you didn't start without us haha"
     
@@ -6059,7 +6059,7 @@ label movienight:
 
     claire @ say "Pretty swanky place you got here~"
     
-    show claire sweater neutral -alert
+    show claire sweater happy -alert
 
     player "Thanks. Go ahead and have a seat wherever and we'll start watching something."
     
@@ -6123,7 +6123,7 @@ label movienight:
             n "Surprisingly, Claire has not occupied your bed and has instead opted recline against it whilst sitting on the floor, her arm elbow deep in a bag of chips."
             n "You decide to join her down there and grab a handful of chips when she takes her paw out."
 
-            show claire sweater neutral at center with dissolve
+            show claire sweater happy at center with dissolve
 
             claire @ say "Sup."
 
@@ -6184,7 +6184,7 @@ label movienight:
 
             #gunner @ say "Based. Thank you [name]."
 
-            show claire sweater neutral alert at center with dissolve
+            show claire sweater happy alert at center with dissolve
 
             claire @ say "...and I figured those two would wanna sit together~"
 
@@ -6294,7 +6294,7 @@ label movienight:
             gunner @ say "Hrm..."
             gunner @ say "[name], you got any more chairs around here?"
 
-            show claire sweater neutral alert at center:
+            show claire sweater happy alert at center:
                 xzoom -1
                 xpos -550
 
@@ -6402,7 +6402,7 @@ label movienight:
 
             gunner @ say "Establishing dominance in your home. A real alpha move, [name]."
 
-            show claire sweater neutral at center with dissolve:
+            show claire sweater happy at center with dissolve:
                 xzoom -1
                 xpos -500
 
@@ -7510,7 +7510,7 @@ label rori_belltower:
     #n "It was another rough day in statistics. Poor Gunner had to stay behind and try justifying his homework answers to Mrs. Herschel in hopes of getting a passing grade."
     #n "As you step into the courtyard you bump into your beloved bunny buddy and feathered friend."
 
-    #show claire sweater neutral at center
+    #show claire sweater happy at center
     #show ava typical neutral at center:
     #    xzoom -1
     #with dissolve
@@ -9373,7 +9373,7 @@ label vacationday:
 
     show ava typical neutral at offscreenleft:
         yalign 0
-    show claire sweater neutral at offscreenright:
+    show claire sweater happy at offscreenright:
         yalign 0
 
     n "You throw on some clothes and open the door."
@@ -9383,7 +9383,7 @@ label vacationday:
     show ava typical neutral at center:
         xzoom -1
         xpos 1440
-    show claire sweater neutral at center:
+    show claire sweater happy at center:
         xpos 460
     with move
 
@@ -9409,7 +9409,7 @@ label vacationday:
     
     ava @ say "We're gonna get some boba tea and go out shopping and get massages at the spa and and and"
     
-    show claire sweater neutral
+    show claire sweater happy
     
     player "Did you just wake up and decide to do this?"
     
@@ -9426,7 +9426,7 @@ label vacationday:
 
     claire @ say "Well we better make sure today's unforgettable then, huh?"
     
-    show claire sweater neutral
+    show claire sweater happy
     
     claire @ say "Come on, let's go get coffee first to wake you up, sleepyhead~"
 
@@ -9457,7 +9457,7 @@ label vacationday:
 
     show ava typical neutral at center:
         xpos 500
-    show claire sweater neutral at center:
+    show claire sweater happy at center:
         xzoom -1
         xpos -400
     with dissolve
@@ -9466,7 +9466,7 @@ label vacationday:
 
     player "This was awesome, we should do this again sometime."
     
-    show claire sweater neutral alert
+    show claire sweater happy alert
 
     claire @ say "Hey today's not over yet! The night's still young, you know~"
     
@@ -9508,7 +9508,7 @@ label vacationday:
 
     show ava typical neutral at center:
         xpos 500
-    show claire sweater neutral at center:
+    show claire sweater happy at center:
         xzoom -1
         xpos -400
     with dissolve
@@ -9548,7 +9548,7 @@ label vacationday:
 
     player "A-actually, why don't I put on some anime? There's this one Rori downloaded for me that I've been wanting to watch and it's not on flixnet..."
     
-    show claire sweater neutral
+    show claire sweater happy
 
     claire @ say "Sounds good to me!"
     
@@ -9609,7 +9609,7 @@ label vacationday:
 
     claire @ say "I got it~"
     
-    show claire sweater neutral
+    show claire sweater happy
 
     n "The big bunny blocks your view of the TV as she walks over to the fridge, swaying her hips."
     n "She opens the door and bends down, taking her time grabbing the drinks with her ass in the air and her little tail wagging."
@@ -9854,7 +9854,7 @@ label vacationday:
     
     ava @ say "But me and Claire should really get back to our dorm and get ready for class."
     
-    show claire sweater neutral
+    show claire sweater happy
 
     claire @ say "As much as I'd like to stay, she's right. Can't afford to skip too many classes but I'm sure we'll be able to do this once more before the semester's up~"
 
@@ -11090,7 +11090,7 @@ label spicy_restaurant:
     #show rori neutral at center:
     #    xpos -800
     #    xzoom -1
-    #show claire sweater neutral:
+    #show claire sweater happy:
     #    xpos 570
     #show ava typical neutral:
     #    xpos 850
@@ -13581,7 +13581,7 @@ label saturday8:
                 show ava with move:
                     xpos -200
 
-                show claire sweater neutral at center with dissolve:
+                show claire sweater happy at center with dissolve:
                     xpos 600
 
                 claire @ say "Get any interesting shots, Ava?~"
@@ -13639,7 +13639,7 @@ label saturday8:
 
                 player "What the hell have I stumbled into I thought I was just gonna be helping shoot some photos today."
                 
-                show claire sweater neutral
+                show claire sweater happy
 
                 claire @ say "Well I guess you got more than you bargained for~"
                 
@@ -18008,7 +18008,7 @@ label next01:
                     celestine @ say "Hmm..."
                     celestine @ say "Claire, pourriez-vous donner des cours à [name], s'il vous plaît?"
 
-                    show claire sweater neutral at center with dissolve:
+                    show claire sweater happy at center with dissolve:
                         xzoom -1
                         xpos -300
 
@@ -18188,7 +18188,7 @@ label next01:
         show gunner neutral at center:
             xzoom -1
             xpos -700
-        show claire sweater neutral at center:
+        show claire sweater happy at center:
             xpos 500
         show rori neutral at center:
             xpos 700
@@ -18247,7 +18247,7 @@ label next01:
         show gunner neutral at center:
             xzoom -1
             xpos -700
-        show claire sweater neutral at center:
+        show claire sweater happy at center:
             xpos 500
         show rori neutral at center:
             xpos 700
@@ -18315,7 +18315,7 @@ label next01:
         show gunner neutral at center:
             xzoom -1
             xpos -700
-        show claire sweater neutral at center:
+        show claire sweater happy at center:
             xpos 500
         show rori neutral at center:
             xpos 700
@@ -18383,7 +18383,7 @@ label next01:
         show gunner neutral at center:
             xzoom -1
             xpos -700
-        show claire sweater neutral at center:
+        show claire sweater happy at center:
             xpos 500
         show rori neutral at center:
             xpos 700
@@ -18440,7 +18440,7 @@ label next01:
             xpos -725
         show rori neutral at center:
             xpos 450
-        show claire sweater neutral at center:
+        show claire sweater happy at center:
             xpos 750
         with dissolve
 
@@ -18485,7 +18485,7 @@ label next01:
 
         rose @ say "Wh-what?!"
         
-        show claire sweater neutral
+        show claire sweater happy
         
         show ava at hop
 
@@ -18546,7 +18546,7 @@ label next01:
 
         rose "Coffee as black as my soul."
 
-        show claire sweater neutral at center with dissolve:
+        show claire sweater happy at center with dissolve:
             xpos 225
 
         claire @ say "A pumpkin spice latte for me please! And could you put honey and salt on it too?"
@@ -18662,7 +18662,7 @@ label next01:
         show gunner neutral at center:
             xzoom -1
             xpos -700
-        show claire sweater neutral at center:
+        show claire sweater happy at center:
             xpos 500
         show rori neutral at center:
             xpos 700
@@ -18690,7 +18690,7 @@ label next01:
 
         rori @ say "We are not!!"
         
-        show claire sweater neutral
+        show claire sweater happy
 
         player "Yes we are~"
 
@@ -18744,7 +18744,7 @@ label next01:
         show gunner neutral at center:
             xzoom -1
             xpos -625
-        show claire sweater neutral at center:
+        show claire sweater happy at center:
             xpos 700
         show ava casual happy at center:
             xpos 433
@@ -18835,7 +18835,7 @@ label next01:
 
         claire @ say "Right here!"
 
-        show claire sweater neutral at center with dissolve
+        show claire sweater happy at center with dissolve
 
         n "Claire walks up from behind you and surprises you with a hug."
         n "Ava giggles and quickly snaps a photo of you, trapped in Claire's fluffy clutches."
@@ -18864,7 +18864,7 @@ label next01:
         
         pause .25
 
-        show claire sweater neutral at center:
+        show claire sweater happy at center:
             xpos 400
         show mishka neutral at center:
             xzoom -1
@@ -18921,7 +18921,7 @@ label next01:
             xpos -700
         show rori neutral at center:
             xpos 600
-        show claire sweater neutral at center
+        show claire sweater happy at center
         with dissolve
 
         claire @ say "Oh noooo, where will you sit, [name]?"
