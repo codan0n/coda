@@ -1109,14 +1109,16 @@ label week2Tuesday:
     
     show gunner neutral at center with dissolve:
         ypos y_gunner
+        xzoom -1
+        xoffset -430
     
-    gunner "Yeah so then I'm like \"fuck you\" and oh hi Rori!"
+    gunner "Yeah so then I'm like \"fuck you\" and -- oh hi Rori!"
     
     n "Gunner started following you after class and telling you frat boy stories until you came across Rori sitting on the grass working on something on his laptop."
     
     show rori neutral at center with dissolve:
         ypos y_rori
-        xoffset 400
+        xoffset 430
     
     rori @ say "Aaah!"
     
@@ -1137,13 +1139,7 @@ label week2Tuesday:
     
     gunner @ say "I dunno, how's that saying go? \"Be a faggot, break the law?\""
 
-    show rori sleepy:
-        xpos 1080
-        ypos 150
-    show gunner neutral:
-        xpos 450
-        yoffset 350
-        xzoom -1
+    show rori sleepy
     
     rori @ say "I think you mean \"Be gay, do crime.\""
     
@@ -1243,7 +1239,10 @@ label week2Tuesday:
     
     n "Gunner picks a seemingly random direction and confidently marches off. You look to Rori and the two of you wordlessly agree to follow him."
     
-    scene bg classroom with fade
+    scene bg schoolhallways with fade
+    
+    show box with Dissolve(.2):
+        ypos 0
     
     n "Hours passed with nary a crime to commit nor one to prevent. You've searched the university high and low but the problem is that there are just too many cameras and not enough potential victims."
     n "As hope fades away, a glimmer shines in some forgotten corner, drawing you towards it."
@@ -1253,6 +1252,14 @@ label week2Tuesday:
     n "With perked up ears, Gunner and Rori trail behind you to a vending machine, one of many found throughout the hallways of Harmonia."
     n "But this one is different."
     n "Lodged between the glass and the shelves inside is a sad looking bag of pretzels someone had clearly paid for but been scammed by the unreliable mechanism."
+    
+    show gunner neutral at center with dissolve:
+        ypos y_gunner
+        xoffset -375
+        xzoom -1
+    show rori neutral at center with dissolve:
+        ypos y_rori
+        xoffset 375
     
     gunner @ say "Just look at how close that bag is to falling! You could blow on it and it'd come down!"
     
@@ -1335,6 +1342,17 @@ label week2Tuesday:
     rori @ say "Yeah, I think that's enough crime for one day."
     
     scene bg campus with dissolve
+    
+    show box with Dissolve(.2):
+        ypos 0
+        
+    show gunner neutral at center with dissolve:
+        ypos y_gunner
+        xoffset -375
+        xzoom -1
+    show rori neutral at center with dissolve:
+        ypos y_rori
+        xoffset 375
     
     gunner @ say "Well this was a waste. I was looking forward to some quality law breaking time with my bros."
     
@@ -1528,6 +1546,8 @@ label beauty_and_the_beast:
     n "She didn't seem like herself on the roof earlier."
     n "Or perhaps she's not herself when she's lecturing."
     n "You kinda wanna talk to her more but you have to hurry to your next class."
+    
+    scene bg classroom with fade
 
     play music "audio/music/mere - retrograde.ogg" fadein .5
 
@@ -1756,13 +1776,12 @@ label hospital_bound:
     rori "{nw}"
     
     show rori at offscreenleft with move:
-        yalign 0
+        ypos y_rori
 
     n "Before you can even respond, he runs out of the room."
     n "Did he bring you here? How long have you been out?"
 
     show kitsuragi at offscreenright:
-        yalign 0
         ypos y_kitsuragi
 
     n "He returns a few minutes later with a panda lady wearing a doctor's coat and carrying a clipboard."
@@ -1770,9 +1789,10 @@ label hospital_bound:
     show rori neutral at center:
         xzoom -1
         ypos y_rori
-        xpos 1400
+        xoffset -450
     show kitsuragi at center:
-        xpos 450
+        xoffset 450
+        ypos y_kitsuragi
     with move
 
     kitsuragi @ say "Hello, [name]. I am Dr. Kitsuragi."

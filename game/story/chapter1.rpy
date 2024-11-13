@@ -597,8 +597,9 @@ label college_orientation:
 
     hide margaret with dissolve
 
-    show claire sweater surprised at center with dissolve:
-        xpos 0
+    show claire sweater surprised earsup at center with dissolve:
+        ypos y_claire
+        xoffset 450
 
     claire @ say "        Moi?        "
     
@@ -606,7 +607,7 @@ label college_orientation:
     
     claire @ say "Hiiiii, my name's Claire and I left my major undecided cause, well, I couldn't decide what to do!"
     
-    show claire sweater wave
+    show claire sweater wave happy
     
     claire @ say "Something interesting about myself? I was a cheerleader in high school until I broke my leg, and then I joined the chess team and found out I'm actually pretty good at it??"
     
@@ -666,9 +667,10 @@ label college_orientation:
     show ava typical happy at center:
         xoffset 400
         ypos y_ava
-    show claire sweater wave at center:
+    show claire sweater wave happy at center:
         xzoom -1
-        xpos -350
+        xoffset -400
+        ypos y_claire
     with dissolve
 
     claire @ say "Hey! Cool camera! Is that a nifty fifty on it?"
@@ -677,7 +679,7 @@ label college_orientation:
 
     ava @ say "Thanks! I never leave home without it! Fifty millimeter is just so versatile!"
 
-    show claire sweater neutral
+    show claire sweater -wave happy
 
     claire @ say "What dorm are you in? I'm in Saint Mary Hall."
     
@@ -692,6 +694,8 @@ label college_orientation:
     show ava overjoyed
 
     ava @ say "Me too!!!"
+    
+    show claire overjoyed
 
     claire @ say "Oh my gosh this is perfect! We're gonna become best friends ksksksks!"
 
@@ -1021,13 +1025,13 @@ label exploring_campus:
         show ava typical neutral at offscreenleft:
             yalign 0
 
-        show claire sweater neutral at center:
-            xalign 0
-            xpos 400
+        show claire sweater happy at center:
+            ypos y_claire
+            xoffset 400
         show ava typical neutral at center:
-            xalign 0
+            ypos y_ava
             xzoom -1
-            xpos -400
+            xoffset -400
         with move
 
         claire @ say "Holy Frith, it's you! You were at the thing last night, weren't you?"

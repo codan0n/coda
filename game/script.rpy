@@ -155,7 +155,7 @@ define gunner = Character("Gunner", image="gunner", color="#f7d2ae", what_color=
 define rothbauer = Character("Mr. Rothbauer", image="rothbauer", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
 define herschel = Character("Mrs. Herschel", image="herschel", what_color="d0dbff", callback=name_callback, cb_name = "herschel", what_font="dudu.ttf")
 define celestine = Character("Mrs. Celestine", image="celestine", what_color="d0dbff", callback=name_callback, cb_name = "celestine", what_font="dudu.ttf")
-define kitsuragi = Character("kitsuragi", image="kitsuragi", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
+define kitsuragi = Character("kitsuragi", image="kitsuragi", what_color="d0dbff", callback=name_callback, cb_name = "kitsuragi", what_font="dudu.ttf")
 define volginova = Character("Volginova", image="volginova", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
 define adam = Character("Adam", image="adam", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
 define attendant = Character("Attendant", image="attendant", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
@@ -175,8 +175,8 @@ define y_gunner = 1595
 define y_mere = 1200
 define y_herschel = 1485
 define y_celestine = 1600
-define y_claire = 1570
-define y_kitsuragi = 1570
+define y_claire = 1825
+define y_kitsuragi = 1500
 define y_lina = 1570
 define y_ava = 1465
 define y_mishka = 1550
@@ -796,153 +796,14 @@ layeredimage celestine happy:
         attribute say:
             "images/bubble.png"
 
-layeredimage claire sweater neutral:
+layeredimage claire sweater happy:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire/claire sweater neutral.png'
+        'images/characters/claire/claire sweater happy.png'
     group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage claire swimsuit sad:
-    at sprite_highlight('claire')
-    always:
-        'images/characters/claire/claire swimsuit sad.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage claire sweater pose neutral:
-    at sprite_highlight('claire')
-    always:
-        'images/characters/claire/claire sweater pose neutral.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage claire outdoors derp:
-    at sprite_highlight('claire')
-    always:
-        'images/characters/claire/claire outdoors derp.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage claire swimsuit lusty:
-    at sprite_highlight('claire')
-    always:
-        'images/characters/claire/claire swimsuit lusty.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-
-layeredimage claire swimsuit flannel neutral:
-    at sprite_highlight('claire')
-    always:
-        'images/characters/claire/claire swimsuit flannel neutral.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage claire sweater pose lusty:
-    at sprite_highlight('claire')
-    always:
-        'images/characters/claire/claire sweater pose lusty.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage claire sweater pose lusty alert:
-    at sprite_highlight('claire')
-    always:
-        'images/characters/claire/claire sweater pose lusty alert.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage claire outdoors lusty:
-    at sprite_highlight('claire')
-    always:
-        'images/characters/claire/claire outdoors lusty.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage claire outdoors embarassed:
-    at sprite_highlight('claire')
-    always:
-        'images/characters/claire/claire outdoors embarassed.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage claire outdoors horny:
-    at sprite_highlight('claire')
-    always:
-        'images/characters/claire/claire outdoors horny.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage claire outdoors derp:
-    at sprite_highlight('claire')
-    always:
-        'images/characters/claire/claire outdoors derp.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage claire outdoors heyeah:
-    at sprite_highlight('claire')
-    always:
-        'images/characters/claire/claire heyeah.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage claire outdoors sad:
-    at sprite_highlight('claire')
-    always:
-        'images/characters/claire/claire outdoors sad.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage claire sweater wave lusty alert:
-    at sprite_highlight('claire')
-    always:
-        'images/characters/claire/claire sweater wave lusty alert.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage claire sweater neutral alert:
-    at sprite_highlight('claire')
-    always:
-        'images/characters/claire/claire sweater neutral alert.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-
-layeredimage claire sweater pose laugh:
-    at sprite_highlight('claire')
-    always:
-        'images/characters/claire/claire sweater pose laugh.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage claire sweater pose lusty alert:
-    at sprite_highlight('claire')
-    always:
-        'images/characters/claire/claire sweater pose lusty alert.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage claire sweater lusty alert:
-    at sprite_highlight('claire')
-    always:
-        'images/characters/claire/claire sweater lusty alert.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage claire sweater lusty:
-    at sprite_highlight('claire')
-    always:
-        'images/characters/claire/claire sweater lusty.png'
-    group saying:
-        attribute say:
-            "images/bubble.png"
-layeredimage claire sweater cry:
-    at sprite_highlight('claire')
-    always:
-        'images/characters/claire/claire sweater cry.png'
-    group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
         attribute say:
             "images/bubble.png"
 layeredimage claire sweater derp:
@@ -950,97 +811,240 @@ layeredimage claire sweater derp:
     always:
         'images/characters/claire/claire sweater derp.png'
     group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
         attribute say:
             "images/bubble.png"
-layeredimage claire sweater embarassed:
+layeredimage claire sweater flustered:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire/claire sweater embarassed.png'
+        'images/characters/claire/claire sweater flustered.png'
     group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
         attribute say:
-            "images/bubble.png"            
+            "images/bubble.png"
 layeredimage claire sweater giggle:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire sweater giggle.png'
     group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
         attribute say:
             "images/bubble.png"
-layeredimage claire sweater heyeah:
+layeredimage claire sweater happy earsup:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire/claire sweater heyeah.png'
+        'images/characters/claire/claire sweater happy earsup.png'
     group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
         attribute say:
             "images/bubble.png"
-layeredimage claire sweater leaning:
+layeredimage claire sweater hot:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire/claire sweater leaning.png'
+        'images/characters/claire/claire sweater hot.png'
     group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
         attribute say:
-            "images/bubble.png"            
+            "images/bubble.png"
+layeredimage claire sweater hot earsup:
+    at sprite_highlight('claire')
+    always:
+        'images/characters/claire/claire sweater hot earsup.png'
+    group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
+        attribute say:
+            "images/bubble.png"
+layeredimage claire sweater laughing:
+    at sprite_highlight('claire')
+    always:
+        'images/characters/claire/claire sweater laughing.png'
+    group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
+        attribute say:
+            "images/bubble.png"
+layeredimage claire sweater leaning suggestive:
+    at sprite_highlight('claire')
+    always:
+        'images/characters/claire/claire sweater leaning suggestive.png'
+    group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
+        attribute say:
+            "images/bubble.png"
 layeredimage claire sweater overjoyed:
     at sprite_highlight('claire')
     always:
         'images/characters/claire/claire sweater overjoyed.png'
     group saying:
-        attribute say:
-            "images/bubble.png"            
-layeredimage claire sweater surprised:
-    at sprite_highlight('claire')
-    always:
-        'images/characters/claire/claire sweater surprised.png'
-    group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
         attribute say:
             "images/bubble.png"
-layeredimage claire sweater wave:
+layeredimage claire sweater pose happy:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire/claire sweater wave.png'
+        'images/characters/claire/claire sweater pose happy.png'
     group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
         attribute say:
             "images/bubble.png"
-layeredimage claire outdoors neutral:
+layeredimage claire sweater pose laughing:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire/claire outdoors neutral.png'
+        'images/characters/claire/claire sweater pose laughing.png'
     group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
         attribute say:
             "images/bubble.png"
-layeredimage claire outdoors surprised:
+layeredimage claire sweater pose suggestive:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire/claire outdoors surprised.png'
+        'images/characters/claire/claire sweater pose suggestive.png'
     group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
         attribute say:
             "images/bubble.png"
-layeredimage claire outdoors heyeah:
+layeredimage claire sweater pose suggestive earsup:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire/claire outdoors heyeah.png'
+        'images/characters/claire/claire sweater pose suggestive earsup.png'
     group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
         attribute say:
             "images/bubble.png"
-layeredimage claire swimsuit neutral:
+layeredimage claire sweater sad:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire/claire swimsuit neutral.png'
+        'images/characters/claire/claire sweater sad.png'
     group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
         attribute say:
             "images/bubble.png"
-layeredimage claire swimsuit surprised:
+layeredimage claire sweater suggestive:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire/claire swimsuit surprised.png'
+        'images/characters/claire/claire sweater suggestive.png'
     group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
         attribute say:
             "images/bubble.png"
-layeredimage claire swimsuit heyeah:
+layeredimage claire sweater suggestive earsup:
     at sprite_highlight('claire')
     always:
-        'images/characters/claire/claire swimsuit heyeah.png'
+        'images/characters/claire/claire sweater suggestive earsup.png'
     group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
+        attribute say:
+            "images/bubble.png"
+layeredimage claire sweater surprised earsup:
+    at sprite_highlight('claire')
+    always:
+        'images/characters/claire/claire sweater surprised earsup.png'
+    group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
+        attribute say:
+            "images/bubble.png"
+layeredimage claire sweater wave happy:
+    at sprite_highlight('claire')
+    always:
+        'images/characters/claire/claire sweater wave happy.png'
+    group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
+        attribute say:
+            "images/bubble.png"
+            
+layeredimage claire swimsuit flannel happy:
+    at sprite_highlight('claire')
+    always:
+        'images/characters/claire/claire swimsuit flannel happy.png'
+    group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
+        attribute say:
+            "images/bubble.png"
+layeredimage claire swimsuit gasp1:
+    at sprite_highlight('claire')
+    always:
+        'images/characters/claire/claire swimsuit gasp1.png'
+    group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
+        attribute say:
+            "images/bubble.png"
+layeredimage claire swimsuit gasp2:
+    at sprite_highlight('claire')
+    always:
+        'images/characters/claire/claire sweater swimsuit gasp2.png'
+    group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
+        attribute say:
+            "images/bubble.png"
+layeredimage claire swimsuit happy:
+    at sprite_highlight('claire')
+    always:
+        'images/characters/claire/claire swimsuit happy.png'
+    group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
+        attribute say:
+            "images/bubble.png"
+layeredimage claire swimsuit hot:
+    at sprite_highlight('claire')
+    always:
+        'images/characters/claire/claire swimsuit hot.png'
+    group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
+        attribute say:
+            "images/bubble.png"
+layeredimage claire swimsuit laugh:
+    at sprite_highlight('claire')
+    always:
+        'images/characters/claire/claire swimsuit laugh.png'
+    group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
         attribute say:
             "images/bubble.png"
 layeredimage claire swimsuit leaning:
@@ -1048,9 +1052,160 @@ layeredimage claire swimsuit leaning:
     always:
         'images/characters/claire/claire swimsuit leaning.png'
     group saying:
-        xzoom .9
-        yzoom .75
-        pos (0,88)
+        xzoom .85
+        yzoom .63
+        pos (150,126)
+        attribute say:
+            "images/bubble.png"
+layeredimage claire swimsuit leaning hot:
+    at sprite_highlight('claire')
+    always:
+        'images/characters/claire/claire swimsuit leaning hot.png'
+    group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
+        attribute say:
+            "images/bubble.png"
+layeredimage claire swimsuit leaning wink:
+    at sprite_highlight('claire')
+    always:
+        'images/characters/claire/claire swimsuit leaning wink.png'
+    group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
+        attribute say:
+            "images/bubble.png"
+layeredimage claire swimsuit sad:
+    at sprite_highlight('claire')
+    always:
+        'images/characters/claire/claire swimsuit sad.png'
+    group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
+        attribute say:
+            "images/bubble.png"
+layeredimage claire swimsuit suggestive:
+    at sprite_highlight('claire')
+    always:
+        'images/characters/claire/claire swimsuit suggestive.png'
+    group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
+        attribute say:
+            "images/bubble.png"
+layeredimage claire swimsuit suggestive earsup:
+    at sprite_highlight('claire')
+    always:
+        'images/characters/claire/claire swimsuit suggestive earsup.png'
+    group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
+        attribute say:
+            "images/bubble.png"
+layeredimage claire swimsuit surprised earsup:
+    at sprite_highlight('claire')
+    always:
+        'images/characters/claire/claire swimsuit surprised earsup.png'
+    group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
+        attribute say:
+            "images/bubble.png"
+            
+layeredimage claire flannel derp:
+    at sprite_highlight('claire')
+    always:
+        'images/characters/claire/claire flannel derp.png'
+    group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
+        attribute say:
+            "images/bubble.png"
+layeredimage claire flannel :
+    at sprite_highlight('claire')
+    always:
+        'images/characters/claire/claire flannel .png'
+    group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
+        attribute say:
+            "images/bubble.png"
+layeredimage claire flannel flustered:
+    at sprite_highlight('claire')
+    always:
+        'images/characters/claire/claire flannel flustered.png'
+    group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
+        attribute say:
+            "images/bubble.png"
+layeredimage claire flannel happy:
+    at sprite_highlight('claire')
+    always:
+        'images/characters/claire/claire flannel happy.png'
+    group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
+        attribute say:
+            "images/bubble.png"
+layeredimage claire flannel laughing:
+    at sprite_highlight('claire')
+    always:
+        'images/characters/claire/claire flannel laughing.png'
+    group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
+        attribute say:
+            "images/bubble.png"
+layeredimage claire flannel sad:
+    at sprite_highlight('claire')
+    always:
+        'images/characters/claire/claire flannel sad.png'
+    group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
+        attribute say:
+            "images/bubble.png"
+layeredimage claire flannel suggestive:
+    at sprite_highlight('claire')
+    always:
+        'images/characters/claire/claire flannel suggestive.png'
+    group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
+        attribute say:
+            "images/bubble.png"
+layeredimage claire flannel surprised earsup:
+    at sprite_highlight('claire')
+    always:
+        'images/characters/claire/claire flannel surprised earsup.png'
+    group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
+        attribute say:
+            "images/bubble.png"
+layeredimage claire flannel wink:
+    at sprite_highlight('claire')
+    always:
+        'images/characters/claire/claire flannel wink.png'
+    group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
         attribute say:
             "images/bubble.png"
 
