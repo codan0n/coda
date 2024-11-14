@@ -211,24 +211,92 @@ label week2Tuesday:
     
     n "Off in the distance you see Ava fluttering from perch to perch taking photos. She waves to you as she soars above and disappears over a building."
     n "Seems like everyone has something to do today."
-    n "As you wander around campus pondering what to do with the rest of *your* day, you bump into ."
+    n "As you wander around campus pondering what to do with the rest of *your* day, you bump into your favorite coffee rat."
     
     show mishka neutral at center with dissolve:
         ypos y_mishka
-    
+        
+    mishka @ say "Hello!"
     
     player "Oh hey Mishka. It's weird seeing you somewhere other than the cafe."
     
-    #going somehwere?
-    #no I'm just on break. You?
-    #not doing much either
-    #awkward pause
-    #can ask her if she's doing anything this weekend
+    mishka @ say "I could say the same thing about you!"
     
+    n "You hadn't considered that before. To you she's the coffee rat but from her point of view, you're just the coffee human."
     
-    ###see mishka on break, talk to her, schedule a hangout this weekend, she doesn't have a phone
+    player "I just got done with class. You going somewhere?"
     
+    mishka @ say "Just doing a walk. I'm on my break."
     
+    player "Cool, cool."
+    
+    $ mishkaMall = False
+    
+    menu:
+        "Ask if she wants to hang out":
+            $ mishkaMall = True
+            
+            n "You're not sure how else to ask, so you put it bluntly."
+            
+            player "You uh... wanna hang out?"
+            
+            mishka @ say "Hang...out?"
+            
+            n "She seems confused."
+            
+            player "Yeah, you know... go somewhere and do something together?"
+            
+            mishka @ say "Oh!"
+            mishka @ say "I'd love to, but I have to get back to work in a minute."
+            
+            n "Damn, that's code for \'hell no,\' isn't it?"
+            
+            mishka @ say "But maybe this weekend will work for you?"
+            
+            n "Maybe it's not! You still have a chance!"
+            n "Don't fuck this up."
+            
+            player "This weekend works! How about..."
+            
+            n "Your mind races to think of a cool place to take her but comes up blank."
+            
+            mishka @ say "There's the mall in town if you would like to go."
+            mishka @ say "I've never been to it so I don't know what it's like..."
+            
+            player "Sounds perfect!"
+            
+            n "You pull out your phone, pretending to pull up your calendar to make sure it's free."
+            
+            player "Saturday works for me. You got a number so I can text you when I'm there?"
+            
+            mishka @ say "Hah... I don't actually."
+            mishka @ say "Let's just meet there at 3 if that's a good time for you."
+            
+            player "Yup 3 works."
+            
+            mishka @ say "Great! See you there~"
+            mishka @ say "I have to return to work now but I'm glad I ran into you!"
+            
+            player "Same! See you at the mall later!"
+            
+        "Stand around awkwardly":
+            n "Nothing comes to mind. No conversation starters, no pickup lines, no funny hypothetical questions."
+            n "So you just stand there, looking around aimlessly and giving polite smiles whenever your eyes meet."
+            n "To your credit, Mishka also seems to be in the same akward state of not know what to do or say."
+            
+            mishka @ say "Well it was nice standing here with you."
+            mishka @ say "I have to return to work now but maybe we can do this again sometime?"
+            
+            n "Her statement is totally sincere without a hint of sarcasm."
+            
+            player "Whenever you're free."
+            
+            mishka @ say "Hehe see you at the cafe later, [name]!"
+            
+    hide mishka with dissolve
+            
+    n "Mishka gives you a wave and heads in the direction of the cafe."
+    n "You're feeling tired from classes so you retire to your dorm early."
     
     scene bg black with fade
 
