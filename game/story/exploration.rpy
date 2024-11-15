@@ -152,7 +152,7 @@ label dormStudy:
             n "You open your totally legally acquired epub of [currentbook] and start reading."
         "History":
             $ historySkill =+ 1
-            n "You crack open your History textbook and read up on some ancient cultures."
+            n "You crack open your history textbook and read up on some ancient cultures."
         "Statistics":
             $ statsSkill =+ 1
             n "You flip open your statistics book and open a calculator app to crunch some numbers."

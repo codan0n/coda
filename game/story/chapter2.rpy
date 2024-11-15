@@ -2031,8 +2031,6 @@ label hospital_bound:
 
     hide box
 
-    #___friday2
-
     scene bg hospital with fade
 
     #play music "audio/music/Evan Schaeffer - Encomium.ogg" fadein .5
@@ -2041,8 +2039,8 @@ label hospital_bound:
         ypos 0
 
     n "After several hours worth of tests, they made you stay the night here."
-    n "You're already tired of this place. You hate being here."
-    n "But they insist that you stay at least until they can get the dizzy spells under control."
+    n "You're already tired of this place. There's nothing more uncomfortable than lying in a hospital bed, no matter how soft the pillows are."
+    n "But they insist that you remain here at least until they can get the dizzy spells under control."
     n "At least now you have a convenient excuse for falling behind in class."
 
     play audio "audio/sound effects/vibrate.ogg"
@@ -2069,27 +2067,61 @@ label hospital_bound:
     call phone_end from _call_phone_end_3
 
     n "Gunner is probably still lost in that class. Maybe you should work on the homework so you don't fall too far behind."
-    n "You think you have all your textbooks in your bag."
+    n "You think you still have all your textbooks in your bag. It's lying just within reach beside the bed."
+    n "What should you study?"
     
-
-
-
-
-
-
-
-    #your bag is beside the bed, you reach over to unzip it
+    menu:
+        "French":
+            $ frenchSkill =+ 1
+            n "You pick up your French textbook and practice some lessons."
+        "Literature":
+            $ literatureSkill =+ 1
+            n "You open your totally legally acquired epub of [currentbook] and start reading."
+        "History":
+            $ historySkill =+ 1
+            n "You crack open your history textbook and read up on some ancient cultures."
+        "Statistics":
+            $ statsSkill =+ 1
+            n "You flip open your statistics book and open a calculator app to crunch some numbers."
     
+    n "Time flies and before you know it, it's dark out."
+    n "Oh shoot, Rori is probably still wondering if you're alright! Better send him a text."
     
-    # can try to escape the hospital but fail
+    call message_start("me", "Hey Rori", "testimage.png")
+    call reply_message("Thanks for dragging my ass to the hospital") 
     
+    call message("Rori", "Np", "roriavi.png") 
+    call message("Rori", "I actually carried you btw", "roriavi.png") 
     
+    call reply_message("Oh for real?")
+    call reply_message("Damn you must be strong") 
     
+    call message("Rori", "It actually wasn't that hard once I got you up on my shoulder", "roriavi.png") 
+    call message("Rori", "You alright?", "roriavi.png") 
     
+    call reply_message("Myeah probably")
+    call reply_message("I'm still at the hospital cause they wanna do more tests")
     
-    n "Time flies by and it starts getting late. You should try and get some sleep."
+    call message("Rori", "Fug that's a long time", "roriavi.png") 
+    call message("Rori", "Hope it's nothing serious", "roriavi.png") 
+    
+    call reply_message("They just want me to stay here until they're sure I won't randomly pass out in the middle of the street again.") 
 
-    n "You put away your phone and make yourself as comfortable as you can in your tiny hospital bed and close your eyes."
+    call message("Rori", "Ahh makes sense", "roriavi.png") 
+    call message("Rori", "Need me to bring you anything ?", "roriavi.png") 
+
+    call reply_message("Nah I'm good. I got my school books and stuff.") 
+    call reply_message("Thanks tho") 
+    
+    call message("Rori", "Text me if you want anything", "roriavi.png") 
+    call message("Rori", "I know hospital food sucks", "roriavi.png") 
+    
+    call reply_message("Thx will do") 
+    
+    call phone_end
+    
+    n "You put the phone down and sigh, wondering how much longer you'll be confined here."
+    n "With not much else to do, you pull up the blanket and try to fall asleep."
     
     stop music fadeout 1.0
 
@@ -2099,7 +2131,7 @@ label hospital_bound:
 
     hide box
 
-    #___saturday3
+    #___saturday
 
     scene bg hospital with fade
     
@@ -2108,6 +2140,18 @@ label hospital_bound:
     
     play music "audio/music/Evan Schaeffer - Encomium.ogg" fadein .5
 
+    n "The hospital must be trying to milk your insurance money dry because they're still not letting you leave."
+    n "You're tempted to just get up and walk out the front door."
+    
+    
+    
+    #get text inviting you to party, also maybe get reminded of mishka hangout, get given option to try and escape or just study/pinstagram.
+    #go back and text rori after gunner
+    
+    
+
+    #either try to escape and hang out with mishka if you offered, or get to the party but fail, or just study
+    
     n "What a waste of a weekend."
     n "It's already Saturday evening and still no word of when you'll be able to leave this place."
     n "You should just get up and walk away. What are they gonna do, call the police and arrest you?"
@@ -2496,7 +2540,7 @@ label aftermenu2:
 
     n "..."
 
-    #___sunday3
+    #___sunday
 label leaving_hospital:
 
     scene bg hospital with fade
@@ -2522,7 +2566,7 @@ label leaving_hospital:
     kitsuragi @ say "Well I have some good news for you."
     kitsuragi @ say "While we don't know for certain what's causing these migraines and dizzy spells, we managed to get ahold of something that should reduce their intensity."
 
-    n "The kitsuragi tosses a bottle of pills at you."
+    n "The doctor tosses a bottle of pills at you."
 
     kitsuragi @ say "Read the instructions carefully otherwise ya might die."
     kitsuragi @ say "...I'm kidding! Well, kinda. Seriously, read the instructions. Two a day. Any more than that and you're bound to experience some strange side effects."
@@ -2553,7 +2597,7 @@ label leaving_hospital:
 
     hide kitsuragi with dissolve
 
-    n "The kitsuragi accompanies you to the lobby and sees you out."
+    n "The doctor accompanies you to the lobby and sees you out."
 
     n "From there, you decide to head back to your dorm and chill in the comfort of your own home, away from that gross hospital."
 
@@ -2561,8 +2605,6 @@ label leaving_hospital:
 
     scene bg codadorm with fade
 
-    #play music "audio/ai3.ogg" fadein 1.0
-    #play music "audio/music/Evan Schaeffer - Bonita.ogg" fadein 1.0
     play music "audio/music/vylet pony - Reading at Night.ogg"
 
     show box with Dissolve(.2):
