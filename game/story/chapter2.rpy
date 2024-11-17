@@ -2087,6 +2087,8 @@ label hospital_bound:
     n "Time flies and before you know it, it's dark out."
     n "Oh shoot, Rori is probably still wondering if you're alright! Better send him a text."
     
+    call phone_start
+    
     call message_start("me", "Hey Rori", "testimage.png")
     call reply_message("Thanks for dragging my ass to the hospital") 
     
@@ -2175,7 +2177,7 @@ label hospital_bound:
     
     n "That party sure sounds fun... if only you weren't stuck here."
     
-    if mishkaMall = True:
+    if mishkaMall == True:
         n "More importantly, Mishka is probably leaving to go to the mall right about now."
         n "What's she going to think when she doesn't see you there?"
     
@@ -2194,7 +2196,8 @@ label hospital_bound:
             n "Busted!"
             n "You look around for a good place to escape but you're cornered."
             
-            show kitsuragi at center with dissolve
+            show kitsuragi at center with dissolve:
+                ypos y_kitsuragi
             
             kitsuragi @ say "You get lost on the way to the bathroom or something?"
             
@@ -2250,44 +2253,44 @@ label hospital_bound:
             n "You should just stay put and study like a good student."
             n "Or at least pass the time browsing the web."
 
-        menu:
-            n "{cps=0}{/cps}"
-            "Read for literature":
-                $ literatureSkill =+ 1
-                
-                n "You lean over and reach into your backpack to pull out your copy of [currentBook]."
-                n "Luckily you had your headphones in your bag as well. You put them on and get to reading."
-            "Work on stats homework":
-                $ statsSkill =+ 1
-                
-                n "You lean over and reach into your backpack to pull out your stats textbook."
-                n "Luckily you had your headphones in your bag as well. You put them on and get to studying."
-                n "\"Given the rarity of a particular disease .02 and the chance of a false negative .08, find the probability that a patient actually has the disease if the test yields a positive result...\""
-            "Study history":
-                $ historySkill =+ 1
-                
-                n "You don't have any homework in history but it would still do you some good to crack open the textbook and do a bit of studying for the test."
-                n "Luckily you had your headphones in your bag as well. You put them on and start reading."
-                n "You don't remember where class left off so you flip to a random page."
-                n "In his final moments before his execution, the leader of the expedition famously said to the Arcoonian tribe..."
-            "Practice French":
-                $ frenchSkill =+ 1
-                
-                n "Better brush up on your French, it's one of those things where if you don't use it you lose it."
-                n "Luckily you had your headphones in your bag as well. You put them on and start reading."
-                n "Il fait un temps affreux translates to the weather is terrible! Take note of the use of Il fait, which means it makes or it does, rather than it is..."
-            "Browse pinstagram":
-                $ avaPoints = avaPoints + 1
-                
-                n "You know what, you really don't feel like doing homework right now."
-                n "Instead, you'd like to indulge in the finer arts society has to offer."
-                n "You tap the pinstagram app on your phone and instantly receive a dopamine rush as dozens of random images crowd your screen."
-                n "After a bit of scrolling, you stumble upon Ava's profile."
-                n "The software must have automatically detected you have her number in your contacts and added her to your news feed."
-                n "Sometimes the FBI agent monitoring your internet connections is pretty cool like that."
-                n "Ava's got some nice pics on here. Just like she said, she's really into landscape shots."
-                n "Some of these look like they're taken from high up. She's probably perched in a tree judging by the looks of it."
-                n "Kinda makes you wanna go out and explore. Maybe you will once you're free from this dreaded hospital."
+            menu:
+                n "{cps=0}{/cps}"
+                "Read for literature":
+                    $ literatureSkill =+ 1
+                    
+                    n "You lean over and reach into your backpack to pull out your copy of [currentBook]."
+                    n "Luckily you had your headphones in your bag as well. You put them on and get to reading."
+                "Work on stats homework":
+                    $ statsSkill =+ 1
+                    
+                    n "You lean over and reach into your backpack to pull out your stats textbook."
+                    n "Luckily you had your headphones in your bag as well. You put them on and get to studying."
+                    n "\"Given the rarity of a particular disease .02 and the chance of a false negative .08, find the probability that a patient actually has the disease if the test yields a positive result...\""
+                "Study history":
+                    $ historySkill =+ 1
+                    
+                    n "You don't have any homework in history but it would still do you some good to crack open the textbook and do a bit of studying for the test."
+                    n "Luckily you had your headphones in your bag as well. You put them on and start reading."
+                    n "You don't remember where class left off so you flip to a random page."
+                    n "In his final moments before his execution, the leader of the expedition famously said to the Arcoonian tribe..."
+                "Practice French":
+                    $ frenchSkill =+ 1
+                    
+                    n "Better brush up on your French, it's one of those things where if you don't use it you lose it."
+                    n "Luckily you had your headphones in your bag as well. You put them on and start reading."
+                    n "Il fait un temps affreux translates to the weather is terrible! Take note of the use of Il fait, which means it makes or it does, rather than it is..."
+                "Browse pinstagram":
+                    $ avaPoints = avaPoints + 1
+                    
+                    n "You know what, you really don't feel like doing homework right now."
+                    n "Instead, you'd like to indulge in the finer arts society has to offer."
+                    n "You tap the pinstagram app on your phone and instantly receive a dopamine rush as dozens of random images crowd your screen."
+                    n "After a bit of scrolling, you stumble upon Ava's profile."
+                    n "The software must have automatically detected you have her number in your contacts and added her to your news feed."
+                    n "Sometimes the FBI agent monitoring your internet connections is pretty cool like that."
+                    n "Ava's got some nice pics on here. Just like she said, she's really into landscape shots."
+                    n "Some of these look like they're taken from high up. She's probably perched in a tree judging by the looks of it."
+                    n "Kinda makes you wanna go out and explore. Maybe you will once you're free from this dreaded hospital."
 
     scene bg black with fade
 
@@ -2340,7 +2343,6 @@ label hospital_bound:
     call screen phone_reply("What?","choice3","Thanks?","choice4")
 
     label choice3:
-        #finished
         $ clairephonewhat = True
 
         call phone_after_menu from _call_phone_after_menu_2
@@ -2436,7 +2438,6 @@ label hospital_bound:
         jump aftermenu2
 
     label choice4:
-        #untested
         $ clairePoints = clairePoints + 1
         $ clairephonethx = True
 
@@ -2462,9 +2463,8 @@ label hospital_bound:
 
         call message("Claire", "Sry keep u waiiting, took a bit to conmvince ava", "claireavi.png") from _call_message_61
         call message_img("Claire", "Enjoy~", "pic1.png") from _call_message_img
-        #claire sends pic of her and ava lifting their shirts, claire sticking out her tongue seductively, ava winking and throwing peace sign
-
-        call reply_message("BOOBA") from _call_reply_message_46
+        
+        call reply_message("BOOBA")
 
         call phone_end from _call_phone_end_7
 
@@ -2488,7 +2488,6 @@ label hospital_bound:
         pause .05
         show bg static2
         pause .05
-
 
         show bg hospital
 
@@ -2519,9 +2518,7 @@ label hospital_bound:
         show bg static3
         pause .1
 
-
         jump aftermenu2
-
 
 label aftermenu2:
 
@@ -2544,10 +2541,10 @@ label leaving_hospital:
     n "Morning light shines through the window."
     n "What day is it?"
     n "How much longer are you gonna be stuck here?"
-    n "You reach over to the nightstand for your phone."
-    n "Wait a second, didn't you drop it last night? How'd it end up back here?"
+    n "You reach over to the nightstand for your phone and notice the doctor standing by the door."
 
     show kitsuragi at center with dissolve:
+        ypos y_kitsuragi
         xpos 0
 
     kitsuragi @ say "Good morning, [name]. How are you feeling?"
@@ -2560,18 +2557,19 @@ label leaving_hospital:
     n "The doctor tosses a bottle of pills at you."
 
     kitsuragi @ say "Read the instructions carefully otherwise ya might die."
-    kitsuragi @ say "...I'm kidding! Well, kinda. Seriously, read the instructions. Two a day. Any more than that and you're bound to experience some strange side effects."
+    kitsuragi @ say "...I'm kidding! Well, kinda. Seriously, read the instructions. Two a day. Any more than that and you're bound to undergo some strange side effects."
     kitsuragi @ say "Contact us immediately if you experience another one of these incidents."
 
-    player "You mean I'm free to go?"
+    player "You mean I'm free to leave?"
 
-    kitsuragi @ say "That's correct. We ask that you take it easy though since we don't know what exactly triggers the symptoms you've been experiencing."
-    kitsuragi @ say "In the mean time, we'll continue our tests and we'll let you know as soon as we know anything."
+    kitsuragi @ say "That's correct. We ask that you take it easy though since we don't know what exactly triggers your symptoms."
+    kitsuragi @ say "In the mean time, we'll continue our tests and we'll let you know as soon as we discover anything."
 
-    player "So you still don't know if I have nihil syndrome? Like, when would the tests show if I have it or not?"
+    player "So you still don't even know if I'm dying? Like, when would the tests show that?"
 
     kitsuragi @ say "It's hard to say. We don't have all the equipment here to test for it so we had to send your blood across the country to find out."
-    kitsuragi @ say "From what we can tell here though, you appear to be fine. I actually really doubt it's nihil. You said you started experiencing symptoms shortly after you moved here, right?"
+    kitsuragi @ say "From what we can tell here though, you appear to be fine. I actually really doubt it's anything to be seriously concerned about."
+    kitsuragi @ say "You said you started experiencing symptoms shortly after you moved here, right?"
     kitsuragi @ say "Well, city water isn't as pure as they'd like you to believe. If you can, try drinking bottled water or get one of those fancy filters."
 
     player "Damn government putting chemicals in the water."
@@ -2604,7 +2602,6 @@ label leaving_hospital:
     n "After taking a shower and fixing yourself a bowl of cereal, you nestle up in bed and check on your texts."
 
     if clairephonethx == True:
-
         call phone_start from _call_phone_start_7
 
         call message_start("Claire", "Ahahahah I k new youd like tht~", "claireavi.png") from _call_message_start_11
@@ -2613,14 +2610,14 @@ label leaving_hospital:
         call message("Claire", "[name]?", "claireavi.png") from _call_message_64
         call message("Claire", "Hellooooooo ?", "claireavi.png") from _call_message_65
 
-        call reply_message("Hey sorry I fell asleep") from _call_reply_message_47
+        call reply_message("Hey sorry I passed out") from _call_reply_message_47
         call reply_message("I think that pic you sent almost killed me lmao") from _call_reply_message_48
 
         call message("Claire", "Rly?? Lmao", "claireavi.png") from _call_message_66
-        call message("Claire", "Man last night was wild. You shoulda been there!", "claireavi.png") from _call_message_67
+        call message("Claire", "Last night was sooo wild. You shoulda been there!", "claireavi.png") from _call_message_67
 
         call reply_message("Believe me, there's no other place I would have rather been.") from _call_reply_message_49
-        call reply_message("Oh I'm free from the hospital btw!") from _call_reply_message_50
+        call reply_message("Oh I'm free from the hospital now btw!") from _call_reply_message_50
 
         call message("Claire", "No way! We should celebrate!", "claireavi.png") from _call_message_68
 
@@ -2645,7 +2642,7 @@ label leaving_hospital:
         call message("Claire", "She'd really kill you if you said that to her LOL", "claireavi.png") from _call_message_75
 
         call reply_message("Heh") from _call_reply_message_56
-        call reply_message("Well I'll let you get back to your hangover. I'll see you in French tomorrow!") from _call_reply_message_57
+        call reply_message("Well I'll let you get back to your hangover. I'll see you in French later!") from _call_reply_message_57
 
         call message("Claire", "See yaaaaaa!!!!", "claireavi.png") from _call_message_76
         call message("Claire", "Cutie~ :3", "claireavi.png") from _call_message_77
@@ -2661,7 +2658,7 @@ label leaving_hospital:
         call message("Claire", "[name]?", "claireavi.png") from _call_message_80
         call message("Claire", "Hellooooooo ?", "claireavi.png") from _call_message_81
 
-        call reply_message("Hey sorry I fell asleep") from _call_reply_message_58
+        call reply_message("Hey sorry I passed out") from _call_reply_message_58
         call reply_message("Again, sorry about last night. I wasn't feeling well.") from _call_reply_message_59
         call reply_message("Good news is that I'm out of the hospital now and they gave me some pills that may or may not help with that.") from _call_reply_message_60
 
@@ -2695,174 +2692,17 @@ label leaving_hospital:
         call message("Claire", "Hope so!", "claireavi.png") from _call_message_91
 
         call reply_message("Lol") from _call_reply_message_69
-        call reply_message("Well I'll let you get back to your hangover. I'll see you in French tomorrow!") from _call_reply_message_70
+        call reply_message("Well I'll let you get back to your hangover. I'll see you in French later!") from _call_reply_message_70
 
         call message("Claire", "See yaaaaaa!!!!", "claireavi.png") from _call_message_92
 
         call phone_end from _call_phone_end_9
 
     n "You eat your cereal while watching videos, remembering to take one of your pills."
-    n "The kitsuragi said to take it easy, so you're just gonna relax in bed all day."
-    n "You should probably text Rori and let him know you're out of the hospital."
-    n "It's literally the least you could do considering he took you there in the first place."
-    n "How he even managed to carry you all the way there is pretty impressive."
-    n "You guess it's those gains finally paying off from hitting up the gym with Gunner."
-
-    if roriparty == True:
-        call phone_start from _call_phone_start_9
-
-        call message_start("me", "Hey Rori", "testimage.png") from _call_message_start_13
-        call reply_message("I made it out of the hospital alive") from _call_reply_message_71
-
-        call message("Rori", "Sup [name]", "roriavi.png") from _call_message_93
-        call message("Rori", "Nice! Did they find out what was wrong with you?", "roriavi.png") from _call_message_94
-
-        call reply_message("Nope!") from _call_reply_message_72
-        call reply_message("They gave me some pills tho") from _call_reply_message_73
-
-        call message("Rori", "That's something at least.", "roriavi.png") from _call_message_95
-        call message("Rori", "I hope it's nothing serious.", "roriavi.png") from _call_message_96
-
-        call reply_message("Nah don't worry about it.") from _call_reply_message_74
-        call reply_message("How was the party last night?") from _call_reply_message_75
-
-        call message("Rori", "It was pretty crazy! I had a few beers and talked to people and did stuff", "roriavi.png") from _call_message_97
-
-        call reply_message("A few beers and talking to people is what you consider crazy?") from _call_reply_message_76
-
-        call message("Rori", "I mean for me yes that is pretty crazy!", "roriavi.png") from _call_message_98
-        call message("Rori", "Gunner was there too", "roriavi.png") from _call_message_332 
-        call message("Rori", "He dared me to send you a dick pic", "roriavi.png") from _call_message_333 
-        call message("Rori", "I was so drunk I almost did!", "roriavi.png") from _call_message_334 
-        
-        call screen phone_reply("You should have","roripicyes","lmao that's so wacky","roripicno")
-        
-        label roripicyes:
-            #finished
-            $ roriPoints = roriPoints + 1
-            
-            call phone_after_menu from _call_phone_after_menu_14 
-
-            call message_start("me", "You should have", "testimage.png") from _call_message_start_42 
-
-            call message("Rori", "OWO", "roriavi.png") from _call_message_335 
-            call message("Rori", "Haha quit joking around [name]", "roriavi.png") from _call_message_336 
-
-            call reply_message("It would have been super funny") from _call_reply_message_247 
-                
-            call message("Rori", "Oh yeah? Well maybe next time I'm drunk then :P", "roriavi.png") from _call_message_337 
-        
-        label roripicno:
-            #finished
-            call phone_after_menu from _call_phone_after_menu_15 
-
-            call message_start("me", "lmao that's so wacky", "testimage.png") from _call_message_start_43 
-
-            call message("Rori", "Ikr? Can you imagine me ever doing that?", "roriavi.png") from _call_message_338 
-            
-            call reply_message("Still sounds like you had a wild time") from _call_reply_message_248 
-        
-        call reply_message("Fuck I wish I could have gone to the party") from _call_reply_message_78
-
-        #call message("Rori", "Heheh thanks ^^;", "roriavi.png") from _call_message_100
-        call message("Rori", "To think I never would have gone if you hadn't told me to lol", "roriavi.png") from _call_message_101
-        call message("Rori", "There will be other parties tho", "roriavi.png") from _call_message_102
-
-        call reply_message("Yeah") from _call_reply_message_79
-
-        #call message("Rori", "I'm actually pretty excited now!", "roriavi.png") from _call_message_103
-
-        #call reply_message("Attaboy") from _call_reply_message_80
-
-        call message("Rori", "You doin anything for the rest of today", "roriavi.png") from _call_message_104
-        call message("Rori", "?", "roriavi.png") from _call_message_105
-
-        call reply_message("I gotta chill in bed. Doctor's orders.") from _call_reply_message_81
-
-        call message("Rori", "Ah makes sense", "roriavi.png") from _call_message_339 
-        call message("Rori", "Let me know if you need anything!", "roriavi.png") from _call_message_340 
-
-        call reply_message("Anything?") from _call_reply_message_249
-
-        call message("Rori", "Within reason!", "roriavi.png") from _call_message_341 
-
-        call reply_message("Like goat boi dick pics?") from _call_reply_message_250
-        
-        call message("Rori", "Bahhh! >.<", "roriavi.png") from _call_message_342 
-        
-        call reply_message("Hehehe just teasin'") from _call_reply_message_251
-
-        call phone_end from _call_phone_end_10
-    else:
-        call phone_start from _call_phone_start_10
-
-        call message_start("me", "Hey Rori", "testimage.png") from _call_message_start_14
-        call reply_message("I made it out of the hospital alive") from _call_reply_message_83
-
-        call message("Rori", "Sup [name]", "roriavi.png") from _call_message_109
-        call message("Rori", "Nice! Did they find out what was wrong with you?", "roriavi.png") from _call_message_110
-
-        call reply_message("Nope!") from _call_reply_message_84
-        call reply_message("They gave me some pills tho") from _call_reply_message_85
-
-        call message("Rori", "That's something at least.", "roriavi.png") from _call_message_111
-        call message("Rori", "I hope it's nothing serious.", "roriavi.png") from _call_message_112
-
-        call reply_message("Nah don't worry about it.") from _call_reply_message_86
-        call reply_message("What did you end up doing last night?") from _call_reply_message_87
-
-        call message("Rori", "Well I was working on fixing a bug in a program and I got frustrated so I left and went for a walk to clear my mind", "roriavi.png") from _call_message_113
-        call message("Rori", "And I ended up bumping into this girl and we chatted for a while", "roriavi.png") from _call_message_114
-        #it's rose
-
-        call reply_message("Niiice") from _call_reply_message_252
-        call reply_message("You get her number?") from _call_reply_message_253 
-
-        call message("Rori", "I did!", "roriavi.png") from _call_message_343 
-        call message("Rori", "I'm way too nervous about texting her though", "roriavi.png") from _call_message_344 
-        
-        call reply_message("Why?") from _call_reply_message_254
-        
-        call message("Rori", "Idk she's just... kinda intimidating?", "roriavi.png") from _call_message_345 
-        call message("Rori", "Goth girl vibes and such", "roriavi.png") from _call_message_346 
-        
-        call reply_message("Jackpot") from _call_reply_message_255
-        
-        call message("Rori", "lol i know", "roriavi.png") from _call_message_347 
-        call message("Rori", "What you doin", "roriavi.png") from _call_message_348 
-        call message("Rori", "?", "roriavi.png") from _call_message_349 
-        
-        #call message("Rori", "We got along pretty well and I was thinking of asking if she'd like to do something with me this weekend", "roriavi.png") from _call_message_116
-
-        #call reply_message("I guess it turned out for the better that you didn't go to that party after all.") from _call_reply_message_89
-
-        #call message("Rori", "Yup!", "roriavi.png") from _call_message_117
-        #call message("Rori", "Thanks for telling me not to go lol", "roriavi.png") from _call_message_118
-
-        #call reply_message("Hey it was entirely your choice") from _call_reply_message_90
-
-        #call message("Rori", "Yeah but you helped influence it", "roriavi.png") from _call_message_119
-
-        #call reply_message("If you say so") from _call_reply_message_91
-
-        #call message("Rori", "You doin anything for the rest of today", "roriavi.png") from _call_message_120
-        #call message("Rori", "?", "roriavi.png") from _call_message_121
-
-        call reply_message("I gotta chill in bed all day. Doctor's orders.") from _call_reply_message_92
-
-        call message("Rori", "Ah makes sense", "roriavi.png") from _call_message_122
-        call message("Rori", "I gotta work on some homework", "roriavi.png") from _call_message_123
-        call message("Rori", "Let me know if you need anything!", "roriavi.png") from _call_message_350 
-
-        call reply_message("Thx lol. Text you later") from _call_reply_message_93
-
-        call phone_end from _call_phone_end_11
-
-    n "Sounds like everyone else had a fun weekend."
-    n "You feel like you were robbed of yours."
-    n "At least you're no longer trapped in that hospital. It was starting to feel like you were being held prisoner there."
-    n "You can relax."
-    n "For now."
+    n "The doctor said to take it easy, so you're just gonna relax in bed all day."
+    
+    
+    
     n "You still have class in a few hours after all."
     n "When it comes time for you to go to bed, you pop another one of those pills, as instructed."
     n "You're already getting sick of them but you gotta do what you gotta do to stay alive you guess."

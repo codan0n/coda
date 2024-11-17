@@ -2278,9 +2278,8 @@ label start:
     $ trackDiscovered = False
     $ townDiscovered = False
     $ avaClaireLunch = False
-    $ clairephonewhat = ""
-    $ clairephonethx = ""
-    $ roriparty = ""
+    $ clairephonewhat = False
+    $ clairephonethx = False
     $ statsSkill = 0
     $ frenchSkill = 0
     $ historySkill = 0
