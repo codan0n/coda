@@ -2140,22 +2140,11 @@ label hospital_bound:
     
     play music "audio/music/Evan Schaeffer - Encomium.ogg" fadein .5
 
+    n "Ugh it's already Saturday."
     n "The hospital must be trying to milk your insurance money dry because they're still not letting you leave."
     n "You're tempted to just get up and walk out the front door."
+    n "What are they gonna do, call the police and arrest you?"
     
-    
-    
-    #get text inviting you to party, also maybe get reminded of mishka hangout, get given option to try and escape or just study/pinstagram.
-    #go back and text rori after gunner
-    
-    
-
-    #either try to escape and hang out with mishka if you offered, or get to the party but fail, or just study
-    
-    n "What a waste of a weekend."
-    n "It's already Saturday evening and still no word of when you'll be able to leave this place."
-    n "You should just get up and walk away. What are they gonna do, call the police and arrest you?"
-
     play audio "audio/sound effects/vibrate.ogg"
     
     n "Hm?"
@@ -2183,120 +2172,122 @@ label hospital_bound:
     call phone_end from _call_phone_end_4
     
     pause .2
-
-    n "God."
-    n "DAMMIT"
-    n "Not only is this bullshit mystery disease possibly threatening your life, it's destroying your social life as well."
-    n "This is not the college experience you were promised by those Hollywoof movies."
-    n "You sit and wallow in your frustration until you get yet another text."
-
-    call phone_start from _call_phone_start_5
-
-    call message_start("Rori", "Hey you never texted me back after the other day. Did they let you go?", "roriavi.png") from _call_message_start_5
-
-    call reply_message("No, they want me to stay here until they're sure I won't randomly pass out in the middle of the street again.") from _call_reply_message_18
-
-    call message("Rori", "Oh hecc", "roriavi.png") from _call_message_19
-    call message("Rori", "Need me to bring you anything ?", "roriavi.png") from _call_message_20
-
-    call reply_message("Nah I'm good. I got my school books and stuff.") from _call_reply_message_19
-    call reply_message("Thanks tho") from _call_reply_message_20
-
-    call message("Rori", "Ah alright", "roriavi.png") from _call_message_21
-    call message("Rori", "Hey uh can I get your input on something?", "roriavi.png") from _call_message_22
-
-    call reply_message("?") from _call_reply_message_21
-
-    call message("Rori", "So there's this party going on tonight... do you think I should go to it??", "roriavi.png") from _call_message_23
-
-    call reply_message("Why wouldn't you?") from _call_reply_message_22
-
-    call message("Rori", "I dunno", "roriavi.png") from _call_message_24
-    call message("Rori", "Parties make me anxious", "roriavi.png") from _call_message_25
-    call message("Rori", "I mean that thing on the rooftop was fun but idk", "roriavi.png") from _call_message_331
-
-    call screen phone_reply("Yeah go for it","choice1","If you don't wanna go, don't go","choice2")
-
-    label choice1:
-        #finished
-        $ roriPoints = roriPoints + 1
-        $ roriparty = True
-        call phone_after_menu from _call_phone_after_menu
-
-        call message_start("me", "Yeah go for it", "testimage.png") from _call_message_start_6
-        call reply_message("It'll be fine") from _call_reply_message_23
-
-        call message("Rori", "Hmmmm", "roriavi.png") from _call_message_27
-        call message("Rori", "Ok!", "roriavi.png") from _call_message_28
-        call message("Rori", "If I don't enjoy it I can just leave lol", "roriavi.png") from _call_message_29
-        call message("Rori", "Thanks [name]!", "roriavi.png") from _call_message_30
-        call message("Rori", "I'll text you later!", "roriavi.png") from _call_message_31
-
-        call reply_message("Have fun") from _call_reply_message_24
-
-        jump aftermenu
-
-    label choice2:
-        #untested
-        call phone_after_menu from _call_phone_after_menu_1
-        call message_start("me", "If you don't wanna go, don't go", "testimage.png") from _call_message_start_7
-
-        call message("Rori", "Yeah but...", "roriavi.png") from _call_message_32
-        call message("Rori", "Nah you're right. I'm no party animal.", "roriavi.png") from _call_message_33
-        call message("Rori", "I have better things to do with my time anyway.", "roriavi.png") from _call_message_34
-        call message("Rori", "Talk to you later [name]", "roriavi.png") from _call_message_35
-
-        call reply_message("Later") from _call_reply_message_25
-
-        jump aftermenu
-
-
-label aftermenu:
-    call phone_end from _call_phone_end_5
-
-    n "Dammit, why did Rori have to remind you of that party you're missing out on?"
-    n "You've got nothing to do here but play with your phone and study."
-    n "Speaking of which, you have some reading to catch up on for literature class."
-    n "Then there's the math problems Gunner told you about."
-    n "Wouldn't be a bad idea to study history either."
-    n "Or you could say screw that and go back to the internet."
-
+    
+    n "That party sure sounds fun... if only you weren't stuck here."
+    
+    if mishkaMall = True:
+        n "More importantly, Mishka is probably leaving to go to the mall right about now."
+        n "What's she going to think when she doesn't see you there?"
+    
     menu:
-        n "{cps=0}You can either do that or work on the math problems Gunner told you about.{/cps}"
-        "Read for literature":
-            #finished
-            $ ellenPoints = ellenPoints + 1
-            $ studied = "lit"
-            n "You lean over and reach into your backpack to pull out your copy of \"The Death of Ivan Ilyich.\""
-            n "Luckily you had your headphones in your bag as well. You put them on and get to reading."
-            n "\"The past history of Ivan Ilyich's life was most simple and ordinary and most terrible...\""
-        "Work on stats homework":
-            #finished
-            $ roriPoints = roriPoints + 1
-            $ studied = "stats"
-            n "You lean over and reach into your backpack to pull out your stats textbook."
-            n "Luckily you had your headphones in your bag as well. You put them on and get to studying."
-            n "\"Given the rarity of a particular disease .02 and the chance of a false negative .08, find the probability that a patient actually has the disease if the test yields a positive result...\""
-        "Study history":
-            #finished
-            $ rosePoints = rosePoints + 1
-            $ studied = "history"
-            n "You don't have any homework in history but it would still do you some good to crack open the textbook and do a bit of studying for the test."
-            n "Luckily you had your headphones in your bag as well. You put them on and start reading."
-            n "You don't remember where class left off so you flip to a random page."
-            n "In his final moments before his execution, the leader of the expedition famously said to the Arcoonian tribe..."
-        "Browse pinstagram":
-            #finished
-            $ avaPoints = avaPoints + 1
-            n "You know what, you really don't feel like doing homework right now."
-            n "Instead, you'd like to indulge in the finer arts society has to offer."
-            n "You tap the pinstagram app on your phone and instantly receive a dopamine rush as dozens of random images crowd your screen."
-            n "After a bit of scrolling, you stumble upon Ava's profile."
-            n "The software must have automatically detected you have her number in your contacts and added her to your news feed."
-            n "Sometimes the FBI agent monitoring your internet connections is pretty cool like that."
-            n "Ava's got some nice pics on here. Just like she said, she's really into landscape shots."
-            n "Some of these look like they're taken from high up. She's probably perched in a tree judging by the looks of it."
-            n "Kinda makes you wanna go out and explore. If only you weren't basically held prisoner here."
+        "Try to escape":
+            n "You've gotta get out of here."
+            n "You windows are too small for you to squeeze through. You'll have to just get up and walk through the front door."
+            n "Can't be that hard, right? It's not like everybody is on the lookout for you, and for all they know you're cleared to leave."
+            n "You quietly slip out of bed and put your shoes on before grabbing your bag and approaching the door."
+            n "Phase one complete."
+            n "Now you're confronted with a problem you didn't anticipate: How the hell do you get out of here?"
+            n "You have no recollection of how you got here and the hallways are like a maze."
+            
+            kitsuragi "Hey!"
+            
+            n "Busted!"
+            n "You look around for a good place to escape but you're cornered."
+            
+            show kitsuragi at center with dissolve
+            
+            kitsuragi @ say "You get lost on the way to the bathroom or something?"
+            
+            n "She looks at your bag and shoes."
+            
+            kitsuragi @ say "Or were you just trying to escape?"
+            
+            menu:
+                "Just had to pee haha":
+                    n "You feel like a small child who's been caught with his hand in the cookie jar."
+                    n "You know that she knows that you know that you were trying to escape, but we can all just play dumb here and act like this never happened."
+                    
+                    player "Haha yeah, just had to pee and forgot how to get to the restroom."
+                    
+                    kitsuragi @ say "The one directly across from your room?"
+                    
+                    player "Yes, that one."
+                    
+                    kitsuragi @ say "It's down the hall and to the left. Not to the right, that way leads to the exit where the security guard will check if you're cleared to leave."
+                    kitsuragi @ say "And definitely not the way you were heading toward the fire escape. That'd trigger an alarm and get you a misdemeanor."
+                    
+                    player "Thanks..."
+                    
+                    kitsuragi @ say "Anytime."
+                    
+                    hide kitsuragi with dissolve
+                    
+                    n "You sheepishly follow her directions and return to your room."
+                    
+                "Screw this place":
+                    n "You feel like a small child who's been caught with his hand in the cookie jar."
+                    n "But then a rage suddenly bubbles up from within."
+                    
+                    player "Screw this place! I've had enough! You can't keep me here!"
+                    
+                    kitsuragi @ say "Maybe I can't but security can."
+                    kitsuragi @ say "The guard at the door knows to not let you leave. Only other way out is through the fire escape."
+                    kitsuragi @ say "Which is a misdemeanor to use if there's no emergency by the way."
+                    
+                    player "So this place really is a jail, huh?"
+                    
+                    kitsuragi @ say "Pretty much."
+                    kitsuragi @ say "Go back to your room. I'll see you tomorrow."
+                    
+                    hide kitsuragi with dissolve
+                    
+                    n "The doctor turns around and walks away."
+                    n "Nothing left for you to do but return to your cell."
+                    
+        "Stay here":
+            n "Can you really just get up and leave? Won't somebody notice?"
+            n "You really don't feel like getting tackled by security right now."
+            n "You should just stay put and study like a good student."
+            n "Or at least pass the time browsing the web."
+
+        menu:
+            n "{cps=0}{/cps}"
+            "Read for literature":
+                $ literatureSkill =+ 1
+                
+                n "You lean over and reach into your backpack to pull out your copy of [currentBook]."
+                n "Luckily you had your headphones in your bag as well. You put them on and get to reading."
+            "Work on stats homework":
+                $ statsSkill =+ 1
+                
+                n "You lean over and reach into your backpack to pull out your stats textbook."
+                n "Luckily you had your headphones in your bag as well. You put them on and get to studying."
+                n "\"Given the rarity of a particular disease .02 and the chance of a false negative .08, find the probability that a patient actually has the disease if the test yields a positive result...\""
+            "Study history":
+                $ historySkill =+ 1
+                
+                n "You don't have any homework in history but it would still do you some good to crack open the textbook and do a bit of studying for the test."
+                n "Luckily you had your headphones in your bag as well. You put them on and start reading."
+                n "You don't remember where class left off so you flip to a random page."
+                n "In his final moments before his execution, the leader of the expedition famously said to the Arcoonian tribe..."
+            "Practice French":
+                $ frenchSkill =+ 1
+                
+                n "Better brush up on your French, it's one of those things where if you don't use it you lose it."
+                n "Luckily you had your headphones in your bag as well. You put them on and start reading."
+                n "Il fait un temps affreux translates to the weather is terrible! Take note of the use of Il fait, which means it makes or it does, rather than it is..."
+            "Browse pinstagram":
+                $ avaPoints = avaPoints + 1
+                
+                n "You know what, you really don't feel like doing homework right now."
+                n "Instead, you'd like to indulge in the finer arts society has to offer."
+                n "You tap the pinstagram app on your phone and instantly receive a dopamine rush as dozens of random images crowd your screen."
+                n "After a bit of scrolling, you stumble upon Ava's profile."
+                n "The software must have automatically detected you have her number in your contacts and added her to your news feed."
+                n "Sometimes the FBI agent monitoring your internet connections is pretty cool like that."
+                n "Ava's got some nice pics on here. Just like she said, she's really into landscape shots."
+                n "Some of these look like they're taken from high up. She's probably perched in a tree judging by the looks of it."
+                n "Kinda makes you wanna go out and explore. Maybe you will once you're free from this dreaded hospital."
 
     scene bg black with fade
 
@@ -2311,7 +2302,7 @@ label aftermenu:
 
     n "You look around as your brain scrambles to recall where you are."
     n "Oh right, you're still in this dreadful hospital."
-    n "You must have fallen asleep while you were studying."
+    n "You must have fallen asleep."
     n "You check your phone and see you just received a new message from Claire."
 
     hide box
