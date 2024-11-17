@@ -2730,4 +2730,183 @@ label leaving_hospital:
     
     
     
+label monty_hall:
+
+    scene bg codadorm with fade
+
+    play music "audio/ambient/morning birds.ogg" fadein 1.5
+
+    show box with Dissolve(.2):
+        ypos 0
+
+    n "You wake up and pop one of the pills the doctor gave you."
+    n "You're not sure if it's just placebo, but for the first time in nearly a week you don't feel like death which is a good sign."
+    n "Returning to class is kind of a drag but it's better than being in that hospital."
     
+    stop music fadeout 1.5
+    
+    scene bg classroom with fade
+    
+    play music "audio/music/mere - schooldaze.ogg" fadein 1.0
+
+    show box with Dissolve(.2):
+        ypos 0
+    
+    n "You drifted off into a daydream during history class, only returning to reality when you heard your name called."
+    
+    show rothbauer at center with dissolve:
+        xpos 0
+        ypos y_roth
+
+    rothbauer @ say "[name], could you tell me why there's no class on Friday?"
+
+    player "Huh? I've been coming in on Fridays for nothing?"
+
+    n "Mr. Rothbauer sighs. You get the feeling that was supposed to be an easy question."
+
+    rothbauer @ say "Must have been a long night studying, eh?"
+    rothbauer @ say "*This* Friday is a holiday. Anthromorph's Liberation Day!"
+    rothbauer @ say "89 years ago, following the mass reduction in human population, the National Liberties Act was signed which gave anthromorph equal rights to humans."
+    rothbauer @ say "It took several rebellions, riots, and even wars throughout centuries to reach this monumental turning point in history."
+    rothbauer @ say "Though it was population dynamics that accelerated this inevitable conclusion into existence."
+    rothbauer @ say "Humanity would struggle to hold absolute power as their numbers dwindled following the failure to contain the disease that..."
+    
+    n "Mr. Rothbauer seems to suddenly realize he's lecturing someone who has personally been affected by the mass extinction event he's describing."
+    
+    rothbauer @ say "Ahem well, at any rate, coming off the heels of the industrial revolution, you could say this was the beginning of the modern era!"
+    rothbauer @ say "Anyway, that's all I have for you today."
+    rothbauer @ say "Oh wait, there's still one more thing!"
+    rothbauer @ say "There will be a parade in town to celebrate the holiday. I'll add 2 percent to your final grade if you show up and prove you were there by taking a selfie haha!"
+    rothbauer @ say "You kids all love taking those funny little self portraits, don't you? Well this will be a good opportunity for you take another one while going out gaining an appreciation for historical events!"
+    rothbauer @ say "Why, back in my day when I was the director of Harmonia's Anthromorphs Liberation Day committee I..."
+
+    n "As he goes on with his rant, students start leaving. It's 5 minutes past the end of class after all. You decide to join them."
+    
+    stop music fadeout 1.0
+
+    scene bg lecturehall with fade
+    
+    play music "audio/music/mere - schooldaze faster.ogg" fadein 1.5
+    
+    show box with Dissolve(.2):
+        ypos 0
+    
+    show herschel at center with dissolve:
+        xpos 0
+        
+    herschel @ say "...alright, I think that's enough for today's lesson but we still have a bit of time leftover!"
+    
+    show gunner neutral at center with dissolve:
+        xpos -550
+        ypos y_gunner
+        xzoom -1
+    
+    gunner @ say "Does that mean we can go home early?"
+    
+    herschel @ say "Of course not! Instead what I have in mind is an extra credit opportunity, something you of all students should be particularly interested in."
+    
+    n "Gunner mutters something under his breath."
+    
+    gunner @ say "This fucking bitch..."
+    
+    hide gunner with dissolve
+    
+    n "Thankfully Mrs. Herschel doesn't seem to have heard his remark."
+    
+    herschel @ say "I have something of a math riddle for you to solve!"
+    herschel @ say "Say you have three doors to choose from and behind one of them lies a prize."
+    herschel @ say "After making your selection, someone comes along and opens one of the doors that you did not choose and shows that it contains no prize."
+    herschel @ say "You're given a choice to change your selection to the remaining door. Should you do it?"
+    
+    n "As usual the class is dead silent and Mrs. Herschel has infinite patience for someone to speak up."
+    n "Gunner is engrossed in his notebook, drawing diagrams and writing out formulas in an attempt to find the solution."
+    n "He's clearly failing to find one, meaning you're gonna have to take one for the team and come up with an answer."
+    
+    menu:
+        n "{cps=0}He's clearly failing to find one, meaning you're gonna have to take one for the team and come up with an answer.{/cps=0}"
+        "Keep your initial choice":
+            n "You raise your hand and the pine marten calls on you."
+            
+            player "Um, I guess I'd keep my initial choice. At this point it's a 50/50 chance so either door is equally likely to be a winner, right?"
+            
+            herschel @ say "A 50/50 shot you say? Ah, that's where you're wrong."
+            herschel @ say "Are the chances really as equal as they seem?"
+            
+            n "Gunner circles something and puts down his pencil."
+            
+            show gunner neutral at center with dissolve:
+                xpos -550
+                xzoom -1
+            
+            gunner @ say "Wouldn't you be twice as likely to win if you choose the other door?"
+            
+            herschel @ say "Precisely! Very good Gunner! Tell us how you came to that conclusion, won't you?"
+            
+            gunner @ say "Well uh, I'm not really sure to be honest. But like in the beginning you have a 1 in 3 chance right?"
+            gunner @ say "Then you get rid of one door but that can't possibly affect the chances of your decision in the past can it?"
+            gunner @ say "So all that chance of winning from the two doors you didn't choose is set in stone. All the other guy did was get rid of a losing option."
+            
+            herschel @ say "Correct! Your initial choice has a 1/3 chance, so recall that what you don't choose is 1 minus your chance."
+            herschel @ say "You wind up with the other two doors combined having a 2/3 chance of having a prize behind one of them."
+            herschel @ say "It may help to think in terms of quantities rather than chance. Imagine you know your door has 1/3 of the prize, so then the doors you didn't choose have a combined 2/3 of the prize."
+            herschel @ say "Then someone opens of of them and reveals nothing behind it, so they remaining door you didn't choose must contain the larger prize!"
+            herschel @ say "Very good Gunner, I'll add a point to your final grade."
+            
+        "Change your selection":
+            $ goodEnd = goodEnd + 1
+            
+            n "Before you can say anything, Gunner pipes up."
+            
+            show gunner neutral at center with dissolve:
+                xpos -550
+                xzoom -1
+            
+            gunner @ say "What difference does it make? It's a 50/50 chance at that point... right?"
+            
+            herschel @ say "Is that your final choice? Perhaps someone else would choose otherwise..?"
+            
+            n "She's making it sound like Gunner is wrong. You should go for the opposite answer."
+            
+            player "I'd change my decision."
+            
+            herschel @ say "And you'd be right to do so! You'd enjoy a 2/3 chance of success if you switch to the other door."
+            
+            gunner @ say "How the hell...? That can't be right, how does a door suddenly gain a higher chance without doing anything?"
+            
+            herschel @ say "I told you it was a riddle, so the answer could never be obvious!"
+            herschel @ say "The trick lies in eliminating a losing option after making your choice."
+            herschel @ say "Your door has a 1/3 chance of winning, yes? So that means the other two doors have a combined 2/3 chance of winning, at least in the beginning."
+            herschel @ say "When you remove one of those doors, where does that extra chance go? Nowhere! It stays right where it was!"
+            herschel @ say "It's just that where it was is where you're not. Which is why you should change your choice."
+            
+            n "Gunner mutters something again."
+            
+            gunner @ say "What the fuck kind of reasoning is that..?"
+            
+            herschel @ say "Very good [name], I'll add one point to your final grade."
+            
+    stop music fadeout 1.0
+    
+    scene bg campus with fade
+    
+    
+    
+    
+    
+    
+    
+    #briefly chat with gunner and rori but soon retire to your dorm
+            
+    scene bg black with fade
+    
+    show bg calendar
+    show tmonday at center
+    with Dissolve(.5)
+
+    pause .6
+    show tforwardslash
+    pause .2
+    show tbackslash
+
+    pause .7
+
