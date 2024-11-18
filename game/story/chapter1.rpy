@@ -3791,6 +3791,7 @@ label thursday1:
             
             show claire sweater happy at center with dissolve:
                 ypos y_claire
+                xoffset 500
             
             claire @ say "Ava, get out."
             
@@ -3798,7 +3799,7 @@ label thursday1:
             
             claire @ say "...unless you wanna join in on this 'study session' [name] and I are about to have."
             
-            show ava reaching embarassed 
+            show ava reaching embarrassed
             
             ava @ say "I'll just uh, give you two some privacy."
             ava "{nw}"

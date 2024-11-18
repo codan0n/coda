@@ -2889,14 +2889,68 @@ label monty_hall:
     
     scene bg campus with fade
     
+    n "Gunner walks with you after class and you once again find Rori on his laptop out on the field."
     
+    show rori neutral at center:
+        ypos y_rori
+        xoffset -450
+    show gunner neutral at center:
+        ypos y_gunner
+        xoffset -450
+    with dissolve
     
+    rori @ say "Sup. You all done for the day?"
     
+    gunner @ say "Yeah. You out here doing your compsci homework again?"
     
+    rori @ say "Computer *engineering* not science. There's a difference."
     
+    n "Gunner shrugs nonchalantly."
     
-    #briefly chat with gunner and rori but soon retire to your dorm
-            
+    gunner @ say "If you say so. Both look like coding to me."
+    
+    n "Rori looks up from his screen and seems to just now notice you're there."
+    
+    rori @ say "Hey [name]! Glad you're out of the hospital!"
+    
+    player "I know right? About time. They kept me there like a prisoner all weekend."
+    
+    gunner @ say "Yeah man, what was with that?"
+    
+    player "I dunno, just been feeling dizzy and stuff lately."
+    player "But they gave me some pills and now I feel fine."
+    
+    rori @ say "Well I'm glad you're okay now. You looked dead when I found you!"
+    
+    gunner @ say "You still kinda look like it."
+    
+    player "Gee, thanks..."
+    
+    gunner @ say "I'm just kiddin!'"
+    gunner @ say "Hey, you guys wanna get into some shenanigans today?"
+    
+    n "Rori raises a brow but doesn't say anything."
+    
+    player "I dunno, I'm still trying to take it easy, at least for a few days."
+    
+    gunner @ say "Ah alright then. Later this week maybe? We got a three day weekend coming up LET'S GOOOO!"
+    
+    player "Yeah maybe."
+    
+    rori @ say "You should get some rest, [name]. Better safe than sorry."
+    
+    player "Yeah that's what I was thinking. Just gonna chill at my dorm."
+    
+    gunner @ say "Cool. See you in stats later!"
+    
+    player "Later guys!"
+    
+    hide rori
+    hide gunner
+    with dissolve
+    
+    n "You return to your dorm and lazily flip through homework and internet pages until you feel like going to sleep."
+    
     scene bg black with fade
     
     show bg calendar
@@ -2910,3 +2964,9 @@ label monty_hall:
 
     pause .7
 
+    
+
+
+
+
+#remember if you invited mishka to the mall, you have to bring it up next time you see her

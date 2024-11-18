@@ -469,10 +469,10 @@ layeredimage ava reaching concerned:
         pos (-80,-30)
         attribute say:
             "images/bubble.png"
-layeredimage ava reaching embarassed:
+layeredimage ava reaching embarrassed:
     at sprite_highlight('ava')
     always:
-        'images/characters/ava/ava reaching embarassed.png'
+        'images/characters/ava/ava reaching embarrassed.png'
     group saying:
         xzoom .9
         yzoom 1.0
