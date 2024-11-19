@@ -3451,9 +3451,336 @@ label ellen_feeding_ducks:
     
     ava @ say "Glad you're back among the living [name]! We were starting to get seriously worried about you."
     
-    claire @ say "Yeah, "
+    player "Glad to be back. Still annoyed I missed that party though. Sounded like you two had a lot of fun."
+    
+    claire @ say "We sure did~"
+    claire @ say "It was Ava's first time drinking!"
     
     ava @ say "Ugh, don't remind me."
     
+    claire @ say "I had to drink like an entire keg of beer to even feel anything!"
     
+    ava @ say "I don't know how you can stomach it."
+    
+    claire @ say "I guess I'm just built different!"
+    
+    n "Ava looks up and down Claire."
+    
+    ava @ say "Uh huh."
+    
+    menu:
+        "Must be her genes":
+            player "Must be your genes."
+            
+            claire @ say "I know right??"
+            
+            ava @ say "You're too big for your genes."
+            
+            claire @ say "Too big for my bras too."
+            
+            ava @ say "W-where did that come from?!"
+            
+        "She's FAT!"
+            player "It's because you're fat."
+            
+            claire @ say "Oh? And is that a bad thing?"
+            
+            ava @ say "Please respond wisely."
+            
+            menu:
+                "{cps=0}Is that a bad thing?{/cps}"
+                "Hell no!":
+                    $ clairePoints =+ 1
+                    player "Hell no! I like chunky bunnies. Thick rabbits are the best."
+                    
+                    claire @ say "Oh you~"
+                    
+                    player "You could even stand to put on a few more pounds haha"
+                    
+                    claire @ say "You think so??"
+                    
+                    ava @ say "Okay enough with the thinly veiled weight gain fetish talk."
+                "Kinda":
+                    $ clairePoints =- 1
+                    
+                    player "N-not at all. You're perfectly friend shaped."
+                    
+                    claire @ say "Just \"friend\" shaped?"
+                    
+                    ava @ say "Oof."
+                "Yes":
+                    player "I'm just saying your should eat a salad every so often."
+                    
+                    claire @ say "I do!"
+                    
+                    player "Maybe a smaller one then."
+                    
+                    claire @ say "Hmph!"
+                    claire @ say "I'm not *that* fat, I'm mostly fluff and muscle!"
+                    
+                    player "Keep telling yourself that."
+                    
+                    n "Claire pouts and makes a whining sound."
+            
+        "She's *ahem* high in mass":
+            player "More body mass means you need more alcohol to get fucked up."
+            
+            claire @ say "Well duh!"
+            claire @ say "But I ran the numbers for how much a bunny of my size should have to drink and it wasn't even close!"
+            
+            player "Huh. Maybe you really are built different."
+            
+            ava @ say "Built like a tank."
+            
+            claire @ say "Optimized."
+    
+    n "You chat for a bit longer then remember it's a short week."
+    
+    player "You guys are alright, dont come to school on Friday."
+
+    claire @ say "Oh yeah! What are y'all's plans for the three way-"
+    claire @ say "I mean three day weekend?"
+    
+    player "I got nothin' so far."
+    
+    ava @ say "I was thinking of taking some shots on film at this spooky abandoned hospital nearby."
+    ava @ say "I could use a partner to make sure I don't get shanked by a crazed hobo if either of you wanna come."
+    
+    claire @ say "Sorry, I'm gonna be busy with some sorority stuff. Top secret sorority stuff."
+
+    ava @ say "Aww. How about you, [name]?"
+    
+    menu:
+        ava "{cps=0}How about you, [name]?{/cps}"
+        "That sounds fun!":
+            $ avaPoints += 1
+            $ avaUrbex = True
+            
+            show claire sweater happy
+            
+            player "That sounds fun! I'd love to go with you!"
+            
+            show ava casual overjoyed
+
+            ava @ say "Sweet! You don't mind if it's haunted, do you? Cause it's probably haunted."
+
+            player "No, haunted is fine."
+
+            claire @ say "Ksksksks you two are so cute!"
+
+            show ava casual angry
+
+            ava @ say "We are not!"
+            
+            show claire sweater derp
+            
+            claire @ say "Ksksksks chill! I'm just joking!"
+            
+            player "What about you Claire? Got any epic plans?"
+            
+            show ava casual happy
+            show claire neutral
+
+            claire @ say "Nothing too exciting, just going back home to visit family and stuff."
+
+            player "Couldn't wait until Thanksgiving or Christmas to go back?"
+
+            claire @ say "I only live a couple hours away and my siblings are actors in the play they have going on at my old middle school."
+            
+            show claire overjoyed
+            
+            claire @ say "It's actually the same play I performed in when I was their age so I'll be glad to cheer them on!"
+            
+            show ava casual smile
+
+            ava @ say "Aww, now you're the one being cute!"
+            
+            show claire sweater giggle
+
+            claire @ say "Ksksks I guess we're all just a bunch of cuties on duty~"
+
+            n "Your swear you can feel your brain physically cringe."
+            #n "Deer god you really can't stand being near women sometimes."
+            n "Out of the corner of your eye you see Gunner approaching."
+
+            show claire sweater happy:
+                xpos -600
+            show ava casual happy:
+                xpos 600
+            with move
+
+            show gunner neutral at center with dissolve:
+                xzoom -1
+                
+            show gunner:
+                xpos 0
+                ypos 15
+                xzoom 1
+                linear .15 yalign 0
+            
+            pause .6
+            
+            show gunner at fliphop2:
+                xpos 0
+                ypos 15
+                xzoom -1
+                linear .15 yalign 0
+            
+
+            gunner @ say "Sup guys! What's a bunch of cuties like you doing out here in the open?"
+
+            ava @ say "Hiii~"
+            
+            claire @ say "Heyo!"
+
+            player "We're just discussing our plans for Friday."
+
+            gunner @ say "Nice, I'm going on this fishing trip thing with Rori and the other Alphas!"
+            ###option to go fishing with rori if you decline ava's invitation. end up with rose if you decline both
+
+            player "Whoa, Rori's an official Alpha male now?"
+
+            gunner @ say "Yup!"
+
+            player "Based. Good for him!"
+            
+            claire @ say "Who's Rori? He sounds hot."
+            
+            player "He's the goat."
+
+            gunner @ say "Anyway what are your plans?"
+
+            player "Me and Ava are going to an abandoned hospital to take photos and stuff."
+
+            gunner @ say "Oh... That sounds fun."
+
+            ava @ say "I shoot pretty much every day. Maybe you can come next time!"
+
+            gunner @ say "Yeah... next time..."
+
+            n "He looks so sad that you stole his chance to hang out with Ava."
+            n "Sorry Gunner."
+
+            gunner @ say "Well, I have a lot of homework to get started on so I'll see you all later!"
+
+            ava @ say "See ya! Good luck!"
+
+            player "Laters."
+
+            claire @ say "Byeeeee!"
+
+            hide gunner with dissolve
+
+            n "Gunner walks off with an obviously fake smile. Damn, you're starting to feel bad about cucking him out of some alone time with Ava."
+            n "You spend a little more time chatting with the girls before heading home yourself."
+        "I'll pass.":
+            #untested
+            $ rosePoints += 1
+            show claire sweater happy
+            
+            player "Sounds cool but I'll pass. I'm supposed to go to the parade in town to get extra credit in history."
+            
+            show ava casual unimpressed
+
+            ava @ say "Aww..."
+
+            player "Can't Claire go with you?"
+            
+            show ava casual happy
+
+            claire @ say "I would but I'm going back home for the weekend."
+            claire @ say "My siblings are actors in the play they have going on at my old middle school. It's only a few hours away so I figured I'd go cheer them on!"
+
+            ava @ say "Dang, guess I'll just have to go on my own."
+
+            n "As if on cue, Gunner approaches."
+
+            show claire sweater happy:
+                xpos -600
+            show ava casual happy:
+                xpos 600
+            with move
+
+            show gunner neutral at center with dissolve:
+                xzoom -1
+                
+            show gunner:
+                xpos 0
+                ypos 15
+                xzoom 1
+                linear .15 yalign 0
+            
+            pause .6
+            
+            show gunner at fliphop2:
+                xpos 0
+                ypos 15
+                xzoom -1
+                linear .15 yalign 0
+
+            gunner @ say "Sup guys! What's a bunch of cuties like you doing out here in the open?"            
+
+            ava @ say "Gunner! Would you happen to be busy this Friday?"
+
+            gunner @ say "Nope! Why?"
+
+            ava @ say "So you wouldn't mind coming along with me to an abandoned and possibly haunted hospital for a photo project, would you?"
+
+            gunner @ say "Not at all! That sounds pretty awesome actually!"
+            
+            show ava casual overjoyed
+
+            ava @ say "DidImentionI'mgonnabealoneinmydormallweekend?"
+
+            gunner @ say "What was that?"
+            
+            show ava casual flattered
+
+            ava @ say "Nothing! Nevermind!"
+            
+            show claire derp
+
+            claire @ say "Ksksksksks~"
+            claire @ say "Sounds like you two will have a fun little date together~"
+            
+            show claire neutral
+
+            gunner @ say "Wait, this is a date?"
+            
+            show ava casual concerned
+
+            ava @ say "No! I mean-"
+            ava @ say "It's a uh..."
+
+            gunner @ say "No yeah, it's cool haha. What's a date, am I right?"
+            
+            show ava casual daydream
+
+            ava @ say "Haha exactly!"
+            ava @ say "I mean, an abandoned hospital full of rusty nails is far from the most romantic place I could take someone out to!"
+            
+            show ava casual happy
+
+            n "There's a sudden awkward silence."
+            n "Okay you can't take it anymore, you need to execute your exit strategy now."
+
+            player "Well I have a lot of homework to get started on so I'll see you all later! Have fun on your date!"
+            
+            show ava annoyed
+
+            ava @ say "It's not a date!!!"
+
+            gunner @ say "Later, [name]!"
+
+            claire @ say "Byeeeee!"
+
+    hide ava
+    hide claire
+    hide gunner
+    with dissolve
+
+    hide box
+
+    scene bg black with fade
+
     
