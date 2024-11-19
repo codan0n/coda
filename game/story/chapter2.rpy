@@ -3263,48 +3263,9 @@ label ellen_feeding_ducks:
         
         margaret @ say "I thought so. She's nice. And wise. You should listen to her."
         margaret @ say "She's told me about you."
-        margaret @ say "And she's your \'professor,\' not teacher. You're in college, hun."
+
         
-        player "Well excuuuse me, I didn't realize there was a huge difference!"
-        
-        margaret @ say "A lot of people think professors are just here to read aloud from a textbook and take your money but we can be so much more than that!"
-        margaret @ say "We're here because we have an interest in gaining and imparting knowledge that helps you grow as a person."
-        margaret @ say "Literature has helped me understand myself better and I hope it can do the same to you!"
-        
-        #you know celestine??
-        
-        
-        player "This might be a dumb question but... how so?"
-        player "Are you just destined to fall into one interest, or do you choose it or what?"
-        
-        margaret @ say "How can I put it... Ah!"
-        margaret @ say "Think of the knowledge you've accumulated throughout your life like a pair of glasses."
-        margaret @ say "Your vision is still kinda blurry with these glasses but every time you learn something new things become a little more clear."
-        margaret @ say "Eventually you find the pair of glasses that are right for you."
-        margaret @ say "For me, reading stories and trying to understand the feelings behind the authors made my world view the clearest so I specialized in that!"
-        
-        show margaret happy
-        
-        margaret @ say "There's so much you can feel without having the words to express it. And if you don't have the words, you can get stuck not understanding what you're feeling!"
-        #margaret @ say "A professor is more dignified and deserves greater respect!"
-            #more like a mentor if you let them
-            #a teacher helps you grow into an adult, a professor helps you mature
-            #a teacher is a glorified babysitter, a professor sets expectations for how to act like an adult
-        #margaret @ say "You might wanna read that essay by George Orwell on how your thoughts are limited by your language."
-        
-        show margaret neutral
-        
-        margaret @ say "There's a fascinating essay by George Orwell you might consider reading on how your thoughts are limited by your language."
-        
-        player "Maybe I'll read it someday when I'm not studying four different subjects at once."
-        
-        show margaret happy
-        
-        margaret @ say "Perhaps I'll just have to assign it to you then~"
-        
-        
-        
-        
+        #wait, you said you know Mrs. celestine??
         
         
         
@@ -3414,24 +3375,7 @@ label ellen_feeding_ducks:
                     
                     margaret @ say "They are rather cute, aren't they?"
                     
-                    player "Yeah, like a scene out of Cinderella. Or was it Sleeping Beauty?"
-                    
-                    n "Ellen looks confused."
-                    
-                    margaret @ say "I think you mean Snow White, dear."
-                    
-                    player "I think all those classics had a scene where the main girl interacts with wild animals to show how pure and in tune with nature she is."
-                    
-                    margaret @ say "Did you see they're remaking those old films in live action now? Bambi's played by a pit bull in the new one."
-                    #They're quick to point out how specist they were but they're quicker to make a buck off them."
-                    #They made Alice in Wonderland a rabbit in the new one."
-                    #margaret @ say "And now it's some kind of commentary on classism, brought to you by huge corporation."
-                    #they turned the little mermaid into a - oh I'm not gonna say it
-                    
-                    #player "Yeah, I guess her black fur was supposed to contrast with the white rabbit now?"
-                    player "Huh. I could see why they'd replace the human characters but isn't Bambi supposed to be a deer?"
-                    
-                    margaret @ say "I guess anybody can be Bambi these days."
+
 
     n "You sit with Ellen for a few more minutes, making idle talk and feeding ducks until you run out of bread."
     
