@@ -2518,37 +2518,6 @@ label start:
 call chapter1
     
 label gunner_rage:
-    n "Wait, how did you get here again?"
-    
-    play music "audio/music/mere - schooldaze.ogg" fadein 1.0
-
-    show rose neutral pendant at center with moveinright
-
-    rose @ say "Are you gonna move or what? You're blocking the doorway."
-
-    player "Huh? Oh, sorry."
-
-    n "You step forward into the classroom and take your seat with Rose following behind you."
-
-    show rose neutral at offscreenleft with move:
-        yalign 0
-
-    n "Shortly afterward, Mr. Rothbauer comes in and begins the lesson for the day."
-
-    show rothbauer at center with dissolve
-
-    rothbauer @ say "Good morning, class!"
-    rothbauer @ say "Today we'll be going over"
-
-    show bg static1
-    pause .02
-    show bg static3
-    pause .04
-    show bg static2
-    pause .03
-    show bg classroom
-
-   
     scene bg lecturehall
 
     play music "audio/music/mere - schooldaze faster.ogg" fadein 1.5
@@ -2678,11 +2647,6 @@ label ellen_rage:
     scene bg codadorm with fade
 
     play music "audio/ambient/morning birds.ogg" fadein .5
-    
-    
-    player "And here I thought you hated me cause I poached your cinnamon roll."
-                    
-    ellen @ say "Do it again and I'll fail you."
 
     show box:
         ypos 0

@@ -2977,7 +2977,8 @@ label ellen_feeding_ducks:
     n "Is that Ms. Ellen?"
     n "Without thinking, you decide to sit next to her. All the animals scatter as you approach and the professor raises her head."
     
-    show margaret sad at center with dissolve
+    show margaret sad at center with dissolve:
+        ypos y_margaret
     
     margaret @ say "Hm? Oh it's you."
     
@@ -3004,35 +3005,21 @@ label ellen_feeding_ducks:
             
             menu:
                 "You're pretty chill, huh?":
-                    player "Wow, you're really lax on the whole teaching thing, aren't you?"
+                    player "Wow, you're actually really lax on the whole teaching thing, aren't you?"
                     
-                    margaret @ say "I didn't used to be. I used to try really hard."
-                    margaret @ say "But after teaching here... I've seen so many cheaters graduate. So many people dumber than a rock coast through their degree with their parents' money and end up in important jobs."
-                    margaret @ say "That's just the path in life they've had given to them."
-                    margaret @ say "The administration pressures us to just shut up and take the bribes. Not little things like cinnamon rolls, I'm talking cars and vacation homes."
+                    margaret @ say "I wasn't always like this. I used to care a lot more."
+                    margaret @ say "But times change, as they always do."
                     
-                    player "How many vacation homes does a professor need??"
+                    player "I dunno, you seem to have strong opinions on literature."
                     
-                    margaret @ say "I wish I had one. They only offer those to smooth things over when senator So-and-So's dipshit son gets in trouble with the law for assaulting some poor sorority girl."
-                    margaret @ say "The most I've ever got was a strange case where I think the student enjoyed giving me money?"
-                    margaret @ say "I suckered him out of nearly twenty grand over a couple semesters."
+                    margaret @ say "Literature's all I know."
+                    margaret @ say "I suppose I put on a front to appear like I still care about teaching, but I really don't anymore."
                     
-                    player "You lucky dog."
+                    player "Did something happen?"
                     
-                    show margaret happy
-                    
-                    margaret @ say "Hehehehe~"
-                    
-                    show margaret neutral
-                    
-                    margaret @ say "You won't have to do that much to pass my class though. Just listening to me rant is enough for me. It's a lot cheaper than therapy, that's for sure."
-                    
-                    n "Ms. Ellen sighs."
-                    
-                    show margaret sad
-                    
+                    margaret @ say "No. At least not just one thing. My dissatisfaction has been accumulating for a while."
                     margaret @ say "I like to think I make my own paths in life, for better or worse."
-                    margaret @ say "But I can't help but feel I've been on a streak of bad decisions for quite a long time."
+                    margaret @ say "Though I can't help but feel I've been on a streak of bad decisions for quite a long time."
                 
                     player "Same, but... I think I'm making the most of it?"
                     player "I always felt like I'm mindlessly drifting through life like uhh..."
@@ -3050,21 +3037,16 @@ label ellen_feeding_ducks:
                     
                     player "Why not start a new pack? I was sort of a lone wolf too until I got here and started making friends."
                     
-                    margaret @ say "It's far too late for me to start over. You should cherish the time you have with your friends while you're young."
-                    
-                    player "...What do you mean?"
-                    
-                    margaret @ say "Sorry, I didn't mean for that so sound so ominous."
-                    margaret @ say "I just meant you're only an undergraduate once. Things will change when you get older. Enjoy your life now while you can."
+                    margaret @ say "It's far too late for me to start over."
+                    margaret @ say "You ought to cherish the time you have with your friends while you're young."
                     
                     player "You make it sound like it's game over once you reach a certain age."
                     
                     margaret @ say "Well, it sort of is if you don't have your life together by a certain time."
                     
-                    player "You can't be at that point already."
+                    player "You can't be at that point already. There's still plenty of time."
                     
                     margaret @ say "Oh?"
-                    margaret @ say "And just how old do you think I am?"
             
                 "Isn't that academic dishonesty?":
                     player "Wow, a professor openly telling me to be academically dishonest?"
@@ -3094,188 +3076,7 @@ label ellen_feeding_ducks:
                     margaret @ say "You get used to a certain amount and then it becomes difficult to go back."
                     
                     show margaret neutral
-                    
-                    margaret @ say "And just how old do you think I am?"
-                    
-            menu:
-                ellen "{cps=0}And just how old do you think I am?{/cps}"
-                "20s":
-                    $ ellenPoints += 1
-                    
-                    #later student ellen comments "you said so yourself, I could pass for being in my 20s!"
-                    player "I dunno, late 20s?"
-                    
-                    n "Miss Ellen snickers."
-                    n "You can hear her tail brushing against the back of the bench as it wags happily."
-                    
-                    show margaret happy
-                    
-                    margaret @ say "Either you're flattering me or you don't know what a woman in her late 20s looks like."
-                    
-                    player "Hey, I'm pretty sure I've seen students who look older than you!"
-                    
-                    show margaret neutral
-                    
-                    margaret @ say "I'll take that as a compliment~"
-                    margaret @ say "Some students just have a late start but I've had a few who inexplicably show up once then retake the class years later."
-                    
-                    player "Aww, wouldn't you be happy to see me in your class again in a few years?"
-                    
-                    show margaret happy
-                    
-                    margaret @ say "I'd rather see you in my graduate course."
-                    margaret @ say "What about you? Would you want to see me again?"
-                    
-                    player "Only if you're still as beautiful."
-                    
-                    show margaret intrigued
-                    
-                    margaret @ say "..."
-                    
-                    show margaret happy 
-                    
-                    margaret @ say "Oh you! Hehehehe you're really quite the jester, aren't you?"
-                    margaret @ say "Smart move. Only the fool can be spared the queen's wrath after all~"
-                    
-                    player "Hahaha really though, I think it would be cool to see you again after this semester. Maybe we could get coffee or something?"
-                    
-                    show margaret neutral
-                    
-                    margaret @ say "Careful [name], it almost sounds like you're flirting with your professor!~"
-                    
-                    player "I swear I'm not, I don't even know how to flirt."
-                    
-                    margaret @ say "So this is just you being your sweet normal self, huh?"
-                    
-                    player "I guess?"
-                    
-                    margaret @ say "Well it is pretty cute. Just don't expect me to boost your grade for it.... at least not by much~"
-                    margaret @ say "And yes, coffee together sounds fantastic~"
-                "30s":
-                    player "Early 30s I guess?"
-                    
-                    show margaret melancholy
-                    
-                    margaret @ say "Try 37, dear."
-                    margaret @ say "Today is this old dog's 37th birthday."
-
-                    player "Hey that's still prime."
-                    
-                    margaret @ say "Excuse me???"
-                    
-                    player "Mathematically speaking."
-                    
-                    margaret @ say "Hm. I suppose it is."
-                    
-                    player "Happy birthday by the way."
-                    
-                    margaret @ say "Nothing happy about it."
-                    margaret @ say "Getting old sucks. I miss when I was a cute 20-something like you."
-                    
-                    player "You think I'm cute?"
-                    
-                    show margaret sad
-                    
-                    margaret @ say "Woops, did that really slip out of my mouth? I meant cute like uhh..."
-                    
-                    show margaret melancholy
-                    
-                    margaret @ say "Like one of these baby ducks!"
-                    
-                    player "Thanks? I think?"
-                    
-                    show margaret neutral
-                    
-                    margaret @ say "Don't think too much about it."
-                "40s":
-                    player "You're not old until you're like, grandma age."
-                    
-                    show margaret sad
-                    
-                    n "Miss Ellen sighs."
-                    
-                    margaret @ say "I suppose I could be a grandmother at my age. If I had any children of my own, that is."
-                    
-                    show margaret at shudder
-                    
-                    margaret @ say "Sorry, I didn't mean to make things awkward."
-                    
-                    player "It's fine. I mean, isn't it awkward of me to walk up to my literature professor and while she's feeding ducks?"
-                    
-                    show margaret neutral
-                    
-                    margaret @ say "Not really! This is how people made friends before we had technology to enslave our minds after all."
-                    
-                    player "Hahaha do you think you and I could be friends if you weren't my professor?"
-                    
-                    margaret @ say "Of course!"
-                    margaret @ say "I think we could be friends even with you as my student. People forget that such things used to be common. It still happens in a lot of other countries!"
-                    margaret @ say "A relationship can be formed by anyone who enjoys each other's company, regardless of status."
-                    
-                    show margaret melancholy
-                    
-                    margaret @ say "You're quite a good listener and I enjoy your unique perspective and funny comments. That's really all I need."
-                    
-                    player "Wow, that's pretty sweet of you to say! I guess you kinda are like a kind old grandma hahah!"
-                    
-                    show margaret flattered
-                    
-                    margaret @ say "Well, let's not say that..."
-                    
-                    show margaret neutral
-                    
-                    margaret @ say "But don't be afraid to say hi whenever you see me~"
-                    
-                    player "Same goes for you! I'd love to sit and chat with you over a coffee sometime."
-                    
-                    margaret @ say "I'm sure that can be arranged~"
-                    #and if it's your treat, I'll be sure to give you a treat in return~
-            
-         n "Ms. Ellen reclines against the bench and sighs."
-        
-        show margaret melancholy
-        
-        margaret @ say "It's nice to get to talk to one of my students like this."
-        margaret @ say "Most are either intimidated by me or just see me as an obstacle to their degree."
-        
-        player "Yeah I'm not really too into the whole college thing."
-        player "I just come to class out of habit and sometimes I learn interesting things."
-        player "I like hearing your rants about authors' beliefs."
-        
-        show margaret flattered
-        
-        margaret @ say "Is that so? I always feel so embarrassed after those little tirades! I suppose I just can't help myself."
-        
-        player "I guess literature would lend itself most to expression. Not much room for interpretation in statistics or French."
-        
-        show margaret neutral
-        
-        margaret @ say "Au contraire, le langage limite nos pensées."
-        
-        player "What??"
-        
-        margaret @ say "There's certain things you can't express in one language alone."
-        margaret @ say "Even if you mastered English, which very few people have done mind you, other languages open your mind up to new thoughts."
-        #margaret @ say "That's what Celestine taught me. You know her, right?"
-        margaret @ say "That's what Sera taught me. You might know her as Mrs. Celestine."
-        
-        player "Yeah, she's my French teacher."
-        
-        margaret @ say "I thought so. She's nice. And wise. You should listen to her."
-        margaret @ say "She's told me about you."
-
-        
-        #wait, you said you know Mrs. celestine??
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+                
         "Everything okay?":
             player "Is everything okay? You look kinda sad."
             
@@ -3320,50 +3121,33 @@ label ellen_feeding_ducks:
                     
                     margaret @ say "Honestly, any other path would have been better for me."
                     
-                    #player "Hey don't say that, you could have ended up being a stripper or something"
-                    
-                    #margaret @ say "Now at least that sounds exciting~"
-                    #margaret @ say "Hehehe I'm just kidding~"
-                    
                     show margaret sad
                     
                     margaret @ say "But now I'm old and stuck on this path."
                     
-                    player "You're only what, like 30? You've got time."
+                    player "You're not that old."
                     
-                    show margaret neutral
-                    
-                    margaret @ say "Try 41, dear."
-                    
-                    show margaret tailwag flattered
-                    
-                    margaret @ say "I appreciate the compliment though~"
-                    
-                    n "You can hear her tail brushing against the back of the bench as it wags happily."
-                    
-                    show margaret sad
-                    
-                    margaret @ say "Oh, if only I could go back in time, but with all the wisdom I've accumulated over the years..."
-                    
+                    margaret @ say "Oh?"
+                
                 "Then don't bother?":
                     player "Then don't bother? I mean, you're the one who made the conscious decision to come sit out here with a bag of bread instead of playing on your phone like everyone else does."
                     
                     margaret @ say "I suppose it's out of habit."
-                    margaret @ say "It's just something my hus-- ex husband and I did a lot."
+                    margaret @ say "It's just something my hus-- ex husband and I used to do."
                     
                     player "Oh."
                     player "..."
                     
                     show margaret neutral
                     
-                    ellen "You wanna try?"
+                    margaret @ say "You wanna try?"
                     
                     n "She nudges the bread bag closer to you."
                     n "You grab a few slices and start tearing off pieces."
                     
                     player "Oh gross, there's mold on it."
                     
-                    margaret @ say "Why do you think I've been giving it to the ducks for free?"
+                    margaret @ say "Why do you think I've been giving it away for free?"
                     
                     player "Won't they get sick?"
                     
@@ -3371,41 +3155,305 @@ label ellen_feeding_ducks:
                     
                     n "You toss a few pieces and the ducks come running with their wings outstretched."
                     n "One gives you an appreciative quack."
-                    n "Meanwhile, Ms. Ellen takes a pawful of seeds and soon attracts a squirrel to perch on her arm."
+                    n "Another one agressively rips a whole slice of bread from your hand."
                     
-                    margaret @ say "They are rather cute, aren't they?"
+                    player "Ow! That one bit me!"
                     
-
-
-    n "You sit with Ellen for a few more minutes, making idle talk and feeding ducks until you run out of bread."
+                    margaret @ say "Him? He's always been that way. Ever since he was a baby, he's been biting me every time I come to feed them."
+                    
+                    player "You've been doing this for a while, huh?"
+                    
+                    margaret @ say "Yup."
+                    margaret @ say "This was the first date I went on with my ex, ages ago."
+                    margaret @ say "Now I'm just an old lady feeding the birds on my own."
+                    
+                    n "She looks over to you, then back at the ducks."
+                    
+                    margaret @ say "Sometimes with a curious student, but not often."
+                    
+                    player "Come on, you're not that old."
+                    
+                    margaret @ say "Oh?"
+                    
+    #margaret @ say "And just how old do you think I am?"    
     
-    show margaret melancholy
+    menu:
+        ellen "{cps=0}And just how old do you think I am?{/cps}"
+        "20s":
+            $ ellenPoints += 1
             
-    margaret @ say "Thanks for sitting and talking with me. It really made my day worthwhile."
-    margaret @ say "There's more to you that makes you special than just being the last human."        
+            #later student ellen comments "you said so yourself, I could pass for being in my 20s!"
+            player "I dunno, late 20s?"
+            
+            n "Miss Ellen snickers."
+            n "You can hear her tail brushing against the back of the bench as it wags happily."
+            
+            show margaret happy
+            
+            margaret @ say "Either you're flattering me or you don't know what a woman in her late 20s looks like."
+            
+            player "Hey, I'm pretty sure I've seen students who look older than you!"
+            
+            show margaret neutral
+            
+            margaret @ say "I'll take that as a compliment~"
+            margaret @ say "Some students just have a late start but I've had a few who inexplicably show up once then retake the class years later."
+            
+            player "Heh, wouldn't you be happy to see me in your class again in a few years?"
+            
+            show margaret happy
+            
+            margaret @ say "I'd rather see you in my graduate course~"
+            margaret @ say "What about you? Would you want to see me again?"
+            
+            player "Only if you're still as beautiful."
+            
+            show margaret intrigued
+            
+            margaret @ say "..."
+            
+            show margaret happy 
+            
+            margaret @ say "Oh you! Hehehehe you're really quite the jester, aren't you?"
+            margaret @ say "Smart move. Only the fool can be spared the queen's wrath after all~"
+            
+            player "Hahaha really though, I think it would be cool to see you again after this semester. Maybe we could get coffee or something?"
+            
+            show margaret neutral
+            
+            margaret @ say "Careful [name], it almost sounds like you're flirting with your professor!~"
+            
+            player "I swear I'm not, I don't even know how to flirt."
+            
+            margaret @ say "So this is just you being your sweet normal self, huh?"
+            
+            player "I guess?"
+            
+            margaret @ say "Well it is pretty cute. Just don't expect me to boost your grade for it.... at least not by much!"
+            margaret @ say "And yes, coffee together sounds fantastic~"
+        "30s":
+            player "Early 30s I guess?"
+            
+            show margaret melancholy
+            
+            margaret @ say "Try 37, dear."
+            margaret @ say "Today is this old dog's 37th birthday."
 
-    player "I don't know about that. I'm just like anyone else. Just doing whatever society expects me to do. Go to school. Pay taxes. That sort of thing."
+            player "Hey that's still prime."
+            
+            margaret @ say "Excuse me???"
+            
+            player "Mathematically speaking."
+            
+            margaret @ say "Hm. I suppose it is."
+            
+            player "Happy birthday by the way."
+            
+            margaret @ say "Thanks but there's nothing happy about it."
+            margaret @ say "Getting old sucks. I miss when I was a cute 20-something like you."
+            
+            player "You think I'm cute?"
+            
+            show margaret sad
+            
+            margaret @ say "Woops, did that really slip out of my mouth? I meant cute like uhh..."
+            
+            show margaret melancholy
+            
+            margaret @ say "Like one of these baby ducks!"
+            
+            player "Thanks? I think?"
+            
+            show margaret neutral
+            
+            margaret @ say "Don't think too much about it."
+        "40s":
+            player "You're not old until you're like, grandma age."
+            
+            show margaret sad
+            
+            n "Miss Ellen sighs."
+            
+            margaret @ say "I suppose I could be a grandmother at my age. If I had any children of my own, that is."
+            
+            show margaret at shudder
+            
+            margaret @ say "Sorry, I didn't mean to make things awkward."
+            
+            player "It's fine. I mean, isn't it awkward of me to walk up to my literature professor and while she's feeding ducks?"
+            
+            show margaret neutral
+            
+            margaret @ say "Not really! This is how people made friends before we had technology to enslave our minds after all."
+            
+            player "Hahaha do you think you and I could be friends if you weren't my professor?"
+            
+            margaret @ say "Of course!"
+            margaret @ say "I think we could be friends even with you as my student. People forget that such things used to be common. It still happens in a lot of other countries!"
+            margaret @ say "A relationship can be formed by anyone who enjoys each other's company, regardless of status."
+            
+            show margaret melancholy
+            
+            margaret @ say "You're quite a good listener and I enjoy your unique perspective and funny comments. That's really all I need."
+            
+            player "That's pretty sweet of you to say! I guess you kinda are like a kind old grandma hahah!"
+            
+            show margaret flattered
+            
+            margaret @ say "Well, let's not say that..."
+            
+            show margaret neutral
+            
+            margaret @ say "But don't be afraid to say hi whenever you see me~"
+            
+            player "Same goes for you! I'd love to sit and chat with you over a coffee sometime."
+            
+            margaret @ say "I'm sure that can be arranged~"
+            #and if it's your treat, I'll be sure to give you a treat in return~
+            
+    n "You sit with Ellen for a few more minutes, making idle chatter and feeding ducks until you run out of bread."
+    n "After a while, Miss Ellen stands up."
     
-    margaret @ say "You're very kind and have your own unique perspective. You can uplift people without realizing it."
+    margaret @ say "I wish we could talk longer but it's almost time for class."
     
-    player "I'm glad you think so. I try. Well no, I don't really try. I just want to live a comfortable life and be happy with others."
+    player "Yeah. I'll see you there in a few minutes."
+    
+    margaret @ say "Thanks for talking with me."
+    
+    player "Anytime."
+            
+#make this part of ellen's cafe scene
+#    n "Ms. Ellen reclines against the bench and sighs."
+#
+#    show margaret melancholy
+#
+#    margaret @ say "It's nice to get to talk to one of my students like this."
+#    margaret @ say "Most are either intimidated by me or just see me as an obstacle to their degree."
+#
+#    player "Yeah I'm not really too into the whole college thing."
+#    player "I just come to class out of habit and sometimes I learn interesting things."
+#    player "I like hearing your rants about authors' beliefs."
+#
+#    show margaret flattered
+#
+#    margaret @ say "Is that so? I always feel so embarrassed after those little tirades! I suppose I just can't help myself."
+#
+#    player "I guess literature would lend itself most to expression. Not much room for interpretation in statistics or French."
+#
+#    show margaret neutral
+#
+#    margaret @ say "Au contraire, le langage limite nos pensées."
+#
+#    player "What??"
+#
+#    margaret @ say "There's certain things you can't express in one language alone."
+#    margaret @ say "Even if you mastered English, which very few people have done mind you, other languages open your mind up to new thoughts."
+#    #margaret @ say "That's what Celestine taught me. You know her, right?"
+#    margaret @ say "That's what Sera taught me. You might know her as Mrs. Celestine."
+#
+#    player "Yeah, she's my French teacher."
+#
+#    margaret @ say "I thought so. She's nice. And wise. You should listen to her."
+#    margaret @ say "She's told me about you."
+#
+#    player "Wait, you know Mrs. celestine??"
+#
+#
+#
+#
+#    #reserved for part 2
+#
+#                    margaret @ say "I didn't used to be. I used to try really hard."
+#                    margaret @ say "But after teaching here... I've seen so many cheaters graduate. So many people dumber than a rock coast through their degree with their parents' money and end up in important jobs."
+#                    margaret @ say "That's just the path in life they've had given to them."
+#                    margaret @ say "The administration pressures us to just shut up and take the bribes. Not little things like cinnamon rolls, I'm talking cars and vacation homes."
+#                    
+#                    player "How many vacation homes does a professor need??"
+#                    
+#                    margaret @ say "I wish I had one. They only offer those to smooth things over when senator So-and-So's dipshit son gets in trouble with the law for assaulting some poor sorority girl."
+#                    margaret @ say "The most I've ever got was a strange case where I think the student enjoyed giving me money?"
+#                    margaret @ say "I suckered him out of nearly twenty grand over a couple semesters."
+#                    
+#                    player "You lucky dog."
+#                    
+#                    show margaret happy
+#                    
+#                    margaret @ say "Hehehehe~"
+#                    
+#                    show margaret neutral
+#                    
+#                    margaret @ say "You won't have to do that much to pass my class though. Just listening to me rant is enough for me. It's a lot cheaper than therapy, that's for sure."
+#                    
+#                    n "Ms. Ellen sighs."
+#                    
+#                    show margaret sad
+#
+#
+#
+#^split this scene into 2 parts because it drags on for too long. Split at the "just how old do you think I am" part? have a flashback to it later when you sit on the bench alone? Or make this part part of the ellen cafe scene later
+#    show margaret melancholy
+#            
+#    margaret @ say "Thanks for sitting and talking with me. It really made my day worthwhile."
+#    margaret @ say "There's more to you that makes you special than just being the last human."        
+#
+#    player "I don't know about that. I'm just like anyone else. Just doing whatever society expects me to do. Go to school. Pay taxes. That sort of thing."
+#    
+#    margaret @ say "You're very kind and have your own unique perspective. You can uplift people without realizing it."
+#    
+#    player "I'm glad you think so. I try. Well no, I don't really try. I just want to live a comfortable life and be happy with others."
+#
+#    show margaret neutral
+#    
+#    margaret @ say "Perhaps that's all you need to do."
 
-    show margaret neutral
-    
-    margaret @ say "Perhaps that's all you need to do."
-    
-    n "Miss Ellen stands up."
-    
+    scene bg lecturehall with fade
 
+    play music "audio/music/mere - retrograde.ogg" fadein .5
+
+    show box with Dissolve(.2):
+        ypos 0
+        
+    n "Once again, Miss Ellen goes on with class as if nothing even happened."
+    n "She seemed pretty down earlier but she's her usual self while teaching."
     
-    margaret @ say "I have to go now. Again, thanks for talking with me. Take care, alright?"
+    show margaret neutral at center with dissolve:
+        ypos y_margaret
+        
+    margaret @ say "That's all for today. Class dismissed!"
     
-    player "Yeah. You too."
+    hide margaret with dissolve
     
-    #hang out with ellen feeding squirrels, she wonders if this is the best thing she's done in her life providing sustenance for wild animals who otherwise might not survive, the squirrels at least seem to be grateful, , talks about autumn and some things she likes
+    n "She gathers her papers and disappears through the lecture hall's back door before you can say anything to her."
+    n "Oh well, off to French class you go."
+    
+    scene bg classroom with fade
 
+    play music "audio/music/mere - retrograde.ogg" fadein .5
 
+    show box with Dissolve(.2):
+        ypos 0
 
-
-
-#remember if you invited mishka to the mall, you have to bring it up next time you see her
+    show celestine neutral at center with dissolve:
+        ypos y_celestine
+    
+    celestine @ say "...et voila! I hope that helps you understand some of the differences in phrasing between English and French."
+    celestine @ say "Au revoir, class!"
+    
+    hide celestine with dissolve
+    
+    scene bg campus with fade
+    
+    show claire sweater happy at center:
+        ypos y_claire
+    show ava typical happy at center:
+        ypos_yava
+    with dissolve
+    
+    ava @ say "Glad you're back among the living [name]! We were starting to get seriously worried about you."
+    
+    claire @ say "Yeah, "
+    
+    ava @ say "Ugh, don't remind me."
+    
+    
+    
