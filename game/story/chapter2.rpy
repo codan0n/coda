@@ -3443,10 +3443,17 @@ label ellen_feeding_ducks:
     
     scene bg campus with fade
     
+    show box with Dissolve(.2):
+        ypos 0
+
+    
     show claire sweater happy at center:
         ypos y_claire
+        xoffset -500
+        xzoom -1
     show ava typical happy at center:
-        ypos_yava
+        ypos y_ava
+        xoffset 500
     with dissolve
     
     ava @ say "Glad you're back among the living [name]! We were starting to get seriously worried about you."
@@ -3469,6 +3476,7 @@ label ellen_feeding_ducks:
     ava @ say "Uh huh."
     
     menu:
+        claire "{cps=0}I guess I'm just built different!{/cps}"
         "Must be her genes":
             player "Must be your genes."
             
@@ -3480,7 +3488,7 @@ label ellen_feeding_ducks:
             
             ava @ say "W-where did that come from?!"
             
-        "She's FAT!"
+        "She's FAT!":
             player "It's because you're fat."
             
             claire @ say "Oh? And is that a bad thing?"
@@ -3497,7 +3505,11 @@ label ellen_feeding_ducks:
                     
                     player "You could even stand to put on a few more pounds haha"
                     
+                    show claire sweater flustered
+                    
                     claire @ say "You think so??"
+                    
+                    show ava typical annoyed
                     
                     ava @ say "Okay enough with the thinly veiled weight gain fetish talk."
                 "Kinda":
