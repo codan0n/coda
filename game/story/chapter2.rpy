@@ -3499,6 +3499,7 @@ label ellen_feeding_ducks:
                 "{cps=0}Is that a bad thing?{/cps}"
                 "Hell no!":
                     $ clairePoints =+ 1
+                    
                     player "Hell no! I like chunky bunnies. Thick rabbits are the best."
                     
                     claire @ say "Oh you~"
@@ -3607,4 +3608,223 @@ label ellen_feeding_ducks:
 
     scene bg black with fade
 
+    hide box
+
+    show bg calendar
+    show ttuesday at center
+    with Dissolve(.5)
+
+    pause .6
+    show tforwardslash
+    pause .2
+    show tbackslash
+
+    pause .7
+    
+    scene bg lecturehall with fade
+
+    play music "audio/music/mere - schooldaze faster.ogg" fadein .5
+
+    show box with Dissolve(.2):
+        ypos 0
+        
+    show herschel at center with dissolve:
+        ypos y_herschel
+        
+    herschel @ say "Very good class! Remember to study hard over the weekend!"
+    herschel @ say "Class dismissed!"
+    
+    hide herschel with dissolve
+    
+    scene bg campus with fade
+    
+    show gunner neutral at center with dissolve:
+        ypos y_gunner
+    
+    gunner @ say "LMAO are you gonna \'study hard\' this weekend, [name]?"
+    
+    menu:
+        "Nope":
+            player "Nope. Cool people don't study."
+            
+            gunner @ say "Right on, brother!"
+            
+            n "Gunner's fist demands a bump and you do not disappoint."
+            
+            gunner @ say "So what you got planned?"
+            
+            if avaUrbex == True:
+                player "I'm going urban exploring with some chick."
+                
+                gunner @ say "Oh so like a date?"
+                
+                player "Not really."
+                
+                gunner @ say "You're at least gonna fuck her, right?"
+                
+                player "I wasn't planning on it."
+            else:
+                player "Nothing at all."
+                
+                gunner @ say "Bruh."
+        "I might":
+            player "I dunno, I might if I get bored of fucking your mom."
+            
+            n "You just blurted out the first thing that came to mind. It seems that Gunner's rhetoric has rubbed off on you."
+            
+            gunner @ say "Hah! You couldn't handle my mom even if she gave you a chance."
+            gunner @ say "She scratched out my dad's only good eye because he insulted her cooking."
+            
+            player "Joke's on you, I'm into that!"
+            
+            gunner @ say "Funny, he said the same thing."
+            gunner @ say "Then she cut off his balls and threw them into a soup the next day."
+            
+            player "Dude what the fuck."
+            
+            gunner @ say "If you can't handle her at her best, you don't deserve her at her worst."
+        "Actually yeah":
+            player "Yeah actually, I'm really behind on everything."
+            
+            gunner @ say "That's gay."
+            
+            player "Maybe so but I still need to pass my classes."
+            
+    n "Rori sees you two approaching and closes his laptop"
+    
+    show rori neutral at center with dissolve:
+        ypos y_rori
+        
+    rori @ say "Sup guys."
+    
+    player "Heya."
+    
+    gunner @ say "Rori please tell me you've got something good planned for the weekend."
+    
+    rori @ say "Hmm... Nope, not really."
+    rori @ say "Was just gonna work on my projects and maybe torrent a new anime."
+    
+    gunner @ say "Ugh, don't you guys even celebrate Animorph's Liberation Day?"
+    
+    rori @ say "Does anyone? It's just a day off from work or school."
+    
+    player "I'm not even an animorph, so no."
+    
+    gunner @ say "Oh right, you guys are freshmen so you wouldn't be in the *know.*"
+    
+    rori @ say "The *know?*"
+    
+    gunner @ say "Here at Harmonia, we have traditions. Sacred traditions."
+    
+    n "Gunner gestures for you both to come closer so he can whisper something."
+    
+    gunner @ say "Every year on Liberation Day, the fraternities conduct a panty raid!"
+    
+    rori @ say "A what?"
+    
+    gunner @ say "Oh my God Rori you cannot be this homosexual."
+    gunner @ say "It's where you sneak into a girl's room and steal her panties."
+    
+    rori @ say "That's it? Sounds kinda lame."
+    
+    player "Panty raids aren't real. It's just some dumb thing Hollywoo came up with for college movies."
+    
+    gunner @ say "Where do you think they got the idea from?"
+    gunner @ say "Me and the boys did it last year. Are you two down to join me this year?"
+    
+    rori @ say "This sounds like the worst risk versus reward ratio of all time."
+    
+    gunner @ say "Nah bro, it's like unofficially sanctioned by the university. It's a loooooong time tradition."
+    gunner @ say "Nobody's ever gotten in serious trouble for it."
+    gunner @ say "But you still need someone to watch your back."
+    gunner @ say "Come on, it'll be fun I promise!"
+    
+    n "Rori lets out a frustrated huff."
+    
+    rori @ say "Fine, I'll tag along."
+    rori @ say "But only to make sure you don't do anything *too* stupid."
+    
+    gunner @ say "Yes!!!"
+    
+    n "Gunner looks at you expectantly."
+    
+    gunner @ say "And what about you?"
+    
+    if avaUrbex == True:
+        player "I already make plans to do some urbex stuff with someone this weekend. Sorry."
+        
+        gunner @ say "No sweat. Just be sure your schedule's free next year!"
+        
+        rori @ say "And save me from having to go."
+        
+        gunner @ say "Do it for Rori."
+        
+        player "Haha sure."
+        player "You two have fun with the panty raid. I gotta run for now."
+    else:
+        menu:
+            "Let's do it":
+                player "Count me in."
+                
+                n "Gunner pumps his fist in the air."
+                
+                gunner @ say "Sickkk!"
+                gunner @ say "We'll meet up on Friday to do some scouting, then conduct the raid on Saturday night when everyone's out."
+                
+                rori @ say "Sounds like a plan."
+                rori @ say "Not a very good one, but it's better than nothing."
+                
+                player "Cool, I'll see you guys then. I gotta run for now though."
+            "Count me out":
+                player "Nah bro, the vibes are off on this one."
+                
+                gunner @ say "Dude what."
+                gunner @ say "You gay or something?"
+                gunner @ say "You can ogle Rori's ass while we sneak around if that's the case."
+                
+                rori @ say "H-hey!"
+                
+                player "I just have better things to do."
+                
+                n "Gunner shrugs, pretending like he doesn't care."
+                
+                gunner @ say "Fine, do what you want. Just don't expect me and Rori to share the spoils from our treasure hunt!"
+                
+                player "You two have fun with that. I gotta run for now."
+                
+    gunner @ say "Laters."
+    
+    rori @ say "Laters."
+                
+    scene bg black with fade
+
+    hide box
+
+    show bg calendar
+    show twednesday at center
+    with Dissolve(.5)
+
+    pause .6
+    show tforwardslash
+    pause .2
+    show tbackslash
+
+    pause .7
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
