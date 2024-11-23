@@ -4004,18 +4004,21 @@ label ellen_feeding_ducks:
     celestine @ say "I highly recommend visiting France during the week long celebration they have! It's like Mardis Gras on crack! Heehee~"
     celestine @ say "Though France didn't see a long-standing animal leader for a while, Britain had one the next decade! To this day, Queen Mary is celebrated by having her portrait on their currency!"
 
-    n "Mrs. Celestine rambles on and on about other countries and their various transitions from human dominated society to the gradual rise of animal people."
+    n "Mrs. Celestine rambles on about other countries and their various transitions from human dominated society to rule of animal people."
     n "Maybe one day you'll get your face on the dollar bill as a memory of the last human."
     n "Either that or they'll talk shit about you in textbooks for being an evil human who oppressed every other species for millenia."
-    n "So much for an extra long weekend. If someone hadn't interrupted her, she probably would have ranted well into the evening."
+    n "For all her love of this holiday, she doesn't cut you a break and let the class leave early."
+    n "If someone hadn't interrupted her, she probably would have ranted well into the evening."
 
     celestine @ say "Oop! Seems I got a bit too excited! Class is dismissed! Enjoy your weekend!"
 
     hide celestine with dissolve
 
-
+    claire @ say "Whew! The long weekend has officially begun! Wanna stop by the coffee shop, [name]?"
     
+    player "Why not? I am getting kinda hungry."
     
+    claire @ say "I'll text Ava to meet us there!"
     
     scene bg cafe with fade
     
@@ -4025,59 +4028,61 @@ label ellen_feeding_ducks:
     play music "audio/music/mere - coffeeLove.exe.ogg" fadein 1.0
     #play music "audio/music/vylet - Catching On.ogg" fadein 1.0
     
-    show gunner neutral at offscreenleft:
-        yalign 0
-    show rori neutral at offscreenleft:
-        yalign 0
+    show claire sweater happy:
+        ypos y_claire
+    with dissolve
     
-    pause .1
+    n "Claire holds the door open for you and lets you go inside first."
+    n "Ava is already here waiting for you."
+    
+    show ava typical happy:
+        ypos y_ava
+    
+    ava @ say "*Chirp~*"
+    ava @ say "Hey guys!"
+    
+    claire @ say "Heyyy~"
+    claire @ say "OMG is that who I think it is?"
+    
+    n "Claire points to a pair of cat ears sticking up over a booth. He's facing away. but, Ava has to flutter up to even see him."
+    n "Sitting across from him is Rori, flipping through pages in a textbook."
+    
+    ava @ say "What? Who?!"
+    
+    claire @ say "That catboy you have a crush on!"
+    
+    ava @ say "Shshshshush or he'll hear you!"
+    
+    n "Gunner's ear flicks and he turns around to see what the commotion is all about."
 
     show gunner neutral at center:
         xzoom -1
+        ypos y_gunner
         xpos 1550
     show rori neutral at center:
         xpos 1270
+        ypos y_rori
         xzoom -1
-    with move
+    with dissolve
 
-    gunner @ say "Sup [name]!"
+    gunner @ say "Hello there ladies~"
+    gunner @ say "And [name]."
+    
+    n "Rori throws down his pencil."
+    
+    rori @ say "I don't know how you expect me to tutor you if you turn around to greet every girl who walks in."
 
-    rori @ say "Hi there!"
-
-    player "Hey guys. I'm not interrupting anything, am I?"
-
-    gunner @ say "Nah, Rori was just showing me some math stuff."
-
-    player "How's that going?"
+    player "Hey guys. You helping Gunner learn basic math? How's that going?"
 
     rori @ say "It's... not."
 
-    show ava typical neutral at offscreenright:
-        yalign 0
-    show claire sweater happy at offscreenright:
-        yalign 0
-
-    n "You turn your head as you hear the door open behind you and a familiar bird and bunny walk in."
-
-    show ava typical neutral at center:
-        xpos 275
-    show claire sweater happy at center:
-        xpos 650
-    with move
-
-    ava @ say "Well look who it is~"
+    gunner @ say "Hey, chi-squared tests are not basic math! Seriously, does anybody ever use this stuff?"
     
-    show claire sweater overjoyed
+    claire @ say "I use it all the time! It's a useful statistical analysis to determine the validity of quantitative experiments compared against a null hypothesis."
     
-    claire @ say "Oh my gosh [name]! What a coincidence meeting you here!~"
-
-    player "It's not much of a coincidence. It feels like I'm here whenever I've got free time."
+    ava @ say "Sorry to interrupt your study session!"
     
-    show claire sweater leaning
-
-    claire @ say "Is that so? I'll have to start coming here more often then~"
-    
-    #claire @ say "Ooh, are these your friends?"
+    gunner @ say "It's alright, we could use a break anyway."
     
     n "Claire turns to Rori with a friendly grin."
     
@@ -4088,70 +4093,41 @@ label ellen_feeding_ducks:
     show rori anxious
     show claire sweater happy
 
-    #ava @ say "Oh right! I remember seeing you with him before! Gunner was it?"
-
-    #gunner @ say "Yup, that's me."
-
-    #claire @ say "And who might you be?"
-
-    #rori @ say "M-me? My name's Rori. Nice to meet you."
+    n "Rori looks kinda nervous. You're not sure if it's just because he's shy or if it's Claire intimidating him."
     
-    n "Rori looks kinda nervous. You're not sure if it's because he's shy or if it's just Claire intimidating him."
+    rori @ say "N-nice to meet you. My name's Rori."
+
+    claire @ say "I like your horns~"
     
-    rori @ say "Nice to meet you. My name's Rori."
+    show rori neutral
+
+    rori @ say "I- my... horns? Thanks? I don't really do anything too fancy with 'em."
+
+    show ava annoyed
+
+    ava @ say "Claire can you please stop flirting with every boy you meet?"
+
+    claire @ say "Hey I hit on girls too."
     
-    if roriparty == True:
+    show ava typical neutral
 
-        claire @ say "OMG I remember seeing you at that party the other week! I can't believe you did that thing!"
-        
-        show rori at shudder
+    ava @ say "This is why I'm embarassed to go out in public with you."
 
-        rori @ say "O-oh yeah?"
+    claire @ say "Ksksksks love you too Ava <3"
+    
+    show ava portrait neutral
 
-        player "What thing?"
+    ava @ say "We'll just be moving along now. Don't mind us!"
 
-        rori @ say "N-nothing!"
-        
-        show ava portrait neutral
-        
-        ava @ say "We'll just be moving along now. Don't mind us!"
-        
-        n "Ava drags Claire away from the blushing ram to avoid further embarassing him."
-        
-        gunner @ say "Bye guys! Talk to you later!"
-        
-    else:
-        claire @ say "I like your horns~"
-        
-        show rori neutral
+    gunner @ say "Hey it's no problem, awkward flirting is infinitely more fun than doing math problems."
 
-        rori @ say "I- my... horns? Thanks? I don't really do anything too fancy with 'em."
+    ava @ say "See you around, guys!"
+    
+    show claire sweater leaning
 
-        show ava annoyed
+    claire @ say "À un de ces quatre! Ksksksksk!"
 
-        ava @ say "Claire can you please stop flirting with every boy you meet"
-
-        claire @ say "Hey I hit on girls too."
-        
-        show ava typical neutral
-
-        ava @ say "This is why I'm embarassed to go out in public with you."
-
-        claire @ say "Ksksksks love you too Ava <3"
-        
-        show ava portrait neutral
-
-        ava @ say "We'll just be moving along now. Don't mind us!"
-
-        gunner @ say "Hey it's no problem, awkward flirting is infinitely more fun than doing math problems."
-
-        ava @ say "See you around, guys!"
-        
-        show claire sweater leaning
-
-        claire @ say "À un de ces quatre! Ksksksksk!"
-
-        player "Later guys. And good luck with the homework."
+    player "Later guys. And good luck with the homework."
 
     hide gunner
     hide rori
@@ -4160,8 +4136,13 @@ label ellen_feeding_ducks:
     with dissolve
 
     n "You walk up to the counter with Ava and Claire at your side."
-    #n "As usual, Mishka is there to greet you with a smile... or half of one. Maybe a third."
-    n "As usual, Mishka is there to greet you."
+    n "As usual, Mishka is there to greet you with a smile... or half of one. Maybe a third."
+    
+    
+    
+    
+        #######if you invited mishka to hang out at the mall, mention it
+    
 
     show mishka shy at center with dissolve:
         xzoom -1
@@ -4183,10 +4164,10 @@ label ellen_feeding_ducks:
         xpos 600
     with dissolve
 
-    claire @ say "Can I get a large chai tea latte, hot, with almond milk and extra honey and salt aaaaaand three cinnamon buns?"
+    claire @ say "Can I get a large chai tea latte, hot, with almond milk and extra honey and salt aaaaaand five chocolate chip cookies?"
     
     #player "You don't have to get me anything lol"
-    player "Oh nice you're getting a cinnamon bun for everyone?"
+    player "Oh nice you're getting a cookie for everyone?"
     
     show claire sweater surprised
     
@@ -4196,8 +4177,6 @@ label ellen_feeding_ducks:
     
     #show claire sweater happy
     show ava pose ohyou
-    
-    ava @ say "Cinnamon buns for the bun~"
     
     show claire sweater embarassed
     
@@ -4912,4 +4891,4 @@ label ellen_feeding_ducks:
     
     
     
-    
+    jump liberation_day
