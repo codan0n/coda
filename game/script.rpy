@@ -3030,12 +3030,12 @@ label history_quiz:
 
         #___saturday4
 
-        scene bg codadorm with fade
+    scene bg codadorm with fade
 
-        show box with Dissolve(.2):
-            ypos 0
+    show box with Dissolve(.2):
+        ypos 0
 
-        play music "audio/ambient/morning birds.ogg" fadein 1.0
+    play music "audio/ambient/morning birds.ogg" fadein 1.0
 
 
 label dayafterurbexcont:
