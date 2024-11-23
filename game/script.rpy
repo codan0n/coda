@@ -2264,6 +2264,7 @@ label start:
     $ daysSinceRain = 1
     $ avaClaireGarden = False
     $ avaUrbex = False
+    $ gunnerRaid = False
     $ gaveCinRoll = False
     $ studied = ""
     $ fratsoro = ""

@@ -1,5 +1,4 @@
 label liberation_day:
-    
     scene bg codadorm with fade
 
     show box:

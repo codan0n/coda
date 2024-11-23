@@ -3775,6 +3775,8 @@ label ellen_feeding_ducks:
     else:
         menu:
             "Let's do it":
+                $ gunnerRaid = True
+                
                 player "Count me in."
                 
                 n "Gunner pumps his fist in the air."
@@ -4138,31 +4140,52 @@ label ellen_feeding_ducks:
     n "You walk up to the counter with Ava and Claire at your side."
     n "As usual, Mishka is there to greet you with a smile... or half of one. Maybe a third."
     
+    show mishka neutral at center with dissolve:
+        ypos y_mishka
     
+    if mishkaMall == True:
+        n "It dawns on you that you haven't seen her since you made plans to go to the mall together."
+        n "Which you failed to do."
+        
+        player "Hey Mishka. Sorry about the mall thing. I was stuck in the hospital all weekend."
+        
+        mishka @ say "Oh no, are you alright??"
+        
+        player "Yeah, I just fell down and stuff."
+        
+        mishka @ say "Well, if you are able... maybe we could still go somewhere this weekend?"
+        
+        if gunnerRaid == True or avaUrbex == True:
+            player "I'd love to but... I kinda already made plans for the weekend."
+            
+            mishka @ say "Oh..."
+            
+            player "I'm sorry. I'll make it up to you, I promise."
+            
+            mishka @ say "Don't worry about it. The mall wasn't that fun anyway."
+            
+        else:
+            player "Yeah!! I won't miss it this time even if it kills me!"
+            
+            mishka @ say "Hehe I don't think that is necessary! Let's just meet at the mall this Saturday, okay?"
+            
+            player "Sounds great!"
+            
+            claire @ say "Ooh, is that a date?"
+            
+            mishka @ say "No, just a friendly thing. You can come too if you want!"
+            
+            claire @ say "Aaaaaa I would if I didn't already have plans!"
     
-    
-        #######if you invited mishka to hang out at the mall, mention it
-    
-
-    show mishka shy at center with dissolve:
-        xzoom -1
-        xpos -400
-
-    mishka @ say "Hello again [name]! What for you can I get?"
+            mishka @ say "Another time then."
+            
+    mishka @ say "Anyway, did you want to order something?"
 
     player "The usual please."
 
     n "You scan your card and step off to the side."
-    
-    show mishka neutral
 
     mishka @ say "And for you two?"
-
-    show ava typical neutral at center:
-        xpos 225
-    show claire sweater happy at center:
-        xpos 600
-    with dissolve
 
     claire @ say "Can I get a large chai tea latte, hot, with almond milk and extra honey and salt aaaaaand five chocolate chip cookies?"
     
@@ -4171,12 +4194,12 @@ label ellen_feeding_ducks:
     
     show claire sweater surprised
     
-    claire @ say "Huh? No I'm not?"
-    
-    n "Oh god they're all for her, aren't they?"
+    claire @ say "Huh? Um, no?"
     
     #show claire sweater happy
     show ava pose ohyou
+    
+    ava @ say "They're all for you, aren't they?"
     
     show claire sweater embarassed
     
@@ -4197,6 +4220,7 @@ label ellen_feeding_ducks:
     claire @ say "So, got any plans for the rest of today, [name]?"
 
     player "Hmm... Not really. Pretty lazy day honestly."
+    player "The real fun starts tomorrow."
 
     ava @ say "A lazy day every now and then is nice."
     
@@ -4210,7 +4234,7 @@ label ellen_feeding_ducks:
     
     show claire sweater overjoyed
     
-    claire @ say "[name] we should have a movie night!"
+    claire @ say "We should have a movie night!"
     
     show ava overjoyed
 
@@ -4241,17 +4265,15 @@ label ellen_feeding_ducks:
 
     n "In that case you'll have to dust off your old pirate hat and update your torrent client when you get back to your dorm."
     #n "What kind of movies do normies like again?"
-    if mishkaWriting == True:
-        n "Maybe you should invite Mishka over as well. She's always had your back even though you hardly know her."
-    else:
-        n "Maybe you should invite Mishka over as well. She's always had your back even though you've never even hung out with her."
+    n "Maybe you should invite Mishka over as well. She's always had your back even though you've never even hung out with her."
     n "She walks over with your drinks right at the perfect time."
 
     show mishka neutral at center with dissolve:
         xzoom -1
         xpos -350
+        ypos y_mishka
 
-    mishka @ say "Here's your drinks and cinnamon buns! Enjoy!"
+    mishka @ say "Here's your drinks and snacks! Enjoy!"
 
     player "Thanks!"
     player "Hey uh Mishka, I was wondering if you'd wanna come hang out with us later today. We're gonna be watching some movies at my dorm."
@@ -4264,9 +4286,8 @@ label ellen_feeding_ducks:
     claire @ say "Aww... Don't worry Mishka, we'll find a day where we can all hang out together!"
     
     show mishka happy
-
-    #mishka @ say "Hehe thanks! I'm usually very busy though but I appreciate the gesture!"
-    mishka @ say "Really..? I would very appreciate that!"
+    
+    mishka @ say "Really..? I would enjoy that very much!"
     
     show mishka neutral
 
@@ -4313,7 +4334,7 @@ label ellen_feeding_ducks:
 
     ava @ say "Claire I swear on my tyrannosaurus ancestors-"
 
-    n "You let them continue bickering while you approach Gunner and Rori."
+    n "You let them continue bickering while you walk over Gunner and Rori."
 
     hide ava
     hide claire
@@ -4330,7 +4351,7 @@ label ellen_feeding_ducks:
 
     gunner @ say "Oh hell yes."
 
-    rori @ say "W-well, I guess I could skip tonight's raid and join you. What are you all watching?"
+    rori @ say "Hmm, I guess I could skip tonight's raid and join you. What are you all watching?"
 
     player "To be honest I have no idea. I was just gonna download whatever comes up when I search 'guns cars explosions movie'"
     
@@ -4353,8 +4374,10 @@ label ellen_feeding_ducks:
     show ava typical neutral at center:
         xpos -350
         xzoom -1
+        ypos y_ava
     show claire sweater happy at center:
         xpos 350
+        ypos y_claire
         #xzoom -1
     with dissolve
 
@@ -4388,7 +4411,8 @@ label ellen_feeding_ducks:
     n "You hear some noise outside your door followed by knocking."
     n "Please let that be Rori."
 
-    show rori neutral at center with dissolve
+    show rori neutral at center with dissolve:
+        ypos y_rori
     
     play music "audio/music/Vylet Pony - Cozy Pone.ogg" fadein .5
     #play music "audio/music/vylet - リラックス.ogg" fadein .5
@@ -4397,7 +4421,7 @@ label ellen_feeding_ducks:
 
     player "It's fine. Did you bring the movies? And where's Gunner?"
     
-    rori @ say "He's running a little late but he'll be here. And yeah I got 'em right here."
+    rori @ say "He's had to do something but he'll be here soon. And yeah I got 'em right here."
 
     n "He whips out a flash drive."
 
@@ -4407,7 +4431,7 @@ label ellen_feeding_ducks:
     n "Deer god..."
     n "Why are half of these file names in Japanese?"
     n "Rori, you didn't..."
-    n "You open one and skip to the middle and are greeted with a barrage of bright colors and a high pitched \"ONI-CHAAAAAAN!~\""
+    n "You open one and skip to the middle. You are greeted with a barrage of bright colors and a high pitched \"ONI-CHAAAAAAN!~\""
     n "You immediately slam the laptop lid shut."
     n "What the fuck Rori"
 
@@ -4422,17 +4446,19 @@ label ellen_feeding_ducks:
     hide rori with dissolve
 
     n "Before you can come up with a backup movie, you hear another knocking at your door."
-    ###hotline miami door sound effect
     n "As you turn the knob, Claire's fat bunny ass bursts through the doorway, knocking you onto the ground, semi-conscious."
 
     show ava typical neutral at center:
         xpos 50
+        ypos y_ava
         xzoom -1
     show claire sweater wave at center:
         xpos -450
+        ypos y_claire
         xzoom -1
     show gunner neutral at center:
         xpos 650
+        ypos y_gunner
     with dissolve
 
     claire @ say "Heyyyy~"
@@ -4440,7 +4466,7 @@ label ellen_feeding_ducks:
     show ava pose ohyou
     show claire sweater happy
 
-    ava @ say "I hope you didn't start without us haha"
+    ava @ say "I hope you didn't start without us!"
     
     show ava pose happy
 
@@ -4449,17 +4475,14 @@ label ellen_feeding_ducks:
     n "Yeah not to mention he brought 12 gigabytes of One Peace."
     n "You pick yourself off the ground and welcome everyone in."
     
-    player "Come on in guys, I'm glad you could make it!"
+    player "Come on in guys, I'm glad you all could make it!"
     player "Help yourself to some snacks. I have some sodas in the mini fridge too if you want any."
-
-    ###if gunner was in your dorm before
-        #gunner @ say "Daaaamn, I didn't notice it before but your dorm came with a mini fridge?"
 
     gunner @ say "Daaaamn, your dorm came with a mini fridge?"
     
     n "Gunner picks up the empty box of dino nuggies you left beside your microwave."
     
-    gunner @ say "You even have a microwave! They don't allow us peasants to have these cause someone managed to burn down a whole dorm building with one."
+    gunner @ say "You even have a microwave! They don't allow us peasants to have these because someone managed to burn down a whole dorm building with one."
 
     show claire sweater lusty alert
 
@@ -4477,7 +4500,7 @@ label ellen_feeding_ducks:
     show rori neutral at center:
         xpos 2000
 
-    n "To your surprise, Ava is leaning over Rori, who is busy connecting the laptop to the television and has his anime folder open in clear view on the laptop screen."
+    n "To your surprise, Ava is leaning over Rori, who is busy connecting the laptop to the television and has his anime folder open in clear view on the screen."
     
     show claire:
         xpos -725
@@ -4505,7 +4528,7 @@ label ellen_feeding_ducks:
 
     gunner @ say "I won't, I won't!"
 
-    n "Apparently everyone is a weeb."
+    n "Apparently everyone here is a weeb."
     n "Maybe tonight won't be a disaster after all."
 
     hide ava
@@ -4524,8 +4547,8 @@ label ellen_feeding_ducks:
     menu:
         n "{cps=0}Everyone but you and Gunner has snagged a seat and he's distracted by his phone, so now's your chance.{/cps=0}"
         "Sit next to Claire":
-            #finished
             $ clairePoints = clairePoints + 1
+            
             n "Surprisingly, Claire has not occupied your bed and has instead opted recline against it whilst sitting on the floor, her arm elbow deep in a bag of chips."
             n "You decide to join her down there and grab a handful of chips when she takes her paw out."
 
@@ -4533,7 +4556,6 @@ label ellen_feeding_ducks:
 
             claire @ say "Sup."
 
-            #player "Enjoying the snacks?"
             player "There's room on the bed you know."
 
             claire @ say "I didn't wanna get crumbs in your sheets."
@@ -4544,9 +4566,11 @@ label ellen_feeding_ducks:
 
             n "Gunner looks up from his phone as Rori hits the play button."
 
-            show ava typical neutral at offscreenleft
+            show ava typical neutral at offscreenleft:
+                ypos y_ava
             show gunner neutral at center with dissolve:
                 xpos -300
+                ypos y_gunner
                 xzoom -1
 
             gunner @ say "Hmm, where to sit...?"
@@ -4582,14 +4606,6 @@ label ellen_feeding_ducks:
             hide ava
             with dissolve
 
-            #show gunner neutral at center with dissolve:
-            #    xpos -180
-            #    xzoom -1
-
-            #n "He quickly leans over and whispers something into your ear."
-
-            #gunner @ say "Based. Thank you [name]."
-
             show claire sweater happy alert at center with dissolve
 
             claire @ say "...and I figured those two would wanna sit together~"
@@ -4603,7 +4619,6 @@ label ellen_feeding_ducks:
             
             show claire sweater lusty
 
-            #claire @ say "Hehe I guess next time we'll just have to take the bed~"
             claire @ say "You can always lay on me you know~"
 
             player "...I wouldn't mind that either."
@@ -4632,9 +4647,8 @@ label ellen_feeding_ducks:
             n "You're getting pretty sleepy though so you hurry and get ready for bed."
 
         "Sit next to Ava":
-            #untested
-            #gunner complains about there not being enough chairs and sits next to claire
             $ avaPoints = avaPoints + 1
+            
             n "Ava had decided to occupy your bed, which is fine because it's the most comfortable spot and you wanted to sit next to her anyway."
             n "You plop down on it, bouncing her up into the air."
             
@@ -4778,7 +4792,6 @@ label ellen_feeding_ducks:
             n "You're getting pretty sleepy so you hurry and get ready for bed."
 
         "Sit next to Rori":
-            #untested
             $ roriPoints = roriPoints + 1
 
             n "You approach Rori, who is sitting in your desk chair."
@@ -4875,20 +4888,5 @@ label ellen_feeding_ducks:
             n "Overall, you had a pretty good time with everyone. 10/10 would do again."
             n "*Yaaawn*"
             n "You're getting pretty sleepy so you hurry and get ready for bed."
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     jump liberation_day
