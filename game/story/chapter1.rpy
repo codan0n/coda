@@ -4300,11 +4300,11 @@ label rooftop_party:
 
     player "Cool, I didn't know you invited her."
 
-    gunner @ say "I didn't, actually."
+    gunner @ say "Yeah I climbed her dorm building and taped a flier to her window."
+    
+    player "Uhh..."
 
-    player "What makes you think she'll show up then?"
-
-    gunner @ say "I dunno, maybe she's going for a night flight and sees this cool party going on on the roof and she'll stop by and then we'll start talking and I'll offer her a beer and she'll say thanks and..."
+    gunner @ say "She'll swoop down any minute now and I'll offer her a beer and she'll be like 'Teehee thanks!' and we'll totally hit it off."
 
     n "You nod your head and tune out of the delusional words coming out of Gunner's mouth."
     n "He leans up against the wall and rambles on and on."

@@ -4851,6 +4851,7 @@ label ellen_feeding_ducks:
             show ava typical neutral at center with dissolve:
                 xzoom -1
                 xpos -100
+                ypos y_ava
 
             ava @ say "Over here Gunner, there's some room for ya over here!"
 
@@ -4867,7 +4868,6 @@ label ellen_feeding_ducks:
             
             pause .1
             
-
             pause(.3)
 
             hide gunner

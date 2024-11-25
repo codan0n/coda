@@ -17,7 +17,7 @@ label liberation_day:
     n "And now he's dead and your only friends are animal people."
     n "The age of humans is over and a new generation has inherited the world."
 
-    if avahangout1 == True:
+    if avaUrbex == True:
         n "*sigh*"
         n "At least you get to hang out with a cute bird (who might be into you??) today."
 
@@ -44,13 +44,10 @@ label liberation_day:
 
         n "She sends you the coordinates which open in your map app when you tap on them."
         n "You can barely tell there's a building there from the satellite images since it's so overgrown with trees and bushes."
-        n "Ava sends you a text telling you to meet her there in half an hour."
+        n "Ava sends you a text telling you to meet her there in an hour."
         n "You prepare your backpack, stuffing it with a couple water bottles and snacks, then proceed to head out."
 
         scene bg oldhospital foyer with fade
-        
-        show box:
-            ypos 0
 
         #play music "audio/ambient/spooky.ogg" fadein 1.0
         #play music "audio/music/vylet - Cavern Lurker.ogg" fadein 1.0
@@ -59,7 +56,7 @@ label liberation_day:
             ypos 0
 
         n "Ava wasn't kidding when she said this place was abandoned."
-        n "Graffiti lines the walls and weeds grow out of cracks in the concrete. You'd be afraid to enter a place like this alone, but luckily you have a dainty liberal arts student to protect you."
+        n "Graffiti lines the walls and weeds grow out of cracks in the concrete. You'd be afraid to enter a place like this alone, but luckily you have a dainty liberal arts student here to protect you."
 
         show ava typical neutral at center with dissolve
 
@@ -67,7 +64,6 @@ label liberation_day:
 
         #player "It took a while to find it! There's no trail or signs or anything."
 
-        #ava @ say "I know, right? It's so exciting! It's probably been years since anyone has last stepped foot here."
         ava @ say "It's probably been years since anyone has last stepped foot here."
         
         player "Any functioning member of society at least."
@@ -102,11 +98,6 @@ label liberation_day:
         
         show ava typical neutral
 
-        #ava @ say "But I also wanted to capture the feeling of those old historical photos with the inky blacks and softness to the frame."
-        
-        #player "Black and white means it's art, right?"
-
-        #ava @ say "Hey, I like black and white for portraits!"
         ava @ say "And it just wouldn't feel right shooting this place in color."
         ava @ say "I don't even think color film was invented yet when they built this place."
 
@@ -126,99 +117,6 @@ label liberation_day:
         n "Dust kicks up as you explore, mixing with the smell of mildew in the humid air. Every now and then you hear creaks and pops from other rooms echoing throughout the building."
         n "Water drips down from the ceiling into little puddles full of moss and weird sludge you don't dare touch."
         n "Luckily the holes in the walls provide enough light for you to navigate."
-        
-        show ava waitwhat
-        
-        ava @ say "Whoa, check this out!"
-        
-        scene bg oldhospital room with dissolve
-        
-        show box:
-            ypos 0
-
-        n "Ava motions for you to look through a crack in the wall. When you bend over to peer inside all you see is a seemingly ordinary waiting room."
-
-        player "I don't get it, what's so special about this?"
-        
-        show ava unsure at center with dissolve
-
-        ava @ say "Oh right, I guess you wouldn't be able to see it with your weak human eyes."
-        
-        player "Hey! My eyes are optimized for tracking movement and identifying photoshopped pixels!"
-        
-        show ava seriously
-        
-        ava @ say "Hmm okay how do I describe this..."
-        ava @ say "You know how in those crime shows they shine a blacklight and they can see bloodstains and stuff? It's like that."
-        
-        player "Whoa really? So this room was covered in blood at some point?"
-
-        ava @ say "Err... actually blood doesn't glow like in the movies and stuff."
-        ava @ say "Other bodily fluids will though."
-
-        player "Gross!"
-        
-        show ava pose overjoyed
-
-        ava @ say "That doesn't mean this building didn't see its fair share of blood though!"
-        
-        show ava ohyou
-        
-        ava @ say "The doctors at this hospital was known for their eagerness to amputate limbs."
-        ava @ say "Like, if you came in with a cold they'd amputate your leg."
-
-        player "Wow, that's uh..."
-        
-        show ava pose smile
-
-        ava @ say "There's even a \'cemetary\' for all the disembodied limbs out back!"
-
-        player "How do you know all this?"
-        
-        show ava pose happy
-
-        ava @ say "I saw a video on it."
-        ava @ say "Whenever I can't sleep I put on morbid videos."
-
-        player "Doesn't that give you nightmares?"
-
-        ava @ say "Not really? I don't dream much."
-        ava @ say "Do you?"
-
-        player "Sometimes."
-
-        ava @ say "About what?"
-
-        player "Usually something completely random and unnoteworthy."
-        player "But sometimes they feel real and can make me anxious."
-
-        n "Ava pokes her camera through the crack and adjusts the dials and rings on the camera."
-
-        ava @ say "Sometimes I daydream. Whatever I'm doing, my brain just goes on autopilot while I think about things I wanna shoot."
-
-        player "Shoot as in with your camera, right?"
-        
-        ava @ say "Hm? Yeah."
-        
-        player "Like spooky hospitals?"
-
-        ava @ say "Actually yeah, this is the sort of things I imagine, but more abstract."
-        
-        hide ava with dissolve
-
-        n "Ava clicks the shutter button and takes a photo."
-
-        #player "What are you doing?"
-
-        #ava @ say "Rewinding the film."
-
-        #player "Oh."
-        #player "...Why?"
-
-        #ava @ say "Oh sorry, I should have explained."
-        #ava @ say "I wanted to try taking some double exposures, y'know, where you take a shot on top of an already exposed piece of film."
-        #ava @ say "It's a technique that I've thought about using more but the results can look kinda random so it's hard to imagine how it'll turn out."
-        
         n "You and Ava make your way to the end of the hall where a staircase lies, the steps covered in rubble from the crumbling walls and steps above."
         n "Ava crouches down and turns her camera 90 degrees to take a shot of it."
         n "Her feathers stick up and you jump a little when a loud noise comes from behind, echoing throughout the hall."
@@ -231,7 +129,7 @@ label liberation_day:
 
         ava @ say "Yeah... is someone here?"
         
-        n "As if to answer her question, the sound of stone clattering onto the floorboards reaches you."
+        n "As if to answer her question, the sound of rubble being kicked around echoes throughout the concrete walls."
         
         player "M-must have been the wind?"
         
@@ -246,29 +144,29 @@ label liberation_day:
         
         ava @ say "[name]!"
         
-        n "Ava doubles back and helps pull you out, oblivious to the pain shooting through your ankle. You try to hold your tongue to not reveal your position to the other intrudor."
-        n "You hobble up the remaining stairs and into a room, closing the door behind you, bracing it with your body in case they try breaking in."
+        n "Ava doubles back and helps pull you out, oblivious to the pain shooting through your ankle. You try to keep quiet so she doesn't think you're a pussy."
+        n "You hobble up the remaining stairs and into a room, closing the door behind you, bracing it with your body."
         
         scene bg oldhospital darkroom with fade
         
         show box:
             ypos 0
         
-        n "For a few moments it's just you and Ava in a dark room trying not to breath heavily after the scare and rapid ascent so you can listen."
-        n "With your back against the door, you hold onto Ava. She's got both her wings wrapped around you."
+        n "For a few moments it's just you and Ava in a dark room trying not to breathe heavily after the jumpscare. You put your ear to the door and listen for any sounds."
+        n "Ava listens too, leaning against you. Her soft wings are wrapped around you."
         n "Her camera is jabbing into your side uncomfortably but you can feel her heartbeat against your chest, which is oddly calming."
         n "You guess if you're gonna get stabbed by a hobo, this would be a nice final memory. Cute bird in your arms. Maybe someone will find the film and develop it."
-        n "Maybe someone will make a documentary about you."
+        n "Then make a documentary about you."
         n "'Two dumbasses go venturing in dangerous hobotopia, shockingly get murdered in most gruesome way possible.'"
-        #player "I wonder who they'd get to reenact me in the documentary? Maybe they'd shave a chimpanzee for it?"
-        n "After a few minutes, Ava speaks up, still in a hushed tone."
+        n "After a minute passes, Ava speaks up in a hushed tone."
         
         show ava typical neutral at center with dissolve
         
         ava @ say "I think whoever that was is gone. Or at least they didn't follow us."
         
-        player "Yeah. We probably scared them off with the noise we made climbing up the stairs."
-        player "Hopefully it was just a wild animal and not like a psycho stalker serial killer."
+        ava @ say "It was probably just a stray cat. They like to hang around places like this."
+        
+        player "Yeah hopefully it was just a wild animal and not like a psycho stalker serial killer."
         
         ava @ say "Ugh you just reminded me of something."
         
@@ -321,7 +219,7 @@ label liberation_day:
         show ava with move:
             xpos -300
         
-        player "Careful, it's dark and I don't know if this is the rusty nail room."
+        player "Careful, it's dark and we don't know if this is where they stored the rusty nails."
         
         n "*Crck*"
         n "A dim purplish glow gradually fills the room."
@@ -344,35 +242,22 @@ label liberation_day:
         player "But you have patterns on them now!"
         
         ava @ say "I always have patterns on them. That's just how they are."
-        ava @ say "Wait, you mean the spirals?"
         
-        player "Yeah those."
+        player "I never noticed them before!"
         
-        ava @ say "You're just now noticing them? Those have always been there."
         ava @ say "Hmm, okay I think I know what's going on."
         
-        n "She waves a glowstick over her wing feathers and the patterns become more visible the closer they are to the light."
+        n "She waves a glowstick over her wing feathers and more patterns become visible."
         
-        ava @ say "Just like what I was saying before. The glowstick must be acting like a blacklight."
-        ava @ say "With these you can see what I see all the time."
+        ava @ say "The ultraviolet frequencies from the glowstick must be close enough to your visible light spectrum to reveal these."
+        ava @ say "It's like a blacklight."
+        ava @ say "You're probably only seeing a fraction of them. They're normally only visible to avians."
         
         player "Wow. Do all birds have patterns on their feathers?"
         
-        #show ava portrait neutral
-        
         ava @ say "Just the pretty ones~"
         
-        #show ava typical neutral
-        
-        #player "You'd be fun at one of those glowstick raves"
-        
-        #player "It certainly makes the thought of getting stabbed by a crackhead here more palatable."
-        
-        #ava @ say "Haha I was thinking the same thing!"
-        
-        n "Ava breaks another glowstick and wanders further into the room."
-        
-        #ava @ say "If I was a serial killer on the run from the police, this is the type of place I'd hang around in."
+        n "Ava cracks another glowstick and wanders further into the room."
         
         show ava:
             ypos 15
@@ -387,7 +272,7 @@ label liberation_day:
         
         n "You look down to see your foot bent at an unnatural angle."
         
-        player "Oh. FUck."
+        player "Oh. Fuck."
         
         ava @ say "Holy Hoole that looks bad... Stay right there, I'll- I dunno, I'll figure something out."
         
@@ -397,7 +282,7 @@ label liberation_day:
         
         n "Her attempt at making light of the situation is appreciated but now that the adrenaline is wearing off, you're starting to feel excruciating pain."
         
-        player "Where's a kitsuragi when you need one?"
+        player "Where's a doctor when you need one?"
         
         ava @ say "Can you walk? We should get you to a real hospital asap."
         
@@ -428,8 +313,7 @@ label liberation_day:
         hide ava with dissolve
         
         n "You lean on your cane while she flutters up to a high perch and lines up a shot."
-        n "Suddenly a loud crashing noise startles both of you and Ava comes crashing down."
-        
+        n "Suddenly a loud noise startles both of you and Ava comes crashing down."
         
         show ava reaching concerned:
             ypos -3000
@@ -440,36 +324,19 @@ label liberation_day:
         pause .2
             
         show ava with move:
-                ypos 0
+            ypos 0
                 
         show ava at shudder
         
         show ava unsure
-        
-        
-        
-        
-        #show ava unsure at center:
-        #    ypos -3080
-            
-        #pause .1
-        
-        #show ava:
-        #    ypos 1080
-        #with move
-        
-        #pause .2
-        
-        #show ava:
-        #    ypos 0
-        #with move
-        
         
         player "Ava!"
         
         ava @ say "I'm okay!"
         
         player "What the fuck was that?"
+        
+        show ava at shudder
         
         ava @ say "I dunno but we better get out of here now before we get murdered."
         
@@ -479,33 +346,26 @@ label liberation_day:
         
         ava @ say "Shut up or I'll leave you here without your crutch."
         
-        ### ava flying up to higher floors and helping you up, more gunner stalking, he gets caught in the end, 
-        
-        #n "As Ava lines up another shot, the two of you are startled by a sudden loud noise that echoes throughout the building."
-        
         player "Okay okay, let's just get out of here. Which is... that way I think? I'm not sure, this place is like a maze."
         
         show ava typical neutral
 
-        n "You poke your heads out of the room you're in."
+        n "You approach a corner and poke your heads around it."
 
         player "Do you see anything?"
 
         ava @ say "Nada."
         ava @ say "Wait."
-
-        n "You turn your head to the direction she's facing."
-
         ava @ say "Wasn't that window boarded up earlier?"
 
-        player "I don't remember, there's a lot of boarded up windows."
+        player "I don't remember! There's a lot of boarded up windows."
 
         ava @ say "It looks like it leads outside. I'll help you through it."
         
         hide ava with dissolve
 
-        n "Ava puts forth her best effort in pushing you through the window, though a petite bird lass like her is unable to offer much help."
-        n "You basically get your upper body onto the windowsill and then roll over the edge."
+        n "Ava puts forth her best effort in pushing you through the window, though a petite bird like her is unable to offer much help."
+        n "You get your upper body onto the windowsill and then roll over the edge."
         
         stop music fadeout 1.0
         
@@ -516,7 +376,7 @@ label liberation_day:
         
         play music "audio/ambient/outdoors night crickets.ogg" fadein 1.0
         
-        n "With the last bit of sunlight fading from the sky, it was hard to see exactly where you were crashing. And Ava wasn't waiting around to get murdered just cause your foot hurts."
+        n "With the last bit of sunlight fading from the sky, it was hard to see exactly where you were crashing. And Ava wasn't waiting around to get murdered just because your foot hurts."
         n "Fortunately you only feel nice soft grass on the ground and not broken glass."
         n "Any minute vibration in your foot still hurts like hell though."
         
@@ -524,61 +384,58 @@ label liberation_day:
         
         show ava typical neutral at center with dissolve:
             xpos 300
-            yalign 0
+            ypos y_ava
         
-        ava @ say "You alright there? Here's your cane."
+        ava @ say "You alright? Here's your cane."
         
-        n "As you stand back up you swear you can hear footsteps in the grass."
-        n "And yup that is definitely a pair of eyes staring at you."
+        n "The tall grass ahead of you rustles, parting away as something gets closer."
+        
+        ava @ say "What was that?"
+        
+        n "A pair of glowing eyes shines in the dim light, staring you down and getting closer."
         
         show gunner neutral at left with dissolve:
-            yalign 0
+            ypos y_gunner
             xzoom -1
             xpos -300
         
-        gunner @ say "[name]! Ava! Sup?"
+        gunner @ say "[name]! Ava! Fancy seeing you here!"
         
         show ava concerned
         
         ava @ say "Gunner? What the hell are you doing here?!"
         
-        #gunner @ say "Oh y'know, just some urban exploration. Urbex as they say. Which I'm totally into by the way."
-        
-        #ava @ say "Dammit Gunner, [name] got hurt cause you scared us!"        
-        
         gunner @ say "Oh y'know, just some urban exploration. Urbex as they say. Which I'm totally into by the way."
         
-        ava @ say "I thought you had fishing trip with your frat today?"
+        player "I thought you were going on a panty raid today."
         
-        gunner @ say "Oh, that? Uhh, we decided not to, due to concerns. Ethical concerns. About fishing."
-        gunner @ say "Did you know the yellowtail population has decreased by 81 percent since 1913? I just thought that was interesting."
-        gunner @ say "Hey is your foot alright, [name]? I'm no expert in human anatomy but I don't think you can twist yours back 180 degrees normally."
+        gunner @ say "Nah today was the scouting day. We finished early so I thought I'd take a look around this place."
         
-        player "Yeah it's def sprained or something."
+        ava @ say "A *what* raid?!"
+        
+        gunner @ say "N-nothing, just a silly frat tradition."
+        gunner @ say "Hey is your foot alright, [name]? I'm no expert in human anatomy but I don't think you can twist yours back almost 180 degrees normally."
+        
+        player "Yeah it's definitely sprained or something."
         
         show ava angry
         
         ava @ say "Dammit Gunner we thought you were a stalker and [name] got injured because of you!"
         
         gunner @ say "Hey, don't blame me because [name] clumsily tripped over their own feet!"
-        
-        #ava @ say "Says the scaredy cat afraid of ghosts!"
-        
-        #gunner @ say "Now those are actually scary!"
-        #gunner @ say "I just wanted to have a nice relaxing stroll through this abandoned hospital, and by coincidence you happened to show up at the same time and [name] had an unfortunate accident."
         gunner @ say "It's not like I pushed them down the stairs or anything."
-        #gunner @ say "It's your own fault for rushing."
         
         show ava annoyed
         
-        ava @ say "Ugh, whatever. Let's just get [name] to a doctor. You can carry them since you're the most responsible for them getting hurt in the first place."
+        ava @ say "Ugh, whatever. Let's just get [name] to a doctor. You can carry him since you're the most responsible for them getting hurt in the first place."
         
         gunner @ say "Hmph. Fine."
         
         n "You kinda tuned out of the conversation. This hospital sucks. Can you go home now? Your feet hurt."
-        n "Gunner gingerly picks you up in a bridal carry. Oh god this feels so nice what the fuck."
+        n "Gunner gingerly picks you up in a bridal carry."
+        n "What the fuck this actually feels kinda nice."
         
-        gunner @ say "Sorry about all this, buddy. I really did just wanna hang out and stuff."
+        gunner @ say "Sorry about all this, buddy. I just wanted to hang out and stuff."
         
         n "The trip to the hospital is quiet and tense."
         
@@ -594,10 +451,13 @@ label liberation_day:
         show kitsuragi at center:
             xpos -500
             xzoom -1
+            ypos y_kitsuragi
         show gunner neutral at center:
             xpos 350
+            ypos y_gunner
         show ava typical neutral at center:
             xpos 533
+            ypos y_ava
         with dissolve
         
         kitsuragi @ say "Welp. I expected to see you again soon but not for something like this."
@@ -614,9 +474,11 @@ label liberation_day:
         gunner @ say "You played your part in this happening too! I reckon you owe [name] something too!"
         
         kitsuragi @ say "I'll leave you all to figure that out on your own."
-        kitsuragi @ say "[name], you're free to go whenever. Or you can stay the night, I don't care."
+        kitsuragi @ say "[name], you'll be in pain for a while but there's no major damage. You'll be able to walk without a crutch in a few days."
+        kitsuragi @ say "In the mean time, try not to put too much pressure on your ankle."
+        kitsuragi @ say "You're free to go whenever. Or you can stay the night, I don't care."
         
-        n "You sip on the complimentary juice box she gave you for being brave while she twisted your foot back into place and nod."
+        n "You sip on the complimentary juice box she gave you for being brave after she twisted your foot back into place and nod."
         
         hide kitsuragi with dissolve
         
@@ -647,7 +509,6 @@ label liberation_day:
         menu:
             gunner "{cps=0}You gonna stay the night here or go back to your dorm?{/cps}"
             "I'll stay here.":
-                #finished
                 player "I don't really feel like moving. I'll wait and see if my foot is better in the morning."
                 
                 gunner @ say "I'll stay here with you then. I don't want you to be alone in this shitty place."
@@ -686,49 +547,156 @@ label liberation_day:
                 gunner @ say "Cute."
                 
                 n "Gunner plops down in the chair across from you."
+                n "It seems like he has a lot on his mind."
                 
-                player "Is this how you imagined today would go?"
+                player "What's with you today? Why'd you follow us like a creep?"
                 
-                gunner @ say "No. I dunno how I thought it would go. I just kinda went for... *something* and hoped it would work out okay."
+                gunner @ say "I wasn't following *you!* I was-"
                 
-                player "Mhhm. I know how that feels."
-                player "Maybe you just have to do nothing and things work out better that way."
+                n "He looks away, unsure of what to say."
                 
-                gunner @ say "You think so?"
+                gunner @ say "I was just trying to get closer to Ava."
                 
-                player "Sometimes. It's more uhh, natural that way?"
-                player "If you try to force something to happen, it won't go the way you want it to."
+                player "You hijacked our adventure dude."
+                player "You should have just asked to come along."
                 
-                gunner @ say "But if I don't try, I won't get what I want. I'll just be at the mercy of whatever life throws at me."
-                gunner @ say "It's not fucking fair. You don't even try and girls practically throw themselves at you."
+                gunner @ say "Yeah lemme ask to be the third wheel on your date next time."
+                gunner @ say "Don't worry, I'll provide my own cuck chair."
                 
-                player "They do? I never noticed."
+                player "It wasn't even a date!"
+                player "I didn't ask her out or anything."
                 
-                gunner @ say "Wait..."
+                gunner @ say "Oh so *she* asked you out?"
                 
-                n "Gunner looks like he just realized something."
+                player "It's not like that. She just didn't wanna go to some dangerous place on her own."
+                player "She probably would have asked you to go with her if she happened to see you first."
                 
-                gunner @ say "You don't even have a scheme to get with Ava, do you?"
+                gunner @ say "Sooo... you're not into her?"
                 
-                player "A scheme? No, she just keeps inviting me to stuff and I keep going."
+                menu:
+                    "I didn't say that":
+                        player "I didn't say that."
+                        player "I'm just saying I didn't pull any moves on her."
+                    "She's not my type":
+                        player "Nah she's not really my type."
+                        player "We were just hanging out as friends."
+                    "Maybe I am":
+                        player "Maybe I am, maybe I'm not."
+                        player "Whatever happens happens. I'm not pushing for it nor am I resisting."
                 
-                gunner @ say "Unbelievable! Hah!"
-                gunner @ say "It must be a plot to make me jealous, is that it?!"
+                n "Gunner slumps in his seat, his usual confidence replaced with a pitiful sense of shame."
                 
-                player "No dude, we just naturally get along I guess??"
-                player "It's just fate that she happened to ask me to hang out first."
-                player "You can't really plan for that."
+                player "Why are you even into her? You've been around each other like twice."
+                player "Hell, you both use me to relay messages between each other."
                 
-                gunner @ say "So you're telling me to quit trying?"
+                gunner @ say "Yeah but did you see the way she looks at me?"
                 
-                player "Sort of. It seems to be working for me pretty well."
-                player "I think you'll reach a better outcome if you just be yourself instead of trying to manipulate events in your favor."
+                player "Just 'cause she thinks you're hot doesn't mean she wants a relationship with you."
                 
-                gunner @ say "You must not know many cats."
-                gunner @ say "Manipulating fate in our favor *is* our nature."
-                #gunner @ say "They say every time a cat does something, Ecaflip rolls a nine sided die to determine our success."
-                gunner @ say "They say our lord and savior Ecaflip gave us nine lives so we can fail and learn from our mistakes in eight of them, then succeed in our nineth."
-                gunner @ say "I believe there's always a path to victory, it's just a matter of finding it and doing what you need to do to get there."
+                gunner @ say "She's like the only girl who's nice to me though."
+                
+                player "Oh my god your incel is showing. She's just being polite, like she is to everyone."
+                player "Claire and Mishka are nice to you too."
+                
+                gunner @ say "Yeah but they're ug- not my type."
+                
+                player "Look, I'm not saying Ava wouldn't be into you, just that right now you two are practically strangers."
+                player "I only talk to her because I have French with her roommate and we meet up after class."
+                
+                gunner @ say "So what am I supposed to do? Take a class with her?"
+                
+                player "No, I think you should just talk to her. If she likes you then she'll let you know."
+                player "Just be yourself instead of coming up with schemes to try and get her to like you."
+                
+                gunner @ say "You must not know many cats. Scheming is in our nature."
+                gunner @ say "We don't just sit back and let things happen, we have nine lives and shit."
+                
+                player "What on Earth is that supposed to mean?"
+                
+                gunner @ say "It means we can afford to take risks! If it doesn't work out in this life it'll go better in the next one. Probably."
+                
+                player "So your strategy is to do a bunch of goofy shit on the off chance that it works because if you do it enough eventually you'll succeed?"
+                
+                gunner @ say "You make it sound lame."
+                gunner @ say "The idea is that you live your first life normal, then you relive it eight more times where you defy your original fate more and more as you learn how to game the system."
+                
+                player "And which life are you on right now?"
+                
+                gunner @ say "No idea but I feel like it's definitely between 4 and 7. Most likely 6."
+                
+                n "He's pulling these number out of his ass."
+                
+                menu:
+                    "That's bullshit":
+                        player "That's bullshit but you might be onto something."
+                        
+                        gunner @ say "I didn't make it up, it was discovered thousands of years ago. It's literally science."
+                        gunner @ say "You trust science, don't you?"
+                        
+                        player "I have my doubts that this is the singular paranormal phenomenon in the world to be proven true, before the scientific method was developed no less."
+                        player "But choices are a thing, right? I could have chosen not to even go urbex'ing today."
+                        player "Who's to say there isn't an alternate timeline where I went on the panty raid with you and Rori instead?"
+                        
+                        gunner @ say "Now you're getting it! And now you know for next time to just do the panty raid if you don't want your ankle getting twisted."
+                        
+                        player "I'll keep that in mind."
+                        player "So you think there's a timeline where you get with Ava?"
+                        
+                        gunner @ say "There's gotta be at least one. I'm just hoping it's this one."
+                        
+                        player "Girls love that spiritual stuff. Protip: find out which astrological sign is most compatible with hers then legally change your birthday so you have that sign."
+                        
+                        gunner @ say "Hey that's not a bad idea!"
+                        
+                        
+                        
+                    "Not how fate works":
+                        player "That's not how fate works, otherwise it wouldn't *be* fate."
+                        player "We're all locked into one set path, no matter how much it looks like we can change it."
+                        
+                        gunner @ say "Maybe it's that way for you."
+                        gunner @ say "But we felines define our own fate! It is our destiny to defy the chains of uhh... destiny!"
+                        
+                        player "Nice self fulfilling prophecy you got there. What if your fate is to get with Ava and you're unknowingly working against it?"
+                        
+                        gunner @ say "Oh shit could that really happen?"
+                        
+                        player "You're the one who believes in real life RNG manipulation, not me."
+                        
+                        gunner @ say "It's a cat exclusive ability."
+                        
+                        player "If you say so. I don't want us to fight over some girl though."
+                        player "Bros before hoes and such."
+                        
+                        gunner @ say "Ay, true."
+                        gunner @ say "But don't call my crush a hoe."
+                        
+                        player "Oh sorry."
+                        player "But for real, I'm not even actively pursing anyone, I don't think? If Ava wants to go out with me or you or whoever, that's her choice."
+                        #I'm just gonna let Ava decide who she wants."
+                        
+                        gunner @ say "I guess that's... fair?"
+                        
+                        player "Cool, I'm glad you're not mad at me."
+                        
+                        gunner @ say "Same."
+                        gunner @ say "Don't expect me to hold back though. I'm gonna end up with Ava no matter what."
+                        
+                        player "We'll see about that."
+                        
+                        stop music fadeout 1.0
+                        
+                        hide box
+
+                        scene bg black with fade
+
+                
+                
+                
+                
+                
+                
+                
                 
                 menu:
                     gunner "{cps=0}I believe there's always a path to victory, it's just a matter of finding it and doing what you need to do to get there.{/cps}"
@@ -769,45 +737,7 @@ label liberation_day:
                     "I guess we have different ideas of fate":
                         #finished
                         player "I guess we have different ideas of fate then."
-                        player "I always saw it as something you can't change. Like me being the last human and ending up in this hospital tonight with an injured ankle was unavoidable despite our illusions of choice."
                         
-                        gunner @ say "Maybe it is that way for you."
-                        gunner @ say "But we felines define our own fate! It is our destiny to defy the chains of uhh... destiny!"
-                        
-                        player "Nice self fulfilling prophecy you got there. What if your fate is to get with Ava and you're unknowingly working against it?"
-                        
-                        gunner @ say "Oh shit could that really happen?"
-                        
-                        player "You're the one who believes in real life RNG manipulation, not me."
-                        
-                        #gunner @ say "Just you wait, I just have to figure out the right order of steps to take and dust clouds to kick up and I'll win the lottery!"
-                        gunner @ say "It's a cat exclusive ability."
-                        
-                        player "If you say so. I don't want us to fight over some girl though."
-                        player "Bros before hoes and such."
-                        
-                        gunner @ say "Ay, true."
-                        gunner @ say "But don't call my crush a hoe."
-                        
-                        player "Oh sorry."
-                        player "But for real, I'm not even actively pursing anyone, I don't think? If Ava wants to go out with me or you or whoever, that's her choice."
-                        #I'm just gonna let Ava decide who she wants."
-                        
-                        gunner @ say "I guess that's... fair?"
-                        
-                        player "Cool, I'm glad you're not mad at me."
-                        
-                        gunner @ say "Same."
-                        gunner @ say "Don't expect me to hold back though. I'm gonna end up with Ava no matter what."
-                        
-                        player "We'll see about that."
-                        
-                        stop music fadeout 1.0
-                        
-                        hide box
-
-                        scene bg black with fade
-
                         hide box    
 
                         show bg calendar
