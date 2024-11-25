@@ -1521,7 +1521,7 @@ label liberation_day:
 
                 #n "Rose waits for an opening in traffic and crosses the street."
 
-                fortune @ say "Ah of course. You zoomers will donate to millionaire streamers and girls taking photos of their hooves in bad lighting online but won't even consider giving to the needy?"
+                fortune @ say "Ah of course. You zoomers will donate to millionaire streamers and girls taking photos of their hooves in bad lighting but won't even consider giving to the needy?"
 
                 player "Sorry, I don't have any cash either."
                 
@@ -1545,6 +1545,7 @@ label liberation_day:
                     n "{cps=0}Give money to the fortune teller?{/cps}"
                     "Yes":
                         $ gnugift = True
+                        
                         n "You won't be any poorer for giving him the money since you didn't realize you had it in the first place."
                         n "You hand over the crumpled bill and await the wisdom of the gnu."
                         n "He leans over and takes it with his teeth and begins chewing on it."
@@ -1559,7 +1560,7 @@ label liberation_day:
                         n "You unclench your fist and look down at what he gave you."
                         n "It's a short cable with a USB C connector at one end and a headphone jack input on the other."
                         n "What the hell kind of puzzle game bullshit is this?"
-                        n "You look up with a confused expression, ready to ask what this is for but the fortune teller is nowhere to be found."
+                        n "You look up with a confused expression, about to ask what this is for but the fortune teller is nowhere to be found."
                     "No":
                         player "Thanks but I'd rather let it come as a surprise."
 
@@ -1593,9 +1594,6 @@ label liberation_day:
                 n "In fact, it's like he vanished into thin air."
 
         n "When you get close to the campus, Rose chases you away with some colorful vocabulary and you hurry back to your dorm, ready for a nice long sleep."
-
-        #meet fortune tellers. Rose is skeptical and gets angry when teller says they will end up together, refuses to pay
-        #teller mentions coda has a terrible fate coming but warns not to worry about it
         
         stop music fadeout 1.0
 
@@ -1622,3 +1620,127 @@ label liberation_day:
         show tbackslash
 
         pause .7
+        
+        ### mishka mall scene
+
+        scene bg codadorm with fade
+
+        show box with Dissolve(.2):
+            ypos 0
+        
+        if mishkaMall == True    
+            n "Today's the day you finally get to hang out with Mishka."
+            n "You put on your nicest casual clothes and head out."
+        
+            scene bg mall with fade
+            
+            show box with Dissolve(.2):
+                ypos 0
+                
+            n "When you arrive, it feels like you've stepped into some sort of corporate cemetary full of zombies trudging from shop to shop to look at cheaply made goods."
+            n "It's not at all like how TV shows portrayed it."
+            n "You look around for the barista rat and find her sitting on a bench in the center of the building."
+            n "She's looking around at the various shops and decorations, clearly overwhelmed."
+            
+            player "Mishka!"
+            
+            n "She jumps, startled by your sudden appearance."
+            
+            show mishka neutral at center with dissolve:
+                ypos y_mishka
+                
+            mishka @ say "Oh! [name] it's just you."
+            mishka @ say "Sorry, I'm kinda nervous. There's so many people and it's noisy and the lighting is kinda harsh and-"
+            mishka @ say "Sorry! I don't mean to sound like I don't want to be here!"
+            
+            player "It's alright, malls always feel kinda alien."
+            player "I'm glad you're here, I didn't wanna come here alone either."
+            player "Do you wanna explore a bit?"
+            
+            n "She stands up."
+            
+            mishka @ say "Dah!"
+            
+            n "She walks along side you, the both of you constantly swiveling your heads to look into the colorful stores."
+            
+            mishka @ say "I didn't really go into any shops last time."            
+        else:
+            n "What should you do with the rest of your long weekend?"
+            n "Your friends are busy so you're on your own today."
+            n "Hmm, there was that mall you passed by yesterday you thought about checking out."
+            n "That's as good a place as any other. Off you go."
+            
+            scene bg mall with fade
+            
+            show box with Dissolve(.2):
+                ypos 0
+
+            n "When you arrive, it feels like you've stepped into some sort of corporate cemetary full of zombies trudging from shop to shop to look at cheaply made goods."
+            n "It's not at all like how TV shows portrayed it."
+            n "Wait, who's that sitting on the bench?"
+            n "No way, she's the last person you'd expect to find here."
+            
+            player "Mishka!"
+            
+            n "She jumps, startled by your sudden appearance."
+            
+            show mishka neutral at center with dissolve:
+                ypos y_mishka
+                
+            mishka @ say "Oh! [name] it's just you."
+            mishka @ say "Sorry, I'm kinda nervous. There's so many people and it's noisy and the lighting is kinda harsh and-"
+
+            player "Didn't think I'd see you here. You meeting up with someone?"
+            
+            mishka @ say "No, I just came here on a whim today."
+            mishka @ say "I don't know why, the thought just popped into my head to try going to a mall. It's my first time at one!"
+        
+            player "In that case, wanna explore with me?"
+            
+            n "She stands up."
+            
+            mishka @ say "Dah!!"
+            
+            n "She walks along side you, the both of you constantly swiveling your heads to look into the colorful stores."
+            
+        mishka @ say "I don't think I understand what the point of the mall is."
+        
+        n "You shrug."
+        
+        player "It's just a bunch of novelty stores. You're supposed to look around and buy whatever you think is interesting."
+        
+        mishka @ say "You don't know what you want beforehand?"
+        
+        player "Nope. That's the fun of it. It's like an amusement park but for consumerism."
+        
+        n "Mishka nods thoughtfully."
+        
+        mishka @ say "I see."
+        
+        player "See anywhere you wanna go?"
+        
+        mishka @ say "Umm... it's very hard to pick one because I'm not sure what I'm looking for..."
+        
+        player "How about..."
+        
+        n "You look around for the closest store that isn't a cheap clothing store for teenagers."
+        n "There's an electronics store nearby that might have some interesting gadgets."
+        n "You point to it."
+        
+        player "That one?"
+        
+        
+        
+        
+        
+        
+        
+
+        #electronics shop, play with an RC car. Mishka crashes it into something and you quickly leave
+        #ride the carousel
+        #hippie shop that sells incense and rocks (you figure mishka would like it)
+        #are you a mall rat now?
+        #mmh, no~
+        #this was nice but I have no desire to ever return!
+
+    n "The rest of your weekend passes uneventfully."
