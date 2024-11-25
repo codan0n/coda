@@ -648,7 +648,8 @@ label liberation_day:
                         
                         gunner @ say "Hey that's not a bad idea!"
                         
-                        
+                        n "He doesn't seem to have caught on that you were joking."
+                        n "The two of you chat more about philosophy and girls into the night."
                         
                     "Not how fate works":
                         player "That's not how fate works, otherwise it wouldn't *be* fate."
@@ -690,79 +691,17 @@ label liberation_day:
 
                         scene bg black with fade
 
+                #___saturday4
                 
+                scene bg codadorm with fade
                 
+                show box with Dissolve(.2):
+                    ypos 0
                 
-                
-                
-                
-                
-                
-                menu:
-                    gunner "{cps=0}I believe there's always a path to victory, it's just a matter of finding it and doing what you need to do to get there.{/cps}"
-                    "Good luck with that":
-                        #finished
-                        player "I don't know what to say to that other than good luck."
-                
-                        gunner @ say "I don't need your luck. I make my own luck."
-                        
-                        n "Gunner's tone had become more standoffish. There's a tense moment of silence. You guess neither of you have anything left to add to the conversation."
-                        n "Gunner pulls out his phone and doesn't say anything to you for the rest of the night."
-                        
-                        stop music fadeout 1.0
-                        
-                        hide box
-
-                        scene bg black with fade
-
-                        hide box    
-
-                        show bg calendar
-                        show tfriday at center
-                        with Dissolve(.5)
-
-                        pause .6
-                        show tforwardslash
-                        pause .2
-                        show tbackslash
-
-                        pause .7
-                        
-                        scene bg codadorm with fade
-                        
-                        show box with Dissolve(.2):
-                            ypos 0
-                        
-                        n "Gunner was still a little bitter this morning, but at least he walked you home."
-                    "I guess we have different ideas of fate":
-                        #finished
-                        player "I guess we have different ideas of fate then."
-                        
-                        hide box    
-
-                        show bg calendar
-                        show tfriday at center
-                        with Dissolve(.5)
-
-                        pause .6
-                        show tforwardslash
-                        pause .2
-                        show tbackslash
-
-                        pause .7
-
-                        #___saturday4
-                        
-                        scene bg codadorm with fade
-                        
-                        show box with Dissolve(.2):
-                            ypos 0
-                        
-                        n "After talking with Gunner a bit more last night you both fell asleep. When you woke up you felt good enough to walk back to your dorm."
-                        n "Gunner made sure you got here fine then went back to his dorm."
-                        
-                
-                
+                n "After talking with Gunner a bit more last night you both fell asleep. When you woke up you felt good enough to walk back to your dorm."
+                n "Gunner made sure you got here fine then left to do cat things while you rest up."
+                n "It doesn't look like you'll be doing anything else exciting for the weekend on this limp foot of yours."
+                    
             "Screw this place.":
                 player "Yeah no, screw this place, I'm going home."
                 
@@ -779,560 +718,554 @@ label liberation_day:
                 
                 ava @ say "You gonna be okay?"
                 
-                player "I think so, aside from the nightmares of getting stalked by hobos."
+                player "I think so, aside from the nightmares I'll probably get from that spooky hospital."
                 
                 show ava portrait smile
                 
                 ava @ say "Aww, want me to snuggle you tonight and protect you?~"
 
-                menu:
-                    ava "{cps=0}Aww, want me to snuggle you tonight and protect you?~{/cps}"
-                    "Yes please":
-                        $ avaPoints = avaPoints + 1
-                        player "That would be delightful."
-                        
-                        show ava embarassed
+                #menu:
+                #    ava "{cps=0}Aww, want me to snuggle you tonight and protect you?~{/cps}"
+                #    "Yes please":
+                $ avaPoints = avaPoints + 1
+                
+                player "That would be delightful."
+                
+                show ava embarassed
 
-                        n "Ava looks caught off guard, like she didn't expect that response."
+                n "Ava looks caught off guard, like she didn't expect that response."
 
-                        ava @ say "I-I was just joking you know!"
-                        
-                        show ava at flipright
+                ava @ say "I-I was just joking you know!"
+                
+                show ava at flipright
 
-                        n "She looks away but can't hide her blush."
-                        
-                        show ava annoyed
-                        
-                        show ava at flipleft
+                n "She looks away but can't hide her blush."
+                
+                show ava annoyed
+                
+                show ava at flipleft
 
-                        ava @ say "F-f-fine! Just for tonight though!"
-                        
-                        player "Good enough for me!"
-                        
-                        hide ava
-                        hide gunner
-                        with dissolve
-                        
-                        n "Gunner quietly seethes in the corner."
-                        #n "Too bad buddy, should have broken your ankle if you wanted bird snuggles."
-                        n "Too bad buddy, shouldn't have gotten my ankle broken."
-                        
-                        #ava @ say "And you have to be the little spoon."
-                        
-                        n "Gunner walks you back to your dorm, being unusually quiet and ocassionally glaring at you while you joke about the day's events with Ava."
-                        n "After what you've been through, it's nice to lighten up a little."
-                        n "Gunner can be pissy if he wants, you're gonna enjoy some birdy snuggles tonight."
-                        
-                        stop music fadeout 1.0
-                        
-                        scene bg codadorm with fade
-                        
-                        #play music "audio/exports/【Music】こんにちは! ♡ [lQQkCtUahHE].opus" fadeout 1.0
-                        play music "audio/music/vylet - yeah i'm ok thanks for asking.ogg" fadein 1.0
+                ava @ say "Fine, I'll do it! Just for tonight though!"
+                
+                n "You didn't even agg her on. She actually wants to do it but she had to play hard to get for all of 2 seconds."
+                
+                player "Sounds good to me!"
+                
+                hide ava
+                hide gunner
+                with dissolve
+                
+                n "Gunner quietly seethes in the corner."
+                n "Better luck next time, buddy."
+                n "Gunner walks you back to your dorm, being unusually quiet while you joke about the day's events with Ava."
+                n "After what you've been through, it's nice to lighten up a little."
+                n "Gunner can be pissy if he wants, you're gonna enjoy some birdy snuggles tonight."
+                
+                stop music fadeout 1.0
+                
+                scene bg codadorm with fade
+                
+                #play music "audio/exports/【Music】こんにちは! ♡ [lQQkCtUahHE].opus" fadeout 1.0
+                play music "audio/music/vylet - yeah i'm ok thanks for asking.ogg" fadein 1.0
 
-                        show box:
-                            ypos 0
+                show box:
+                    ypos 0
 
-                        n "You made it back to your dorm in one piece."
-                        n "Gunner went back to his own dorm and you left Ava to her own devices while you took a quick shower."
-                        n "You step out of the steamy bathroom wearing some ultra comfy pajamas to cuddle up in. You turn your head and catch Ava preening her feathers on your bed."
-                        
-                        show ava reaching embarassed at center
-                        
-                        ava @ say "Aaa! [name], don't look!"
-                        
-                        player "S-sorry."
-                        
-                        n "She turns away from you and quickly buttons up her shirt."
-                        
-                        show ava annoyed at center:
-                            xpos 0
-                        with dissolve
-                        
-                        ava @ say "You should knock first!"
-                        
-                        player "It's my room."
-                        
-                        #show ava angry
-                        
-                        ava @ say "Still! I could have been nude!"
-                        
-                        player "Is that foreshadowing?"
-                        
-                        show ava angry
-                        
-                        ava @ say "No!"
-                        
-                        player "Dang."
-                        
-                        show ava typical neutral
-                        
-                        ava @ say "I came here for friendly clothes-on cuddling, nothing more."
-                        
-                        player "Well then, shall we get to business?"
-                        
-                        n "You crawl into bed and Ava lies down next to you, seemingly unsure of what to do next."
-                        
-                        ava @ say "I've never done this before..."
-                        
-                        player "Really? Me neither."
-                        
-                        ava @ say "I guess I'm supposed to..."
-                        
-                        n "She tries wrapping her wings around you but she struggles getting the one between the mattress and your body."
-                        
-                        ava @ say "God dammit why is this so difficult."
-                        
-                        player "Here, lemme just..."
-                        
-                        n "You try holding onto her but run into the same issue. Once you get your arms around her, the one pinned between her body and the mattress loses bloodflow."
-                        
-                        show ava bored
-                        
-                        ava @ say "...This isn't very comfortable is it?"
-                        
-                        player "Not really."
-                        
-                        show ava concerned
-                        
-                        ava @ say "We can just sleep next to each other if you want."
-                        
-                        show ava typical neutral
-                        
-                        player "Deal. Now gimme back my arm before it needs to be amputated."
-                        
-                        n "You eventually find a comfortable position facing away from each other but at least you can feel her soft feathers against your skin, which feels nice."
-                        n "Soon you both fall asleep. Maybe it's because of your bird guardian but you don't have any nightmares."
-                        
-                        stop music fadeout 1.0
-                        
-                        hide box
+                n "You made it back to your dorm in one piece."
+                n "Gunner went back to his own dorm and you left Ava to her own devices while you took a quick shower."
+                n "You step out of the steamy bathroom wearing some ultra comfy pajamas to cuddle up in. You turn your head and catch Ava preening her feathers on your bed."
+                
+                show ava reaching embarassed at center
+                
+                ava @ say "Aaa! [name], don't look!"
+                
+                player "S-sorry."
+                
+                n "She turns away from you and quickly buttons up her shirt."
+                
+                show ava annoyed at center:
+                    xpos 0
+                with dissolve
+                
+                ava @ say "You should knock first!"
+                
+                player "It's my room."
+                
+                #show ava angry
+                
+                ava @ say "Still! I could have been nude!"
+                
+                player "Is that foreshadowing?"
+                
+                show ava angry
+                
+                ava @ say "No!"
+                
+                player "Dang."
+                
+                show ava typical neutral
+                
+                ava @ say "I came here for friendly clothes-on cuddling, nothing more."
+                
+                player "Well then, shall we get to business?"
+                
+                n "You crawl into bed and Ava lies down next to you, seemingly unsure of what to do next."
+                
+                ava @ say "I've never done this before..."
+                
+                player "Really? Me neither."
+                
+                ava @ say "I guess I'm supposed to..."
+                
+                n "She tries wrapping her wings around you but she struggles getting the one between the mattress and your body."
+                
+                ava @ say "God dammit why is this so difficult."
+                
+                player "Here, lemme just..."
+                
+                n "You try holding onto her but run into the same issue. Once you get your arms around her, the one pinned between her body and the mattress loses bloodflow."
+                
+                show ava bored
+                
+                ava @ say "...This isn't very comfortable is it?"
+                
+                player "Not really."
+                
+                show ava concerned
+                
+                ava @ say "We can just sleep next to each other if you want."
+                
+                show ava typical neutral
+                
+                player "Deal. Now gimme back my arm before it needs to be amputated."
+                
+                n "You eventually find a comfortable position facing away from each other but at least you can feel her soft feathers against your skin, which feels nice."
+                n "Soon you both fall asleep. Maybe it's because of your bird guardian but you don't have any nightmares."
+                
+                stop music fadeout 1.0
+                
+                hide box
 
-                        scene bg black with fade
+                scene bg black with fade
 
-                        hide box    
+                hide box    
 
-                        show bg calendar
-                        show tfriday at center
-                        with Dissolve(.5)
+                show bg calendar
+                show tfriday at center
+                with Dissolve(.5)
 
-                        pause .6
-                        show tforwardslash
-                        pause .2
-                        show tbackslash
+                pause .6
+                show tforwardslash
+                pause .2
+                show tbackslash
 
-                        pause .7
+                pause .7
 
-                        #___saturday4
-                        
+                #___saturday4
+                
+                scene bg codadorm with fade
 
-                        scene bg codadorm with fade
+                show box with Dissolve(.2):
+                    ypos 0
 
-                        show box with Dissolve(.2):
-                            ypos 0
-
-                        play music "audio/ambient/morning birds.ogg" fadein 1.0
-                        
-                        if avaPoints >= 3:
-                            n "You're woken up earlier than usual by Ava's stirring."
-                            n "It's not even daylight out and she's stretching and chirping and tweeting."
-                            n "She rolls over and rests a wing on you."
-                            
-                            show ava typical neutral at center:
-                                yalign 0
-                                xzoom -1
-                                xpos -175
-                            
-                            ava @ say "Morning~"
-                            
-                            n "You make an unsatisfied caveman grunt as your natural desire is to sleep in."
-                            
-                            ava @ say "I don't know why but I'm feeling really refreshed!"
-                            
-                            show ava overjoyed
-                            
-                            ava @ say "Perhaps that's the power of snuggles?"
-                            
-                            player "We weren't even really snuggling."
-                            
-                            show ava typical neutral
-                            
-                            ava @ say "Yeah but our bodies don't know that! It's the proximity that counts!"
-                            
-                            player "Next time can we at least be nude?"
-                            
-                            ava @ say "Hmm..."
-                            ava @ say "Sure!"
-                            
-                            show ava portrait neutral
-                            
-                            ava @ say "*If* there's a next time hehe~"
-                            
-                            player "Wow, you really are in a great mood today."
-                            
-                            show ava overjoyed
-                            
-                            ava @ say "Breeee~"
-                            ava @ say "I guess I am! Very unusual, isn't it?"
-                            
-                            player "Must be the endorphins."
-                            
-                            show ava typical neutral
-                            
-                            #ava @ say "?"
-                            #ava @ say "Oh, endorphins. Maybe!"
-                            ava @ say "Maybe!"
-                            ava @ say "Nothing gets me more excited than adventure and yesterday sure was one!"
-                            
-                            n "Ava hops out of bed and unlocks your window."
-                            
-                            player "Hey, where are you going?"
-                            
-                            show ava typical neutral
-                            
-                            ava @ say "Got a busy day of shooting ahead of me!"
-                            
-                            player "With your camera, right?"
-                            
-                            ava @ say "Of course!"
-                            
-                            n "She takes a dive through the window. A moment later you see her swoop up into the sky."
-                            
-                            hide ava with dissolve
-                            
-                            n "Just like that, she's gone."
-                            n "The cuddles were pretty disappointing but the way she smiled at you made your heart skip a beat."
-                            n "You flop out of bed and pace around the room a few times."
-                        else:
-                            n "You're woken up earlier than usual by Ava's stirring."
-                            n "It's not even daylight out and she's stretching and chirping and tweeting."
-                            
-                            show ava typical neutral at center:
-                                yalign 0
-                                xzoom -1
-                                xpos -175
-                            
-                            ava @ say "Morning."
-                            
-                            n "You make an unsatisfied caveman grunt as your natural desire is to sleep in."
-                            n "Ava gets up and awkwardly wanders around the room, yawning."
-                            
-                            ava @ say "Did you... enjoy the snuggles?"
-                            
-                            player "Mhm."
-                            
-                            ava @ say "How's your ankle?"
-                            
-                            player "Hurts less today."
-                            
-                            ava @ say "That's good. You just gonna stay in bed all day?"
-                            
-                            n "You take a look at the clock on your phone."
-                            
-                            player "Only probably for another 4 hours or so."
-                            
-                            show ava annoyed
-                            
-                            ava @ say "Well I'm gonna go out and find a good place to take some shots before the sun comes up."
-                            
-                            player "Have fun with that!"
-                            
-                            hide ava with dissolve
-                            
-                            n "You roll over and bury your face in your pillow."
-                            n "Wait, is she mad at you or something?"
-                            n "Your sleepy brain is too slow to react. She already opened the window and flew out, leaving a cool draft to chill your bones."
-                            n "Too tired to get up and close the window, you pull up your blanket over your head and fall back to sleep for a few hours."
-                            
-                            scene bg black with dissolve
-                            
-                            pause .8
-                            
-                            scene bg codadorm with dissolve
-                            
-                            show box:
-                                ypos 0
-                            
-                            n "The sun has come up and you're fully- er, mostly rested." 
-                            
-                        jump dayafterurbexcont
-                        
-                    "We can all snuggle together at my place":
-                        player "Hey that's a great idea! We can all snuggle at my dorm."
-                        
-                        show ava waitwhat
-                        
-                        ava @ say "A-all three of us??"
-                        ava @ say "Uhh you sure that's a good idea?"
-                        
-                        n "Gunner shrugs."
-                        
-                        gunner @ say "Eh, I'll take what I can get. I'm game."
-                        
-                        show ava angry
-                        
-                        ava @ say "W-well I'm not gonna just let you and Gunner have all the fun! I'm going too!"
-                        
-                        player "That settles it then! Snuggle party at my dorm!"
-                        
-                        show ava concerned
-                        
-                        n "Ava and Gunner look at each other with a uncertain expressions."
-                        
-                        scene bg codadorm with fade
-                        
-                        show box with Dissolve(.2):
-                            ypos 0
-                        
-                        show gunner neutral at center:
-                            xpos 300
-                            xzoom -1
-                        show ava typical neutral at center:
-                            xpos -300
-                        with dissolve
-                        
-                        gunner @ say "So...."
-                        
-                        show ava bored
-                        
-                        ava @ say "How are we gonna do this?"
-                        
-                        player "Good question. I'm not a pro at this by any means."
-                        
-                        show ava typical neutral
-                        
-                        n "You sit on your bed and try to recall just what you were thinking when you invited the whole love triangle to cuddle together."
-                        n "Lost in thought, you don't notice your two snuggle buddies hopping onto the bed on either side of you."
-                        
-                        show ava at flipright
-                        show gunner at flipleft
-                        
-                        show ava smile
-                        
-                        ava @ say "Let's try this. Just lie down and relax~"
-                        
-                        n "Ava gently pushes you onto your back and wraps her soft feathery wings around you."
-                        n "A moment later, you feel Gunner's fur brushing against you from the other side."
-                        
-                        gunner @ say "You alright? You're shaking."
-                        
-                        player "Yeah, j-just cold is all..."
-                        
-                        n "You've never been so nervous before. You can't even think straight. Was it a mistake to bring Gunner here? Oh god what's he doing?"
-                        n "You feel his scratchy tongue combing your hair like your some sort of stupid baby kitten who is too dumb to groom yourself." 
-                        n "Gunner is literally grooming you."
-                        
-                        gunner @ say "Purrrr~"
-                        gunner @ say "Calm down bro, we'll warm ya up~"
-                        
-                        n "This is a classic power play by felines."
-                        n "First they play nice and cuddly to lower your guard, then they start licking you to assert dominance, next he's gonna try and fuck the bird in your bed."
-                        
-                        show ava suggestive
-                        
-                        ava @ say "Everything alright, [name]?"
-                        
-                        show ava smile
-                        
-                        player "Y-yeah, I just need to-"
-                        
-                        menu:
-                            player "{cps=0}Y-yeah, I just need to-{/cps}"
-                            "Turn towards Ava":
-                                $ avaPoints += 1
-                                n "You adjust yourself and turn to face Ava, leaving you backside to Gunner."
-                                n "A risky move, as it puts you in a position of vulnerability, but it also blocks Gunner's path to Ava."
-                                n "You hold onto Ava tightly, face buried in her plumage."
-                                
-                                player "That's better."
-                                
-                                show ava flattered
-                                
-                                ava @ say "Breee~ This works too~"
-                                
-                                n "You can feel Gunner staring daggers at the back of your head."
-                                n "It doesn't matter though, the bird is in your arms, not his."
-                                n "In retaliation, he doubles down on brushing your hair with his scratchy cat tongue, purring ever louder and even pulling your hips closer to him."
-                                n "The prices you pay for love."
-                                n "And you *know* neither of you are enjoying this, but Ava seems to be all for it."
-                                
-                                show ava portrait overjoyed
-                                
-                                ava @ say "Heeheehee~ You two are so cute~ *chirp!*"
-                                
-                                gunner @ say "*Purrpurrpurrpurrpurrpurr~*"
-                                
-                                show ava portrait happy
-                                
-                                n "Gunner's going for the humiliation tactic but as long as his paws and tongue are on you, they're not on Ava and that's the best available outcome."
-                                n "You close your eyes and mentally prepare for an awkward morning."
-                                n "Somehow you manage to fall asleep amidst the tension running so high."
-                            "Turn towards Gunner":
-                                n "It's said that to emerge victorious in war, you must be unpredictable, and that's precisely what you're going for."
-                                n "You roll onto your side facing Gunner and wrap him in your arms."
-                                n "Got you now, you son of a bitch!"
-                                
-                                gunner @ say "Oh? Whatchya doin' there, bud?"
-                                
-                                show ava portrait overjoyed
-                                
-                                ava @ say "Ohmygosh this is so hot!"
-                                
-                                show ava portrait concerned
-                                
-                                ava @ say "I mean, it's so hot in here, right?"
-                                
-                                show ava portrait smile
-                                
-                                player "Just snuggling with my bro. Nothing wrong with that, is there?"
-                                
-                                n "You pull him in so tight he won't even think about escaping."
-                                
-                                gunner @ say "N-no, of course not!"
-                                
-                                n "He gives you a lick with his rough tongue on your face and digs his claws into your side."
-                                n "Better you than Ava you suppose."
-                                n "At least she's enjoying the show."
-                                
-                                ava @ say "You two are so cute~"
-                                
-                                n "You feel her nuzzle the back of your head and lay her wing on top of you. You make sure Gunner's paw gets nowhere near it."
-                                n "You close your eyes and mentally prepare for an awkward morning."
-                                n "Somehow you manage to fall asleep amidst the tension running so high."
-                                
-                        stop music fadeout .7
-                                
-                        scene bg codadorm with fade
-                        
-                        show box with Dissolve(.2):
-                            ypos 0
-                        
-                        play music "audio/ambient/morning birds.ogg" fadein 1.5
-                        
-                        n "When your consciousness begins to reboot the following day, you question whether yesterday's events were just a dream until you realize you have a bird in your arms."
-                        n "And then comes the nightmarish reality that is a snoozing Gunner inches from your face."
-                        n "Somehow in the middle of the night you and Ava switched position so that she was in the middle of you two."
-                        n "You guess this round of flirting with Ava ended up being a draw."
-                        
-                        show ava typical neutral at center:
-                            xpos -200
-                            xzoom -1
-                        with dissolve
-                        
-                        ava @ say "*Yaaawn~*"
-                        ava @ say "Morning~"
-                        
-                        player "Sleep well?"
-                        
-                        show ava overjoyed
-                        
-                        ava @ say "Amazingly well!"
-                        
-                        show ava typical neutral
-                        
-                        ava @ say "How's your ankle?"
-                        
-                        player "Fine, I think."
-                        
-                        n "You pull the blanket away and set foot on the floor."
-                        n "It's still painful but you can deal with it."
-                        n "Gunner begins to stir, stetching out his arms and yawning."
-                        
-                        show gunner neutral at center:
-                            xpos 200
-                        with dissolve
-                        
-                        gunner @ say "Morning cutie~"
-                        gunner @ say "Oh hey [name], didn't see ya there."
-                        gunner @ say "Man, they really hooked you up with the best everything in here huh? Your bed is so much softer than the one in my dorm."
-                        
-                        player "Yeah well don't get used to sleeping in it. My ankle's all better so you can go home now."
-                        
-                        gunner @ say "Oof, kicking us out so soon? Was I not a good snuggler?"
-                        
-                        ava @ say "You were pretty good! Both of you were!"
-                        
-                        player "Sorry, I've just got a busy day ahead of me."
-                        
-                        gunner @ say "That's alright, we'll head out soon. Thanks for having us over~"
-                        
-                        n "Gunner purrs and gives you a playful lick, surely an attempt to intimidate you, as he gets out of bed."
-                        
-                        gunner @ say "If either of you need top tier snuggles again, you know where to find me~"
-                        
-                        ava @ say "I'll keep both of you in mind~"
-                        
-                        player "See you two later."
-                        
-                        hide gunner
-                        hide ava
-                        with dissolve
-                        
-                        jump dayafterurbexcont
-                                
-                                
-                        
-                        #"gunner snuggles behind you. you're starting to regret this"
+                play music "audio/ambient/morning birds.ogg" fadein 1.0
+                
+                if avaPoints >= 3:
+                    n "You're woken up earlier than usual by Ava's stirring."
+                    n "It's not even daylight out and she's stretching and tweeting."
+                    n "She rolls over and rests a wing on you."
                     
+                    show ava typical neutral at center:
+                        yalign 0
+                        xzoom -1
+                        xpos -175
                     
-                        #gunner licks ava and you
+                    ava @ say "Morning~"
+                    
+                    n "You make an unsatisfied caveman grunt as your natural desire is to sleep in."
+                    
+                    ava @ say "I don't know why but I'm feeling really refreshed!"
+                    
+                    show ava overjoyed
+                    
+                    ava @ say "Perhaps that's the power of snuggles?"
+                    
+                    player "We weren't even really snuggling."
+                    
+                    show ava typical neutral
+                    
+                    ava @ say "Yeah but our bodies don't know that! It's the proximity that counts!"
+                    
+                    player "Next time can we at least be nude?"
+                    
+                    ava @ say "Hmm..."
+                    ava @ say "Sure!"
+                    
+                    show ava portrait neutral
+                    
+                    ava @ say "*If* there's a next time hehe~"
+                    
+                    player "Wow, you really are in a great mood today."
+                    
+                    show ava overjoyed
+                    
+                    ava @ say "Breeee~"
+                    ava @ say "I guess I am! Very unusual, isn't it?"
+                    
+                    player "Must be the endorphins."
+                    
+                    show ava typical neutral
+                    
+                    ava @ say "Maybe!"
+                    ava @ say "Nothing gets me more excited than adventure and yesterday sure was one!"
+                    
+                    n "Ava hops out of bed and unlocks your window."
+                    
+                    player "Hey, where are you going?"
+                    
+                    show ava typical neutral
+                    
+                    ava @ say "Got a busy day of shooting ahead of me!"
+                    
+                    player "With your camera, right?"
+                    
+                    ava @ say "Of course!"
+                    
+                    n "She takes a dive through the window. A moment later you see her swoop up into the sky."
+                    
+                    hide ava with dissolve
+                    
+                    n "Just like that, she's gone."
+                    n "The cuddles were pretty disappointing but the way she smiled at you made your heart skip a beat."
+                    n "You flop out of bed and pace around the room a few times."
+                else:
+                    n "You're woken up earlier than usual by Ava's stirring."
+                    n "It's not even daylight out and she's stretching and chirping."
+                    
+                    show ava typical neutral at center:
+                        yalign 0
+                        xzoom -1
+                        xpos -175
+                    
+                    ava @ say "Morning."
+                    
+                    n "You make an unsatisfied caveman grunt as your natural desire is to sleep in."
+                    n "Ava gets up and awkwardly wanders around the room, yawning."
+                    
+                    ava @ say "Did you... enjoy the snuggles?"
+                    
+                    player "Mhm."
+                    
+                    ava @ say "How's your ankle?"
+                    
+                    player "Hurts less today."
+                    
+                    ava @ say "That's good. You just gonna stay in bed all day?"
+                    
+                    n "You take a look at the clock on your phone."
+                    
+                    player "Only probably for another 4 hours or so."
+                    
+                    show ava annoyed
+                    
+                    ava @ say "Well I'm gonna go out and find a good place to take some shots before the sun comes up."
+                    
+                    player "Have fun with that!"
+                    
+                    hide ava with dissolve
+                    
+                    n "You roll over and bury your face in your pillow."
+                    n "Wait, is she mad at you or something?"
+                    n "Your sleepy brain is too slow to react. She already opened the window and flew out, leaving a cool draft to chill your bones."
+                    n "Too tired to get up and close the window, you pull up your blanket over your head and fall back to sleep for a few hours."
+                    
+                    scene bg black with dissolve
+                    
+                    pause .8
+                    
+                    scene bg codadorm with dissolve
+                    
+                    show box:
+                        ypos 0
+                    
+                    n "The sun has come up and you're fully- er, mostly rested."
                         
-                    "Spill your spaghetti":
-                        player "N-no thanks, that's what my tulpa waifu is for."
-                        
-                        #ava @ say "Do you wanna snuggle Gunner instead?"
-                        
-                        show ava waitwhat
-
-                        ava @ say "You have a tulpa?"
-
-                        n "Fuck, why did you say that?"
-
-                        ava @ say "That's so cool!"
-
-                        player "Really?"
-                        
-                        show ava overjoyed
-                        
-                        ava @ say "You should tell me about her!"
-                        
-                        player "M-maybe later..."
-                        
-                        n "Great, now you have to make up a schizo imaginary girlfriend to impress Ava."
-                        n "Or make her jealous."
-                        
-                        show ava typical neutral
-                        
-                        player "Let's get out of this hospital first. I'm already sick of being here."
-                        
-                        gunner @ say "Agreed."
-                        
-                        hide gunner
-                        hide ava
-                        with dissolve
-                        
-                        n "Ava and Gunner walk you back to your dorm. Ava asks if you're sure you don't need a snuggle buddy but you're still too ashamed from before to take her up on the offer."
-                        n "That and you don't want Gunner to break your other ankle tonight."
-                        n "Thankfully he acts pretty chill on the way back, and you all make light of the events of the day."
-                        n "After what you've been through, it's nice to ease up a little."
-                        n "Your ankle still kinda hurts but you make it back to your dorm and get into bed, texting your friends until you fall into slumber."
-                        
-                        stop music fadeout 1.0
-                        
-                        scene bg black with fade
-
-                        hide box    
-
-                        show bg calendar
-                        show tfriday at center
-                        with Dissolve(.5)
-
-                        pause .6
-                        show tforwardslash
-                        pause .2
-                        show tbackslash
-
-                        pause .7
+                    #"We can all snuggle together at my place":
+                    #    player "Hey that's a great idea! We can all snuggle at my dorm."
+                    #    
+                    #    show ava waitwhat
+                    #    
+                    #    ava @ say "A-all three of us??"
+                    #    ava @ say "Uhh you sure that's a good idea?"
+                    #    
+                    #    n "Gunner shrugs."
+                    #    
+                    #    gunner @ say "Eh, I'll take what I can get. I'm game."
+                    #    
+                    #    show ava angry
+                    #    
+                    #    ava @ say "W-well I'm not gonna just let you and Gunner have all the fun! I'm going too!"
+                    #    
+                    #    player "That settles it then! Snuggle party at my dorm!"
+                    #    
+                    #    show ava concerned
+                    #    
+                    #    n "Ava and Gunner look at each other with a uncertain expressions."
+                    #    
+                    #    scene bg codadorm with fade
+                    #    
+                    #    show box with Dissolve(.2):
+                    #        ypos 0
+                    #    
+                    #    show gunner neutral at center:
+                    #        xpos 300
+                    #        xzoom -1
+                    #    show ava typical neutral at center:
+                    #        xpos -300
+                    #    with dissolve
+                    #    
+                    #    gunner @ say "So...."
+                    #    
+                    #    show ava bored
+                    #    
+                    #    ava @ say "How are we gonna do this?"
+                    #    
+                    #    player "Good question. I'm not a pro at this by any means."
+                    #    
+                    #    show ava typical neutral
+                    #    
+                    #    n "You sit on your bed and try to recall just what you were thinking when you invited the whole love triangle to cuddle together."
+                    #    n "Lost in thought, you don't notice your two snuggle buddies hopping onto the bed on either side of you."
+                    #    
+                    #    show ava at flipright
+                    #    show gunner at flipleft
+                    #    
+                    #    show ava smile
+                    #    
+                    #    ava @ say "Let's try this. Just lie down and relax~"
+                    #    
+                    #    n "Ava gently pushes you onto your back and wraps her soft feathery wings around you."
+                    #    n "A moment later, you feel Gunner's fur brushing against you from the other side."
+                    #    
+                    #    gunner @ say "You alright? You're shaking."
+                    #    
+                    #    player "Yeah, j-just cold is all..."
+                    #    
+                    #    n "You've never been so nervous before. You can't even think straight. Was it a mistake to bring Gunner here? Oh god what's he doing?"
+                    #    n "You feel his scratchy tongue combing your hair like your some sort of stupid baby kitten who is too dumb to groom yourself." 
+                    #    n "Gunner is literally grooming you."
+                    #    
+                    #    gunner @ say "Purrrr~"
+                    #    gunner @ say "Calm down bro, we'll warm ya up~"
+                    #    
+                    #    n "This is a classic power play by felines."
+                    #    n "First they play nice and cuddly to lower your guard, then they start licking you to assert dominance, next he's gonna try and fuck the bird in your bed."
+                    #    
+                    #    show ava suggestive
+                    #    
+                    #    ava @ say "Everything alright, [name]?"
+                    #    
+                    #    show ava smile
+                    #    
+                    #    player "Y-yeah, I just need to-"
+                    #    
+                    #    menu:
+                    #        player "{cps=0}Y-yeah, I just need to-{/cps}"
+                    #        "Turn towards Ava":
+                    #            $ avaPoints += 1
+                    #            n "You adjust yourself and turn to face Ava, leaving you backside to Gunner."
+                    #            n "A risky move, as it puts you in a position of vulnerability, but it also blocks Gunner's path to Ava."
+                    #            n "You hold onto Ava tightly, face buried in her plumage."
+                    #            
+                    #            player "That's better."
+                    #            
+                    #            show ava flattered
+                    #            
+                    #            ava @ say "Breee~ This works too~"
+                    #            
+                    #            n "You can feel Gunner staring daggers at the back of your head."
+                    #            n "It doesn't matter though, the bird is in your arms, not his."
+                    #            n "In retaliation, he doubles down on brushing your hair with his scratchy cat tongue, purring ever louder and even pulling your hips closer to him."
+                    #            n "The prices you pay for love."
+                    #            n "And you *know* neither of you are enjoying this, but Ava seems to be all for it."
+                    #            
+                    #            show ava portrait overjoyed
+                    #            
+                    #            ava @ say "Heeheehee~ You two are so cute~ *chirp!*"
+                    #            
+                    #            gunner @ say "*Purrpurrpurrpurrpurrpurr~*"
+                    #            
+                    #            show ava portrait happy
+                    #            
+                    #            n "Gunner's going for the humiliation tactic but as long as his paws and tongue are on you, they're not on Ava and that's the best available outcome."
+                    #            n "You close your eyes and mentally prepare for an awkward morning."
+                    #            n "Somehow you manage to fall asleep amidst the tension running so high."
+                    #        "Turn towards Gunner":
+                    #            n "It's said that to emerge victorious in war, you must be unpredictable, and that's precisely what you're going for."
+                    #            n "You roll onto your side facing Gunner and wrap him in your arms."
+                    #            n "Got you now, you son of a bitch!"
+                    #            
+                    #            gunner @ say "Oh? Whatchya doin' there, bud?"
+                    #            
+                    #            show ava portrait overjoyed
+                    #            
+                    #            ava @ say "Ohmygosh this is so hot!"
+                    #            
+                    #            show ava portrait concerned
+                    #            
+                    #            ava @ say "I mean, it's so hot in here, right?"
+                    #            
+                    #            show ava portrait smile
+                    #            
+                    #            player "Just snuggling with my bro. Nothing wrong with that, is there?"
+                    #            
+                    #            n "You pull him in so tight he won't even think about escaping."
+                    #            
+                    #            gunner @ say "N-no, of course not!"
+                    #            
+                    #            n "He gives you a lick with his rough tongue on your face and digs his claws into your side."
+                    #            n "Better you than Ava you suppose."
+                    #            n "At least she's enjoying the show."
+                    #            
+                    #            ava @ say "You two are so cute~"
+                    #            
+                    #            n "You feel her nuzzle the back of your head and lay her wing on top of you. You make sure Gunner's paw gets nowhere near it."
+                    #            n "You close your eyes and mentally prepare for an awkward morning."
+                    #            n "Somehow you manage to fall asleep amidst the tension running so high."
+                    #            
+                    #    stop music fadeout .7
+                    #            
+                    #    scene bg codadorm with fade
+                    #    
+                    #    show box with Dissolve(.2):
+                    #        ypos 0
+                    #    
+                    #    play music "audio/ambient/morning birds.ogg" fadein 1.5
+                    #    
+                    #    n "When your consciousness begins to reboot the following day, you question whether yesterday's events were just a dream until you realize you have a bird in your arms."
+                    #    n "And then comes the nightmarish reality that is a snoozing Gunner inches from your face."
+                    #    n "Somehow in the middle of the night you and Ava switched position so that she was in the middle of you two."
+                    #    n "You guess this round of flirting with Ava ended up being a draw."
+                    #    
+                    #    show ava typical neutral at center:
+                    #        xpos -200
+                    #        xzoom -1
+                    #    with dissolve
+                    #    
+                    #    ava @ say "*Yaaawn~*"
+                    #    ava @ say "Morning~"
+                    #    
+                    #    player "Sleep well?"
+                    #    
+                    #    show ava overjoyed
+                    #    
+                    #    ava @ say "Amazingly well!"
+                    #    
+                    #    show ava typical neutral
+                    #    
+                    #    ava @ say "How's your ankle?"
+                    #    
+                    #    player "Fine, I think."
+                    #    
+                    #    n "You pull the blanket away and set foot on the floor."
+                    #    n "It's still painful but you can deal with it."
+                    #    n "Gunner begins to stir, stetching out his arms and yawning."
+                    #    
+                    #    show gunner neutral at center:
+                    #        xpos 200
+                    #    with dissolve
+                    #    
+                    #    gunner @ say "Morning cutie~"
+                    #    gunner @ say "Oh hey [name], didn't see ya there."
+                    #    gunner @ say "Man, they really hooked you up with the best everything in here huh? Your bed is so much softer than the one in my dorm."
+                    #    
+                    #    player "Yeah well don't get used to sleeping in it. My ankle's all better so you can go home now."
+                    #    
+                    #    gunner @ say "Oof, kicking us out so soon? Was I not a good snuggler?"
+                    #    
+                    #    ava @ say "You were pretty good! Both of you were!"
+                    #    
+                    #    player "Sorry, I've just got a busy day ahead of me."
+                    #    
+                    #    gunner @ say "That's alright, we'll head out soon. Thanks for having us over~"
+                    #    
+                    #    n "Gunner purrs and gives you a playful lick, surely an attempt to intimidate you, as he gets out of bed."
+                    #    
+                    #    gunner @ say "If either of you need top tier snuggles again, you know where to find me~"
+                    #    
+                    #    ava @ say "I'll keep both of you in mind~"
+                    #    
+                    #    player "See you two later."
+                    #    
+                    #    hide gunner
+                    #    hide ava
+                    #    with dissolve
+                    #    
+                    #    
+                    #            
+                    #            
+                    #    
+                    #    #"gunner snuggles behind you. you're starting to regret this"
+                    #
+                    #
+                    #    #gunner licks ava and you
+                    #    
+                    #"Spill your spaghetti":
+                    #    player "N-no thanks, that's what my tulpa waifu is for."
+                    #    
+                    #    #ava @ say "Do you wanna snuggle Gunner instead?"
+                    #    
+                    #    show ava waitwhat
+                    #
+                    #    ava @ say "You have a tulpa?"
+                    #
+                    #    n "Fuck, why did you say that?"
+                    #
+                    #    ava @ say "That's so cool!"
+                    #
+                    #    player "Really?"
+                    #    
+                    #    show ava overjoyed
+                    #    
+                    #    ava @ say "You should tell me about her!"
+                    #    
+                    #    player "M-maybe later..."
+                    #    
+                    #    n "Great, now you have to make up a schizo imaginary girlfriend to impress Ava."
+                    #    n "Or make her jealous."
+                    #    
+                    #    show ava typical neutral
+                    #    
+                    #    player "Let's get out of this hospital first. I'm already sick of being here."
+                    #    
+                    #    gunner @ say "Agreed."
+                    #    
+                    #    hide gunner
+                    #    hide ava
+                    #    with dissolve
+                    #    
+                    #    n "Ava and Gunner walk you back to your dorm. Ava asks if you're sure you don't need a snuggle buddy but you're still too ashamed from before to take her up on the offer."
+                    #    n "That and you don't want Gunner to break your other ankle tonight."
+                    #    n "Thankfully he acts pretty chill on the way back, and you all make light of the events of the day."
+                    #    n "After what you've been through, it's nice to ease up a little."
+                    #    n "Your ankle still kinda hurts but you make it back to your dorm and get into bed, texting your friends until you fall into slumber."
+                    #    
+                    #    stop music fadeout 1.0
+                    #    
+                    #    scene bg black with fade
+                    #
+                    #    hide box    
+                    #
+                    #    show bg calendar
+                    #    show tfriday at center
+                    #    with Dissolve(.5)
+                    #
+                    #    pause .6
+                    #    show tforwardslash
+                    #    pause .2
+                    #    show tbackslash
+                    #
+                    #    pause .7
 
                         #___saturday4
 
@@ -1343,7 +1276,7 @@ label liberation_day:
 
                         play music "audio/ambient/morning birds.ogg" fadein 1.0
 
-                        jump dayafterurbexcont
+                        
         
     else:
         n "At least you can get some extra credit by going to that parade today."
@@ -1360,7 +1293,7 @@ label liberation_day:
         n "It's way past when the parade was scheduled and you're still stuck on some backroads looking over your shoulder wondering when you'll get shanked."
         n "Maybe you should just call it quits and try going back home, if you can find it that is."
         n "For the nth time, your map app has you pointed in the exact opposite direction you're facing and is telling you to walk in circles for the next two hours."
-        n "You have to mentally figure out where you are and plot your own course like it's the fucking 1800s."
+        n "You have to mentally figure out where you are and plot your own course like it's the fucking 1600s."
         n "Ok, you think you just have to cross this street here then round that corner and it's mostly a straight shot to-"
 
         rose "What the hell are you doing?!"
@@ -1386,7 +1319,7 @@ label liberation_day:
         n "You point to the crosswalk sign, but to your surprise it says \"DO NOT CROSS\""
         n "It turns to white and says to cross a second later."
 
-        player "How the...? I was sure I looked before I crossed! There weren't any cars!"
+        player "How the...? I was sure I looked before I crossed!"
 
         show rose unimpressed
 
@@ -1408,7 +1341,7 @@ label liberation_day:
 
         player "I can walk myself home."
 
-        rose @ say "You sure? Cause you were going the wrong way."
+        rose @ say "You sure? Cause you were going the wrong way. The university is this way."
 
         player "Fine, if you really wanna take me home so bad you can."
 
@@ -1420,7 +1353,7 @@ label liberation_day:
 
         hide rose with dissolve
 
-        n "Rose scowls and heads in the opposite direction, taking you down streets and alleyways that start to look more familiar as you get closer to campus."
+        n "Rose scowls and storms off, taking you down streets and alleyways that start to look more familiar as you get closer to campus."
         n "For someone so short she walks pretty quick. You can barely keep up."
         n "She only slows down when a large crowd blocks her way."
         n "When the crowd disperses a lone figure in robes stands in the middle of the sidewalk."
@@ -1486,7 +1419,7 @@ label liberation_day:
         n "Rose pulls something out from her pocket out of view of the hobo and holds it concealed in her clenched fist."
         n "Is that a... knife?"
 
-        fortune @ say "Your blade does not deter me. I have seen the future. You are harmless."
+        fortune @ say "Your blade does not deter me. I have seen the future. You are all bark and no bite."
 
         n "Rose grips her knife tighter."
 
@@ -1499,7 +1432,7 @@ label liberation_day:
         
         show rose unimpressed
 
-        rose @ say "Good to know. I'll decline your \'fortune\' thank you."
+        rose @ say "I'll decline your \'fortune\' thank you."
 
         show rose neutral
 
