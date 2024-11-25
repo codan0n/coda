@@ -6235,7 +6235,7 @@ label hospital_revisit:
     
     kitsuragi @ say "Hello, I'm with Harmonia Medical Center. Is this [name]?"
 
-    n "You recognize that voice. It's the kitsuragi who was taking care of you."
+    n "You recognize that voice. It's the doctor who was taking care of you."
     n "Suddenly you don't feel so good anymore..."
 
     player "Er, yes. This is [name] speaking."
@@ -6270,7 +6270,7 @@ label hospital_revisit:
     n "You can't stop your brain from automatically assuming the worst."
     n "You barely pay attention to your surroundings while you walk."
     n "Before you know it, you're outside the hospital."
-    n "You spot the kitsuragi smoking a cigarette at the side of the building."
+    n "You spot the doctor smoking a cigarette at the side of the building."
 
     show kitsuragi at center with dissolve
 
@@ -6292,7 +6292,7 @@ label hospital_revisit:
 
     show kitsuragi at center with dissolve
 
-    n "The kitsuragi brings you inside and into a room similar to the one you stayed in over the weekend."
+    n "The doctor brings you inside and into a room similar to the one you stayed in over the weekend."
 
     kitsuragi @ say "I'm just gonna get the routine checkup bullshit out of the way quickly cause I'm sure you don't have time for this sort of thing."
 
@@ -6310,7 +6310,7 @@ label hospital_revisit:
     player "Like, I literally won't know how I got to class sometimes."
     player "And occasionally I'll see static? And get that feeling like when you get up too fast after lying down for a while."
 
-    n "The kitsuragi writes that down in a notepad then looks away and sighs."
+    n "The doctor writes that down in a notepad then looks away and sighs."
 
     kitsuragi @ say "Look, there's no easy way to tell you this but the blood tests came back and..."
     kitsuragi @ say "And we can say with confidence that you do in fact have nihil syndrome."
@@ -6326,7 +6326,7 @@ label hospital_revisit:
 
     player "So this means I'm gonna die soon, right?"
 
-    n "The kitsuragi avoids eye contact, gesturing with her hands as she tries to come up with an answer for you."
+    n "The doctor avoids eye contact, gesturing with her hands as she tries to come up with an answer for you."
 
     kitsuragi @ say "Well... since we caught it early... and there have been advancements in medicine... experimental technology could..."
 
@@ -7631,7 +7631,7 @@ label spicy_restaurant:
             
             hide kitsuragi with dissolve
             
-            n "The kitsuragi leaves the room, leaving you to ponder your life decisions and muster the energy to get up, trying not to put undue stress on your abdomen on the way home."
+            n "The doctor leaves the room, leaving you to ponder your life decisions and muster the energy to get up, trying not to put undue stress on your abdomen on the way home."
             
             scene bg codadorm with fade
             
@@ -15674,14 +15674,14 @@ label cont1:
     player "Y'know I would have preferred not knowing I was gonna die like this. It would have been a nice little surprise just after finishing my degree, but at least I could have enjoyed the time I had."
 
     n "You're left out of breath by the time you're done ranting."
-    n "The kitsuragi just stands there, her expression unchanging."
+    n "The doctor just stands there, her expression unchanging."
     n "Eventually she inhales to say something but you cut her off."
 
     player "Just shut up. Don't call me again unless you have a real cure."
 
     hide kitsuragi with dissolve
 
-    n "You get up and leave the room. As you walk past the kitsuragi, you can see a hint of sympathy and regret in her eyes."
+    n "You get up and leave the room. As you walk past the doctor, you can see a hint of sympathy and regret in her eyes."
     n "Not that it matters."
 
     scene bg codadorm with fade
@@ -15697,7 +15697,7 @@ label cont1:
     n "Why did you ever think you could escape that fate?"
     n "You flump down in your bed and take a deep breath."
     n "That helped clear your mind a bit."
-    n "You feel bad for blowing up on the kitsuragi earlier. Obviously none of this is her fault and it's not like she can even do anything. She's just the messenger relaying the terrible news."
+    n "You feel bad for blowing up on the doctor earlier. Obviously none of this is her fault and it's not like she can even do anything. She's just the messenger relaying the terrible news."
     n "That reminds you, you owe your date an explanation for cancelling at the last second."
     n "Wait, this doesn't feel right."
     n "All of this doesn't feel right."

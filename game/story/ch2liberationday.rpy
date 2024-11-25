@@ -1729,18 +1729,133 @@ label liberation_day:
         
         player "That one?"
         
+        n "Mishka sticks her head out and looks it over."
         
+        mishka @ say "Sure!"
         
+        n "Inside you find a pretty random assortment of objects, with the only unifying theme being that they all consume electricity."
+        n "There's massage chairs, digital clocks, speakers, remote controlled cars and helicopters, turntables, fake fireplaces, electronic notepads, and so on."
+        n "Most of it is impractical and overpriced junk but Mishka seems to have taken an interest in the RC vehicles."
+        n "They're set up so you can play around with a demo unit in the store but she's having difficulty with the controls."
         
+        mishka @ say "I don't think I'm doing it right."
         
+        n "The toy car flashes its headlights and steers its front wheels but refuses to accelerate."
         
+        player "Maybe you have to hold a button while pushing the stick up?"
         
-
-        #electronics shop, play with an RC car. Mishka crashes it into something and you quickly leave
-        #ride the carousel
+        n "You reach over and press a button while Mishka fiddles with the control stick."
+        n "Suddenly the vehicle lurches backward, crashing into a stack of boxes and toppling them all to the floor."
+        n "Must have been the turbo button."
+        n "Mishka looks shocked and freezes up."
+        n "You take the controller from her and set it on a shelf, then quickly guide her out of the store before the staff can figure out it was you who knocked over the display."
+        
+        player "Ok haha looks like it's broken, come on let's go."
+        
+        n "Outside of the store, you continue walking, searching for your next stop."
+        
+        mishka @ say "Well, it was fun while it lasted."
+        
+        player "Really it was their own fault for carelessly leaving boxes in the way of the RC car."
+        
+        n "When you turn the corner, Mishka gasps and giddily points ahead at a dazzling display of lights."
+        
+        mishka @ say "Look! Do you see it??"
+        
+        n "How could you not? There's a massive carousel taking up your field of view."
+        n "The plastic horses stare at you with malice."
+        
+        menu:
+            "Do you wanna ride it?":
+                n "You're going to feel silly doing this as an adult but..."
+                
+                player "Do you uh, wanna ride it?"
+                
+                mishka @ say "You can do that???"
+                
+                player "Yeah, it's not just for show."
+                
+                mishka @ say "Let's go!!"
+                
+                n "Mishka can hardly contain her excitement as you pay the operator and step onto the platform."
+                n "You help her onto one of the mounts, then take one for yourself."
+                n "The carousel slowly begins to spin, and the lights flicker in time with the music."
+                n "The mall becomes a blur and your horse gently pushes you up and down."
+                n "Looking back towards Mishka, she seems to be having the time of her life."
+                n "She smiles and waves to you. You try to wave back but almost lose your balance and slip off the horse."
+                n "When the ride comes to an end, you're a bit dizzy but wish it had gone on just a while longer."
+                
+            "This thing scares you":
+                n "Something about the way the horses are impaled on rods and painted to look like jolly parade ornaments disturbs you."
+                
+                mishka @ say "Look! It says we can ride on them!"
+                
+                player "I-it's probably really expensive..."
+                
+                mishka @ say "Not really! The sign says couples can ride for just five dollars!"
+                
+                player "Yeah but we're not really a couple so..."
+                
+                mishka @ say "The operator doesn't know that! Come on, I'll pay for us!"
+                
+                hide mishka with dissolve
+                
+                n "Mishka practically drags you up to the carousel and onto one of the mounts."
+                n "Your fear of the horse models is rivaled only by your sense of discomfort being the only two people on the ride."
+                n "It's like you're on display for the rest of the mall-goers."
+                n "It was embarrassing when you were a child and it's even more humiliating now."
+                n "But it's a small price to pay to see Mishka happy. It's probably her first time on such a ride."
+                n "You crane your neck around to see her grinning from ear to ear on the mount behind you."
+                n "As the ride goes on, you start to relax and get used to it. Even enjoy it a little."
+                n "By the time it ends, you're a bit dizzy but wish it had gone on just a while longer."
+                
+        show mishka neutral at center with dissolve:
+            ypos y_mishka
+            
+        n "You both step off the platform and have trouble walking in a straight line."
+        n "Mishka stumbles around and falls into your arms."
+        
+        mishka @ say "That was so much fun!!"
+        mishka @ say "Thanks for coming along with me!"
+        
+        player "Heh, I haven't been on one of these in ages."
+        player "I forgot how dizzying they are."
+        
+        n "You take a step forward and feel the world tilt underneath you."
+        
+        player "Let's sit down for a bit."
+        
+        mishka @ say "Hehe good idea~"
+        
+        hide mishka with dissolve
+        
+        n "You find a bench and rest until you can both walk like you're not drunk."
+        n "For the rest of the day, you look around random stores, checking out jewelry, clothes, perfumes, and whatever else seems interesting."
+        
+        #buy cheap gift or expensive gift
         #hippie shop that sells incense and rocks (you figure mishka would like it)
-        #are you a mall rat now?
-        #mmh, no~
         #this was nice but I have no desire to ever return!
-
+        
+        show mishka neutral at center with dissolve:
+            ypos y_mishka
+        
+        player "Well Mishka, are you a mall rat now?"
+        
+        mishka @ say "Mmh, I don't think so~"
+        mishka @ say "I enjoyed our time here but I think we've seen it all!"
+        mishka @ say "We should go somewhere else next time!"
+        
+        player "We'll find some place."
+        player "This was a lot of fun but maybe we can find a more chill place next time."
+        
+        mishka @ say "Mhm!"
+        
+        hide mishka with dissolve
+        
+        n "Mishka walks you back to your dorm and wishes you a good night."
+        n "It's been a fulfilling weekend. You wouldn't mind just relaxing on your own tomorrow."
+        
+        scene bg black with fade
+        
+        
     n "The rest of your weekend passes uneventfully."
