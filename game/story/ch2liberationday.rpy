@@ -1545,7 +1545,9 @@ label liberation_day:
         jump raidStart
     
 label raidStart:
-    
+    n "The hours pass and your anticipation grows. Your mind starts to wander, thinking about all the things that could go wrong."
+    n "But also all the things that could go right."
+    n ""
     
     
     
