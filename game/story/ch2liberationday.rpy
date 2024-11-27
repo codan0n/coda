@@ -1276,7 +1276,306 @@ label liberation_day:
 
                         play music "audio/ambient/morning birds.ogg" fadein 1.0
 
-                        
+    
+    elif gunnerRaid == True:
+        n "And you have some animal panties to raid."
+        n "Gunner said he wanted to meet up to start scouting out potential targets today."
+        
+        scene bg campus with fade
+        
+        show box with Dissolve(.2):
+            ypos 0
+            
+        show gunner neutral at center:
+            ypos y_gunner
+        show rori neutral at center:
+            ypos y_rori
+        with dissolve
+            
+        gunner @ say "Gentlemen, we have assembled here today for the most noble of goals."
+        gunner @ say "We are united in our mission to secure women's panties for the 200 year tradition of Harmonia."
+        gunner @ say "Former presidents of this fine nation have lead such glorious raids here in the past and it is our honor - nay, our *duty* - to carry that torch into a brighter future!"
+        gunner @ say "Oohrah!"
+        
+        rori @ say "Meh."
+        
+        player "Cool so who are we raiding?"
+        
+        gunner @ say "That's what we're here to find out. Any suggestions?"
+
+        rori @ say "I seriously don't care."
+        
+        gunner @ say "I'm liking the enthusiasm! We'll definitely put that into consideration!"
+        
+        n "Gunner is desperately trying to keep this event upbeat and fun."
+        
+        gunner @ say "What about you, [name]? Got any preferences?"
+        
+        menu:
+            "Rose":
+                player "There's this raccoon bitch named Rose in my history class..."
+                
+                gunner @ say "I think I've seen her before. She probably deserves it."
+                gunner @ say "One problem though: we can only really do this to sorority girls. It's like codified in the traditions and I don't think Rose is in a sorority."
+                
+                player "What the fuck? I don't know many sorority girls. That limits us to just..."
+                
+                gunner @ say "Claire?"
+                
+                n "A devious grin creeps up on Gunner's face."
+                
+                gunner @ say "This is where it gets interesting. There's a loophole in the system."
+                gunner @ say "If we raid Claire's room, nobody can blame us if we get a little mixed up."
+            "Mishka":
+                player "So here me out... Mishka?"
+                
+                gunner @ say "Interesting choice, I didn't expect that from you."
+                gunner @ say "But I don't think she lives on campus dude. We're safe only as long as we stay on uni grounds. Outside of that it's like felony level breaking and entering."
+                gunner @ say "In fact, we're only supposed to be able to do this to girls who are in a sorority."
+                
+                player "What the fuck? I don't know many sorority girls. That limits us to just..."
+                
+                gunner @ say "Claire?"
+                
+                n "A devious grin creeps up on Gunner's face."
+                
+                gunner @ say "This is where it gets interesting. There's a loophole in the system."
+                gunner @ say "If we raid Claire's room, nobody can blame us if we get a little mixed up."
+            "Miss Ellen":
+                player "Haha wouldn't it be funny if we nabbed my literature professor's knickers haha I bet nobody's done that before."
+                
+                gunner @ say "Sounds epic but she probably lives off campus. We're safe only as long as we stay on uni grounds. Outside of that it's like felony level breaking and entering."
+                gunner @ say "In fact, we're only supposed to be able to do this to girls who are in a sorority."
+                
+                player "What the fuck? I don't know many sorority girls. That limits us to just..."
+                
+                gunner @ say "Claire?"
+                
+                n "A devious grin creeps up on Gunner's face."
+                
+                gunner @ say "This is where it gets interesting. There's a loophole in the system."
+                gunner @ say "If we raid Claire's room, nobody can blame us if we get a little mixed up."
+            "No idea":
+                player "I got nothing."
+                
+                gunner @ say "Great! I mean, I just had one in mind and if you two don't have any objections..."
+                
+                rori @ say "Is it that bird girl you're always gooning over?"
+                
+                gunner @ say "Whoa are you psychic or something?"
+                
+                rori @ say "Just a lucky guess."
+                
+                gunner @ say "It's a bit of a legal grey area 'cause we're only really allowed to raid sorority girls' panties and Ava's not in one."
+                gunner @ say "But she's roommates with someone who *is.*"
+                gunner @ say "You see where I'm going with this?"
+                
+        player "So we raid Claire's dorm and take whatever we find?"
+        
+        gunner @ say "Precisely."
+        
+        rori @ say "I still don't know about this."
+        
+        player "How are we supposed to get in anyway? It's not like we can waltz in in broad daylight, pick the lock and break in."
+        
+        rori @ say "Yeah, boys aren't even allowed in the girls' dorm building without being accompanied by one."
+        rori @ say "And even then there's a curfew."
+        
+        gunner @ say "Right, so I'm thinking we scout out the girls' dorm, find out the exact time when the guard shift changes, that'll be our best chance to sneak in and-"
+        
+        player "Why don't we just ask Claire for help? She'd probably be down."
+        
+        gunner @ say "You think so??"
+        
+        player "Yeah lemme text her."
+        
+        call phone_start
+
+        call message_start("me", "Sup Claire", "testimage.png")
+        call reply_message("Can you do me and the boys") 
+        call reply_message("A favor?") 
+
+        call message("Claire", "You got me excited before that linebreak", "claireavi.png") 
+        call message("Claire", "But sure what's up?", "claireavi.png") 
+
+        call reply_message("We need to get into the girls' dorm tomorrow night") 
+        call reply_message("You know a way for us to get in?") 
+
+        call message("Claire", "Hmmm", "claireavi.png") 
+        call message("Claire", "I can't bring you in at night :/", "claireavi.png") 
+        call message("Claire", "Even if I could, Imma be busy tomorro", "claireavi.png") 
+        call message("Claire", "BUT", "claireavi.png") 
+        call message("Claire", "I bet I could unlock a window for you~", "claireavi.png") 
+        
+        call reply_message("Perfect!") 
+        call reply_message("You're the best :3") 
+        call reply_message("One more thing") 
+        call reply_message("could you leave your dorm key by the window") 
+        
+        call message("Claire", "Ksksksks anything for you~", "claireavi.png") 
+        call message("Claire", "I gotta ask something in return tho", "claireavi.png") 
+        
+        call reply_message("Oh?") 
+        call reply_message("I suppose that's fair.") 
+        
+        call message("Claire", "Ksksksks let's just say I'm gonna need to borrow you once you're done~", "claireavi.png") 
+        
+        call reply_message("W-what for?") 
+        
+        call message("Claire", "Nothing too spicy I promise!", "claireavi.png") 
+        call message("Claire", "Just wanna introduce you to the girls :3c", "claireavi.png") 
+        
+        call reply_message("Hmm") 
+        call reply_message("Ok deal") 
+
+        call phone_end 
+            
+        gunner @ say "Well? What did she say?"
+        
+        player "She'll leave a window open and leave her dorm key for us."
+        player "But I won't be able to stick around and celebrate once the job is done."
+        player "She wants me to hang out with a bunch of girls that night."
+        
+        gunner @ say "Ugh. Thanks for taking one for the team."
+        
+        rori @ say "So is that it then? Scouting mission accomplished? Can we go home now?"
+            
+        gunner @ say "Yeah. Briefing comeplete, you're dismissed!"
+        
+        rori @ say "Good. I'm gonna spend the rest of the night on VR Cat."
+        
+        player "I'm starting to get excited for this. It's actually happening!"
+        
+        gunner @ say "Nothing's gonna stop us from getting our paws on some bird panties!"
+        gunner @ say "Rest up boys, we've got a heist to pull off tomorrow!"
+        
+        n "Your little group disbands for the day, each contemplating this raid will change your lives."
+        
+        scene bg black with fade
+
+        hide box
+
+        show bg calendar
+        show tfriday at center
+        with Dissolve(.5)
+
+        pause .6
+        show tforwardslash
+        pause .2
+        show tbackslash
+
+        pause .7
+
+        scene bg codadorm with fade
+        
+        n "Today's the day."
+        n "Your phone buzzes. You've got a message about Rori."
+        n "He better not be trying to weasel out of this raid."
+        
+        call phone_start
+    
+    call message_start("Rori", "Hey [name] I'm not really feeling good today", "roriavi.png")
+    call message("Rori", "Can we all just stay in and play video games instead?", "roriavi.png") 
+    
+    call reply_message("Are you worried about getting caught?") 
+    
+    call message("Rori", "A little", "roriavi.png") 
+    call message("Rori", "But more concerned about the moral implications", "roriavi.png") 
+    call message("Rori", "of breaking into a stranger's residence", "roriavi.png") 
+    call message("Rori", "and stealing their underwear", "roriavi.png") 
+    
+    call screen phone_reply("Encourage","choiceEncourage","Sympathize","choiceSympathize")
+    
+    label choiceEncourage:
+        call phone_after_menu
+        
+        call message_start("me", "Come on where's your sense of adventure?", "testimage.png")
+        call reply_message("This is supposed to be fun and exciting!") 
+        
+        call message("Rori", "I guess", "roriavi.png") 
+        call message("Rori", "I just don't have the same sense of adventure as you and Gunner do", "roriavi.png") 
+        
+        call reply_message("It's all in your head bro") 
+        call reply_message("just imagine you're in an rpg or vn") 
+        call reply_message("and you're on a quest for a key item") 
+        
+        call message("Rori", "Hmm", "roriavi.png") 
+        call message("Rori", "I'll try", "roriavi.png") 
+        call message("Rori", "But I'm not a fan of forced stealth segments", "roriavi.png") 
+        
+        call reply_message("We'll be quick, in and out") 
+        
+        call message("Rori", "Okayyyy", "roriavi.png") 
+        call message("Rori", "I'm not touching any panties though", "roriavi.png") 
+        
+        call reply_message("As you wish") 
+        
+        call phone_end
+        
+        jump raidStart
+    
+    label choiceSympathize:
+        $ roriPoints =+ 1
+        
+        call phone_after_menu
+        
+        call message_start("me", "I get what you mean but I'm pretty sure Claire is into this", "testimage.png")
+        
+        call message("Rori", "What about Ava?", "roriavi.png") 
+        
+        call reply_message("I think she has a crush on Gunner so I don't think she minds either") 
+        
+        call message("Rori", "Wait so this is all just one big breaking and entering LARP?", "roriavi.png") 
+        
+        call reply_message("Pretty much") 
+        
+        call message("Rori", "Courtship rituals are weird man", "roriavi.png") 
+        call message("Rori", "If I wanted to bang someone I'd just invite them over to play vidya or something", "roriavi.png") 
+    
+        call reply_message("ikr but this is how straight people work") 
+        
+        call message("Rori", "Okayyyy", "roriavi.png") 
+        call message("Rori", "I'll go along with it", "roriavi.png") 
+        call message("Rori", "But I'm not touching any panties", "roriavi.png") 
+        
+        call reply_message("As you wish") 
+    
+        call phone_end
+        
+        jump raidStart
+    
+label raidStart:
+    
+    
+    
+    
+        
+        
+        
+        #text gunner
+        #choose who goes into the building first
+        #choose to take claire's, ava's or none for yourself
+        #something goes wrong
+        #gunner gets caught, flings the pantsu and they get caught in Rori's horns
+        #claire kidnaps you as you leave
+        #makes you let them into your dorm to raid
+        #your dorm is mixed male and female
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        #yknow like anime pantsu
+        
+        
+        
+        
         
     else:
         n "At least you can get some extra credit by going to that parade today."
@@ -1620,8 +1919,6 @@ label liberation_day:
         show tbackslash
 
         pause .7
-        
-        ### mishka mall scene
 
         scene bg codadorm with fade
 

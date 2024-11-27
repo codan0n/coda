@@ -3566,7 +3566,7 @@ label ellen_feeding_ducks:
     
     claire @ say "Sorry, I'm gonna be busy with some sorority stuff. Top secret sorority stuff."
 
-    ava @ say "Aww. How about you, [name]?"
+    ava @ say "Mysterious~ How about you, [name]?"
     
     menu:
         ava "{cps=0}How about you, [name]?{/cps}"
@@ -3976,19 +3976,12 @@ label ellen_feeding_ducks:
                     
             n "You swear you can just barely hear her giggle as she walks past you, brushing her fluffy tail against your arm."
             n "You stand on the roof for a while longer until you realize you're late for your next class."
-
-
-
+            n "Better hurry along now!"
 
         "Don't follow her":
             ###write an event happen during this time
             n "It's kinda creepy to stalk your professor like that. You should just chill for the next half hour you have before your next class."
     
-    
-    
-    
-    
-
     scene bg classroom with fade
 
     play music "audio/music/mere - retrograde.ogg" fadein .5
