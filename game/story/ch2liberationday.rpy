@@ -1267,14 +1267,16 @@ label liberation_day:
                     #
                     #    pause .7
 
-                        #___saturday4
+        #___saturday4
 
-                        scene bg codadorm with fade
+        scene bg codadorm with fade
 
-                        show box with Dissolve(.2):
-                            ypos 0
+        show box with Dissolve(.2):
+            ypos 0
 
-                        play music "audio/ambient/morning birds.ogg" fadein 1.0
+        play music "audio/ambient/morning birds.ogg" fadein 1.0
+        
+        jump ch2End
 
     
     elif gunnerRaid == True:
@@ -1547,22 +1549,189 @@ label liberation_day:
 label raidStart:
     n "The hours pass and your anticipation grows. Your mind starts to wander, thinking about all the things that could go wrong."
     n "But also all the things that could go right."
-    n ""
+    n "The feeling of victory and conquest waiting for you at the end."
+    n "How could you resist?"
+    
+    call phone_start
+
+    call message_start("Gunner", "You ready?", "gunneravi.png")
+    
+    call reply_message("You know it") 
+    
+    call message("Gunner", "Good", "gunneravi.png") 
+    call message("Gunner", "It'll get dark out soon", "gunneravi.png") 
+    call message("Gunner", "And all the sluts will leave their dorm to get drunk and go be whores", "gunneravi.png") 
+    call message("Gunner", "Except for Ava, she's pure", "gunneravi.png") 
+    call message("Gunner", "But she'll be out too, going on a night flight", "gunneravi.png") 
+    call message("Gunner", "Meet me outside her dorm building", "gunneravi.png") 
+    
+    call reply_message("k see you there") 
+    
+    call message("Gunner", "Godspeed", "gunneravi.png") 
+    
+    call phone_end
+    
+    n "It's now or never."
+    
+    scene bg campus with fade
+        
+    show box with Dissolve(.2):
+        ypos 0
+    
+    n "You walk along the pathway encircling the girls' dorm, trying to appear casual while taking quick side glances at the building."
+    n "A voice in the bushes calls out to you."
+    
+    gunner "Psst! Over here!"
+    
+    n "You look around to make sure nobody's watching, then swiftly steer yourself into the foliage."
+    n "In the darkness, nobody can see you here. You can barely even see Gunner and Rori."
+    
+    show gunner neutral at center:
+        ypos y_gunner
+    show rori neutral at center:
+        ypos y_rori
+    with dissolve
+    
+    n "He speaks in a hushed tone."
+    
+    gunner @ say "You made it!"
+    
+    rori @ say "Now that everyone is present and accounted for, can we hurry this along?"
+    rori @ say "I feel so vulnerable just sitting here."
+    
+    player "Relax, I couldn't see you at all. It's too dark here."
+    
+    rori @ say "So you say, but humans don't have particularly good night vision."
+    
+    gunner @ say "Rori's right, we need to be quick, quiet, and careful."
+    gunner @ say "Follow me."
+    
+    n "The three of you sneak around to the side of the building where a tall window on each floor is embedded into the wall."
+    n "Inside you can see a dimly lit stairwell. A pair of girls are making their way down now, dressed up for the night and unaware of your presence."
+    n "The window is higher up than you expected but Gunner jumps up and clings to the ledge with ease."
+    n "He pushes it up and climbs inside, then helps you and Rori up."
+    
+    ###choose who goes into the building first
+        #rori is the tallest but gunner doesn't need help jumping up. or you can go in
+    
+    scene bg oldhospital
+    
+    show box with Dissolve(.2):
+        ypos 0
+    
+    n "The interior is so dilapidated, you could mistake it for being abandoned, or perhaps a crack den."
+    
+    show gunner neutral at center:
+        ypos y_gunner
+    show rori neutral at center:
+        ypos y_rori
+    with dissolve
+    
+    gunner @ say "Damn, these bitches live like this?"
+    
+    rori @ say "Did you grab the key?"
+    
+    gunner @ say "Got it right here."
+    
+    player "Now we just have to find Ava's dorm."
+    
+    gunner @ say "Come on, it's this way."
+    
+    n "Gunner leads you down the hall. You can hear girls giggling and walking on the floor above you."
+    n "He stops at a door and inserts the key into the lock."
+    
+    gunner @ say "Bingo."
+    
+    scene bg avadorm with dissolve
+    
+    show box with Dissolve(.2):
+        ypos 0
+        
+    n "In the darkness, you can barely make out any details."
+    
+    show gunner neutral at center:
+        ypos y_gunner
+    show rori neutral at center:
+        ypos y_rori
+    with dissolve
+    
+    gunner @ say "Leave the lights off! We don't wanna draw any attention."
+    
+    rori @ say "You guys look around and I'll uh"
+    rori @ say "Keep watch I guess."
+    
+    hide rori with dissolve
+    
+    n "Rori goes to stand guard by the door while you and Gunner locate the drawers and begin sifting through them."
+    n "Your fingers run across the smooth fabric of cotton shirts and denim pants, searching for silk panties."
+    n "Finally inside the bottom drawer you feel it."
+    n "But something isn't right."
+    n "This is way too large to fit around Ava's tiny waist."
+    n "Gunner snickers at you and holds up a cute pair of pastel pink panties that only Ava could fit into."
+    
+    gunner @ say "Looks like you found the jackpot hehehe!"
+    
+    menu:
+        "Take Ava's panties":
+            $ avaPoints += 1
+            
+            n "You snatch them right from Gunner's paw. He just laughs and grabs another one from the drawer before closing it."
+        "Take Claire's panties":
+            $ clairePoints += 1
+            
+            n "Gunner can keep those, you came here for the real prize. You pull the bunny's bottoms out of the drawer and close it."
+            n "Now that you're holding the entire thing, you can feel how oversized they are. You could probably jump out the window and use this thing as a parachute."
+        "Take none":
+            n "One pair is enough for the mission to be considered a success. The glory is shared between you and your cohorts, now all you have to do is escape."
+    
+    player "Alright we got what we came for. Rori is the hallway clear?"
+    
+    rori @ say "Yeah. Let's get out of here."
+    
+    n "You all line up at the doorway and file out stealthily, trying to hide your excitement until you're in the clear."
+    
+    scene bg oldhospital with fade
+    
+    n "It's eerily quiet."
+    n "You're right in the middle of the hall. Should you try going slow and quiet or fast and loud?"
+    n "The others are erring on the side of caution for now, choosing to remain vigilant and stealthy. You can see their fur standing up on end."
+    n "About a quarter of the way through, a security officer bursts through a doorway and tackles Gunner to the ground."
+    
+    gunner @ say "Ack! She's got me!"
+    gunner @ say "Go! Be free!"
+    
+    n "She's trying to restrain him and cuff his hands but in a last ditch effort he manages to fling Ava's panties into the air."
+    n "Spooked by the noise, Rori instinctively jumps over the security guard and runs to the exit. The panties get caught up in his horns."
+    n "You try to follow him but the guard grabs you by the ankle as you try jumping over her, causing you to smack back down to the ground."
+    n "With his paws cuffed, Gunner gets behind her and uses the chains to put her in a chokehold."
+    
+    gunner @ say "Now! Run!!!"
+    
+    n "Distracted, the guard lets you go and turns her attention to Gunner."
+    n "You manage to run to the end of the hall and take one last look back."
+    n "She's successfully restrained Gunner and is pointing a taser at you."
+    n "You barely manage to dive around the corner before she fires, at the cost of you tumbling down the stairwell."
+    
+    player "Ugh..."
+    
+    n "You bumped your head on the way down. You can hear the guard's footsteps getting closer as you limp along to the exit window."
+    n "You're fading in and out of consciousness when you feel someone grab you by your jacket collar and lift you up."
+    
+    scene bg black with fade
+    
+    pause .5
+    
+    scene bg campus with fade
     
     
     
         
+    #lina, olivia, trish, and claire are there    
         
-        
-        #text gunner
-        #choose who goes into the building first
-        #choose to take claire's, ava's or none for yourself
-        #something goes wrong
-        #gunner gets caught, flings the pantsu and they get caught in Rori's horns
         #claire kidnaps you as you leave
         #makes you let them into your dorm to raid
         #your dorm is mixed male and female
-        
+        #the following day you get texts from gunner and rori about what happened
         
         
         
@@ -2156,5 +2325,5 @@ label raidStart:
         
         scene bg black with fade
         
-        
+label ch2End:
     n "The rest of your weekend passes uneventfully."
