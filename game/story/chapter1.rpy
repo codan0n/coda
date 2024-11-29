@@ -93,7 +93,7 @@ label chapter1:
 
     stop music fadeout .5
     
-    "Coda is a purely fictional story created by a diverse team with various different backgrounds and beliefs. The events and views of some characters do not necessarily reflect those of the creators."
+    "Coda is a purely fictional story created by a diverse team with various different backgrounds and beliefs. The actions and views of some characters do not necessarily reflect those of the creators."
     "Viewer discretion is advised."
     "Please note that this is a work in progress build that is unfinished in many places."
     
@@ -110,7 +110,7 @@ label chapter1:
     n "Did they send this by mistake?"
     n "But it's signed by the dean himself."
     
-    n "\"Congratulations! You have been admitted to Harmonia University's undergraduate program starting this Fall.\""
+    n "\"Congratulations! You have been admitted to Harmonia University's undergraduate program!\""
     n "\"We invite you to one of the highest ranked learning institutions in the world to experience a plethora of exciting opportunities!\""
     n "\"Our passionate staff will prepare you for a lifetime of success. Join us as you step into the next chapter of your life!\""
     
@@ -218,7 +218,7 @@ label nicodemusQuestions:
         
                     player "They're not around anymore, right?"
                     
-                    nicodemus @ say "Yes, they went exctinct decades ago. There's not even a color photograph of one."
+                    nicodemus @ say "Correct, they went exctinct decades ago. There's not even a color photograph of a living one."
                     
             n "\"Extinct.\""
             n "The word sends chills down your spine."
@@ -234,7 +234,7 @@ label nicodemusQuestions:
                 ypos y_nicodemus
             
             nicodemus @ say "He was a good friend, someone you could always count on. But as time went on, the burden of being the last of his kind got to him."
-            nicodemus @ say "He withdrew himself from everyone and eventually withered away, like some forgotten flower. I'd hate for you to suffer the same fate."
+            nicodemus @ say "He withdrew himself from everyone and eventually withered away, like some forgotten house plant. I'd hate for you to suffer the same fate."
             nicodemus @ say "You see what I'm getting at, don't you?"
             
             n "You give a somber nod."
@@ -252,7 +252,7 @@ label nicodemusQuestions:
             player "A dean like you must be pretty busy. Why'd you take the time out of your day to personally give *me* a tour of the campus?"
             
             nicodemus @ say "Less busy than you'd imagine! I may run the show around here but the show mostly takes care of itself."
-            nicodemus @ say "I mostly just sign documents and attend meetings. People look to me for approval, but I'm really just acting as a figurehead most of the time."
+            nicodemus @ say "I usually just sign documents and attend meetings. People look to me for approval, but I'm really just acting as a figurehead most of the time."
             nicodemus @ say "Someone to stand around and look wise."
             nicodemus @ say "The departments handle all the number crunching and recomendations, I just give the final authorization."
             nicodemus @ say "So I don't mind getting out of the office to have a pleasant chat with the students."
@@ -286,7 +286,7 @@ label movingOn:
     hide nicodemus with dissolve
     
     n "Even as the sun began to set, the campus was swarming with freshly admitted students either in tour groups or exploring their new surroundings on their own."
-    n "You don't have much time to spare, so you make your way to the building where your scheduled orientation is soon to take place."
+    n "You don't have much time to spare, so you make your way to your scheduled orientation meeting."
 
 label college_orientation:
     #ACT 1
