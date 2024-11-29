@@ -701,6 +701,8 @@ label liberation_day:
                 n "After talking with Gunner a bit more last night you both fell asleep. When you woke up you felt good enough to walk back to your dorm."
                 n "Gunner made sure you got here fine then left to do cat things while you rest up."
                 n "It doesn't look like you'll be doing anything else exciting for the weekend on this limp foot of yours."
+                
+                jump ch2End
                     
             "Screw this place.":
                 player "Yeah no, screw this place, I'm going home."
@@ -937,7 +939,9 @@ label liberation_day:
                     
                     n "Just like that, she's gone."
                     n "The cuddles were pretty disappointing but the way she smiled at you made your heart skip a beat."
-                    n "You flop out of bed and pace around the room a few times."
+                    
+                    jump ch2End
+                    
                 else:
                     n "You're woken up earlier than usual by Ava's stirring."
                     n "It's not even daylight out and she's stretching and chirping."
@@ -989,6 +993,8 @@ label liberation_day:
                         ypos 0
                     
                     n "The sun has come up and you're fully- er, mostly rested."
+                    
+                    jump ch2End
                         
                     #"We can all snuggle together at my place":
                     #    player "Hey that's a great idea! We can all snuggle at my dorm."
@@ -1329,7 +1335,7 @@ label liberation_day:
                 gunner @ say "This is where it gets interesting. There's a loophole in the system."
                 gunner @ say "If we raid Claire's room, nobody can blame us if we get a little mixed up."
             "Mishka":
-                player "So here me out... Mishka?"
+                player "So hear me out... Mishka?"
                 
                 gunner @ say "Interesting choice, I didn't expect that from you."
                 gunner @ say "But I don't think she lives on campus dude. We're safe only as long as we stay on uni grounds. Outside of that it's like felony level breaking and entering."
@@ -1475,278 +1481,476 @@ label liberation_day:
         n "He better not be trying to weasel out of this raid."
         
         call phone_start
+        
+        call message_start("Rori", "Hey [name] I'm not really feeling good today", "roriavi.png")
+        call message("Rori", "Can we all just stay in and play video games instead?", "roriavi.png") 
+        
+        call reply_message("Are you worried about getting caught?") 
+        
+        call message("Rori", "A little", "roriavi.png") 
+        call message("Rori", "But more concerned about the moral implications", "roriavi.png") 
+        call message("Rori", "of breaking into a stranger's residence", "roriavi.png") 
+        call message("Rori", "and stealing their underwear", "roriavi.png") 
+        
+        call screen phone_reply("Encourage","choiceEncourage","Sympathize","choiceSympathize")
+        
+        label choiceEncourage:
+            call phone_after_menu
+            
+            call message_start("me", "Come on where's your sense of adventure?", "testimage.png")
+            call reply_message("This is supposed to be fun and exciting!") 
+            
+            call message("Rori", "I guess", "roriavi.png") 
+            call message("Rori", "I just don't have the same sense of adventure as you and Gunner do", "roriavi.png") 
+            
+            call reply_message("It's all in your head bro") 
+            call reply_message("just imagine you're in an rpg or vn") 
+            call reply_message("and you're on a quest for a key item") 
+            
+            call message("Rori", "Hmm", "roriavi.png") 
+            call message("Rori", "I'll try", "roriavi.png") 
+            call message("Rori", "But I'm not a fan of forced stealth segments", "roriavi.png") 
+            
+            call reply_message("We'll be quick, in and out") 
+            
+            call message("Rori", "Okayyyy", "roriavi.png") 
+            call message("Rori", "I'm not touching any panties though", "roriavi.png") 
+            
+            call reply_message("As you wish") 
+            
+            call phone_end
+            
+            jump raidStart
+        
+        label choiceSympathize:
+            $ roriPoints =+ 1
+            
+            call phone_after_menu
+            
+            call message_start("me", "I get what you mean but I'm pretty sure Claire is into this", "testimage.png")
+            
+            call message("Rori", "What about Ava?", "roriavi.png") 
+            
+            call reply_message("I think she has a crush on Gunner so I don't think she minds either") 
+            
+            call message("Rori", "Wait so this is all just one big breaking and entering LARP?", "roriavi.png") 
+            
+            call reply_message("Pretty much") 
+            
+            call message("Rori", "Courtship rituals are weird man", "roriavi.png") 
+            call message("Rori", "If I wanted to bang someone I'd just invite them over to play vidya or something", "roriavi.png") 
+        
+            call reply_message("ikr but this is how straight people work") 
+            
+            call message("Rori", "Okayyyy", "roriavi.png") 
+            call message("Rori", "I'll go along with it", "roriavi.png") 
+            call message("Rori", "But I'm not touching any panties", "roriavi.png") 
+            
+            call reply_message("As you wish") 
+        
+            call phone_end
+            
+            jump raidStart
     
-    call message_start("Rori", "Hey [name] I'm not really feeling good today", "roriavi.png")
-    call message("Rori", "Can we all just stay in and play video games instead?", "roriavi.png") 
-    
-    call reply_message("Are you worried about getting caught?") 
-    
-    call message("Rori", "A little", "roriavi.png") 
-    call message("Rori", "But more concerned about the moral implications", "roriavi.png") 
-    call message("Rori", "of breaking into a stranger's residence", "roriavi.png") 
-    call message("Rori", "and stealing their underwear", "roriavi.png") 
-    
-    call screen phone_reply("Encourage","choiceEncourage","Sympathize","choiceSympathize")
-    
-    label choiceEncourage:
-        call phone_after_menu
-        
-        call message_start("me", "Come on where's your sense of adventure?", "testimage.png")
-        call reply_message("This is supposed to be fun and exciting!") 
-        
-        call message("Rori", "I guess", "roriavi.png") 
-        call message("Rori", "I just don't have the same sense of adventure as you and Gunner do", "roriavi.png") 
-        
-        call reply_message("It's all in your head bro") 
-        call reply_message("just imagine you're in an rpg or vn") 
-        call reply_message("and you're on a quest for a key item") 
-        
-        call message("Rori", "Hmm", "roriavi.png") 
-        call message("Rori", "I'll try", "roriavi.png") 
-        call message("Rori", "But I'm not a fan of forced stealth segments", "roriavi.png") 
-        
-        call reply_message("We'll be quick, in and out") 
-        
-        call message("Rori", "Okayyyy", "roriavi.png") 
-        call message("Rori", "I'm not touching any panties though", "roriavi.png") 
-        
-        call reply_message("As you wish") 
-        
-        call phone_end
-        
-        jump raidStart
-    
-    label choiceSympathize:
-        $ roriPoints =+ 1
-        
-        call phone_after_menu
-        
-        call message_start("me", "I get what you mean but I'm pretty sure Claire is into this", "testimage.png")
-        
-        call message("Rori", "What about Ava?", "roriavi.png") 
-        
-        call reply_message("I think she has a crush on Gunner so I don't think she minds either") 
-        
-        call message("Rori", "Wait so this is all just one big breaking and entering LARP?", "roriavi.png") 
-        
-        call reply_message("Pretty much") 
-        
-        call message("Rori", "Courtship rituals are weird man", "roriavi.png") 
-        call message("Rori", "If I wanted to bang someone I'd just invite them over to play vidya or something", "roriavi.png") 
-    
-        call reply_message("ikr but this is how straight people work") 
-        
-        call message("Rori", "Okayyyy", "roriavi.png") 
-        call message("Rori", "I'll go along with it", "roriavi.png") 
-        call message("Rori", "But I'm not touching any panties", "roriavi.png") 
-        
-        call reply_message("As you wish") 
-    
-        call phone_end
-        
-        jump raidStart
-    
-label raidStart:
-    n "The hours pass and your anticipation grows. Your mind starts to wander, thinking about all the things that could go wrong."
-    n "But also all the things that could go right."
-    n "The feeling of victory and conquest waiting for you at the end."
-    n "How could you resist?"
-    
-    call phone_start
+        label raidStart:
+            n "The hours pass and your anticipation grows. Your mind starts to wander, thinking about all the things that could go wrong."
+            n "But also all the things that could go right."
+            n "The feeling of victory and conquest waiting for you at the end."
+            n "How could you resist?"
+            
+            call phone_start
 
-    call message_start("Gunner", "You ready?", "gunneravi.png")
-    
-    call reply_message("You know it") 
-    
-    call message("Gunner", "Good", "gunneravi.png") 
-    call message("Gunner", "It'll get dark out soon", "gunneravi.png") 
-    call message("Gunner", "And all the sluts will leave their dorm to get drunk and go be whores", "gunneravi.png") 
-    call message("Gunner", "Except for Ava, she's pure", "gunneravi.png") 
-    call message("Gunner", "But she'll be out too, going on a night flight", "gunneravi.png") 
-    call message("Gunner", "Meet me outside her dorm building", "gunneravi.png") 
-    
-    call reply_message("k see you there") 
-    
-    call message("Gunner", "Godspeed", "gunneravi.png") 
-    
-    call phone_end
-    
-    n "It's now or never."
-    
-    scene bg campus with fade
-        
-    show box with Dissolve(.2):
-        ypos 0
-    
-    n "You walk along the pathway encircling the girls' dorm, trying to appear casual while taking quick side glances at the building."
-    n "A voice in the bushes calls out to you."
-    
-    gunner "Psst! Over here!"
-    
-    n "You look around to make sure nobody's watching, then swiftly steer yourself into the foliage."
-    n "In the darkness, nobody can see you here. You can barely even see Gunner and Rori."
-    
-    show gunner neutral at center:
-        ypos y_gunner
-    show rori neutral at center:
-        ypos y_rori
-    with dissolve
-    
-    n "He speaks in a hushed tone."
-    
-    gunner @ say "You made it!"
-    
-    rori @ say "Now that everyone is present and accounted for, can we hurry this along?"
-    rori @ say "I feel so vulnerable just sitting here."
-    
-    player "Relax, I couldn't see you at all. It's too dark here."
-    
-    rori @ say "So you say, but humans don't have particularly good night vision."
-    
-    gunner @ say "Rori's right, we need to be quick, quiet, and careful."
-    gunner @ say "Follow me."
-    
-    n "The three of you sneak around to the side of the building where a tall window on each floor is embedded into the wall."
-    n "Inside you can see a dimly lit stairwell. A pair of girls are making their way down now, dressed up for the night and unaware of your presence."
-    n "The window is higher up than you expected but Gunner jumps up and clings to the ledge with ease."
-    n "He pushes it up and climbs inside, then helps you and Rori up."
-    
-    ###choose who goes into the building first
-        #rori is the tallest but gunner doesn't need help jumping up. or you can go in
-    
-    scene bg oldhospital
-    
-    show box with Dissolve(.2):
-        ypos 0
-    
-    n "The interior is so dilapidated, you could mistake it for being abandoned, or perhaps a crack den."
-    
-    show gunner neutral at center:
-        ypos y_gunner
-    show rori neutral at center:
-        ypos y_rori
-    with dissolve
-    
-    gunner @ say "Damn, these bitches live like this?"
-    
-    rori @ say "Did you grab the key?"
-    
-    gunner @ say "Got it right here."
-    
-    player "Now we just have to find Ava's dorm."
-    
-    gunner @ say "Come on, it's this way."
-    
-    n "Gunner leads you down the hall. You can hear girls giggling and walking on the floor above you."
-    n "He stops at a door and inserts the key into the lock."
-    
-    gunner @ say "Bingo."
-    
-    scene bg avadorm with dissolve
-    
-    show box with Dissolve(.2):
-        ypos 0
-        
-    n "In the darkness, you can barely make out any details."
-    
-    show gunner neutral at center:
-        ypos y_gunner
-    show rori neutral at center:
-        ypos y_rori
-    with dissolve
-    
-    gunner @ say "Leave the lights off! We don't wanna draw any attention."
-    
-    rori @ say "You guys look around and I'll uh"
-    rori @ say "Keep watch I guess."
-    
-    hide rori with dissolve
-    
-    n "Rori goes to stand guard by the door while you and Gunner locate the drawers and begin sifting through them."
-    n "Your fingers run across the smooth fabric of cotton shirts and denim pants, searching for silk panties."
-    n "Finally inside the bottom drawer you feel it."
-    n "But something isn't right."
-    n "This is way too large to fit around Ava's tiny waist."
-    n "Gunner snickers at you and holds up a cute pair of pastel pink panties that only Ava could fit into."
-    
-    gunner @ say "Looks like you found the jackpot hehehe!"
-    
-    menu:
-        "Take Ava's panties":
-            $ avaPoints += 1
+            call message_start("Gunner", "You ready?", "gunneravi.png")
             
-            n "You snatch them right from Gunner's paw. He just laughs and grabs another one from the drawer before closing it."
-        "Take Claire's panties":
-            $ clairePoints += 1
+            call reply_message("You know it") 
             
-            n "Gunner can keep those, you came here for the real prize. You pull the bunny's bottoms out of the drawer and close it."
-            n "Now that you're holding the entire thing, you can feel how oversized they are. You could probably jump out the window and use this thing as a parachute."
-        "Take none":
-            n "One pair is enough for the mission to be considered a success. The glory is shared between you and your cohorts, now all you have to do is escape."
-    
-    player "Alright we got what we came for. Rori is the hallway clear?"
-    
-    rori @ say "Yeah. Let's get out of here."
-    
-    n "You all line up at the doorway and file out stealthily, trying to hide your excitement until you're in the clear."
-    
-    scene bg oldhospital with fade
-    
-    n "It's eerily quiet."
-    n "You're right in the middle of the hall. Should you try going slow and quiet or fast and loud?"
-    n "The others are erring on the side of caution for now, choosing to remain vigilant and stealthy. You can see their fur standing up on end."
-    n "About a quarter of the way through, a security officer bursts through a doorway and tackles Gunner to the ground."
-    
-    gunner @ say "Ack! She's got me!"
-    gunner @ say "Go! Be free!"
-    
-    n "She's trying to restrain him and cuff his hands but in a last ditch effort he manages to fling Ava's panties into the air."
-    n "Spooked by the noise, Rori instinctively jumps over the security guard and runs to the exit. The panties get caught up in his horns."
-    n "You try to follow him but the guard grabs you by the ankle as you try jumping over her, causing you to smack back down to the ground."
-    n "With his paws cuffed, Gunner gets behind her and uses the chains to put her in a chokehold."
-    
-    gunner @ say "Now! Run!!!"
-    
-    n "Distracted, the guard lets you go and turns her attention to Gunner."
-    n "You manage to run to the end of the hall and take one last look back."
-    n "She's successfully restrained Gunner and is pointing a taser at you."
-    n "You barely manage to dive around the corner before she fires, at the cost of you tumbling down the stairwell."
-    
-    player "Ugh..."
-    
-    n "You bumped your head on the way down. You can hear the guard's footsteps getting closer as you limp along to the exit window."
-    n "You're fading in and out of consciousness when you feel someone grab you by your jacket collar and lift you up."
-    
-    scene bg black with fade
-    
-    pause .5
-    
-    scene bg campus with fade
-    
-    
-    
+            call message("Gunner", "Good", "gunneravi.png") 
+            call message("Gunner", "It'll get dark out soon", "gunneravi.png") 
+            call message("Gunner", "And all the sluts will leave their dorm to get drunk and go be whores", "gunneravi.png") 
+            call message("Gunner", "Except for Ava, she's pure", "gunneravi.png") 
+            call message("Gunner", "But she'll be out too, going on a night flight", "gunneravi.png") 
+            call message("Gunner", "Meet me outside her dorm building", "gunneravi.png") 
+            
+            call reply_message("k see you there") 
+            
+            call message("Gunner", "Godspeed", "gunneravi.png") 
+            
+            call phone_end
+            
+            n "It's now or never."
+            
+            scene bg campus with fade
+                
+            show box with Dissolve(.2):
+                ypos 0
+            
+            n "You walk along the pathway encircling the girls' dorm, trying to appear casual while taking quick side glances at the building."
+            n "A voice in the bushes calls out to you."
+            
+            gunner "Psst! Over here!"
+            
+            n "You look around to make sure nobody's watching, then swiftly steer yourself into the foliage."
+            n "In the darkness, nobody can see you here. You can barely even see Gunner and Rori."
+            
+            show gunner neutral at center:
+                ypos y_gunner
+            show rori neutral at center:
+                ypos y_rori
+            with dissolve
+            
+            n "He speaks in a hushed tone."
+            
+            gunner @ say "You made it!"
+            
+            rori @ say "Now that everyone is present and accounted for, can we hurry this along?"
+            rori @ say "I feel so vulnerable just sitting here."
+            
+            player "Relax, I couldn't see you at all. It's too dark here."
+            
+            rori @ say "So you say, but humans don't have particularly good night vision."
+            
+            gunner @ say "Rori's right, we need to be quick, quiet, and careful."
+            gunner @ say "Follow me."
+            
+            n "The three of you sneak around to the side of the building where a tall window on each floor is embedded into the wall."
+            n "Inside you can see a dimly lit stairwell. A pair of girls are making their way down now, dressed up for the night and unaware of your presence."
+            n "The window is higher up than you expected but Gunner jumps up and clings to the ledge with ease."
+            n "He pushes it up and climbs inside, then helps you and Rori up."
+            
+            ###choose who goes into the building first
+                #rori is the tallest but gunner doesn't need help jumping up. or you can go in
+            
+            scene bg oldhospital
+            
+            show box with Dissolve(.2):
+                ypos 0
+            
+            n "The interior is so dilapidated, you could mistake it for being abandoned, or perhaps a crack den."
+            
+            show gunner neutral at center:
+                ypos y_gunner
+            show rori neutral at center:
+                ypos y_rori
+            with dissolve
+            
+            gunner @ say "Damn, these bitches live like this?"
+            
+            rori @ say "Did you grab the key?"
+            
+            gunner @ say "Got it right here."
+            
+            player "Now we just have to find Ava's dorm."
+            
+            gunner @ say "Come on, it's this way."
+            
+            n "Gunner leads you down the hall. You can hear girls giggling and walking on the floor above you."
+            n "He stops at a door and inserts the key into the lock."
+            
+            gunner @ say "Bingo."
+            
+            scene bg avadorm with dissolve
+            
+            show box with Dissolve(.2):
+                ypos 0
+                
+            n "In the darkness, you can barely make out any details."
+            
+            show gunner neutral at center:
+                ypos y_gunner
+            show rori neutral at center:
+                ypos y_rori
+            with dissolve
+            
+            gunner @ say "Leave the lights off! We don't wanna draw any attention."
+            
+            rori @ say "You guys look around and I'll uh"
+            rori @ say "Keep watch I guess."
+            
+            hide rori with dissolve
+            
+            n "Rori goes to stand guard by the door while you and Gunner locate the drawers and begin sifting through them."
+            n "Your fingers run across the smooth fabric of cotton shirts and denim pants, searching for silk panties."
+            n "Finally inside the bottom drawer you feel it."
+            n "But something isn't right."
+            n "This is way too large to fit around Ava's tiny waist."
+            n "Gunner snickers at you and holds up a cute pair of pastel pink panties that only Ava could fit into."
+            
+            gunner @ say "Looks like you found the jackpot hehehe!"
+            
+            $ avaPantsu = False
+            $ clairePantsu = False
+            
+            menu:
+                "Take Ava's panties":
+                    $ avaPantsu = True
+                    $ avaPoints += 1
+                    
+                    n "You snatch them right from Gunner's paw. He just laughs and grabs another one from the drawer before closing it."
+                "Take Claire's panties":
+                    $ clairePantsu = True
+                    $ clairePoints += 1
+                    
+                    n "Gunner can keep those, you came here for the real prize. You pull the bunny's bottoms out of the drawer and close it."
+                    n "Now that you're holding the entire thing, you can feel how oversized they are. You could probably jump out the window and use this thing as a parachute."
+                "Take none":
+                    n "One pair is enough for the mission to be considered a success. The glory is shared between you and your cohorts, now all you have to do is escape."
+            
+            player "Alright we got what we came for. Rori is the hallway clear?"
+            
+            rori @ say "Yeah. Let's get out of here."
+            
+            n "You all line up at the doorway and file out stealthily, trying to hide your excitement until you're in the clear."
+            
+            scene bg oldhospital with fade
+            
+            n "It's eerily quiet."
+            n "You're right in the middle of the hall. Should you try going slow and quiet or fast and loud?"
+            n "The others are erring on the side of caution for now, choosing to remain vigilant and stealthy. You can see their fur standing up on end."
+            n "About a quarter of the way through, a security officer bursts through a doorway and tackles Gunner to the ground."
+            
+            gunner @ say "Ack! She's got me!"
+            gunner @ say "Go! Be free!"
+            
+            n "She's trying to restrain him and cuff his hands but in a last ditch effort he manages to fling Ava's panties into the air."
+            n "Spooked by the noise, Rori instinctively jumps over the security guard and runs to the exit. The panties get caught up in his horns."
+            n "You try to follow him but the guard grabs you by the ankle as you try jumping over her, causing you to smack back down to the ground."
+            n "With his paws cuffed, Gunner gets behind her and uses the chains to put her in a chokehold."
+            
+            gunner @ say "Now! Run!!!"
+            
+            n "Distracted, the guard lets you go and turns her attention to Gunner."
+            n "You manage to run to the end of the hall and take one last look back."
+            n "She's successfully restrained Gunner and is pointing a taser at you."
+            n "You barely manage to dive around the corner before she fires, at the cost of you tumbling down the stairwell."
+            
+            player "Ugh..."
+            
+            n "You bumped your head on the way down. You can hear the guard's footsteps getting closer as you limp along to the exit window."
+            n "You're fading in and out of consciousness when you feel someone grab you by your jacket collar and lift you up."
+            
+            scene bg black with fade
+            
+            pause .5
+            
+            scene bg campus with fade
+            
+            show box with Dissolve(.2):
+                ypos 0
+            
+            n "As you come to, the first thing you notice are several eyes pointed at you."
+            
+            trish "Oh my god he's waking up!"
+            
+            lina "It's about time!"
+            
+            olivia "Was the mouth to mouth resuscitation really necessary? It wasn't like he was drowning."
+            
+            n "A more familiar voice joins them."
+            
+            show claire sweater neutral at center with dissolve:
+                ypos y_claire
+            
+            claire @ say "Of course it was!"
+            claire @ say "See, he's alive now!"
+            
+            n "Your vision gradually unblurs to reveal Claire and several other girls standing around you."
+            
+            show lina at center:
+                ypos y_lina
+            show trish at center:
+                ypos y_trish
+            show olivia at center:
+                ypos y_olivia
+            with dissolve
+            
+            olivia @ say "I dunno, he still kinda looks dead to me."
+            
+            lina @ say "Are you alright? Looks like you took quite the fall!"
+            
+            trish @ say "He looks like he's into anthro women~"
+            
+            player "Wha? Where am I? How did I get here?"
+            
+            claire @ say "Oh don't worry about that!"
+            claire @ say "All that matters is your mission was a success!"
+            claire @ say "And now it's time for you to return the favor~"
+            claire @ say "Say hello to my friends from the sorority!"
+            
+            trish @ say "Hiiiii [name]!~" (multiple=3)
+            olivia @ say "Hiiiii [name]!~" (multiple=3)
+            lina @ say "Hiiiii [name]!~" (multiple=3)
+            
+            n "Maybe it's just your headache, but these ladies appear... intimidating in some way."
+            n "You face them and give a meager wave."
+            
+            player "H-hi..."
+            
+            n "You turn back to Claire."
+            
+            player "So what did you have in mind?"
+                
+            n "Claire giggles. That can't be a good sign."
+            
+            claire @ say "Ksksksksks wellllll~"
+            claire @ say "You live in that big fancy dorm room all by yourself, don't you?"
+            
+            player "Uh huh..."
+            
+            claire @ say "And your building is mixed male and female so you don't have any silly curfews for bringing guests of the opposite gender overrrr~"
+            
+            player "Right..."
+            
+            claire @ say "So we were just thinking you could let us in and accompany us to your room~"
+            claire @ say "Just to like, check it out and stuff~"
+            
+            player "Sure, that seems innocuous enough."
+            
+            claire @ say "Ksksksks thanks [name], I knew we could count on you~"
+            claire @ say "Alright ladies, let's go!"
+            
+            n "To your surprise, the mob picks you up and rushes to your dorm while you still try to catch up on what just happened."
+            
+            scene bg codadorm with fade
+            
+            show box with Dissolve(.2):
+                ypos 0
         
-    #lina, olivia, trish, and claire are there    
-        
-        #claire kidnaps you as you leave
-        #makes you let them into your dorm to raid
-        #your dorm is mixed male and female
-        #the following day you get texts from gunner and rori about what happened
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        #yknow like anime pantsu
-        
-        
-        
-        
+            player "So uh yeah this is my dorm. Feel free to make yourselves at home I guess."
+            
+            ###animate them runnning past the screen
+            
+            n "The girls push past you and immediately start rummaging around your belongings, digging through piles of laundry and pulling the drawers out of the dresser."
+            n "If this is how they treat their home, you can understand the sorry state the girls' dorm was in."
+            
+            trish @ say "I FOUND IT!!!"
+            
+            n "All the girls huddle around something."
+            n "Hey is that your underwear drawer?"
+            n "Before you can intervene, they all snatch a pair and rush out of your room, giggling and screaming with joy."
+            
+            ###animated them moving to the other side of the screen
+            
+            n "Once again, you're knocked to the floor."
+            n "All you can see when you get up is Claire with a devilish grin looking down at you."
+            
+            claire @ say "Thanks for giving the girls a fun night~"
+            
+            n "The bunny plants a smooch on her own paw, then pushes the same paw against your forehead with enough force to knock you back onto your bed."
+            n "With your consciousness fading, the last thing you see is Claire's fluffy little cotton ball tail leaving the room and your door slamming shut."
+            
+            scene bg black with fade
+            
+            scene bg codadorm with fade
+            
+            show box with Dissolve(.2):
+                ypos 0
+                
+            n "Your head is still pounding when the sun rises."
+            n "Last night felt like a dream."
+            
+            if avaPantsu == True:
+                n "You check your jacket's inner pocket and pull out a silky smooth petite pair of panties that once belonged to Ava."
+                n "Last night was a success after all."
+                n "But at what cost?"
+            if clairePantsu == True:
+                n "You check your jacket's inner pocket and pull out a silky smooth humongous pair of panties that once belonged to Claire."
+                n "Last night was a success after all."
+                n "But at what cost?"
+                
+            n "You look over to your decimated underwear drawer, still lying miserably, upturned on the floor."
+            n "Only a couple of boxers remain. You'll have to go shopping for more soon."
+            n "You reach for your phone and check the messages."
+            
+            call phone_start
+
+            call message_start("Gunner", "You make it out alive?", "gunneravi.png")
+            
+            call reply_message("Yeah. You?") 
+            
+            call message("Gunner", "Just barely", "gunneravi.png") 
+            call message("Gunner", "Did you see how fucking fat that security guard was??", "gunneravi.png") 
+            call message("Gunner", "I thought she was gonna break my neck when she was kneeling on it", "gunneravi.png") 
+            
+            call reply_message("Holy shit lmao") 
+            call reply_message("I'm guessing she let you go?") 
+            
+            call message("Gunner", "Yeah I had to spend last night in gay baby jail", "gunneravi.png") 
+            call message("Gunner", "But they let met out like an hour ago", "gunneravi.png") 
+            call message("Gunner", "Said I was lucky I didn't have any contraband on me", "gunneravi.png") 
+            call message("Gunner", "Or I'd be spending the weekend in there at least", "gunneravi.png") 
+            call message("Gunner", "lol", "gunneravi.png") 
+            
+            call reply_message("That reminds me, what happened to Rori?") 
+            
+            call message("Gunner", "Dunno", "gunneravi.png") 
+            call message("Gunner", "Maybe his homosexuality was cured once he touched those panties", "gunneravi.png") 
+            call message("Gunner", "I'll check in on him", "gunneravi.png") 
+            call message("Gunner", "I'm on my way back to our dorm now", "gunneravi.png") 
+            
+            call reply_message("Cool. I'll send him a text.") 
+            
+            call phone_end
+            
+            n "Let's see what Rori has to say."
+            
+            call phone_start
+            
+            call message_start("me", "Rori where'd you go?", "testimage.png")
+            
+            call message("Rori", "Where do you think?", "roriavi.png") 
+            call message("Rori", "I went back to my dorm and booted up War Lightning", "roriavi.png") 
+            
+            call reply_message("What happened to the panties?") 
+            call reply_message("Last time I saw them they were stuck in your horns") 
+            
+            call message("Rori", "Oh those", "roriavi.png") 
+            call message("Rori", "After Gunner got arrested I snuck back in and put them back where we found them", "roriavi.png") 
+            
+            call reply_message("DUDE") 
+            call reply_message("Gunner's gonna be pissed") 
+            
+            call message("Rori", "I'll just tell him they fell off somewhere", "roriavi.png") 
+            call message("Rori", "It was more about the adventure, wasn't it?", "roriavi.png") 
+            
+            call reply_message("Nah I'm pretty sure Gunner was in it for bird pantsu") 
+            
+            call message("Rori", "Too bad, he can ask for them direct from Ava if he wants them so bad", "roriavi.png") 
+            
+            call reply_message("lol") 
+            call reply_message("u gotta admit tho it was pretty fun") 
+            
+            call message("Rori", "Exhilerating? Maybe.", "roriavi.png") 
+            call message("Rori", "Fun? No.", "roriavi.png") 
+            
+            call reply_message("You probably would have enjoyed the boxer raid more huh") 
+            
+            call message("Rori", "OwO", "roriavi.png") 
+            call message("Rori", "The what?!", "roriavi.png") 
+            
+            call reply_message("Claire's sorority tricked me into letting them into my dorm") 
+            call reply_message("And they raided my boxer drawer") 
+            
+            call message("Rori", "wow", "roriavi.png") 
+            call message("Rori", "that's uh", "roriavi.png") 
+            call message("Rori", "kinda hot ngl", "roriavi.png") 
+            
+            call reply_message("lmao I'll hook you up with them next year") 
+            
+            call message("Rori", "UwU", "roriavi.png") 
+            call message("Rori", "I'm glad you didn't die or get arrested", "roriavi.png") 
+            
+            call reply_message("same to you") 
+            call reply_message("i just hit my head so I think i'm outta commission for the rest of the weekend") 
+            
+            call message("Rori", "Oki", "roriavi.png") 
+            call message("Rori", "I'm just gonna chill too", "roriavi.png") 
+            call message("Rori", "Lemme know if you want me to come over and bring some vidya", "roriavi.png") 
+            
+            call reply_message("k") 
+            
+            call phone_end
+                
+            jump ch2End
         
     else:
         n "At least you can get some extra credit by going to that parade today."
@@ -2096,7 +2300,7 @@ label raidStart:
         show box with Dissolve(.2):
             ypos 0
         
-        if mishkaMall == True    
+        if mishkaMall == True:
             n "Today's the day you finally get to hang out with Mishka."
             n "You put on your nicest casual clothes and head out."
         
@@ -2325,5 +2529,18 @@ label raidStart:
         
         scene bg black with fade
         
+        scene bg codadorm with fade
+        
+        show box with Dissolve(.2):
+            ypos 0
+        
+        jump ch2End
+
+        
 label ch2End:
     n "The rest of your weekend passes uneventfully."
+    n "You just recover from all the adventure of the past couple of days, browsing the web, doing a bit of studying, resting up for your return to class."
+    
+    
+    
+    jump ending

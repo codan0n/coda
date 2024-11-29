@@ -172,7 +172,7 @@ define y_margaret = 1570
 define y_rori = 1565
 define y_rose = 1400
 define y_gunner = 1595
-define y_mere = 1200
+define y_mere = 1250
 define y_herschel = 1485
 define y_celestine = 1600
 define y_claire = 1825
@@ -182,6 +182,7 @@ define y_ava = 1465
 define y_mishka = 1550
 define y_roth = 1550
 define y_nicodemus = 1550
+define y_trish = 1550
 
 
 #old mishka text color a4cffc
@@ -2527,8 +2528,8 @@ label ending:
     ###
     n "Thanks for playing!"
     n "More to come in a future update!"
-    n "Credits in the about section on the main menu."
-    n "sprite highlighting code: Sodora"
+    n "Credits in the \"About\" section on the main menu."
+    #n "sprite highlighting code: Sodora"
 #    n "Writing: - Codanon, anonymous"
 #
 #    n "Art: anonymous, @birdsarealright, @lizardsart89, @_zokhan, @_ronvi/@wiskors, @majisuta022, @rexhastala, @spakka5, @baronboar, machapigeon, Mono/Proton, Loanshark, @videobun_art, @PennsArtStudio, @ljesak, @Katnay3, @BaronBoar, Nevrax Design Team"

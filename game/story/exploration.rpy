@@ -584,7 +584,7 @@ label linaTown:
     n "People walk by, some dropping coins and bills into the open saxophone case at the performer's feet."
     n "She even has an electronic card reader set up for tips as well."
     n "Beggars sure have gotten pretty advanced these days."
-    n "When she finishes her song she waves to you. You should have expected this. You haven't donated anything yet but you're the only one who hadn't quickly moved on."
+    n "When she finishes her song she waves to you. You should have expected this. You haven't donated anything yet but you're the only one who hadn't walked away."
     
     show lina at center with dissolve:
         ypos y_lina
@@ -636,13 +636,13 @@ label linaTown:
     menu:
         lina "{cps=0}Unless you've got someplace to be...{/cps}"
         "Stay and chat.":
-            #finished
             $ goodEnd = goodEnd + 1
+            
             player "In that case, I suppose I can stay and chat a while longer."
             
             lina @ say "Yeah it's totally fine! I need a break from playing every now and then anyway."
             
-            n "She picks up a bottle of water from next to her case and takes a sip."
+            #n "She picks up a bottle of water from next to her case and takes a sip."
             
             player "I take it you're in the band at Harmonia?"
             
@@ -681,7 +681,8 @@ label linaTown:
             
             player "Right... well it was nice finally meeting you Lina! I'm gonna head back to my dorm for now but don't be afraid to say hi if you spot me later!"
             
-            lina @ say "I'll try! It was nice to finally hear your voice!"
+            #lina @ say "I'll try! It was nice to finally hear your voice!"
+            lina @ say "I'll try!"
             
             n "You should give her a tip."
             
@@ -706,8 +707,8 @@ label linaTown:
             stop channel1 fadeout 1.0
             hide lina with dissolve
         "Leave":
-            #unfinished
             $ avaPoints += 1
+            
             player "Yeah, sorry I have to be somewhere soon."
             
             lina @ say "Ahh ok! Sorry to keep you!"
@@ -763,14 +764,14 @@ label linaTown:
             
             menu:
                 "Like photography?":
-                    $ avaPoints = avaPoints - 2
+                    $ avaPoints = avaPoints - 1
             
                     player "Like how photography is just pointing and clicking?"
                     
                     show ava angry
                     
                     ava @ say "Bite your tongue! Don't talk about what you don't understand!"
-                    ava @ say "Good photographers know how to frame a shot and *create* a message! We have to manage lighting, contrast, color spaces, attention lines, -"
+                    ava @ say "Good photographers know how to frame a shot and *create* a message! We have to manage lighting, contrast, color spaces, attention lines-"
                     
                     player "I dunno, it seems like anybody can just open the camera app on their phone and take a good shot."
                     
@@ -788,17 +789,44 @@ label linaTown:
                     
                     ava @ say "That-!"
                     ava @ say "Hmph! What does she know?"
-                "You're overreacting.":
                     
-                    n "ava bitches about never getting paid for her art, recounts not selling anything at a fair"
+                    n "With a huff, Ava takes off to the skies."
+                    n "Yeah, you kinda feel like you're done with the day too."
+                "Try to calm her down":
+                    $ avaPoints += 1
+                    
+                    n "You put on your gentle voice like you're talking to a child and try your best to pacify her."
+                    
+                    player "She's just a street performer. It's cheap entertainment for whatever cash people happen to have."
+                    
+                    ava @ say "Is that so?"
+                    
+                    player "Yeah, she's like a hobo begging for spare change. I kinda felt bad for her."
+                    
+                    n "Ava cracks the tiniest of smiles. Whatever you're doing is working."
+                    
+                    ava @ say "I guess it's actually kinda pitiful."
+                    ava @ say "I mean, can you imagine me out on the streets trying to sell photo prints?"
+                    
+                    player "No, you're a *real* artist. You're not in it for the quarters and dimes, you make *art* for the sake of expression."
+                    
+                    ava @ say "Exactly! It's so sad how few people realize that!"
+                    
+                    player "It's such a struggle. Only smart people can truly understand what true art means."
+                    
+                    ava @ say "Finally, someone who gets it!"
+                    
+                    player "Wanna go check out the art exhibits around town with me?"
+                    
+                    ava @ say "Of course!!!"
+                    
+                    n "Hook line and sinker. It's that easy."
+                    n "Ava leans on you as you walk around town, wandering through photo galleries and museum halls full of paintings and statues."
+                    n "She laughs at your dumb jokes and, it might just be your imagination but it seems as if she looks into your eyes longingly."
+                    n "Evening comes and you have to part ways but you get the feeling she'd love to do this again sometime."
             
             stop channel1 fadeout 1.0
             stop music fadeout 1.5
-            
-    
-    
-    
-    
    
     return
 
