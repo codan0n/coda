@@ -173,14 +173,14 @@ define y_rori = 1565
 define y_rose = 1400
 define y_gunner = 1595
 define y_mere = 1250
-define y_herschel = 1485
+define y_herschel = 1515
 define y_celestine = 1600
 define y_claire = 1825
 define y_kitsuragi = 1500
 define y_lina = 1570
 define y_ava = 1465
 define y_mishka = 1550
-define y_roth = 1550
+define y_roth = 1750
 define y_nicodemus = 1550
 define y_trish = 1550
 
@@ -224,6 +224,96 @@ layeredimage ava typical neutral:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava typical neutral.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava typical whimsical:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava typical whimsical.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava typical suggestive:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava typical suggestive.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava typical smug:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava typical smug.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava typical concerned:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava typical concerned.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava typical enamored:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava typical enamored.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava typical motivated:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava typical motivated.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava typical unamused:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava typical unamused.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava pose whimsical:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava pose whimsical.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava pose smug:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava pose smug.png'
     group saying:
         xzoom .9
         yzoom 1.0
@@ -530,6 +620,16 @@ layeredimage ava profile whimsical:
         pos (-135,-30)
         attribute say:
             "images/bubble.png"
+layeredimage ava profile smug:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava profile smug.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-135,-30)
+        attribute say:
+            "images/bubble.png"
 layeredimage ava profile happy:
     at sprite_highlight('ava')
     always:
@@ -787,13 +887,39 @@ layeredimage celestine neutral:
     always:
         'images/characters/celestine/celestine neutral.png'
     group saying:
+        xzoom .7
+        yzoom .60
+        pos (145,106)
         attribute say:
             "images/bubble.png"
-layeredimage celestine happy:
+layeredimage celestine confident:
     at sprite_highlight('celestine')
     always:
-        'images/characters/celestine/celestine neutral.png'
+        'images/characters/celestine/celestine confident.png'
     group saying:
+        xzoom .7
+        yzoom .60
+        pos (145,106)
+        attribute say:
+            "images/bubble.png"
+layeredimage celestine explaining:
+    at sprite_highlight('celestine')
+    always:
+        'images/characters/celestine/celestine explaining.png'
+    group saying:
+        xzoom .7
+        yzoom .60
+        pos (145,106)
+        attribute say:
+            "images/bubble.png"
+layeredimage celestine excited:
+    at sprite_highlight('celestine')
+    always:
+        'images/characters/celestine/celestine excited.png'
+    group saying:
+        xzoom .7
+        yzoom .60
+        pos (145,106)
         attribute say:
             "images/bubble.png"
 
@@ -1448,13 +1574,226 @@ layeredimage gunner neutral:
         pos (105,57)
         attribute say:
             "images/bubble.png"
+layeredimage gunner annoyed:
+    at sprite_highlight('gunner')
+    always:
+        'images/characters/gunner/gunner annoyed.png'
+    group saying:
+        xzoom .8
+        yzoom .72
+        pos (105,57)
+        attribute say:
+            "images/bubble.png"
+layeredimage gunner charming:
+    at sprite_highlight('gunner')
+    always:
+        'images/characters/gunner/gunner charming.png'
+    group saying:
+        xzoom .8
+        yzoom .72
+        pos (105,57)
+        attribute say:
+            "images/bubble.png"
+layeredimage gunner cheeky1:
+    at sprite_highlight('gunner')
+    always:
+        'images/characters/gunner/gunner cheeky1.png'
+    group saying:
+        xzoom .8
+        yzoom .72
+        pos (105,57)
+        attribute say:
+            "images/bubble.png"
+layeredimage gunner cutie:
+    at sprite_highlight('gunner')
+    always:
+        'images/characters/gunner/gunner cutie.png'
+    group saying:
+        xzoom .8
+        yzoom .72
+        pos (105,57)
+        attribute say:
+            "images/bubble.png"
+layeredimage gunner determined:
+    at sprite_highlight('gunner')
+    always:
+        'images/characters/gunner/gunner determined.png'
+    group saying:
+        xzoom .8
+        yzoom .72
+        pos (105,57)
+        attribute say:
+            "images/bubble.png"
+layeredimage gunner disgusted:
+    at sprite_highlight('gunner')
+    always:
+        'images/characters/gunner/gunner disgusted.png'
+    group saying:
+        xzoom .8
+        yzoom .72
+        pos (105,57)
+        attribute say:
+            "images/bubble.png"
+layeredimage gunner displeased:
+    at sprite_highlight('gunner')
+    always:
+        'images/characters/gunner/gunner displeased.png'
+    group saying:
+        xzoom .8
+        yzoom .72
+        pos (105,57)
+        attribute say:
+            "images/bubble.png"
+layeredimage gunner eyesclosed catface:
+    at sprite_highlight('gunner')
+    always:
+        'images/characters/gunner/gunner eyesclosed catface.png'
+    group saying:
+        xzoom .8
+        yzoom .72
+        pos (105,57)
+        attribute say:
+            "images/bubble.png"
+layeredimage gunner eyesclosed smile:
+    at sprite_highlight('gunner')
+    always:
+        'images/characters/gunner/gunner eyesclosed smile.png'
+    group saying:
+        xzoom .8
+        yzoom .72
+        pos (105,57)
+        attribute say:
+            "images/bubble.png"
+layeredimage gunner frown1:
+    at sprite_highlight('gunner')
+    always:
+        'images/characters/gunner/gunner frown1.png'
+    group saying:
+        xzoom .8
+        yzoom .72
+        pos (105,57)
+        attribute say:
+            "images/bubble.png"
+layeredimage gunner gruff:
+    at sprite_highlight('gunner')
+    always:
+        'images/characters/gunner/gunner gruff.png'
+    group saying:
+        xzoom .8
+        yzoom .72
+        pos (105,57)
+        attribute say:
+            "images/bubble.png"
+layeredimage gunner hissing:
+    at sprite_highlight('gunner')
+    always:
+        'images/characters/gunner/gunner hissing.png'
+    group saying:
+        xzoom .8
+        yzoom .72
+        pos (105,57)
+        attribute say:
+            "images/bubble.png"
+layeredimage gunner itsover:
+    at sprite_highlight('gunner')
+    always:
+        'images/characters/gunner/gunner itsover.png'
+    group saying:
+        xzoom .8
+        yzoom .72
+        pos (105,57)
+        attribute say:
+            "images/bubble.png"
+layeredimage gunner mischief:
+    at sprite_highlight('gunner')
+    always:
+        'images/characters/gunner/gunner mischief.png'
+    group saying:
+        xzoom .8
+        yzoom .72
+        pos (105,57)
+        attribute say:
+            "images/bubble.png"
+layeredimage gunner motivated:
+    at sprite_highlight('gunner')
+    always:
+        'images/characters/gunner/gunner motivated.png'
+    group saying:
+        xzoom .8
+        yzoom .72
+        pos (105,57)
+        attribute say:
+            "images/bubble.png"
+layeredimage gunner optimistic:
+    at sprite_highlight('gunner')
+    always:
+        'images/characters/gunner/gunner optimistic.png'
+    group saying:
+        xzoom .8
+        yzoom .72
+        pos (105,57)
+        attribute say:
+            "images/bubble.png"
+layeredimage gunner pissed:
+    at sprite_highlight('gunner')
+    always:
+        'images/characters/gunner/gunner pissed.png'
+    group saying:
+        xzoom .8
+        yzoom .72
+        pos (105,57)
+        attribute say:
+            "images/bubble.png"
+layeredimage gunner snoring:
+    at sprite_highlight('gunner')
+    always:
+        'images/characters/gunner/gunner snoring.png'
+    group saying:
+        xzoom .8
+        yzoom .72
+        pos (105,57)
+        attribute say:
+            "images/bubble.png"
+layeredimage gunner uncomfy:
+    at sprite_highlight('gunner')
+    always:
+        'images/characters/gunner/gunner uncomfy.png'
+    group saying:
+        xzoom .8
+        yzoom .72
+        pos (105,57)
+        attribute say:
+            "images/bubble.png"
+layeredimage gunner wink catface:
+    at sprite_highlight('gunner')
+    always:
+        'images/characters/gunner/gunner wink catface.png'
+    group saying:
+        xzoom .8
+        yzoom .72
+        pos (105,57)
+        attribute say:
+            "images/bubble.png"
+layeredimage gunner wink frown:
+    at sprite_highlight('gunner')
+    always:
+        'images/characters/gunner/gunner wink frown.png'
+    group saying:
+        xzoom .8
+        yzoom .72
+        pos (105,57)
+        attribute say:
+            "images/bubble.png"
         
 
 layeredimage herschel:
     at sprite_highlight('herschel')
     always:
-        'images/characters/herschel.png'
+        'images/characters/herschel/herschel neutral.png'
     group saying:
+        xzoom .85
+        yzoom .72
+        pos (70,29)
         attribute say:
             "images/bubble.png"
             
@@ -1486,6 +1825,26 @@ layeredimage mishka anxious smile:
     at sprite_highlight('mishka')
     always:
         'images/characters/mishka/mishka anxious smile.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka asleep:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka asleep.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka anxious neutral:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka anxious neutral.png'
     group saying:
         xzoom .95
         yzoom 1
@@ -1842,6 +2201,16 @@ layeredimage mishka neutral eyesclosed:
         pos (-70,-7)
         attribute say:
             "images/bubble.png"
+layeredimage mishka neutral eyesclosed tongueout:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka neutral eyesclosed tongueout.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
             
             
 layeredimage kitsuragi:
@@ -1912,6 +2281,76 @@ layeredimage rori worried:
     at sprite_highlight('rori')
     always:
         'images/characters/rori/rori worried.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori smug:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori smug.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori supersmug:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori supersmug.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori asleep:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori asleep.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori worried noblush:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori worried noblush.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori cheery blush:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori cheery blush.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori smirk lookingaway:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori smirk lookingaway.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori smirk:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori smirk.png'
     group saying:
         xzoom .75
         yzoom .6
@@ -2238,6 +2677,9 @@ layeredimage rothbauer:
     always:
         'images/characters/rothbauer.png'
     group saying:
+        xzoom .9
+        yzoom .8
+        pos (220,147)
         attribute say:
             "images/bubble.png"
             

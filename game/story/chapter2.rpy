@@ -4476,6 +4476,15 @@ label ellen_feeding_ducks:
     n "Gunner picks up the empty box of dino nuggies you left beside your microwave."
     
     gunner @ say "You even have a microwave! They don't allow us peasants to have these because someone managed to burn down a whole dorm building with one."
+    
+    player "I thought you were supposed to be loaded. Why aren't you living in this building or like some mansion?"
+    
+    gunner @ say "And miss out on the authentic college experience? Nah bro, couldn't be me."
+    gunner @ say "I like having a roommate and slumming it up eating ramen noodles like I was raised on the street."
+    
+    rori @ say "Dude you buy imported authentic ramen that cost like $40 per bowl."
+    
+    gunner @ say "I know right? Isn't poor people food just the best?"
 
     show claire sweater lusty alert
 

@@ -25,15 +25,18 @@ label roriDormIntro:
             
             rori @ say "H-hey, a few kilowatts is nothing in the grand scheme of things."
             
-            show rori neutral
+            show rori asleep
             
             rori @ say "Besides there's a nuclear power plant nearby that generates plenty of electricty."
         "Based electricity thief.":
             player "Based electricity thief."
             
-            show rori smile lookingaway
+            show rori smirk
             
             rori @ say "It's not stealing if they're giving it away for free."
+            
+            show rori supersmug
+            
             rori @ say "If they didn't want me using 11000 watts, they shouldn't have given me so many electric sockets."
             
             player "I don't think they accounted for daisy chaining power strips like that. Seems like a fire hazard."

@@ -285,7 +285,7 @@ label movingOn:
     
     hide nicodemus with dissolve
     
-    n "Even as the sun began to set, the campus was swarming with freshly admitted students either in tour groups or exploring their new surroundings on their own."
+    #n "Even as the sun began to set, the campus was swarming with freshly admitted students either in tour groups or exploring their new surroundings on their own."
     n "You don't have much time to spare, so you make your way to your scheduled orientation meeting."
 
 label college_orientation:
@@ -332,7 +332,7 @@ label college_orientation:
     #n "Please deer god, you pray whoever it is doesn't sit there. You've had a rough day and don't want to have to make friends already."
     n "A moment later, a nerdy looking ram squeezes past you and sits in it."
     
-    show rori neutral at center with moveinright:
+    show rori concerned at center with moveinright:
         ypos y_rori
         xpos 1400
         
@@ -356,11 +356,14 @@ label college_orientation:
 
     play music "audio/ambient/indoors people talking.ogg" fadein 1.5
 
-    show rori neutral at center with dissolve:
+    show rori worried at center with dissolve:
         ypos y_rori
         xpos 1400
 
     rori @ say "Hey um... Gosh, I don't know how to do this."
+    
+    show rori neutral
+    
     rori @ say "My name's Rori. What's yours?"
 
     $ nameValid = False
@@ -422,12 +425,21 @@ label college_orientation:
         "That's wrong":
             jump namescript
 
+    show rori cheery
+    
     rori @ say "Nice to meet you too!"
     rori @ say "..."
+    
+    show rori worried noblush
+    
     rori @ say "So... uhhh..."
+    
+    show rori neutral
+    
     rori @ say "What are you majoring in?"
     
-    n "Wow, no 'Are you really a human? I thought your kind went the way of the dinosaurs!' like you've heard countless times."
+    n "Wow, no 'Are you really a human? I thought your kind went the way of the dinosaurs!'"
+    n "Like you've heard countless times."
 
     player "I haven't really decided yet. Thought I'd figure it out while I'm here. What about you?"
 
@@ -446,10 +458,16 @@ label college_orientation:
             show rori neutral
 
             player "That stuff's a bit too nerdy for me."
+            
+            show rori smirk lookingaway
 
             rori @ say "Oh... that's understandable. It's not for everyone."
+            
+            n "There's a hint of smugness to his voice."
 
             player "It requires a lot of math knowledge, doesn't it?"
+            
+            show rori neutral -lookingaway
 
             rori @ say "Sorta? I mean it helps to have a solid understanding of algebraic equations and trigonometry."
 
@@ -473,8 +491,12 @@ label college_orientation:
             show rori neutral
 
             player "You play any games? I got really into World of Boarcraft a few years ago."
+            
+            show rori soyface
 
             rori @ say "I love World of Boarcraft! I used to skip school all the time just to play it."
+            
+            show rori neutral
 
             player "Not recently, I hope. The newer expansions kinda turned that game into hot garbage."
 
@@ -484,6 +506,9 @@ label college_orientation:
             player "Making games would be pretty cool. I've always had ideas but never the skills or willpower to actually make anything. It seems like it would be really hard."
 
             rori @ say "Oh you bet it is. I've messed around with some game engines before and it can quickly get overwhelming."
+            
+            show rori anxious
+            
             rori @ say "I've got something I've been working on for a few years. I hope I can still work on it here but I heard my compsci professor likes to assign a lot of homework."
 
             player "Damn. Well good luck with that."
@@ -496,6 +521,8 @@ label college_orientation:
             show rori neutral
 
             player "That's cool. At least you know what you wanna do."
+            
+            show rori cheery blush
 
             rori @ say "Haha thanks but I'm actually not sure about that. It's a pretty broad field and I don't exactly know where I'm gonna end up."
 
@@ -511,7 +538,11 @@ label college_orientation:
 
             player "I get what you mean. I'm just here to figure out what I'll enjoy doing for the rest of my life."
             
+            show rori cheery
+            
             rori @ say "No plans huh? Well I hope you can figure something out sooner than later!"
+            
+            show rori neutral
             
             player "Thanks, me too haha."
 
@@ -593,6 +624,8 @@ label college_orientation:
     
     show margaret neutral at flipright
     
+    pause .5
+    
     margaret @ say "You, in the pink sweater!"
 
     hide margaret with dissolve
@@ -605,7 +638,7 @@ label college_orientation:
     
     show claire sweater derp
     
-    claire @ say "Hiiiii, my name's Claire and I left my major undecided cause, well, I couldn't decide what to do!"
+    claire @ say "Hiiiii, my name's Claire and I left my major undecided 'cause, well, I couldn't decide what to do!"
     
     show claire sweater wave happy
     
@@ -614,6 +647,9 @@ label college_orientation:
     show claire sweater overjoyed 
     
     claire @ say "I got to go to a national tournament once and came in third place!"
+    
+    show claire sweater happy -wave
+    
     claire @ say "It was fun but I'm always looking for new things to try!"
 
     hide claire with dissolve
@@ -628,6 +664,12 @@ label college_orientation:
     show margaret neutral at flipleft
     
     pause .6
+    
+    show margaret neutral at flipright
+    
+    pause .6
+    
+    show margaret neutral at flipleft
 
     margaret @ say "..."
     margaret @ say "How about you!"
@@ -639,7 +681,7 @@ label college_orientation:
     n "You let out a quiet sigh and rise from your seat."
 
     player "Hi, my name's [name] and I'm also an undecided major, mostly for the same reason. I guess something that's interesting about me is that I'm the last human on Earth."
-    player "Which is probably the reason I got accepted here with a full scholarship, cause it sure wasn't my grades."
+    player "Which is probably the reason I got accepted here with a full scholarship, 'cause it sure wasn't my grades."
 
     show margaret melancholy
 
@@ -688,6 +730,7 @@ label college_orientation:
     ava @ say "No way! I'm in there too! What room number?"
     
     show ava happy
+    show claire earsup
 
     claire @ say "209A!"
     
@@ -737,7 +780,7 @@ label college_orientation:
 
     rori @ say "Where's your par-"
 
-    show rori anxious
+    show rori anxious at shudder
 
     rori @ say "...Oh. Sorry."
     
@@ -749,7 +792,7 @@ label college_orientation:
 
     rori @ say "A-anyway...! I'm staying in Edgar Hall! What dorm do you live in?"
     
-    show rori flattered blushing
+    show rori neutral -lookingaway
 
     player "I'm over in Swanson."
     
@@ -762,6 +805,10 @@ label college_orientation:
     show rori cheery
 
     rori @ say "Hah, yeah I guess..."
+    
+    show rori neutral
+    
+    rori @ say "..."
 
     pause .3
     show rori neutral at flipright
@@ -779,10 +826,15 @@ label college_orientation:
 
     player "Wow, that's uh... tough."
 
-    show rori neutral
+    show rori worried noblush
 
     rori @ say "They just want to see me succeed. I'd probably live in their basement playing games for the rest of my life if they didn't force me out."
+    
+    show rori soyface
+    
     rori @ say "But I am actually really excited to have some freedom for once now that I'm no longer under their supervision!"
+    
+    show rori neutral
 
     player "That's a good attitude to have."
 
@@ -799,8 +851,8 @@ label college_orientation:
     rori @ say "I haven't had it online in over 48 hours and I need to run some updates. I hope my package manager doesn't break my Xorg session again..."
 
     if calledRoriNerd == False:
-        rori "{cps=0}I haven't had it online in over 48 hours and I need to run some updates. I hope my package manager doesn't break my Xorg session again...{/cps}"
         menu:
+            rori "{cps=0}I haven't had it online in over 48 hours and I need to run some updates. I hope my package manager doesn't break my Xorg session again...{/cps}"
             "Cool, you use Loonix?":
                 $ roriPoints =+ 1
                 
@@ -808,18 +860,27 @@ label college_orientation:
             
                 player "You use Loonix? That's so cool."
                 
+                show rori happy
+                
                 rori @ say "Of course! Using an operating system that respects your freedom is just so comfy!"
                 rori @ say "And I can customize it however I want!"
                 
-                n "Rori lowers his voice and asks shyly."
+                show rori flattered blushing
                 
-                show rori smile lookingaway blush
+                n "Rori lowers his voice and asks shyly."
                 
                 rori @ say "Um, would you like to see my riced out tiling window manager setup?"
                 rori @ say "I just rewrote my conf files from scratch a couple weeks ago."
+                
+                show rori smug -blushing
+                
                 rori @ say "We can play some games and stuff too."
                 
                 player "Sure. Lead the way."
+                
+                show rori laugh
+                
+                rori @ say "*happy bleat*"
                 
                 n "Rori seems excited to have someone to nerd out with as he takes you to his dorm."
                 
@@ -852,11 +913,11 @@ label college_orientation:
                 
                 player "Damn, your password must be longer than the Pentagon's. What you hiding on that hard drive?"
                 
-                show rori smile lookingaway
+                show rori smirk lookingaway
                 
                 n "Rori pushes up his glasses and smirks."
                 
-                rori @ say "16 terabytes of anime bluray rips, 4.5 terabytes of games, 750 gigabytes of jpop, and a couple gigs of leaked source code."
+                rori @ say "16 terabytes of anime bluray rips, 4.5 terabytes of games, 750 gigabytes of jpop, and a couple gigs of leaked government documents and source code."
                 
                 player "All legally acquired?"
                 
@@ -882,11 +943,13 @@ label college_orientation:
                 
                 player "Typical linux boot process."
                 
-                show rori neutral
+                show rori worried
                 
                 rori @ say "Haha yeah... Sorry about this but I doubt I'll be able to get this running tonight."
                 
                 player "Does this mean no games?"
+                
+                show rori sleepy blushing
                 
                 n "Rori looks down sadly."
                 
@@ -895,6 +958,8 @@ label college_orientation:
                 n "You point to a console shoved under the desk."
 
                 player "What about that?"
+                
+                show rori neutral -blushing
                 
                 rori @ say "My PS3? I use it as a blueyray player. Or a more often a doorstop."
                 
@@ -916,13 +981,17 @@ label college_orientation:
                 
             "Have fun with that.":
                 show rori neutral
+                
+                n "Sounds like his problem to deal with. That's the price you pay when you let your computer run your life."
             
-                player "Have fun with that. Later."
+                player "Have fun with that. I gotta finish unpacking my own things. See you later."
                 
     else:
         show rori neutral
         
-        player "Have fun with that. Later."
+        n "Sounds like his problem to deal with. That's the price you pay when you let your computer run your life."
+            
+        player "Have fun with that. I gotta finish unpacking my own things. See you later."
     
     rori @ say "Laters!"
 
@@ -1017,18 +1086,22 @@ label exploring_campus:
     if randumb == 0:
         $ metClaire = True
         $ metAva = True
-        n "You almost managed to get to the end without being harassed by anybody."
-        n "Surprisingly it wasn't a club representative, rather it's the chatty girls you saw the day prior."
         
-        show claire sweater neutral at offscreenright:
-                yalign 0
-        show ava typical neutral at offscreenleft:
-            yalign 0
-
+        n "You almost managed to get to the end without being harassed by anybody."
+        
         show claire sweater happy at center:
             ypos y_claire
+            xoffset 2000
+        show ava typical neutral at center:
+            ypos y_ava
+            xoffset -2000
+        
+        n "Surprisingly it wasn't a club representative, rather it's the chatty girls you saw the day prior."
+
+        show claire sweater happy wave:
+            ypos y_claire
             xoffset 400
-        show ava typical happy at center:
+        show ava typical happy:
             ypos y_ava
             xzoom -1
             xoffset -400
@@ -1037,12 +1110,15 @@ label exploring_campus:
         claire @ say "Holy Frith, it's you! You were at the thing last night, weren't you?"
         
         show ava neutral
+        show claire -wave
 
         ava @ say "She means the orientation."
         
         show ava typical happy
 
         player "Nope, you must have me confused for the other human around here."
+        
+        show ava typical smug
 
         n "Ava smirks at your joke but Claire seems to take a second to get it."
 
@@ -1064,12 +1140,12 @@ label exploring_campus:
         
         show ava excited
 
-        ava @ say "Yup!"
+        ava @ say "Yup! Nice to meet you [name]!"
         
         show claire sweater happy -wave
         show ava typical happy
         
-        claire @ say "So what brings you out here, [name]? Looking to join a club?"
+        claire @ say "So what brings you out here? Looking to join a club?"
 
         player "More like looking for a place to get breakfa- err, lunch, but I ended up here somehow."
 
@@ -1086,16 +1162,25 @@ label exploring_campus:
         show ava typical happy
 
         player "So have you signed up for anything so far?"
+        
+        show claire sweater derp
 
         claire @ say "I looked into a bunch but I can't decide which one to join!"
+        
+        show claire sweater happy
+        show ava neutral
 
         ava @ say "I just went for the obvious one and joined the photography club. Thinking about signing up for the cinematography club too. What about you?"
+        
+        show ava happy
 
         player "I'm not really interested in any of them."
         
         show claire giggle
         
         claire @ say "*gasp* We should all join a sorority!"
+        
+        show ava unamused
         
         ava @ say "What? Why?"
         
@@ -1108,10 +1193,17 @@ label exploring_campus:
         
         ava @ say "Pass."
         
+        show claire sad
+        
         claire @ say "Aww, you're no fun."
+        
+        show claire happy
+        show ava happy
+        
         claire @ say "What about you, [name]?"
         
         menu:
+            claire "{cps=0}What about you, [name]?{/cps}"
             "Yah":
                 $ clairePoints =+ 1
                 
@@ -1126,32 +1218,49 @@ label exploring_campus:
                 
                 player "You handle the forms though, I have to run."
                 
+                show ava unimpressed
+                show claire overjoyed
+                
                 n "Ava rolls her eyes while Claire squeals in excitement."
                 
                 claire @ say "Eeeeeee it's gonna be so fun! Ava you're gonna regret not joining!"
                 
+                show ava happy
+                
                 ava @ say "If you say so. We'll see you around, [name]!"
                 
+                show claire happy
+                
                 player "Yeah, later guys."
+                
+                show claire happy wave
                 
                 claire @ say "Byeeeee!!!"
                 
             "Nah":
                 player "Nah."
                 
+                show claire sad
+                
                 claire @ say "Can't a bun have a little fun?"
+                
+                show ava unimpressed
                 
                 ava @ say "No one's stopping you from joining on your own, you know."
                 
                 claire @ say "But I'll be lonely ;^;"
                 
+                show ava shocked
+                
                 ava @ say "Isn't the point of joining one so you *won't* be alone?"
                 
                 claire @ say "I wanna be around my friends though."
                 
-                ava @ say "Then make some in the sorority!"
+                ava @ say "You'll make some in the sorority!"
                 
                 claire @ say "But what if they don't like me?"
+                
+                show ava unimpressed
                 
                 ava @ say "Oh trust me, I think you'll fit right in."
                 
@@ -1162,9 +1271,13 @@ label exploring_campus:
                 
                 player "Yeah you'd make a great sorority girl. Lemme know how it goes, I have to run for now."
                 
+                show claire happy
+                
                 n "Claire quits pouting and instantly brightens up."
                 
                 claire @ say "Sure! See you around, [name]!"
+                
+                show ava happy
                 
                 ava @ say "Later!"
                 
@@ -1361,6 +1474,8 @@ label exploring_campus:
         "Why are the lights off?":
             player "Why are the lights off? Is the shop open?"
             
+            show mishka anxious smile
+            
             mishka "It's just how I like things. I can turn them on if you like."
             
             menu:
@@ -1370,8 +1485,12 @@ label exploring_campus:
                     
                     mishka @ say "Duzhe dobre."
                     
+                    show mishka asleep
+                    
                     n "The barista clenches her eyes shut as she puts a claw to the light switch."
                     n "When the lights come on, she winces and slowly opens her eyes."
+                    
+                    show mishka neutral -anxious
                     
                     mishka @ say "Now what can I get for you?"
                 "Leave them off":
@@ -1379,7 +1498,11 @@ label exploring_campus:
                     
                     player "It's fine, you can leave them off. It's comfier this way."
                     
+                    show mishka anxious neutral
+                    
                     n "She seems pleased with your response."
+                    
+                    show mishka neutral -anxious
                     
                     mishka @ say "Now what can I get for you?"
         "Place your order":
@@ -1755,28 +1878,40 @@ label firstDayOfClass:
         n "Nobody else is brave enough to sit in the front row, leaving you no choice but to take a seat there."
         n "Somone sits right next to you and starts chatting you up like you're best friends."
         
-        show gunner neutral at center with dissolve:
+        show gunner cheeky1 at center with dissolve:
             ypos y_gunner
         
         gunner @ say "Yeah so summer vacation was pretty lit. Went on this week long fishing trip on my dad's yacht with the bros and my portfolio is up 20\% from the start of the quarter."
 
         menu:
+            gunner "{cps=0}Yeah so summer vacation was pretty lit. Went on this week long fishing trip on my dad's yacht with the bros and my portfolio is up 20\% from the start of the quarter.{/cps}"
             "Are you talking to me?":
                 player "Huh? Are you talking to me?"
+                
+                show gunner determined
                 
                 gunner @ say "Uh yeah? That's not a problem is it?"
                 
                 player "No, it's just weird you would think I give a shit about your yacht."
                 
+                show gunner eyesclosed catface
+                
                 gunner @ say "Ohh sorry, sorry! You're more of a helicopter guy I see, my mistake."
+                
+                show gunner wink catface
+                
                 gunner @ say "Man, I need to get one of those for myself. Maybe I'll ask for one for my birthday."
             "Wow money is so cool.":
                 player "Wow money is just so cool, isn't it?"
                 
                 n "He evidently doesn't pick up on your sarcasm, because there isn't a hint of irony in his response."
                 
+                show gunner wink catface
+                
                 gunner @ say "I know right? I don't get why people choose to be poor. It's weird."
 
+        show gunner neutral
+        
         gunner @ say "I'm Gunner by the way! What's your name?"
         
         player "[name]."
@@ -1784,44 +1919,60 @@ label firstDayOfClass:
         n "At least he's not pestering you with questions about what it's like being the last human. In fact, you don't know if he is even aware of that fact."
         n "It seems he's more concerned with his own status and appearance."
         
+        show gunner cheeky1
+        
         gunner @ say "[name], huh? Lemme tell you a funny story."
         gunner @ say "This building was used for the feminist studies college last semester. They switched it over to math over the summer."
+        
+        show gunner mischief
+        
         gunner @ say "So when I saw I had stats here my first thought was \"The hell? Are we gonna learn how to find the hypotenuse while folding laundry or something?\""
         
         menu:
+            gunner "{cps=0}So when I saw I had stats here my first thought was \"The hell? Are we gonna learn how to find the hypotenuse while folding laundry or something?\"{/cps}"
             "Laugh":
                 n "You have to admit, that got a chuckle out of you. You try to hide it, but your true colors make themselves known."
+                
+                show gunner motivated
                 
                 gunner @ say "Hah, don't be afraid to laugh, I know I'm funny!"
             "Don't say anything":
                 n "You pretend you're still waiting for the punchline and remain silent."
                 
+                show gunner frown1
+                
                 gunner @ say "Like folding a towel or something into a triangle and-"
                 
         n "Gunner goes quiet as an old lady walks into the room. That must be the professor."
+        
+    hide gunner with dissolve
 
-    show herschel with dissolve:
-        xpos 0
+    show herschel at center with dissolve:
+        ypos y_herschel
 
     herschel @ say "Good afternoon everyone! My name is Mrs. Herschel and I'm very excited to teach probability and statistics again this year!"
     pause .1
     herschel "{nw}"
     
     show herschel with move:
-        xoffset 250
+        xoffset 270
 
-    show gunner neutral at center with dissolve:
+    show gunner wink catface at center with dissolve:
         xzoom -1
         ypos y_gunner
-        xoffset -450
+        xoffset -470
 
     gunner @ say "Looking good, Mrs. Herschel! I'm very excited to learn probability and statistics again this year!"
 
     herschel @ say "Flattery will get you nowhere Gunner. I'm afraid you'll be learning this subject for the first time this year judging by your grades last year."
+    
+    show gunner displeased
 
     gunner @ say "Hey I still remember y = mx + b!"
 
     herschel @ say "That's geometry, dear."
+    
+    show gunner frown1
 
     gunner @ say "..."
     gunner @ say "Oh yeah."
@@ -1831,7 +1982,8 @@ label firstDayOfClass:
     show herschel with move:
         xoffset 0
 
-    herschel @ say "That reminds me, I wanted to point out this can be a very challenging class. I recommend spending half an hour every night studying the textbook and working through the example problems."
+    herschel @ say "That reminds me, I wanted to point out this can be a very challenging class."
+    herschel @ say "I recommend spending half an hour every night studying the textbook and working through the example problems."
     #herschel @ say "That being said, feel free to ask as many questions as you'd like! If a student fails, then I've failed as a teacher after all."
     herschel @ say "Now then, we have much to get through and not a lot of time, so let's begin with some basics! A set is defined as a collection of elements..."
 
@@ -1871,7 +2023,7 @@ label secondDayOfClass:
         ypos 0
 
     n "You roll out of bed and start your morning ritual in preparation for class."
-    n "Today you have Literature and then French Language."
+    n "Today you have Literature 101 and then Intro to French Language."
     n "A couple weeks ago you received an email with the books you'll need. The first one you'll be going over in literature is the novella \"The Death of Ivan Ilyich.\""
     n "You pack your ebook reader that's loaded with all the books you could find on the pirate bay into your bag along with the French textbook and venture out."
 
@@ -1893,18 +2045,21 @@ label secondDayOfClass:
     show margaret happy at center with dissolve:
         ypos y_margaret
 
-    margaret @ say "Good morning and welcome to Literature I!"
+    margaret @ say "Good morning and welcome to Literature 101!"
     margaret @ say "Today we'll go over the syllabus and what you can expect from this class. Then we'll finish up with some discussion on the assigned reading!"
 
-    n "She clicks a button and the slideshow advances to the next slide, going over some information about herself."
-    
     show margaret neutral
+
+    n "She clicks a button and the slideshow advances to the next slide, going over some information about herself."
 
     margaret @ say "My name is Miss Ellen and I've been teaching at Harmonia for about a decade so I like to think I've gotten quite good at it!"
 
     show margaret sad at shudder
 
     margaret @ say "Oop, ignore the Mrs. in front of my name on the slide... I guess I forgot to update that..."
+    
+    show margaret melancholy
+    
     margaret @ say "Haha recently divorced... you know how it goes..."
 
     n "She quickly advances forward a few more slides."
@@ -1967,32 +2122,41 @@ label secondDayOfClass:
     else:
         n "You've seen that fat rabbit before. She's the ditzy girl from orientation night."
         
-    show claire outdoors embarassed at center with moveinleft:
+    show celestine with move:
+        xoffset 400
+        
+    show claire sweater flustered at center with moveinleft:
         xzoom -1
-        xpos -650
-
+        xoffset -480
+        ypos y_claire
+        
     claire @ say "*Huff huff* Sorry I'm late!"
     
     celestine @ say "Pas de soucis! You must be Madame Whitney!"
     ###ah please join us sil vous plais, madame,whitney
     
+    show claire sweater derp
+    
     claire @ say "Ksksksks just Claire is fine!"
+    
+    show celestine excited
     
     celestine @ say "Very well! Please take a seat and we'll begin introductions!"
     
-    #show claire sweater neutral
+    hide celestine with dissolve
+    
+    show claire sweater happy with move:
+        xoffset 500
+        
+    pause .05
+
+    show claire at flipleft
 
     n "Claire makes her way over to the desks and looks you dead in the eye."
 
-    show claire sweater neutral at center with move:
-        xpos 560
-
-    pause .05
-
-    show claire sweater happy center:
-        ypos y_claire
-
     if metClaire == False:
+        show claire sweater leaning suggestive
+        
         claire @ say "Heyyy cutie~"
         claire @ say "Mind if I sit next to you?"
         
@@ -2000,20 +2164,29 @@ label secondDayOfClass:
             "Sure?":
                 player "I guess not?"
                 
+                show claire sweater pose laughing
+                
                 claire @ say "Good, cause I was gonna sit here anyway."
             "Go right ahead!":
                 $ clairePoints =+ 1
+                
                 player "Go ahead! Here lemme get that for you."
                 
                 n "You pull the chair out for her, just to be nice."
                 
+                show claire sweater pose laughing
+                
                 claire @ say "Such a gentleman! Ksksksks!"
         
-        claire @ say "I'm Claire bee tee double you~"
+        show claire sweater suggestive
+        
+        claire @ say "I'm Claire bee tee double-U~"
          
         n "The plastic of the chair squeals and groans under the weight of the oversized rabbit with the bun's buns barely even able fit on the seat."
         n "Not that you were staring, it's just hard to ignore an object so immense it bends space and time and curves the path of the photons straight into your pupils."
     else:
+        show claire sweater overjoyed
+    
         claire @ say "OMG [name]! You're in this class too??? How unexpected!"
         
         show claire sweater suggestive
@@ -2027,8 +2200,14 @@ label secondDayOfClass:
         n "Claire takes the seat next to yours and starts rummaging around in her bag."
 
     hide claire with dissolve
+    
+    show celestine excited at center with dissolve:
+        ypos y_celestine
 
     celestine @ say "Génial! Looks like everyone is present and accounted for!"
+    
+    show celestine neutral
+    
     celestine @ say "I'll say a few things about myself, then you can all tell me about yourselves and why you decided to learn French!"
     celestine @ say "I was born in France and learned both French and English before moving to America at a young age."
     celestine @ say "In high school I studied Arcoonian, then in college I learned a bit of Pandarianese."
@@ -2045,15 +2224,29 @@ label secondDayOfClass:
     pause .3
 
     celestine @ say "Starting with you, since you were late!"
+    
+    pause .3
+    
+    show celestine with move:
+        xoffset -400
+        
+    pause .3
 
     show claire sweater derp at center with dissolve:
         ypos y_claire
+        xoffset 300
 
     claire @ say "Umm like, I dunno, I kinda just picked it on a whim! I guess I like to try new things and leave things to chance!"
 
     hide claire with dissolve
 
     celestine @ say "Good! That mindset has lead me to some very... intéressante places in the world."
+    
+    pause .1
+    
+    show celestine with move:
+        xoffset 0
+        
     celestine @ say "Next up, you there!"
 
     menu:
@@ -2064,12 +2257,14 @@ label secondDayOfClass:
 
             player "Same as Claire, it was just kind of random and all the other language classes were taken."
 
-            show celestine happy
+            show celestine excited
 
             celestine @ say "Ah, perhaps it was fate then!"
+            
             celestine @ say "Do you believe in fate?"
             
             menu:
+                celestine "{cps=0}Do you believe in fate?{/cps}"
                 "Not really":
                     player "Like I was somehow meant to be here? Not really."
                     
@@ -2186,16 +2381,20 @@ label secondDayOfClass:
     n "Claire waves to the bird in the distance holding a camera pointed in your general direction."
     n "She seems annoyed as she looks over the viewfinder and flutters over."
     
-    show claire sweater happy -wave
+    #gunner "{nw}"
+    pause .3
+    
+    show claire sweater happy -wave with move:
+        xoffset -450
     show ava pose annoyed at center with moveinright:
         ypos y_ava
-        xoffset 375
+        xoffset 450
         
     claire @ say "What's up?"
 
     ava @ say "You know, street photography is sorta like wildlife photography."
     
-    show claire sweater surprised
+    show claire sweater surprised earsup
 
     claire @ say "What do you mean?"
 
@@ -2212,6 +2411,8 @@ label secondDayOfClass:
     show ava typical happy
     
     if metAva == False:
+        show claire sweater happy -earsup
+        
         ava @ say "I see you brought a friend."
         ava @ say "I'm Ava. Claire and I are roommates."
         
@@ -2232,20 +2433,24 @@ label secondDayOfClass:
         show ava typical unamused
         
         ava @ say "I'm more in it for the artistic qualities but I suppose street photography and reconaissance have their similarities."
-        
-        
-        
     else:
         ava @ say "I see you've found that boy you totally don't have a crush on."
         
+        show claire sweater flustered
+        
         claire @ say "Wh-who, [name]?? We just happened to have French together just now! I wasn't, like, stalking him or anything!"
         
+        show ava typical suggestive
+        
         ava @ say "Sure~"
+        
+        show ava smug
         
         n "You get the feeling that some part of this conversation has flown over your head, but are struggling to decipher what these ladies could possibly be talking about."
         n "You had your suspicions that Claire might be into you, but Ava's exceptionally straightforward words have put that idea to rest."
         
     show claire sweater happy
+    show ava happy
     
     claire @ say "Oop, I have to be in class in a minute! But we should all get lunch later!"
     
@@ -2276,13 +2481,22 @@ label secondDayOfClass:
             
             n "Claire pulls you into a suffocating hug. Ava has to pry her off of you."
             
-            show ava pose ohyou
+            show ava pose whimsical
             
             ava @ say "Come on Claire, we've got class to get to."
             
             show ava pose happy
+            show claire happy wave
             
-            claire @ say "Bye [name]! Wait lemme get your number!!!"
+            claire @ say "Bye [name]!"
+            
+            show claire sweater leaning suggestive
+            
+            claire @ say "Wait!! Lemme get your number!!!"
+            
+            show ava typical excited
+            
+            ava @ say "Oh me too!"
             ###(later) claire "I forgot we don't have class together on wednesdays and wouldn't see each other!"
 
         "I already have plans":
@@ -2291,21 +2505,28 @@ label secondDayOfClass:
             
             player "Sorry, I already have plans. Maybe another time?"
             
+            show claire sweater surprised earsup
+            show ava typical shocked
+            
             claire @ say "Oh uh... sure! When are you free?"
             
             player "Dunno."
             
-            
+            show claire sweater sad
+            show ava typical unimpressed
             
             claire @ say "Oh..."
             
-            
+            show claire sweater derp
             
             claire @ say "Th-that's alright! Just gimme your number and we'll work something out later."
             
             #n "This bunny is desperate to get your phone number. Maybe she *does* have a crush on you."
             n "What's the worst that could happen?"
             
+    show ava typical happy
+    show claire sweater happy
+    
     player "Sure, it's..."
     
     n "Claire and Ava type your digits into their phones."
@@ -2314,7 +2535,11 @@ label secondDayOfClass:
     
     player "See ya!"
     
+    show claire wave
+    
     claire @ say "Byeee~"
+    
+    show ava profile smug
     
     ava @ say "Later!"
     
@@ -2415,9 +2640,14 @@ label thirdDayOfClassStats:
         ypos y_gunner
     
     gunner @ say "Sup [name]!"
+    
+    show gunner motivated
+    
     gunner @ say "You ready to fuck up some mathematics?"
     
     player "I have no idea what that's supposed to mean."
+    
+    show gunner neutral
     
     gunner @ say "It's just an expression."
     gunner @ say "Hey before I forget, lemme get your number."
@@ -2425,15 +2655,24 @@ label thirdDayOfClassStats:
     player "What? Why?"
     
     gunner @ say "So we can help each other with homework problems."
+    
+    show gunner wink catface
+    
     gunner @ say "And y'know chat and stuff."
     
     n "You're not sure if Gunner will make for a good study partner but you can't think of a polite way to say no."
+    
+    show gunner neutral
     
     player "Fine. Here."
     
     n "He types your number into his phone."
     
+    show gunner displeased
+    
     gunner @ say "Shit, here comes Mrs. Herschel. She'll fail you if she sees you on your phone. I'll send you a text later."
+    
+    hide gunner with dissolve
     
     show herschel at center with dissolve:
         ypos y_herschel
@@ -2457,24 +2696,35 @@ label thirdDayOfClassStats:
 
     n "Mrs. Herschel explains how to solve the probability of drawing two queens in a row from a deck of cards."
     n "Gunner leans over and whispers to you."
+    
+    show herschel with move:
+        xoffset 350
 
-    show gunner neutral at center with moveinleft:
+    show gunner disgusted at center with moveinleft:
         xzoom -1
-        xpos -550
-
+        ypos y_gunner
+        xoffset -650
+        
     gunner @ say "Psst [name], did you understand any of that?"
 
     menu:
+        gunner "{cps=0}Psst [name], did you understand any of that?{/cps}"
         "Of course.":
             player "Yeah, it's real basic stuff."
+            
+            show gunner uncomfy
             
             gunner @ say "Really? How the fuck can you move the letters around like that?"
             
             player "It's simple algebra."
             
+            show gunner annoyed
+            
             gunner @ say "Who do I look like, Isaac Newton?"
         "Not really.":
             player "Not really. She's going through it so quickly..."
+            
+            show gunner annoyed
             
             gunner @ say "I know right? This bitch needs to slow down."
 
@@ -2759,21 +3009,33 @@ label thirdDayOfClassStats:
         
         player "And..?"
         
+        show gunner determined
+        
         gunner @ say "Aaaaand you should totally study with me!"
 
         player "Why?"
+        
+        show gunner eyesclosed catface
 
         gunner @ say "Cause I'll buy you lunch if you do."
+        
+        show gunner cheeky1
+        
         gunner @ say "And it'll be fun to hang out more!"
+        
+        show gunner neutral
 
         n "Free lunch is too good to pass up."
 
         player "Fine."
 
         gunner @ say "Yes!!!"
-        gunner @ say "You free right now? Cause I know a good place to study and get some food."
+        
+        show gunner neutral
+        
+        gunner @ say "You free right now? 'Cause I know a good place to study and get some food."
 
-        player "Uhh sure?"
+        player "Yeah I could eat."
 
         stop music fadeout .5
 
@@ -2784,14 +3046,10 @@ label thirdDayOfClassStats:
         show box with Dissolve(.2):
             ypos 0
 
-        show gunner neutral at center with moveinright:
+        show gunner neutral at center with dissolve:
             ypos y_gunner
-        
-        show mishka neutral at center:
-            xoffset -1700
-            ypos y_mishka
 
-        gunner @ say "This is my secret study spot. I like coming here cause it's quiet and the smell of coffee keeps me awake."
+        gunner @ say "This is my secret study spot. I like coming here 'cause it's quiet and the smell of coffee keeps me awake."
         
         player "Yeah this place is cool."
         
@@ -2801,12 +3059,29 @@ label thirdDayOfClassStats:
 
         ava @ say "Ooh both of those sound pretty good."
         
-        show claire sweater happy:
-            xzoom 1
+        show gunner at flipright
+        
+        pause .6
+        
+        show gunner with move:
+            xoffset -650
+            ypos y_gunner
+        
+        show ava typical happy at center:
+            ypos y_ava
+            xoffset 300
+        show claire sweater happy at center:
+            ypos y_claire
+            xoffset 670
+        with dissolve
+        
+        show gunner frown1
 
         claire @ say "Oh my gosh, look who it is! Heyyyy!!!~~~"
         
         n "You turn around and are greeted with an involuntary hug you can't escape from."
+        
+        show ava typical whimsical
         
         ava @ say "Easy there Claire, before you crack his ribs."
         
@@ -2814,18 +3089,37 @@ label thirdDayOfClassStats:
         n "Yet, you feel nothing but comfort, smothered in death's sweet embrace."
         n "Claire eases her grip and you're allowed to breathe once more."
         
+        show gunner optimistic
+        show ava happy
+        show claire sweater giggle
+        
         claire @ say "You alright? Your spine still intact?"
         
         player "I think so."
         
+        show claire sweater laughing
+        
         claire @ say "Good!"
+        
+        show claire sweater happy
+        
         claire @ say "We'll let you two get back to your date now~"
+        
+        show gunner disgusted
         
         gunner @ say "Date?! We just came here to study, that's all!"
         
+        show claire sweater suggestive
+        
         claire @ say "Suuurrree~"
         
+        show gunner optimistic
+        show claire happy
+        show ava pose happy
+        
         ava @ say "Don't let us interrupt you! We're just stopping by real quick to get lunch."
+        
+        show gunner charming
         
         n "Gunner looks at you with a scheming look in his eyes."
         
@@ -2835,23 +3129,42 @@ label thirdDayOfClassStats:
         
         player "Fine."
         
+        show gunner optimistic
+        
         gunner @ say "Perfect! Why don't we all sit together then! I'm Gunner by the way. [name] and I have stats class together."
 
-        show ava pose flattered
+        show ava pose shy
 
         ava @ say "Nice to meet you, Gunner! I'm Ava and this is Claire. We don't have any classes together but we're roommates."
+        
+        show ava pose happy
+        show claire sweater happy earsup
 
         claire @ say "Not to mention besties~"
         
+        show claire sweater happy -earsup
+        show ava pose whimsical
+        
         ava @ say "As close to besties as we can be after knowing each other for less than a week haha."
         
+        show ava pose happy
+        show claire giggle
+        
         claire @ say "Is this what you meant when you said you'd be busy today, [name]?"
+        
+        show claire overjoyed
+        
         claire @ say "You should have told me you were taking stats! I got an A in my advanced statistics and stochastic processes in high school! I'd be down to explain it to you guys!"
+        
+        show gunner disgusted
+        show claire happy
 
         #yik pose 2 gunner here
         gunner @ say "What the fuck are stochastic processes?"
         
         n "The emptiness in your stomach rears its ugly head and demands that you hurry up with this boring small talk."
+        
+        show gunner neutral
         
         player "You all know what you want? I'm ready to order."
         
@@ -2859,22 +3172,43 @@ label thirdDayOfClassStats:
         
         n "You make your way to the counter where Mishka is standing, watering the plants that adorn the area."
         
-        show mishka neutral:
+        hide gunner
+        hide claire
+        hide ava
+        with dissolve
+        
+        show mishka neutral at center with moveinleft:
             xzoom -1
-            xpos -400
-        show gunner:
-            xpos 200
-        with move
-
-        mishka @ say "Hello again, [name]! And nice to see you as well, Gunner!"        
+            ypos y_mishka
+            xoffset -600
+        
+        mishka @ say "Hello again, [name]! And nice to see you as well, Gunner!" 
+        
+        pause .1       
+        
+        show gunner optimistic at center with dissolve:
+            ypos y_gunner
+            xoffset 350
         
         gunner @ say "Heya Mishka! Yeah, I've got a lot of studying to do so expect to see me a lot this semester. Luckily I've got a study buddy to help me out!"
+        
+        show mishka neutral eyesclosed tongueout
 
         mishka @ say "Is that so? Hopefully you're getting paid well, [name]!"
+        
+        show mishka neutral -eyesclosed -tongueout
 
         gunner @ say "Hey, I'm paying for lunch! That's a decent rate!"
+        
+        show mishka nervous
 
-        mishka @ say "If you say so haha"
+        mishka @ say "If you say so xaxa"
+        
+        hide gunner with dissolve
+        
+        show claire sweater happy at center with dissolve:
+            ypos y_claire
+            xoffset 400
         
         claire @ say "Ohmygosh your accent is so cute! Tih rooskie?"
 
@@ -2887,7 +3221,7 @@ label thirdDayOfClassStats:
         n "Mishka turns to show the Ukrainian flag patch on her jacket."
         
         mishka @ say "I am from a village near the border of Ookrainie ta Rossie."
-        mishka @ say "So perhaps some Rossiskie has infected my way of speaking."
+        mishka @ say "So perhaps some Rossiskie has made its way into my speech."
 
         claire @ say "Ahh, mnyeh zshal uhh... kak eto skazat... sleeshad eto. Ya nyemnogo znayu tolkuh Russkie, no slihshal, shto Ookrainskie pokhozh."
         
@@ -2901,78 +3235,154 @@ label thirdDayOfClassStats:
 
         mishka @ say "So, what can I get for you?"
         
+        show gunner neutral at center with dissolve:
+            ypos y_gunner
+            xoffset 700
+        
         gunner @ say "Go ahead and order, you guys. It'll be my treat."
         
         claire @ say "Ohmygosh thank you~~ Such a gentleman!"
         
+        hide gunner with dissolve
+        
+        show ava pose smug at center with dissolve:
+            ypos y_ava
+            xoffset 700
+        
         ava @ say "Wow, that was pretty forward."
-        ava @ say "But I'll take you up on that offer."
+        
+        show ava pose whimsical
+        
+        ava @ say "But I'll take you up on that offer~"
+        
+        show ava pose happy
         
         n "Everyone places their order and Gunner pays for it with a $100 bill. Show off."
         n "He takes the change and dumps it in the barista's tip jar. Oh now he's really showing off."
         
+        show mishka happy
+        
         mishka @ say "Thank you very much!! I will have that ready for you in just a few minutes!"
        
         hide mishka with dissolve
+        
+        show ava:
+            xoffset -350
+        show claire:
+            xoffset -670
+        with move
+        
+        pause .2
+        
+        show claire at flipright
+        pause .1
+        show ava at flipright
+        
+        show gunner neutral at center with moveinright:
+            ypos y_gunner
+            xoffset 600
         
         n "Your small group goes to find a table. Gunner takes the seat beside you and the ladies sit across from you."
 
         jump avaClaireGunnerLunch
 
 label avaClaireGunnerLunch:    
-    show gunner neutral at center with dissolve:
+    show gunner neutral at center with moveinright:
         ypos y_gunner
-        xzoom -1
-        xoffset -550
+        xoffset 600
+
+    show claire sweater suggestive
 
     claire @ say "Thanks again for lunch~"
+    
+    show ava typical happy -pose
+    show claire happy
+    show ava typical happy at hop
     
     ava @ say "Yeah, especially since we're basically strangers!"
     
     gunner @ say "Hey, any friend of [name]'s is a friend of mine!"
     gunner @ say "Besides, what better way to get to know someone than over lunch?"
+    
+    show gunner optimistic
+    
     gunner @ say "You two freshmen? I haven't seen you around before."
+    
+    show ava excited
     
     ava @ say "Yup! I can't believe I actually got accepted here of all places!"
     
+    show claire overjoyed
+    
     claire @ say "I know right?? It's like a dream come true!"
+    
+    show claire happy
+    show ava happy
     
     player "Yeah Harmonia is pretty cool I guess. Never thought I'd end up *here.*"
     
     ava @ say "So, what are you majoring in Gunner?"
     
+    show gunner eyesclosed smile
+    
     gunner @ say "Political science. It's not my passion or anything but what else is the son of a wealthy oil baron supposed to do?"
+    
+    show gunner optimistic
+    
     gunner @ say "What about you?"
     
+    show ava smug
+    
     ava @ say "Oh just photography. I have an eye for it and thought I could make connections here to build a career out of it. I'd love to travel and just shoot people all day~"
+    
+    show ava shocked
+    
     ava @ say "With my camera I mean..!"
     
+    show ava happy
+    show claire laughing
+    
     claire @ say "Ksksksks y'all are so cute with your dreams and plans! And here I am going in raw with my undecided major!"
+    
+    show claire flustered
+    
     claire @ say "There's so many options, I can't just pick one thing to specialize in for the rest of my life!!"
     
     ava @ say "Well, what are your hobbies?"
     
+    show claire derp
+    
     claire @ say "Um um I don't know, I like doing everything and trying new things?"
+    
+    show ava unimpressed
     
     ava @ say "That's not a hobby."
 
     gunner @ say "How about... golfing?"
     
+    show claire happy
+    
     claire @ say "Got bored of it after getting a hole in one on every course in my state."
+    
+    show ava unamused
     
     ava @ say "Ever try drawing?"
     
     #claire @ say "Already drew everything I wanted to draw."
-    claire @ say "Spent a year drawing all my ideas."
+    claire @ say "Yeah but it was too easy."
     
     gunner @ say "Fishing?"
     
     #claire @ say "My fishing career peaked when I harpooned a 600 pound tuna in my rowboat and spent 3 days fighting sharks to bring it back home."
-    claire @ say "Already caught so many fish, I started reeling in undiscovered species."
+    claire @ say "I already caught so many fish, I started reeling in undiscovered species."
+    
+    show ava concerned
     
     ava @ say "Cooking?"
     
-    claire @ say "Had a good run with a critically acclaimed cooking show that lasted for 5 seasons."
+    claire @ say "Had a good run with a critically acclaimed reality cooking show that lasted 5 seasons."
+    
+    show gunner uncomfy
     
     gunner @ say "Music?"
     
@@ -2981,20 +3391,39 @@ label avaClaireGunnerLunch:
     #ava @ say "Fashion?"
     #claire @ say "Banned from the industry after trolling a high end runway show with an all plus-sized lineup."
     
+    show ava annoyed
+    
     ava @ say "Acting?"
+    
+    show claire flustered
     
     claire @ say "Blacklisted from the industry for... reasons."
     
     gunner @ say "Guns?"
     
+    show claire derp
+    
     claire @ say "I use my gold medal from the Olympics shooting contest as a coaster."
     
     n "Wow, she's already done it all and she's not even in her 20s. She's like the total opposite of you."
     
-    gunner @ say "Could always make an Onlyfawns account. I know *tons* of guys who would pay to see you."
+    show gunner determined
+    show ava embarrassed
+    
+    gunner @ say "You could always make an Onlyfawns account. I know *tons* of guys who would pay to see you."
+    
+    show claire suggestive earsup
     
     claire @ say "Ksksks you think so?~"
+    
+    show claire laughing -earsup
+    show ava neutral
+    
     claire @ say "Sorry, but the big bunny boobas are not for sale~"
+    
+    show gunner neutral
+    show ava happy
+    show claire happy
     
     gunner @ say "What do you think [name]? What are some of your hobbies that Claire might enjoy?"
     
@@ -3002,23 +3431,44 @@ label avaClaireGunnerLunch:
     n "Quickly, you have to come up with a cooler hobby."
     
     menu:
+        n "{cps=0}Quickly, you have to come up with a cooler hobby.{/cps}"
         "Climbing":
             player "I like to climb stuff."
             
+            show ava concerned
+            
             ava @ say "What, like mountains?"
             
-            gunner @ say "Or rock walls?"
+            show gunner motivated
+            
+            gunner @ say "Or at the rock climbing gym?"
+            
+            show gunner neutral
+            show ava happy
             
             player "Uhh both. Buildings too."
+            
+            show claire happy earsup
             
             claire @ say "Wow that sounds pretty cool!"
             claire @ say "You gotta show us sometime!"
             
+            show ava typical enamored
+            show claire giggle
+            show gunner disgusted
+            
             player "I'd love to but I'm currently recovering from an injury. Fell like 30 feet while freeclimbing. Into a pit full of venomous snakes. Barely survived."
+            
+            show claire happy -earsup
+            show gunner neutral
+            show ava reaching concerned
             
             ava @ say "Aww, hope you get better soon."
             
-            claire @ say "It must be fo much fun, but can you imagine my fat ass scaling a cliff? The rocks would crumble under my weight ksksksks!"
+            show ava typical happy -reaching
+            show claire flustered
+            
+            claire @ say "It must be so much fun, but can you imagine my fat ass scaling a cliff? The rocks would crumble under my weight ksksksks!"
             
         "Driving":
             ###you end up watching initial D and playing racing sims
@@ -3026,31 +3476,53 @@ label avaClaireGunnerLunch:
             player "..."
             player "......"
             player "........."
-            player "... I drive."
+            
+            show ava typical enamored
+            show claire sweater surprised earsup
+            show gunner determined
+            
+            player "I drive."
             
             n "Why did you say that? You don't even have a car."
             #n "You barely even have a driver's license. It's set to expire this month"
             n "Acting cool and stoic about it somehow garnered the fascination of your peers however."
+            
+            show claire giggle
             
             claire @ say "Whoa, like a racecar driver?"
             
             player "..."
             player "Something like that."
             
-            gunner @ say "Or maybe a stunt driver?"
+            show gunner cheeky1
+            
+            gunner @ say "Or a stunt driver?"
             
             player "..."
             player "Getting closer."
             
+            show ava motivated
+            
             ava @ say "Don't tell us you're a getaway driver."
             
+            show ava happy
+            
             player "..."
+            
+            show ava enamored
+            
             player "Bingo."
+            
+            show claire laughing
             
             claire @ say "Ohmygosh that's so cool!!"
             claire @ say "You're like a secret underground criminal on the run from the police!"
             
+            show ava excited
+            
             ava @ say "That must be so exciting!!"
+            
+            show gunner motivated
             
             gunner @ say "Heh, I know who I'm calling if I decide to rob a bank."    
             
@@ -3061,7 +3533,12 @@ label avaClaireGunnerLunch:
             
             player "I do bushcraft."
             
+            show claire surprised earsup
+            show ava shocked
+            
             claire @ say "Like outdoors survival stuff?"
+            
+            show claire sweater happy -earsup
             
             n "Well shit, you should have known Claire would have knowledge of esoteric camping lingo."
             
@@ -3069,15 +3546,31 @@ label avaClaireGunnerLunch:
             
             n "The only survival you've ever done is in Meincraft. It's close enough, right?"
             
+            show claire sweater pose suggestive
+            show ava happy
+            
             claire @ say "I've done a little bit of that! It was fun! I'd love to delve deeper and do some real survival!"
+            
+            show ava excited
             
             ava @ say "There you go! New hobby!"
             
+            show ava happy
+            show gunner itsover
+            
             gunner @ say "Yeah but it's not like you can major in camping."
+            
+            show gunner neutral
             
             ava @ say "Maybe she can be a park ranger or... one of those search and rescuers."
     
+    show ava happy
+    show claire happy earsup
+    show gunner neutral
+    
     mishka @ say "Orders are ready for pickup!"
+    
+    show claire happy -earsup
     
     claire @ say "Oh, there's our food!"
     
@@ -3085,29 +3578,47 @@ label avaClaireGunnerLunch:
         player "I got it."
         
         n "It's the least you could do since Gunner paid for it. And you don't want to let him show off anymore."
+        
+        hide gunner
+        hide ava
+        hide claire
+        with dissolve
+        
         n "You stand up and walk over to the counter."
         
         show mishka neutral at center with dissolve:
             xzoom -1
+            ypos y_mishka
         
         mishka @ say "Enjoying the company?"
+        
+        show mishka anxious smile
+        
         mishka @ say "That rabbit sure has many talents."
         
         player "Huh? Oh haha, you could hear our conversation?"
+        
+        show mishka happy
         
         n "She flicks her big rat ears."
         
         mishka @ say "We rats can hear pretty well."
         
-        show mishka anxious grin
+        show mishka anxious neutral
         
         mishka @ say "It's nice you've found so many friends already..."
         
         player "I've only just met them but they seem to pop up everywhere I go."
         
+        show mishka happy
+        
         mishka @ say "Perhaps they are hunting you down hehe"
         
+        show mishka anxious neutral
+        
         player "Kinda feels like it haha!"
+        
+        show mishka neutral -anxious
         
         mishka @ say "Well, enjoy the food and take care!"
         
@@ -3116,6 +3627,11 @@ label avaClaireGunnerLunch:
         hide mishka with dissolve
         
         n "Grabbing food and drinks for four is as difficult as it sounds and Gunner has to come and bail you out when he sees you struggling."
+        
+        show gunner neutral at center with dissolve:
+            ypos y_gunner
+            
+        gunner "Whoa, lemme carry some of that before it falls."
         
         player "Thanks dude."
         
@@ -3181,6 +3697,9 @@ label avaClaireGunnerLunch:
         player "No problem dude."
         
         n "The two of you manage to bring it all to the table in one trip without dropping anything."
+        
+    show gunner with move:
+        xoffset 600
         
     gunner @ say "Bon appetit!"
 
