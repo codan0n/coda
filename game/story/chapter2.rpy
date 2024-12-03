@@ -1,7 +1,7 @@
 label chapter2start:
 
     ###CHAPTER 2
-    ###weather is randomized (starting in week 3?) and affects what you can do after class
+    ###weather will be randomized (starting in week 4?) and affects what you can do after class
     ###once a week you can sleep in and get a chance at a unique night scene?
     ###can also do night scenes on weekends more freely?
 
@@ -32,6 +32,7 @@ label chapter2start:
     rothbauer @ say "Anyone?"
     
     menu:
+        rothbauer "{cps=0}Anyone?{/cps}"
         "Ancient Egypt":
             "No one else says anything so you raise your hand and take a guess."
             
@@ -72,7 +73,10 @@ label chapter2start:
     n "You have a feeling they saw catgirls as more than just friends."
     n "After class ends, you overhear Rose talking with the professor."
     
-    show rose skirt handonhip shy pendant at left:
+    show rothbauer with move:
+        xoffset 300
+    
+    show rose skirt handonhip shy pendant at left with dissolve:
         ypos y_rose
     
     rose @ say "About the group project..."

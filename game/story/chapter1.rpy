@@ -3702,22 +3702,40 @@ label avaClaireGunnerLunch:
         xoffset 600
         
     gunner @ say "Bon appetit!"
+    
+    show ava typical happy at center:
+        xoffset -350
+        ypos y_ava
+        xzoom -1
+    show claire sweater happy at center:
+        xoffset -670
+        ypos y_claire
+        xzoom -1
+    with dissolve
 
     claire @ say "Ooh, that smells good~"
-    
-    show ava typical neutral at center:
-        ypos y_ava
-    
     claire @ say "What were we talking about just now?"
     
+    show ava neutral
+    
     ava @ say "Dunno. Don't care anymore."
+    
+    show ava happy
     
     n "The conversation slows down as you enjoy a good meal."
     n "You end up chatting until evening arrives."
     
+    show gunner frown1
+    
     gunner @ say "Whoa, it's already starting to get dark out. I'd love to stay in such good company but I've got some things to take care of."
     
+    show gunner neutral
+    show ava excited
+    
     ava @ say "Yeah, this was a pretty long lunch, wasn't it! We should do this again sometime!"
+    
+    show ava happy
+    show claire at hop
     
     claire @ say "I'm down to hang out more!"
     
@@ -3731,13 +3749,40 @@ label avaClaireGunnerLunch:
     
     claire @ say "Bye guys!!! I'll miss youuuuu!"
     
+    show ava agitated
+    
     ava @ say "You'll still have me!"
+    
+    show gunner wink frown
     
     gunner @ say "Can't... breathe..."
     
-    claire @ say "Oops, sorry."
+    show claire surprised earsup
     
-    n "Claire lets you go, allowing you go your separate ways and return to your dorms for the night."
+    claire @ say "Oops."
+    
+    show gunner neutral
+    show ava happy
+    
+    n "Claire lets you all go."
+    
+    show claire derp
+    
+    claire @ say "Sorry 'bout that! I just got so excited!"
+    
+    gunner @ say "It's alright, I think my ribs are intact."
+    
+    player "Same."
+    
+    claire @ say "Can't wait to hang out with you all again!!!"
+    
+    hide ava
+    hide gunner
+    hide claire
+    with dissolve
+    
+    n "You go your separate ways and return to your dorms for the night."
+    
     #Can't stay up too late when you've still got class tomorrow."
 
     stop music fadeout 1.0
@@ -3988,12 +4033,14 @@ label afterAvaText1:
         n "With only the street lamps to light the way, your surroundings become an unfamiliar void where only the odd stranger lurks."
         n "So it seems, until a friendly figure emerges from the shadows and locks eyes with you."
         
-        show rori neutral at center with dissolve:
+        show rori concerned at center with dissolve:
             ypos y_rori
         
         rori @ say "[name]? What are you doing out so late?"
         
         player "I could ask you the same thing."
+        
+        show rori worried noblush
         
         rori @ say "I'm just out for a walk. I always do this when I get stuck on something and need a moment away from it."
         
@@ -4011,13 +4058,15 @@ label afterAvaText1:
         
         rori @ say "... Yes."
         
-        show rori neutral lookingaway
+        show rori surprised
         
         rori @ say "B-but I can fix it!"
         
+        show rori neutral -lookingaway
+        
         player "Then why are you out here instead of fixing it?"
         
-        show rori neutral -lookingaway
+        show rori concerned
         
         rori @ say "Because I'm thinking."
         
@@ -4028,6 +4077,7 @@ label afterAvaText1:
         rori @ say "About... well, nevermind. It's dumb."
         
         menu:
+            rori "{cps=0}About... well, nevermind. It's dumb.{/cps}"
             "It's probably not dumb":
                 player "If you're thinking about it so hard, it's probably not dumb."
                 
@@ -4042,10 +4092,17 @@ label afterAvaText1:
                 
                 player "I thought you wanted to be a programmer."
                 
+                show rori worried noblush
+                
                 rori @ say "I do but..."
+                
+                show rori concerned
+                
                 rori @ say "Nevermind. See, I told you it was dumb."
                 
                 player "Hmm. I feel like I'm not seeing the full picture here."
+                
+                show rori sleepy
                 
                 rori @ say "It's nothing, really. Just me worrying too much."
                 
@@ -4063,8 +4120,15 @@ label afterAvaText1:
                 player "Uhh yeah that would suck."
                 player "But is that really something worth worrying about?"
                 
+                show rori worried noblush
+                
                 rori @ say "Okay maybe that's a bit of an extreme example but I just feel like all the virtual stuff is..."
+                
+                show rori sleepy
+                
                 rori @ say "I dunno. You're right, I should think about something else."
+                
+        show rori neutral
                 
         rori @ say "You never told me what you're doing out at this hour."
         
@@ -4075,7 +4139,12 @@ label afterAvaText1:
         
         rori @ say "Ohh yeah."
         rori @ say "I guess that's why I prefer coming out at night rather than the day too."
+        
+        show rori anxious
+        
         rori @ say "Even if it is more... eerie."
+        
+        show rori neutral
         
         player "Yeah, never know what's out there. I'm not sure what's scarier, walking around the woods in darkness or being in the city at night."
         
@@ -4091,9 +4160,15 @@ label afterAvaText1:
         
         player "Yeah I think this has been a successful nightwalk and I can go to bed now."
         
-        rori @ say "Cool. Don't be afraid to say hi if you see me walking around at night again. I promise I won't stab you... But don't startle me just in case."
+        rori @ say "Cool. Don't be afraid to say hi if you see me walking around at night again."
+        
+        show rori laugh
+        
+        rori @ say "I promise I won't stab you... But don't startle me just in case."
         
         player "Haha sure. Goodnight Rori."
+        
+        show rori smirk
         
         rori @ say "Goodnight [name]!"
         
@@ -4139,16 +4214,20 @@ label thursday1:
     margaret @ say "Convinced by his associates, he entered a loveless marriage, that which he neglected in favor of his work."
     margaret @ say "\"...within a year of his wedding, Ivan Ilych had realized that marriage... is in fact a very intricate and difficult affair...\""
     margaret @ say "The more his wife expected of him, the more he retreated into his career... "
-    margaret @ say "Oh Tolstoy, how right you were all along. How disappointing marriage turned out to be."
     
     show margaret sad
-        
+    
+    margaret @ say "Oh Tolstoy, how right you were all along. How disappointing marriage turned out to be."
     margaret @ say "If only I'd listened to you, maybe I wouldn't have wasted 15 years of my life...!"
+    
+    show margaret sad shocked
+    
     margaret @ say "Er... I'm sorry, that was unprofessional... Let's just forget about that and move on shall we?"
+    
+    show margaret melancholy
+    
     margaret @ say "...So Ivan Ilyich had deluded himself into thinking he was happy by ignoring his troubles and taking misplaced pride in an uncaring workplace."
     margaret @ say "But as we'll soon see, his life was anything but enjoyable and it was only as he laid dying did he realize his flawed perception of life..."
-
-    show margaret sad
 
     scene bg classroom with fade
 
@@ -4171,28 +4250,28 @@ label thursday1:
 
     celestine @ say "Go ahead and try making conversation with your partner! Don't be afraid of saying things wrong, you'll get it sooner or later!~"
     
-    show claire sweater happy:
+    show claire sweater happy at center:
         ypos y_claire
-        xpos 1400
+        xoffset 1300
 
     hide celestine with dissolve
 
     n "Claire pushes her desk next to yours."
 
     show claire sweater happy:
-        xpos 700
+        xoffset 1000
     with move
     
     pause .2
     
     show claire sweater happy:
-        xpos 480
+        xoffset 750
     with move
     
     pause .2
     
     show claire sweater happy:
-        xpos 300
+        xoffset 500
     with move
 
     pause .1
@@ -4217,6 +4296,7 @@ label thursday1:
     claire @ say "Je ne porte pas de culotte aujourd'hui~"
     
     menu:
+        claire "{cps=0}Je ne porte pas de culotte aujourd'hui~{/cps}"
         "Quoi?":
             player "What?"
             player "I mean, quoi?"
@@ -4230,13 +4310,20 @@ label thursday1:
             
             player "Moi non plus."
             
+            show claire surprised earsup
+            
             claire @ say "Q-quoi?"
+            
+            show claire suggestive
+            
             claire @ say "Ksksksks tu es tellement drôle!"
         "Montre-moi":
             n "You flip through the pages of your book to find an appropriate response."
             n "Ah, here's a page that shows a similar conversation."
             
             player "Montre-moi."
+            
+            show claire giggle
             
             claire @ say "Ksksksks retrouve-moi après les cours~"
 
@@ -4245,10 +4332,13 @@ label thursday1:
     n "You don't really know what just happened."
     n "You shrug and continue your French practice until Mrs. Celestine hands out some homework and dismisses the class."
 
-    show celestine happy at center with dissolve:
+    show celestine excited at center with dissolve:
         ypos y_celestine
 
     celestine @ say "Good work class! I can tell you're already making so much progress!"
+    
+    show celestine neutral
+    
     celestine @ say "Keep it up, and do your best on the homework! Some of it may be challenging but I'd like for you to give it your best shot without using translation software!"
     celestine @ say "Passez une merveilleuse journée!"
 
@@ -4286,10 +4376,17 @@ label thursday1:
             
             player "I'd love to!"
             
+            show claire surprised earsup
+            
             claire @ say "Ohmygosh really??"
+            
+            show claire overjoyed
+            
             claire @ say "Let's go then!"
             
             player "What right now? Don't you have chemistry?"
+            
+            show claire pose suggestive
             
             claire @ say "We can study our 'chemistry' while we practice French~"
             
@@ -4323,8 +4420,10 @@ label thursday1:
             ava @ say "I'll just uh, give you two some privacy."
             ava "{nw}"
             
+            pause .1
+            
             show ava with move:
-                xpos 2000
+                xoffset 2400
             
             n "Ava grabs her bag and flutters out of the room."
             n "Without hesitation, Claire pins you between her warm soft body and the cold hard wall. She has a crazed look in her eyes and all you've got is your textbook to protect you."
@@ -4351,6 +4450,8 @@ label thursday1:
             
             player "Uhh... oui assez chaud."
             
+            show claire pose suggestive earsup
+            
             claire @ say "Ça te dérange si j'enlève mon pull?"
             
             n "She tugs at the bottom of her sweater, airing out the heat beneath the fabric."
@@ -4360,6 +4461,8 @@ label thursday1:
             ###in later scenes if you've studied more you can say better things
             
             player "C'est un beau pull. Ça te va bien."
+            
+            show claire flustered
             
             claire @ say "Hrmm..."
             
@@ -4408,6 +4511,8 @@ label thursday1:
             player "This was actually kinda fun. Like the whole 'roleplaying in French' thing. And I learned a lot!"
             player "We should do this again sometime!"
             
+            show claire sad
+            
             claire @ say "...Seriously?"
             
             player "What?"
@@ -4415,6 +4520,8 @@ label thursday1:
             claire @ say "Nothing... I had fun too."
             
             n "She seems disappointed. Was there something else she wanted to do?"
+            
+            show claire sweater pose suggestive
             
             claire @ say "Maybe next time we can do something... more fun than studying?~"
             
@@ -4458,6 +4565,8 @@ label thursday1:
             player "Oh? I didn't know you had any classes together."
 
             claire @ say "We don't."
+            
+            show claire happy
 
             player "Hmm."
 
@@ -4465,6 +4574,8 @@ label thursday1:
             n "The air around you has suddenly gotten uncomfortable. You're just gonna excuse yourself and go back to your dorm."
             
             player "Alright, time to go. I'll see you in class."
+            
+            show claire sad
             
             claire @ say "Yeah... See you later."
             
@@ -4481,7 +4592,7 @@ label thursday1:
             
             player "Sorry, I'm not into fat chicks."
             
-            show claire sweater surprised
+            show claire sweater surprised earsup
             
             claire @ say "Wha-?"
             
@@ -4505,6 +4616,9 @@ label thursday1:
 label thursdayNight1Study:
     scene bg codadorm with fade
     
+    show box with Dissolve(.2):
+        ypos 0
+    
     n "Back in your comfy zone."
     n "There's enough time in the day left to study a topic before bed."
     #or you could be a slacker and do some leisure activity
@@ -4526,7 +4640,6 @@ label thursdayNight1Study:
             
     n "It took a while, but you now feel more confident in your understanding of the topic."
     n "It's gotten late. Time to get ready for bed."
-    
     
 label thursday1End:
     scene bg black with fade
@@ -4557,10 +4670,6 @@ label friday1:
     n "You've made it to the end of your first week back in school."
     n "Just have to get today's classes knocked out, then you'll be free for two whole days."
     
-    scene bg black with fade
-    
-    pause .7
-    
     scene bg campus with fade
     
     show box with Dissolve(.2):
@@ -4580,7 +4689,7 @@ label friday1:
     n "After a long week, you decide you're deserving of some carefree relaxation while the storm rages outside."
     n "At some point you get a text from Gunner."
     
-    hide box
+    #hide box
     
     play audio "audio/sound effects/vibrate.ogg"
     
@@ -4667,25 +4776,31 @@ label rooftop_party:
     n "At least, you hope those are just puddles of rainwater and not something else."
     n "You spot Gunner on the other side of the roof and have push your way past a group of people dancing and grinding on each other to reach him."
 
-    show gunner neutral at center with dissolve:
+    show gunner cheeky1 at center with dissolve:
         ypos y_gunner
 
     gunner @ say "[name]!!!! Ya made it!"
 
     player "Sup Gunner. Nice music."
+    
+    show gunner neutral
 
     gunner @ say "Thanks bro! Here, have a beer."
 
     n "Gunner tosses a can vaguely in your direction. You don't even try to catch it cause his throw was so off that it just goes flying off the side of the building."
     n "A couple seconds later you hear it explode on the concrete."
+    
+    show gunner cutie
 
     gunner @ say "Haha woops. Here's another one."
 
     n "He digs another one out of a cooler and hands it to you."
+    
+    show gunner neutral
 
     player "Thanks. Hey, wasn't Rori supposed to be here?"
 
-    show rori neutral at center:
+    show rori concerned at center:
         xzoom -1
         xoffset -475
         ypos y_rori
@@ -4697,6 +4812,8 @@ label rooftop_party:
     n "He adjusts his glasses and walks up to you."
 
     rori @ say "Gunner! I looked away for like two seconds and lost track of you!"
+    
+    show gunner annoyed
 
     gunner @ say "Ah there he is. He's been trailing me all night."
     gunner @ say "You know you don't have to be my shadow, right? You're free to mingle with other people. Go make some friends."
@@ -4704,8 +4821,12 @@ label rooftop_party:
     show rori anxious
 
     rori @ say "M-make friends? How do I do that??"
+    
+    show gunner determined
 
     gunner @ say "Bro, relax. Just have a beer and start talkin' to somebody."
+    
+    show gunner neutral
 
     rori @ say "I dunno..."
 
@@ -4761,6 +4882,8 @@ label rooftop_party:
     gunner @ say "I'm back! Here Rori, take this."
 
     n "Gunner shoves a can in to Rori's hooves and pushes him back onto the dance floor."
+    
+    show rori concerned blushing
 
     rori @ say "Noooo stoppp! I don't know how to daaaaaance..!"
     
@@ -4769,9 +4892,9 @@ label rooftop_party:
     pause .1
 
     show gunner neutral at offscreenleft:
-        yalign 0
+        ypos y_gunner
     show rori neutral at offscreenleft:
-        yalign 0
+        ypos y_rori
     with move
 
     pause .1
@@ -4805,6 +4928,9 @@ label rooftop_party:
 
     n "You and Gunner stand around and chat with random guests between beers."
     #n "Throughout the night Gunner keeps looking over his shoulder, even though there's nothing behind him other than the edge of the roof."
+    
+    show gunner frown1
+    
     n "Throughout the night Gunner keeps looking up at the sky."
 
     player "You okay?"
@@ -4812,22 +4938,36 @@ label rooftop_party:
     gunner @ say "Huh? Oh yeah. I'm just like, waiting for someone."
 
     player "Is it Ava?"
+    
+    show gunner cheeky1
 
     gunner @ say "How'd you know???"
+    
+    show gunner cutie
+    
     gunner @ say "Yeah it's Ava. I keep expecting her to fly up any moment now."
+    
+    show gunner optimistic
+    
     gunner @ say "...Aaaany moment now."
 
     player "Cool, I didn't know you invited her."
+    
+    show gunner motivated
 
     gunner @ say "Yeah I climbed her dorm building and taped a flier to her window."
     
     player "Uhh..."
 
     gunner @ say "She'll swoop down any minute now and I'll offer her a beer and she'll be like 'Teehee thanks!' and we'll totally hit it off."
+    
+    show gunner neutral
 
     n "You nod your head and tune out of the delusional words coming out of Gunner's mouth."
     n "He leans up against the wall and rambles on and on."
     n "Eventually he gets on the topic of school."
+    
+    show gunner displeased
 
     gunner @ say "...And it's like, okay Dad, I didn't even want to go to college, but then he's like \"You either go and get an education or I ship you off to boot camp.\""
 
@@ -4848,13 +4988,18 @@ label rooftop_party:
         "Maybe he's got a point.":
             player "Maybe he's got a point."
             player "It'll be easier to land a job with a more practical degree."
+            
+            show gunner itsover
 
             n "Gunner sighs."
 
             gunner @ say "I know but that's not-."
+            
+            show gunner annoyed
+            
             gunner @ say "Fuck it, I'm an adult! I can make my own decisions!"
             gunner @ say "I don't wanna work at some corporate hellhole or push papers in the military!"
-            gunner @ say "Fuck working for other people's interests!"
+            #gunner @ say "Fuck working for other people's interests!"
             
         "Maybe get a minor?":
             player "Maybe you could get a minor in something you enjoy?"
@@ -4867,6 +5012,8 @@ label rooftop_party:
     gunner @ say "Damn it, I don't wanna even think about it anymore."
 
     n "Gunner hops up onto the guard rail, balancing on it with feline precision."
+    
+    show gunner optimistic
 
     gunner @ say "I'm here to get drunk and find a cute avian girlfriend!!!"
 
@@ -5014,6 +5161,8 @@ label rooftop_party:
     #show rori at shudder
 
     rori @ say "Shouldn't we have warned the others...?"
+    
+    show gunner optimistic
 
     gunner @ say "Nah, y'all woulda got caught up in the mad dash to escape and probably gotten trampled. Happened to me before."
 
@@ -5022,18 +5171,29 @@ label rooftop_party:
     rori @ say "Yeah, it probably doesn't look good having underaged drinking and trespassing on your record."
 
     gunner @ say "Come on, let's get out of here before the cops do a full sweep."
+    
+    show rori drunk alert
 
     rori @ say "Hmm..."
 
     gunner @ say "What's wrong?"
+    
+    show rori drunk -alert
 
     rori @ say "I was kinda having fun up there. Shame it had to end so suddenly."
+    
+    show gunner eyesclosed catface
 
     gunner @ say "Well..."
+    
+    show gunner cheeky1
+    
     gunner @ say "The night's still young! We can order pizza and play some games."
     gunner @ say "[name], you're more than welcome to hang out at our dorm tonight!"
 
     player "It's no wild college party, but that sounds pretty nice."
+    
+    show gunner determined
 
     gunner @ say "Hell yeah!"
 
@@ -5087,12 +5247,17 @@ label sunday2:
     rose @ say "Watch where you're going."
 
     player "Sorry."
+    
+    show rose with move:
+        xoffset 450
 
     n "Rose walks past you but stops at the door."
     
     show rose skirt armscrossed dismissive
 
     rose @ say "Ugh, will this rain ever let up?"
+    
+    show rose at flipright
 
     player "Need to be somewhere?"
     
@@ -5147,7 +5312,7 @@ label sunday2:
     show mishka neutral at center with dissolve:
         ypos y_mishka
 
-    mishka @ say "Hey [name]! Good to see you still yet! Not many customers on days like these."
+    mishka @ say "Privyet [name]! Good to see you still yet! Not many customers on days like these."
 
     player "Hi Mishka! I'm kinda hungover and..."
 
@@ -5339,6 +5504,7 @@ label sunday2Evening:
     n "What should you study?"
     
     menu:
+        n "{cps=0}What should you study?{/cps}"
         "French":
             $ frenchSkill =+ 1
             n "You pick up your French textbook and practice some lessons."

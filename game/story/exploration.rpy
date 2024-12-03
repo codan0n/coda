@@ -2,6 +2,7 @@ label afterClassOptions:
     "What would you like to do?"
     
     menu:
+        "{cps=0}What would you like to do?{/cps}"
         "Go somewhere":
             "Where do you want to go?"
 

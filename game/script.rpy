@@ -1813,9 +1813,9 @@ layeredimage mere neutral:
     always:
         'images/characters/mere/mere.png'
     group saying:
-        xzoom .85
-        yzoom .75
-        pos (-110,57)
+        xzoom .9
+        yzoom .95
+        pos (-120,7)
         attribute say:
             "images/bubble.png"
 
@@ -2241,6 +2241,26 @@ layeredimage rori neutral:
     at sprite_highlight('rori')
     always:
         'images/characters/rori/rori neutral.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori concerned blushing:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori concerned blushing.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori surprised:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori surprised.png'
     group saying:
         xzoom .75
         yzoom .6
