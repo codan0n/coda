@@ -1167,7 +1167,7 @@ label week2Tuesday:
 
             player "The Midwest Arcoonia tribe...?"
             
-            show rose angry
+            show rose skirt fistsclenched angry pendant
 
             rose @ say "Get your filthy human hands off those!"
 
@@ -1175,7 +1175,7 @@ label week2Tuesday:
 
             player "Careful, you don't wanna rip them by accident."
             
-            show rose armscrossed furious
+            show rose skirt armscrossed furious pendant
 
             rose @ say "Ugh, fine! ONE page, that's it!"
 
@@ -1185,6 +1185,8 @@ label week2Tuesday:
             
             n "Rose snatches the pages and turns away from you."
             
+            show rose furiouspose 
+            
             rose @ say "What the hell is this?!"
             
             n "Rose throws the papers right back into your face."
@@ -1192,12 +1194,10 @@ label week2Tuesday:
             
             player "Woops, I guess those weren't pages that fell out of the book after all! Just my history notes~"
             
+            show rose skirt fistsclenched angry pendant
+            
             rose @ say "Ugh! Go to hell."
 
-            show rose armscrossed neutral at flipleft
-                
-            pause .25
-                
             hide rose with dissolve
             
             n "That went well."
@@ -1215,7 +1215,7 @@ label week2Tuesday:
 
             player "The Midwest Arcoonia tribe...?"
             
-            show rose angry
+            show rose skirt fistsclenched angry pendant
 
             rose @ say "Get your filthy human hands off those!"
 
@@ -1223,13 +1223,13 @@ label week2Tuesday:
 
             player "Careful, you don't wanna rip them by accident."
             
-            show rose unimpressed
+            show rose armscrossed dismissive
 
             rose @ say "Ugh, unbelievable."
             rose @ say "..."
             rose @ say "*sigh*"
             
-            show rose smug
+            show rose handonhip smug
             
             rose @ say "Fine, I'll give you something."
             rose @ say "Close your eyes."
@@ -1257,7 +1257,7 @@ label week2Tuesday:
             
             n "While you're staring at your bloody fingers, Rose takes the opportunity to snatch the sheets of paper from your other hand."
             
-            show rose unimpressed at center with dissolve:
+            show rose skirt armscrossed annoyed pendant at center with dissolve:
                 ypos y_rose
             
             rose @ say "What did you expect?"
@@ -1275,6 +1275,7 @@ label week2Tuesday:
     n "What should you study?"
     
     menu:
+        n "{cps=0}What should you study?{/cps}"
         "French":
             $ frenchSkill =+ 2
             n "You pick up your French textbook and practice some lessons."
@@ -1336,37 +1337,58 @@ label week2Tuesday:
     show box with Dissolve(.2):
         ypos 0
 
-    "The following day..."
+    n "The following day..."
     
     show gunner neutral at center with dissolve:
         ypos y_gunner
         xzoom -1
-        xoffset -430
+        xoffset -480
     
     gunner "Yeah so then I'm like \"fuck you\" and -- oh hi Rori!"
     
+    show gunner optimistic
+    
     n "Gunner started following you after class and telling you frat boy stories until you came across Rori sitting on the grass working on something on his laptop."
     
-    show rori neutral at center with dissolve:
+    show rori surprised at center with dissolve:
         ypos y_rori
-        xoffset 430
+        xoffset 480
     
     rori @ say "Aaah!"
     
     n "It seems you've startled him."
     
+    show rori sleepy
+    
     rori @ say "Oh it's just you."
+    
+    show rori neutral
+    
     rori @ say "I was just really deep into some spaghetti code and so focused on it I didn't see you there!"
     
+    show gunner disgusted
+    
     gunner @ say "Bruh you are *always* on your laptop fiddling with some command line shit."
+    
+    show gunner displeased
+    
     gunner @ say "Why don't you ever I dunno, live your life?"
+    
+    show rori worried noblush
     
     rori @ say "This *is* my life."
     
+    show gunner uncomfy
+    
     gunner @ say "That is so sad."
+    
+    show gunner frown1
+    
     gunner @ say "[name] we gotta intervene. I can't stand to see my roommate like this."
     
     player "What do you propose we do?"
+    
+    show gunner neutral
     
     gunner @ say "I dunno, how's that saying go? \"Be a faggot, break the law?\""
 
@@ -1374,22 +1396,37 @@ label week2Tuesday:
     
     rori @ say "I think you mean \"Be gay, do crime.\""
     
+    show gunner determined
+    
     gunner @ say "Exactly! Let's commit a crime!"
+    
+    show gunner eyesclosed catface
+    
     gunner @ say "No homo."
     
     show rori anxious
     
     rori @ say "W-why would I wanna do that?"
     
+    show gunner wink catface
+    
     gunner @ say "Cause it'll be fun? Back me up, [name]."
     
     menu:
+        gunner "{cps=0}Cause it'll be fun? Back me up, [name].{/cps}"
         "Gunner's right, we should all be gay":
             player "Gunner's right, we should all be gay."
             
+            show gunner hissing
+            
             gunner @ say "What?! That's not...!"
             
+            show rori laugh
+            
             n "Rori laughs at your response and Gunner's reaction."
+            
+            show gunner frown1
+            show rori supersmug
             
             rori @ say "Alright I'm in. Can't be gay without a little crime, right?"
             
@@ -1398,41 +1435,71 @@ label week2Tuesday:
         "Gunner's right, we should all commit a crime":
             player "Gunner's right, commiting crime is fun."
             
+            show gunner neutral
+            show rori neutral
+            
             gunner @ say "Exactly! What better way to bond with the bros than getting into some comic mischief?"
             
-            rori @ say "Hm."
+            show rori concerned
+            
+            rori @ say "Hmm."
             rori @ say "As long as it's not anything extreme, I guess I'll join in."
             
             gunner @ say "Right, no breaking into the White House today."
         "\[Gay\] Maybe we shouldn't become criminals":
             player "Can't we just be gay and not do crime?"
             
+            show gunner displeased
+            
             gunner @ say "Where's the fun in that?"
             gunner @ say "You guys are so boooooring!"
+            
+            show rori soyface
             
             rori @ say "H-hey, I'm sure we can find a fun crime to commit!"
             
         "\[Not Gay\] Maybe we shouldn't become criminals":
             player "Maybe we could just do something legal?"
             
+            show gunner displeased
+            
             gunner @ say "Where's the fun in that?"
             gunner @ say "You guys are so boooooring!"
             
+            show rori soyface
+            
             rori @ say "H-hey, I'm sure we can find a fun crime to commit!"
             
+    show gunner neutral
+    show rori neutral
+    
     player "Hmm... What's a good crime?"
     
     rori @ say "It has to be victimless. Like piracy."
     
+    show gunner disgusted
+    
     gunner @ say "Bruh have you seen what Somali pirates do?"
+    
+    show gunner uncomfy
+    show rori smug
     
     rori @ say "No I mean like downloading movies for free."
     
     player "Is there any other way to download them?"
     
+    show gunner itsover
+    show rori neutral
+    
     gunner @ say "Can we please not do some made up digital crime? The whole point of this is to get away from that nerdy stuff."
     
+    show rori anxious
+    show gunner optimistic
+    
     rori @ say "Okay tough guy, what are your ideas?"
+    
+    show rori sleepy
+    show gunner determined
     
     gunner @ say "We could rob a bank!"
     gunner @ say "[name] can be our getaway driver!"
@@ -1447,26 +1514,51 @@ label week2Tuesday:
     
     rori @ say "Still sounds too risky."
     
+    show rori neutral
+    show gunner neutral
+    
     player "What if we were vigilantes?"
+    
+    show rori cheery
     
     rori @ say "Like Robinhood, stealing from the rich and giving to the poor?"
     
+    show gunner frown1
+    show rori neutral
+    
     gunner @ say "But [name], I am the rich."
     
+    show rori neutral
+    
     rori @ say "Okay then you can be like Catman."
+    
+    show gunner optimistic
     
     gunner @ say "A loaded superhero who fights crime with crime? You might be onto something."
     
     player "Maybe we should start with something small. Like if we see someone steal a lady's purse we can beat him up and take his wallet."
     
+    show gunner mischief
+    
     gunner @ say "That's perfect! Now we just have to wait for some thug to commit a robbery in broad daylight on this wealthy college campus with cops who drive by every 5 minutes."
     
-    rori @ say "Keep on the lookout boys, we've got crimes to... wait are we doing crime or stopping it?"
+    show rori cheery
+    
+    rori @ say "Keep on the lookout boys, we've got crimes to..."
+    
+    show gunner frown1
+    show rori concerned
+    
+    rori @ say "Wait are we doing crime or stopping it?"
     
     player "Both I think?"
     
-    gunner @ say "I say neither at this rate!"
+    show gunner hissing
+    
+    gunner @ say "I say we're doing neither at this rate!"
     gunner @ say "Come on, crimes aren't just gonna come to us! We gotta go to the crimes!"
+    
+    show gunner displeased
     
     n "Gunner picks a seemingly random direction and confidently marches off. You look to Rori and the two of you wordlessly agree to follow him."
     
@@ -1506,18 +1598,29 @@ label week2Tuesday:
     
     n "Rori stands back up and rubs his chin."
     
+    show rori smirk lookingaway
+    
     rori @ say "Hmm. That definitely counts as a crime, right?"
+    
+    show rori smirk -
+    show gunner mischief
     
     gunner @ say "I mean, we'd be liable for any damages to property or personel as a result of giving this bitch a shake, wouldn't we?"
     
     player "Sure sounds like criminal activity to me."
+    
+    show gunner determined
     
     gunner @ say "Gentlemen? Shall we?"
     
     n "With a collective nod, the three of you go on the offensive, kicking, shoving and jostling the machine. The pretzels hang tantalizingly but hold steady through your barrage."
     n "You're all left panting and exhausted, losing the will to continue this fight and slumping against the machine."
     
+    show gunner annoyed
+    
     gunner @ say "Gah! It's hopeless! It's stuck in there!"
+    
+    show rori worried noblush
     
     rori @ say "Hold on, I might have a few quarters. We can probably get two bags for the price of one."
     
@@ -1525,11 +1628,18 @@ label week2Tuesday:
     
     n "You bang your fist against the glass in frustration one last time and that seems to do the trick. Without any fanfare, the bag plops down into the receiving area."
     
+    show gunner neutral
+    show rori surprised
+    
     gunner @ say "WE DID IT BOYS!!!!"
+    
+    show rori laugh
 
     rori @ say "Huzzah!"
     
     n "You reach in and grab your prize."
+    
+    show rori smirk
     
     player "Let us enjoy the spoils of our hardships, lads!"
     
@@ -1537,7 +1647,14 @@ label week2Tuesday:
     
     player "Aww what the fuck? They're stale."
     
+    show gunner frown1
+    show rori concerned
+    
     gunner @ say "No way. Lemme try!"
+    gunner @ say "*cronch*"
+    
+    show gunner displeased
+    
     gunner @ say "Ugh. Nope. Not worth it."
     
     n "Rori takes the bag and bites into a pretzel as well and gives an unsatisfactory grimace."
@@ -1546,25 +1663,46 @@ label week2Tuesday:
     
     player "After all that work. Disappointing."
     
+    show rori worried noblush
+    
     rori @ say "Hey what's that?"
     
     n "You look to where Rori is pointing. In the shadows something skitters across the floor."
     
+    show gunner frown1
+    
     gunner @ say "Is that a rat?"
+    
+    show rori concerned
     
     n "Gunner pounces at it but it runs under the vending machine."
     
+    show rori soyface
+    
     rori @ say "Dude cut it out! He's just a little guy."
+    
+    show rori cheery
+    
     rori @ say "He's probably just out looking for food. Here you go, have some pretzels."
     
     n "Rori places the bag on the ground with the open end facing the machine. Lightning quick, the rat comes out and snatches it, dragging it back into its lair."
+    
+    show rori neutral
+    
     n "You, Gunner and Rori crouch down and peek into the gap between the floor and vending machine."
     n "Rori flashes the light from his phone, revealing a ragged grey rat digging through the bag and nibbling on pretzels."
     n "It ravenously chews through them, ignoring your gaze."
     
+    show rori smirk
+    
     rori @ say "Aww. Cute lil' guy."
     
+    show gunner displeased
+    
     gunner @ say "Yeesh, I didn't know Harmonia had a rat problem."
+    
+    show gunner frown1
+    show rori neutral
     
     rori @ say "He's just trying to survive."
     
@@ -1577,19 +1715,28 @@ label week2Tuesday:
     show box with Dissolve(.2):
         ypos 0
         
-    show gunner neutral at center with dissolve:
+    show gunner neutral at center:
         ypos y_gunner
         xoffset -375
         xzoom -1
-    show rori neutral at center with dissolve:
+    show rori neutral at center:
         ypos y_rori
         xoffset 375
+    with dissolve
+    
+    show gunner snoring
     
     gunner @ say "Well this was a waste. I was looking forward to some quality law breaking time with my bros."
     
+    show gunner frown1
+    
     player "Eh, I thought it was a fun little sidequest."
     
+    show rori smirk
+    
     rori @ say "Perhaps the real crimes were the friends we made along the way."
+    
+    show gunner optimistic
     
     gunner @ say "Heh maybe you're right."
     
@@ -1674,6 +1821,9 @@ label beauty_and_the_beast:
     
     scene bg schoolhallways with fade
     
+    show box with Dissolve(.2):
+        ypos 0
+    
     n "Looks like you're early today. So early that the previous class is still in session."
     n "What else is there to do other than loiter around waiting for your class to begin?"
     n "You wander around the halls, reading bulletin boards and mindlessly scrolling back and forth on your phone's home screen."
@@ -1702,9 +1852,9 @@ label beauty_and_the_beast:
 
     player "I'm pretty sure you're not supposed to be up here either."
     
-    show margaret smoking laugh
+    show margaret smoking happy
 
-    margaret @ say "Bah, ya got me. I promise not to rat you out if you don't say anything."
+    margaret @ say "Bah, you got me. I promise not to rat you out if you don't say anything."
 
     player "Deal."
     
@@ -1718,19 +1868,21 @@ label beauty_and_the_beast:
 
     player "Didn't think you were the type to smoke."
     
+    show margaret smoking sad shocked
+    
     margaret @ say "I'm not. Or at least I wasn't. I've just got things on my mind."
+
+    show margaret smoking melancholy -
 
     player "Such as?"
     
-    show margaret sad smoking
-
     margaret @ say "Private things."
 
     player "Oh."
 
     margaret @ say "What about you?"
 
-    show margaret smoking
+    show margaret smoking neutral
 
     player "Oh I just came up here cause I was curious if the door was unlocked and-"
 

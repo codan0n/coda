@@ -1376,10 +1376,30 @@ layeredimage margaret tailwag happy:
         pos (0,88)
         attribute say:
             "images/bubble.png"
+layeredimage margaret smoking melancholy:
+    at sprite_highlight('margaret')
+    always:
+        'images/characters/margaret/margaret smoking melancholy.png'
+    group saying:
+        xzoom .9
+        yzoom .75
+        pos (0,88)
+        attribute say:
+            "images/bubble.png"
 layeredimage margaret sad smoking:
     at sprite_highlight('margaret')
     always:
         'images/characters/margaret/margaret sad smoking.png'
+    group saying:
+        xzoom .9
+        yzoom .75
+        pos (0,88)
+        attribute say:
+            "images/bubble.png"
+layeredimage margaret smoking sad shocked:
+    at sprite_highlight('margaret')
+    always:
+        'images/characters/margaret/margaret smoking sad shocked.png'
     group saying:
         xzoom .9
         yzoom .75
@@ -1396,10 +1416,10 @@ layeredimage margaret smoking intrigued:
         pos (0,88)
         attribute say:
             "images/bubble.png"
-layeredimage margaret smoking laugh:
+layeredimage margaret smoking happy:
     at sprite_highlight('margaret')
     always:
-        'images/characters/margaret/margaret smoking laugh.png'
+        'images/characters/margaret/margaret smoking happy.png'
     group saying:
         xzoom .9
         yzoom .75
@@ -2606,10 +2626,30 @@ layeredimage rori pantsless:
 
 
 
+layeredimage rose skirt handonhip dismissive pendant:
+    at sprite_highlight('rose')
+    always:
+        'images/characters/rose/rose skirt handonhip dismissive pendant.png'
+    group saying:
+        xzoom -.9
+        yzoom .9
+        pos (625,-62)
+        attribute say:
+            "images/bubble.png"
 layeredimage rose skirt furiouspose pendant:
     at sprite_highlight('rose')
     always:
         'images/characters/rose/rose skirt furiouspose pendant.png'
+    group saying:
+        xzoom -.9
+        yzoom .9
+        pos (625,-62)
+        attribute say:
+            "images/bubble.png"
+layeredimage rose skirt armscrossed furious pendant:
+    at sprite_highlight('rose')
+    always:
+        'images/characters/rose/rose skirt armscrossed furious pendant.png'
     group saying:
         xzoom -.9
         yzoom .9
@@ -2666,6 +2706,16 @@ layeredimage rose skirt fistsclenched angry:
         pos (625,-62)
         attribute say:
             "images/bubble.png"
+layeredimage rose skirt armscrossed annoyed pendant:
+    at sprite_highlight('rose')
+    always:
+        'images/characters/rose/rose skirt armscrossed annoyed pendant.png'
+    group saying:
+        xzoom -.9
+        yzoom .9
+        pos (625,-62)
+        attribute say:
+            "images/bubble.png"
 layeredimage rose skirt armscrossed annoyed:
     at sprite_highlight('rose')
     always:
@@ -2680,6 +2730,16 @@ layeredimage rose skirt handonhip annoyed:
     at sprite_highlight('rose')
     always:
         'images/characters/rose/rose skirt handonhip annoyed.png'
+    group saying:
+        xzoom -.9
+        yzoom .9
+        pos (625,-62)
+        attribute say:
+            "images/bubble.png"
+layeredimage rose skirt handonhip annoyed pendant:
+    at sprite_highlight('rose')
+    always:
+        'images/characters/rose/rose skirt handonhip annoyed pendant.png'
     group saying:
         xzoom -.9
         yzoom .9
