@@ -620,6 +620,16 @@ layeredimage ava pose happy:
         pos (-80,-30)
         attribute say:
             "images/bubble.png"
+layeredimage ava profile angry:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava profile angry.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-135,-30)
+        attribute say:
+            "images/bubble.png"
 layeredimage ava profile whimsical:
     at sprite_highlight('ava')
     always:
@@ -1350,6 +1360,56 @@ layeredimage margaret neutral:
     at sprite_highlight('margaret')
     always:
         'images/characters/margaret/margaret neutral.png'
+    group saying:
+        xzoom .9
+        yzoom .75
+        pos (0,88)
+        attribute say:
+            "images/bubble.png"
+layeredimage margaret smoking melancholy shocked:
+    at sprite_highlight('margaret')
+    always:
+        'images/characters/margaret/margaret smoking melancholy shocked.png'
+    group saying:
+        xzoom .9
+        yzoom .75
+        pos (0,88)
+        attribute say:
+            "images/bubble.png"
+layeredimage margaret smoking intrigued:
+    at sprite_highlight('margaret')
+    always:
+        'images/characters/margaret/margaret smoking intrigued.png'
+    group saying:
+        xzoom .9
+        yzoom .75
+        pos (0,88)
+        attribute say:
+            "images/bubble.png"
+layeredimage margaret smoking sad shocked:
+    at sprite_highlight('margaret')
+    always:
+        'images/characters/margaret/margaret smoking sad shocked.png'
+    group saying:
+        xzoom .9
+        yzoom .75
+        pos (0,88)
+        attribute say:
+            "images/bubble.png"
+layeredimage margaret shocked leaningback:
+    at sprite_highlight('margaret')
+    always:
+        'images/characters/margaret/margaret shocked leaningback.png'
+    group saying:
+        xzoom .9
+        yzoom .75
+        pos (0,88)
+        attribute say:
+            "images/bubble.png"
+layeredimage margaret sad shocked:
+    at sprite_highlight('margaret')
+    always:
+        'images/characters/margaret/margaret sad shocked.png'
     group saying:
         xzoom .9
         yzoom .75

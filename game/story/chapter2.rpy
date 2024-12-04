@@ -3399,6 +3399,7 @@ label ellen_feeding_ducks:
             margaret @ say "I won't blame you if you just read summaries online instead of reading her books when we go over her."
             
             menu:
+                margaret "{cps=0}I won't blame you if you just read summaries online instead of reading her books when we go over her.{/cps}"
                 "You're pretty chill, huh?":
                     player "Wow, you're actually really lax on the whole teaching thing, aren't you?"
                     
@@ -3423,16 +3424,22 @@ label ellen_feeding_ducks:
                     
                     player "Like a jellyfish being pulled by currents. Not really going anywhere, just letting myself exist."
                     
+                    show margaret sad shocked
+                    
                     margaret @ say "And where has that taken you?"
                     
                     player "It brought me to this fancy pants university."
                     
+                    show margaret melancholy -shocked
+                    
                     margaret @ say "Then perhaps you're doing quite well as a jellyfish~"
-                    margaret @ say "I suppose I'm more of a wolf. Always chasing after things, relentlessly, until I left my pack behind."
+                    margaret @ say "I suppose I'm more like a wolf. Always chasing after things, relentlessly, until I left my pack behind."
                     
                     player "Why not start a new pack? I was sort of a lone wolf too until I got here and started making friends."
                     
-                    margaret @ say "It's far too late for me to start over."
+                    show margaret sad -melancholy
+                    
+                    margaret @ say "Oh it's far too late for me to start over."
                     margaret @ say "You ought to cherish the time you have with your friends while you're young."
                     
                     player "You make it sound like it's game over once you reach a certain age."
@@ -3440,6 +3447,8 @@ label ellen_feeding_ducks:
                     margaret @ say "Well, it sort of is if you don't have your life together by a certain time."
                     
                     player "You can't be at that point already. There's still plenty of time."
+                    
+                    show margaret shocked leaningback
                     
                     margaret @ say "Oh?"
             
@@ -3514,6 +3523,8 @@ label ellen_feeding_ducks:
                     
                     player "What else would you have done?"
                     
+                    show margaret melancholy
+                    
                     margaret @ say "Honestly, any other path would have been better for me."
                     
                     show margaret sad
@@ -3560,20 +3571,25 @@ label ellen_feeding_ducks:
                     
                     margaret @ say "Yup."
                     margaret @ say "This was the first date I went on with my ex, ages ago."
+                    
+                    show margaret melancholy
+                    
                     margaret @ say "Now I'm just an old lady feeding the birds on my own."
                     
                     n "She looks over to you, then back at the ducks."
                     
-                    margaret @ say "Sometimes with a curious student, but not often."
+                    #margaret @ say "Sometimes with a curious student, but not often."
                     
                     player "Come on, you're not that old."
                     
                     margaret @ say "Oh?"
+    
+    show margaret neutral
                     
-    #margaret @ say "And just how old do you think I am?"    
+    margaret @ say "And just how old do you think I am, young man?"
     
     menu:
-        ellen "{cps=0}And just how old do you think I am?{/cps}"
+        ellen "{cps=0}And just how old do you think I am, young man?{/cps}"
         "20s":
             $ ellenPoints += 1
             
@@ -3636,13 +3652,19 @@ label ellen_feeding_ducks:
 
             player "Hey that's still prime."
             
+            show margaret shocked leaningback
+            
             margaret @ say "Excuse me???"
             
             player "Mathematically speaking."
             
+            show margaret neutral
+            
             margaret @ say "Hm. I suppose it is."
             
             player "Happy birthday by the way."
+            
+            show margaret sad
             
             margaret @ say "Thanks but there's nothing happy about it."
             margaret @ say "Getting old sucks. I miss when I was a cute 20-something like you."
@@ -3840,7 +3862,6 @@ label ellen_feeding_ducks:
     
     show box with Dissolve(.2):
         ypos 0
-
     
     show claire sweater happy at center:
         ypos y_claire
@@ -3855,14 +3876,24 @@ label ellen_feeding_ducks:
     
     player "Glad to be back. Still annoyed I missed that party though. Sounded like you two had a lot of fun."
     
+    show claire pose suggestive
+    
     claire @ say "We sure did~"
     claire @ say "It was Ava's first time drinking!"
     
+    show ava unamused
+    
     ava @ say "Ugh, don't remind me."
+    
+    show claire derp
     
     claire @ say "I had to drink like an entire keg of beer to even feel anything!"
     
+    show ava unimpressed
+    
     ava @ say "I don't know how you can stomach it."
+    
+    show claire sweater leaning suggestive -
     
     claire @ say "I guess I'm just built different!"
     
@@ -3875,18 +3906,32 @@ label ellen_feeding_ducks:
         "Must be her genes":
             player "Must be your genes."
             
+            show claire happy
+            
             claire @ say "I know right??"
             
             ava @ say "You're too big for your genes."
             
+            show claire suggestive earsup
+            
             claire @ say "Too big for my bras too."
+            
+            show ava shocked
             
             ava @ say "W-where did that come from?!"
             
         "She's FAT!":
             player "It's because you're fat."
             
-            claire @ say "Oh? And is that a bad thing?"
+            show claire surprised earsup
+            
+            claire @ say "Oh?"
+            
+            show claire leaning suggestive
+            
+            claire @ say "And is that a bad thing?"
+            
+            show ava unamused
             
             ava @ say "Please respond wisely."
             
@@ -3894,10 +3939,19 @@ label ellen_feeding_ducks:
                 "{cps=0}Is that a bad thing?{/cps}"
                 "Hell no!":
                     $ clairePoints =+ 1
+                    $ avaPoints =- 1
                     
                     player "Hell no! I like chunky bunnies. Thick rabbits are the best."
                     
+                    show claire surprised earsup
+                    
+                    claire @ say "!"
+                    
+                    show claire sweater suggestive -
+                    
                     claire @ say "Oh you~"
+                    
+                    show ava shocked
                     
                     player "You could even stand to put on a few more pounds haha"
                     
@@ -3913,15 +3967,24 @@ label ellen_feeding_ducks:
                     
                     player "N-not at all. You're perfectly friend shaped."
                     
+                    show claire sad
+                    
                     claire @ say "Just \"friend\" shaped?"
+                    
+                    show ava reaching concerned
                     
                     ava @ say "Oof."
                 "Yes":
                     player "I'm just saying your should eat a salad every so often."
                     
+                    show claire happy
+                    
                     claire @ say "I do!"
                     
                     player "Maybe a smaller one then."
+                    
+                    show claire sad
+                    show ava reaching concerned
                     
                     claire @ say "Hmph!"
                     claire @ say "I'm not *that* fat, I'm mostly fluff and muscle!"
@@ -3929,29 +3992,54 @@ label ellen_feeding_ducks:
                     player "Keep telling yourself that."
                     
                     n "Claire pouts and makes a whining sound."
+                    
+                    ava @ say "Hey, be nice to her."
+                    
+                    claire @ say "Let's just... talk about something else."
             
         "She's *ahem* high in mass":
             player "More body mass means you need more alcohol to get fucked up."
+            
+            show claire happy
             
             claire @ say "Well duh!"
             claire @ say "But I ran the numbers for how much a bunny of my size should have to drink and it wasn't even close!"
             
             player "Huh. Maybe you really are built different."
             
+            show ava smug
+            
             ava @ say "Built like a tank."
             
+            show claire suggestive
+            
             claire @ say "Optimized."
+            
+    show claire sweater happy -
+    show ava typical happy -
     
     n "You chat for a bit longer then remember it's a short week."
     
-    player "You guys are alright, dont come to school on Friday."
+    player "You guys are alright, don't come to school on Friday."
+
+    show claire at hop
 
     claire @ say "Oh yeah! What are y'all's plans for the three way-"
+    
+    show claire giggle
+    
     claire @ say "I mean three day weekend?"
+    
+    show claire happy
     
     player "I got nothin' so far."
     
+    show ava whimsical
+    
     ava @ say "I was thinking of taking some shots on film at this spooky abandoned hospital nearby."
+    
+    show ava smug
+    
     ava @ say "I could use a partner to make sure I don't get shanked by a crazed hobo if either of you wanna come."
     
     claire @ say "Sorry, I'm gonna be busy with some sorority stuff. Top secret sorority stuff."
@@ -3968,22 +4056,25 @@ label ellen_feeding_ducks:
             
             player "That sounds fun! I'd love to go with you!"
             
-            show ava casual overjoyed
+            show ava overjoyed
 
             ava @ say "Sweet! You don't mind if it's haunted, do you? Cause it's probably haunted."
+            
+            show ava happy
 
             player "No, haunted is fine."
+            
+            show claire suggestive
 
             claire @ say "Ksksksks you two are so cute!"
 
-            show ava casual angry
+            show ava profile angry
 
             ava @ say "We are not!"
             
             show claire sweater derp
             
             claire @ say "Girl chill! I'm just joking!"
-            
             
         "I'll pass.":
             show claire sweater happy
@@ -3993,7 +4084,17 @@ label ellen_feeding_ducks:
             show ava casual unimpressed
 
             ava @ say "Aww..."
-
+            
+    show ava typical happy
+    show claire happy
+            
+    n "You stand around chatting some more until Ava and Claire have to run to class."
+    
+    player "See you later!"
+    
+    claire @ say "Byeee!"
+    
+    ava @ say "See ya!"
             
     hide ava
     hide claire
@@ -4043,12 +4144,15 @@ label ellen_feeding_ducks:
     gunner @ say "LMAO are you gonna \'study hard\' this weekend, [name]?"
     
     menu:
+        gunner "{cps=0}LMAO are you gonna \'study hard\' this weekend, [name]?{/cps}"
         "Nope":
             player "Nope. Cool people don't study."
             
             gunner @ say "Right on, brother!"
             
             n "Gunner's fist demands a bump and you do not disappoint."
+            
+            show gunner motivated
             
             gunner @ say "So what you got planned?"
             
@@ -4059,11 +4163,15 @@ label ellen_feeding_ducks:
                 
                 player "Not really."
                 
+                show gunner mischief
+                
                 gunner @ say "You're at least gonna fuck her, right?"
                 
                 player "I wasn't planning on it."
             else:
                 player "Nothing at all."
+                
+                show gunner displeased
                 
                 gunner @ say "Bruh."
         "I might":
@@ -4081,13 +4189,27 @@ label ellen_feeding_ducks:
             
             player "Dude what the fuck."
             
+            show gunner eyesclosed smile
+            
             gunner @ say "If you can't handle her at her best, you don't deserve her at her worst."
+            
+            show gunner wink catface
+            
+            gunner @ say "I'm just messin' with ya."
+            
+            show gunner neutral
+            
+            gunner @ say "My mom's a sweet lady, she's only tried to have my dad assassinated three or four times."
         "Actually yeah":
             player "Yeah actually, I'm really behind on everything."
+            
+            show gunner uncomfy
             
             gunner @ say "That's gay."
             
             player "Maybe so but I still need to pass my classes."
+            
+    show gunner optimistic
             
     n "Rori sees you two approaching and closes his laptop"
     
@@ -4102,16 +4224,29 @@ label ellen_feeding_ducks:
     
     gunner @ say "Rori please tell me you've got something good planned for the weekend."
     
+    show rori cheery
+    
     rori @ say "Hmm... Nope, not really."
+    
+    show rori smirk
+    
     rori @ say "Was just gonna work on my projects and maybe torrent a new anime."
     
+    show gunner pissed
+    
     gunner @ say "Ugh, don't you guys even celebrate Anthromorph's Liberation Day?"
+    
+    show rori sleepy
     
     rori @ say "Does anyone? It's just a day off from work or school."
     
     player "I'm not even an anthromorph, so no."
     
+    show gunner motivated
+    
     gunner @ say "Oh right, you guys are freshmen so you wouldn't be in the *know.*"
+    
+    show rori neutral
     
     rori @ say "The *know?*"
     
@@ -4119,33 +4254,62 @@ label ellen_feeding_ducks:
     
     n "Gunner gestures for you both to come closer so he can whisper something."
     
-    gunner @ say "Every year on Liberation Day, the fraternities conduct a panty raid!"
+    gunner @ say "Every year on Liberation Day, the fraternities conduct..."
+    gunner @ say "A panty raid!"
     
-    rori @ say "A what?"
+    show rori surprised
     
-    gunner @ say "Oh my God Rori you cannot be this homosexual."
+    rori @ say "A... panty raid? What is that? Is that a dungeon in Boarcraft?"
+    
+    show gunner determined
+    
     gunner @ say "It's where you sneak into a girl's room and steal her panties."
+    
+    show rori sleepy
     
     rori @ say "That's it? Sounds kinda lame."
     
-    player "Panty raids aren't real. It's just some dumb thing Hollywoo came up with for college movies."
+    show gunner itsover
+    
+    gunner @ say "Oh my God Rori you cannot be this homosexual."
+    
+    player "Panty raids aren't real. It's just some dumb thing Hollywoo came up with for college propaganda movies to trick people into taking out loans to get a worthless degree."
+    
+    show gunner motivated -
     
     gunner @ say "Where do you think they got the idea from?"
+    
+    show gunner optimistic
+    
     gunner @ say "Me and the boys did it last year. Are you two down to join me this year?"
     
     rori @ say "This sounds like the worst risk versus reward ratio of all time."
     
     gunner @ say "Nah bro, it's like unofficially sanctioned by the university. It's a loooooong time tradition."
+    gunner @ say "Our dean did it, Albert Einstein did it, George Washington did it, Plato did it..."
+    gunner @ say "I'm pretty sure cavemen did it too."
     gunner @ say "Nobody's ever gotten in serious trouble for it."
-    gunner @ say "But you still need someone to watch your back."
+    
+    show rori concerned
+    
+    rori @ say "Can't you do it on your own? Why do you want us to come along?"
+    
+    gunner @ say "'Cause you still need someone to watch your back!"
+    gunner @ say "It may be technically *allowed* but they still have to put up the illusion that it's not. It's part of the game."
     gunner @ say "Come on, it'll be fun I promise!"
+    
+    show rori sleepy
     
     n "Rori lets out a frustrated huff."
     
     rori @ say "Fine, I'll tag along."
     rori @ say "But only to make sure you don't do anything *too* stupid."
     
+    show gunner mischief
+    
     gunner @ say "Yes!!!"
+    
+    show gunner determined
     
     n "Gunner looks at you expectantly."
     
@@ -4158,7 +4322,12 @@ label ellen_feeding_ducks:
         
         rori @ say "And save me from having to go."
         
+        show gunner cutie
+        
         gunner @ say "Do it for Rori."
+        
+        show gunner neutral
+        show rori neutral
         
         player "Haha sure."
         player "You two have fun with the panty raid. I gotta run for now."
@@ -4223,55 +4392,67 @@ label ellen_feeding_ducks:
     show box with Dissolve(.2):
         ypos 0
 
-    show margaret neutral at center with dissolve
+    show margaret neutral at center with dissolve:
+        ypos y_margaret
 
-    ellen @ say "Good morning class!"
+    margaret @ say "Good morning class!"
     
     show margaret happy
     
-    ellen @ say "I'm sure you're all as excited about the long weekend as I am so how does a short day sound?"
+    margaret @ say "I'm sure you're all as excited about the long weekend as I am so how does a short day sound?"
     
     show margaret melancholy
 
     n "The class erupts into a half-hearted cheer followed by a dull murmur that takes a while for Ms. Ellen to calm down."
 
-    ellen @ say "Alright alright, the sooner you all shut up the sooner you can go home."
+    margaret @ say "Alright alright, the sooner you all shut up the sooner you can go home."
 
     n "She rubs her temples like she has a migraine until the class quiets down."
 
     show margaret sad
 
-    ellen @ say "Ugh..."
-    ellen @ say "Let's get this over with..."
+    margaret @ say "Ugh..."
+    margaret @ say "Let's get this over with..."
 
     n "Ms. Ellen sluggishly gives her lesson but cuts it off after only half an hour."
     
     show margaret neutral
 
-    ellen @ say "You know what? I think that's enough for today. Enjoy your weekend, everybody!"
+    margaret @ say "You know what? I think that's enough for today. Enjoy your weekend, everybody!"
 
-    hide ellen with dissolve
+    hide margaret with dissolve
 
     n "She hastily gathers her papers and hurries out of the room."
     n "You've got some time before French. Maybe you should try and talk to her?"
     
     menu:
+        n "{cps=0}You've got some time before French. Maybe you should try and talk to her?{/cps}"
         "Follow her":
             $ frenchSkill =- 1
+            
             n "Ms. Ellen seemed kinda out of it today. Perhaps it'd cheer her up if one of her students checked to see if she's alright."
             n "You manage to spot her among the crowd and follow her into the stairwell. The clacking of her heels against the concrete stairs echoes as she approaches the rooftop access door."
             
             scene bg roof with fade
             
+            show box with Dissolve(.2):
+                ypos 0
+            
             n "By the time you reached the doorway, Miss Ellen had already lit a cigarette."
             
-            show margaret neutral with dissolve:
+            show margaret smoking sad shocked at center with dissolve:
                 ypos y_margaret
                 
-            margaret @ say "Following me up here again? I must be your favorite professor, huh?"
+            margaret @ say "Following me up here again?"
+            
+            show margaret smoking neutral
+            
+            margaret @ say "I must be your favorite professor, huh?"
             
             player "Something like that."
             player "Couldn't wait to go on break, could you?"
+            
+            show margaret melancholy
             
             margaret @ say "I just needed some fresh air."
             
@@ -4279,18 +4460,32 @@ label ellen_feeding_ducks:
             
             player "You call that fresh air?"
             
+            show margaret happy
+            
             margaret @ say "My, we have a detective on the scene!"
             
+            show margaret smoking intrigued
+            
             n "Miss Ellen takes a drag of her cigarette and winces."
+            
+            show margaret smoking sad shocked
             
             margaret @ say "Ugh, this damn hangover..."
             
             player "Aha, I knew you were acting strange in class!"
             
+            show margaret smoking intrigued -
+            
             margaret @ say "Was it that obvious?"
+            
+            hide margaret
+            show margaret smoking intrigued at center:
+                ypos y_margaret
             
             player "Yeah but I don't think anyone minded."
             player "Why are you hungover? It's the middle of the week."
+            
+            show margaret smoking melancholy
             
             margaret @ say "Because I was drinking last night. Heavily."
             
@@ -4299,6 +4494,7 @@ label ellen_feeding_ducks:
             n "She looks at you. You can see it in her eyes, she's tired of it all."
             
             menu:
+                n "{cps=0}She looks at you. You can see it in her eyes, she's tired of it all.{/cps}"
                 "She feels trapped":
                     n "She feels trapped in this neverending nightmare of mediocrity."
                     n "The spark of optimism is gone, replaced with reality's dull edge cutting into her."
@@ -4313,7 +4509,11 @@ label ellen_feeding_ducks:
             
             n "She's silent for a while, letting her cigarette burn out."
             
+            show margaret smoking melancholy shocked
+            
             margaret @ say "You don't look so good yourself."
+            
+            show margaret smoking intrigued -shocked
             
             player "Oh right. That."
 
@@ -4332,9 +4532,13 @@ label ellen_feeding_ducks:
 
                     player "Yeah. I probably have that disease that only kills humans."
                     
+                    show margaret smoking melancholy shocked
+                    
                     margaret @ say "What a shame."
 
                     player "I mean, the doctor said I probably *don't* have it but I dunno whether to believe that."
+                    
+                    show margaret smoking melancholy -shocked
                     
                     margaret @ say "I hope you don't have it."
                     margaret @ say "Growing old sucks but it's better than the alternative I guess."
@@ -4351,6 +4555,8 @@ label ellen_feeding_ducks:
                     margaret @ say "If you wanna talk more, my number's on the syllabus. I'll listen to whatever you have to say."
                 "Don't wanna talk about it.":
                     player "Umm, I dunno if I'm ready to talk about that with anyone yet."
+                    
+                    show margaret smoking melancholy
 
                     margaret @ say "Fair enough."
 
@@ -4361,8 +4567,9 @@ label ellen_feeding_ducks:
 
                     margaret @ say "I can tell something's seriously bothering you though. My number's on the syllabus if you ever wanna talk."
                     
-                    
-            margaret @ say "For now, I'm gonna return to my office and pass out."        
+            margaret @ say "For now, I'm gonna return to my office and pass out."    
+            
+            hide margaret    
                     
             n "You swear you can just barely hear her giggle as she walks past you, brushing her fluffy tail against your arm."
             n "You stand on the roof for a while longer until you realize you're late for your next class."
@@ -4379,27 +4586,42 @@ label ellen_feeding_ducks:
     show box with Dissolve(.2):
         ypos 0
 
-    show celestine neutral at center with dissolve
+    show celestine excited at center with dissolve:
+        ypos y_celestine
 
     celestine @ say "Bonjour class! Happy Anthromorphs's Liberation Day Eve!!"
+    
+    show celestine neutral
+    
     celestine @ say "Obviously this is an American holiday but I wanted to go over related holidays other countries celebrate!"
     celestine @ say "France is actually credited with kickstarting the push for us animal folk to have equal rights in this era!"
     celestine @ say "It sure sends a message when the human elites get brutally murdered and eaten by commoners, huh?"
     celestine @ say "Sometimes that's what it takes to change the world!"
     celestine @ say "I highly recommend visiting France during the week long celebration they have! It's like Mardis Gras on crack! Heehee~"
     celestine @ say "Though France didn't see a long-standing animal leader for a while, Britain had one the next decade! To this day, Queen Mary is celebrated by having her portrait on their currency!"
+    
+    hide celestine with dissolve
 
     n "Mrs. Celestine rambles on about other countries and their various transitions from human dominated society to rule of animal people."
     n "Maybe one day you'll get your face on the dollar bill as a memory of the last human."
     n "Either that or they'll talk shit about you in textbooks for being an evil human who oppressed every other species for millenia."
     n "For all her love of this holiday, she doesn't cut you a break and let the class leave early."
     n "If someone hadn't interrupted her, she probably would have ranted well into the evening."
+    
+    show celestine excited at center with dissolve:
+        ypos y_celestine
 
     celestine @ say "Oop! Seems I got a bit too excited! Class is dismissed! Enjoy your weekend!"
 
     hide celestine with dissolve
+    
+    show claire sweater happy earsup at center with dissolve:
+        ypos y_claire
+        xoffset 550
 
     claire @ say "Whew! The long weekend has officially begun! Wanna stop by the coffee shop, [name]?"
+    
+    show claire -earsup
     
     player "Why not? I am getting kinda hungry."
     
@@ -4413,94 +4635,145 @@ label ellen_feeding_ducks:
     play music "audio/music/mere - coffeeLove.exe.ogg" fadein 1.0
     #play music "audio/music/vylet - Catching On.ogg" fadein 1.0
     
-    show claire sweater happy:
+    show claire sweater happy at center:
         ypos y_claire
-    with dissolve
+        xoffset 550
+    with moveinright
     
     n "Claire holds the door open for you and lets you go inside first."
     n "Ava is already here waiting for you."
     
-    show ava typical happy:
+    show ava typical whimsical at center with dissolve:
         ypos y_ava
+        xoffset -500
+        xzoom -1
     
     ava @ say "*Chirp~*"
+    
+    show ava happy
+    
     ava @ say "Hey guys!"
     
+    show ava typical happy
+    
     claire @ say "Heyyy~"
+    
+    show claire suggestive
+    
     claire @ say "OMG is that who I think it is?"
     
     n "Claire points to a pair of cat ears sticking up over a booth. He's facing away. but, Ava has to flutter up to even see him."
     n "Sitting across from him is Rori, flipping through pages in a textbook."
     
+    show ava at flipleft
+    
+    pause .5
+    
+    show ava at flipright
+    
+    pause .3
+    
     ava @ say "What? Who?!"
     
     claire @ say "That catboy you have a crush on!"
     
+    show ava pose angry
+    
     ava @ say "Shshshshush or he'll hear you!"
     
     n "Gunner's ear flicks and he turns around to see what the commotion is all about."
+    
+    show claire happy with move:
+        xoffset 700
+    hide ava with dissolve
+    show ava typical happy at center with dissolve:
+        ypos y_ava
+        xoffset 450
 
-    show gunner neutral at center:
-        xzoom -1
-        ypos y_gunner
-        xpos 1550
     show rori neutral at center:
-        xpos 1270
+        xoffset -340
         ypos y_rori
         xzoom -1
+    show gunner optimistic at center:
+        xzoom -1
+        ypos y_gunner
+        xoffset -750
     with dissolve
 
     gunner @ say "Hello there ladies~"
+    
+    show gunner neutral
+    
     gunner @ say "And [name]."
     
     n "Rori throws down his pencil."
     
+    show rori sleepy
+    
     rori @ say "I don't know how you expect me to tutor you if you turn around to greet every girl who walks in."
 
     player "Hey guys. You helping Gunner learn basic math? How's that going?"
+    
+    show rori concerned
 
     rori @ say "It's... not."
+    
+    show gunner annoyed
 
     gunner @ say "Hey, chi-squared tests are not basic math! Seriously, does anybody ever use this stuff?"
     
+    show claire giggle
+    
     claire @ say "I use it all the time! It's a useful statistical analysis to determine the validity of quantitative experiments compared against a null hypothesis."
+    
+    show ava whimsical
+    show gunner optimistic
     
     ava @ say "Sorry to interrupt your study session!"
     
     gunner @ say "It's alright, we could use a break anyway."
     
+    show ava happy
+    
     n "Claire turns to Rori with a friendly grin."
     
-    show claire sweater wave
+    show claire sweater suggestive earsup
     
     claire @ say "Hiya! I don't think we've met! I'm Claire and this is Ava!"
     
     show rori anxious
-    show claire sweater happy
+    show claire sweater happy -earsup
 
     n "Rori looks kinda nervous. You're not sure if it's just because he's shy or if it's Claire intimidating him."
     
     rori @ say "N-nice to meet you. My name's Rori."
+    
+    show claire sweater suggestive
 
     claire @ say "I like your horns~"
     
-    show rori neutral
+    show rori worried
 
     rori @ say "I- my... horns? Thanks? I don't really do anything too fancy with 'em."
 
     show ava annoyed
 
     ava @ say "Claire can you please stop flirting with every boy you meet?"
+    
+    show claire giggle
 
     claire @ say "Hey I hit on girls too."
     
     show ava typical neutral
 
     ava @ say "This is why I'm embarassed to go out in public with you."
+    
+    show claire derp
 
     claire @ say "Ksksksks love you too Ava <3"
     
-    show ava portrait neutral
+    show claire happy
+    show ava profile whimsical
 
     ava @ say "We'll just be moving along now. Don't mind us!"
 
@@ -4508,7 +4781,7 @@ label ellen_feeding_ducks:
 
     ava @ say "See you around, guys!"
     
-    show claire sweater leaning
+    show claire sweater suggestive
 
     claire @ say "À un de ces quatre! Ksksksksk!"
 
@@ -4523,8 +4796,17 @@ label ellen_feeding_ducks:
     n "You walk up to the counter with Ava and Claire at your side."
     n "As usual, Mishka is there to greet you with a smile... or half of one. Maybe a third."
     
-    show mishka neutral at center with dissolve:
+    show mishka neutral at center:
         ypos y_mishka
+        xzoom -1
+        xoffset -550
+    show claire sweater happy at center:
+        ypos y_claire
+        xoffset 620
+    show ava typical happy at center:
+        ypos y_ava
+        xoffset 330
+    with dissolve
     
     if mishkaMall == True:
         n "It dawns on you that you haven't seen her since you made plans to go to the mall together."
@@ -4562,7 +4844,7 @@ label ellen_feeding_ducks:
     
             mishka @ say "Another time then."
             
-    mishka @ say "Anyway, did you want to order something?"
+    mishka @ say "Can I get you something to drink?"
 
     player "The usual please."
 
@@ -4575,24 +4857,25 @@ label ellen_feeding_ducks:
     #player "You don't have to get me anything lol"
     player "Oh nice you're getting a cookie for everyone?"
     
-    show claire sweater surprised
+    show claire sweater surprised earsup
     
     claire @ say "Huh? Um, no?"
     
-    #show claire sweater happy
-    show ava pose ohyou
+    #show claire sweater happy -earsup
+    show ava agitated
     
     ava @ say "They're all for you, aren't they?"
     
-    show claire sweater embarassed
+    show claire sweater flustered -earsup
     
     claire @ say "I gotta maintain my figure somehow!"
     
-    show ava typical neutral
+    show ava typical happy
     
     ava @ say "I'll just have a mocha please!"
     
     show claire sweater happy
+    show mishka happy
     
     mishka @ say "Konyechnya! I'll have that ready for you all shortly!"
 
@@ -4607,7 +4890,7 @@ label ellen_feeding_ducks:
 
     ava @ say "A lazy day every now and then is nice."
     
-    show claire sweater heyeah
+    show claire sweater laughing
 
     claire @ say "I looooove staying in bed all day, wrapped up in a nice warm blanket and watching movies."
     
@@ -4626,20 +4909,20 @@ label ellen_feeding_ducks:
     player "I dunno, my dorm is kind of a wreck and I don't have anything to watch and"
     
     show claire sweater happy
-    show ava typical neutral
+    show ava typical happy
 
     claire @ say "Come on, you promised!"
 
     player "I did? I don't remember that..."
     
-    show ava smile
+    show ava smug
     
     ava @ say "Yeah, I'm pretty sure we talked about this before."
     
     player "Am I being gaslit right now?"
     
     #show ava annoyed
-    show ava typical neutral
+    show ava typical happy
     
     ava @ say "No, you definitely promised us a movie night at some point."
 
@@ -4653,7 +4936,7 @@ label ellen_feeding_ducks:
 
     show mishka neutral at center with dissolve:
         xzoom -1
-        xpos -350
+        xoffset -550
         ypos y_mishka
 
     mishka @ say "Here's your drinks and snacks! Enjoy!"
@@ -4672,7 +4955,7 @@ label ellen_feeding_ducks:
     
     mishka @ say "Really..? I would enjoy that very much!"
     
-    show mishka neutral
+    show mishka anxious neutral
 
     ava @ say "Yeah, you're really cool! You must be really busy though having to work here all the time on top of going to class."
 
@@ -4691,18 +4974,19 @@ label ellen_feeding_ducks:
     pause .1
     
     show ava:
-        xpos -100
+        xoffset -250
     show claire:
-        xpos 400
+        xoffset 320
     with move
-
+    
     n "On your way out, Ava stops you."
     
     show ava excited
 
     ava @ say "Why don't we invite them to come along too? They seem pretty cool."
     
-    show claire sweater leaning
+    show ava happy
+    show claire sweater leaning suggestive
 
     claire @ say "Ah I see how it is. You wanna spend some time with that Gunner boy, donchya?~"
     
@@ -4711,7 +4995,7 @@ label ellen_feeding_ducks:
     ava @ say "You're the one who was into that cute ram!"
     
     show ava angry 
-    show claire sweater heyeah
+    show claire sweater laughing
 
     claire @ say "Ksksksks so now you think Rori's cute too?"
 
@@ -4725,9 +5009,11 @@ label ellen_feeding_ducks:
 
     show gunner neutral at center:
         xzoom -1
-        xpos -300
+        xoffset -450
+        ypos y_gunner
     show rori neutral at center:
-        xpos 400
+        xoffset 450
+        ypos y_rori
     with dissolve
 
     player "Hey guys. Apparently I'm hosting a movie night tonight. Wanna come with so I'm not stuck listening to these two bicker for hours all on my lonesome?"
@@ -4754,14 +5040,13 @@ label ellen_feeding_ducks:
     hide rori
     with dissolve
 
-    show ava typical neutral at center:
-        xpos -350
+    show ava typical happy at center:
+        xoffset -350
         xzoom -1
         ypos y_ava
     show claire sweater happy at center:
-        xpos 350
+        xoffset 450
         ypos y_claire
-        #xzoom -1
     with dissolve
 
     player "They're on board."
@@ -4770,9 +5055,13 @@ label ellen_feeding_ducks:
 
     ava @ say "Awesome! We'll see ya later tonight [name]!"
     
-    show claire heyeah
+    show claire laughing
 
     claire @ say "Yeah, thanks for hosting! I can't wait~"
+    
+    hide claire
+    hide ava
+    with dissolve
 
     stop music fadeout 1.3
 
@@ -4799,16 +5088,24 @@ label ellen_feeding_ducks:
     
     play music "audio/music/Vylet Pony - Cozy Pone.ogg" fadein .5
     #play music "audio/music/vylet - リラックス.ogg" fadein .5
+    
+    show rori soyface
 
     rori @ say "Hi! Sorry I'm late."
+    
+    show rori neutral
 
     player "It's fine. Did you bring the movies? And where's Gunner?"
+    
+    show rori supersmug
     
     rori @ say "He's had to do something but he'll be here soon. And yeah I got 'em right here."
 
     n "He whips out a flash drive."
 
     player "Cool, let's see what you got."
+    
+    hide rori with dissolve
 
     n "You plug the drive into your laptop and browse the files on it."
     n "Deer god..."
@@ -4817,37 +5114,45 @@ label ellen_feeding_ducks:
     n "You open one and skip to the middle. You are greeted with a barrage of bright colors and a high pitched \"ONI-CHAAAAAAN!~\""
     n "You immediately slam the laptop lid shut."
     n "What the fuck Rori"
+    
+    show rori neutral at center with dissolve:
+        ypos y_rori
 
     player "I thought you said you had some good movies..."
-
+    
     show rori laugh
 
     rori @ say "These *are* good."
+    
+    show rori neutral
 
     player "How am I supposed to explain this weeb shit to a normie like Ava?"
+    
+    rori @ say "Idk just tell her it's a foreign film."
+    rori @ say "She'll think you're cultured."
     
     hide rori with dissolve
 
     n "Before you can come up with a backup movie, you hear another knocking at your door."
     n "As you turn the knob, Claire's fat bunny ass bursts through the doorway, knocking you onto the ground, semi-conscious."
 
-    show ava typical neutral at center:
-        xpos 50
+    show ava typical happy at center:
+        xoffset -170
         ypos y_ava
         xzoom -1
-    show claire sweater wave at center:
-        xpos -450
+    show claire sweater happy wave at center:
+        xoffset -680
         ypos y_claire
         xzoom -1
     show gunner neutral at center:
-        xpos 650
+        xoffset 680
         ypos y_gunner
     with dissolve
 
     claire @ say "Heyyyy~"
     
-    show ava pose ohyou
-    show claire sweater happy
+    show ava pose whimsical
+    show claire sweater happy -wave
 
     ava @ say "I hope you didn't start without us!"
     
@@ -4869,14 +5174,42 @@ label ellen_feeding_ducks:
     
     player "I thought you were supposed to be loaded. Why aren't you living in this building or like some mansion?"
     
+    show gunner determined
+    
     gunner @ say "And miss out on the authentic college experience? Nah bro, couldn't be me."
+    
+    show gunner eyesclosed catface
+    
     gunner @ say "I like having a roommate and slumming it up eating ramen noodles like I was raised on the street."
     
-    rori @ say "Dude you buy imported authentic ramen that cost like $40 per bowl."
+    show gunner optimistic
+    
+    hide ava
+    hide claire
+    with dissolve
+    
+    show rori sleepy at center with dissolve:
+        ypos y_rori
+        xoffset -400
+        xzoom -1
+    
+    rori @ say "Dude you buy imported authentic ramen that costs like $40 per bowl."
     
     gunner @ say "I know right? Isn't poor people food just the best?"
+    
+    hide rori with dissolve
+    
+    show ava typical happy at center:
+        xoffset -170
+        ypos y_ava
+        xzoom -1
+    show claire sweater happy wave at center:
+        xoffset -680
+        ypos y_claire
+        xzoom -1
+    with dissolve
 
-    show claire sweater lusty alert
+    show claire sweater suggestive earsup
 
     claire @ say "Pretty swanky place you got here~"
     
