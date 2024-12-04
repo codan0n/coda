@@ -5137,15 +5137,15 @@ label ellen_feeding_ducks:
     n "As you turn the knob, Claire's fat bunny ass bursts through the doorway, knocking you onto the ground, semi-conscious."
 
     show ava typical happy at center:
-        xoffset -170
+        xoffset -225
         ypos y_ava
         xzoom -1
     show claire sweater happy wave at center:
-        xoffset -680
+        xoffset -700
         ypos y_claire
         xzoom -1
     show gunner neutral at center:
-        xoffset 680
+        xoffset 760
         ypos y_gunner
     with dissolve
 
@@ -5200,50 +5200,45 @@ label ellen_feeding_ducks:
     hide rori with dissolve
     
     show ava typical happy at center:
-        xoffset -170
+        xoffset -275
         ypos y_ava
         xzoom -1
-    show claire sweater happy wave at center:
-        xoffset -680
+    show claire sweater suggestive earsup at center:
+        xoffset -750
         ypos y_claire
         xzoom -1
     with dissolve
 
-    show claire sweater suggestive earsup
-
     claire @ say "Pretty swanky place you got here~"
     
-    show claire sweater happy -alert
+    show claire sweater happy -earsup
 
     player "Thanks. Go ahead and have a seat wherever and we'll start watching something."
     
-    show ava -pose overjoyed
+    show ava overjoyed
 
     ava @ say "Hey Rori! Was that Boku no Doki Doki Phantasm Gx; R-EVerSe?"
     
-    show ava typical neutral
-    show rori neutral at center:
-        xpos 2000
+    show ava typical happy
+    show rori neutral at center with dissolve:
+        ypos y_rori
+        xoffset 250
 
     n "To your surprise, Ava is leaning over Rori, who is busy connecting the laptop to the television and has his anime folder open in clear view on the screen."
-    
-    show claire:
-        xpos -725
-    show ava:
-        xpos -375
-    show rori neutral at center:
-        xpos 150
-    with move
 
     rori @ say "Yeah! Have you been keeping up with season 15?"
     
     show ava motivated
 
     ava @ say "I have! It looks like they're hyping up Golden Stardust to go Requiem Mode: Super Blue Évolution for the fight against Diamond Moonlight!"
-
-    show claire sweater heyeah
+    
+    show ava happy
+    show claire sweater laughing
 
     claire @ say "I can't wait to see her final Perfect Vampire form!"
+    
+    show claire happy
+    show gunner optimistic
 
     gunner @ say "I just hope they don't stray too far from the manga version."
     
@@ -5277,7 +5272,8 @@ label ellen_feeding_ducks:
             n "Surprisingly, Claire has not occupied your bed and has instead opted recline against it whilst sitting on the floor, her arm elbow deep in a bag of chips."
             n "You decide to join her down there and grab a handful of chips when she takes her paw out."
 
-            show claire sweater happy at center with dissolve
+            show claire sweater happy at center with dissolve:
+                ypos y_claire
 
             claire @ say "Sup."
 
@@ -5291,39 +5287,32 @@ label ellen_feeding_ducks:
 
             n "Gunner looks up from his phone as Rori hits the play button."
 
-            show ava typical neutral at offscreenleft:
+            show ava typical overjoyed at offscreenright:
                 ypos y_ava
             show gunner neutral at center with dissolve:
-                xpos -300
+                xoffset -600
                 ypos y_gunner
                 xzoom -1
 
             gunner @ say "Hmm, where to sit...?"
+            
+            pause .1
 
-            show ava overjoyed at center with dissolve:
-                xalign 0 
-                xpos 300
-                xzoom 1
+            show ava typical overjoyed at center with moveinright:
+                xoffset 350
+                ypos y_ava
 
             ava @ say "You can come sit next to me!"
 
             n "Ava pats the space beside her on the bed."
             n "Gunner climbs onto your bed, sitting next to Ava with their backs propped up against the wall."
-            
-            #show ava excited
-            
-            show gunner:
-                xzoom -1
-                
-            pause .2
 
-            show gunner neutral at center with move:
-                xpos 470
+            show gunner neutral with move:
+                xoffset 660
                 
-            pause .1
+            pause .15
             
             show gunner at flipleft
-                #xzoom 1
                 
             pause .3
 
@@ -5331,25 +5320,28 @@ label ellen_feeding_ducks:
             hide ava
             with dissolve
 
-            show claire sweater happy alert at center with dissolve
+            show claire sweater happy earsup at center with dissolve:
+                ypos y_claire
 
             claire @ say "...and I figured those two would wanna sit together~"
 
-            show claire -alert
+            show claire -earsup
             
             player "Aww."
             
             player "Well I don't mind sitting down here if it's next to you."
             player "Even if the hard bedframe is killing my back."
             
-            show claire sweater lusty
+            show claire sweater suggestive earsup
 
             claire @ say "You can always lay on me you know~"
 
             player "...I wouldn't mind that either."
-
-            show ava annoyed at center with dissolve:
-                xpos 525
+            
+            show claire happy -earsup
+            show ava typical annoyed at center with dissolve:
+                xoffset 600
+                ypos y_ava
 
             ava @ say "Shh! The movie's starting!"
 
@@ -5613,5 +5605,20 @@ label ellen_feeding_ducks:
             n "Overall, you had a pretty good time with everyone. 10/10 would do again."
             n "*Yaaawn*"
             n "You're getting pretty sleepy so you hurry and get ready for bed."
+            
+    scene bg black with fade
+
+    hide box
+
+    show bg calendar
+    show tfriday at center
+    with Dissolve(.5)
+
+    pause .6
+    show tforwardslash
+    pause .2
+    show tbackslash
+
+    pause .7
     
     jump liberation_day
