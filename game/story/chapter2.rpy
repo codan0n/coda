@@ -1304,14 +1304,14 @@ label week2Tuesday:
                 n "Well if the cringe of being caught vaping wasn't enough to deter you from trying it, this cautionary tale will surely prevent you from even considering it."
                 
                 jump bulletinboard1
-            "Gayest Pride Parade Ever":
-                n "\"Come join the Gay Gay Homosexual Gay Club's 5th annual queerfest!\""
-                n "It's a flyer for an upcoming traffic obstruction event... that happened 6 months ago."
-                n "All the text is obnoxiously rainbow colored. All of it."
-                n "How many times can they fit the word \"gay\" on a 4x5 inch sheet of paper?"
-                n "You haven't been bombarded with this word this much since playing on Xbawks Live in middle school."
-                
-                jump bulletinboard1
+            #"Gayest Pride Parade Ever":
+            #    n "\"Come join the Gay Gay Homosexual Gay Club's 5th annual queerfest!\""
+            #    n "It's a flyer for an upcoming traffic obstruction event... that happened 6 months ago."
+            #    n "All the text is obnoxiously rainbow colored. All of it."
+            #    n "How many times can they fit the word \"gay\" on a 4x5 inch sheet of paper?"
+            #    n "You haven't been bombarded with this word this much since playing on Xbawks Live in middle school."
+            #    
+            #    jump bulletinboard1
             "Sick of Being a Furry?":
                 n "\"Hate how your fur/feathers/scales look?\""
                 n "\"Wish you had beautiful soft skin?\""
@@ -1414,24 +1414,24 @@ label week2Tuesday:
     
     menu:
         gunner "{cps=0}Cause it'll be fun? Back me up, [name].{/cps}"
-        "Gunner's right, we should all be gay":
-            player "Gunner's right, we should all be gay."
-            
-            show gunner hissing
-            
-            gunner @ say "What?! That's not...!"
-            
-            show rori laugh
-            
-            n "Rori laughs at your response and Gunner's reaction."
-            
-            show gunner frown1
-            show rori supersmug
-            
-            rori @ say "Alright I'm in. Can't be gay without a little crime, right?"
-            
-            player "Only in certain countries!"
-            
+#        "Gunner's right, we should all be gay":
+#            player "Gunner's right, we should all be gay."
+#            
+#            show gunner hissing
+#            
+#            gunner @ say "What?! That's not...!"
+#            
+#            show rori laugh
+#            
+#            n "Rori laughs at your response and Gunner's reaction."
+#            
+#            show gunner frown1
+#            show rori supersmug
+#            
+#            rori @ say "Alright I'm in. Can't be gay without a little crime, right?"
+#            
+#            player "Only in certain countries!"
+#            
         "Gunner's right, we should all commit a crime":
             player "Gunner's right, commiting crime is fun."
             
@@ -1446,19 +1446,19 @@ label week2Tuesday:
             rori @ say "As long as it's not anything extreme, I guess I'll join in."
             
             gunner @ say "Right, no breaking into the White House today."
-        "\[Gay\] Maybe we shouldn't become criminals":
-            player "Can't we just be gay and not do crime?"
-            
-            show gunner displeased
-            
-            gunner @ say "Where's the fun in that?"
-            gunner @ say "You guys are so boooooring!"
-            
-            show rori soyface
-            
-            rori @ say "H-hey, I'm sure we can find a fun crime to commit!"
-            
-        "\[Not Gay\] Maybe we shouldn't become criminals":
+#        "\[Gay\] Maybe we shouldn't become criminals":
+#            player "Can't we just be gay and not do crime?"
+#            
+#            show gunner displeased
+#            
+#            gunner @ say "Where's the fun in that?"
+#            gunner @ say "You guys are so boooooring!"
+#            
+#            show rori soyface
+#            
+#            rori @ say "H-hey, I'm sure we can find a fun crime to commit!"
+#            
+        "Maybe we shouldn't become criminals":
             player "Maybe we could just do something legal?"
             
             show gunner displeased
@@ -1872,7 +1872,11 @@ label beauty_and_the_beast:
     
     margaret @ say "I'm not. Or at least I wasn't. I've just got things on my mind."
 
-    show margaret smoking melancholy -
+    hide margaret
+    show margaret smoking neutral at center:
+        ypos y_margaret
+
+    #show margaret smoking melancholy
 
     player "Such as?"
     
@@ -1905,6 +1909,8 @@ label beauty_and_the_beast:
     n "She pushes her cigarette tip against the cool concrete wall, smothering it and letting it fall to the floor."
     
     margaret @ say "Class is about to begin. See you there."
+    
+    hide margaret with dissolve
     
     n "She walks past you, her fluffy tail brushing against your arm before she descends the staircase back into the building."
     n "Stunned, you stand in the breeze, motionless and thoughtless."
@@ -1941,10 +1947,12 @@ label beauty_and_the_beast:
     n "Not even a BlueyRay... Where does Harmonia's budget even go towards??"
 
     show claire sweater wave happy at center with dissolve:
-        xpos 300
+        xoffset 500
         ypos y_claire
 
     claire @ say "Hey [name]! Glad you could make it today!"
+    
+    show claire -wave
 
     player "Hey Claire! Yeah, I really wasn't feeling too good the other day..."
     
@@ -1956,7 +1964,7 @@ label beauty_and_the_beast:
 
     hide claire with dissolve
 
-    show celestine happy at center with dissolve:
+    show celestine excited at center with dissolve:
         ypos y_celestine
 
     celestine @ say "Good afternoon class! Today we're going to be watching a favorite of mine, Beauty and the Beast!"
@@ -1967,7 +1975,7 @@ label beauty_and_the_beast:
     celestine @ say "It's good you were able to join us today, [name]! It would have been a shame for you to miss such a masterpiece."
     celestine @ say "Oh and it's a wonderful learning opportunity as well! I'm a firm believer that watching movies in another language is extremely helpful for familiarizing yourself with the language!"
     
-    show celestine happy
+    show celestine excited
     
     celestine @ say "Without further adieu, let's get into it!"
 
@@ -1982,14 +1990,18 @@ label beauty_and_the_beast:
 
     show celestine neutral at center with dissolve:
         ypos y_celestine
+        xzoom -1
 
     celestine @ say "C'est la fin! What did you all think of it?"
+    
+    pause .1
+    
+    show celestine with move:
+        xoffset -400
 
     show claire sweater happy at center with dissolve:
         ypos y_claire
-        xpos 670
-
-    show celestine at flipright
+        xoffset 550
 
     claire @ say "I liked it! I picked up a few words they were saying and could infer what they were saying pretty well I think."
 
@@ -2000,19 +2012,18 @@ label beauty_and_the_beast:
 
     scene bg campus with fade
     
+    show box with Dissolve(.2):
+        ypos 0
+    
     play music "audio/music/Evan Schaeffer - Aqueduct.ogg" fadein .5
 
     show claire sweater pose suggestive at center with dissolve:
         xzoom -1
         ypos y_claire
-        xpos 0
-
-    show box with Dissolve(.2):
-        ypos 0
+        xoffset -450
     
     show ava at offscreenright:
         ypos y_ava
-        yalign 0
 
     claire @ say "...That was a pretty good movie, wasn't it? I'm a sucker for any kind of romantic film!"
 
@@ -2022,38 +2033,49 @@ label beauty_and_the_beast:
 
     claire @ say "The animated version will always hold a special place in my heart ksksksks!"
     gunner "{nw}"
+    
+    pause .1
 
-    show ava casual happy at center:
-        xpos 320
-    show claire:
-        xpos -330
+    show ava typical happy at center:
+        xoffset 350
+        ypos y_ava
     with move
 
-    ava @ say "Hey guys, how was class?"
+    show ava excited
+
+    ava @ say "Hey guys!"
+    
+    show ava happy
+    
+    ava @ say "How was class?"
     
     show claire sweater happy
     
     player "We just got done watching La Belle et la Bête."
     
-    show ava casual concerned
+    show ava concerned
 
     n "Ava looks confused for a bit before figuring it out."
     
-    show ava casual daydream
+    show ava whimsical
 
     ava @ say "Ah right, French class."
 
     claire @ say "How was philosophy?"
     
-    show ava casual annoyed
+    show ava annoyed
 
     ava @ say "Boring. It's all stuff I've already learned. I can't believe they didn't take my credits from high school."
+    
+    show claire derp
 
     claire @ say "Aww... at least you don't have to worry about your grade if you already know all the material!"
     
-    show ava casual unimpressed
+    show ava unimpressed
     
     ava @ say "Yeah. Honestly I might just start skipping class."
+    
+    show claire giggle
     
     claire @ say "Gasp!"
     
@@ -2063,19 +2085,27 @@ label beauty_and_the_beast:
     
     ava @ say "Meh."
     
+    show claire happy
+    
     claire @ say "Actually, this gives me an idea..."
     
     n "Suddenly, your head feels so heavy it's going to drag you down to the ground as it painfully pulsates."
     n "You stumble back and take a deep breath."
     
+    show ava shocked
+    show claire sweater surprised earsup
+    
     player "Ugh, I'd love to stay and chat but I've got a killer headache."
     player "I think I'm just gonna go back to my dorm and sleep it off."
     
-    ava @ say "Huh? Okay then, hope you feel better!"
+    ava @ say "Hope you feel better soon!"
     
     claire @ say "Maybe you're still getting over your illness?"
     
     player "Yeah maybe."
+    
+    show claire happy wave
+    show ava happy
     
     claire @ say "Take care [name]!"
     
@@ -2153,13 +2183,14 @@ label hospital_bound:
     n "You hear beeps from a heart monitor."
     n "You try to look around but your whole body is aching."
 
-    show rori neutral at center with dissolve:
+    show rori concerned at center with dissolve:
         ypos y_rori
 
     rori @ say "[name]? You're finally awake!"
     rori @ say "Wait right here, I'll go get the doctor!"
     
     rori "{nw}"
+    pause .1
     
     show rori at offscreenleft with move:
         ypos y_rori
@@ -2180,6 +2211,8 @@ label hospital_bound:
         xoffset 450
         ypos y_kitsuragi
     with move
+    
+    pause .3
 
     kitsuragi @ say "Hello, [name]. I am Dr. Kitsuragi."
     kitsuragi @ say "First thing's first, how are you feeling? You seem to have taken a nasty fall but I'm more concerned about what may have caused it in the first place."
@@ -2215,11 +2248,14 @@ label hospital_bound:
     kitsuragi @ say "You realize that's a bit out of the ordinary, don't you?"
 
     player "I guess I figured it would just sorta fix itself if I ignored it..."
+    
+    show rori neutral
 
     kitsuragi @ say "I'd like to perform some tests that will hopefully determine the cause of these dizzy spells."
     kitsuragi @ say "You were unconscious for two whole days and I'm afraid to put you back on your feet."
 
     menu:
+        kitsuragi "{cps=0}You were unconscious for two whole days and I'm afraid to put you back on your feet.{/cps}"
         "Two days?!":
             player "Two days?! There goes my attendance record."
             
@@ -2227,7 +2263,11 @@ label hospital_bound:
             
             player "Aww thanks Rori, you didn't have to do that."
             
+            show rori cheery
+            
             rori @ say "It's alright. I didn't want you to be alone."
+            
+            show rori neutral
             
             kitsuragi @ say "You can get caught up on your studies over the weekend. There are more pressing matters to tend to right now."
         "I can walk fine":
@@ -2237,36 +2277,51 @@ label hospital_bound:
             n "You can already tell this isn't going to end well but you've already committed to the bit."
             n "When your feet touch the cool tile floor, a numb sensation runs across your skin. The muscles that would normally hold your body up simply fail to do anything and you come crumpling down."
             
+            show rori surprised
+            
             rori @ say "[name]!"
+            
+            show rori concerned
             
             n "Rori helps you up and tucks you back into bed like a dumb useless baby."
             
             player "See? Perfectly normal."
             
+            show rori neutral
+            
             kitsuragi @ say "Riiiight..."
             
     kitsuragi @ say "In any case, I would encourage you to return home, Rori. Don't worry, we'll keep a close eye on [name]."
+    
+    show rori anxious
 
     rori @ say "Aww... Alright."
 
     n "Rori looks somewhat disappointed but understanding."
 
     player "Here Rori, lemme give you my phone number so I can update you when they find out what's wrong with me."
+    
+    show rori soyface
 
     n "Rori immediately brightens up and pulls out his phone."
 
     rori @ say "Sure! What is it?"
+    
+    show rori neutral
 
     n "You tell him your number and he types it into his contact list."
 
     rori @ say "Aaaaand done!"
-    rori @ say "See you later [name]. Hope you feel better soon!"
+    rori @ say "I'll text you later [name]. Get well soon!"
 
     player "Thanks Rori!"
 
     n "He grabs his backpack and gives you a fist bump on his way out."
 
     hide rori with dissolve
+
+    show kitsuragi with move:
+        xoffset 0
 
     n "The doctor waits for Rori to be out of earshot before sighing and turning to you."
     
@@ -2367,6 +2422,7 @@ label hospital_bound:
     n "What should you study?"
     
     menu:
+        n "{cps=0}What should you study?{/cps}"
         "French":
             $ frenchSkill =+ 1
             n "You pick up your French textbook and practice some lessons."
@@ -2502,6 +2558,7 @@ label hospital_bound:
             kitsuragi @ say "Or were you just trying to escape?"
             
             menu:
+                kitsuragi "{cps=0}Or were you just trying to escape?{/cps}"
                 "Just had to pee haha":
                     n "You feel like a small child who's been caught with his hand in the cookie jar."
                     n "You know that she knows that you know that you were trying to escape, but we can all just play dumb here and act like this never happened."
@@ -2550,7 +2607,7 @@ label hospital_bound:
             n "Or at least pass the time browsing the web."
 
             menu:
-                n "{cps=0}{/cps}"
+                n "{cps=0}Or at least pass the time browsing the web.{/cps}"
                 "Read for literature":
                     $ literatureSkill =+ 1
                     
@@ -2841,7 +2898,6 @@ label leaving_hospital:
 
     show kitsuragi at center with dissolve:
         ypos y_kitsuragi
-        xpos 0
 
     kitsuragi @ say "Good morning, [name]. How are you feeling?"
 
@@ -3056,10 +3112,9 @@ label monty_hall:
     n "You drifted off into a daydream during history class, only returning to reality when you heard your name called."
     
     show rothbauer at center with dissolve:
-        xpos 0
         ypos y_roth
 
-    rothbauer @ say "[name], could you tell me why there's no class on Friday?"
+    rothbauer @ say "[name], could you tell the class why there's no class on Friday?"
 
     player "Huh? I've been coming in on Fridays for nothing?"
 
@@ -3093,16 +3148,23 @@ label monty_hall:
         ypos 0
     
     show herschel at center with dissolve:
-        xpos 0
+        ypos y_herschel
         
     herschel @ say "...alright, I think that's enough for today's lesson but we still have a bit of time leftover!"
     
+    pause .1
+    
+    show herschel with move:
+        xoffset 300
+    
     show gunner neutral at center with dissolve:
-        xpos -550
+        xoffset -550
         ypos y_gunner
         xzoom -1
     
     gunner @ say "Does that mean we can go home early?"
+    
+    show gunner annoyed
     
     herschel @ say "Of course not! Instead what I have in mind is an extra credit opportunity, something you of all students should be particularly interested in."
     
@@ -3112,7 +3174,7 @@ label monty_hall:
     
     hide gunner with dissolve
     
-    n "Thankfully Mrs. Herschel doesn't seem to have heard his remark."
+    n "Lucky for him, Mrs. Herschel doesn't seem to have heard his remark."
     
     herschel @ say "I have something of a math riddle for you to solve!"
     herschel @ say "Say you have three doors to choose from and behind one of them lies a prize."
@@ -3136,7 +3198,8 @@ label monty_hall:
             n "Gunner circles something and puts down his pencil."
             
             show gunner neutral at center with dissolve:
-                xpos -550
+                xoffset -500
+                ypos y_gunner
                 xzoom -1
             
             gunner @ say "Wouldn't you be twice as likely to win if you choose the other door?"
@@ -3159,7 +3222,8 @@ label monty_hall:
             n "Before you can say anything, Gunner pipes up."
             
             show gunner neutral at center with dissolve:
-                xpos -550
+                xoffset -550
+                ypos y_gunner
                 xzoom -1
             
             gunner @ say "What difference does it make? It's a 50/50 chance at that point... right?"
@@ -3182,6 +3246,8 @@ label monty_hall:
             
             n "Gunner mutters something again."
             
+            show gunner disgusted
+            
             gunner @ say "What the fuck kind of reasoning is that..?"
             
             herschel @ say "Very good [name], I'll add one point to your final grade."
@@ -3190,42 +3256,67 @@ label monty_hall:
     
     scene bg campus with fade
     
+    show box with Dissolve(.2):
+        ypos 0
+    
     n "Gunner walks with you after class and you once again find Rori on his laptop out on the field."
     
     show rori neutral at center:
         ypos y_rori
-        xoffset -450
+        xoffset 450
     show gunner neutral at center:
         ypos y_gunner
         xoffset -450
+        xzoom -1
     with dissolve
     
     rori @ say "Sup. You all done for the day?"
     
     gunner @ say "Yeah. You out here doing your compsci homework again?"
     
+    show rori sleepy
+    
     rori @ say "Computer *engineering* not science. There's a difference."
+    
+    show gunner eyesclosed smile
     
     n "Gunner shrugs nonchalantly."
     
     gunner @ say "If you say so. Both look like coding to me."
     
+    show gunner neutral
+    show rori neutral
+    
     n "Rori looks up from his screen and seems to just now notice you're there."
+    
+    show rori smirk
     
     rori @ say "Hey [name]! Glad you're out of the hospital!"
     
     player "I know right? About time. They kept me there like a prisoner all weekend."
     
+    show gunner disgusted
+    
     gunner @ say "Yeah man, what was with that?"
+    
+    show gunner frown1
+    show rori neutral
     
     player "I dunno, just been feeling dizzy and stuff lately."
     player "But they gave me some pills and now I feel fine."
     
+    show rori soyface
+    
     rori @ say "Well I'm glad you're okay now. You looked dead when I found you!"
+    
+    show rori neutral
+    show gunner determined
     
     gunner @ say "You still kinda look like it."
     
     player "Gee, thanks..."
+    
+    show gunner cutie
     
     gunner @ say "I'm just kiddin!'"
     gunner @ say "Hey, you guys wanna get into some shenanigans today?"
@@ -3233,6 +3324,8 @@ label monty_hall:
     n "Rori raises a brow but doesn't say anything."
     
     player "I dunno, I'm still trying to take it easy, at least for a few days."
+    
+    show gunner neutral
     
     gunner @ say "Ah alright then. Later this week maybe? We got a three day weekend coming up LET'S GOOOO!"
     
@@ -3290,9 +3383,10 @@ label ellen_feeding_ducks:
     menu:
         n "{cps=0}An uncomfortable silence passes.{/cps}"
         "What are you doing here?":
-            player "What are you doing here?"
+            player "What are you doing out here? Isn't class about to begin"
             
-            margaret @ say "I've gotta do something to pass the time, don't I?"
+            margaret @ say "I don't live in the lecture hall you know."
+            margaret @ say "And I've gotta do something to pass the time, don't I?"
             
             player "I just thought you'd be more into reading books or something."
             

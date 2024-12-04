@@ -176,7 +176,7 @@ define y_mere = 1250
 define y_herschel = 1515
 define y_celestine = 1600
 define y_claire = 1825
-define y_kitsuragi = 1500
+define y_kitsuragi = 1430
 define y_lina = 1570
 define y_ava = 1465
 define y_mishka = 1550
@@ -2276,8 +2276,11 @@ layeredimage mishka neutral eyesclosed tongueout:
 layeredimage kitsuragi:
     at sprite_highlight('kitsuragi')
     always:
-        'images/characters/kitsuragi.png'
+        'images/characters/kitsuragi/kitsuragi.png'
     group saying:
+        xzoom .8
+        yzoom .7
+        pos (80,-22)
         attribute say:
             "images/bubble.png"
 
