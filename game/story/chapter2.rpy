@@ -161,11 +161,23 @@ label week2Tuesday:
         ypos y_margaret
 
     margaret @ say "Good morning everyone. Today we'll be finishing up The Death of Ivan Ilyich. I'll be sad to see him go but we have plenty of other great books to get through and so little time."
+    
+    show margaret neutral
+    
     margaret @ say "After Ivan falls and injures his side, he suffers from worsening pain that causes him to become irritable and further destabilize his relationship with his family."
     margaret @ say "His condition eventually leaves him bedridden and unable to work. Faced with both his mortality and the loss of his sense of purpose, he reflects on what it truly means to die."
+    
+    show margaret melancholy
+    
     margaret @ say "He comes to realize that the perception of death revolves around the fulfillment of life one has made for themself."
     margaret @ say "He had once believed he led a fulfilling life by acquiring prestige and status, but as he lay dying, none of his achievements mattered so much as the sympathy he received from his servant."
+    
+    show margaret happy at hop
+    
     margaret @ say "Moved by its sheer authenticity, Ivan finally understood while on his deathbed that by pursuing his own interests, he had neglected to foster a caring family."
+    
+    show margaret neutral
+    
     margaret @ say "Their relationship resembled that of business partners, where one is only good for the convenience and profits they bring in, but by this time Ivan was nothing but dead weight."
     margaret @ say "His existence brought about an impersonal and artificial partnership that could only acknowledge each other as far as how one benefitted the other."
     margaret @ say "And thus his death would be a relief to them."
@@ -186,17 +198,37 @@ label week2Tuesday:
 
     celestine @ say "Bonne journée, classe! How was your weekend? Have any of you encountered any French words in your day to day life you never noticed before?"
     
-    show claire sweater happy:
-        ypos y_claire
-    
     n "Claire waves her paw in the air energetically."
+    
+    show celestine at flipright
+    
+    pause .3
+    
+    show celestine with move:
+        xoffset -500
+    
+    show claire sweater happy at center with dissolve:
+        ypos y_claire
+        xoffset 500
     
     claire @ say "I did!! Lots of food and stuff at cafes and bakeries are French! There's umm cafe au lait which is coffee with milk..."
     claire @ say "And fondant and macrons and brioche and savarin..."
     
     celestine @ say "Oui! France is of course known for its culinary arts! It's only natural that many of their words for cuisine would end up in English."
+    
+    show celestine excited
+    
     celestine @ say "And they sure do love their cafes and bistros! If you go to Paris, you will find one on every corner!"
+    
+    show celestine neutral
+    
     celestine @ say "That brings us to today's topic: basic conversation you might experience while out in town shopping."
+    
+    hide celestine
+    hide claire
+    with dissolve
+    
+    n "Mrs. Celestine goes over some terms and typical everyday sayings, then has the class recite them and practice in groups."
     
     scene bg campus with fade
     
@@ -224,11 +256,17 @@ label week2Tuesday:
     
     player "Oh hey Mishka. It's weird seeing you somewhere other than the cafe."
     
+    show mishka anxious tongueout wink left
+    
     mishka @ say "I could say the same thing about you!"
     
     n "You hadn't considered that before. To you she's the coffee rat but from her point of view, you're just the coffee human."
     
+    show mishka neutral -wink -left -tongueout
+    
     player "I just got done with class. You going somewhere?"
+    
+    show mishka nervous
     
     mishka @ say "Just doing a walk. I'm on my break."
     
@@ -244,21 +282,32 @@ label week2Tuesday:
             
             player "You uh... wanna hang out?"
             
+            show mishka anxious neutral
+            
             mishka @ say "Hang...out?"
             
             n "She seems confused."
             
             player "Yeah, you know... go somewhere and do something together?"
             
+            show mishka happy
+            
             mishka @ say "Oh!"
+            
+            show mishka nervous2
+            
             mishka @ say "I'd love to, but I have to get back to work in a minute."
             
             n "Damn, that's code for \'hell no,\' isn't it?"
+            
+            show mishka neutral eyesclosed
             
             mishka @ say "But maybe this weekend will work for you?"
             
             n "Maybe it's not! You still have a chance!"
             n "Don't fuck this up."
+            
+            show mishka neutral -eyesclosed
             
             player "This weekend works! How about..."
             
@@ -273,12 +322,19 @@ label week2Tuesday:
             
             player "Saturday works for me. You got a number so I can text you when I'm there?"
             
+            show mishka anxious smile
+            
             mishka @ say "Hah... I don't actually."
             mishka @ say "Let's just meet there at 3 if that's a good time for you."
             
             player "Yup 3 works."
             
+            show mishka happy
+            
             mishka @ say "Great! See you there~"
+            
+            show mishka anxious neutral
+            
             mishka @ say "I have to return to work now but I'm glad I ran into you!"
             
             player "Same! See you at the mall later!"
@@ -294,6 +350,8 @@ label week2Tuesday:
             n "Her statement is totally sincere without a hint of sarcasm."
             
             player "Whenever you're free."
+            
+            show mishka neutral -
             
             mishka @ say "Hehe see you at the cafe later, [name]!"
             
@@ -326,13 +384,14 @@ label week2Tuesday:
         
     show rothbauer at center with dissolve:
         ypos y_roth
+        xoffset 400
 
     rothbauer @ say "Good morning class! I hope you're prepared for today's quiz!"
 
     player "Wha-? Quiz?"
 
     show rose skirt armscrossed shy pendant at center with dissolve:
-        xoffset -450
+        xoffset -500
         ypos y_rose
 
     rose @ say "It's listed on the syllabus."
@@ -409,13 +468,20 @@ label week2Tuesday:
     
     gunner @ say "Hang in there dude, class'll be over in like five minutes."
     
+    hide gunner with dissolve
+    
     n "Somehow you manage to endure five agonizing minutes that seem to last hours."
     n "Once class is over, you try to stand up but it's like your legs are gelatin."
     n "Gunner notices you struggling and comes to help you up."
     
+    show gunner determined at center with dissolve:
+        ypos y_gunner
+    
     gunner @ say "How wasted did you get last night to come to class this hungover?"
     
     player "I didn't drink anything last night! I dunno where this is all coming from."
+    
+    show gunner frown1
     
     gunner @ say "Maybe you ate something bad? You should take it easy for the rest of the day my guy."
     gunner @ say "C'mon, I'll take you to your dorm."
@@ -493,7 +559,13 @@ label week2Tuesday:
 
     margaret @ say "Today we'll be starting a new story, this time originating from ancient Greece in the 5th century BCE."
     margaret @ say "It is the archetypal hero's journey so often found in literature that succeeded it, as well as in our own lives!"
+    
+    show margaret happy
+    
     margaret @ say "This is the tale first told by Homer, \"The Odyssey!\""
+    
+    show margaret neutral
+    
     margaret @ say "What's especially interesting about these old poems passed down through oral tradition rather than written word, is that every generation adds their own spin."
     margaret @ say "So the version we'll be reading today is not the same as the original, but is instead an accumulation of the values of various cultures throughout time."
     
@@ -579,6 +651,7 @@ label week2Tuesday:
     n "You can listen to music and chill and get some homework done."
     
     menu:
+        n "{cps=0}You can listen to music and chill and get some homework done.{/cps}"
         "Arcoonian book":
             $ rosePoints += 1
             
@@ -603,7 +676,7 @@ label week2Tuesday:
             n "You flip open your statistics book and open a calculator app to crunch some numbers."
     
     
-    n "You're starting to feel exhausted, both physicall and mentally."
+    n "You're starting to feel exhausted, both physically and mentally."
     n "You set aside your reading materials and nestle under your blanket."
     n "A few seconds after closing your eyes, your phone buzzes."
 
@@ -720,11 +793,15 @@ label week2Tuesday:
         
     n "Claire and Ava are already waiting for you at your usual hangout spot."
     
-    show ava neutral:
+    show ava typical happy at center:
         ypos y_ava
-    show claire sweater happy:
+        xoffset 500
+    show claire sweater happy at center:
         ypos y_claire
-    
+        xoffset -500
+        xzoom -1
+    with dissolve
+        
     ava @ say "[name]!! You're here!"
     
     claire @ say "I'm so glad you could make it!"
@@ -758,35 +835,54 @@ label week2Tuesday:
 
     show ava typical happy at center:
         #xzoom -1
-        xoffset 400
+        xoffset 450
         ypos y_ava
-    show claire flannel happy at center:
+    show claire sweater happy at center:
         xzoom -1
-        xoffset -400
+        xoffset -450
         ypos y_claire
     with dissolve
 
     n "Claire hops around whimsically from one plant to another, sniffing the flowers and admiring the multitude of plants."
+    
+    show claire sweater pose happy
 
     claire @ say "It's such a lovely day to go for a walk in the gardens, isn't it?"
 
     player "Yeah, I guess it's better than being cooped up in my dorm all day."
+    
+    show ava pose whimsical
 
     ava @ say "Sunlight is good for you. Not just for your skin but also your mental health."
+    
+    show ava pose happy
 
     player "Huh. I didn't know that."
 
     #n "Maybe that's why you've always been depressed."
+    
+    show claire derp
 
     claire @ say "Just be careful not to get a sunburn! And remember to stay hydrated UwU"
 
     player "What... was that sound you just made?"
+    
+    show claire giggle
 
     claire @ say "What? UwU?"
+    
+    show claire flustered
+    show ava typical unimpressed -
 
     player "Nevermind. Which way should we go? There's like a dozen branching paths."
+    
+    show ava typical excited -pose
+    show claire surprised earsup
 
-    claire @ say "Hmm, let's gooooo... this way!"
+    ava @ say "Hmm, let's gooooo... this way!"
+    
+    show claire happy -earsup
+    show ava happy
 
     n "She seems to pick a direction at random and pulls you and Ava along with her, deep into the garden."
     n "Before long, you're surrounded by a variety of shrubs and flowers to the point where you can't even see any of the university buildings anymore."
@@ -797,8 +893,13 @@ label week2Tuesday:
     player "Cause it's red like cardinals?"
     
     claire @ say "Only the males~"
+    
+    show ava excited at hop
 
     ava @ say "Yup! Such a pretty red~"
+    
+    show ava happy
+    show claire giggle
 
     claire @ say "She's got a thing for cardinal boys~"
 
@@ -808,21 +909,31 @@ label week2Tuesday:
 
     claire @ say "Ksksksks! Just teasin'!"
     
+    show claire happy
     show ava typical neutral
 
     n "Ava and Claire continue to bicker and share fun plant facts as you go along."
     n "After a while, you come to a bench with an arch over it with vines growing all over."
+    
+    show ava pose concerned
 
     ava @ say "Whew, it's gettin' kinda hot! Can we take a break?"
+    
+    show claire flustered
 
     claire @ say "Yeah, my legs are killing me!"
 
     player "Same."
+    
+    show claire happy
+    show ava pose happy
 
     n "Claire and Ava sit under the arch and begin reviewing the photos they've taken so far."
     n "There's only room for two so you just lean against a nearby tree, taking sips of water from your bottle and watching the bees zoom around."
 
     claire @ say "Hey [name], you wanna get a shot of us under the arch?"
+    
+    show ava typical happy -
 
     ava @ say "I'll let you use my camera as long as you promise not to drop it. It costs more than a semester's worth of tuition!"
 
@@ -837,13 +948,14 @@ label week2Tuesday:
     
     n "You turn the camera around and show Claire."
     
-    show claire flannel laughing
+    show claire laughing
     
     claire @ say "Ohmygosh we look great! This is just the perfect day, isn't it!"
 
     n "Ava gets up and gestures to the bench."
     
-    show claire flannel happy
+    show claire happy
+    show ava excited
 
     ava @ say "Ok now it's your turn, [name]!"
 
@@ -851,19 +963,33 @@ label week2Tuesday:
         ava "{cps=0}Ok now it's your turn, [name]!{/cps}"
         "I don't like getting my picture taken.":
             player "Sorry, I don't like getting my picture taken."
+            
+            show ava pose shy
 
             ava @ say "I understand. I'm kinda the same way haha! But I've been getting more comfortable with it."
+            
+            show claire sad
             
             n "Claire lets out a disappointed sigh but doesn't say anything."
         "Okay!":
             $ clairePoints = clairePoints + 1
             
+            show ava happy
+            
             player "Okay!"
 
             n "You sit down next to Claire and smile for the camera."
+            
+            show claire leaning suggestive
+            
             n "Just before Ava takes the shot, Claire wraps her arm around you, pulling you in close."
+            
+            show ava overjoyed
 
             ava @ say "Aww, you two are so cute~"
+
+            show claire overjoyed
+            show ava happy
 
             claire @ say "Show us the pic!"
 
@@ -874,17 +1000,22 @@ label week2Tuesday:
             $ clairePoints = clairePoints - 1
             $ avaPoints = avaPoints + 1
             
+            show ava happy
+            
             player "Alright but I'm getting my picture taken with you next."
 
-            show ava overjoyed
+            show ava enamored
 
             ava @ say "Who, me??"
 
             n "She looks to Claire, as if seeking her approval."
+            
+            show claire flustered
 
             claire @ say "Sure, go for it!"
             
-            show ava typical neutral
+            show claire happy
+            show ava typical happy
 
             n "Ava stands back to take a shot of you and Claire."
 
@@ -904,7 +1035,7 @@ label week2Tuesday:
             n "She hands the camera to the bunny and sits down beside you. Claire hops back and has to bend over a bit to frame the shot."
             n "Claire motions for you to get closer together and Ava scoots more toward you, enough that you can feel her feathers brushing up against you skin."
             
-            show ava portrait neutral
+            show ava smug
 
             claire @ say "One... two... three!"
 
@@ -912,7 +1043,7 @@ label week2Tuesday:
             
             claire @ say "Got it!"
             
-            show ava typical neutral
+            show ava typical happy
 
             n "Ava excitedly flutters over to see how it turned out."
 
@@ -926,15 +1057,24 @@ label week2Tuesday:
             
             player "For sure. It makes your feathers glow so nicely!"
             
+            show ava typical shy -
+            
             ava @ say "You think so?"
             
             n "Ava shyly smiles, turning away from you."
+
+    show claire happy
+    show ava happy
 
     claire @ say "Right then, shall we continue our little adventure?"
 
     ava @ say "Sure! I think I'm all rested up and ready to go!"
 
     player "Sounds good to me!"
+    
+    hide ava
+    hide claire
+    with dissolve
 
     n "The three of you spend the rest of the day getting lost in the gardens, laughing, and having an all around good time."
     n "Eventually you find your way back to the entrance where you bid adieu and return to your respective dorms for the day."
@@ -1017,7 +1157,7 @@ label week2Tuesday:
             
             player "You can have them only if you let me write a page of the project."
             
-            show rose unimpressed
+            show rose skirt handonhip dismissive pendant
 
             rose @ say "Not gonna happen."
 

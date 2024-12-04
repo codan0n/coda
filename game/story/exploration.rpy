@@ -549,6 +549,8 @@ label gunnerTrack:
     gunner "I'm so glad to have a new workout buddy!"
     gunner "Let's do some cooldown stretches then go get something to eat!"
     
+    hide gunner with dissolve
+    
     n "You dread having to do any more physical work but the thought of food entices you to just do it and get it over with."
     
     return
@@ -902,13 +904,12 @@ label oliviaCafe:
         xpos 940
 
     show olivia neutral at offscreenright:
-        yalign 0
+        ypos y_olivia
     show olivia at offscreenleft with MoveTransition(delay=1.0):
-        yalign 0
+        ypos y_olivia
 
     pause 1
     hide text
-
 
     #n "*nyoooom*"
     n "Holy hell, she's fast on those wheels."
@@ -926,9 +927,11 @@ label oliviaCafe:
     show box:
         ypos 0
 
-    show mishka neutral at offscreenleft
-    show olivia looking at norm with dissolve:
-        xpos 520
+    show mishka neutral at offscreenleft:
+        ypos y_mishka
+    show olivia neutral at center with dissolve:
+        xoffset 575
+        ypos y_olivia
 
     player "Thanks."
 
@@ -936,14 +939,14 @@ label oliviaCafe:
 
     n "She wheels herself over to the counter."
 
-    show olivia neutral at center with move:
-        xoffset 400
+    show olivia looking at center with move:
+        xoffset 375
         ypos y_olivia
 
     show mishka neutral at center with dissolve:
         ypos y_mishka
         xzoom -1
-        xoffset -400
+        xoffset -450
 
     olivia @ say "How's my second favorite rat?"
     
@@ -980,13 +983,14 @@ label oliviaCafe:
 
     n "The gator lady swipes her card and rolls out of the way."
 
-    show olivia at offscreenleft with move:
-        yalign 0
+    show olivia with move:
+        ypos y_olivia
+        xoffset -2000
         
     show mishka with move:
         xoffset 0
 
-    mishka @ say "Hey [name]! How are your affairs today?"
+    mishka @ say "Hello [name]! How are your affairs today?"
 
     player "I'm good. You?"
     
@@ -1039,7 +1043,6 @@ label oliviaCafe:
     show olivia neutral at offscreenleft:
         xzoom -1
         ypos y_olivia
-        yalign 0
 
     mishka @ say "Olivia!"
 
@@ -1056,7 +1059,7 @@ label oliviaCafe:
         #xpos 500
 
     show olivia say at offscreenright with MoveTransition(delay=1.5):
-        yalign 0
+        ypos y_olivia
 
     #show olivia with MoveTransition(delay=.3):
      #   xpos 560
@@ -1087,21 +1090,24 @@ label oliviaCafe:
     hide mishka with dissolve
     hide olivia
     show olivia at offscreenright:
-        yalign 0
+        ypos y_olivia
 
     n "You take your drink back over to your table and wait for it to cool before taking a sip."
     n "It's as bland as the yearly Call of Battlefield games and more bitter than the virgins on the Mongolian spearfishing forum you frequent."
     n "What the hell Mishka, is this what you consider sweet back home...?"
 
     olivia "Pleh! What is this sugary bullshit!?"
+    
+    show olivia:
+        ypos y_olivia
 
     n "You hear angry rolling noises whoosh past you."
 
     show mishka despondent at center with dissolve:
         xzoom -1
         ypos y_mishka
-        xoffset -350
-    show olivia neutral at center with move:
+        xoffset -400
+    show olivia looking at center with move:
         xzoom 1
         ypos y_olivia
         xoffset 400
@@ -1115,8 +1121,6 @@ label oliviaCafe:
 
     player "Yeah, unless my taste buds are on the fritz I think you gave me her drink."
     
-    show olivia neutral
-
     show mishka derp
     
     mishka @ say "Ah, I am so sorry! Did I get them mixed up...?"
@@ -1126,6 +1130,9 @@ label oliviaCafe:
     n "Olivia snatches the drink right out of your hand and takes a big gulp."
 
     olivia @ say "Ahhh... that's the stuff."
+    
+    show olivia looking
+    
     olivia @ say "Hey sorry for flipping out at you. You know how it is before you've had your coffee, am I right?"
     
     show mishka anxious smile -neutral -derp
@@ -1138,13 +1145,12 @@ label oliviaCafe:
 
     mishka @ say "Later gator!"
 
-    show olivia:
-        xzoom -1
+    show olivia at flipright
         
-    pause .6
+    pause .5
 
     show olivia at offscreenright with move:
-        yalign 0
+        ypos y_olivia
 
     n "Well that sure was something."
     n "That Olivia certainly lives up to the stereotype of crocodilians being chill except when it comes to food, then they become aggressive killing machines."

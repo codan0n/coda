@@ -167,7 +167,7 @@ define lina = Character("lina", image="lina", what_color="d0dbff", callback=name
 define waitress = Character("waitress", image="lina", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
 define nicodemus = Character("Nicodemus", image="nicodemus", what_color="d0dbff", callback=name_callback, cb_name = "nicodemus", what_font="dudu.ttf")
 
-define y_olivia = 1500
+define y_olivia = 1150
 define y_margaret = 1570
 define y_rori = 1565
 define y_rose = 1400
@@ -224,6 +224,16 @@ layeredimage ava typical neutral:
     at sprite_highlight('ava')
     always:
         'images/characters/ava/ava typical neutral.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava typical shy:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava typical shy.png'
     group saying:
         xzoom .9
         yzoom 1.0
@@ -1831,6 +1841,36 @@ layeredimage mishka anxious smile:
         pos (-70,-7)
         attribute say:
             "images/bubble.png"
+layeredimage mishka tired happy:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka tired happy.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka nervous2:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka nervous 2.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka anxious tongueout wink left:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka anxious tongueout wink left.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
 layeredimage mishka asleep:
     at sprite_highlight('mishka')
     always:
@@ -2225,15 +2265,21 @@ layeredimage kitsuragi:
 layeredimage olivia neutral:
     at sprite_highlight('olivia')
     always:
-        'images/characters/olivia neutral.png'
+        'images/characters/olivia/olivia neutral.png'
     group saying:
+        xzoom 1.1
+        yzoom 1.1
+        pos (-20,-88)
         attribute say:
             "images/bubble.png"
 layeredimage olivia looking:
     at sprite_highlight('olivia')
     always:
-        'images/characters/olivia looking.png'
+        'images/characters/olivia/olivia looking.png'
     group saying:
+        xzoom 1.1
+        yzoom 1.1
+        pos (-20,-88)
         attribute say:
             "images/bubble.png"
     
