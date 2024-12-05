@@ -11,9 +11,9 @@ label afterClassOptions:
                 
                     $ randomSelected = renpy.random.choice(afterClassExploration)
                     
-                    call expression randomSelected from _call_expression
+                    call expression randomSelected
                     
-                    call dormSleep from _call_dormSleep
+                    call dormSleep
                 
                 "Town" if townDiscovered == True:
                     #if there are town events available, do one and then return to dorm for the night. If not, play a generic scene and let the player choose another location
@@ -21,9 +21,9 @@ label afterClassOptions:
                     if townEvents:
                         $ randomSelected = renpy.random.choice(townEvents)
                         
-                        call expression randomSelected from _call_expression_1
+                        call expression randomSelected
                         
-                        call dormSleep from _call_dormSleep_1
+                        call dormSleep
                         
                     else:
                         "You wander around town but don't find anything interesting to do."
@@ -36,9 +36,9 @@ label afterClassOptions:
                     if trackEvents:
                         $ randomSelected = renpy.random.choice(trackEvents)
                         
-                        call expression randomSelected from _call_expression_2
+                        call expression randomSelected
                         
-                        call dormSleep from _call_dormSleep_2
+                        call dormSleep
 
                     else:
                         "You wander around the fitness area but don't find anything interesting to do."
@@ -49,9 +49,9 @@ label afterClassOptions:
                     if forestEvents:
                         $ randomSelected = renpy.random.choice(forestEvents)
                         
-                        call expression randomSelected from _call_expression_3
+                        call expression randomSelected
                         
-                        call dormSleep from _call_dormSleep_3
+                        call dormSleep
                         
                     else:
                         "You wander around the forest but don't find anything interesting to do."
@@ -62,9 +62,9 @@ label afterClassOptions:
                     if gardenEvents:
                         $ randomSelected = renpy.random.choice(gardenEvents)
                         
-                        call expression randomSelected from _call_expression_4
+                        call expression randomSelected
                         
-                        call dormSleep from _call_dormSleep_4
+                        call dormSleep
                         
                     else:
                         "You wander around the botanical garden but don't find anything interesting to do."
@@ -74,16 +74,16 @@ label afterClassOptions:
                     if cafeEvents:
                         $ randomSelected = renpy.random.choice(cafeEvents)
                         
-                        call expression randomSelected from _call_expression_5
+                        call expression randomSelected
                         
-                        call dormSleep from _call_dormSleep_5
+                        call dormSleep
                         
                     else:
                         "You get something to snack on at the cafe but don't find anything interesting to do."
                         
                         jump afterClassOptions
                 "Library" if libraryDiscovered == True:
-                    call libraryEvent from _call_libraryEvent
+                    call libraryEvent
                         
                     jump dormSleep
                 "Go back":
@@ -91,7 +91,7 @@ label afterClassOptions:
         "Study at dorm":
             "You decide to return to your dorm early and get some studying in."
             
-            call dormStudy from _call_dormStudy
+            call dormStudy
             
     return
     
@@ -196,7 +196,7 @@ label nightWalks:
             "Meet with Mishka" if mishkaNightWalkActive:
                 "You'll see if Mishka is around"
     else:
-        call genericNightWalk from _call_genericNightWalk
+        call genericNightWalk
     
     
     

@@ -1504,46 +1504,46 @@ label liberation_day:
         
         player "Yeah lemme text her."
         
-        call phone_start from _call_phone_start
+        call phone_start
 
-        call message_start("me", "Sup Claire", "testimage.png") from _call_message_start
-        call reply_message("Can you do me and the boys") from _call_reply_message 
-        call reply_message("A favor?") from _call_reply_message_1 
+        call message_start("me", "Sup Claire", "testimage.png")
+        call reply_message("Can you do me and the boys") 
+        call reply_message("A favor?") 
 
-        call message("Claire", "You got me excited before that linebreak", "claireavi.png") from _call_message 
-        call message("Claire", "But sure what's up?", "claireavi.png") from _call_message_1 
+        call message("Claire", "You got me excited before that linebreak", "claireavi.png") 
+        call message("Claire", "But sure what's up?", "claireavi.png") 
 
-        call reply_message("We need to get into the girls' dorm tomorrow night") from _call_reply_message_2 
-        call reply_message("You know a way for us to get in?") from _call_reply_message_3 
+        call reply_message("We need to get into the girls' dorm tomorrow night") 
+        call reply_message("You know a way for us to get in?") 
 
-        call message("Claire", "Hmmm", "claireavi.png") from _call_message_2 
-        call message("Claire", "I can't bring you in at night :/", "claireavi.png") from _call_message_3 
-        call message("Claire", "Even if I could, Imma be busy tomorro", "claireavi.png") from _call_message_4 
-        call message("Claire", "BUT", "claireavi.png") from _call_message_5 
-        call message("Claire", "I bet I could unlock a window for you~", "claireavi.png") from _call_message_7 
+        call message("Claire", "Hmmm", "claireavi.png") 
+        call message("Claire", "I can't bring you in at night :/", "claireavi.png") 
+        call message("Claire", "Even if I could, Imma be busy tomorro", "claireavi.png") 
+        call message("Claire", "BUT", "claireavi.png") 
+        call message("Claire", "I bet I could unlock a window for you~", "claireavi.png") 
         
-        call reply_message("Perfect!") from _call_reply_message_4 
-        call reply_message("You're the best :3") from _call_reply_message_6 
-        call reply_message("One more thing") from _call_reply_message_7 
-        call reply_message("could you leave your dorm key by the window") from _call_reply_message_18 
+        call reply_message("Perfect!") 
+        call reply_message("You're the best :3") 
+        call reply_message("One more thing") 
+        call reply_message("could you leave your dorm key by the window") 
         
-        call message("Claire", "Ksksksks anything for you~", "claireavi.png") from _call_message_19 
-        call message("Claire", "I gotta ask something in return tho", "claireavi.png") from _call_message_20 
+        call message("Claire", "Ksksksks anything for you~", "claireavi.png") 
+        call message("Claire", "I gotta ask something in return tho", "claireavi.png") 
         
-        call reply_message("Oh?") from _call_reply_message_19 
-        call reply_message("I suppose that's fair.") from _call_reply_message_20 
+        call reply_message("Oh?") 
+        call reply_message("I suppose that's fair.") 
         
-        call message("Claire", "Ksksksks let's just say I'm gonna need to borrow you once you're done~", "claireavi.png") from _call_message_21 
+        call message("Claire", "Ksksksks let's just say I'm gonna need to borrow you once you're done~", "claireavi.png") 
         
-        call reply_message("W-what for?") from _call_reply_message_21 
+        call reply_message("W-what for?") 
         
-        call message("Claire", "Nothing too spicy I promise!", "claireavi.png") from _call_message_22 
-        call message("Claire", "Just wanna introduce you to the girls :3c", "claireavi.png") from _call_message_23 
+        call message("Claire", "Nothing too spicy I promise!", "claireavi.png") 
+        call message("Claire", "Just wanna introduce you to the girls :3c", "claireavi.png") 
         
-        call reply_message("Hmm") from _call_reply_message_22 
-        call reply_message("Ok deal") from _call_reply_message_23 
+        call reply_message("Hmm") 
+        call reply_message("Ok deal") 
 
-        call phone_end from _call_phone_end 
+        call phone_end 
             
         gunner @ say "Well? What did she say?"
         
@@ -1587,75 +1587,75 @@ label liberation_day:
         n "Your phone buzzes. You've got a message about Rori."
         n "He better not be trying to weasel out of this raid."
         
-        call phone_start from _call_phone_start_5
+        call phone_start
         
-        call message_start("Rori", "Hey [name] I'm not really feeling good today", "roriavi.png") from _call_message_start_5
-        call message("Rori", "Can we all just stay in and play video games instead?", "roriavi.png") from _call_message_24 
+        call message_start("Rori", "Hey [name] I'm not really feeling good today", "roriavi.png")
+        call message("Rori", "Can we all just stay in and play video games instead?", "roriavi.png") 
         
-        call reply_message("Are you worried about getting caught?") from _call_reply_message_24 
+        call reply_message("Are you worried about getting caught?") 
         
-        call message("Rori", "A little", "roriavi.png") from _call_message_25 
-        call message("Rori", "But more concerned about the moral implications", "roriavi.png") from _call_message_27 
-        call message("Rori", "of breaking into a stranger's residence", "roriavi.png") from _call_message_28 
-        call message("Rori", "and stealing their underwear", "roriavi.png") from _call_message_29 
+        call message("Rori", "A little", "roriavi.png") 
+        call message("Rori", "But more concerned about the moral implications", "roriavi.png") 
+        call message("Rori", "of breaking into a stranger's residence", "roriavi.png") 
+        call message("Rori", "and stealing their underwear", "roriavi.png") 
         
         call screen phone_reply("Encourage","choiceEncourage","Sympathize","choiceSympathize")
         
         label choiceEncourage:
-            call phone_after_menu from _call_phone_after_menu
+            call phone_after_menu
             
-            call message_start("me", "Come on where's your sense of adventure?", "testimage.png") from _call_message_start_6
-            call reply_message("This is supposed to be fun and exciting!") from _call_reply_message_25 
+            call message_start("me", "Come on where's your sense of adventure?", "testimage.png")
+            call reply_message("This is supposed to be fun and exciting!") 
             
-            call message("Rori", "I guess", "roriavi.png") from _call_message_30 
-            call message("Rori", "I just don't have the same sense of adventure as you and Gunner do", "roriavi.png") from _call_message_31 
+            call message("Rori", "I guess", "roriavi.png") 
+            call message("Rori", "I just don't have the same sense of adventure as you and Gunner do", "roriavi.png") 
             
-            call reply_message("It's all in your head bro") from _call_reply_message_46 
-            call reply_message("just imagine you're in an rpg or vn") from _call_reply_message_71 
-            call reply_message("and you're on a quest for a key item") from _call_reply_message_72 
+            call reply_message("It's all in your head bro") 
+            call reply_message("just imagine you're in an rpg or vn") 
+            call reply_message("and you're on a quest for a key item") 
             
-            call message("Rori", "Hmm", "roriavi.png") from _call_message_32 
-            call message("Rori", "I'll try", "roriavi.png") from _call_message_33 
-            call message("Rori", "But I'm not a fan of forced stealth segments", "roriavi.png") from _call_message_34 
+            call message("Rori", "Hmm", "roriavi.png") 
+            call message("Rori", "I'll try", "roriavi.png") 
+            call message("Rori", "But I'm not a fan of forced stealth segments", "roriavi.png") 
             
-            call reply_message("We'll be quick, in and out") from _call_reply_message_73 
+            call reply_message("We'll be quick, in and out") 
             
-            call message("Rori", "Okayyyy", "roriavi.png") from _call_message_35 
-            call message("Rori", "I'm not touching any panties though", "roriavi.png") from _call_message_93 
+            call message("Rori", "Okayyyy", "roriavi.png") 
+            call message("Rori", "I'm not touching any panties though", "roriavi.png") 
             
-            call reply_message("As you wish") from _call_reply_message_74 
+            call reply_message("As you wish") 
             
-            call phone_end from _call_phone_end_5
+            call phone_end
             
             jump raidStart
         
         label choiceSympathize:
             $ roriPoints =+ 1
             
-            call phone_after_menu from _call_phone_after_menu_1
+            call phone_after_menu
             
-            call message_start("me", "I get what you mean but I'm pretty sure Claire is into this", "testimage.png") from _call_message_start_7
+            call message_start("me", "I get what you mean but I'm pretty sure Claire is into this", "testimage.png")
             
-            call message("Rori", "What about Ava?", "roriavi.png") from _call_message_94 
+            call message("Rori", "What about Ava?", "roriavi.png") 
             
-            call reply_message("I think she has a crush on Gunner so I don't think she minds either") from _call_reply_message_75 
+            call reply_message("I think she has a crush on Gunner so I don't think she minds either") 
             
-            call message("Rori", "Wait so this is all just one big breaking and entering LARP?", "roriavi.png") from _call_message_95 
+            call message("Rori", "Wait so this is all just one big breaking and entering LARP?", "roriavi.png") 
             
-            call reply_message("Pretty much") from _call_reply_message_76 
+            call reply_message("Pretty much") 
             
-            call message("Rori", "Courtship rituals are weird man", "roriavi.png") from _call_message_96 
-            call message("Rori", "If I wanted to bang someone I'd just invite them over to play vidya or something", "roriavi.png") from _call_message_97 
+            call message("Rori", "Courtship rituals are weird man", "roriavi.png") 
+            call message("Rori", "If I wanted to bang someone I'd just invite them over to play vidya or something", "roriavi.png") 
         
-            call reply_message("ikr but this is how straight people work") from _call_reply_message_78 
+            call reply_message("ikr but this is how straight people work") 
             
-            call message("Rori", "Okayyyy", "roriavi.png") from _call_message_98 
-            call message("Rori", "I'll go along with it", "roriavi.png") from _call_message_101 
-            call message("Rori", "But I'm not touching any panties", "roriavi.png") from _call_message_102 
+            call message("Rori", "Okayyyy", "roriavi.png") 
+            call message("Rori", "I'll go along with it", "roriavi.png") 
+            call message("Rori", "But I'm not touching any panties", "roriavi.png") 
             
-            call reply_message("As you wish") from _call_reply_message_79 
+            call reply_message("As you wish") 
         
-            call phone_end from _call_phone_end_10
+            call phone_end
             
             jump raidStart
     
@@ -1665,24 +1665,24 @@ label liberation_day:
             n "The feeling of victory and conquest waiting for you at the end."
             n "How could you resist?"
             
-            call phone_start from _call_phone_start_9
+            call phone_start
 
-            call message_start("Gunner", "You ready?", "gunneravi.png") from _call_message_start_13
+            call message_start("Gunner", "You ready?", "gunneravi.png")
             
-            call reply_message("You know it") from _call_reply_message_81 
+            call reply_message("You know it") 
             
-            call message("Gunner", "Good", "gunneravi.png") from _call_message_104 
-            call message("Gunner", "It'll get dark out soon", "gunneravi.png") from _call_message_105 
-            call message("Gunner", "And all the sluts will leave their dorm to get drunk and go be whores", "gunneravi.png") from _call_message_109 
-            call message("Gunner", "Except for Ava, she's pure", "gunneravi.png") from _call_message_110 
-            call message("Gunner", "But she'll be out too, going on a night flight", "gunneravi.png") from _call_message_111 
-            call message("Gunner", "Meet me outside her dorm building", "gunneravi.png") from _call_message_112 
+            call message("Gunner", "Good", "gunneravi.png") 
+            call message("Gunner", "It'll get dark out soon", "gunneravi.png") 
+            call message("Gunner", "And all the sluts will leave their dorm to get drunk and go be whores", "gunneravi.png") 
+            call message("Gunner", "Except for Ava, she's pure", "gunneravi.png") 
+            call message("Gunner", "But she'll be out too, going on a night flight", "gunneravi.png") 
+            call message("Gunner", "Meet me outside her dorm building", "gunneravi.png") 
             
-            call reply_message("k see you there") from _call_reply_message_83 
+            call reply_message("k see you there") 
             
-            call message("Gunner", "Godspeed", "gunneravi.png") from _call_message_113 
+            call message("Gunner", "Godspeed", "gunneravi.png") 
             
-            call phone_end from _call_phone_end_11
+            call phone_end
             
             n "It's now or never."
             
@@ -1968,94 +1968,94 @@ label liberation_day:
             n "Only a couple of boxers remain. You'll have to go shopping for more soon."
             n "You reach for your phone and check the messages."
             
-            call phone_start from _call_phone_start_10
+            call phone_start
 
-            call message_start("Gunner", "You make it out alive?", "gunneravi.png") from _call_message_start_14
+            call message_start("Gunner", "You make it out alive?", "gunneravi.png")
             
-            call reply_message("Yeah. You?") from _call_reply_message_84 
+            call reply_message("Yeah. You?") 
             
-            call message("Gunner", "Just barely", "gunneravi.png") from _call_message_114 
-            call message("Gunner", "Did you see how fucking fat that security guard was??", "gunneravi.png") from _call_message_122 
-            call message("Gunner", "I thought she was gonna break my neck when she was kneeling on it", "gunneravi.png") from _call_message_123 
+            call message("Gunner", "Just barely", "gunneravi.png") 
+            call message("Gunner", "Did you see how fucking fat that security guard was??", "gunneravi.png") 
+            call message("Gunner", "I thought she was gonna break my neck when she was kneeling on it", "gunneravi.png") 
             
-            call reply_message("Holy shit lmao") from _call_reply_message_85 
-            call reply_message("I'm guessing she let you go?") from _call_reply_message_86 
+            call reply_message("Holy shit lmao") 
+            call reply_message("I'm guessing she let you go?") 
             
-            call message("Gunner", "Yeah I had to spend last night in gay baby jail", "gunneravi.png") from _call_message_132 
-            call message("Gunner", "But they let met out like an hour ago", "gunneravi.png") from _call_message_133 
-            call message("Gunner", "Said I was lucky I didn't have any contraband on me", "gunneravi.png") from _call_message_134 
-            call message("Gunner", "Or I'd be spending the weekend in there at least", "gunneravi.png") from _call_message_135 
-            call message("Gunner", "lol", "gunneravi.png") from _call_message_136 
+            call message("Gunner", "Yeah I had to spend last night in gay baby jail", "gunneravi.png") 
+            call message("Gunner", "But they let met out like an hour ago", "gunneravi.png") 
+            call message("Gunner", "Said I was lucky I didn't have any contraband on me", "gunneravi.png") 
+            call message("Gunner", "Or I'd be spending the weekend in there at least", "gunneravi.png") 
+            call message("Gunner", "lol", "gunneravi.png") 
             
-            call reply_message("That reminds me, what happened to Rori?") from _call_reply_message_87 
+            call reply_message("That reminds me, what happened to Rori?") 
             
-            call message("Gunner", "Dunno", "gunneravi.png") from _call_message_137 
-            call message("Gunner", "Maybe his homosexuality was cured once he touched those panties", "gunneravi.png") from _call_message_138 
-            call message("Gunner", "I'll check in on him", "gunneravi.png") from _call_message_139 
-            call message("Gunner", "I'm on my way back to our dorm now", "gunneravi.png") from _call_message_140 
+            call message("Gunner", "Dunno", "gunneravi.png") 
+            call message("Gunner", "Maybe his homosexuality was cured once he touched those panties", "gunneravi.png") 
+            call message("Gunner", "I'll check in on him", "gunneravi.png") 
+            call message("Gunner", "I'm on my way back to our dorm now", "gunneravi.png") 
             
-            call reply_message("Cool. I'll send him a text.") from _call_reply_message_92 
+            call reply_message("Cool. I'll send him a text.") 
             
-            call phone_end from _call_phone_end_13
+            call phone_end
             
             n "Let's see what Rori has to say."
             
-            call phone_start from _call_phone_start_12
+            call phone_start
             
-            call message_start("me", "Rori where'd you go?", "testimage.png") from _call_message_start_16
+            call message_start("me", "Rori where'd you go?", "testimage.png")
             
-            call message("Rori", "Where do you think?", "roriavi.png") from _call_message_141 
-            call message("Rori", "I went back to my dorm and booted up War Lightning", "roriavi.png") from _call_message_142 
+            call message("Rori", "Where do you think?", "roriavi.png") 
+            call message("Rori", "I went back to my dorm and booted up War Lightning", "roriavi.png") 
             
-            call reply_message("What happened to the panties?") from _call_reply_message_93 
-            call reply_message("Last time I saw them they were stuck in your horns") from _call_reply_message_102 
+            call reply_message("What happened to the panties?") 
+            call reply_message("Last time I saw them they were stuck in your horns") 
             
-            call message("Rori", "Oh those", "roriavi.png") from _call_message_143 
-            call message("Rori", "After Gunner got arrested I snuck back in and put them back where we found them", "roriavi.png") from _call_message_144 
+            call message("Rori", "Oh those", "roriavi.png") 
+            call message("Rori", "After Gunner got arrested I snuck back in and put them back where we found them", "roriavi.png") 
             
-            call reply_message("DUDE") from _call_reply_message_103 
-            call reply_message("Gunner's gonna be pissed") from _call_reply_message_104 
+            call reply_message("DUDE") 
+            call reply_message("Gunner's gonna be pissed") 
             
-            call message("Rori", "I'll just tell him they fell off somewhere", "roriavi.png") from _call_message_145 
-            call message("Rori", "It was more about the adventure, wasn't it?", "roriavi.png") from _call_message_146 
+            call message("Rori", "I'll just tell him they fell off somewhere", "roriavi.png") 
+            call message("Rori", "It was more about the adventure, wasn't it?", "roriavi.png") 
             
-            call reply_message("Nah I'm pretty sure Gunner was in it for bird pantsu") from _call_reply_message_105 
+            call reply_message("Nah I'm pretty sure Gunner was in it for bird pantsu") 
             
-            call message("Rori", "Too bad, he can ask for them direct from Ava if he wants them so bad", "roriavi.png") from _call_message_151 
+            call message("Rori", "Too bad, he can ask for them direct from Ava if he wants them so bad", "roriavi.png") 
             
-            call reply_message("lol") from _call_reply_message_106 
-            call reply_message("u gotta admit tho it was pretty fun") from _call_reply_message_107 
+            call reply_message("lol") 
+            call reply_message("u gotta admit tho it was pretty fun") 
             
-            call message("Rori", "Exhilerating? Maybe.", "roriavi.png") from _call_message_152 
-            call message("Rori", "Fun? No.", "roriavi.png") from _call_message_154 
+            call message("Rori", "Exhilerating? Maybe.", "roriavi.png") 
+            call message("Rori", "Fun? No.", "roriavi.png") 
             
-            call reply_message("You probably would have enjoyed the boxer raid more huh") from _call_reply_message_110 
+            call reply_message("You probably would have enjoyed the boxer raid more huh") 
             
-            call message("Rori", "OwO", "roriavi.png") from _call_message_155 
-            call message("Rori", "The what?!", "roriavi.png") from _call_message_156 
+            call message("Rori", "OwO", "roriavi.png") 
+            call message("Rori", "The what?!", "roriavi.png") 
             
-            call reply_message("Claire's sorority tricked me into letting them into my dorm") from _call_reply_message_111 
-            call reply_message("And they raided my boxer drawer") from _call_reply_message_112 
+            call reply_message("Claire's sorority tricked me into letting them into my dorm") 
+            call reply_message("And they raided my boxer drawer") 
             
-            call message("Rori", "wow", "roriavi.png") from _call_message_157 
-            call message("Rori", "that's uh", "roriavi.png") from _call_message_158 
-            call message("Rori", "kinda hot ngl", "roriavi.png") from _call_message_159 
+            call message("Rori", "wow", "roriavi.png") 
+            call message("Rori", "that's uh", "roriavi.png") 
+            call message("Rori", "kinda hot ngl", "roriavi.png") 
             
-            call reply_message("lmao I'll hook you up with them next year") from _call_reply_message_113 
+            call reply_message("lmao I'll hook you up with them next year") 
             
-            call message("Rori", "UwU", "roriavi.png") from _call_message_160 
-            call message("Rori", "I'm glad you didn't die or get arrested", "roriavi.png") from _call_message_161 
+            call message("Rori", "UwU", "roriavi.png") 
+            call message("Rori", "I'm glad you didn't die or get arrested", "roriavi.png") 
             
-            call reply_message("same to you") from _call_reply_message_114 
-            call reply_message("i just hit my head so I think i'm outta commission for the rest of the weekend") from _call_reply_message_115 
+            call reply_message("same to you") 
+            call reply_message("i just hit my head so I think i'm outta commission for the rest of the weekend") 
             
-            call message("Rori", "Oki", "roriavi.png") from _call_message_162 
-            call message("Rori", "I'm just gonna chill too", "roriavi.png") from _call_message_163 
-            call message("Rori", "Lemme know if you want me to come over and bring some vidya", "roriavi.png") from _call_message_164 
+            call message("Rori", "Oki", "roriavi.png") 
+            call message("Rori", "I'm just gonna chill too", "roriavi.png") 
+            call message("Rori", "Lemme know if you want me to come over and bring some vidya", "roriavi.png") 
             
-            call reply_message("k") from _call_reply_message_116 
+            call reply_message("k") 
             
-            call phone_end from _call_phone_end_14
+            call phone_end
                 
             jump ch2End
         

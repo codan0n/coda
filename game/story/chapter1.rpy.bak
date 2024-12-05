@@ -884,7 +884,7 @@ label college_orientation:
                 
                 n "Rori seems excited to have someone to nerd out with as he takes you to his dorm."
                 
-                call roriDormIntro from _call_roriDormIntro
+                call roriDormIntro
                 
                 player "Do you have a roommate? I get the feeling those aren't yours."
                 
@@ -2594,7 +2594,7 @@ label thirdDayOfClass:
         "Go back to bed":
             $ bedpilled = True
             
-            call sleepingIn from _call_sleepingIn
+            call sleepingIn
             #this class skip is lenient and results in only missing the first one of the day
             
             jump thirdDayOfClassStats
@@ -3812,42 +3812,42 @@ label avaClaireGunnerLunch:
     call phone_start from _call_phone_start_1
 
     call message_start("Claire", "Hey [name]! It was cool seeing you at coffee zone today!", "claireavi.png") from _call_message_start_1
-    call message("Claire", "This is Claire btw", "claireavi.png") from _call_message_165
+    call message("Claire", "This is Claire btw", "claireavi.png")
 
     call reply_message("Yeah it was fun hanging out with everyone") from _call_reply_message_5
 
     call message("Claire", "Maybe we can go together someday", "claireavi.png") from _call_message_6
-    call message("Claire", "Just the two of us~", "claireavi.png") from _call_message_166
+    call message("Claire", "Just the two of us~", "claireavi.png")
 
     call screen phone_reply("To study?","toStudy","Would be nice","wouldBeNice")
     
 label toStudy:
-    call phone_after_menu from _call_phone_after_menu_4
+    call phone_after_menu
     
-    call message_start("me", "What, like to study?", "testimage.png") from _call_message_start_17
+    call message_start("me", "What, like to study?", "testimage.png")
     
-    call message("Claire", "lol if you want to", "claireavi.png") from _call_message_167
+    call message("Claire", "lol if you want to", "claireavi.png")
     
-    call reply_message("Maybe if I have the time. I'm still getting used to living on a schedule again") from _call_reply_message_117
+    call reply_message("Maybe if I have the time. I'm still getting used to living on a schedule again")
     
-    call message("Claire", "np just lemme know when!", "claireavi.png") from _call_message_168
+    call message("Claire", "np just lemme know when!", "claireavi.png")
     
-    call reply_message("will do") from _call_reply_message_118
+    call reply_message("will do")
     
-    call phone_end from _call_phone_end_15
+    call phone_end
     
     jump afterClairePhone1
 label wouldBeNice:
-    call phone_after_menu from _call_phone_after_menu_5
+    call phone_after_menu
     
-    call message_start("me", "That would be nice", "testimage.png") from _call_message_start_18
+    call message_start("me", "That would be nice", "testimage.png")
 
-    call message("Claire", "Yes, it would :P", "claireavi.png") from _call_message_169
-    call message("Claire", "Just lemme know when you're free!", "claireavi.png") from _call_message_170
+    call message("Claire", "Yes, it would :P", "claireavi.png")
+    call message("Claire", "Just lemme know when you're free!", "claireavi.png")
     
-    call reply_message("I'll text you when my schedule frees up") from _call_reply_message_119
+    call reply_message("I'll text you when my schedule frees up")
     
-    call message("Claire", "Okii ^w^", "claireavi.png") from _call_message_171
+    call message("Claire", "Okii ^w^", "claireavi.png")
 
     call phone_end from _call_phone_end_1
     
@@ -3866,9 +3866,9 @@ label afterClairePhone1:
     call reply_message("That's a lot of y's") from _call_reply_message_203
     call reply_message("Either you're into me or you want a favor") from _call_reply_message_204
     
-    call message("Ava", "^v^;", "avaavi.png") from _call_message_172 
+    call message("Ava", "^v^;", "avaavi.png") 
     
-    call reply_message("I'm guessing this is Ava?") from _call_reply_message_120
+    call reply_message("I'm guessing this is Ava?")
 
     call message("Ava", "Aaaaa you figured me out!", "avaavi.png") from _call_message_293
     call message("Ava", "I was just wondering... if you could give me that catboy's number pls <3", "avaavi.png") from _call_message_294
@@ -3909,7 +3909,7 @@ label afterClairePhone1:
 
         call reply_message("No problem") from _call_reply_message_209
         
-        call phone_end from _call_phone_end_16 
+        call phone_end 
 
         jump afterAvaText1
     
@@ -3955,13 +3955,13 @@ label afterAvaText1:
     n "Another new message? That must be Gunner."
     #n "Nobody else has your number."
 
-    call phone_start from _call_phone_start_13
+    call phone_start
 
-    call message_start("Gunner", "Sup dude", "gunneravi.png") from _call_message_start_19    
-    call message("Gunner", "Your friends are hot", "gunneravi.png") from _call_message_173    
-    call message("Gunner", "At least the bird one is", "gunneravi.png") from _call_message_174    
+    call message_start("Gunner", "Sup dude", "gunneravi.png")    
+    call message("Gunner", "Your friends are hot", "gunneravi.png")    
+    call message("Gunner", "At least the bird one is", "gunneravi.png")    
     
-    call reply_message("Thanks?") from _call_reply_message_121
+    call reply_message("Thanks?")
     
     call message("Gunner", "Was wondering if you could do me a favor", "gunneravi.png") from _call_message_148 
     call message("Gunner", "You have her number right?", "gunneravi.png") from _call_message_149 
@@ -3996,34 +3996,34 @@ label afterAvaText1:
         call message("Gunner", "I guess that makes sense", "gunneravi.png") from _call_message_249 
         call message("Gunner", "I mean if I was a girl I'd be a raging lesbian too", "gunneravi.png") from _call_message_250 
         call message("Gunner", "They'd call me Stacy Thunderpussy after I fucked every last lesbian on earth", "gunneravi.png") from _call_message_251 
-        call message("Gunner", "All the hot ones at least", "gunneravi.png") from _call_message_175 
+        call message("Gunner", "All the hot ones at least", "gunneravi.png") 
         
         #what, all 10 of them?
-        call reply_message("what an ambitious fantasy") from _call_reply_message_122  
+        call reply_message("what an ambitious fantasy")  
         
         call message("Gunner", "Yeah I'm a real tour de france", "gunneravi.png") from _call_message_253 
         
-        call reply_message("I'll leave you to your lesbian fantasies") from _call_reply_message_123 
+        call reply_message("I'll leave you to your lesbian fantasies") 
         
-        call message("Gunner", "See you in class!", "gunneravi.png") from _call_message_176  
+        call message("Gunner", "See you in class!", "gunneravi.png")  
         
-        call phone_end from _call_phone_end_17
+        call phone_end
         
         n "Well this ought to be fun to watch play out."
         n "A little trolling never hurt anyone, right?"
     else:
-        call reply_message("fine i'll send it to you just don't be creepy") from _call_reply_message_124
+        call reply_message("fine i'll send it to you just don't be creepy")
         
-        call message("Gunner", "based", "gunneravi.png") from _call_message_177 
-        call message("Gunner", "thanks man", "gunneravi.png") from _call_message_178 
-        call message("Gunner", "i owe you a favor", "gunneravi.png") from _call_message_179 
+        call message("Gunner", "based", "gunneravi.png") 
+        call message("Gunner", "thanks man", "gunneravi.png") 
+        call message("Gunner", "i owe you a favor", "gunneravi.png") 
 
-        call reply_message("cool") from _call_reply_message_125
-        call reply_message("It's getting late. I'll see you in class later") from _call_reply_message_126
+        call reply_message("cool")
+        call reply_message("It's getting late. I'll see you in class later")
    
-        call message("Gunner", "K goodnight dude", "gunneravi.png") from _call_message_180 
+        call message("Gunner", "K goodnight dude", "gunneravi.png") 
         
-        call phone_end from _call_phone_end_18
+        call phone_end
 
     if bedpilled == True:
         n "With your head resting on your pillow, you stare at the ceiling."
@@ -4402,7 +4402,7 @@ label thursday1:
             n "Wow she's really eager to study."
             n "Claire grabs your hand and rushes you to her dorm."
             
-            call avaClaireDormIntro from _call_avaClaireDormIntro
+            call avaClaireDormIntro
             
             n "Ava is lying on her bed reading a magazine while listening to headphones."
             n "She turned her eyes over to you when when Claire crashed through the doorway."            
@@ -4703,7 +4703,7 @@ label friday1:
     
     play audio "audio/sound effects/vibrate.ogg"
     
-    call phone_start from _call_phone_start_14
+    call phone_start
    
     call message_start("Gunner", "Heyyyy [name] :3c", "gunneravi.png") from _call_message_start_24 
 
@@ -4717,7 +4717,7 @@ label friday1:
     call reply_message("Where and when") from _call_reply_message_186 
 
     call message("Gunner", "Meet us atop the literature building after sundown", "gunneravi.png") from _call_message_120 
-    call message("Gunner", "There's gonna be a party up there as long as it's not still raining", "gunneravi.png") from _call_message_181 
+    call message("Gunner", "There's gonna be a party up there as long as it's not still raining", "gunneravi.png") 
 
     call reply_message("wtf that sounds kinda dangerous") from _call_reply_message_187 
     call reply_message("what if we get caught") from _call_reply_message_188 
@@ -4730,12 +4730,12 @@ label friday1:
 
     call message("Gunner", "This isn't like a frat thing this is a \"i wanna hang out and get to know my bros\" thing", "gunneravi.png") from _call_message_147 
     
-    call reply_message("how thoughtful") from _call_reply_message_127 
-    call reply_message("I'll try and be there i guess") from _call_reply_message_128 
+    call reply_message("how thoughtful") 
+    call reply_message("I'll try and be there i guess") 
 
-    call message("Gunner", "Alright dude, hope you can make it", "gunneravi.png") from _call_message_182 
+    call message("Gunner", "Alright dude, hope you can make it", "gunneravi.png") 
     
-    call phone_end from _call_phone_end_20
+    call phone_end
     
     n "That gives you something to do tomorrow if you get too bored."
     n "The hours pass by in leisure until the urge to sleep becomes too hard to resist."

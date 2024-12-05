@@ -132,7 +132,7 @@ label chapter2start:
     n "Gunner ran off after class, saying something about fraternity obligations."
     n "That leaves you free for the rest of the day."
     
-    call afterClassOptions from _call_afterClassOptions
+    call afterClassOptions
     
     scene bg black with fade
 
@@ -736,30 +736,30 @@ label week2Tuesday:
     n "No use going out today. Might as well stay in and recover from this mystery illness that's plaguing you."
     n "You actually don't feel terrible right now but who knows if it will flare up again later."
     
-    call phone_start from _call_phone_start_15
+    call phone_start
     
-    call message_start("Ava", "Hey [name]! Claire told me you were feeling under the weather", "avaavi.png") from _call_message_start_20 
-    call message("Ava", "but if you're feelin better this weekend wanna go somewhere with us?", "avaavi.png") from _call_message_183 
+    call message_start("Ava", "Hey [name]! Claire told me you were feeling under the weather", "avaavi.png") 
+    call message("Ava", "but if you're feelin better this weekend wanna go somewhere with us?", "avaavi.png") 
 
-    call reply_message("I don't feel so bad today") from _call_reply_message_129 
-    call reply_message("I think I'll be fine tomorrow") from _call_reply_message_130
-    call reply_message("Where you going?") from _call_reply_message_131
+    call reply_message("I don't feel so bad today") 
+    call reply_message("I think I'll be fine tomorrow")
+    call reply_message("Where you going?")
     
-    call message("Ava", "I'm not sure!", "avaavi.png") from _call_message_184 
-    call message("Ava", "Claire says she picked out a spot", "avaavi.png") from _call_message_185 
-    call message("Ava", "'Somewhere special' she says", "avaavi.png") from _call_message_186 
-    call message("Ava", "Whatever that means", "avaavi.png") from _call_message_187 
+    call message("Ava", "I'm not sure!", "avaavi.png") 
+    call message("Ava", "Claire says she picked out a spot", "avaavi.png") 
+    call message("Ava", "'Somewhere special' she says", "avaavi.png") 
+    call message("Ava", "Whatever that means", "avaavi.png") 
     
-    call reply_message("Interesting...") from _call_reply_message_132
-    call reply_message("sure, I'll go") from _call_reply_message_133
+    call reply_message("Interesting...")
+    call reply_message("sure, I'll go")
     
-    call message("Ava", "Yay ^v^", "avaavi.png") from _call_message_188 
-    call message("Ava", "I'll let her know", "avaavi.png") from _call_message_189 
-    call message("Ava", "meet us tomorrow at around 9 where we usually meet after class", "avaavi.png") from _call_message_190 
+    call message("Ava", "Yay ^v^", "avaavi.png") 
+    call message("Ava", "I'll let her know", "avaavi.png") 
+    call message("Ava", "meet us tomorrow at around 9 where we usually meet after class", "avaavi.png") 
     
-    call reply_message("k") from _call_reply_message_134
+    call reply_message("k")
     
-    call phone_end from _call_phone_end_21
+    call phone_end
     
     n "You wonder where this special place that Claire wants you to go to is."
     n "Hopefully you're feeling good enough to go tomorrow."
@@ -2439,40 +2439,40 @@ label hospital_bound:
     n "Time flies and before you know it, it's dark out."
     n "Oh shoot, Rori is probably still wondering if you're alright! Better send him a text."
     
-    call phone_start from _call_phone_start_16
+    call phone_start
     
-    call message_start("me", "Hey Rori", "testimage.png") from _call_message_start_21
-    call reply_message("Thanks for dragging my ass to the hospital") from _call_reply_message_135 
+    call message_start("me", "Hey Rori", "testimage.png")
+    call reply_message("Thanks for dragging my ass to the hospital") 
     
-    call message("Rori", "Np", "roriavi.png") from _call_message_191 
-    call message("Rori", "I actually carried you btw", "roriavi.png") from _call_message_192 
+    call message("Rori", "Np", "roriavi.png") 
+    call message("Rori", "I actually carried you btw", "roriavi.png") 
     
-    call reply_message("Oh for real?") from _call_reply_message_136
-    call reply_message("Damn you must be strong") from _call_reply_message_137 
+    call reply_message("Oh for real?")
+    call reply_message("Damn you must be strong") 
     
-    call message("Rori", "It actually wasn't that hard once I got you up on my shoulder", "roriavi.png") from _call_message_193 
-    call message("Rori", "You alright?", "roriavi.png") from _call_message_194 
+    call message("Rori", "It actually wasn't that hard once I got you up on my shoulder", "roriavi.png") 
+    call message("Rori", "You alright?", "roriavi.png") 
     
-    call reply_message("Myeah probably") from _call_reply_message_138
-    call reply_message("I'm still at the hospital cause they wanna do more tests") from _call_reply_message_139
+    call reply_message("Myeah probably")
+    call reply_message("I'm still at the hospital cause they wanna do more tests")
     
-    call message("Rori", "Fug that's a long time", "roriavi.png") from _call_message_195 
-    call message("Rori", "Hope it's nothing serious", "roriavi.png") from _call_message_196 
+    call message("Rori", "Fug that's a long time", "roriavi.png") 
+    call message("Rori", "Hope it's nothing serious", "roriavi.png") 
     
-    call reply_message("They just want me to stay here until they're sure I won't randomly pass out in the middle of the street again.") from _call_reply_message_140 
+    call reply_message("They just want me to stay here until they're sure I won't randomly pass out in the middle of the street again.") 
 
-    call message("Rori", "Ahh makes sense", "roriavi.png") from _call_message_197 
-    call message("Rori", "Need me to bring you anything ?", "roriavi.png") from _call_message_198 
+    call message("Rori", "Ahh makes sense", "roriavi.png") 
+    call message("Rori", "Need me to bring you anything ?", "roriavi.png") 
 
-    call reply_message("Nah I'm good. I got my school books and stuff.") from _call_reply_message_141 
-    call reply_message("Thanks tho") from _call_reply_message_142 
+    call reply_message("Nah I'm good. I got my school books and stuff.") 
+    call reply_message("Thanks tho") 
     
-    call message("Rori", "Text me if you want anything", "roriavi.png") from _call_message_199 
-    call message("Rori", "I know hospital food sucks", "roriavi.png") from _call_message_200 
+    call message("Rori", "Text me if you want anything", "roriavi.png") 
+    call message("Rori", "I know hospital food sucks", "roriavi.png") 
     
-    call reply_message("Thx will do") from _call_reply_message_143 
+    call reply_message("Thx will do") 
     
-    call phone_end from _call_phone_end_22
+    call phone_end
     
     n "You put the phone down and sigh, wondering how much longer you'll be confined here."
     n "With not much else to do, you pull up the blanket and try to fall asleep."
@@ -2817,7 +2817,7 @@ label hospital_bound:
         call message("Claire", "Sry keep u waiiting, took a bit to conmvince ava", "claireavi.png") from _call_message_61
         call message_img("Claire", "Enjoy~", "pic1.png") from _call_message_img
         
-        call reply_message("BOOBA") from _call_reply_message_144
+        call reply_message("BOOBA")
 
         call phone_end from _call_phone_end_7
 

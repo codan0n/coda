@@ -790,6 +790,36 @@ layeredimage ava pose ohyou:
         pos (-80,-30)
         attribute say:
             "images/bubble.png"
+layeredimage ava typical glowy agitated:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava typical glowy agitated.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava profile shy:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava profile shy.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava profile concerned:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava profile concerned.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-130,-30)
+        attribute say:
+            "images/bubble.png"
 layeredimage ava pose angry:
     at sprite_highlight('ava')
     always:
@@ -3148,7 +3178,7 @@ label start:
 #        
 #    n "fin"
 
-call chapter1
+call chapter1 from _call_chapter1
     
 
 
