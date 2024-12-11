@@ -620,6 +620,36 @@ layeredimage ava pose happy:
         pos (-80,-30)
         attribute say:
             "images/bubble.png"
+layeredimage ava profile embarrassed:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava profile embarrassed.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-135,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava reaching concerned shirtopen:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava reaching concerned shirtopen.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-135,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava profile annoyed:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava profile annoyed.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-135,-30)
+        attribute say:
+            "images/bubble.png"
 layeredimage ava profile angry:
     at sprite_highlight('ava')
     always:

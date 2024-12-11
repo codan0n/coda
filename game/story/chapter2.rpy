@@ -5383,59 +5383,75 @@ label ellen_feeding_ducks:
             
             n "Ava had decided to occupy your bed, which is fine because it's the most comfortable spot and you wanted to sit next to her anyway."
             n "You plop down on it, bouncing her up into the air."
-            
-            show ava reaching concerned:
-                ypos -3000
-            
             n "She glides back down with her wings outstretched."
-
-            #show ava typical neutral at center with move:
-                #xzoom -1
-            show ava with move:
-                ypos 50
-                
-            #pause .01
             
-            show ava with MoveTransition(delay=.05):
-                ypos 0
+            show ava reaching concerned shirtopen:
+                ypos -3000
+                xpos 700
+
+            show ava with move:
+                ypos 1080
+            
+            pause .2
                 
+            show ava at center:
+                ypos 2500
+                
+            pause .2
+            
+            show ava with move:
+                ypos y_ava
+            
             show ava at shudder
 
             ava @ say "Brreeee! Easy there, [name]!"
-
-            player "Sorry, forgot birds have hollow bones."
             
+            
+            #show ava typical neutral at center with move:
+                #xzoom -1
+            #show ava with move:
+            #    ypos y_ava
+                
+            #pause .01
+            
+            #show ava with MoveTransition(delay=.05)
+             
+            player "Sorry, forgot birds have hollow bones."
+
             ava @ say "They're actually denser to account for that, so they're not any lighter than your mammal bones."
             ava @ say "I'm just small and dainty."
             ava @ say "A strong breeze is enough to knock me over haha."
             
-            show claire sweater giggle:
+            show claire sweater giggle at center with dissolve:
                 xzoom -1
-                xpos -550
+                ypos y_claire
+                xoffset -600
                 
             claire @ say "Ksksksksks"
             claire @ say "[name] knocked you up so hard your shirt started taking itself off!~"
             
             ava @ say "?"
             
-            show ava reaching embarassed
+            show ava profile embarrassed
             
             ava @ say "Wha-!"
             
             n "Ava quicky buttons up her shirt."
             
-            show ava unimpressed
+            show ava typical unimpressed -
+            show claire happy
             
             ava @ say "Just pretend that didn't happen."
             
             n "Gunner looks up from his phone."
             
             show gunner neutral at center with dissolve:
-                xpos 475
+                xoffset 550
+                ypos y_gunner
             
             gunner @ say "Damn, what did I miss?"
                 
-            show ava pose concerned at flipright
+            show ava embarrassed at flipright
             
             ava @ say "Nothing!"
 
@@ -5446,13 +5462,15 @@ label ellen_feeding_ducks:
             gunner @ say "Hrm..."
             gunner @ say "[name], you got any more chairs around here?"
 
-            show claire sweater happy alert at center:
-                xzoom -1
-                xpos -550
+            show claire sweater suggestive
 
             claire @ say "Come sit next to me!"
 
             n "Claire pats the space beside her on the floor."
+            
+            show gunner uncomfy
+            
+            n "Gunner grimaces and looks around for any alternatives."
 
             #pause .1
 
@@ -5480,10 +5498,9 @@ label ellen_feeding_ducks:
             
             pause .1
 
-            n "Gunner grimaces and looks around for any alternatives."
-            
-            show gunner neutral at center with move:
-                xpos -200
+            show gunner at center with move:
+                xoffset -200
+                ypos y_gunner
                 
             pause .01
             
@@ -5491,17 +5508,20 @@ label ellen_feeding_ducks:
                 
             n "Alas, with nowhere else to sit, he's forced to plop down next to her."
             
-            show claire sweater lusty alert
+            show claire sweater suggestive earsup
             
             n "Claire wraps an arm around him and he disappears into her floof."
             
-            show gunner with MoveTransition(delay=.4):
-                xpos -310
+            show gunner at offscreenleft:
+                ypos y_gunner
+            show claire at offscreenleft:
+                ypos y_claire
+            with move
             
             n "RIP"
             
-            show rori neutral with dissolve:
-                xpos 385
+            show rori neutral at center with dissolve:
+                ypos y_rori
                 
             rori @ say "Shshshsh! The movie's starting!"
 
@@ -5528,7 +5548,8 @@ label ellen_feeding_ducks:
 
             n "You approach Rori, who is sitting in your desk chair."
 
-            show rori neutral at center with dissolve
+            show rori neutral at center with dissolve:
+                ypos y_rori
 
             rori @ say "Oh, am I in your spot?"
 

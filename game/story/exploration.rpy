@@ -787,16 +787,21 @@ label linaTown:
             
             player "I'm just saying nobody cares about photography as an art form anymore."
             
-            show ava portrait angry
+            show ava profile angry
             
             ava @ say "That's the problem! An artist is someone who transfers feelings from their heart onto a medium that can't be expressed in language alone."
             
             player "I think that's what Lina was telling me. She said she lives to play music or something like that."
             
-            show ava unsure
+            show ava concerned
             
             ava @ say "That-!"
+            
+            show ava angry
+            
             ava @ say "Hmph! What does she know?"
+            
+            hide ava with dissolve
             
             n "With a huff, Ava takes off to the skies."
             n "Yeah, you kinda feel like you're done with the day too."
@@ -807,26 +812,45 @@ label linaTown:
             
             player "She's just a street performer. It's cheap entertainment for whatever cash people happen to have."
             
+            show ava agitated
+            
             ava @ say "Is that so?"
             
             player "Yeah, she's like a hobo begging for spare change. I kinda felt bad for her."
             
             n "Ava cracks the tiniest of smiles. Whatever you're doing is working."
             
+            show ava neutral
+            
             ava @ say "I guess it's actually kinda pitiful."
+            
+            show ava smug
+            
             ava @ say "I mean, can you imagine me out on the streets trying to sell photo prints?"
             
             player "No, you're a *real* artist. You're not in it for the quarters and dimes, you make *art* for the sake of expression."
             
+            show ava motivated
+            
             ava @ say "Exactly! It's so sad how few people realize that!"
+            
+            show ava happy
             
             player "It's such a struggle. Only smart people can truly understand what true art means."
             
+            show ava excited
+            
             ava @ say "Finally, someone who gets it!"
+            
+            show ava happy
             
             player "Wanna go check out the art exhibits around town with me?"
             
+            show ava overjoyed
+            
             ava @ say "Of course!!!"
+            
+            hide ava with dissolve
             
             n "Hook line and sinker. It's that easy."
             n "Ava leans on you as you walk around town, wandering through photo galleries and museum halls full of paintings and statues."
