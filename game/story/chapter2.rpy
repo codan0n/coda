@@ -5565,10 +5565,12 @@ label ellen_feeding_ducks:
             
             n "The others stare and laugh as Rori tries to cover his blushing face."
             
-            show ava typical neutral at offscreenright
+            show ava typical neutral at offscreenright:
+                ypos y_ava
 
             show gunner neutral at center with dissolve:
-                xpos 450
+                xoffset 650
+                ypos y_gunner
 
             n "Gunner nods to you."
 
@@ -5576,7 +5578,8 @@ label ellen_feeding_ducks:
 
             show claire sweater happy at center with dissolve:
                 xzoom -1
-                xpos -500
+                xoffset -650
+                ypos y_claire
 
             show claire sweater derp
             
@@ -5585,12 +5588,17 @@ label ellen_feeding_ducks:
             rori @ say "Ohmygosh[name]whyareyoudoingthis\nthereareotherplacesyoucouldhavesat"
 
             player "Yeah but I wanted the best seat in the house~"
+            
+            show rori embarrassed
 
             n "That only makes him turn more red."
 
             rori @ say "Aaaaah why would you say it like that?!"
 
             player "What, isn't this just like one of your Japanese animes?"
+            
+            show gunner cutie
+            show rori yawn blush
 
             n "The room erupts into laughter, including Rori."
             n "He decides to accept it and leans back into you while Gunner goes to hit play on the movie."
@@ -5599,11 +5607,13 @@ label ellen_feeding_ducks:
             hide rori
             with dissolve
 
+            show gunner optimistic 
+            
             gunner @ say "Alright, now where do I sit?"
 
-            show ava typical neutral at center with dissolve:
+            show ava typical excited at center with dissolve:
                 xzoom -1
-                xpos -100
+                xoffset -250
                 ypos y_ava
 
             ava @ say "Over here Gunner, there's some room for ya over here!"
@@ -5613,7 +5623,8 @@ label ellen_feeding_ducks:
             n "The bird pats the spot on your bed beside her and Gunner pounces on it quite elegantly."
 
             show gunner neutral at center with move:
-                xpos -270
+                xoffset -470
+                ypos y_gunner
 
             pause .1
 

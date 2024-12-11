@@ -182,7 +182,7 @@ define y_ava = 1465
 define y_mishka = 1550
 define y_roth = 1750
 define y_nicodemus = 1550
-define y_trish = 1550
+define y_trish = 1300
 
 
 #old mishka text color a4cffc
@@ -2459,6 +2459,16 @@ layeredimage rori neutral:
         pos (4,33)
         attribute say:
             "images/bubble.png"
+layeredimage rori embarrassed:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori embarrassed.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
 layeredimage rori concerned blushing:
     at sprite_highlight('rori')
     always:
@@ -2673,6 +2683,16 @@ layeredimage rori smile lookingaway blush:
     at sprite_highlight('rori')
     always:
         'images/characters/rori/rori smile lookingaway blush.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori yawn blush:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori yawn blush.png'
     group saying:
         xzoom .75
         yzoom .6
@@ -2955,11 +2975,14 @@ layeredimage rothbauer:
         attribute say:
             "images/bubble.png"
             
-layeredimage trish neutral:
+layeredimage trish notext neutral:
     at sprite_highlight('trish')
     always:
-        'images/characters/trish neutral.png'
+        'images/characters/trish/trish notext neutral.png'
     group saying:
+        xzoom .65
+        yzoom .68
+        pos (160,121)
         attribute say:
             "images/bubble.png"
 

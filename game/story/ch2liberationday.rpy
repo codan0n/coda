@@ -1403,14 +1403,19 @@ label liberation_day:
             
         show gunner neutral at center:
             ypos y_gunner
+            xzoom -1
+            xoffset -500
         show rori neutral at center:
             ypos y_rori
+            xoffset 450
         with dissolve
             
         gunner @ say "Gentlemen, we have assembled here today for the most noble of goals."
         gunner @ say "We are united in our mission to secure women's panties for the 200 year tradition of Harmonia."
         gunner @ say "Former presidents of this fine nation have lead such glorious raids here in the past and it is our honor - nay, our *duty* - to carry that torch into a brighter future!"
         gunner @ say "Oohrah!"
+        
+        show rori sleepy
         
         rori @ say "Meh."
         
@@ -1420,13 +1425,18 @@ label liberation_day:
 
         rori @ say "I seriously don't care."
         
+        show gunner optimistic
+        
         gunner @ say "I'm liking the enthusiasm! We'll definitely put that into consideration!"
         
         n "Gunner is desperately trying to keep this event upbeat and fun."
         
+        show gunner neutral
+        
         gunner @ say "What about you, [name]? Got any preferences?"
         
         menu:
+            gunner "{cps=0}What about you, [name]? Got any preferences?{/cps}"
             "Rose":
                 player "There's this raccoon bitch named Rose in my history class..."
                 
@@ -1436,6 +1446,8 @@ label liberation_day:
                 player "What the fuck? I don't know many sorority girls. That limits us to just..."
                 
                 gunner @ say "Claire?"
+                
+                show gunner charming
                 
                 n "A devious grin creeps up on Gunner's face."
                 
@@ -1452,6 +1464,8 @@ label liberation_day:
                 
                 gunner @ say "Claire?"
                 
+                show gunner charming
+                
                 n "A devious grin creeps up on Gunner's face."
                 
                 gunner @ say "This is where it gets interesting. There's a loophole in the system."
@@ -1465,6 +1479,8 @@ label liberation_day:
                 player "What the fuck? I don't know many sorority girls. That limits us to just..."
                 
                 gunner @ say "Claire?"
+                
+                show gunner charming
                 
                 n "A devious grin creeps up on Gunner's face."
                 
@@ -1489,14 +1505,23 @@ label liberation_day:
         
         gunner @ say "Precisely."
         
+        show rori concerned
+        show gunner optimistic
+        
         rori @ say "I still don't know about this."
         
         player "How are we supposed to get in anyway? It's not like we can waltz in in broad daylight, pick the lock and break in."
         
-        rori @ say "Yeah, boys aren't even allowed in the girls' dorm building without being accompanied by one."
+        show rori worried noblush
+        
+        rori @ say "Yeah, boys aren't even allowed in the girls' dorm building without being accompanied by a resident."
         rori @ say "And even then there's a curfew."
         
+        show rori concerned
+        
         gunner @ say "Right, so I'm thinking we scout out the girls' dorm, find out the exact time when the guard shift changes, that'll be our best chance to sneak in and-"
+        
+        show gunner neutral
         
         player "Why don't we just ask Claire for help? She'd probably be down."
         
@@ -1551,18 +1576,30 @@ label liberation_day:
         player "But I won't be able to stick around and celebrate once the job is done."
         player "She wants me to hang out with a bunch of girls that night."
         
-        gunner @ say "Ugh. Thanks for taking one for the team."
+        gunner @ say "Thanks for taking one for the team."
+        
+        show rori neutral
         
         rori @ say "So is that it then? Scouting mission accomplished? Can we go home now?"
             
+        show gunner cheeky1    
+        
         gunner @ say "Yeah. Briefing complete, you're dismissed!"
         
-        rori @ say "Good. I'm gonna spend the rest of the night on VR Cat."
+        show rori sleepy
+        
+        rori @ say "Good. I'm gonna spend the rest of the night playing VR Cat."
         
         player "I'm starting to get excited for this. It's actually happening!"
         
+        show gunner determined
+        
         gunner @ say "Nothing's gonna stop us from getting our paws on some bird panties!"
         gunner @ say "Rest up boys, we've got a heist to pull off tomorrow!"
+        
+        hide gunner
+        hide rori
+        with dissolve
         
         n "Your little group disbands for the day, each contemplating this raid will change your lives."
         
@@ -1582,6 +1619,9 @@ label liberation_day:
         pause .7
 
         scene bg codadorm with fade
+        
+        show box with Dissolve(.2):
+            ypos 0    
         
         n "Today's the day."
         n "Your phone buzzes. You've got a message about Rori."
@@ -1701,23 +1741,42 @@ label liberation_day:
             
             show gunner neutral at center:
                 ypos y_gunner
+                xoffset 500
             show rori neutral at center:
                 ypos y_rori
+                xzoom -1
+                xoffset -500
             with dissolve
             
             n "He speaks in a hushed tone."
             
+            show gunner determined
+            
             gunner @ say "You made it!"
             
             rori @ say "Now that everyone is present and accounted for, can we hurry this along?"
+            
+            show rori worried
+            
             rori @ say "I feel so vulnerable just sitting here."
             
             player "Relax, I couldn't see you at all. It's too dark here."
             
+            show rori concerned
+            
             rori @ say "So you say, but humans don't have particularly good night vision."
             
+            show gunner frown1
+            
             gunner @ say "Rori's right, we need to be quick, quiet, and careful."
+            
+            show gunner neutral
+            
             gunner @ say "Follow me."
+            
+            hide gunner
+            hide rori
+            with dissolve
             
             n "The three of you sneak around to the side of the building where a tall window on each floor is embedded into the wall."
             n "Inside you can see a dimly lit stairwell. A pair of girls are making their way down now, dressed up for the night and unaware of your presence."
@@ -1736,17 +1795,28 @@ label liberation_day:
             
             show gunner neutral at center:
                 ypos y_gunner
+                xoffset 500
             show rori neutral at center:
                 ypos y_rori
+                xzoom -1
+                xoffset -500
             with dissolve
+            
+            show gunner disgusted
             
             gunner @ say "Damn, these bitches live like this?"
             
+            show gunner optimistic
+            
             rori @ say "Did you grab the key?"
+            
+            show gunner determined
             
             gunner @ say "Got it right here."
             
             player "Now we just have to find Ava's dorm."
+            
+            show gunner neutral
             
             gunner @ say "Come on, it's this way."
             
@@ -1764,13 +1834,21 @@ label liberation_day:
             
             show gunner neutral at center:
                 ypos y_gunner
+                xoffset 500
             show rori neutral at center:
                 ypos y_rori
+                xzoom -1
+                xoffset -500
             with dissolve
             
             gunner @ say "Leave the lights off! We don't wanna draw any attention."
             
+            show rori concerned blushing
+            
             rori @ say "You guys look around and I'll uh"
+            
+            show rori anxious 
+            
             rori @ say "Keep watch I guess."
             
             hide rori with dissolve
@@ -1782,12 +1860,15 @@ label liberation_day:
             n "This is way too large to fit around Ava's tiny waist."
             n "Gunner snickers at you and holds up a cute pair of pastel pink panties that only Ava could fit into."
             
-            gunner @ say "Looks like you found the jackpot hehehe!"
+            show gunner motivated
+            
+            gunner @ say "Looks like you found the jackpot heheh!"
             
             $ avaPantsu = False
             $ clairePantsu = False
             
             menu:
+                gunner "{cps=0}Looks like you found the jackpot heheh!{/cps}"
                 "Take Ava's panties":
                     $ avaPantsu = True
                     $ avaPoints += 1
@@ -1801,8 +1882,15 @@ label liberation_day:
                     n "Now that you're holding the entire thing, you can feel how oversized they are. You could probably jump out the window and use this thing as a parachute."
                 "Take none":
                     n "One pair is enough for the mission to be considered a success. The glory is shared between you and your cohorts, now all you have to do is escape."
+                    
+            show gunner neutral
             
             player "Alright we got what we came for. Rori is the hallway clear?"
+            
+            show rori yawn lookingaway blush at center with dissolve:
+                ypos y_rori
+                xzoom -1
+                xoffset -500
             
             rori @ say "Yeah. Let's get out of here."
             
@@ -1810,13 +1898,21 @@ label liberation_day:
             
             scene bg oldhospital with fade
             
+            show box with Dissolve(.2):
+                ypos 0    
+            
             n "It's eerily quiet."
             n "You're right in the middle of the hall. Should you try going slow and quiet or fast and loud?"
             n "The others are erring on the side of caution for now, choosing to remain vigilant and stealthy. You can see their fur standing up on end."
             n "About a quarter of the way through, a security officer bursts through a doorway and tackles Gunner to the ground."
             
+            show gunner disgusted at center with dissolve:
+                ypos y_gunner
+            
             gunner @ say "Ack! She's got me!"
             gunner @ say "Go! Be free!"
+            
+            hide gunner with dissolve
             
             n "She's trying to restrain him and cuff his hands but in a last ditch effort he manages to fling Ava's panties into the air."
             n "Spooked by the noise, Rori instinctively jumps over the security guard and runs to the exit. The panties get caught up in his horns."
@@ -1854,20 +1950,27 @@ label liberation_day:
             
             n "A more familiar voice joins them."
             
-            show claire sweater neutral at center with dissolve:
+            show claire sweater happy at center with dissolve:
                 ypos y_claire
+                xzoom -1
             
             claire @ say "Of course it was!"
             claire @ say "See, he's alive now!"
             
             n "Your vision gradually unblurs to reveal Claire and several other girls standing around you."
             
-            show lina at center:
-                ypos y_lina
-            show trish at center:
+            show claire with move:
+                xoffset -720
+            
+            show trish notext neutral at center:
                 ypos y_trish
-            show olivia at center:
+                xoffset 850
+            show lina neutral at center:
+                ypos y_lina
+                xoffset 130
+            show olivia neutral at center:
                 ypos y_olivia
+                xoffset 450
             with dissolve
             
             olivia @ say "I dunno, he still kinda looks dead to me."
@@ -1880,7 +1983,13 @@ label liberation_day:
             
             claire @ say "Oh don't worry about that!"
             claire @ say "All that matters is your mission was a success!"
+            
+            show claire leaning suggestive
+            
             claire @ say "And now it's time for you to return the favor~"
+            
+            show claire happy wave
+            
             claire @ say "Say hello to my friends from the sorority!"
             
             trish @ say "Hiiiii [name]!~" (multiple=3)
