@@ -1992,9 +1992,41 @@ label liberation_day:
             
             claire @ say "Say hello to my friends from the sorority!"
             
+            show olivia at hop
+            show trish at hop
+            show lina at hop
+            
+            image bubble1 = "images/speechbubble.png"
+            image bubble2 = "images/speechbubble.png"
+            image bubble3 = "images/speechbubble.png"
+            
+            show bubble1:
+                xzoom .65
+                yzoom .68
+                pos (1420,220)
+            show bubble2:
+                xzoom .9
+                yzoom 1
+                pos (1070,220)
+            show bubble3:
+                xzoom .92
+                yzoom .92
+                pos (800,220)
+            
+            #$ renpy.show("speechbubble.png",layer = "transient")
+            #$ renpy.show("speechbubble.png", layer = "overlay")
+            #$ renpy.show("speechbubble.png",layer = "screens")
+            
             trish @ say "Hiiiii [name]!~" (multiple=3)
             olivia @ say "Hiiiii [name]!~" (multiple=3)
             lina @ say "Hiiiii [name]!~" (multiple=3)
+            
+            show claire happy -wave
+            
+            hide bubble1
+            hide bubble2
+            hide bubble3
+            with dissolve
             
             n "Maybe it's just your headache, but these ladies appear... intimidating in some way."
             n "You face them and give a meager wave."
@@ -2004,6 +2036,8 @@ label liberation_day:
             n "You turn back to Claire."
             
             player "So what did you have in mind?"
+            
+            show claire sweater giggle -
                 
             n "Claire giggles. That can't be a good sign."
             
@@ -2012,16 +2046,25 @@ label liberation_day:
             
             player "Uh huh..."
             
+            show claire leaning suggestive
+            
             claire @ say "And your building is mixed male and female so you don't have any silly curfews for bringing guests of the opposite gender overrrr~"
             
             player "Right..."
+            
+            show claire derp
             
             claire @ say "So we were just thinking you could let us in and accompany us to your room~"
             claire @ say "Just to like, check it out and stuff~"
             
             player "Sure, that seems innocuous enough."
             
+            show claire flustered
+            
             claire @ say "Ksksksks thanks [name], I knew we could count on you~"
+            
+            show claire happy earsup
+            
             claire @ say "Alright ladies, let's go!"
             
             n "To your surprise, the mob picks you up and rushes to your dorm while you still try to catch up on what just happened."
@@ -2030,10 +2073,39 @@ label liberation_day:
             
             show box with Dissolve(.2):
                 ypos 0
+                
+            show trish notext neutral at offscreenleft:
+                ypos y_trish
+                xzoom -1
+                xoffset -200
+            show olivia looking at offscreenleft:
+                ypos y_olivia
+                xzoom -1
+                xoffset -1600
+            show lina neutral at offscreenleft:
+                ypos y_lina
+                xzoom -1
+                xoffset -700
+            show claire sweater happy at offscreenleft:
+                ypos y_claire
+                xoffset -2000
+                xzoom -1
         
             player "So uh yeah this is my dorm. Feel free to make yourselves at home I guess."
             
-            ###animate them runnning past the screen
+            show trish notext neutral at offscreenright:
+                ypos y_trish
+                xoffset 1700
+            show olivia looking at offscreenright:
+                ypos y_olivia
+                xoffset 200
+            show lina neutral at offscreenright:
+                ypos y_lina
+                xoffset 900
+            show claire sweater happy at offscreenright:
+                ypos y_claire
+                xoffset 1000
+            with MoveTransition(1.4)
             
             n "The girls push past you and immediately start rummaging around your belongings, digging through piles of laundry and pulling the drawers out of the dresser."
             n "If this is how they treat their home, you can understand the sorry state the girls' dorm was in."
@@ -2044,12 +2116,39 @@ label liberation_day:
             n "Hey is that your underwear drawer?"
             n "Before you can intervene, they all snatch a pair and rush out of your room, giggling and screaming with joy."
             
-            ###animated them moving to the other side of the screen
+            olivia @ say "Raid successful!"
+            
+            pause .2
+            
+            show trish notext neutral at offscreenleft:
+                ypos y_trish
+                xoffset -200
+                xzoom 1
+            show olivia looking at offscreenleft:
+                ypos y_olivia
+                xoffset -1600
+                xzoom 1
+            show lina neutral at offscreenleft:
+                ypos y_lina
+                xoffset -700
+                xzoom 1
+            show claire sweater happy at offscreenleft:
+                ypos y_claire
+                xoffset -2000
+                xzoom 1
+            with MoveTransition(1.4)
+            
+            hide claire
             
             n "Once again, you're knocked to the floor."
             n "All you can see when you get up is Claire with a devilish grin looking down at you."
             
+            show claire sweater leaning suggestive at center with dissolve:
+                ypos y_claire
+            
             claire @ say "Thanks for giving the girls a fun night~"
+            
+            hide claire with dissolve
             
             n "The bunny plants a smooch on her own paw, then pushes the same paw against your forehead with enough force to knock you back onto your bed."
             n "With your consciousness fading, the last thing you see is Claire's fluffy little cotton ball tail leaving the room and your door slamming shut."
