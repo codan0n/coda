@@ -660,7 +660,7 @@ label week2Tuesday:
             n "Their society followed the principles of scholarly warriors who loosely ruled the continent."
             n "Honor, self reliance, freedom, sustainability, and harmony with nature were some of their ideals."
             n "Suffering and rising above one's particular life challenges were glamorized as being noble."
-            n "Arcoonians fostered a fiercly individualist mindset that idealized liberty and sovereign freedom."
+            n "Arcoonians fostered a fiercely individualist mindset that idealized liberty and sovereign freedom."
             n "Despite being united under general governance, battles between settlements were common. It's unclear what they fought over but the ruling class believed that it \"culled the weak.\""
         "French":
             $ frenchSkill =+ 1
@@ -1829,7 +1829,7 @@ label beauty_and_the_beast:
     n "You wander around the halls, reading bulletin boards and mindlessly scrolling back and forth on your phone's home screen."
     n "The vending machine on this floor is out of your preferred snack. Maybe the one on the floor below you has it in stock?"
     n "As you push past the stairwell doors, you catch sight of an orange tail turning the corner on the stairs above."
-    n "That's odd, this is the top floor. All thats above here is the rooftop level."
+    n "That's odd, this is the top floor. All that's above here is the rooftop level."
     n "Perhaps the rooftop access is unlocked? This warrants an investigation."
     
     scene bg roof with fade
@@ -4604,7 +4604,7 @@ label ellen_feeding_ducks:
 
     n "Mrs. Celestine rambles on about other countries and their various transitions from human dominated society to rule of animal people."
     n "Maybe one day you'll get your face on the dollar bill as a memory of the last human."
-    n "Either that or they'll talk shit about you in textbooks for being an evil human who oppressed every other species for millenia."
+    n "Either that or they'll talk shit about you in textbooks for being an evil human who oppressed every other species for millennia."
     n "For all her love of this holiday, she doesn't cut you a break and let the class leave early."
     n "If someone hadn't interrupted her, she probably would have ranted well into the evening."
     
@@ -4766,7 +4766,7 @@ label ellen_feeding_ducks:
     
     show ava typical neutral
 
-    ava @ say "This is why I'm embarassed to go out in public with you."
+    ava @ say "This is why I'm embarrassed to go out in public with you."
     
     show claire derp
 
@@ -5261,11 +5261,12 @@ label ellen_feeding_ducks:
     n "A life altering decision presents itself."
     n "Who do you sit next to?"
     n "This room wasn't meant to accomodate five people so there's not a lot of places to sit."
-    n "Everyone but you and Gunner has snagged a seat and he's distracted by his phone, so now's your chance." 
+    n "Everyone but you and Gunner has snagged a seat. He's distracted by his insatiable urge to rub his face against the edge of every piece of furniture in the room."
+    n "Now's your chance." 
 
     ###maybe extend the scene after the credits roll and you're alone with whoever you sat with after the others leave
     menu:
-        n "{cps=0}Everyone but you and Gunner has snagged a seat and he's distracted by his phone, so now's your chance.{/cps=0}"
+        n "{cps=0}Now's your chance.{/cps=0}"
         "Sit next to Claire":
             $ clairePoints = clairePoints + 1
             
@@ -5285,7 +5286,8 @@ label ellen_feeding_ducks:
 
             hide claire with dissolve
 
-            n "Gunner looks up from his phone as Rori hits the play button."
+            #n "Gunner looks up from his phone as Rori hits the play button."
+            n "Rori hits the play button and the intro credits begin."
 
             show ava typical overjoyed at offscreenright:
                 ypos y_ava

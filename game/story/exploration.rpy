@@ -327,7 +327,7 @@ label mishkaGarden:
             
         "You'll just get in the way":
             "Not like you can help her anyway. Not without a pair of gloves."
-            "Instead you akwardly stand around, trying to think of something to say and not just stare at her while she works."
+            "Instead you awkwardly stand around, trying to think of something to say and not just stare at her while she works."
     
             player "Sure are a lot of roses, huh?"
             
@@ -622,7 +622,7 @@ label linaTown:
     
     lina @ say "Usually on the weekends! That's when lots of people are out and about and usually have a buck to spare *chirp~*"
     
-    n "You take a look inside her saxohone case. There's probably around $50 in there."
+    n "You take a look inside her saxophone case. There's probably around $50 in there."
     
     player "How long have you been out today?"
     

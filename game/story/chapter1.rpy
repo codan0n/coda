@@ -104,8 +104,8 @@ label chapter1:
 
     n "You got a letter."
     n "The name on the envelope said \"Harmonia University.\""
-    n "It's rediculous... Could it really be true?"
-    n "Such a prestegious university wants you...?"
+    n "It's ridiculous... Could it really be true?"
+    n "Such a prestigious university wants you...?"
     n "You never even applied."
     n "Did they send this by mistake?"
     n "But it's signed by the dean himself."
@@ -118,7 +118,7 @@ label chapter1:
     n "There's a note at the bottom."
     
     n "\"Given your situation, I would like to personally welcome you and offer you a tour of the campus myself. It would be an honor to have you among us.\""
-    n "\"I have arranged comfortable living accomodations for you, so that you may focus on getting the most out of your education. Your scholarship will cover all your necessities and then some.\""
+    n "\"I have arranged comfortable living accommodations for you, so that you may focus on getting the most out of your education. Your scholarship will cover all your necessities and then some.\""
     n "\"On behalf of Harmonia University, we eagerly await your arrival.\""
     n "\"Nicodemus Kaczynski\nDean of Harmonia University\""
     
@@ -302,7 +302,7 @@ label college_orientation:
     play music "audio/ambient/indoors people talking.ogg" fadein 1.5
     
     #n "You had some trouble finding the building you're supposed to be in but managed to make it just in time."
-    n "After checking in, you were directed to a lecture hall where several others are already seated and chatting amongst themselves."
+    n "After checking in, you were directed to a lecture hall where several others are already seated and chatting among themselves."
     n "You look around for an open spot and find one near the front of the room."
     n "Weird looks are shot in your direction, followed by whispers as you walk past. They act like you don't notice their stares and comments."
     n "You're used to it though, it happens everywhere you go. Understandably so, considering your kind is about as rare as a unicorn."
@@ -509,7 +509,7 @@ label college_orientation:
             
             show rori anxious
             
-            rori @ say "I've got something I've been working on for a few years. I hope I can still work on it here but I heard my compsci professor likes to assign a lot of homework."
+            rori @ say "I've got something I've been working on for a few years. I hope I can still work on it here but I heard my differential equations professor likes to assign a lot of homework."
 
             player "Damn. Well good luck with that."
 
@@ -941,7 +941,7 @@ label college_orientation:
                 rori @ say "I'm gonna have to load up a live CD and chroot into this and dig around to find the problem."
                 rori @ say "I might as well reinstall the OS at this point."
                 
-                player "Typical linux boot process."
+                player "Typical loonix boot process."
                 
                 show rori worried
                 
@@ -1462,7 +1462,7 @@ label exploring_campus:
     n "The interior is dim and so quiet you can hear your footsteps echo. You'd think it was abandoned if not for the barista watering a plant at the counter."
     n "Written on the chalkboard on the far end of the room is a phrase in cyrillic and underneath is the menu, thankfully in English."
     #n "Calming music plays from the speakers mounted to the walls. This would be a nice place to study."
-    n "After giving it a lookover, you decide what you want and walk up to place your order."
+    n "After giving it a look over, you decide what you want and walk up to place your order."
 
     show mishka neutral at center with dissolve:
         ypos y_mishka
@@ -1535,7 +1535,7 @@ label exploring_campus:
 
     player "Thanks uhh..."
 
-    n "You look down at her nametag."
+    n "You look down at her name tag."
     n "It's in cyrillic."
     n "{font=ahellya.ttf}Мишка{/font}"
     
@@ -2297,7 +2297,7 @@ label secondDayOfClass:
             
             player "I thought this was a French class, not a philosophy one."
 
-            celestine @ say "Some of the most reknowned philosophers come from France you know~"
+            celestine @ say "Some of the most renowned philosophers come from France you know~"
             celestine @ say "Voltaire wrote a story called \"Zadig,\" which is the French word for Destiny and--"
             celestine @ say "Oh sorry, I went on a bit of a tangent there! I do that from time to time. We best move on before class ends."
 
@@ -2441,7 +2441,7 @@ label secondDayOfClass:
         
         show ava typical unamused
         
-        ava @ say "I'm more in it for the artistic qualities but I suppose street photography and reconaissance have their similarities."
+        ava @ say "I'm more in it for the artistic qualities but I suppose street photography and reconnaissance have their similarities."
     else:
         ava @ say "I see you've found that boy you totally don't have a crush on."
         
@@ -2626,11 +2626,23 @@ label thirdDayOfClass:
     
     rothbauer @ say "That's all for today! Be sure to read up on the bonobos in your textbook! If you want to pass the quiz that is, hint hint."
     
+    hide rothbauer with dissolve
+    
     n "You pack your things and get ready for your next class. On your way out, you decide to ask Rose about what you should do for the group project."
+    
+    show rose skirt handonhip shy pendant at center with dissolve:
+        ypos y_rose
+        xoffset -350
     
     player "Hey, what civilization are we doing for the-"
     
     rose @ say "Don't talk to me."
+    
+    pause .1
+    
+    show rose at offscreenright with move:
+        ypos y_rose
+        xoffset 400
     
     n "She walks off without even giving you a glance."
     n "Already off to a better start than every other group project you've been a part of."
@@ -2739,7 +2751,7 @@ label thirdDayOfClassStats:
 
     hide gunner with dissolve
 
-    herschel @ say "Moving on, let's get into expected values which are simply defined as the sumation of the probability of each possible value multiplied by the outcome of each of those probabilities!"
+    herschel @ say "Moving on, let's get into expected values which are simply defined as the summation of the probability of each possible value multiplied by the outcome of each of those probabilities!"
 
     n "Gunner groans and buries his head in his notebook."
 
@@ -2767,7 +2779,7 @@ label thirdDayOfClassStats:
 
         show claire sweater overjoyed at center:
             ypos y_claire
-            xpos 500
+            xoffset 500
         show ava typical happy at center:
             xzoom -1
             xoffset -520
@@ -2779,6 +2791,7 @@ label thirdDayOfClassStats:
         claire @ say "[name]!!! What's up?"
         
         show ava overjoyed
+        show claire happy
 
         ava @ say "Hey [name]! We were afraid we'd never find you haha!"
         
@@ -2801,12 +2814,12 @@ label thirdDayOfClassStats:
 
         player "How about the cafe?"
         
-        show claire sweater surprised
+        show claire sweater surprised earsup
         show ava unimpressed
 
         ava @ say "You mean Starbees? That place is hella crowded all the time."
         
-        show claire sweater happy
+        show claire sweater happy -earsup
         show ava concerned
 
         player "No, the one behind the library. Coffee Zone I think? It was pretty quiet when I went there a few days ago."
@@ -2839,16 +2852,16 @@ label thirdDayOfClassStats:
         pause .1
         
         show gunner with move:
-            xoffset -430
+            xoffset -630
             
         pause .1
         
         show claire sweater happy at center:
             ypos y_claire
-            xpos 575
+            xoffset 610
         show ava typical happy at center:
             ypos y_ava
-            xoffset 300
+            xoffset 280
         
         with moveinright
 
@@ -2865,6 +2878,7 @@ label thirdDayOfClassStats:
         claire @ say "I hope you don't mind us intruding on your territory!"
         
         show ava pose happy
+        show claire sweater happy -
 
         gunner @ say "It's all good, I could use a break from this anyhow."
         
@@ -2872,21 +2886,28 @@ label thirdDayOfClassStats:
         
         n "It's been less than 15 minutes since class ended, so he couldn't have been studying for long."
         
+        show gunner cheeky1
+        
         gunner @ say "You all want some coffee? It'll be my treat~"
         
         player "We actually stopped by to get lunch."
+        
+        show gunner neutral
         
         #shrug sprite
         gunner @ say "No problem, order whatever you want."
         gunner @ say "I accidentally withdrew too much cash and now my wallet barely fits in my pocket, so I don't mind."
 
         menu:
+            gunner "{cps=0}I accidentally withdrew too much cash and now my wallet barely fits in my pocket, so I don't mind.{/cps}"
             "Decline":
                 player "I can pay for myself."
                 
                 gunner @ say "Heh suit yourself."
                 
                 n "Gunner leans in and whispers to you."
+                
+                show gunner charming
                 
                 gunner @ say "Wouldn't want these chicks to think you're poor, I get it."                
             "Accept":
@@ -2896,22 +2917,33 @@ label thirdDayOfClassStats:
                 
                 player "I'd never turn down free food. Thanks man."
                 
+                show gunner eyesclosed catface
+                
                 gunner @ say "Of course! What kind of friend would I be if I didn't offer to cover something as small as lunch?"
+                
+        show gunner optimistic
         
         gunner @ say "Ladies? What about you?"
         
         claire @ say "I'll take you up on that offer! What a sweet guy!"
         
-        ava @ say "That would be very kind of you~"
+        show ava typical smug
+        
+        ava @ say "Yeah that would be very kind of you~"
+        
+        show gunner cutie
         
         gunner @ say "Aw don't sweat it!"
         gunner @ say "Go ahead and order while I finish this homework problem."
         
         n "He reaches into his pocket and pulls out his massive bulging wallet."
         
+        show gunner cheeky1
+        show ava happy
+        
         gunner @ say "This should cover it. Just give the change to the barista as a tip."
         
-        player "Sure. We'll be right back."
+        player "K. We'll be right back."
         
         hide gunner with dissolve
         
@@ -2922,7 +2954,7 @@ label thirdDayOfClassStats:
 
         show mishka neutral at center with moveinleft:
             xzoom -1
-            xoffset -450
+            xoffset -500
             ypos y_mishka
             
         #show mishka overjoyed
@@ -2932,10 +2964,13 @@ label thirdDayOfClassStats:
         show mishka neutral
 
         player "Hi Mishka! Yeah we're just stopping by to get something to eat after class."
+        
+        show claire sweater overjoyed
 
         claire @ say "Ohmygosh your accent is so cute! Tih rooskie?"
 
-        show mishka sadwave
+        show mishka sad wave
+        show claire happy
 
         mishka @ say "Nyet, no ya nyemnogo govaryu po-Rooskie..."
         
@@ -2943,7 +2978,7 @@ label thirdDayOfClassStats:
         
         n "Mishka turns to show the Ukrainian flag patch on her jacket."
         
-        mishka @ say "I am from a village near the border of Ookrainie ta Rossie."
+        mishka @ say "I am from village near the border of Ookrainie ta Rossie."
         mishka @ say "So perhaps some Rossiskie has infected my way of speaking."
 
         claire @ say "Ahh, mnyeh zshal uhh... kak eto skazat... sleeshad eto. Ya nyemnogo znayu tolkuh Russkie, no slihshal, shto Ookrainskie pokhozh."
@@ -2973,24 +3008,33 @@ label thirdDayOfClassStats:
         mishka @ say "Usually people just leave behind the coins."
 
         menu:
+            mishka "{cps=0}Usually people just leave behind the coins.{/cps}"
             "It was Gunner's idea":
                 player "It was his idea."
                 
                 n "You gesture back toward Gunner."
                 
+                show mishka happy
+                
                 mishka @ say "Oh! Could you tell him dyakooyoo vam for me?"
 
                 player "Uhh..."
                 
+                show mishka neutral -
+                
                 claire @ say "Don't worry, I got it~"
             "It's nothing, really.":
                 player "It's nothing really. You deserve it for your hard work."
+                
+                show mishka happy
                 
                 mishka @ say "Oh my, well if you think so! Dyakooyoo vam haha!"
                 
                 player "Haha right uhh... Claire?"
                 
                 n "Claire whispers what to say into your ear."
+                
+                show mishka neutral -
                 
                 player "Bood laska...? Did I pronounce that right?"
                 
@@ -3001,6 +3045,18 @@ label thirdDayOfClassStats:
         hide mishka with dissolve
         
         n "You return to Gunner's table and sit beside him while you wait. He's packed his textbook and notes into his bag."
+        
+        show ava:
+            xoffset -350
+        show claire:
+            xoffset -670
+        with move
+        
+        pause .2
+        
+        show claire at flipright
+        pause .1
+        show ava at flipright
                 
         jump avaClaireGunnerLunch
         
@@ -3229,7 +3285,7 @@ label thirdDayOfClassStats:
         
         n "Mishka turns to show the Ukrainian flag patch on her jacket."
         
-        mishka @ say "I am from a village near the border of Ookrainie ta Rossie."
+        mishka @ say "I am from village near the border of Ookrainie ta Rossie."
         mishka @ say "So perhaps some Rossiskie has made its way into my speech."
 
         claire @ say "Ahh, mnyeh zshal uhh... kak eto skazat... sleeshad eto. Ya nyemnogo znayu tolkuh Russkie, no slihshal, shto Ookrainskie pokhozh."
@@ -3306,11 +3362,17 @@ label avaClaireGunnerLunch:
     
     show ava typical happy -pose
     show claire happy
-    show ava typical happy at hop
+    show ava typical excited at hop
     
     ava @ say "Yeah, especially since we're basically strangers!"
     
+    show ava happy
+    show gunner eyesclosed catface
+    
     gunner @ say "Hey, any friend of [name]'s is a friend of mine!"
+    
+    show gunner neutral
+    
     gunner @ say "Besides, what better way to get to know someone than over lunch?"
     
     show gunner optimistic
@@ -3367,7 +3429,7 @@ label avaClaireGunnerLunch:
     
     ava @ say "That's not a hobby."
 
-    gunner @ say "How about... golfing?"
+    gunner @ say "How about... golfing? That's a useful skill for political science."
     
     show claire happy
     
@@ -3649,7 +3711,8 @@ label avaClaireGunnerLunch:
         n "Even with the two of you, it proves to be a challenge but you manage to bring it all to the table in one trip without dropping anything."
     else:
         gunner @ say "You all chill here, I'll go pick it up."
-        
+    
+        hide gunner with dissolve
         show claire sweater giggle
 
         claire @ say "I totally saw you checking him out, Ava!"
@@ -4588,7 +4651,7 @@ label thursday1:
             
             claire @ say "Yeah... See you later."
             
-            n "You wave goodbye and turn in the direction of your dorm, purposely avoiding Ava's sightline as she approaches Claire."
+            n "You wave goodbye and turn in the direction of your dorm, purposely avoiding Ava's sight line as she approaches Claire."
             
             jump thursdayNight1Study
             

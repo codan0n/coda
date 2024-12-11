@@ -1555,7 +1555,7 @@ label liberation_day:
         
         rori @ say "So is that it then? Scouting mission accomplished? Can we go home now?"
             
-        gunner @ say "Yeah. Briefing comeplete, you're dismissed!"
+        gunner @ say "Yeah. Briefing complete, you're dismissed!"
         
         rori @ say "Good. I'm gonna spend the rest of the night on VR Cat."
         
@@ -2169,7 +2169,7 @@ label liberation_day:
         rose @ say "Even worse than homeless, this guy's a hippie."
         #Oh he's worse than I thought, he's a hippie."
 
-        n "Rose tries once more to manuever around him, but it's almost like he knows which direction she'll go before she does."
+        n "Rose tries once more to maneuver around him, but it's almost like he knows which direction she'll go before she does."
         
         show rose:
             linear .4 xpos -250    
