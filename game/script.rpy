@@ -163,7 +163,7 @@ define trish = Character("Trish", image="trish", what_color="d0dbff", callback=n
 define olivia = Character("Olivia", image="olivia", what_color="d0dbff", callback=name_callback, cb_name = "olivia", what_font="dudu.ttf")
 define fortune = Character("Fortune", image="fortune", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
 define creature = Character("Creature", image="fortune", what_color="d0dbff", what_font="dudu.ttf")
-define lina = Character("lina", image="lina", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
+define lina = Character("lina", image="lina", what_color="d0dbff", callback=name_callback, cb_name = "lina", what_font="dudu.ttf")
 define waitress = Character("waitress", image="lina", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
 define nicodemus = Character("Nicodemus", image="nicodemus", what_color="d0dbff", callback=name_callback, cb_name = "nicodemus", what_font="dudu.ttf")
 
@@ -177,7 +177,7 @@ define y_herschel = 1515
 define y_celestine = 1600
 define y_claire = 1825
 define y_kitsuragi = 1430
-define y_lina = 1570
+define y_lina = 1470
 define y_ava = 1465
 define y_mishka = 1550
 define y_roth = 1750
@@ -808,6 +808,16 @@ layeredimage ava profile shy:
         xzoom .9
         yzoom 1.0
         pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava typical embarrassed:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava typical embarrassed.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-130,-30)
         attribute say:
             "images/bubble.png"
 layeredimage ava profile concerned:
@@ -1918,11 +1928,24 @@ layeredimage herschel:
             "images/bubble.png"
             
 
-layeredimage lina:
+layeredimage lina neutral:
     at sprite_highlight('lina')
     always:
-        'images/characters/lina.png'
+        'images/characters/lina/lina neutral.png'
     group saying:
+        xzoom .95
+        yzoom .95
+        pos (50,-10)
+        attribute say:
+            "images/bubble.png"
+layeredimage lina sax neutral:
+    at sprite_highlight('lina')
+    always:
+        'images/characters/lina/lina sax neutral.png'
+    group saying:
+        xzoom .95
+        yzoom .95
+        pos (50,-10)
         attribute say:
             "images/bubble.png"
 
@@ -2964,9 +2987,9 @@ label start:
     $ mishkaNightWalkActive = False
     
     $ afterClassExploration = ["mainStreetIntro", "gardenIntro", "forestIntro", "runningTrackIntro"]
-    $ townEvents = ["celestineTown", "linaTown"]
-    $ trackEvents = ["gunnerTrack", "roriTrack"]
-    $ forestEvents = ["roseForest" "claireForest"]
+    $ townEvents = ["linaTown"]#, celestineTown"]
+    $ trackEvents = ["gunnerTrack"]#, "roriTrack"]
+    $ forestEvents = [] #["roseForest", "claireForest"]
     $ gardenEvents = ["mishkaGarden"]
     $ cafeEvents = ["oliviaCafe"]
     $ nightEvents = ["gunnerNight", "avaNight", "claireNight", "mishkaNight", "roseNight", "avaGunnerNight", "roriNight"]

@@ -130,6 +130,14 @@ init -10 python:
                 renpy.sound.play("audio/sound effects/genericvoice1.wav")
             elif event == "slow_done":
                 renpy.sound.stop()    
+                
+        if speaking_char == "lina":
+            if not interact:
+                return
+            if event == "show_done":
+                renpy.sound.play("audio/sound effects/genericvoice1.wav")
+            elif event == "slow_done":
+                renpy.sound.stop()    
         
         elif speaking_char == "claire":
             if not interact:

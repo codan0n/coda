@@ -3714,26 +3714,28 @@ label avaClaireGunnerLunch:
     
         hide gunner with dissolve
         show claire sweater giggle
+        
+        show ava:
+            xoffset -100
+        show claire:
+            xoffset -550
+        with move
 
         claire @ say "I totally saw you checking him out, Ava!"
             
-        show ava unsure at fliphop:
-            #xpos 175
-            xpos 100
-            ypos 10
-            linear .1 ypos 0
+        show ava typical shocked at flipleft
         
         ava @ say "What? Who?!"
         
         claire @ say "That Gunner boy duh! Ksksksksksks!"
         
-        show ava bored
+        show ava unimpressed
 
         ava @ say "Oh my god, I was not!"
         
         claire @ say "You were too!"
         
-        show claire sweater happy
+        show claire sweater pose suggestive
 
         claire @ say "What do you think, [name]? Was she not looking at him with hearts in her eyes?"
         
@@ -3741,19 +3743,19 @@ label avaClaireGunnerLunch:
 
         ava @ say "Shush up or he'll hear you!"
         
-        show claire surprised
+        show claire surprised earsup
 
         claire @ say "Ksksksksks so I was right!"
         
         show ava annoyed
 
-        ava @ say "Nuh uhhhh! Maybe he's cute but I don't even know anything about him!"
+        ava @ say "Nuh uhhhh! He may be cute but I don't even know anything about him!"
         
         show claire sweater pose suggestive
 
         claire @ say "Oh so now you think he's cute?"
         
-        show ava waitwhat
+        show ava typical embarrassed
 
         ava @ say "I didn't mean-!"
         
@@ -3763,6 +3765,9 @@ label avaClaireGunnerLunch:
         hide ava
         hide claire
         with dissolve
+        
+        show gunner neutral at center:
+            ypos y_gunner
 
         gunner @ say "Thanks bro. I underestimated how hard it would be to balance three hot coffees in one paw and the rest in the other."
         
@@ -5516,20 +5521,20 @@ label sunday2:
         "Boys shouldn't wear skirts":
             player "Boys shouldn't wear skirts."
             
-            mere "Why not?"
+            mere @ say "Why not?"
             
             player "Because they're for girls."
             
-            mere "Says who?"
+            mere @ say "Says who?"
             
             player "Says... society."
             
-            mere "Which society? The human one? Last I checked, they're on their way out."
+            mere @ say "Which society? The human one? Last I checked, they're on their way out."
             
             player "..."
             player "I just remembered I have to be somewhere."
             
-            mere "Try not to get struck by lightning."
+            mere @ say "Try not to get struck by lightning."
             
             hide mere with dissolve
             

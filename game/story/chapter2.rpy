@@ -275,6 +275,7 @@ label week2Tuesday:
     $ mishkaMall = False
     
     menu:
+        player "{cps=0}Cool, cool.{/cps}"
         "Ask if she wants to hang out":
             $ mishkaMall = True
             
@@ -459,7 +460,7 @@ label week2Tuesday:
     n "Your head is pounding and your vision blurry."
     n "You look down at your notebook and it's all just illegible scribbles and a few drool stains."
 
-    show gunner neutral at center with dissolve:
+    show gunner frown1 at center with dissolve:
         ypos y_gunner
     
     gunner @ say "Bro, you still alive? You don't look so good."
@@ -787,7 +788,7 @@ label week2Tuesday:
     show box with Dissolve(.2):
         ypos 0
     
-    $ townEvents.append("avaGarden")
+    # $ gardenEvents.append("avaGarden")
     
     $ avaClaireGarden = True
         
@@ -4081,24 +4082,23 @@ label ellen_feeding_ducks:
             
             player "Sounds cool but I'll pass. I'm supposed to go to the parade in town to get extra credit in history."
             
-            show ava casual unimpressed
+            show ava typical unamused
 
             ava @ say "Aww..."
+            ava @ say "Guess I'll go on my own then."
             
     show ava typical happy
     show claire happy
             
     n "You stand around chatting some more until Ava and Claire have to run to class."
-    
-    player "See you later!"
-    
-    claire @ say "Byeee!"
-    
-    ava @ say "See ya!"
             
     hide ava
     hide claire
     with dissolve
+    
+    n "Now you can do something with your free time."
+    
+    call afterClassOptions
 
     hide box
 
@@ -4333,6 +4333,7 @@ label ellen_feeding_ducks:
         player "You two have fun with the panty raid. I gotta run for now."
     else:
         menu:
+            gunner "{cps=0}And what about you?{/cps}"
             "Let's do it":
                 $ gunnerRaid = True
                 
@@ -4354,9 +4355,13 @@ label ellen_feeding_ducks:
                 gunner @ say "You gay or something?"
                 gunner @ say "You can ogle Rori's ass while we sneak around if that's the case."
                 
+                show rori anxious
+                
                 rori @ say "H-hey!"
                 
                 player "I just have better things to do."
+                
+                show rori neutral
                 
                 n "Gunner shrugs, pretending like he doesn't care."
                 
@@ -4367,6 +4372,14 @@ label ellen_feeding_ducks:
     gunner @ say "Laters."
     
     rori @ say "Laters."
+    
+    hide gunner
+    hide rori
+    with dissolve
+    
+    n "What should you do with your free time?"
+    
+    call afterClassOptions
                 
     scene bg black with fade
 

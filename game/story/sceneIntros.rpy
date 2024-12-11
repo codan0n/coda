@@ -167,6 +167,11 @@ label mainStreetIntro:
     $ townDiscovered = True
     $ afterClassExploration.remove("mainStreetIntro")
     #$ locationsAvailable.remove("townLocation")
+    
+    scene bg town with fade
+    
+    show box with Dissolve(.2):
+        ypos 0    
 
     "A short walk off campus brings you to a commercial area. The streets are lined with restaurants and a variety of shops ranging from fashion to books, gift shops, electronics, art stores, antiques, and more."
     "It gets overwhelming quickly and you can hardly decide which shops to stop at."

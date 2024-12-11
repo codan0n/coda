@@ -7,6 +7,7 @@ label afterClassOptions:
             "Where do you want to go?"
 
             menu:
+                "{cps=0}Where do you want to go?{/cps}"
                 "Explore" if afterClassExploration: #if trackDiscovered == False or gardenDiscovered == False or townDiscovered == False or forestDiscovered == False: #if locationsAvailable == False:
                 
                     $ randomSelected = renpy.random.choice(afterClassExploration)
@@ -21,7 +22,7 @@ label afterClassOptions:
                     if townEvents:
                         $ randomSelected = renpy.random.choice(townEvents)
                         
-                        call expression randomSelected from _call_expression_1
+                        call expression randomSelected 
                         
                         call dormSleep from _call_dormSleep_1
                         
@@ -590,7 +591,7 @@ label linaTown:
     n "Beggars sure have gotten pretty advanced these days."
     n "When she finishes her song she waves to you. You should have expected this. You haven't donated anything yet but you're the only one who hadn't walked away."
     
-    show lina at center with dissolve:
+    show lina sax neutral at center with dissolve:
         ypos y_lina
     
     lina @ say "Heya! I've seen you around before!"
@@ -691,6 +692,7 @@ label linaTown:
             n "You should give her a tip."
             
             menu:
+                n "{cps=0}You should give her a tip.{/cps}"
                 "Tip $5":
                     n "You pull a 5 dollar bill from your wallet and drop it in her case."
                     
@@ -707,8 +709,8 @@ label linaTown:
             n "You smile and give her a parting wave, then make your way back to your dorm."
             
             
-            stop music fadeout 1.5
-            stop channel1 fadeout 1.0
+            #stop music fadeout 1.5
+            #stop channel1 fadeout 1.0
             hide lina with dissolve
         "Leave":
             $ avaPoints += 1
@@ -735,103 +737,105 @@ label linaTown:
             
             n "You smile and give her a parting wave, then make your way back to your dorm."
             
-            hide lina with dissolve
+    hide lina with dissolve
+    
+    n "On your way back, you bump into Ava."
+    
+    show ava typical unimpressed at center with dissolve:
+        ypos y_ava
+    
+    ava @ say "Who was that you were talking to?"
+    
+    player "Uhh I think she said her name is Lina? She-"
+    
+    ava @ say "Oh you're talking to other bird girls now? That's nice."
+    
+    player "She actually said hi first so..."
+    
+    show ava annoyed
+    
+    ava @ say "What was that you gave her?"
+    
+    player "Yeah it was just a tip for-"
+    
+    show ava shocked
+    
+    ava @ say "You paid *her*??? For what? Loitering and playing annoying music? Do you also pay people when they blast music on their phones?"
+    
+    player "That's completely differ-"
+    
+    show ava annoyed
+    
+    ava @ say "Jazz is just playing random notes and pretending it sounds good!"
+    ava @ say "It's not a true art!"
+    
+    menu:
+        ava "{cps=0}It's not a true art!{/cps}"
+        "Like photography?":
+            $ avaPoints = avaPoints - 1
+    
+            player "Like how photography is just pointing and clicking?"
             
-            n "However it's not long before you bump into Ava."
+            show ava angry
             
-            show ava casual unimpressed at norm with dissolve
+            ava @ say "Bite your tongue! Don't talk about what you don't understand!"
+            ava @ say "Good photographers know how to frame a shot and *create* a message! We have to manage lighting, contrast, color spaces, attention lines-"
             
-            ava @ say "Who was that you were talking to?"
+            player "I dunno, it seems like anybody can just open the camera app on their phone and take a good shot."
             
-            player "Uhh I think she said her name is Lina? She-"
+            ava @ say "Amateur! You think your overblown highlights and tacky oversaturation deserves to be put in a museum?!"
             
-            ava @ say "Oh you're talking to other bird girls now? That's nice."
+            player "I'm just saying nobody cares about photography as an art form anymore."
             
-            player "She actually said hi first so..."
+            show ava portrait angry
             
-            show ava annoyed
+            ava @ say "That's the problem! An artist is someone who transfers feelings from their heart onto a medium that can't be expressed in language alone."
             
-            ava @ say "What was that you gave her?"
-            
-            player "Yeah it was just a tip for-"
+            player "I think that's what Lina was telling me. She said she lives to play music or something like that."
             
             show ava unsure
             
-            ava @ say "You paid *her*??? For what? Loitering and playing annoying music? Do you also pay people when they blast music on their phones?"
+            ava @ say "That-!"
+            ava @ say "Hmph! What does she know?"
             
-            player "That's completely differ-"
+            n "With a huff, Ava takes off to the skies."
+            n "Yeah, you kinda feel like you're done with the day too."
+        "Try to calm her down":
+            $ avaPoints += 1
             
-            show ava seriously
+            n "You put on your gentle voice like you're talking to a child and try your best to pacify her."
             
-            ava @ say "Jazz is just playing random notes and pretending it sounds good!"
-            ava @ say "It's not a true art!"
+            player "She's just a street performer. It's cheap entertainment for whatever cash people happen to have."
             
-            menu:
-                "Like photography?":
-                    $ avaPoints = avaPoints - 1
+            ava @ say "Is that so?"
             
-                    player "Like how photography is just pointing and clicking?"
-                    
-                    show ava angry
-                    
-                    ava @ say "Bite your tongue! Don't talk about what you don't understand!"
-                    ava @ say "Good photographers know how to frame a shot and *create* a message! We have to manage lighting, contrast, color spaces, attention lines-"
-                    
-                    player "I dunno, it seems like anybody can just open the camera app on their phone and take a good shot."
-                    
-                    ava @ say "Amateur! You think your overblown highlights and tacky oversaturation deserves to be put in a museum?!"
-                    
-                    player "I'm just saying nobody cares about photography as an art form anymore."
-                    
-                    show ava portrait angry
-                    
-                    ava @ say "That's the problem! An artist is someone who transfers feelings from their heart onto a medium that can't be expressed in language alone."
-                    
-                    player "I think that's what Lina was telling me. She said she lives to play music or something like that."
-                    
-                    show ava unsure
-                    
-                    ava @ say "That-!"
-                    ava @ say "Hmph! What does she know?"
-                    
-                    n "With a huff, Ava takes off to the skies."
-                    n "Yeah, you kinda feel like you're done with the day too."
-                "Try to calm her down":
-                    $ avaPoints += 1
-                    
-                    n "You put on your gentle voice like you're talking to a child and try your best to pacify her."
-                    
-                    player "She's just a street performer. It's cheap entertainment for whatever cash people happen to have."
-                    
-                    ava @ say "Is that so?"
-                    
-                    player "Yeah, she's like a hobo begging for spare change. I kinda felt bad for her."
-                    
-                    n "Ava cracks the tiniest of smiles. Whatever you're doing is working."
-                    
-                    ava @ say "I guess it's actually kinda pitiful."
-                    ava @ say "I mean, can you imagine me out on the streets trying to sell photo prints?"
-                    
-                    player "No, you're a *real* artist. You're not in it for the quarters and dimes, you make *art* for the sake of expression."
-                    
-                    ava @ say "Exactly! It's so sad how few people realize that!"
-                    
-                    player "It's such a struggle. Only smart people can truly understand what true art means."
-                    
-                    ava @ say "Finally, someone who gets it!"
-                    
-                    player "Wanna go check out the art exhibits around town with me?"
-                    
-                    ava @ say "Of course!!!"
-                    
-                    n "Hook line and sinker. It's that easy."
-                    n "Ava leans on you as you walk around town, wandering through photo galleries and museum halls full of paintings and statues."
-                    n "She laughs at your dumb jokes and, it might just be your imagination but it seems as if she looks into your eyes longingly."
-                    n "Evening comes and you have to part ways but you get the feeling she'd love to do this again sometime."
+            player "Yeah, she's like a hobo begging for spare change. I kinda felt bad for her."
             
-            stop channel1 fadeout 1.0
-            stop music fadeout 1.5
-   
+            n "Ava cracks the tiniest of smiles. Whatever you're doing is working."
+            
+            ava @ say "I guess it's actually kinda pitiful."
+            ava @ say "I mean, can you imagine me out on the streets trying to sell photo prints?"
+            
+            player "No, you're a *real* artist. You're not in it for the quarters and dimes, you make *art* for the sake of expression."
+            
+            ava @ say "Exactly! It's so sad how few people realize that!"
+            
+            player "It's such a struggle. Only smart people can truly understand what true art means."
+            
+            ava @ say "Finally, someone who gets it!"
+            
+            player "Wanna go check out the art exhibits around town with me?"
+            
+            ava @ say "Of course!!!"
+            
+            n "Hook line and sinker. It's that easy."
+            n "Ava leans on you as you walk around town, wandering through photo galleries and museum halls full of paintings and statues."
+            n "She laughs at your dumb jokes and, it might just be your imagination but it seems as if she looks into your eyes longingly."
+            n "Evening comes and you have to part ways but you get the feeling she'd love to do this again sometime."
+    
+    stop channel1 fadeout 1.0
+    stop music fadeout 1.5
+
     return
 
 label celestineTown:
