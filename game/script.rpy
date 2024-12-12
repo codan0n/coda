@@ -183,6 +183,7 @@ define y_mishka = 1550
 define y_roth = 1750
 define y_nicodemus = 1550
 define y_trish = 1300
+define y_fortune = 1100
 
 
 #old mishka text color a4cffc
@@ -1720,6 +1721,9 @@ layeredimage fortune:
     always:
         'images/characters/fortune.png'
     group saying:
+        xzoom .8
+        yzoom .72
+        pos (105,69)
         attribute say:
             "images/bubble.png"
             
@@ -2802,6 +2806,106 @@ layeredimage rori pantsless:
 
 
 
+layeredimage rose jacket fistsclenched angry:
+    at sprite_highlight('rose')
+    always:
+        'images/characters/rose/rose jacket fistsclenched angry.png'
+    group saying:
+        xzoom -.9
+        yzoom .9
+        pos (625,-62)
+        attribute say:
+            "images/bubble.png"
+layeredimage rose jacket handonhip furious:
+    at sprite_highlight('rose')
+    always:
+        'images/characters/rose/rose jacket handonhip furious.png'
+    group saying:
+        xzoom -.9
+        yzoom .9
+        pos (625,-62)
+        attribute say:
+            "images/bubble.png"
+layeredimage rose jacket fistsclenched angry knife:
+    at sprite_highlight('rose')
+    always:
+        'images/characters/rose/rose jacket fistsclenched angry knife.png'
+    group saying:
+        xzoom -.9
+        yzoom .9
+        pos (625,-62)
+        attribute say:
+            "images/bubble.png"
+layeredimage rose jacket handonhip dismissive:
+    at sprite_highlight('rose')
+    always:
+        'images/characters/rose/rose jacket handonhip dismissive.png'
+    group saying:
+        xzoom -.9
+        yzoom .9
+        pos (625,-62)
+        attribute say:
+            "images/bubble.png"
+layeredimage rose jacket fistsclenched annoyed:
+    at sprite_highlight('rose')
+    always:
+        'images/characters/rose/rose jacket fistsclenched annoyed.png'
+    group saying:
+        xzoom -.9
+        yzoom .9
+        pos (625,-62)
+        attribute say:
+            "images/bubble.png"
+layeredimage rose jacket handonhip shy:
+    at sprite_highlight('rose')
+    always:
+        'images/characters/rose/rose jacket handonhip shy.png'
+    group saying:
+        xzoom -.9
+        yzoom .9
+        pos (625,-62)
+        attribute say:
+            "images/bubble.png"
+layeredimage rose jacket handonhip annoyed:
+    at sprite_highlight('rose')
+    always:
+        'images/characters/rose/rose jacket handonhip annoyed.png'
+    group saying:
+        xzoom -.9
+        yzoom .9
+        pos (625,-62)
+        attribute say:
+            "images/bubble.png"
+layeredimage rose jacket armscrossed dismissive:
+    at sprite_highlight('rose')
+    always:
+        'images/characters/rose/rose jacket armscrossed dismissive.png'
+    group saying:
+        xzoom -.9
+        yzoom .9
+        pos (625,-62)
+        attribute say:
+            "images/bubble.png"
+layeredimage rose jacket armscrossed furious:
+    at sprite_highlight('rose')
+    always:
+        'images/characters/rose/rose jacket armscrossed furious.png'
+    group saying:
+        xzoom -.9
+        yzoom .9
+        pos (625,-62)
+        attribute say:
+            "images/bubble.png"
+layeredimage rose jacket handonhip growling:
+    at sprite_highlight('rose')
+    always:
+        'images/characters/rose/rose jacket handonhip growling.png'
+    group saying:
+        xzoom -.9
+        yzoom .9
+        pos (625,-62)
+        attribute say:
+            "images/bubble.png"
 layeredimage rose skirt handonhip dismissive pendant:
     at sprite_highlight('rose')
     always:

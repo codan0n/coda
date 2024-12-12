@@ -2293,13 +2293,16 @@ label liberation_day:
         
         n "A moment later a semi truck speeds through the street, right where you had stepped foot a mere fraction of a second ago."
         
-        show rose angry at center with dissolve
+        show rose jacket handonhip growling at center with dissolve:
+            ypos y_rose
 
-        rose @ say "How dumb are you? You would have been dead if I didn't just save your ass!"
+        rose @ say "How dumb are you? You'd be dead if I didn't just save your ass!"
 
         player "Wha?"
 
         n "You blink, dumbstruck as your brain replays everything that just happened in slow motion."
+        
+        show rose jacket armscrossed furious
 
         rose @ say "Didn't you ever learn to look both ways before crossing?"
 
@@ -2310,7 +2313,7 @@ label liberation_day:
 
         player "How the...? I was sure I looked before I crossed!"
 
-        show rose unimpressed
+        show rose jacket armscrossed dismissive
 
         rose @ say "Ugh, where's your wrangler when you need them?"
 
@@ -2323,20 +2326,24 @@ label liberation_day:
         rose @ say "Ended an hour ago."
 
         player "I figured. I just wanna go home now."
+        
+        show rose jacket handonhip annoyed
 
         rose @ say "*sigh*"
         rose @ say "I know natural selection wants you dead, but letting my project partner die on the streets might affect my grade so..."
         rose @ say "I guess I'm walking you home."
 
         player "I can walk myself home."
+        
+        show rose jacket handonhip shy
 
         rose @ say "You sure? Cause you were going the wrong way. The university is this way."
 
         player "Fine, if you really wanna take me home so bad you can."
 
-        show rose armscrossed angry
+        show rose jacket fistsclenched annoyed
 
-        rose @ say "I don't want to walk you home but you obviously can't be trusted to do anything on your own!"
+        rose @ say "I don't *want* to walk you home but you obviously can't be trusted to do anything on your own!"
 
         player "Whatever, just lead the way."
 
@@ -2349,30 +2356,38 @@ label liberation_day:
         n "He turns around and looks down at you and Rose."
 
         show fortune at center with dissolve:
-            xpos 300
+            xoffset -450
+            xzoom -1
+            ypos y_fortune
 
         fortune @ say "I've been expecting you."
 
         player "Huh? Who are you?"
 
-        show rose neutral at center with dissolve:
+        show rose jacket handonhip dismissive at center with dissolve:
             xzoom -1
-            xpos -300
+            xoffset 420
+            ypos y_rose
 
         rose @ say "He's just some homeless guy."
         rose @ say "Move. You're in the way."
         
         show rose:
-            linear .5 xpos -150    
-        pause .1
+            linear .5 xoffset -150    
+        pause .08
         show fortune with move:
-            xpos 450
+            xoffset -550
+            
+        pause .1
+        
+        show rose with move:
+            xoffset 150
 
         n "Rose tries to walk around him but he steps in her path."
 
         fortune @ say "Homeless I am not. The world is my home."
         
-        show rose unimpressed
+        show rose jacket handonhip growling
 
         rose @ say "Even worse than homeless, this guy's a hippie."
         #Oh he's worse than I thought, he's a hippie."
@@ -2380,31 +2395,27 @@ label liberation_day:
         n "Rose tries once more to maneuver around him, but it's almost like he knows which direction she'll go before she does."
         
         show rose:
-            linear .4 xpos -250    
+            linear .4 xoffset -250    
         pause .1
         show fortune with move:
-            xpos 350
+            xoffset -659
             
         pause .3
         
         show rose:
-            linear .5 xpos -100    
+            linear .5 xoffset 200
         pause .1
         show fortune with move:
-            xpos 500
+            xoffset -450
         
-        show rose angry
+        show rose jacket handonhip furious
 
         rose @ say "Get out of the way!"
 
         #rose @ say "You're starting to piss me off. Move or you'll regret it!"
         
-        show rose roseknife
+        show rose jacket fistsclenched angry knife
         
-        show rose:
-            ypos 15
-            linear .15 ypos 0
-
         n "Rose pulls something out from her pocket out of view of the hobo and holds it concealed in her clenched fist."
         n "Is that a... knife?"
 
@@ -2419,26 +2430,21 @@ label liberation_day:
         fortune @ say "You may decline to hear your fortune if you wish, but it will reach you one way or another, sooner or later."
         #fortune teller gives rose a false fortune, knowing that she doesn't pay?
         
-        show rose unimpressed
+        show rose armscrossed dismissive
 
         rose @ say "I'll decline your \'fortune\' thank you."
-
-        show rose neutral
-
         rose @ say "Come on, [name], I'm not sticking around."
-        
-        show rose:
-            ypos 15
-            xzoom 1
-            linear .15 ypos 0
-        
-        pause .33
-        
-        show rose with move:
-            xpos -450
 
         n "Rose starts to walk across the street to the other sidewalk."
-
+        
+        pause .1
+        
+        show rose:
+            xoffset -600
+        show fortune:
+            xoffset 160
+        with move
+         
         $ gnugift = False
 
         menu:
@@ -2446,10 +2452,7 @@ label liberation_day:
             "Aw come on, I wanna hear my fortune!":
                 player "Aw come on, I at least wanna hear my fortune!"
                 
-                show rose:
-                    ypos 15
-                    xzoom -1
-                    linear .15 ypos 0
+                show rose handonhip annoyed at flipleft
 
                 rose @ say "Why? He's just gonna make up some bullshit."
                 rose @ say "Here's my fortune: I'm gonna walk back to campus without you and you'll get hit by a car and die."
@@ -2465,10 +2468,14 @@ label liberation_day:
                 player "Wait, so I'm not dying?"
 
                 fortune @ say "Not yet."
+                
+                show rose dismissive
 
                 rose @ say "Could you be any more vague?"
 
                 player "Rose, this guy might be legit! He knew my name and I didn't even tell him!"
+                
+                show rose fistsclenched angry
 
                 rose @ say "He probably just overheard me saying it!"
 
@@ -2482,7 +2489,7 @@ label liberation_day:
 
                 fortune @ say "Perhaps your destiny is related to [name]'s? Unfortunately, I cannot give definitive answers for such people."
 
-                show rose neutral
+                show rose armscrossed dismissive
 
                 rose @ say "What a great fortune teller you are."
                 rose @ say "Now if you're done, we'll be on our way."
@@ -2498,15 +2505,17 @@ label liberation_day:
                 
                 n "A nearby truck drives by and honks it's horn, cutting off the end of Rose's sentence before she walks off."
                 
-                show rose:
-                    ypos 15
-                    xzoom 1
-                    linear .15 ypos 0
+                show rose at flipright
                     
                 pause .2
 
                 show rose with move:
-                    xpos -1500
+                    xoffset -1500
+                    
+                pause .1
+                
+                show fortune with move:
+                    xoffset 0
 
                 #n "Rose waits for an opening in traffic and crosses the street."
 
@@ -2571,6 +2580,13 @@ label liberation_day:
                 
             "Yeah, let's bail":
                 player "Yeah, let's get away from this weirdo."
+                
+                rose @ say "Come on, hurry up."
+                
+                pause .1
+                
+                show rose with move:
+                    xoffset -1800
 
                 fortune @ say "As you wish. I won't keep you from your fate any longer."
 
