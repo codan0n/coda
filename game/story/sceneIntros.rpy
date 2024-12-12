@@ -147,6 +147,11 @@ label gardenIntro:
     $ gardenDiscovered = True
     $ afterClassExploration.remove("gardenIntro")
     
+    scene bg garden with fade
+    
+    show box with Dissolve(.2):
+        ypos 0
+    
     n "Along one edge of campus lies a botanical garden where a variety of flowers, bushes and trees surround the intertwining paths like a labrynth."
     
     if avaClaireGarden == True:

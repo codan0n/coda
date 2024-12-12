@@ -2014,6 +2014,16 @@ layeredimage mishka tired happy:
         pos (-70,-7)
         attribute say:
             "images/bubble.png"
+layeredimage mishka nervous sad:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka nervous sad.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
 layeredimage mishka nervous2:
     at sprite_highlight('mishka')
     always:
@@ -3011,11 +3021,11 @@ label start:
     $ hisher = ""
     $ himher = ""
     
-    $ forestDiscovered = False
-    $ libraryDiscovered = False
-    $ gardenDiscovered = False
-    $ trackDiscovered = False
-    $ townDiscovered = False
+    $ forestDiscovered = True ###TEMPORARILY SET TO TRUE FOR THE DEMO
+    $ libraryDiscovered = True ###TEMPORARILY SET TO TRUE FOR THE DEMO
+    $ gardenDiscovered = True ###TEMPORARILY SET TO TRUE FOR THE DEMO
+    $ trackDiscovered = True ###TEMPORARILY SET TO TRUE FOR THE DEMO
+    $ townDiscovered = True ###TEMPORARILY SET TO TRUE FOR THE DEMO
     $ avaClaireLunch = False
     $ clairephonewhat = False
     $ clairephonethx = False

@@ -345,6 +345,8 @@ label week2Tuesday:
             n "So you just stand there, looking around aimlessly and giving polite smiles whenever your eyes meet."
             n "To your credit, Mishka also seems to be in the same akward state of not know what to do or say."
             
+            show mishka anxious neutral -
+            
             mishka @ say "Well it was nice standing here with you."
             mishka @ say "I have to return to work now but maybe we can do this again sometime?"
             

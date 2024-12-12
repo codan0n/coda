@@ -237,7 +237,12 @@ label mishkaGarden:
     
     mishka @ say "Hm?"
     mishka @ say "Oh, it's you."
+    
+    show mishka anxious tongueout wink left
+    
     mishka @ say "Please be careful, the roses bite."
+    
+    show mishka neutral -anxious -wink -left -tongueout
     
     n "She comes over and snips the stem for you. You pull it out of your skin and toss it aside."
     
@@ -247,11 +252,21 @@ label mishkaGarden:
     
     player "Is this like, part of your cafe responsibilities?"
     
+    show mishka nervous sad
+    
     mishka @ say "What? No!"
+    
+    show mishka happy
+    
     mishka @ say "I do this for enjoyment."
+    
+    show mishka nervous2 -
+    
     mishka @ say "The garden is managed by volunteers. It won't look as pretty if no one comes to help, so I do what I can."
     
     player "Must have a lot of volunteers then. This place is huge!"
+    
+    show mishka tired happy
     
     "Mishka shrugs."
     
@@ -259,30 +274,46 @@ label mishkaGarden:
     
     n "She steps back and looks at the field of trimmed roses and their fallen stems lying in the dirt."
     
+    show mishka neutral -
+    
     mishka @ say "And now to clean up this mess."
     
     n "Mishka begins picking up the debris with a gloved hand, piece by piece tossing them into a sack."
     
     menu:
+        n "{cps=0}Mishka begins picking up the debris with a gloved hand, piece by piece tossing them into a sack.{/cps}"
         "Offer to help":
-            "This is a lot for one person. If she can do it, so can you."
-            "You carefully pick up some rose stems from the ground, trying not to let their thorns dig into your supple flesh."
+            n "This is a lot for one person. If she can do it, so can you."
+            n "You carefully pick up some rose stems from the ground, trying not to let their thorns dig into your supple flesh."
+            
+            show mishka nervous
             
             mishka @ say "What are you doing?"
             
             player "Isn't it obvious? I'm helping clean up this area."
             player "You said it was all volunteer work, right?"
             
+            show mishka happy
+            
             "Mishka's surprise fades away into a soft smile."
             
             mishka @ say "At least let me get you some gloves so you don't get pricked!"
             
+            hide mishka with dissolve
+            
             "The rat runs off to a shed to fetch supplies for you."
             "When she comes back, she hands you a pair of gloves and a sack to toss the stems into."
             
+            show mishka happy at center with dissolve:
+                ypos y_mishka
+            
             mishka @ say "There you go! Now you're officially a volunteer too haha!"
             
+            show mishka neutral wink left
+            
             player "At least for today."
+            
+            show mishka neutral -wink -left
             
             n "The two of you make good time going along and picking up the debris."
             n "The thorns stick out through the fabric of the bag so you still have to be careful not to let it bump into you."
@@ -291,19 +322,28 @@ label mishkaGarden:
             
             mishka @ say "Yes. I plant them every spring."
             mishka @ say "I hate having to prune them in the summer but if I don't, they grow unruly."
+            
+            show mishka sad
+            
             mishka @ say "...And it's a lot of work."
+            
+            show mishka tired happy
             
             player "I can imagine..."
             
             n "After cleaning up, the two of you admire the scenery. The rose bushes look nice with their new haircut."
       
-            show mishka happy
+            show mishka happy -tired
             
             mishka @ say "Thanks for helping! I would have been out here all day if not for you!"
             
             player "I figured. I couldn't just let you do it all on your own."
             
+            show mishka neutral wink right
+            
             mishka @ say "Consider your next coffee free hehe~"
+            
+            show mishka neutral -wink -right
             
             player "I guess volunteer work does pay after all!"
             
@@ -311,10 +351,17 @@ label mishkaGarden:
             
             player "Yeah, it was nice seeing you too. I had no idea you did this sort of thing."
             
+            show mishka neutral tongueout
+            
             mishka @ say "Well now you know haha!"
+            
+            show mishka nervous
+            
             mishka @ say "I'm here a lot actually..."
             
             player "Maybe I'll see you here and help out again."
+            
+            show mishka anxious tongueout wink left
             
             mishka @ say "That would be great! The garden always needs more volunteers!"
             mishka @ say "See you around!"
@@ -327,22 +374,34 @@ label mishkaGarden:
             "It's getting dark out. You should probably head back to your dorm."
             
         "You'll just get in the way":
-            "Not like you can help her anyway. Not without a pair of gloves."
-            "Instead you awkwardly stand around, trying to think of something to say and not just stare at her while she works."
+            n "Not like you can help her anyway. Not without a pair of gloves."
+            n "Instead you awkwardly stand around, trying to think of something to say and not just stare at her while she works."
     
             player "Sure are a lot of roses, huh?"
             
             mishka @ say "Yes. I plant them every spring."
             mishka @ say "I hate having to prune them in the summer but if I don't, they grow unruly."
+            
+            show mishka sad
+            
             mishka @ say "...And it's a lot of work."
+            
+            show mishka tired happy
             
             player "Well I don't wanna get in your way. I'll leave you to it then."
             player "It's a very nice garden by the way!"
             
+            show mishka happy -tired
+            
             mishka @ say "Thanks~"
+            
+            show mishka anxious tongueout wink left
+            
             mishka @ say "I try to make it better."
             
             player "You're doing a great job. See you at the cafe later, Mishka!"
+            
+            show mishka neutral -wink -left -tongueout -anxious
             
             mishka @ say "See you!"
             
@@ -412,35 +471,49 @@ label gunnerTrack:
     show gunner neutral at center with dissolve:
         ypos y_gunner
     
-    gunner "Sup! I didn't expect to see you here!"
+    gunner @ say "Sup! I didn't expect to see you here!"
     
     player "What's that supposed to mean?"
     
-    gunner "Nothin.\'"
-    gunner "You here to get swoll?"
+    show gunner eyesclosed catface
+    
+    gunner @ say "Nothin.\'"
+    
+    show gunner motivated
+    
+    gunner @ say "You here to get swoll?"
     
     "He flexes his slender bicep as if to accentuate his point."
     
     player "Man, how were you lifting that with those skinny arms? 1 big plate on each side? That's what, 150 pounds?"
     
-    gunner "Raw strength isn't everything, there's actually a lot of technique that goes into it!"
-    gunner "Lemme show you."
+    show gunner neutral
+    
+    gunner @ say "Raw strength isn't everything, there's actually a lot of technique that goes into it!"
+    gunner @ say "Lemme show you."
     
     n "Gunner leans back and plants his feet firmly on the ground on either sides of the bench. A motivated look covers his face as he adjusts the positions of his grip down to the millimeter and takes a few deep breaths."
     n "His body tenses up and his fur stands on end moments before he arches his back and pushes that bar upward with a grunt, smooth and steady like a rocket ascending."
     
-    gunner "See? Easy!"
+    gunner @ say "See? Easy!"
     
     n "He gently places the bar back on the rack and slides out from under it."
     
-    gunner "Your turn! Show me what you've got!"
+    show gunner motivated
+    
+    gunner @ say "Your turn! Show me what you've got!"
     
     menu:
+        gunner "{cps=0}Your turn! Show me what you've got!{/cps}"
         "I haven't even stretched yet!":
             player "Wha? I haven't even stretched yet!"
             
-            gunner "Psh, excuses excuses."
-            gunner "Go on then, do your stretches."
+            show gunner snoring
+            
+            gunner @ say "Psh, excuses excuses."
+            gunner @ say "Go on then, do your stretches."
+            
+            show gunner neutral
             
             player "Right. My stretches. That I totally know how to do."
             
@@ -449,39 +522,58 @@ label gunnerTrack:
             n "Let's just get this over with quickly. You bend at your waist and try touching your toes with your fingertips."
             n "Almost... almost... Come on, they're right there!"
             
-            gunner "Dude, what are you doing?"
+            show gunner frown1
+            
+            gunner @ say "Dude, what are you doing?"
             
             player "Uh, touching my toes? Is that a stretch?"
             
-            gunner "What part of bench pressing involves stretching like that?"
+            show gunner disgusted
+            
+            gunner @ say "What part of bench pressing involves stretching like that?"
             
             player "...Getting up at the end?"
             
-            gunner "*Sigh*"
-            gunner "You're clearly new to this. Come on, lemme show you some warm up stretches."
+            show gunner itsover
+            
+            gunner @ say "*Sigh*"
+            
+            show gunner neutral
+            
+            gunner @ say "You're clearly new to this. Come on, lemme show you some warm up stretches."
             
             n "Gunner takes you to a different area out of the way of others and gets you started on some of the basics."
             n "Obviously his feline body is able to contort itself better than yours but at least you learn a few things."
             n "Your muscles come to life with increased blood flow and you feel energized enough to lift something heavy."
             n "Returning to the bench press, you actually manage to knock out a solid number of reps... after taking half the weights off of course."
             
-            gunner "Whoa! Color me impressed!"
+            show gunner cheeky1
+            
+            gunner @ say "Whoa! Color me impressed!"
             
             n "You rack the barbell and sit up, panting."
+            
+            show gunner neutral
             
             player "Hey that was... kinda fun?"
             player "Lemme do it again!"
             
-            gunner "That's the spirit!"
+            show gunner determined
+            
+            gunner @ say "That's the spirit!"
             
             n "You and Gunner take turns lifting until you're both worn out."
             
-            gunner "Whew, how about we call it a day? I'm beat."
+            show gunner neutral
+            
+            gunner @ say "Whew, how about we call it a day? I'm beat."
             
             player "Yeah, that's enough for today. I'm gonna be sore all week."
             player "How long until I start seeing some gains?"
             
         "Try to lift it":
+            hide gunner with dissolve
+        
             n "How hard can it be? You just have to go beast mode and lift some plates, no big deal."
             n "You get underneath the bar, lining it up at about shoulder level then gripping the cold metal that doesn't budge at all as you adjust your grasp on it."
             n "Alright, here goes... You push upwards, feeling the force of the weights dig into your hands, yet they refuse to move."
@@ -490,21 +582,36 @@ label gunnerTrack:
             n "And now that it's away from the guards, you notice you used all your strength getting into this position."
             n "The bar begins to sink towards your chest. Gunner cheers you on, seemingly unaware that you are losing this fight against gravity."
             
-            gunner "That's it! Down then up! Up! Don't you know which way up is?"
+            show gunner neutral at center with dissolve:
+                ypos y_gunner
+            
+            gunner @ say "That's it! Down then up! Up!!"
+            
+            show gunner frown1
+            
+            gunner @ say "Don't you know which way up is?"
             
             n "After letting you struggle trying to keep the havy metal from caving your chest in, Gunner decides to lend a helping paw and pull it off you."
             n "You don't feel safe until the barbell is on the rack for a few seconds, then you ease off and let your arms ragdoll down."
             
-            gunner "Jeez dude, you alright? I thought you would have been able to lift that."
+            show gunner disgusted
+            
+            gunner @ say "Jeez dude, you alright? I thought you would have been able to lift that."
+            
+            show gunner frown1
             
             player "I did too. Is that a bit much for a total noob?"
             
-            gunner "This your first time?"
-            gunner "Yeahhhh we should have started you off on some smaller plates."
+            show gunner uncomfy
+            
+            gunner @ say "This your first time?"
+            gunner @ say "Yeahhhh we should have started you off on some smaller plates."
             
             player "I think I'm done for today."
             
-            gunner "No problem, we'll get you off to a better start next time."
+            show gunner neutral
+            
+            gunner @ say "No problem, we'll get you off to a better start next time."
             
             player "How long until I start seeing some gains?"
             
@@ -515,7 +622,11 @@ label gunnerTrack:
             n "You gradually apply force to it and at some point it suddenly rises off the rack."
             n "It's actually not that hard just keeping it in the air with your arms extended like this."
             
-            gunner "Well? Do a few reps already!"
+            show gunner charming
+            
+            gunner @ say "Well? Do a few reps already!"
+            
+            show gunner neutral
             
             n "Oh right, you actually have to move the barbell to get those gains."
             n "Your arms begin to shake as you ease it down to your chest. With some effort, you manage to push it all the way back up again."
@@ -524,32 +635,42 @@ label gunnerTrack:
             
             player "Hah...hah... how's that?"
             
-            gunner "Not bad... for a start."
-            gunner "Go drink some water then come back for another set."
+            show gunner cheeky1
+            
+            gunner @ say "Not bad... for a start."
+            gunner @ say "Go drink some water then come back for another set."
+            
+            show gunner neutral
             
             n "What?! You have to do it again?? Is he trying to kill you?"
             n "After a rest, you go at it again but you don't fare any better than before. In fact you gradually get worse until you can no longer lift the bar at all."
             n "Gunner seems to consider this a success however."
             
-            gunner "Nice going! Feels great, doesn't it?"
+            show gunner determined
+            
+            gunner @ say "Nice going! Feels great, doesn't it?"
             
             player "Is this supposed to make me want to kill myself?"
             
-            gunner "Only until you start seeing some gains."
+            show gunner eyesclosed smile
+            
+            gunner @ say "Only until you start seeing some gains."
         
             player "And how long will that take?"
             
-    gunner "A couple months."
+    show gunner neutral
+            
+    gunner @ say "A couple months."
     
     player "Oh my fucking god."
     
-    gunner "You should stick with it! You won't regret it!"
+    gunner @ say "You should stick with it! You won't regret it!"
     
     player "Ugh. I can't promise I'll be here every day, just when I have nothing better to do."
     
-    gunner "Yay!!!"
-    gunner "I'm so glad to have a new workout buddy!"
-    gunner "Let's do some cooldown stretches then go get something to eat!"
+    gunner @ say "Yay!!!"
+    gunner @ say "I'm so glad to have a new workout buddy!"
+    gunner @ say "Let's do some cooldown stretches then go get something to eat!"
     
     hide gunner with dissolve
     
@@ -689,10 +810,10 @@ label linaTown:
             #lina @ say "I'll try! It was nice to finally hear your voice!"
             lina @ say "I'll try!"
             
-            n "You should give her a tip."
+            n "Should you give her a tip?"
             
             menu:
-                n "{cps=0}You should give her a tip.{/cps}"
+                n "{cps=0}Should you give her a tip?{/cps}"
                 "Tip $5":
                     n "You pull a 5 dollar bill from your wallet and drop it in her case."
                     
@@ -703,6 +824,18 @@ label linaTown:
                     n "You drop a 20 in her case and watch her eyes light up."
                     
                     lina @ say "Ohmygosh thanks!~"
+                "Let the intrusive thoughts win":
+                    hide lina with dissolve
+                
+                    n "You crouch down to the saxophone case and reach into your wallet to make it look like you're going to drop in a bill."
+                    n "But before she can react, you snatch a handful of bills and start walking away."
+                    n "How devilish of you, but not devilish enough. You need to go further."
+                    n "See that pin on her hoodie? You don't even recognize the colors but you can be assured it's probably pretty gay."
+                    n "You should let her know how gay she looks."
+                    
+                    player "Thanks for the cash, feathermuncher."
+                    
+                    n "She stands there dumbstruck, too demotivated to even get angry at you."
                     
             stop sound fadeout 1.0
             
@@ -732,6 +865,18 @@ label linaTown:
                     n "You drop a 20 in her case and watch her eyes light up."
                     
                     lina @ say "Ohmygosh thanks!~"
+                "Let the intrusive thoughts win":
+                    hide lina with dissolve
+                
+                    n "You crouch down to the saxophone case and reach into your wallet to make it look like you're going to drop in a bill."
+                    n "But before she can react, you snatch a handful of bills and start walking away."
+                    n "How devilish of you, but not devilish enough. You need to go further."
+                    n "See that pin on her hoodie? You don't even recognize the colors but you can be assured it's probably pretty gay."
+                    n "You should let her know how gay she looks."
+                    
+                    player "Thanks for the cash, feathermuncher."
+                    
+                    n "She stands there dumbstruck, too demotivated to even get angry at you."
                     
             stop sound fadeout 1.0
             
