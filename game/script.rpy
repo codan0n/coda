@@ -1998,6 +1998,16 @@ layeredimage mere neutral:
 
             
             
+layeredimage mishka anxious sad:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka anxious sad.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
 layeredimage mishka anxious smile:
     at sprite_highlight('mishka')
     always:

@@ -4100,7 +4100,7 @@ label ellen_feeding_ducks:
     
     n "Now you can do something with your free time."
     
-    call afterClassOptions
+    call afterClassOptions from _call_afterClassOptions_1
 
     hide box
 
@@ -4381,7 +4381,7 @@ label ellen_feeding_ducks:
     
     n "What should you do with your free time?"
     
-    call afterClassOptions
+    call afterClassOptions from _call_afterClassOptions_2
                 
     scene bg black with fade
 

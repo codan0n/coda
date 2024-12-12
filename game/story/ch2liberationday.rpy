@@ -2649,7 +2649,7 @@ label liberation_day:
             
             n "She jumps, startled by your sudden appearance."
             
-            show mishka neutral at center with dissolve:
+            show mishka anxious neutral at center with dissolve:
                 ypos y_mishka
                 
             mishka @ say "Oh! [name] it's just you."
@@ -2687,24 +2687,36 @@ label liberation_day:
             
             n "She jumps, startled by your sudden appearance."
             
-            show mishka neutral at center with dissolve:
+            show mishka anxious neutral at center with dissolve:
                 ypos y_mishka
                 
             mishka @ say "Oh! [name] it's just you."
+            
+            show mishka nervous
+            
             mishka @ say "Sorry, I'm kinda nervous. There's so many people and it's noisy and the lighting is kinda harsh and-"
 
             player "Didn't think I'd see you here. You meeting up with someone?"
             
+            show mishka happy -nervous -anxious
+            
             mishka @ say "No, I just came here on a whim today."
+            
+            show mishka neutral
+            
             mishka @ say "I don't know why, the thought just popped into my head to try going to a mall. It's my first time at one!"
         
             player "In that case, wanna explore with me?"
             
             n "She stands up."
             
+            show mishka happy
+            
             mishka @ say "Dah!!"
             
             n "She walks along side you, the both of you constantly swiveling your heads to look into the colorful stores."
+            
+        show mishka nervous
             
         mishka @ say "I don't think I understand what the point of the mall is."
         
@@ -2712,15 +2724,21 @@ label liberation_day:
         
         player "It's just a bunch of novelty stores. You're supposed to look around and buy whatever you think is interesting."
         
+        show mishka despondent
+        
         mishka @ say "You don't know what you want beforehand?"
         
         player "Nope. That's the fun of it. It's like an amusement park but for consumerism."
+        
+        show mishka neutral
         
         n "Mishka nods thoughtfully."
         
         mishka @ say "I see."
         
         player "See anywhere you wanna go?"
+        
+        show mishka anxious smile
         
         mishka @ say "Umm... it's very hard to pick one because I'm not sure what I'm looking for..."
         
@@ -2730,16 +2748,25 @@ label liberation_day:
         n "There's an electronics store nearby that might have some interesting gadgets."
         n "You point to it."
         
+        show mishka anxious neutral
+        
         player "That one?"
         
         n "Mishka sticks her head out and looks it over."
         
+        show mishka happy
+        
         mishka @ say "Sure!"
+        
+        hide mishka with dissolve
         
         n "Inside you find a pretty random assortment of objects, with the only unifying theme being that they all consume electricity."
         n "There's massage chairs, digital clocks, speakers, remote controlled cars and helicopters, turntables, fake fireplaces, electronic notepads, and so on."
         n "Most of it is impractical and overpriced junk but Mishka seems to have taken an interest in the RC vehicles."
         n "They're set up so you can play around with a demo unit in the store but she's having difficulty with the controls."
+        
+        show mishka anxious sad at center with dissolve:
+            ypos y_mishka
         
         mishka @ say "I don't think I'm doing it right."
         
@@ -2747,11 +2774,18 @@ label liberation_day:
         
         player "Maybe you have to hold a button while pushing the stick up?"
         
+        #show mishka tired happy
+        
         n "You reach over and press a button while Mishka fiddles with the control stick."
         n "Suddenly the vehicle lurches backward, crashing into a stack of boxes and toppling them all to the floor."
         n "Must have been the turbo button."
+        
+        show mishka depressed
+        
         n "Mishka looks shocked and freezes up."
         n "You take the controller from her and set it on a shelf, then quickly guide her out of the store before the staff can figure out it was you who knocked over the display."
+        
+        show mishka neutral
         
         player "Ok haha looks like it's broken, come on let's go."
         
@@ -2763,22 +2797,31 @@ label liberation_day:
         
         n "When you turn the corner, Mishka gasps and giddily points ahead at a dazzling display of lights."
         
+        show mishka at hop
+        
         mishka @ say "Look! Do you see it??"
         
         n "How could you not? There's a massive carousel taking up your field of view."
         n "The plastic horses stare at you with malice."
         
         menu:
+            n "{cps=0}The plastic horses stare at you with malice.{/cps}"
             "Do you wanna ride it?":
                 n "You're going to feel silly doing this as an adult but..."
                 
                 player "Do you uh, wanna ride it?"
                 
+                show mishka anxious tongueout wink left
+                
                 mishka @ say "You can do that???"
                 
                 player "Yeah, it's not just for show."
                 
-                mishka @ say "Let's go!!"
+                show mishka happy tongueout
+                
+                mishka @ say "Then let's go!!"
+                
+                hide mishka with dissolve
                 
                 n "Mishka can hardly contain her excitement as you pay the operator and step onto the platform."
                 n "You help her onto one of the mounts, then take one for yourself."
@@ -2791,13 +2834,19 @@ label liberation_day:
             "This thing scares you":
                 n "Something about the way the horses are impaled on rods and painted to look like jolly parade ornaments disturbs you."
                 
+                show mishka happy
+                
                 mishka @ say "Look! It says we can ride on them!"
                 
                 player "I-it's probably really expensive..."
                 
+                show mishka neutral
+                                
                 mishka @ say "Not really! The sign says couples can ride for just five dollars!"
                 
                 player "Yeah but we're not really a couple so..."
+                
+                show mishka neutral wink left
                 
                 mishka @ say "The operator doesn't know that! Come on, I'll pay for us!"
                 
@@ -2812,14 +2861,18 @@ label liberation_day:
                 n "As the ride goes on, you start to relax and get used to it. Even enjoy it a little."
                 n "By the time it ends, you're a bit dizzy but wish it had gone on just a while longer."
                 
-        show mishka neutral at center with dissolve:
+        show mishka derp at center with dissolve:
             ypos y_mishka
             
         n "You both step off the platform and have trouble walking in a straight line."
         n "Mishka stumbles around and falls into your arms."
         
+        show mishka anxious wink right
+        
         mishka @ say "That was so much fun!!"
         mishka @ say "Thanks for coming along with me!"
+        
+        show mishka neutral -anxious -wink -right
         
         player "Heh, I haven't been on one of these in ages."
         player "I forgot how dizzying they are."
@@ -2827,6 +2880,8 @@ label liberation_day:
         n "You take a step forward and feel the world tilt underneath you."
         
         player "Let's sit down for a bit."
+        
+        show mishka happy
         
         mishka @ say "Hehe good idea~"
         
@@ -2846,10 +2901,17 @@ label liberation_day:
         
         mishka @ say "Mmh, I don't think so~"
         mishka @ say "I enjoyed our time here but I think we've seen it all!"
+        
+        show mishka anxious tongueout wink left
+        
         mishka @ say "We should go somewhere else next time!"
+        
+        show mishka anxious neutral
         
         player "We'll find some place."
         player "This was a lot of fun but maybe we can find a more chill place next time."
+        
+        show mishka at hop
         
         mishka @ say "Mhm!"
         

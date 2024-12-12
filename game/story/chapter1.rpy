@@ -5412,165 +5412,171 @@ label sunday2:
     
     n "You mumble a thanks and she returns to her counter where she inspects her potted plants, checking the moisture levels in the soil."
     n "Sitting up, you blow on the steaming hot surface and take little sips brief enough to avoid scalding your tongue."
-    n "At some point, someone comes into the shop and orders a drink. A rabbit with pink fur and headphones around her(?) neck sits across from you and plugs her(??) laptop into a socket."
-    n "You're not looking at any particular thing, but the laptop is within your field of view and you happen to notice she(???) opens some program that's full of strange graphs, bars, sliders and dials."
-    n "Looks like a music production application."
-    n "You rub your temple and sip more of your coffee. You can't tell if it's helping."
-    n "Mishka delivers a paper coffee cup to the rabbit, who promptly removes the lid and cracks open a Blu Bull to pour into it."
-    n "Followed by a few drops of liquid Adderlol."
-    n "Is this rabbit concocting a suicide potion or something?"
-    n "She looks around for something, twisting around to face you."
+    n "Odd how a stimulant like coffee can be so relaxing."
+    n "Your troubles seem to wash away as you focus on the richness of the drink."
+    n "Sadly, all good things must come to an end and this drink is no different."
     
-    show mere neutral at center with dissolve:
-        ypos y_mere
     
-    ###mere's blip voice is low pitched
-    
-    mere @ say "Mind passing me one of those?"
-    
-    n "She points to a packet of sugar on your table."
-    n "You grab one and hand it over."
-    
-    mere @ say "Thanks."
-    
-    n "She dumps it into her drink and stirs it before taking a sip and shaking her head."
-    
-    mere @ say "...A couple more, please?"
-    
-    n "You mindlessly grab a handful and pass them over."
-    
-    mere @ say "Don't judge me, it helps me concentrate."
-    
-    player "If you can survive drinking that much caffeine and amphetamine, a little sugar should be fine."
-    
-    mere @ say "Exactly!"
-    
-    player "Have you tried just doing coke?"
-    
-    mere @ say "The drink or...?"
-    
-    player "Whichever works."
-    
-    mere @ say "I'm more into energy drinks. Can't write a song without one!"
-    
-    player "Is that what you're doing on your computer now?"
-    
-    mere @ say "Yup! "
-    
-    player "What kind of music do you make?"
-    
-    mere @ say "I mostly do futurefunk and French house stuff, sometimes chillwave."
-    
-    player "I have no idea what those are."
-    
-    mere @ say "You like the song that's playing right now?"
-    
-    player "Yeah, it's pretty catchy."            
-    player "Wait, you mean everyone can hear it? I thought it was just playing in my head!"
-    
-    mere @ say "Yup, it's the cafe theme. It's on the softer side but it's the kind of sound I groove to."
-    mere @ say "I'm the one who composed it btw."
-    
-    player "Wow. It's not every day you meet one of the BGM composers."
-    player "What did you say your name was again?"
-    
-    n "You tilt your head to look at the name written on her coffee cup."
-    
-    player "...Mere?"
-    
-    mere @ say "It's pronounced Mere. It's short for Meredith."
-    
-    player "Nice to meet you Mere~ I'm [name]."
-    
-    mere @ say "Notilde."
-    
-    player "Huh?"
-    
-    mere @ say "No tilde at the end. It's just Mere. Mere Notilde."
-    mere @ say "I know, I hate explaining it."
-    
-    n "Mere rips open a few sugar packets and dumps them into her drink."
-    
-    player "Okay I need to ask cause my internal narration keeps getting confused. Are you a-"
-    
-    mere @ say "I'm a guy lol"
-    
-    player "Okay but the-"
-    
-    mere @ say "Yup, I wear a skirt. It's comfy. And I think it looks cute on me."
-    
-    menu:
-        mere "{cps=0}Yup, I wear a skirt. It's comfy. And I think it looks cute on me.{/cps}"
-        "It *is* cute on you.":
-            $ rosePoints = rosePoints + 1
-            
-            player "It is cute on you."
-            
-            mere @ say "Thanks!"
-            mere @ say "And if your internal narration slips up and calls me a girl from time to time, I don't mind~"
-            
-            n "Oh thank goodness."
-            n "You have a feeling that's going to be happening quite a lot."
-        "No further questions..":
-            player "Well alright then. No further questions."
-    
-            mere @ say "It's a common mistake."
-            mere @ say "I don't really mind if your internal narration slips up and calls me a girl from time to time~"
-            
-            n "You have a feeling that's going to be happening quite a lot."
-        "Boys shouldn't wear skirts":
-            player "Boys shouldn't wear skirts."
-            
-            mere @ say "Why not?"
-            
-            player "Because they're for girls."
-            
-            mere @ say "Says who?"
-            
-            player "Says... society."
-            
-            mere @ say "Which society? The human one? Last I checked, they're on their way out."
-            
-            player "..."
-            player "I just remembered I have to be somewhere."
-            
-            mere @ say "Try not to get struck by lightning."
-            
-            hide mere with dissolve
-            
-            n "Damn furry femboys! Always so smug."
-            n "You storm out of the building, braving the storm outside on your way back to your dorm."
-            
-            jump sunday2Evening
-            
-    
-    mere @ say "Wanna listen to some more of my songs?"
-    
-    player "Sure!"
-    
-    n "You grab a seat right next to his and he passes you the headphones."
-    
-    mere @ say "I call this one Interlewd."
-    
-    hide mere with dissolve
-    
-    n "You spend all afternoon chatting with Mere, listening to music and showing him a few of your favorites as well."
-    n "He even offered you a sip of his caffeinated concoction. It made your hangover disappear instantly but you still regret drinking it."
-    n "You've been twitching every few seconds from the moment you swallowed a drop."
-    n "You hang around for a while until the cafe closes. A bit early but it is Sunday after all. Thankfully the rain has died down at this point."
-    
-    show mere neutral at center with dissolve:
-        ypos y_mere
-    
-    mere @ say "Yoooo check out my {a=https://merenotilde.bandcamp.com/}band{/a}{a=https://soundcloud.com/MERENOTILDE/}cloud{/a} later, k?"
-    
-    player "Totally!"
-    
-    mere @ say "See ya!"
-    
-    hide mere with dissolve
-    
-    n "You wave goodbye to your new friend before heading back to your dorm for the evening."
+    ###unfinished
+    #n "At some point, someone comes into the shop and orders a drink. A rabbit with pink fur and headphones around her(?) neck sits across from you and plugs her(??) laptop into a socket."
+    #n "You're not looking at any particular thing, but the laptop is within your field of view and you happen to notice she(???) opens some program that's full of strange graphs, bars, sliders and dials."
+    #n "Looks like a music production application."
+    #n "You rub your temple and sip more of your coffee. You can't tell if it's helping."
+    #n "Mishka delivers a paper coffee cup to the rabbit, who promptly removes the lid and cracks open a Blu Bull to pour into it."
+    #n "Followed by a few drops of liquid Adderlol."
+    #n "Is this rabbit concocting a suicide potion or something?"
+    #n "She looks around for something, twisting around to face you."
+    #
+    #show mere neutral at center with dissolve:
+    #    ypos y_mere
+    #
+    ####mere's blip voice is low pitched
+    #
+    #mere @ say "Mind passing me one of those?"
+    #
+    #n "She points to a packet of sugar on your table."
+    #n "You grab one and hand it over."
+    #
+    #mere @ say "Thanks."
+    #
+    #n "She dumps it into her drink and stirs it before taking a sip and shaking her head."
+    #
+    #mere @ say "...A couple more, please?"
+    #
+    #n "You mindlessly grab a handful and pass them over."
+    #
+    #mere @ say "Don't judge me, it helps me concentrate."
+    #
+    #player "If you can survive drinking that much caffeine and amphetamine, a little sugar should be fine."
+    #
+    #mere @ say "Exactly!"
+    #
+    #player "Have you tried just doing coke?"
+    #
+    #mere @ say "The drink or...?"
+    #
+    #player "Whichever works."
+    #
+    #mere @ say "I'm more into energy drinks. Can't write a song without one!"
+    #
+    #player "Is that what you're doing on your computer now?"
+    #
+    #mere @ say "Yup! "
+    #
+    #player "What kind of music do you make?"
+    #
+    #mere @ say "I mostly do futurefunk and French house stuff, sometimes chillwave."
+    #
+    #player "I have no idea what those are."
+    #
+    #mere @ say "You like the song that's playing right now?"
+    #
+    #player "Yeah, it's pretty catchy."            
+    #player "Wait, you mean everyone can hear it? I thought it was just playing in my head!"
+    #
+    #mere @ say "Yup, it's the cafe theme. It's on the softer side but it's the kind of sound I groove to."
+    #mere @ say "I'm the one who composed it btw."
+    #
+    #player "Wow. It's not every day you meet one of the BGM composers."
+    #player "What did you say your name was again?"
+    #
+    #n "You tilt your head to look at the name written on her coffee cup."
+    #
+    #player "...Mere?"
+    #
+    #mere @ say "It's pronounced Mere. It's short for Meredith."
+    #
+    #player "Nice to meet you Mere~ I'm [name]."
+    #
+    #mere @ say "Notilde."
+    #
+    #player "Huh?"
+    #
+    #mere @ say "No tilde at the end. It's just Mere. Mere Notilde."
+    #mere @ say "I know, I hate explaining it."
+    #
+    #n "Mere rips open a few sugar packets and dumps them into her drink."
+    #
+    #player "Okay I need to ask cause my internal narration keeps getting confused. Are you a-"
+    #
+    #mere @ say "I'm a guy lol"
+    #
+    #player "Okay but the-"
+    #
+    #mere @ say "Yup, I wear a skirt. It's comfy. And I think it looks cute on me."
+    #
+    #menu:
+    #    mere "{cps=0}Yup, I wear a skirt. It's comfy. And I think it looks cute on me.{/cps}"
+    #    "It *is* cute on you.":
+    #        $ rosePoints = rosePoints + 1
+    #        
+    #        player "It is cute on you."
+    #        
+    #        mere @ say "Thanks!"
+    #        mere @ say "And if your internal narration slips up and calls me a girl from time to time, I don't mind~"
+    #        
+    #        n "Oh thank goodness."
+    #        n "You have a feeling that's going to be happening quite a lot."
+    #    "No further questions..":
+    #        player "Well alright then. No further questions."
+    #
+    #        mere @ say "It's a common mistake."
+    #        mere @ say "I don't really mind if your internal narration slips up and calls me a girl from time to time~"
+    #        
+    #        n "You have a feeling that's going to be happening quite a lot."
+    #    "Boys shouldn't wear skirts":
+    #        player "Boys shouldn't wear skirts."
+    #        
+    #        mere @ say "Why not?"
+    #        
+    #        player "Because they're for girls."
+    #        
+    #        mere @ say "Says who?"
+    #        
+    #        player "Says... society."
+    #        
+    #        mere @ say "Which society? The human one? Last I checked, they're on their way out."
+    #        
+    #        player "..."
+    #        player "I just remembered I have to be somewhere."
+    #        
+    #        mere @ say "Try not to get struck by lightning."
+    #        
+    #        hide mere with dissolve
+    #        
+    #        n "Damn furry femboys! Always so smug."
+    #        n "You storm out of the building, braving the storm outside on your way back to your dorm."
+    #        
+    #        jump sunday2Evening
+    #        
+    #
+    #mere @ say "Wanna listen to some more of my songs?"
+    #
+    #player "Sure!"
+    #
+    #n "You grab a seat right next to his and he passes you the headphones."
+    #
+    #mere @ say "I call this one Interlewd."
+    #
+    #hide mere with dissolve
+    #
+    #n "You spend all afternoon chatting with Mere, listening to music and showing him a few of your favorites as well."
+    #n "He even offered you a sip of his caffeinated concoction. It made your hangover disappear instantly but you still regret drinking it."
+    #n "You've been twitching every few seconds from the moment you swallowed a drop."
+    #n "You hang around for a while until the cafe closes. A bit early but it is Sunday after all. Thankfully the rain has died down at this point."
+    #
+    #show mere neutral at center with dissolve:
+    #    ypos y_mere
+    #
+    #mere @ say "Yoooo check out my {a=https://merenotilde.bandcamp.com/}band{/a}{a=https://soundcloud.com/MERENOTILDE/}cloud{/a} later, k?"
+    #
+    #player "Totally!"
+    #
+    #mere @ say "See ya!"
+    #
+    #hide mere with dissolve
+    #
+    #n "You wave goodbye to your new friend before heading back to your dorm for the evening."
 
 label sunday2Evening:
     scene bg codadorm with fade

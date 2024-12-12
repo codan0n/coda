@@ -22,7 +22,7 @@ label afterClassOptions:
                     if townEvents:
                         $ randomSelected = renpy.random.choice(townEvents)
                         
-                        call expression randomSelected 
+                        call expression randomSelected from _call_expression_1 
                         
                         call dormSleep from _call_dormSleep_1
                         
@@ -684,14 +684,15 @@ label linaTown:
     
     scene bg town with fade
     
-    init:
-        $ renpy.music.register_channel("channel1", loop=True)
+    #### broken audio
+    #init:
+    #    $ renpy.music.register_channel("channel1", loop=True)
 
-    init python:
-        renpy.music.register_channel("channel2", loop=True)
+    #init python:
+    #    renpy.music.register_channel("channel2", loop=True)
     
     
-    play channel1 "audio/ambient/outdoors people talking.ogg" fadein .5
+    #play channel1 "audio/ambient/outdoors people talking.ogg" fadein .5
     
     show box:
         ypos 0
@@ -901,7 +902,7 @@ label linaTown:
     
     ava @ say "What was that you gave her?"
     
-    player "Yeah it was just a tip for-"
+    #player "Yeah it was just a tip for-"
     
     show ava shocked
     

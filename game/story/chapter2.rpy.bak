@@ -132,7 +132,7 @@ label chapter2start:
     n "Gunner ran off after class, saying something about fraternity obligations."
     n "That leaves you free for the rest of the day."
     
-    call afterClassOptions
+    call afterClassOptions from _call_afterClassOptions
     
     scene bg black with fade
 
@@ -275,6 +275,7 @@ label week2Tuesday:
     $ mishkaMall = False
     
     menu:
+        player "{cps=0}Cool, cool.{/cps}"
         "Ask if she wants to hang out":
             $ mishkaMall = True
             
@@ -343,6 +344,8 @@ label week2Tuesday:
             n "Nothing comes to mind. No conversation starters, no pickup lines, no funny hypothetical questions."
             n "So you just stand there, looking around aimlessly and giving polite smiles whenever your eyes meet."
             n "To your credit, Mishka also seems to be in the same akward state of not know what to do or say."
+            
+            show mishka anxious neutral -
             
             mishka @ say "Well it was nice standing here with you."
             mishka @ say "I have to return to work now but maybe we can do this again sometime?"
@@ -459,7 +462,7 @@ label week2Tuesday:
     n "Your head is pounding and your vision blurry."
     n "You look down at your notebook and it's all just illegible scribbles and a few drool stains."
 
-    show gunner neutral at center with dissolve:
+    show gunner frown1 at center with dissolve:
         ypos y_gunner
     
     gunner @ say "Bro, you still alive? You don't look so good."
@@ -660,7 +663,7 @@ label week2Tuesday:
             n "Their society followed the principles of scholarly warriors who loosely ruled the continent."
             n "Honor, self reliance, freedom, sustainability, and harmony with nature were some of their ideals."
             n "Suffering and rising above one's particular life challenges were glamorized as being noble."
-            n "Arcoonians fostered a fiercly individualist mindset that idealized liberty and sovereign freedom."
+            n "Arcoonians fostered a fiercely individualist mindset that idealized liberty and sovereign freedom."
             n "Despite being united under general governance, battles between settlements were common. It's unclear what they fought over but the ruling class believed that it \"culled the weak.\""
         "French":
             $ frenchSkill =+ 1
@@ -736,30 +739,30 @@ label week2Tuesday:
     n "No use going out today. Might as well stay in and recover from this mystery illness that's plaguing you."
     n "You actually don't feel terrible right now but who knows if it will flare up again later."
     
-    call phone_start
+    call phone_start from _call_phone_start_15
     
-    call message_start("Ava", "Hey [name]! Claire told me you were feeling under the weather", "avaavi.png") 
-    call message("Ava", "but if you're feelin better this weekend wanna go somewhere with us?", "avaavi.png") 
+    call message_start("Ava", "Hey [name]! Claire told me you were feeling under the weather", "avaavi.png") from _call_message_start_20 
+    call message("Ava", "but if you're feelin better this weekend wanna go somewhere with us?", "avaavi.png") from _call_message_183 
 
-    call reply_message("I don't feel so bad today") 
-    call reply_message("I think I'll be fine tomorrow")
-    call reply_message("Where you going?")
+    call reply_message("I don't feel so bad today") from _call_reply_message_129 
+    call reply_message("I think I'll be fine tomorrow") from _call_reply_message_130
+    call reply_message("Where you going?") from _call_reply_message_131
     
-    call message("Ava", "I'm not sure!", "avaavi.png") 
-    call message("Ava", "Claire says she picked out a spot", "avaavi.png") 
-    call message("Ava", "'Somewhere special' she says", "avaavi.png") 
-    call message("Ava", "Whatever that means", "avaavi.png") 
+    call message("Ava", "I'm not sure!", "avaavi.png") from _call_message_184 
+    call message("Ava", "Claire says she picked out a spot", "avaavi.png") from _call_message_185 
+    call message("Ava", "'Somewhere special' she says", "avaavi.png") from _call_message_186 
+    call message("Ava", "Whatever that means", "avaavi.png") from _call_message_187 
     
-    call reply_message("Interesting...")
-    call reply_message("sure, I'll go")
+    call reply_message("Interesting...") from _call_reply_message_132
+    call reply_message("sure, I'll go") from _call_reply_message_133
     
-    call message("Ava", "Yay ^v^", "avaavi.png") 
-    call message("Ava", "I'll let her know", "avaavi.png") 
-    call message("Ava", "meet us tomorrow at around 9 where we usually meet after class", "avaavi.png") 
+    call message("Ava", "Yay ^v^", "avaavi.png") from _call_message_188 
+    call message("Ava", "I'll let her know", "avaavi.png") from _call_message_189 
+    call message("Ava", "meet us tomorrow at around 9 where we usually meet after class", "avaavi.png") from _call_message_190 
     
-    call reply_message("k")
+    call reply_message("k") from _call_reply_message_134
     
-    call phone_end
+    call phone_end from _call_phone_end_21
     
     n "You wonder where this special place that Claire wants you to go to is."
     n "Hopefully you're feeling good enough to go tomorrow."
@@ -787,7 +790,7 @@ label week2Tuesday:
     show box with Dissolve(.2):
         ypos 0
     
-    $ townEvents.append("avaGarden")
+    # $ gardenEvents.append("avaGarden")
     
     $ avaClaireGarden = True
         
@@ -1829,7 +1832,7 @@ label beauty_and_the_beast:
     n "You wander around the halls, reading bulletin boards and mindlessly scrolling back and forth on your phone's home screen."
     n "The vending machine on this floor is out of your preferred snack. Maybe the one on the floor below you has it in stock?"
     n "As you push past the stairwell doors, you catch sight of an orange tail turning the corner on the stairs above."
-    n "That's odd, this is the top floor. All thats above here is the rooftop level."
+    n "That's odd, this is the top floor. All that's above here is the rooftop level."
     n "Perhaps the rooftop access is unlocked? This warrants an investigation."
     
     scene bg roof with fade
@@ -2439,40 +2442,40 @@ label hospital_bound:
     n "Time flies and before you know it, it's dark out."
     n "Oh shoot, Rori is probably still wondering if you're alright! Better send him a text."
     
-    call phone_start
+    call phone_start from _call_phone_start_16
     
-    call message_start("me", "Hey Rori", "testimage.png")
-    call reply_message("Thanks for dragging my ass to the hospital") 
+    call message_start("me", "Hey Rori", "testimage.png") from _call_message_start_21
+    call reply_message("Thanks for dragging my ass to the hospital") from _call_reply_message_135 
     
-    call message("Rori", "Np", "roriavi.png") 
-    call message("Rori", "I actually carried you btw", "roriavi.png") 
+    call message("Rori", "Np", "roriavi.png") from _call_message_191 
+    call message("Rori", "I actually carried you btw", "roriavi.png") from _call_message_192 
     
-    call reply_message("Oh for real?")
-    call reply_message("Damn you must be strong") 
+    call reply_message("Oh for real?") from _call_reply_message_136
+    call reply_message("Damn you must be strong") from _call_reply_message_137 
     
-    call message("Rori", "It actually wasn't that hard once I got you up on my shoulder", "roriavi.png") 
-    call message("Rori", "You alright?", "roriavi.png") 
+    call message("Rori", "It actually wasn't that hard once I got you up on my shoulder", "roriavi.png") from _call_message_193 
+    call message("Rori", "You alright?", "roriavi.png") from _call_message_194 
     
-    call reply_message("Myeah probably")
-    call reply_message("I'm still at the hospital cause they wanna do more tests")
+    call reply_message("Myeah probably") from _call_reply_message_138
+    call reply_message("I'm still at the hospital cause they wanna do more tests") from _call_reply_message_139
     
-    call message("Rori", "Fug that's a long time", "roriavi.png") 
-    call message("Rori", "Hope it's nothing serious", "roriavi.png") 
+    call message("Rori", "Fug that's a long time", "roriavi.png") from _call_message_195 
+    call message("Rori", "Hope it's nothing serious", "roriavi.png") from _call_message_196 
     
-    call reply_message("They just want me to stay here until they're sure I won't randomly pass out in the middle of the street again.") 
+    call reply_message("They just want me to stay here until they're sure I won't randomly pass out in the middle of the street again.") from _call_reply_message_140 
 
-    call message("Rori", "Ahh makes sense", "roriavi.png") 
-    call message("Rori", "Need me to bring you anything ?", "roriavi.png") 
+    call message("Rori", "Ahh makes sense", "roriavi.png") from _call_message_197 
+    call message("Rori", "Need me to bring you anything ?", "roriavi.png") from _call_message_198 
 
-    call reply_message("Nah I'm good. I got my school books and stuff.") 
-    call reply_message("Thanks tho") 
+    call reply_message("Nah I'm good. I got my school books and stuff.") from _call_reply_message_141 
+    call reply_message("Thanks tho") from _call_reply_message_142 
     
-    call message("Rori", "Text me if you want anything", "roriavi.png") 
-    call message("Rori", "I know hospital food sucks", "roriavi.png") 
+    call message("Rori", "Text me if you want anything", "roriavi.png") from _call_message_199 
+    call message("Rori", "I know hospital food sucks", "roriavi.png") from _call_message_200 
     
-    call reply_message("Thx will do") 
+    call reply_message("Thx will do") from _call_reply_message_143 
     
-    call phone_end
+    call phone_end from _call_phone_end_22
     
     n "You put the phone down and sigh, wondering how much longer you'll be confined here."
     n "With not much else to do, you pull up the blanket and try to fall asleep."
@@ -2817,7 +2820,7 @@ label hospital_bound:
         call message("Claire", "Sry keep u waiiting, took a bit to conmvince ava", "claireavi.png") from _call_message_61
         call message_img("Claire", "Enjoy~", "pic1.png") from _call_message_img
         
-        call reply_message("BOOBA")
+        call reply_message("BOOBA") from _call_reply_message_144
 
         call phone_end from _call_phone_end_7
 
@@ -4081,24 +4084,23 @@ label ellen_feeding_ducks:
             
             player "Sounds cool but I'll pass. I'm supposed to go to the parade in town to get extra credit in history."
             
-            show ava casual unimpressed
+            show ava typical unamused
 
             ava @ say "Aww..."
+            ava @ say "Guess I'll go on my own then."
             
     show ava typical happy
     show claire happy
             
     n "You stand around chatting some more until Ava and Claire have to run to class."
-    
-    player "See you later!"
-    
-    claire @ say "Byeee!"
-    
-    ava @ say "See ya!"
             
     hide ava
     hide claire
     with dissolve
+    
+    n "Now you can do something with your free time."
+    
+    call afterClassOptions
 
     hide box
 
@@ -4333,6 +4335,7 @@ label ellen_feeding_ducks:
         player "You two have fun with the panty raid. I gotta run for now."
     else:
         menu:
+            gunner "{cps=0}And what about you?{/cps}"
             "Let's do it":
                 $ gunnerRaid = True
                 
@@ -4354,9 +4357,13 @@ label ellen_feeding_ducks:
                 gunner @ say "You gay or something?"
                 gunner @ say "You can ogle Rori's ass while we sneak around if that's the case."
                 
+                show rori anxious
+                
                 rori @ say "H-hey!"
                 
                 player "I just have better things to do."
+                
+                show rori neutral
                 
                 n "Gunner shrugs, pretending like he doesn't care."
                 
@@ -4367,6 +4374,14 @@ label ellen_feeding_ducks:
     gunner @ say "Laters."
     
     rori @ say "Laters."
+    
+    hide gunner
+    hide rori
+    with dissolve
+    
+    n "What should you do with your free time?"
+    
+    call afterClassOptions
                 
     scene bg black with fade
 
@@ -4604,7 +4619,7 @@ label ellen_feeding_ducks:
 
     n "Mrs. Celestine rambles on about other countries and their various transitions from human dominated society to rule of animal people."
     n "Maybe one day you'll get your face on the dollar bill as a memory of the last human."
-    n "Either that or they'll talk shit about you in textbooks for being an evil human who oppressed every other species for millenia."
+    n "Either that or they'll talk shit about you in textbooks for being an evil human who oppressed every other species for millennia."
     n "For all her love of this holiday, she doesn't cut you a break and let the class leave early."
     n "If someone hadn't interrupted her, she probably would have ranted well into the evening."
     
@@ -4766,7 +4781,7 @@ label ellen_feeding_ducks:
     
     show ava typical neutral
 
-    ava @ say "This is why I'm embarassed to go out in public with you."
+    ava @ say "This is why I'm embarrassed to go out in public with you."
     
     show claire derp
 
@@ -5261,11 +5276,12 @@ label ellen_feeding_ducks:
     n "A life altering decision presents itself."
     n "Who do you sit next to?"
     n "This room wasn't meant to accomodate five people so there's not a lot of places to sit."
-    n "Everyone but you and Gunner has snagged a seat and he's distracted by his phone, so now's your chance." 
+    n "Everyone but you and Gunner has snagged a seat. He's distracted by his insatiable urge to rub his face against the edge of every piece of furniture in the room."
+    n "Now's your chance." 
 
     ###maybe extend the scene after the credits roll and you're alone with whoever you sat with after the others leave
     menu:
-        n "{cps=0}Everyone but you and Gunner has snagged a seat and he's distracted by his phone, so now's your chance.{/cps=0}"
+        n "{cps=0}Now's your chance.{/cps=0}"
         "Sit next to Claire":
             $ clairePoints = clairePoints + 1
             
@@ -5285,7 +5301,8 @@ label ellen_feeding_ducks:
 
             hide claire with dissolve
 
-            n "Gunner looks up from his phone as Rori hits the play button."
+            #n "Gunner looks up from his phone as Rori hits the play button."
+            n "Rori hits the play button and the intro credits begin."
 
             show ava typical overjoyed at offscreenright:
                 ypos y_ava
@@ -5368,59 +5385,75 @@ label ellen_feeding_ducks:
             
             n "Ava had decided to occupy your bed, which is fine because it's the most comfortable spot and you wanted to sit next to her anyway."
             n "You plop down on it, bouncing her up into the air."
-            
-            show ava reaching concerned:
-                ypos -3000
-            
             n "She glides back down with her wings outstretched."
-
-            #show ava typical neutral at center with move:
-                #xzoom -1
-            show ava with move:
-                ypos 50
-                
-            #pause .01
             
-            show ava with MoveTransition(delay=.05):
-                ypos 0
+            show ava reaching concerned shirtopen:
+                ypos -3000
+                xpos 700
+
+            show ava with move:
+                ypos 1080
+            
+            pause .2
                 
+            show ava at center:
+                ypos 2500
+                
+            pause .2
+            
+            show ava with move:
+                ypos y_ava
+            
             show ava at shudder
 
             ava @ say "Brreeee! Easy there, [name]!"
-
-            player "Sorry, forgot birds have hollow bones."
             
+            
+            #show ava typical neutral at center with move:
+                #xzoom -1
+            #show ava with move:
+            #    ypos y_ava
+                
+            #pause .01
+            
+            #show ava with MoveTransition(delay=.05)
+             
+            player "Sorry, forgot birds have hollow bones."
+
             ava @ say "They're actually denser to account for that, so they're not any lighter than your mammal bones."
             ava @ say "I'm just small and dainty."
             ava @ say "A strong breeze is enough to knock me over haha."
             
-            show claire sweater giggle:
+            show claire sweater giggle at center with dissolve:
                 xzoom -1
-                xpos -550
+                ypos y_claire
+                xoffset -600
                 
             claire @ say "Ksksksksks"
             claire @ say "[name] knocked you up so hard your shirt started taking itself off!~"
             
             ava @ say "?"
             
-            show ava reaching embarassed
+            show ava profile embarrassed
             
             ava @ say "Wha-!"
             
             n "Ava quicky buttons up her shirt."
             
-            show ava unimpressed
+            show ava typical unimpressed -
+            show claire happy
             
             ava @ say "Just pretend that didn't happen."
             
             n "Gunner looks up from his phone."
             
             show gunner neutral at center with dissolve:
-                xpos 475
+                xoffset 550
+                ypos y_gunner
             
             gunner @ say "Damn, what did I miss?"
                 
-            show ava pose concerned at flipright
+            show ava embarrassed at flipright
             
             ava @ say "Nothing!"
 
@@ -5431,13 +5464,15 @@ label ellen_feeding_ducks:
             gunner @ say "Hrm..."
             gunner @ say "[name], you got any more chairs around here?"
 
-            show claire sweater happy alert at center:
-                xzoom -1
-                xpos -550
+            show claire sweater suggestive
 
             claire @ say "Come sit next to me!"
 
             n "Claire pats the space beside her on the floor."
+            
+            show gunner uncomfy
+            
+            n "Gunner grimaces and looks around for any alternatives."
 
             #pause .1
 
@@ -5465,10 +5500,9 @@ label ellen_feeding_ducks:
             
             pause .1
 
-            n "Gunner grimaces and looks around for any alternatives."
-            
-            show gunner neutral at center with move:
-                xpos -200
+            show gunner at center with move:
+                xoffset -200
+                ypos y_gunner
                 
             pause .01
             
@@ -5476,17 +5510,20 @@ label ellen_feeding_ducks:
                 
             n "Alas, with nowhere else to sit, he's forced to plop down next to her."
             
-            show claire sweater lusty alert
+            show claire sweater suggestive earsup
             
             n "Claire wraps an arm around him and he disappears into her floof."
             
-            show gunner with MoveTransition(delay=.4):
-                xpos -310
+            show gunner at offscreenleft:
+                ypos y_gunner
+            show claire at offscreenleft:
+                ypos y_claire
+            with move
             
             n "RIP"
             
-            show rori neutral with dissolve:
-                xpos 385
+            show rori neutral at center with dissolve:
+                ypos y_rori
                 
             rori @ say "Shshshsh! The movie's starting!"
 
@@ -5513,7 +5550,8 @@ label ellen_feeding_ducks:
 
             n "You approach Rori, who is sitting in your desk chair."
 
-            show rori neutral at center with dissolve
+            show rori neutral at center with dissolve:
+                ypos y_rori
 
             rori @ say "Oh, am I in your spot?"
 
@@ -5529,10 +5567,12 @@ label ellen_feeding_ducks:
             
             n "The others stare and laugh as Rori tries to cover his blushing face."
             
-            show ava typical neutral at offscreenright
+            show ava typical neutral at offscreenright:
+                ypos y_ava
 
             show gunner neutral at center with dissolve:
-                xpos 450
+                xoffset 650
+                ypos y_gunner
 
             n "Gunner nods to you."
 
@@ -5540,7 +5580,8 @@ label ellen_feeding_ducks:
 
             show claire sweater happy at center with dissolve:
                 xzoom -1
-                xpos -500
+                xoffset -650
+                ypos y_claire
 
             show claire sweater derp
             
@@ -5549,12 +5590,17 @@ label ellen_feeding_ducks:
             rori @ say "Ohmygosh[name]whyareyoudoingthis\nthereareotherplacesyoucouldhavesat"
 
             player "Yeah but I wanted the best seat in the house~"
+            
+            show rori embarrassed
 
             n "That only makes him turn more red."
 
             rori @ say "Aaaaah why would you say it like that?!"
 
             player "What, isn't this just like one of your Japanese animes?"
+            
+            show gunner cutie
+            show rori yawn blush
 
             n "The room erupts into laughter, including Rori."
             n "He decides to accept it and leans back into you while Gunner goes to hit play on the movie."
@@ -5563,11 +5609,13 @@ label ellen_feeding_ducks:
             hide rori
             with dissolve
 
+            show gunner optimistic 
+            
             gunner @ say "Alright, now where do I sit?"
 
-            show ava typical neutral at center with dissolve:
+            show ava typical excited at center with dissolve:
                 xzoom -1
-                xpos -100
+                xoffset -250
                 ypos y_ava
 
             ava @ say "Over here Gunner, there's some room for ya over here!"
@@ -5577,7 +5625,8 @@ label ellen_feeding_ducks:
             n "The bird pats the spot on your bed beside her and Gunner pounces on it quite elegantly."
 
             show gunner neutral at center with move:
-                xpos -270
+                xoffset -470
+                ypos y_gunner
 
             pause .1
 
