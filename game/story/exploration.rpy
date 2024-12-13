@@ -218,6 +218,8 @@ label mishkaGarden:
     
     scene bg garden with fade
     
+    play music "audio/music/vylet pony - Reading at Night.ogg" fadein 1.0
+    
     show box with Dissolve(.2):
         ypos 0
     
@@ -407,6 +409,7 @@ label mishkaGarden:
             
             hide mishka with dissolve
             
+    stop music fadeout 2.0
             
     return
     
@@ -462,6 +465,8 @@ label gunnerTrack:
     #$ gunnerTrackNumber += 1
 
     #only available on sunny days
+    
+    play music "audio/music/vylet - Ordinarily.ogg" fadein 1.0
         
     "You make your way back to the fitness area, past the track to the weights and machines where a multitude of students are exercising."
     "Unsurprisingly, among them is Gunner on a bench press, pushing a bar with a couple of large plates up above his chest."
@@ -676,6 +681,8 @@ label gunnerTrack:
     
     n "You dread having to do any more physical work but the thought of food entices you to just do it and get it over with."
     
+    stop music fadeout 2.0
+    
     return
 
 label linaTown:
@@ -693,6 +700,7 @@ label linaTown:
     
     
     #play channel1 "audio/ambient/outdoors people talking.ogg" fadein .5
+    play music "audio/ambient/outdoors people talking.ogg" fadein .5
     
     show box:
         ypos 0
@@ -703,7 +711,7 @@ label linaTown:
     n "... You might go back for it, it was a really nice knife."
     n "Is that really all there is to do in the city though? Buy stuff you didn't know you wanted?"
     
-    play music "audio/music/vylet - glamour.ogg"
+    play music "audio/music/vylet - glamour.ogg" fadein 1.0
     
     n "The sound of live music hits your ears among the incessant chattering. Now that might be worth checking out."
     n "You follow the sound and are somewhat disappointed to see it's just a lone street performer and not part of a bigger event."
@@ -1003,7 +1011,7 @@ label linaTown:
             n "She laughs at your dumb jokes and, it might just be your imagination but it seems as if she looks into your eyes longingly."
             n "Evening comes and you have to part ways but you get the feeling she'd love to do this again sometime."
     
-    stop channel1 fadeout 1.0
+    #stop channel1 fadeout 1.0
     stop music fadeout 1.5
 
     return
@@ -1068,7 +1076,7 @@ label oliviaCafe:
     show box:
         ypos 0
 
-    #play music "audio/ambient/outdoors people talking.ogg" fadein 1.3
+    play music "audio/ambient/outdoors people talking.ogg" fadein 1.3
 
     n "On your way to Coffee Zone for some lunch, you end up walking a few paces behind a reptile in a wheelchair."
     n "Being from a small town and never really socializing, you thought they were just a myth, something they put in movies to scare young children."
