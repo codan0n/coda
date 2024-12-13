@@ -3389,7 +3389,7 @@ label ending:
     ###
     n "Thanks for playing!"
     n "More to come in a future update!"
-    n "Credits in the \"About\" section on the main menu."
+    ###n "Credits in the \"About\" section on the main menu."
     #n "sprite highlighting code: Sodora"
 #    n "Writing: - Codanon, anonymous"
 #

@@ -124,6 +124,8 @@ label chapter2start:
     
     n "Mrs. Herschel goes through some problems, starting off with a basic one then adding further complexities to subsequent ones."
     
+    stop music fadeout 2.0
+    
     scene bg campus with fade
     
     show box with Dissolve(.2):
@@ -231,6 +233,8 @@ label week2Tuesday:
     n "Mrs. Celestine goes over some terms and typical everyday sayings, then has the class recite them and practice in groups."
     
     scene bg campus with fade
+    
+    play music "audio/music/vylet - Hard to Say Anything.ogg" fadein 1.0
     
     show box with Dissolve(.2):
         ypos 0
@@ -363,6 +367,8 @@ label week2Tuesday:
     n "Mishka gives you a wave and heads in the direction of the cafe."
     n "You're feeling tired from classes so you retire to your dorm early."
     
+    stop music fadeout 2.0
+    
     scene bg black with fade
 
     hide box
@@ -488,6 +494,8 @@ label week2Tuesday:
     
     gunner @ say "Maybe you ate something bad? You should take it easy for the rest of the day my guy."
     gunner @ say "C'mon, I'll take you to your dorm."
+    
+    stop music fadeout 2.0
     
     scene bg codadorm with fade
     
@@ -790,7 +798,9 @@ label week2Tuesday:
     show box with Dissolve(.2):
         ypos 0
     
-    # $ gardenEvents.append("avaGarden")
+    play music "audio/music/vylet - tenderness.ogg" fadein 1.0
+    
+    ### $ gardenEvents.append("avaGarden")
     
     $ avaClaireGarden = True
         
@@ -831,7 +841,7 @@ label week2Tuesday:
         ypos 0
 
     #play music "audio/music/vylet pony - Reading at Night.ogg" fadein 1.0
-    play music "audio/music/vylet - tenderness.ogg" fadein 1.0
+    play music "audio/music/vylet - someday.ogg" fadein 1.0
     
     if gardenDiscovered == True:
         n "This is the same garden you've visited before, just at one of the other entrances. The area is quite expansive and you haven't been to this part before."
@@ -1083,6 +1093,10 @@ label week2Tuesday:
     n "Eventually you find your way back to the entrance where you bid adieu and return to your respective dorms for the day."
 
     hide box
+    
+    stop music fadeout 1.0
+    
+    scene bg black with fade
 
     show bg calendar
     show tsaturday at center
@@ -1339,6 +1353,8 @@ label week2Tuesday:
 
     show box with Dissolve(.2):
         ypos 0
+        
+    play music "audio/music/vylet - Ordinarily.ogg" fadein 1.0
 
     n "The following day..."
     
@@ -1565,7 +1581,11 @@ label week2Tuesday:
     
     n "Gunner picks a seemingly random direction and confidently marches off. You look to Rori and the two of you wordlessly agree to follow him."
     
+    stop music fadeout 2.0
+    
     scene bg schoolhallways with fade
+    
+    play music "audio/music/vylet - someday.ogg" fadein 1.0
     
     show box with Dissolve(.2):
         ypos 0
@@ -1713,10 +1733,14 @@ label week2Tuesday:
     
     rori @ say "Yeah, I think that's enough crime for one day."
     
+    stop music fadeout 2.0
+    
     scene bg campus with dissolve
     
     show box with Dissolve(.2):
         ypos 0
+        
+    play music "audio/music/vylet - wish.ogg" fadein 1.0
         
     show gunner neutral at center:
         ypos y_gunner
@@ -1824,6 +1848,8 @@ label beauty_and_the_beast:
     
     scene bg schoolhallways with fade
     
+    play music "audio/ambient/indoors people talking.ogg" fadein 1.5
+    
     show box with Dissolve(.2):
         ypos 0
     
@@ -1834,6 +1860,8 @@ label beauty_and_the_beast:
     n "As you push past the stairwell doors, you catch sight of an orange tail turning the corner on the stairs above."
     n "That's odd, this is the top floor. All that's above here is the rooftop level."
     n "Perhaps the rooftop access is unlocked? This warrants an investigation."
+    
+    stop music fadeout 2.0
     
     scene bg roof with fade
     
@@ -1914,6 +1942,8 @@ label beauty_and_the_beast:
     margaret @ say "Class is about to begin. See you there."
     
     hide margaret with dissolve
+    
+    stop music fadeout 2.0
     
     n "She walks past you, her fluffy tail brushing against your arm before she descends the staircase back into the building."
     n "Stunned, you stand in the breeze, motionless and thoughtless."
@@ -2115,6 +2145,8 @@ label beauty_and_the_beast:
     ava @ say "See you later!"
     
     player "Later guys."
+    
+    stop music fadeout 2.0
     
     scene bg black with fade
     
@@ -2377,7 +2409,7 @@ label hospital_bound:
     n "There's a knock on the door and Dr. Kitsuragi returns with a cart full of testing equipment."
     n "This is going to take a while."
 
-    #stop music fadeout 1.0
+    stop music fadeout 1.0
 
     hide box
 
@@ -2649,6 +2681,8 @@ label hospital_bound:
                     n "Kinda makes you wanna go out and explore. Maybe you will once you're free from this dreaded hospital."
 
     scene bg black with fade
+    
+    stop music fadeout 2.0
 
     play audio "audio/sound effects/vibrate.ogg"
 
@@ -3063,10 +3097,10 @@ label leaving_hospital:
 
     
     
-    n "You still have class in a few hours after all."
-    n "When it comes time for you to go to bed, you pop another one of those pills, as instructed."
-    n "You're already getting sick of them but you gotta do what you gotta do to stay alive you guess."
-    n "You rest your head on your pillow and pray nothing bad happens tomorrow as sleep overtakes you."
+    #n "You still have class in a few hours after all."
+    #n "When it comes time for you to go to bed, you pop another one of those pills, as instructed."
+    #n "You're already getting sick of them but you gotta do what you gotta do to stay alive you guess."
+    #n "You rest your head on your pillow and pray nothing bad happens tomorrow as sleep overtakes you."
 
     stop music fadeout 1.0
 
@@ -3086,12 +3120,8 @@ label leaving_hospital:
     show tbackslash
 
     pause .7
-
-    
-    
     
 label monty_hall:
-
     scene bg codadorm with fade
 
     play music "audio/ambient/morning birds.ogg" fadein 1.5
@@ -3259,6 +3289,8 @@ label monty_hall:
     
     scene bg campus with fade
     
+    play music "audio/music/vylet - Ordinarily.ogg" fadein 1.0
+    
     show box with Dissolve(.2):
         ypos 0
     
@@ -3347,6 +3379,8 @@ label monty_hall:
     with dissolve
     
     n "You return to your dorm and lazily flip through homework and internet pages until you feel like going to sleep."
+    
+    stop music fadeout 2.0
     
     scene bg black with fade
     
@@ -3741,6 +3775,10 @@ label ellen_feeding_ducks:
     margaret @ say "Thanks for talking with me."
     
     player "Anytime."
+    
+    hide margaret with dissolve
+    
+    stop music fadeout 2.0
             
 #make this part of ellen's cafe scene
 #    n "Ms. Ellen reclines against the bench and sighs."
@@ -3861,7 +3899,11 @@ label ellen_feeding_ducks:
     
     hide celestine with dissolve
     
+    stop music fadeout 2.0
+    
     scene bg campus with fade
+    
+    play music "audio/music/vylet - Catching On.ogg" fadein 1.0
     
     show box with Dissolve(.2):
         ypos 0
@@ -4103,6 +4145,8 @@ label ellen_feeding_ducks:
     call afterClassOptions from _call_afterClassOptions_1
 
     hide box
+    
+    stop music fadeout 2.0
 
     scene bg black with fade
 
@@ -4134,7 +4178,11 @@ label ellen_feeding_ducks:
     
     hide herschel with dissolve
     
+    stop music fadeout 2.0
+    
     scene bg campus with fade
+    
+    play music "audio/music/vylet - Destiny Station.ogg" fadein 1.0
     
     show box with Dissolve(.2):
         ypos 0
@@ -4383,6 +4431,8 @@ label ellen_feeding_ducks:
     
     call afterClassOptions from _call_afterClassOptions_2
                 
+    stop music fadeout 2.0            
+    
     scene bg black with fade
 
     hide box
@@ -4448,7 +4498,11 @@ label ellen_feeding_ducks:
             n "Ms. Ellen seemed kinda out of it today. Perhaps it'd cheer her up if one of her students checked to see if she's alright."
             n "You manage to spot her among the crowd and follow her into the stairwell. The clacking of her heels against the concrete stairs echoes as she approaches the rooftop access door."
             
+            stop music fadeout 2.0
+            
             scene bg roof with fade
+            
+            play music "audio/music/Vylet Pony -  Colourless.ogg" fadein 1.0
             
             show box with Dissolve(.2):
                 ypos 0
@@ -4642,13 +4696,14 @@ label ellen_feeding_ducks:
     
     claire @ say "I'll text Ava to meet us there!"
     
+    stop music fadeout 2.0
+    
     scene bg cafe with fade
     
     show box with Dissolve(.2):
         ypos 0
     
     play music "audio/music/mere - coffeeLove.exe.ogg" fadein 1.0
-    #play music "audio/music/vylet - Catching On.ogg" fadein 1.0
     
     show claire sweater happy at center:
         ypos y_claire
@@ -5656,6 +5711,8 @@ label ellen_feeding_ducks:
             n "You're getting pretty sleepy so you hurry and get ready for bed."
             
     scene bg black with fade
+    
+    stop music fadeout 2.0
 
     hide box
 

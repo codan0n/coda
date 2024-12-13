@@ -51,6 +51,7 @@ label liberation_day:
 
         #play music "audio/ambient/spooky.ogg" fadein 1.0
         #play music "audio/music/vylet - Cavern Lurker.ogg" fadein 1.0
+        play music "audio/music/Vylet Pony - Reflected in the Eyes of the Cavern Lurker.ogg" fadein 1.0
 
         show box with Dissolve(.2):
             ypos 0
@@ -153,6 +154,8 @@ label liberation_day:
         
         n "Ava doubles back and helps pull you out, oblivious to the pain shooting through your ankle. You try to keep quiet so she doesn't think you're a pussy."
         n "You hobble up the remaining stairs and into a room, closing the door behind you, bracing it with your body."
+        
+        stop music fadeout 2.0
         
         scene bg oldhospital darkroom with fade
         
@@ -307,6 +310,8 @@ label liberation_day:
         
         scene bg oldhospital hall2 with fade
         
+        play music "audio/music/vylet - dance of the macabre.ogg" fadein 1.0
+        
         show box:
             ypos 0
         
@@ -386,6 +391,8 @@ label liberation_day:
         n "You get your upper body onto the windowsill and then roll over the edge."
         
         stop music fadeout 1.0
+        
+        stop music fadeout 2.0
         
         scene bg oldhospital exterior with fade
         
@@ -1398,6 +1405,8 @@ label liberation_day:
         
         scene bg campus with fade
         
+        play music "audio/music/vylet - wish.ogg" fadein 1.0
+        
         show box with Dissolve(.2):
             ypos 0
             
@@ -1603,6 +1612,8 @@ label liberation_day:
         
         n "Your little group disbands for the day, each contemplating this raid will change your lives."
         
+        stop music fadeout 2.0
+        
         scene bg black with fade
 
         hide box
@@ -1619,6 +1630,8 @@ label liberation_day:
         pause .7
 
         scene bg codadorm with fade
+        
+        play music "audio/music/vylet - tenderness.ogg" fadein 1.0
         
         show box with Dissolve(.2):
             ypos 0    
@@ -1726,10 +1739,14 @@ label liberation_day:
             
             n "It's now or never."
             
+            stop music fadeout 2.0
+            
             scene bg campus with fade
                 
             show box with Dissolve(.2):
                 ypos 0
+                
+            play music "audio/ambient/outdoors night crickets.ogg" fadein 1.5
             
             n "You walk along the pathway encircling the girls' dorm, trying to appear casual while taking quick side glances at the building."
             n "A voice in the bushes calls out to you."
@@ -1785,11 +1802,15 @@ label liberation_day:
             
             ###choose who goes into the building first
                 #rori is the tallest but gunner doesn't need help jumping up. or you can go in
+                
+            stop music fadeout 2.0
             
             scene bg oldhospital
             
             show box with Dissolve(.2):
                 ypos 0
+                
+            play music "audio/ambient/spooky.ogg" fadein 1.5            
             
             n "The interior is so dilapidated, you could mistake it for being abandoned, or perhaps a crack den."
             
@@ -1825,7 +1846,11 @@ label liberation_day:
             
             gunner @ say "Bingo."
             
+            stop music fadeout 2.0
+            
             scene bg avadorm with dissolve
+            
+            play music "audio/music/vylet - dance of the macabre.ogg" fadein 1.0
             
             show box with Dissolve(.2):
                 ypos 0
@@ -1896,6 +1921,8 @@ label liberation_day:
             
             n "You all line up at the doorway and file out stealthily, trying to hide your excitement until you're in the clear."
             
+            stop music fadeout 2.0
+            
             scene bg oldhospital with fade
             
             show box with Dissolve(.2):
@@ -1936,6 +1963,8 @@ label liberation_day:
             pause .5
             
             scene bg campus with fade
+            
+            play music "audio/music/vylet - wish.ogg" fadein 1.0
             
             show box with Dissolve(.2):
                 ypos 0
@@ -2069,7 +2098,11 @@ label liberation_day:
             
             n "To your surprise, the mob picks you up and rushes to your dorm while you still try to catch up on what just happened."
             
+            stop music fadeout 2.0
+            
             scene bg codadorm with fade
+            
+            play music "audio/music/Vylet Pony - Cozy Pone.ogg" fadein 1.0
             
             show box with Dissolve(.2):
                 ypos 0
@@ -2152,6 +2185,8 @@ label liberation_day:
             
             n "The bunny plants a smooch on her own paw, then pushes the same paw against your forehead with enough force to knock you back onto your bed."
             n "With your consciousness fading, the last thing you see is Claire's fluffy little cotton ball tail leaving the room and your door slamming shut."
+            
+            stop music fadeout 2.0
             
             scene bg black with fade
             
@@ -2501,7 +2536,7 @@ label liberation_day:
                 
                 fortune @ say "I take etherium. My wallet address is 0x1AF7aD03CbB3e40a55392D518D585eA3EBB8F4B8."
                 
-                rose @ say "Cryptocurrency is fake and- "
+                rose @ say "Cryptocurrency is fake and g- "
                 
                 n "A nearby truck drives by and honks it's horn, cutting off the end of Rose's sentence before she walks off."
                 
@@ -2637,6 +2672,8 @@ label liberation_day:
         
             scene bg mall with fade
             
+            play music "audio/music/vylet - earnest (feat. Sylver Stripe & Namii).ogg" fadein 1.0
+            
             show box with Dissolve(.2):
                 ypos 0
                 
@@ -2674,6 +2711,8 @@ label liberation_day:
             n "That's as good a place as any other. Off you go."
             
             scene bg mall with fade
+            
+            play music "audio/music/vylet - earnest (feat. Sylver Stripe & Namii).ogg" fadein 1.0
             
             show box with Dissolve(.2):
                 ypos 0
@@ -2919,6 +2958,8 @@ label liberation_day:
         
         n "Mishka walks you back to your dorm and wishes you a good night."
         n "It's been a fulfilling weekend. You wouldn't mind just relaxing on your own tomorrow."
+        
+        stop music fadeout 2.0
         
         scene bg black with fade
         

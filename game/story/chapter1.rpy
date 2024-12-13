@@ -139,6 +139,8 @@ label chapter1:
     scene bg campus_sunny_day with dissolve
     #background names can't have capital letters
     
+    play music "audio/music/vylet - Hard to Say Anything.ogg" fadein 1.0
+    
     show box with Dissolve(.2):
         ypos 0
         
@@ -287,6 +289,8 @@ label movingOn:
     
     #n "Even as the sun began to set, the campus was swarming with freshly admitted students either in tour groups or exploring their new surroundings on their own."
     n "You don't have much time to spare, so you make your way to your scheduled orientation meeting."
+    
+    stop music fadeout 2.0
 
 label college_orientation:
     #ACT 1
@@ -844,7 +848,7 @@ label college_orientation:
 
     show rori neutral
 
-    rori @ say "Well, I guess I'll see you around. I have to unpack my desktop and run some updates."
+    rori @ say "Well, I guess I'll see you around. I have to unpack my desktop and get everything set up."
     
     show rori anxious
     
@@ -961,7 +965,7 @@ label college_orientation:
                 
                 show rori neutral -blushing
                 
-                rori @ say "My PS3? I use it as a blueyray player. Or a more often a doorstop."
+                rori @ say "My PS3? I use it as a blueyray player. Or more often a doorstop."
                 
                 player "Doesn't it play games too?"
                 
@@ -976,6 +980,8 @@ label college_orientation:
                 player "See you around, dude."
                 
                 rori @ say "Laters!"
+                
+                stop music fadeout 2.0
                 
                 jump playerDormOrientationDay
                 
@@ -1017,8 +1023,8 @@ label playerDormOrientationDay:
     show box with Dissolve(.2):
         ypos 0
 
-    n "You can't entirely recall how you got here but you made it."
-    n "Home sweet home for the next four years."
+    #n "You can't entirely recall how you got here but you made it."
+    n "Here it is. Home sweet home for the next four years."
     n "You had packed as much from home as you could carry in your suitcases but haven't had a chance to unpack yet."
     n "It'll have to wait until tomorrow. You're way too tired to bother with it right now."
     n "You quickly get ready for bed and flop directly onto the covers, falling asleep instantly."
@@ -4102,6 +4108,8 @@ label afterAvaText1:
         
         scene bg campus with fade
         
+        play music "audio/music/vylet - yeah i'm ok thanks for asking.ogg" fadein 1.0
+        
         show box with Dissolve(.2):
             ypos 0
         
@@ -4275,9 +4283,10 @@ label afterAvaText1:
     
 label thursday1:
     #thursday
-    play music "audio/music/mere - retrograde.ogg" fadein .5
 
     scene bg lecturehall with fade
+    
+    play music "audio/music/mere - retrograde.ogg" fadein .5
 
     show box with Dissolve(.2):
         ypos 0
@@ -4424,7 +4433,7 @@ label thursday1:
     scene bg campus with fade
 
     #play sound "audio/ambient talking.ogg" fadein .5
-    play music "audio/music/vylet - yeah i'm ok thanks for asking.ogg"
+    play music "audio/music/Vylet Pony - Cozy Pone.ogg"
 
     show box:
         ypos 0
@@ -4470,7 +4479,16 @@ label thursday1:
             n "Wow she's really eager to study."
             n "Claire grabs your hand and rushes you to her dorm."
             
-            call avaClaireDormIntro from _call_avaClaireDormIntro
+            if avaClaireDormIntroSeen == True:
+                scene bg avadorm with fade
+    
+                play music "audio/music/vylet - I Wish I Could Tell You.ogg" fadein 1.0
+                
+                show box with Dissolve(.2):
+                    ypos 0
+                    
+            else:
+                call avaClaireDormIntro from _call_avaClaireDormIntro
             
             n "Ava is lying on her bed reading a magazine while listening to headphones."
             n "She turned her eyes over to you when when Claire crashed through the doorway."            
@@ -4616,6 +4634,8 @@ label thursday1:
             
             hide claire with dissolve
             
+            stop music fadeout 2.0
+            
             scene bg codadorm with fade
             
             show box with Dissolve(.2):
@@ -4691,6 +4711,8 @@ label thursday1:
     
     
 label thursdayNight1Study:
+    stop music fadeout 2.0
+    
     scene bg codadorm with fade
     
     show box with Dissolve(.2):
@@ -4720,7 +4742,7 @@ label thursdayNight1Study:
     n "It's gotten late. Time to get ready for bed."
     
 label thursday1End:
-    scene bg black with fade
+    scene bg black with dissolve
 
     n "You do your usual nightly routine and crawl under the blankets to rest until the next day."
 
@@ -4750,6 +4772,8 @@ label friday1:
     
     scene bg campus with fade
     
+    play music "audio/ambient/outdoors people talking.ogg" fadein .5
+    
     show box with Dissolve(.2):
         ypos 0
     
@@ -4759,7 +4783,11 @@ label friday1:
     n "The wind is picking up and you can already see flashes of lightning."
     n "Better hurry to your dorm before it starts raining too."
     
+    stop music fadeout 1.5
+    
     scene bg codadorm with fade
+    
+    play music "audio/music/vylet - im sorry (apathy).ogg" fadein 1.0
     
     show box with Dissolve(.2):
         ypos 0
@@ -4808,6 +4836,8 @@ label friday1:
     n "That gives you something to do tomorrow if you get too bored."
     n "The hours pass by in leisure until the urge to sleep becomes too hard to resist."
     
+    stop music fadeout 1.5
+    
     scene bg black with fade
 
     hide box
@@ -4827,6 +4857,8 @@ label rooftop_party:
     # saturday 2
     
     scene bg codadorm with fade
+    
+    play music "audio/ambient/morning birds.ogg" fadein 0.1    
 
     show box with Dissolve(.2):
         ypos 0
@@ -4837,6 +4869,8 @@ label rooftop_party:
     n "What's the worst that could happen?"
     n "If you don't like it you can always leave."
     n "Fuck it, you can afford to not be a shut-in for one weekend, right?"
+
+    stop music fadeout 1.0
 
     scene bg roof with fade
 
@@ -5280,6 +5314,8 @@ label rooftop_party:
     with dissolve
 
     n "The three of you stumble back to the dorms, where you spend a few hours getting dunked on by Rori in various video games."
+    
+    stop music fadeout 2.0
 
     scene bg black with fade
 
@@ -5305,7 +5341,6 @@ label sunday2:
     n "Your head pulsates with the inconvenience of a minor hangover, enough to make your conscious existence miserable."
     n "Looking around, it seems you'd fallen asleep in Rori and Gunner's dorm. They're passed out in their respective beds."
     n "No reason to stick around. You feel groggy and sweaty and gross and you need a shower and some coffee as soon as possible."
-    
     
     scene bg cafe with fade
 
@@ -5416,167 +5451,7 @@ label sunday2:
     n "Your troubles seem to wash away as you focus on the richness of the drink."
     n "Sadly, all good things must come to an end and this drink is no different."
     
-    
-    ###unfinished
-    #n "At some point, someone comes into the shop and orders a drink. A rabbit with pink fur and headphones around her(?) neck sits across from you and plugs her(??) laptop into a socket."
-    #n "You're not looking at any particular thing, but the laptop is within your field of view and you happen to notice she(???) opens some program that's full of strange graphs, bars, sliders and dials."
-    #n "Looks like a music production application."
-    #n "You rub your temple and sip more of your coffee. You can't tell if it's helping."
-    #n "Mishka delivers a paper coffee cup to the rabbit, who promptly removes the lid and cracks open a Blu Bull to pour into it."
-    #n "Followed by a few drops of liquid Adderlol."
-    #n "Is this rabbit concocting a suicide potion or something?"
-    #n "She looks around for something, twisting around to face you."
-    #
-    #show mere neutral at center with dissolve:
-    #    ypos y_mere
-    #
-    ####mere's blip voice is low pitched
-    #
-    #mere @ say "Mind passing me one of those?"
-    #
-    #n "She points to a packet of sugar on your table."
-    #n "You grab one and hand it over."
-    #
-    #mere @ say "Thanks."
-    #
-    #n "She dumps it into her drink and stirs it before taking a sip and shaking her head."
-    #
-    #mere @ say "...A couple more, please?"
-    #
-    #n "You mindlessly grab a handful and pass them over."
-    #
-    #mere @ say "Don't judge me, it helps me concentrate."
-    #
-    #player "If you can survive drinking that much caffeine and amphetamine, a little sugar should be fine."
-    #
-    #mere @ say "Exactly!"
-    #
-    #player "Have you tried just doing coke?"
-    #
-    #mere @ say "The drink or...?"
-    #
-    #player "Whichever works."
-    #
-    #mere @ say "I'm more into energy drinks. Can't write a song without one!"
-    #
-    #player "Is that what you're doing on your computer now?"
-    #
-    #mere @ say "Yup! "
-    #
-    #player "What kind of music do you make?"
-    #
-    #mere @ say "I mostly do futurefunk and French house stuff, sometimes chillwave."
-    #
-    #player "I have no idea what those are."
-    #
-    #mere @ say "You like the song that's playing right now?"
-    #
-    #player "Yeah, it's pretty catchy."            
-    #player "Wait, you mean everyone can hear it? I thought it was just playing in my head!"
-    #
-    #mere @ say "Yup, it's the cafe theme. It's on the softer side but it's the kind of sound I groove to."
-    #mere @ say "I'm the one who composed it btw."
-    #
-    #player "Wow. It's not every day you meet one of the BGM composers."
-    #player "What did you say your name was again?"
-    #
-    #n "You tilt your head to look at the name written on her coffee cup."
-    #
-    #player "...Mere?"
-    #
-    #mere @ say "It's pronounced Mere. It's short for Meredith."
-    #
-    #player "Nice to meet you Mere~ I'm [name]."
-    #
-    #mere @ say "Notilde."
-    #
-    #player "Huh?"
-    #
-    #mere @ say "No tilde at the end. It's just Mere. Mere Notilde."
-    #mere @ say "I know, I hate explaining it."
-    #
-    #n "Mere rips open a few sugar packets and dumps them into her drink."
-    #
-    #player "Okay I need to ask cause my internal narration keeps getting confused. Are you a-"
-    #
-    #mere @ say "I'm a guy lol"
-    #
-    #player "Okay but the-"
-    #
-    #mere @ say "Yup, I wear a skirt. It's comfy. And I think it looks cute on me."
-    #
-    #menu:
-    #    mere "{cps=0}Yup, I wear a skirt. It's comfy. And I think it looks cute on me.{/cps}"
-    #    "It *is* cute on you.":
-    #        $ rosePoints = rosePoints + 1
-    #        
-    #        player "It is cute on you."
-    #        
-    #        mere @ say "Thanks!"
-    #        mere @ say "And if your internal narration slips up and calls me a girl from time to time, I don't mind~"
-    #        
-    #        n "Oh thank goodness."
-    #        n "You have a feeling that's going to be happening quite a lot."
-    #    "No further questions..":
-    #        player "Well alright then. No further questions."
-    #
-    #        mere @ say "It's a common mistake."
-    #        mere @ say "I don't really mind if your internal narration slips up and calls me a girl from time to time~"
-    #        
-    #        n "You have a feeling that's going to be happening quite a lot."
-    #    "Boys shouldn't wear skirts":
-    #        player "Boys shouldn't wear skirts."
-    #        
-    #        mere @ say "Why not?"
-    #        
-    #        player "Because they're for girls."
-    #        
-    #        mere @ say "Says who?"
-    #        
-    #        player "Says... society."
-    #        
-    #        mere @ say "Which society? The human one? Last I checked, they're on their way out."
-    #        
-    #        player "..."
-    #        player "I just remembered I have to be somewhere."
-    #        
-    #        mere @ say "Try not to get struck by lightning."
-    #        
-    #        hide mere with dissolve
-    #        
-    #        n "Damn furry femboys! Always so smug."
-    #        n "You storm out of the building, braving the storm outside on your way back to your dorm."
-    #        
-    #        jump sunday2Evening
-    #        
-    #
-    #mere @ say "Wanna listen to some more of my songs?"
-    #
-    #player "Sure!"
-    #
-    #n "You grab a seat right next to his and he passes you the headphones."
-    #
-    #mere @ say "I call this one Interlewd."
-    #
-    #hide mere with dissolve
-    #
-    #n "You spend all afternoon chatting with Mere, listening to music and showing him a few of your favorites as well."
-    #n "He even offered you a sip of his caffeinated concoction. It made your hangover disappear instantly but you still regret drinking it."
-    #n "You've been twitching every few seconds from the moment you swallowed a drop."
-    #n "You hang around for a while until the cafe closes. A bit early but it is Sunday after all. Thankfully the rain has died down at this point."
-    #
-    #show mere neutral at center with dissolve:
-    #    ypos y_mere
-    #
-    #mere @ say "Yoooo check out my {a=https://merenotilde.bandcamp.com/}band{/a}{a=https://soundcloud.com/MERENOTILDE/}cloud{/a} later, k?"
-    #
-    #player "Totally!"
-    #
-    #mere @ say "See ya!"
-    #
-    #hide mere with dissolve
-    #
-    #n "You wave goodbye to your new friend before heading back to your dorm for the evening."
+    stop music fadeout 2.0
 
 label sunday2Evening:
     scene bg codadorm with fade

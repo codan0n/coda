@@ -4,6 +4,8 @@ label roriDormIntro:
     
     scene bg roridorm with dissolve
     
+    play music "audio/music/vylet - リラックス.ogg" fadein 1.0
+    
     show box with Dissolve(.2):
         ypos 0
     
@@ -54,6 +56,8 @@ label avaClaireDormIntro:
     $ avaClaireDormIntroSeen = True
     
     scene bg avadorm with fade
+    
+    play music "audio/music/vylet - I Wish I Could Tell You.ogg" fadein 1.0
     
     show box with Dissolve(.2):
         ypos 0
