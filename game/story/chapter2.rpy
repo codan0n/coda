@@ -17,7 +17,7 @@ label chapter2start:
     
     scene bg classroom with fade
 
-    play music "audio/music/mere - schooldaze.ogg" fadein 1.0
+    play music "audio/music/mere - schooldaze.ogg" fadein .4
 
     show box with Dissolve(.2):
         ypos 0
@@ -234,7 +234,7 @@ label week2Tuesday:
     
     scene bg campus with fade
     
-    play music "audio/music/vylet - Hard to Say Anything.ogg" fadein 1.0
+    play music "audio/music/vylet - Hard to Say Anything.ogg" fadein .4
     
     show box with Dissolve(.2):
         ypos 0
@@ -386,7 +386,7 @@ label week2Tuesday:
     
     scene bg classroom with fade
 
-    play music "audio/music/mere - schooldaze.ogg" fadein 1.0
+    play music "audio/music/mere - schooldaze.ogg" fadein .4
 
     show box with Dissolve(.2):
         ypos 0
@@ -459,7 +459,7 @@ label week2Tuesday:
     
     scene bg lecturehall with fade
 
-    play music "audio/music/mere - schooldaze faster.ogg" fadein 1.5
+    play music "audio/music/mere - schooldaze faster.ogg" fadein .4
 
     show box with Dissolve(.2):
         ypos 0
@@ -734,8 +734,8 @@ label week2Tuesday:
 
     scene bg codadorm with fade
 
-    ##play sound "audio/ambient/morning birds.ogg" fadein 1.0
-    play music "audio/music/vylet - yeah i'm ok thanks for asking.ogg" fadein 1.0
+    ##play sound "audio/ambient/morning birds.ogg" fadein .4
+    play music "audio/music/vylet - yeah i'm ok thanks for asking.ogg" fadein .4
     #play music "audio/exports/【Music】こんにちは! ♡ [lQQkCtUahHE].opus"
     
     show box with Dissolve(.2):
@@ -798,7 +798,7 @@ label week2Tuesday:
     show box with Dissolve(.2):
         ypos 0
     
-    play music "audio/music/vylet - tenderness.ogg" fadein 1.0
+    play music "audio/music/vylet - tenderness.ogg" fadein .4
     
     ### $ gardenEvents.append("avaGarden")
     
@@ -840,8 +840,8 @@ label week2Tuesday:
     show box with Dissolve(.2):
         ypos 0
 
-    #play music "audio/music/vylet pony - Reading at Night.ogg" fadein 1.0
-    play music "audio/music/vylet - someday.ogg" fadein 1.0
+    #play music "audio/music/vylet pony - Reading at Night.ogg" fadein .4
+    play music "audio/music/vylet - someday.ogg" fadein .4
     
     if gardenDiscovered == True:
         n "This is the same garden you've visited before, just at one of the other entrances. The area is quite expansive and you haven't been to this part before."
@@ -1354,7 +1354,7 @@ label week2Tuesday:
     show box with Dissolve(.2):
         ypos 0
         
-    play music "audio/music/vylet - Ordinarily.ogg" fadein 1.0
+    play music "audio/music/vylet - Ordinarily.ogg" fadein .4
 
     n "The following day..."
     
@@ -1585,7 +1585,7 @@ label week2Tuesday:
     
     scene bg schoolhallways with fade
     
-    play music "audio/music/vylet - someday.ogg" fadein 1.0
+    play music "audio/music/vylet - there.ogg" fadein .4
     
     show box with Dissolve(.2):
         ypos 0
@@ -1740,7 +1740,7 @@ label week2Tuesday:
     show box with Dissolve(.2):
         ypos 0
         
-    play music "audio/music/vylet - wish.ogg" fadein 1.0
+    play music "audio/music/vylet - wish.ogg" fadein .4
         
     show gunner neutral at center:
         ypos y_gunner
@@ -1803,7 +1803,6 @@ label beauty_and_the_beast:
     scene bg codadorm with fade
 
     play music "audio/ambient/morning birds.ogg" fadein 0.1
-    #play music "audio/music/Evan Schaeffer - React.ogg" fadein 1.0
 
     show box with Dissolve(.2):
         ypos 0
@@ -1848,7 +1847,7 @@ label beauty_and_the_beast:
     
     scene bg schoolhallways with fade
     
-    play music "audio/ambient/indoors people talking.ogg" fadein 1.5
+    play music "audio/ambient/indoors people talking.ogg" fadein .4
     
     show box with Dissolve(.2):
         ypos 0
@@ -3124,7 +3123,7 @@ label leaving_hospital:
 label monty_hall:
     scene bg codadorm with fade
 
-    play music "audio/ambient/morning birds.ogg" fadein 1.5
+    play music "audio/ambient/morning birds.ogg" fadein .4
 
     show box with Dissolve(.2):
         ypos 0
@@ -3137,7 +3136,7 @@ label monty_hall:
     
     scene bg classroom with fade
     
-    play music "audio/music/mere - schooldaze.ogg" fadein 1.0
+    play music "audio/music/mere - schooldaze.ogg" fadein .4
 
     show box with Dissolve(.2):
         ypos 0
@@ -3175,7 +3174,7 @@ label monty_hall:
 
     scene bg lecturehall with fade
     
-    play music "audio/music/mere - schooldaze faster.ogg" fadein 1.5
+    play music "audio/music/mere - schooldaze faster.ogg" fadein .4
     
     show box with Dissolve(.2):
         ypos 0
@@ -3289,7 +3288,7 @@ label monty_hall:
     
     scene bg campus with fade
     
-    play music "audio/music/vylet - Ordinarily.ogg" fadein 1.0
+    play music "audio/music/vylet - Ordinarily.ogg" fadein .4
     
     show box with Dissolve(.2):
         ypos 0
@@ -3903,7 +3902,7 @@ label ellen_feeding_ducks:
     
     scene bg campus with fade
     
-    play music "audio/music/vylet - Catching On.ogg" fadein 1.0
+    play music "audio/music/vylet - Catching On.ogg" fadein .4
     
     show box with Dissolve(.2):
         ypos 0
@@ -4182,7 +4181,7 @@ label ellen_feeding_ducks:
     
     scene bg campus with fade
     
-    play music "audio/music/vylet - Destiny Station.ogg" fadein 1.0
+    play music "audio/music/vylet - Destiny Station.ogg" fadein .4
     
     show box with Dissolve(.2):
         ypos 0
@@ -4502,7 +4501,7 @@ label ellen_feeding_ducks:
             
             scene bg roof with fade
             
-            play music "audio/music/Vylet Pony -  Colourless.ogg" fadein 1.0
+            play music "audio/music/Vylet Pony -  Colourless.ogg" fadein .4
             
             show box with Dissolve(.2):
                 ypos 0
@@ -4703,7 +4702,7 @@ label ellen_feeding_ducks:
     show box with Dissolve(.2):
         ypos 0
     
-    play music "audio/music/mere - coffeeLove.exe.ogg" fadein 1.0
+    play music "audio/music/mere - coffeeLove.exe.ogg" fadein .4
     
     show claire sweater happy at center:
         ypos y_claire
@@ -5144,7 +5143,7 @@ label ellen_feeding_ducks:
 
     n "Later that evening..."
     
-    play music "audio/ambient/outdoors night crickets.ogg" fadein 1.5
+    play music "audio/ambient/outdoors night crickets.ogg" fadein .4
 
     player "Gosh darn dangit raptor jesus god gosh darn dammit goshhhh"
     player "Where the heck is Rori???"

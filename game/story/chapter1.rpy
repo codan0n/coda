@@ -139,7 +139,7 @@ label chapter1:
     scene bg campus_sunny_day with dissolve
     #background names can't have capital letters
     
-    play music "audio/music/vylet - Hard to Say Anything.ogg" fadein 1.0
+    play music "audio/music/vylet - Hard to Say Anything.ogg" fadein .4
     
     show box with Dissolve(.2):
         ypos 0
@@ -303,7 +303,7 @@ label college_orientation:
     show box with Dissolve(.2):
         ypos 0
 
-    play music "audio/ambient/indoors people talking.ogg" fadein 1.5
+    play music "audio/ambient/indoors people talking.ogg" fadein .4
     
     #n "You had some trouble finding the building you're supposed to be in but managed to make it just in time."
     n "After checking in, you were directed to a lecture hall where several others are already seated and chatting among themselves."
@@ -358,7 +358,7 @@ label college_orientation:
 
     hide margaret with dissolve
 
-    play music "audio/ambient/indoors people talking.ogg" fadein 1.5
+    play music "audio/ambient/indoors people talking.ogg" fadein .4
 
     show rori worried at center with dissolve:
         ypos y_rori
@@ -701,7 +701,7 @@ label college_orientation:
 
     hide margaret with dissolve
     
-    play music "audio/ambient/indoors people talking.ogg" fadein 1.5
+    play music "audio/ambient/indoors people talking.ogg" fadein .4
 
     n "It's about time. You were starting to doze off."
     n "Now that that's out of the way, you can return to your dorm and get your things put away."
@@ -754,7 +754,7 @@ label college_orientation:
 
     scene bg campus with dissolve
 
-    play music "audio/ambient/outdoors night crickets.ogg" fadein 1.5
+    play music "audio/ambient/outdoors night crickets.ogg" fadein .4
 
     show box with Dissolve(.2):
         ypos 0
@@ -1339,14 +1339,21 @@ label exploring_campus:
         
         rori @ say "Oh, hello again [name]!"
         rori @ say "I see you've met my roommate."
+
+        show gunner disgusted
         
-        gunner @ say "Rori! I'm begging you, join my frat!"
+        gunner @ say "Rori! I'm begging you, join the Alphas!"
+        
+        show gunner displeased
+        
         gunner @ say "If I don't get enough new recruits, the boys are gonna duct tape me to the ceiling again!"
         
         show rori sleepy
         
         rori @ say "Hrm... already doesn't sound like it's for me."
-        rori @ say "What do you even do in a frat?"
+        rori @ say "What do you even do in a fraternity?"
+        
+        show gunner optimistic
 
         gunner @ say "Cool bro stuff like uhh... hazing new members, drinking shitty beer, hitting on sorority chicks, playing sports..."
         
@@ -1356,11 +1363,15 @@ label exploring_campus:
         
         show rori sleepy
         
+        show gunner cutie
+        
         gunner @ say "There's also a bunch of hot guys and stuff."
         
         show rori anxious
         
         rori @ say "Wha-? I-I don't see what that has to do with anything!"
+        
+        show gunner determined
         
         gunner @ say "Come on dude, I saw the kind of anime you watch."
         
@@ -1373,6 +1384,8 @@ label exploring_campus:
             "Which anime?":
                 player "Which anime was it?"
                 
+                show gunner neutral
+                
                 gunner @ say "The one with all the buff dudes with ghosts that punch really fast and are also buff dudes half the time."
                 
                 player "Jojo's Strange Journey?"
@@ -1380,23 +1393,36 @@ label exploring_campus:
                 n "Rori nods his head."
                 n "Damn, you thought you could defend him but that one is undoubtedly pretty gay."
                 
+                show gunner cheeky1
+                
                 gunner @ say "Hahahaha if that's your type there's plenty of jacked Alpha guys. They practically live at the gym."
             "Lay off him, dude":
                 $roriPoints =+ 1
                 
                 player "So what? Lay off him, dude."
                 
+                show gunner itsover
+                
                 n "Gunner puts his paws up innocently and scoffs."
                 
                 gunner @ say "Relax, it's just a bit of banter."
+                
+                show gunner neutral
+                
                 gunner @ say "Seriously though, some Alphas are jacked. They practically live at the gym."
         
         show rori worried
+        show gunner neutral
                 
         rori @ say "Thanks for the offer but I'm more into... sensitive guys I guess?"
         
+        show gunner frown1
+        
         gunner @ say "Like... feelings? Yeah I dunno if they're good at that."
         gunner @ say "Look, can I just put your names down? You don't have to show up but the more people who sign on, the more money we get from the university."
+        
+        show gunner neutral
+        
         gunner @ say "You'll get access to benefits like sports tickets and exclusive parties and stuff. Oh and we have monthly game tournaments!"
         
         show rori concerned
@@ -1404,6 +1430,8 @@ label exploring_campus:
         n "That last part caught Rori's attention."
         
         rori @ say "Tournaments? What do you play?"
+        
+        show gunner optimistic
         
         gunner @ say "Usually the yearly Call of Battlefield: Modern Football but sometimes someone will bring in some weird ass Japanese game none of us have ever heard of hahaha!"
         
@@ -1413,7 +1441,11 @@ label exploring_campus:
         
         rori @ say "Fine, whatever. Sign me up I guess. At least I can probably sell the sports tickets."
         
+        show gunner wink catface
+        
         gunner @ say "Sweet! I just need your signature here! And if I come across any uhh... emotional guys? I'll send them your way!"
+        
+        show gunner neutral
         
         rori @ say "Suuuure..."
         
@@ -1426,21 +1458,26 @@ label exploring_campus:
                 
                 n "You take the clipboard and lazily scribble your name somewhere on it."
                 
+                show gunner cheeky1
+                
                 gunner @ say "Yes! You won't regret it!"
+                
+                player "I better not."
                 
                 n "Gunner holds out his fist."
                 n "As is customary, you are forced to give him a fist bump."
-                
-                player "I better not."
-            
             "Don't join":
                 player "Nah, I'd rather not."
+                
+                show gunner annoyed
                 
                 n "Gunner's ear flicks in annoyance."
                 
                 gunner @ say "Suit yourself."
                 
         player "Now if you're done wasting my time, I have breakfast to catch."
+        
+        show gunner neutral
                 
         gunner @ say "No problem dude. I'll see you around!"
         
@@ -1674,7 +1711,7 @@ label exploring_campus:
 label firstDayOfClass:
     scene bg codadorm with fade
 
-    play music "audio/ambient/morning birds.ogg" fadein 1.5
+    play music "audio/ambient/morning birds.ogg" fadein .4
 
     show box with Dissolve(.2):
         ypos 0
@@ -1690,7 +1727,7 @@ label firstDayOfClass:
 
     scene bg classroom with fade
 
-    play music "audio/music/mere - schooldaze.ogg" fadein 1.0
+    play music "audio/music/mere - schooldaze.ogg" fadein .4
 
     show box with Dissolve(.2):
         ypos 0
@@ -1806,16 +1843,16 @@ label firstDayOfClass:
     rothbauer @ say "Ahem well... now that that's settled, let's begin our first lesson!"
     rothbauer @ say "This course and the follow up World History II are designed to give you an understanding of how civilization has progressed alllll the way back from when the dinosaurs roamed the earth..."
 
-    n "Mr. Rothbauer circles a crude drawing of a pterodactyl on the chalk board and starts drawing an arrow pointing to some stick figure people."
+    n "Mr. Rothbauer circles a crude drawing of a pterodactyl on the chalk board and starts drawing an arrow pointing to some stick figures."
 
     rothbauer @ say "...to the rise and fall of humanity, leading into the current era, Societas Animalium, that is 'Society of Animals' as they say."
     rothbauer @ say "Of course, not much is known about how the dinosaurs lived since a meteor striking the planet destroyed nearly every bit of evidence they were here at all!"
-    rothbauer @ say "The world was buried under a blanket of smoke and ash, smothering their existence. It took millions of years before a civilization was able to form again."
-    rothbauer @ say "But what if I told you that we are not so different from the dinosaurs?"
-    rothbauer @ say "This... goes a bit against the curriculum but the evidence is there to suggest that our prehistoric ancestors were quite advanced!"
-    rothbauer @ say "The government doesn't want you to know that ancient integrated circuits have been discovered deep underground alongside the fossilized remains of Mesozoic era creatures."
-    rothbauer @ say "To develop such advanced technology implies the existence of organized civilization!"
-    rothbauer @ say "Ahem, excuse me, I'm just very passionate about that particular time period."
+    rothbauer @ say "After the world was buried under a blanket of smoke and ash, smothering their existence. It took millions of years before a civilization was able to form again."
+    #rothbauer @ say "But what if I told you that we are not so different from the dinosaurs?"
+    #rothbauer @ say "This... goes a bit against the curriculum but the evidence is there to suggest that our prehistoric ancestors were quite advanced!"
+    #rothbauer @ say "The government doesn't want you to know that ancient integrated circuits have been discovered deep underground alongside the fossilized remains of Mesozoic era creatures."
+    #rothbauer @ say "To develop such advanced technology implies the existence of organized civilization!"
+    #rothbauer @ say "Ahem, excuse me, I'm just very passionate about that particular time period."
     rothbauer @ say "In any case, anything before the agricultural revolution humans kickstarted circa 10,000BCE won't be on the test."
     rothbauer @ say "A big thank you to [name]'s ancestors for that!"
 
@@ -1863,7 +1900,7 @@ label firstDayOfClass:
             
         scene bg lecturehall with fade
 
-        play music "audio/music/mere - schooldaze faster.ogg" fadein 1.5
+        play music "audio/music/mere - schooldaze faster.ogg" fadein .4
 
         show box with Dissolve(.2):
             ypos 0
@@ -1879,7 +1916,7 @@ label firstDayOfClass:
     else:
         scene bg lecturehall with fade
 
-        play music "audio/music/mere - schooldaze faster.ogg" fadein 1.5
+        play music "audio/music/mere - schooldaze faster.ogg" fadein .4
 
         show box with Dissolve(.2):
             ypos 0
@@ -2031,7 +2068,7 @@ label secondDayOfClass:
     #___tuesday1
     scene bg codadorm with fade
 
-    play music "audio/ambient/morning birds.ogg" fadein 1.0
+    play music "audio/ambient/morning birds.ogg" fadein .4
 
     show box with Dissolve(.2):
         ypos 0
@@ -2612,7 +2649,7 @@ label thirdDayOfClass:
 
     scene bg classroom with fade
     
-    play music "audio/music/mere - schooldaze.ogg" fadein 1.0
+    play music "audio/music/mere - schooldaze.ogg" fadein .4
 
     show box with Dissolve(.2):
         ypos 0
@@ -2838,7 +2875,7 @@ label thirdDayOfClassStats:
 
         scene bg cafe with fade
 
-        play music "audio/music/mere - coffeeLoveInstrumentalEditSlowexe.ogg" fadein 1.0
+        play music "audio/music/mere - coffeeLoveInstrumentalEditSlowexe.ogg" fadein .4
 
         show box with Dissolve(.2):
             ypos 0
@@ -4108,7 +4145,7 @@ label afterAvaText1:
         
         scene bg campus with fade
         
-        play music "audio/music/vylet - yeah i'm ok thanks for asking.ogg" fadein 1.0
+        play music "audio/music/vylet - yeah i'm ok thanks for asking.ogg" fadein .4
         
         show box with Dissolve(.2):
             ypos 0
@@ -4482,7 +4519,7 @@ label thursday1:
             if avaClaireDormIntroSeen == True:
                 scene bg avadorm with fade
     
-                play music "audio/music/vylet - I Wish I Could Tell You.ogg" fadein 1.0
+                play music "audio/music/vylet - I Wish I Could Tell You.ogg" fadein .4
                 
                 show box with Dissolve(.2):
                     ypos 0
@@ -4787,7 +4824,7 @@ label friday1:
     
     scene bg codadorm with fade
     
-    play music "audio/music/vylet - im sorry (apathy).ogg" fadein 1.0
+    play music "audio/music/vylet - im sorry (apathy).ogg" fadein .4
     
     show box with Dissolve(.2):
         ypos 0
@@ -4874,10 +4911,10 @@ label rooftop_party:
 
     scene bg roof with fade
 
-    #play music "audio/Monkey Warhol - Boots & Pants (Instrumental Mix).mp3" fadein 1.0
+    #play music "audio/Monkey Warhol - Boots & Pants (Instrumental Mix).mp3" fadein .4
     #https://freemusicarchive.org/music/Monkey_Warhol/boots-pants-ep/boots-pants-instrumental-mix
 
-    play music "audio/music/Monkey Warhol - Boots & Pants (Sidekick Wave Instrumental Remix).ogg" fadein 1.0
+    play music "audio/music/Monkey Warhol - Boots & Pants (Sidekick Wave Instrumental Remix).ogg" fadein .4
     #https://freemusicarchive.org/music/Monkey_Warhol/boots-pants-ep/boots-pants-sidekick-wave-instrumental-remix
 
     show box with Dissolve(.2):
@@ -5171,7 +5208,7 @@ label rooftop_party:
 
     n "The crowd lets out a triumphant cheer and the party goes on like nothing happened."
 
-    play music "audio/music/Monkey Warhol - Boots & Pants (Sidekick Wave Instrumental Remix).ogg" fadein 1.0
+    play music "audio/music/Monkey Warhol - Boots & Pants (Sidekick Wave Instrumental Remix).ogg" fadein .4
 
     n "You wave down to Gunner and he waves back but suddenly jumps into some nearby bushes."
 
@@ -5243,7 +5280,7 @@ label rooftop_party:
 
     scene bg campus with dissolve
 
-    #play sound "audio/ambient/outdoors night crickets.ogg" fadein 1.0
+    #play sound "audio/ambient/outdoors night crickets.ogg" fadein .4
     play music "audio/music/vylet - wish.ogg"
 
     show box with Dissolve(.2):
@@ -5344,7 +5381,7 @@ label sunday2:
     
     scene bg cafe with fade
 
-    play music "audio/music/mere - coffeeLove.exe.ogg" fadein 1.0
+    play music "audio/music/mere - coffeeLove.exe.ogg" fadein .4
 
     show box with Dissolve(.2):
         ypos 0

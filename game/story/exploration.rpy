@@ -137,6 +137,8 @@ label dormSleep:
     return
     
 label dormStudy:
+    stop music fadeout 2.0
+
     scene bg codadorm with fade
     
     show box with Dissolve(.2):
@@ -469,7 +471,7 @@ label gunnerTrack:
     play music "audio/music/vylet - Ordinarily.ogg" fadein 1.0
         
     "You make your way back to the fitness area, past the track to the weights and machines where a multitude of students are exercising."
-    "Unsurprisingly, among them is Gunner on a bench press, pushing a bar with a couple of large plates up above his chest."
+    "Unsurprisingly, among them is Gunner on a bench press, pushing a weighted barbell up above his chest."
     "He sharply inhales each time the bar comes down and steadily exhales as he extends his arms upward. His steady form allows him to move the barbell smoothly with grace."
     "After a few reps, he sets it on the rack and sits up. As he reaches for his water bottle he notices you awkwardly standing around and waves you over."
     

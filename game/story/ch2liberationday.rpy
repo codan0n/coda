@@ -209,8 +209,8 @@ label liberation_day:
                 ava @ say "You just wanna know \'What made you do it?\'"
                 ava @ say "Cause you have to wonder if you could become a murderer too if you grew up just a little differently."
                 ava @ say "You'd know you're not just with any regular shmuck if he had the guts to kill somebody!"        
-            "Nah, I get it.":
-                player "I completely understand."
+            "I sorta get it":
+                player "I feel the same way kinda."
                 
                 show ava typical neutral
                 
@@ -2973,8 +2973,8 @@ label liberation_day:
         
 label ch2End:
     n "The rest of your weekend passes uneventfully."
-    n "You just recover from all the adventure of the past couple of days, browsing the web, doing a bit of studying, resting up for your return to class."
+    n "You just recover from all the excitement of the past couple of days, browse the web, do a bit of studying, and rest up for your return to class."
     
     
     
-    jump ending
+    #jump ending
