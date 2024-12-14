@@ -169,6 +169,8 @@ define config.version = "0.6.0"
 
 define gui.about = _p("""
 """)
+define gui.credits = _p("""
+""")
 
 
 ## A short name for the game used for executables and directories in the built
