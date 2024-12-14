@@ -161,7 +161,7 @@ define gui.show_name = False
 
 ## The version of the game.
 
-define config.version = "0.6.0"
+define config.version = "0.6.1"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -203,7 +203,7 @@ define config.has_voice = True
 
 #define config.main_menu_music = "audio/exports/vylet pony - aura.opus"
 #define config.main_menu_music = "audio/exports/Audio Track.opus"
-define config.main_menu_music = "audio/music/vylet - Rarity Dozing in a Coffee Shop at 1AM.opus"
+define config.main_menu_music = "audio/music/vylet - Rarity Dozing in a Coffee Shop at 1AM.ogg"
 
 
 
