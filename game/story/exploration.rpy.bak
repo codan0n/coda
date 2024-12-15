@@ -22,7 +22,7 @@ label afterClassOptions:
                     if townEvents:
                         $ randomSelected = renpy.random.choice(townEvents)
                         
-                        call expression randomSelected 
+                        call expression randomSelected from _call_expression_1 
                         
                         call dormSleep from _call_dormSleep_1
                         
@@ -60,19 +60,22 @@ label afterClassOptions:
                         jump afterClassOptions
                 
                 "Garden" if gardenDiscovered == True:
-                    if gardenEvents:
-                        $ randomSelected = renpy.random.choice(gardenEvents)
-                        
-                        call expression randomSelected from _call_expression_4
-                        
-                        call dormSleep from _call_dormSleep_4
+                    if mishkaMallSpecialActive == False: ###
+                        if gardenEvents:
+                            $ randomSelected = renpy.random.choice(gardenEvents)
+                            
+                            call expression randomSelected from _call_expression_4
+                            
+                            call dormSleep from _call_dormSleep_4
                         
                     else:
                         "You wander around the botanical garden but don't find anything interesting to do."
                         
                         jump afterClassOptions
                 "Cafe":
-                    if cafeEvents:
+                    if mishkaMallSpecialActive == True:
+                        call mishkaSpecialScene1
+                    elif cafeEvents:
                         $ randomSelected = renpy.random.choice(cafeEvents)
                         
                         call expression randomSelected from _call_expression_5
@@ -137,6 +140,8 @@ label dormSleep:
     return
     
 label dormStudy:
+    stop music fadeout 2.0
+
     scene bg codadorm with fade
     
     show box with Dissolve(.2):
@@ -209,6 +214,139 @@ label genericNightwalk:
     "You'll have to enjoy an evening stroll with one of your friends next time."
     
     return
+    
+label mishkaSpecialScene1:
+    scene bg cafe with fade
+
+    play music "audio/music/mere - coffeeLove.exe.ogg" fadein .4
+
+    show box with Dissolve(.2):
+        ypos 0
+       
+    n "You've been thinking about what to say to Mishka after you missed your mall date but nothing good had come to mind."
+    n "You can't delay this any further, so you'll have to think of something on the spot."
+    n "Better late than never to apologize, right?"
+    n "You stroll up to the counter, avoiding looking at her in the eye until you're close."
+    
+    show mishka neutral at center with dissolve:
+        ypos y_mishka
+        
+    mishka @ say "Privyet!"
+    
+    player "Hey! Mishka um..."
+    
+    mishka @ say "Will it be the usual today?"
+    
+    menu:
+        mishka "{cps=0}Will it be the usual today?{/cps}"
+        "Joke":
+            n "For some reason, you're compelled to jest. It makes it easier for everyone if you act nonchalant when you apologize."
+            
+            player "Knock knock."
+            
+            show mishka despondent
+            
+            mishka @ say "Huh? Come in..?"
+            
+            n "She's already confused and you don't even have the rest of the joke lined up."
+            
+            player "Err, what did the chicken say to the egg?"
+            
+            mishka @ say "Are you feeling alright [name]?"
+            
+            n "Your better judgement just clocked in and is telling you to stop this right now."
+            
+            player "W-Why did the human walk into the cafe?"
+            
+            n "Mishka thinks for a moment and finally seems to catch on."
+            
+            show mishka mousey wink right
+            
+            mishka @ say "Oh! I've heard this phrasing before."
+            mishka @ say "Is this... an American joke?"
+            
+            n "You're in too far to back out now. Go on, deliver a punchline already."
+            
+            player "To give you his apolo-cheese for not meeting you at the mall the other day."
+            
+            n "You're lucky Mishka's English is too poor to understand your borderline racist pun."
+
+        "Be earnest":
+            n "It's better to be straightforward and mature about this."
+            n "Even though it isn't your fault, it's *always* your fault in the minds of women."
+            
+            show mishka despondent
+            
+            player "Sorry about Saturday. It was totally my fault. I should have made a better effort to go to the mall with you."
+            
+    show mishka shy
+            
+    mishka @ say "Oh my...!"
+    mishka @ say "You're saying you weren't there either?"
+    
+    player "Wait, you didn't even go?"
+    
+    show mishka anxious sad
+    
+    mishka @ say "Sorry, I-I got nervous and just stayed home..."
+    
+    show mishka wincing2
+    
+    mishka @ say "I felt so bad, and then I didn't see you for a few days, I thought you were angry at me."
+    
+    player "What no."
+    player "I was in the hospital for the past few days after I fell down."
+    player "I thought *you* would be mad at *me* for abandoning you."
+    
+    show mishka anxious smile
+    
+    mishka @ say "I never even knew you weren't there!"
+    
+    show mishka anxious sad
+    
+    mishka @ say "Are you okay?? You saw the doctor?"
+    
+    player "Yeah I'm good now."
+    
+    show mishka happy
+    
+    mishka @ say "Horusho!"
+    
+    show mishka anxious neutral
+    
+    player "Heh, dah."
+    player "Well... I'll forgive you if you forgive me."
+    
+    show mishka happy
+    
+    mishka @ say "Deal!"
+    
+    show mishka nervous
+    
+    mishka @ say "...But do you still want to go sometime? I'm free again this Saturday."
+    
+    player "Yeah!! I won't miss it this time even if it kills me!"
+    
+    show mishka anxious wink right
+    
+    mishka @ say "Hopefully it doesn't come to that xaxa..."
+    
+    show mishka neutral eyesclosed
+    
+    mishka @ say "But now I'm excited!"
+    
+    player "Me too!"
+    
+    hide mishka with dissolve
+    
+    n "After chatting with Mishka some more and buying a drink, you head back to your dorm for the evening."
+    
+    $ mishkaMallSpecialPlayed = True
+    $ mishkaMallSpecialActive = False
+
+
+    return
+    
 
 label mishkaGarden:
     $ gardenEvents.remove("mishkaGarden")
@@ -217,6 +355,8 @@ label mishkaGarden:
     #different scenes for each season?
     
     scene bg garden with fade
+    
+    play music "audio/music/vylet pony - Reading at Night.ogg" fadein 1.0
     
     show box with Dissolve(.2):
         ypos 0
@@ -407,6 +547,7 @@ label mishkaGarden:
             
             hide mishka with dissolve
             
+    stop music fadeout 2.0
             
     return
     
@@ -462,9 +603,11 @@ label gunnerTrack:
     #$ gunnerTrackNumber += 1
 
     #only available on sunny days
+    
+    play music "audio/music/vylet - Ordinarily.ogg" fadein 1.0
         
     "You make your way back to the fitness area, past the track to the weights and machines where a multitude of students are exercising."
-    "Unsurprisingly, among them is Gunner on a bench press, pushing a bar with a couple of large plates up above his chest."
+    "Unsurprisingly, among them is Gunner on a bench press, pushing a weighted barbell up above his chest."
     "He sharply inhales each time the bar comes down and steadily exhales as he extends his arms upward. His steady form allows him to move the barbell smoothly with grace."
     "After a few reps, he sets it on the rack and sits up. As he reaches for his water bottle he notices you awkwardly standing around and waves you over."
     
@@ -676,6 +819,8 @@ label gunnerTrack:
     
     n "You dread having to do any more physical work but the thought of food entices you to just do it and get it over with."
     
+    stop music fadeout 2.0
+    
     return
 
 label linaTown:
@@ -693,6 +838,7 @@ label linaTown:
     
     
     #play channel1 "audio/ambient/outdoors people talking.ogg" fadein .5
+    play music "audio/ambient/outdoors people talking.ogg" fadein .5
     
     show box:
         ypos 0
@@ -703,7 +849,7 @@ label linaTown:
     n "... You might go back for it, it was a really nice knife."
     n "Is that really all there is to do in the city though? Buy stuff you didn't know you wanted?"
     
-    play music "audio/music/vylet - glamour.ogg"
+    play music "audio/music/vylet - glamour.ogg" fadein 1.0
     
     n "The sound of live music hits your ears among the incessant chattering. Now that might be worth checking out."
     n "You follow the sound and are somewhat disappointed to see it's just a lone street performer and not part of a bigger event."
@@ -1003,7 +1149,7 @@ label linaTown:
             n "She laughs at your dumb jokes and, it might just be your imagination but it seems as if she looks into your eyes longingly."
             n "Evening comes and you have to part ways but you get the feeling she'd love to do this again sometime."
     
-    stop channel1 fadeout 1.0
+    #stop channel1 fadeout 1.0
     stop music fadeout 1.5
 
     return
@@ -1068,7 +1214,7 @@ label oliviaCafe:
     show box:
         ypos 0
 
-    #play music "audio/ambient/outdoors people talking.ogg" fadein 1.3
+    play music "audio/ambient/outdoors people talking.ogg" fadein 1.3
 
     n "On your way to Coffee Zone for some lunch, you end up walking a few paces behind a reptile in a wheelchair."
     n "Being from a small town and never really socializing, you thought they were just a myth, something they put in movies to scare young children."

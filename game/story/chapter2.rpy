@@ -1321,18 +1321,18 @@ label week2Tuesday:
                 n "Well if the cringe of being caught vaping wasn't enough to deter you from trying it, this cautionary tale will surely prevent you from even considering it."
                 
                 jump bulletinboard1
-            #"Gayest Pride Parade Ever":
-            #    n "\"Come join the Gay Gay Homosexual Gay Club's 5th annual queerfest!\""
-            #    n "It's a flyer for an upcoming traffic obstruction event... that happened 6 months ago."
-            #    n "All the text is obnoxiously rainbow colored. All of it."
-            #    n "How many times can they fit the word \"gay\" on a 4x5 inch sheet of paper?"
-            #    n "You haven't been bombarded with this word this much since playing on Xbawks Live in middle school."
-            #    
-            #    jump bulletinboard1
+            "Gayest Pride Parade Ever":
+                n "\"Come join the Gay Gay Homosexual Gay Club's 5th annual queerfest!\""
+                n "It's a flyer for an upcoming traffic obstruction event... that happened 6 months ago."
+                n "All the text is obnoxiously rainbow colored. All of it."
+                n "How many times can they fit the word \"gay\" on a 4x5 inch sheet of paper?"
+                n "You haven't been bombarded with this word this much since playing on Xbawks Live in middle school."
+                
+                jump bulletinboard1
             "Sick of Being a Furry?":
                 n "\"Hate how your fur/feathers/scales look?\""
                 n "\"Wish you had beautiful soft skin?\""
-                n "\"Look no further than the humansona workshop every 3th Tuesday after a full moon at 2:14AM where we engage in roleplay with our inner human personas!\""
+                n "\"Look no further than the skinwalker workshop every 3th Tuesday after a full moon at 2:14AM where we engage in roleplay with our inner human personas!\""
                 n "This is borderline offensive to you."
                 
                 jump bulletinboard1
@@ -3098,7 +3098,7 @@ label leaving_hospital:
     if mishkaMall == True:
         $ mishkaMallSpecialActive = True
     
-    call afterClassOptions
+    call afterClassOptions from _call_afterClassOptions_1
     
     #n "The doctor said to take it easy, so you're just gonna relax in bed all day."
     

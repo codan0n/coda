@@ -74,7 +74,7 @@ label afterClassOptions:
                         jump afterClassOptions
                 "Cafe":
                     if mishkaMallSpecialActive == True:
-                        call mishkaSpecialScene1
+                        call mishkaSpecialScene1 from _call_mishkaSpecialScene1
                     elif cafeEvents:
                         $ randomSelected = renpy.random.choice(cafeEvents)
                         
