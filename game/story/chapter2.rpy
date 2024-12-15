@@ -2573,6 +2573,12 @@ label hospital_bound:
             n "You windows are too small for you to squeeze through. You'll have to just get up and walk through the front door."
             n "Can't be that hard, right? It's not like everybody is on the lookout for you, and for all they know you're cleared to leave."
             n "You quietly slip out of bed and put your shoes on before grabbing your bag and approaching the door."
+            
+            scene bg schoolhallways with dissolve
+            
+            show box with Dissolve(.2):
+                ypos 0
+            
             n "Phase one complete."
             n "Now you're confronted with a problem you didn't anticipate: How the hell do you get out of here?"
             n "You have no recollection of how you got here and the hallways are like a maze."
@@ -3087,7 +3093,14 @@ label leaving_hospital:
         call phone_end from _call_phone_end_9
 
     n "You eat your cereal while watching videos, remembering to take one of your pills."
-    n "The doctor said to take it easy, so you're just gonna relax in bed all day."
+    n "You've got some free time today, what should you do?"
+    
+    if mishkaMall == True:
+        $ mishkaMallSpecialActive = True
+    
+    call afterClassOptions
+    
+    #n "The doctor said to take it easy, so you're just gonna relax in bed all day."
     
 
 
@@ -3995,6 +4008,9 @@ label ellen_feeding_ducks:
                     
                     claire @ say "Oh you~"
                     
+                    if calledClaireFat1 == True:
+                        claire @ say "I knew you were just playing hard to get when you said you weren't into fat girls before~"
+                    
                     show ava shocked
                     
                     player "You could even stand to put on a few more pounds haha"
@@ -4090,58 +4106,66 @@ label ellen_feeding_ducks:
 
     ava @ say "Mysterious~ How about you, [name]?"
     
-    menu:
-        ava "{cps=0}How about you, [name]?{/cps}"
-        "That sounds fun!":
-            $ avaPoints += 1
-            $ avaUrbex = True
-            
-            show claire sweater happy
-            
-            player "That sounds fun! I'd love to go with you!"
-            
-            show ava overjoyed
+    if mishkaMallSpecialPlayed == True:
+        player "Sorry, I already have plans to meet with Mishka on Saturday and I can't risk getting stuck in the hospital again."
+        
+        ava @ say "Aww..."
+        ava @ say "Guess I'll go on my own then."
+    else:
+        menu:
+            ava "{cps=0}How about you, [name]?{/cps}"
+            "That sounds fun!":
+                $ avaPoints += 1
+                $ avaUrbex = True
+                
+                show claire sweater happy
+                
+                player "That sounds fun! I'd love to go with you!"
+                
+                show ava overjoyed
 
-            ava @ say "Sweet! You don't mind if it's haunted, do you? Cause it's probably haunted."
-            
-            show ava happy
+                ava @ say "Sweet! You don't mind if it's haunted, do you? Cause it's probably haunted."
+                
+                show ava happy
 
-            player "No, haunted is fine."
-            
-            show claire suggestive
+                player "No, haunted is fine."
+                
+                show claire suggestive
 
-            claire @ say "Ksksksks you two are so cute!"
+                claire @ say "Ksksksks you two are so cute!"
 
-            show ava profile angry
+                show ava profile angry
 
-            ava @ say "We are not!"
-            
-            show claire sweater derp
-            
-            claire @ say "Girl chill! I'm just joking!"
-            
-        "I'll pass.":
-            show claire sweater happy
-            
-            player "Sounds cool but I'll pass. I'm supposed to go to the parade in town to get extra credit in history."
-            
-            show ava typical unamused
+                ava @ say "We are not!"
+                
+                show claire sweater derp
+                
+                claire @ say "Girl chill! I'm just joking!"
+                
+            "I'll pass.":
+                show claire sweater happy
+                
+                player "Sounds cool but I'll pass. I'm supposed to go to the parade in town to get extra credit in history."
+                
+                show ava typical unamused
 
-            ava @ say "Aww..."
-            ava @ say "Guess I'll go on my own then."
-            
+                ava @ say "Aww..."
+                ava @ say "Guess I'll go on my own then."
+                
     show ava typical happy
     show claire happy
             
-    n "You stand around chatting some more until Ava and Claire have to run to class."
+    n "You stand around chatting some more until Ava and Claire have to run to class, then you return to your dorm for the day."
             
     hide ava
     hide claire
     with dissolve
     
-    n "Now you can do something with your free time."
+    #n "Now you can do something with your free time."
     
-    call afterClassOptions from _call_afterClassOptions_1
+    
+    
+    #call afterClassOptions from _call_afterClassOptions_1
 
     hide box
     
@@ -4364,7 +4388,14 @@ label ellen_feeding_ducks:
     
     gunner @ say "And what about you?"
     
-    if avaUrbex == True:
+    if mishkaMallSpecialPlayed == True:
+        player "Sorry, I already have plans to go to the mall with Mishka and I can't afford to get arrested and miss it."  
+      
+        gunner @ say "Fine, do what you want. Just don't expect me and Rori to share the spoils from our treasure hunt!"
+                
+        player "You two have fun with that. I gotta run for now."
+    
+    elif avaUrbex == True:
         player "I already make plans to do some urbex stuff with someone this weekend. Sorry."
         
         gunner @ say "No sweat. Just be sure your schedule's free next year!"
@@ -4426,6 +4457,8 @@ label ellen_feeding_ducks:
     hide rori
     with dissolve
     
+    $ mishkaMallSpecialActive = False
+    
     n "What should you do with your free time?"
     
     call afterClassOptions from _call_afterClassOptions_2
@@ -4447,7 +4480,7 @@ label ellen_feeding_ducks:
 
     pause .7
     
-    label liberation_eve:
+label liberation_eve:
 
     scene bg lecturehall with fade
 
@@ -4877,7 +4910,7 @@ label ellen_feeding_ducks:
         xoffset 330
     with dissolve
     
-    if mishkaMall == True:
+    if mishkaMall == True and mishkaMallSpecialPlayed == False:
         n "It dawns on you that you haven't seen her since you made plans to go to the mall together."
         n "Which you failed to do."
         
@@ -4909,7 +4942,11 @@ label ellen_feeding_ducks:
             
             mishka @ say "No, just a friendly thing. You can come too if you want!"
             
+            show claire flustered
+            
             claire @ say "Aaaaaa I would if I didn't already have plans!"
+            
+            show claire happy
     
             mishka @ say "Another time then."
             

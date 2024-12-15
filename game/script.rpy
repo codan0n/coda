@@ -2308,6 +2308,16 @@ layeredimage mishka happy:
         pos (-70,-7)
         attribute say:
             "images/bubble.png"
+layeredimage mishka wincing2:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka wincing 2.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
 layeredimage mishka mousey wink right:
     at sprite_highlight('mishka')
     always:
@@ -3143,6 +3153,8 @@ label start:
     $ avaClaireLunch = False
     $ clairephonewhat = False
     $ clairephonethx = False
+    $ mishkaMallSpecialActive = False
+    $ mishkaMallSpecialPlayed = False
     $ statsSkill = 0
     $ frenchSkill = 0
     $ historySkill = 0

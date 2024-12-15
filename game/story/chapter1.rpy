@@ -4490,6 +4490,8 @@ label thursday1:
     claire @ say "'...study?'"
 
     n "She says with a wink and playfully nudges you."
+    
+    $ calledClaireFat1 = False
 
     menu:
         n "{cps=0}She says with a wink and playfully nudges you.{/cps=0}"
@@ -4724,6 +4726,8 @@ label thursday1:
             #$ ellenPoints =- 1
             #$ rosePoints =- 1
             
+            $ calledClaireFat1 = True
+            
             player "Sorry, I'm not into fat chicks."
             
             show claire sweater surprised earsup
@@ -4842,7 +4846,7 @@ label friday1:
 
     call reply_message("What's up") from _call_reply_message_184 
 
-    call message("Gunner", "Just wanted to see if you'd wanna hang out with me and my roommate tomorrow", "gunneravi.png") from _call_message_117 
+    call message("Gunner", "Just wanted to see if you'd wanna hang out with me and my roommate Rori tomorrow", "gunneravi.png") from _call_message_117 
     call message("Gunner", "I'm bringing bear", "gunneravi.png") from _call_message_118 
     call message("Gunner", "Beer*", "gunneravi.png") from _call_message_119 
 

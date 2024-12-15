@@ -60,19 +60,22 @@ label afterClassOptions:
                         jump afterClassOptions
                 
                 "Garden" if gardenDiscovered == True:
-                    if gardenEvents:
-                        $ randomSelected = renpy.random.choice(gardenEvents)
-                        
-                        call expression randomSelected from _call_expression_4
-                        
-                        call dormSleep from _call_dormSleep_4
+                    if mishkaMallSpecialActive == False: ###
+                        if gardenEvents:
+                            $ randomSelected = renpy.random.choice(gardenEvents)
+                            
+                            call expression randomSelected from _call_expression_4
+                            
+                            call dormSleep from _call_dormSleep_4
                         
                     else:
                         "You wander around the botanical garden but don't find anything interesting to do."
                         
                         jump afterClassOptions
                 "Cafe":
-                    if cafeEvents:
+                    if mishkaMallSpecialActive == True:
+                        call mishkaSpecialScene1
+                    elif cafeEvents:
                         $ randomSelected = renpy.random.choice(cafeEvents)
                         
                         call expression randomSelected from _call_expression_5
@@ -211,6 +214,139 @@ label genericNightwalk:
     "You'll have to enjoy an evening stroll with one of your friends next time."
     
     return
+    
+label mishkaSpecialScene1:
+    scene bg cafe with fade
+
+    play music "audio/music/mere - coffeeLove.exe.ogg" fadein .4
+
+    show box with Dissolve(.2):
+        ypos 0
+       
+    n "You've been thinking about what to say to Mishka after you missed your mall date but nothing good had come to mind."
+    n "You can't delay this any further, so you'll have to think of something on the spot."
+    n "Better late than never to apologize, right?"
+    n "You stroll up to the counter, avoiding looking at her in the eye until you're close."
+    
+    show mishka neutral at center with dissolve:
+        ypos y_mishka
+        
+    mishka @ say "Privyet!"
+    
+    player "Hey! Mishka um..."
+    
+    mishka @ say "Will it be the usual today?"
+    
+    menu:
+        mishka "{cps=0}Will it be the usual today?{/cps}"
+        "Joke":
+            n "For some reason, you're compelled to jest. It makes it easier for everyone if you act nonchalant when you apologize."
+            
+            player "Knock knock."
+            
+            show mishka despondent
+            
+            mishka @ say "Huh? Come in..?"
+            
+            n "She's already confused and you don't even have the rest of the joke lined up."
+            
+            player "Err, what did the chicken say to the egg?"
+            
+            mishka @ say "Are you feeling alright [name]?"
+            
+            n "Your better judgement just clocked in and is telling you to stop this right now."
+            
+            player "W-Why did the human walk into the cafe?"
+            
+            n "Mishka thinks for a moment and finally seems to catch on."
+            
+            show mishka mousey wink right
+            
+            mishka @ say "Oh! I've heard this phrasing before."
+            mishka @ say "Is this... an American joke?"
+            
+            n "You're in too far to back out now. Go on, deliver a punchline already."
+            
+            player "To give you his apolo-cheese for not meeting you at the mall the other day."
+            
+            n "You're lucky Mishka's English is too poor to understand your borderline racist pun."
+
+        "Be earnest":
+            n "It's better to be straightforward and mature about this."
+            n "Even though it isn't your fault, it's *always* your fault in the minds of women."
+            
+            show mishka despondent
+            
+            player "Sorry about Saturday. It was totally my fault. I should have made a better effort to go to the mall with you."
+            
+    show mishka shy
+            
+    mishka @ say "Oh my...!"
+    mishka @ say "You're saying you weren't there either?"
+    
+    player "Wait, you didn't even go?"
+    
+    show mishka anxious sad
+    
+    mishka @ say "Sorry, I-I got nervous and just stayed home..."
+    
+    show mishka wincing2
+    
+    mishka @ say "I felt so bad, and then I didn't see you for a few days, I thought you were angry at me."
+    
+    player "What no."
+    player "I was in the hospital for the past few days after I fell down."
+    player "I thought *you* would be mad at *me* for abandoning you."
+    
+    show mishka anxious smile
+    
+    mishka @ say "I never even knew you weren't there!"
+    
+    show mishka anxious sad
+    
+    mishka @ say "Are you okay?? You saw the doctor?"
+    
+    player "Yeah I'm good now."
+    
+    show mishka happy
+    
+    mishka @ say "Horusho!"
+    
+    show mishka anxious neutral
+    
+    player "Heh, dah."
+    player "Well... I'll forgive you if you forgive me."
+    
+    show mishka happy
+    
+    mishka @ say "Deal!"
+    
+    show mishka nervous
+    
+    mishka @ say "...But do you still want to go sometime? I'm free again this Saturday."
+    
+    player "Yeah!! I won't miss it this time even if it kills me!"
+    
+    show mishka anxious wink right
+    
+    mishka @ say "Hopefully it doesn't come to that xaxa..."
+    
+    show mishka neutral eyesclosed
+    
+    mishka @ say "But now I'm excited!"
+    
+    player "Me too!"
+    
+    hide mishka with dissolve
+    
+    n "After chatting with Mishka some more and buying a drink, you head back to your dorm for the evening."
+    
+    $ mishkaMallSpecialPlayed = True
+    $ mishkaMallSpecialActive = False
+
+
+    return
+    
 
 label mishkaGarden:
     $ gardenEvents.remove("mishkaGarden")

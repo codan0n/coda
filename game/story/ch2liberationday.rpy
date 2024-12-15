@@ -2703,7 +2703,7 @@ label liberation_day:
             
             n "She walks along side you, the both of you constantly swiveling your heads to look into the colorful stores."
             
-            mishka @ say "I didn't really go into any shops last time."            
+            #mishka @ say "I didn't really go into any shops last time."            
         else:
             n "What should you do with the rest of your long weekend?"
             n "Your friends are busy so you're on your own today."
