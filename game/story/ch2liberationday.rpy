@@ -2976,5 +2976,4 @@ label ch2End:
     n "You just recover from all the excitement of the past couple of days, browse the web, do a bit of studying, and rest up for your return to class."
     
     
-    
-    #jump ending
+    jump chapter3
