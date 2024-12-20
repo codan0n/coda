@@ -3167,7 +3167,7 @@ label monty_hall:
 
     rothbauer @ say "Must have been a long night studying, eh?"
     rothbauer @ say "*This* Friday is a holiday. Anthromorph's Liberation Day!"
-    rothbauer @ say "89 years ago, following the mass reduction in human population, the National Liberties Act was signed which gave anthromorph equal rights to humans."
+    rothbauer @ say "89 years ago, following the mass reduction in human population, the National Liberties Act was signed which gave anthromorphs equal rights to humans."
     rothbauer @ say "It took several rebellions, riots, and even wars throughout centuries to reach this monumental turning point in history."
     rothbauer @ say "Though it was population dynamics that accelerated this inevitable conclusion into existence."
     rothbauer @ say "Humanity would struggle to hold absolute power as their numbers dwindled following the failure to contain the disease that..."

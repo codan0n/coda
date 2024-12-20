@@ -4846,7 +4846,8 @@ label friday1:
 
     call reply_message("What's up") from _call_reply_message_184 
 
-    call message("Gunner", "Just wanted to see if you'd wanna hang out with me and my roommate Rori tomorrow", "gunneravi.png") from _call_message_117 
+    call message("Gunner", "Just wanted to see if you'd wanna hang out with me and my roommate Rori tomorrow", "gunneravi.png") from _call_message_117
+    #gunner "he's gay but dw he's cool"
     call message("Gunner", "I'm bringing bear", "gunneravi.png") from _call_message_118 
     call message("Gunner", "Beer*", "gunneravi.png") from _call_message_119 
 
