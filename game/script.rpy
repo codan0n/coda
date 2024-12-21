@@ -3138,12 +3138,6 @@ label start:
     $ avaUrbex = False
     $ gunnerRaid = False
     $ gaveCinRoll = False
-    $ studied = ""
-    $ fratsoro = ""
-    $ heshe = ""
-    $ heher = ""
-    $ hisher = ""
-    $ himher = ""
     
     $ forestDiscovered = True ###TEMPORARILY SET TO TRUE FOR THE DEMO
     $ libraryDiscovered = True ###TEMPORARILY SET TO TRUE FOR THE DEMO
