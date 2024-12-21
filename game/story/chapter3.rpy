@@ -306,6 +306,40 @@ label chapter3:
         
     scene bg campus with fade
     
+    show ava happy at center:
+        ypos y_ava
+    show claire flannel happy at center:
+        ypos y_claire
+    with dissolve
     
+    ava @ say "...You two have any plans after class?"
+    
+    claire @ say "Mmmh nope! Why?"
+    
+    ava @ say "I wanted to see if you wanted to go out shooting with me!"
+    
+    claire @ say "I would but I didn't bring my gun!"
+    
+    ava @ say "I meant with cameras. I'll even let you borrow one!"
+    ava @ say "I just love shooting in autumn, it's my favorite season."
+    ava @ say "The leaves are so pretty, especially at sunset~"
+    
+    player "I'd love to join you but I've got a doctor's appointment later today."
+    
+    ava @ say "Aww, hopefully nothing serious?"
+    
+    player "Just a checkup."
+    
+    ava @ say "Well, if you ever have a moment to go shooting, just let me know!"
+    
+    player "I will. See you two later!"
+    
+    ava @ say "See ya!"
+    
+    claire @ say "Byeee~"
+    
+    n "You wave goodbye as Claire and Ava head to their next classes."
+    
+    scene bg hospital with fade
     
     #ava talks about how the leaves have changed color and it's her favorite season to shoot. She invites you to come with her but you have a doctor appointment to get to.
