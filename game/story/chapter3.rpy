@@ -279,15 +279,33 @@ label chapter3:
     celestine @ say "Today we'll be getting some more practice with passé composé et imparfait tenses!"
     celestine @ say "Let's see who's been studying!"
     celestine @ say "How would you say this in French?"
-    celestine @ say ""
+    celestine @ say "\"I was doing my homework.\""
+    celestine @ say "Care to tell us, [name]?"
     
     menu:
-        "":
-            
-        "": 
-            
-        "":
-            
+        "Je faisais mes devoirs.":
+            $ frenchSkill =+ 1
         
+            player "Je faisais mes devoirs."
+            
+            celestine @ say "Very good!"
+            celestine @ say "Note that we use je instead of j'ai, which we would use if we wanted to say \"I did my homework\" or \"I have done my homework.\""
+            celestine @ say "See the difference? Anyway, moving on..."
+        "J’ai fini mes devoirs.": 
+            player "J’ai fini mes devoirs."
+            
+            celestine @ say "Hmm, not quite. You've used the passé form here, which would be like saying \"I did my homework\" or \"I have done my homework.\""
+            celestine @ say "I asked specifically for "\"I was doing my homework\" which would be \"Je faisais mes devoirs.\""
+            celestine @ say "Note that we use je instead of j'ai. See the difference? Anyway, moving on..."
+        "J’ai faisais mes devoirs.":
+            player "J’ai faisais mes devoirs."
         
+            celestine @ say "Hmm, not quite. You've used the passé form here, which would be like saying \"I did my homework\" or \"I have done my homework.\""
+            celestine @ say "I asked specifically for "\"I was doing my homework\" which would be \"Je faisais mes devoirs.\""
+            celestine @ say "Note that we use je instead of j'ai. See the difference? Anyway, moving on..."
         
+    scene bg campus with fade
+    
+    
+    
+    #ava talks about how the leaves have changed color and it's her favorite season to shoot. She invites you to come with her but you have a doctor appointment to get to.

@@ -91,7 +91,7 @@ label afterClassOptions:
                         
                     jump dormSleep
                 "Go back":
-                    "jump afterClassOptions"
+                    jump afterClassOptions
         "Study at dorm":
             "You decide to return to your dorm early and get some studying in."
             
