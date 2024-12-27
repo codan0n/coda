@@ -295,13 +295,13 @@ label chapter3:
             player "J’ai fini mes devoirs."
             
             celestine @ say "Hmm, not quite. You've used the passé form here, which would be like saying \"I did my homework\" or \"I have done my homework.\""
-            celestine @ say "I asked specifically for "\"I was doing my homework\" which would be \"Je faisais mes devoirs.\""
+            celestine @ say "I asked specifically for \"I was doing my homework\" which would be \"Je faisais mes devoirs.\""
             celestine @ say "Note that we use je instead of j'ai. See the difference? Anyway, moving on..."
         "J’ai faisais mes devoirs.":
             player "J’ai faisais mes devoirs."
         
             celestine @ say "Hmm, not quite. You've used the passé form here, which would be like saying \"I did my homework\" or \"I have done my homework.\""
-            celestine @ say "I asked specifically for "\"I was doing my homework\" which would be \"Je faisais mes devoirs.\""
+            celestine @ say "I asked specifically for \"I was doing my homework\" which would be \"Je faisais mes devoirs.\""
             celestine @ say "Note that we use je instead of j'ai. See the difference? Anyway, moving on..."
         
     scene bg campus with fade
@@ -326,7 +326,7 @@ label chapter3:
     
     player "I'd love to join you but I've got a doctor's appointment later today."
     
-    ava @ say "Aww, hopefully nothing serious?"
+    ava @ say "Aww, hopefully it's nothing serious?"
     
     player "Just a checkup."
     
@@ -341,5 +341,21 @@ label chapter3:
     n "You wave goodbye as Claire and Ava head to their next classes."
     
     scene bg hospital with fade
+    
+    #doctor tells you there's not a trace of corvid-19 in you, but gives you some new pills to take anyway. a preventative measure
+    
+    n "After checking in to the hospital, a nurse did the routine blood pressure and temperature tests, then left you alone to wait for the doctor."
+    n "Your muscles tense up as your mind wanders, fearing the worst."
+    n "What if the doctor comes in and tells you you only have a few months left to live?"
+    n "You haven't felt like you were gonna pass out in weeks but something still feels off."
+    
+    show kitsuragi at center with dissolve:
+        ypos y_kitsuragi
+        
+    kitsuragi @ say "Hello [name]. Feeling any better since your last visit?"
+    
+    player "Yeah. I'm not getting dizzy randomly anymore."
+    
+    kitsuragi @ say "Good."
     
     
