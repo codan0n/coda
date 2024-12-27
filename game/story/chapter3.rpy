@@ -342,4 +342,4 @@ label chapter3:
     
     scene bg hospital with fade
     
-    #ava talks about how the leaves have changed color and it's her favorite season to shoot. She invites you to come with her but you have a doctor appointment to get to.
+    
