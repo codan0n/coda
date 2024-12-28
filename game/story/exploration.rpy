@@ -178,7 +178,7 @@ label nightWalks:
     #Can choose who to hang out with if you've done first part of their arc.
     #alternate between generic scenes and specific ones. Can choose who to hang out with if you've done first part of their arc?
 
-    "You decide to go out for the night."
+    "The cool night air feels refreshing."
     
     $ nightWalkIndex = (nightWalkIndex + 1) % 2
     
@@ -188,23 +188,59 @@ label nightWalks:
             "Wander aimlessly":
                 $ randomSelected = renpy.random.choice(nightEvents)
             "Meet with Rose" if roseNightWalkActive:
-                "You'll see if Rose is around"
+                "You'll check and see if Rose is around."
             "Meet with Rori" if roriNightWalkActive:
-                "You'll see if Rori is around"
+                "You'll check and see if Rori is around."
             "Meet with Gunner" if gunnerNightWalkActive:
-                "You'll see if Gunner is around"
+                "You'll check and see if Gunner is around."
             "Meet with Claire" if claireNightWalkActive:
-                "You'll see if Claire is around"
+                "You'll check and see if Claire is around."
             "Meet with Ava" if avaNightWalkActive:
-                "You'll see if Ava is around"
+                "You'll check and see if Ava is around."
             "Meet with Ellen" if ellenNightWalkActive:
-                "You'll see if Ellen is around"
+                "You'll check and see if Ellen is around."
             "Meet with Mishka" if mishkaNightWalkActive:
-                "You'll see if Mishka is around"
+                "You'll check and see if Mishka is around."
     else:
         call genericNightWalk from _call_genericNightWalk
     
+    return
     
+label roseNight:
+    $ roseNightWalkActive = True
+    
+    return
+    
+label claireNight:
+    $ claireNightWalkActive = True
+    
+    return
+    
+label avaNight:
+    $ avaNightWalkActive = True
+    
+    return
+label gunnerNight:
+    $ gunnerNightWalkActive = True
+    
+    return
+label roriNight:
+    $ roriNightWalkActive = True
+    
+    return
+    
+label ellenNight:
+    $ ellenNightWalkActive = True
+    
+    return
+
+label avaGunnerNight:
+    
+    
+    return
+
+label mishkaNight:
+    $ mishkaNightWalkActive = True
     
     return
     

@@ -358,4 +358,78 @@ label chapter3:
     
     kitsuragi @ say "Good."
     
+    player "Still kinda feel like a zombie sometimes though."
+    
+    kitsuragi @ say "Like a... zombie?"
+    
+    player "Yeah like shambling around not really aware of my surroundings, where I'm going or how I got there."
+    
+    kitsuragi @ say "Interesting..."
+    
+    n "She clicks her pen and writes something in her notepad. By 'interesting', she means 'concerning.'"
+    
+    kitsuragi @ say "Well you haven't dropped dead yet so that's a good sign."
+    kitsuragi @ say "In fact, we weren't able to find a single trace of CORVID in you."
+    kitsuragi @ say "Whatever's ailing you is something completely different."
+    
+    n "Did you hear her right? You *don't* have CORVID-19 like every other human in the last hundred years? You can hardly believe it."
+    
+    player "You mean I'm *not* dying?"
+    
+    "The doctor shrugs."
+    
+    kitsuragi @ say "Hell if I know. All I know is it ain't from CORVID."
+    kitsuragi @ say "Could be something genetic or some rare human disease. Kinda hard to predict when human medical sciences are 40 years out of date."
+    kitsuragi @ say "The good news is we have tons of options for anthromorph-agnostic medications to help with your symptoms."
+    
+    n "She writes something in her notepad and tears the page out, handing it to you."
+    
+    kitsuragi @ say "We'll get you started on opalozine and see how it affects you then move on from there."
+    kitsuragi @ say "It's a controlled dose but if your symptoms get worse or if you notice any side effects, stop taking it immediately and call me."
+    
+    n "You're almost too excited by the fact you're not dying of CORVID to acknowledge you might be dying of something else."
+    
+    kitsuragi @ say "Hey! Are you listening?"
+    
+    player "Huh? Oh yeah, read warning on label, take new pill, call if I start frothing at the mouth or pissing blood."
+    
+    kitsuragi @ say "That's the gist of it."
+    kitsuragi @ say "That's really all I've got for you for now."
+    kitsuragi @ say "Enjoy your life, just don't do anything stupid."
+    
+    menu:
+        "I will.":
+            player "Thanks, I will."
+            player "Enjoy my life that is."
+            player "But also probably do something stupid."
+            
+            kitsuragi @ say "Just remember you're not a cat, you only live once. Make the most of it."
+            
+        "I won't":    
+            player "Thanks, I won't."
+            player "Do anything stupid that is."
+            player "I'll try and enjoy my life haha."
+            
+            kitsuragi @ say "That's all I can ask of you."
+            
+    hide kitsuragi with dissolve
+    
+    n "The doctor sees you to the exit and you hang around the pharmacy to pick up your pills, giving you plenty of time to reflect on everything."
+    n "Apparently you have similar symptoms to CORVID-19 but you tested negative for it. Could it have been a false negative?"
+    n "No, the doctor seems too sure that's not the case. Is it some new strain that's not detectable by known methods?"
+    n "Would it even still be CORVID then if it's that different? She said there wasn't a trace of it in you."
+    n "Doesn't it go against basic virology for something to be so contagious when the whole target population is dead?"
+    n "Other anthromorphs don't carry it, and you were vaccinated against the only strain you'd been in contact with. Your parents caught it shortly after you were born but it doesn't infect infants."
+    n "Maybe it really is some random disease like when your stomach hurts for a little too long and it'll go away eventually."
+    
+    scene bg codadorm with fade
+    
+    n "With your pills in hand, you returned to your dorm for the evening but you're still too giddy to go to sleep."
+    n "You legit thought you might be dying and were ready to give up on everything, but now you have a future to look forward to."
+    n "It suddenly hits you that things are going pretty well for the first time in your life. You're in an Ivy League university, you've got friends, your bills are paid... what more could you ask for?"
+    n "That's it, you can't just lie in bed when you're so full of positive energy. You've gotta go for a /nightwalk/"
+    
+    call nightwalks
+    
+    
     
