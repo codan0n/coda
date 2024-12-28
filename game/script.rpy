@@ -3139,6 +3139,14 @@ label start:
     $ gunnerRaid = False
     $ gaveCinRoll = False
     
+    roseNightWalkLvl = 1
+    gunnerNightWalkLvl = 1
+    roriNightWalkLvl = 1
+    avaNightWalkLvl = 1
+    claireNightWalkLvl = 1
+    ellenNightWalkLvl = 1
+    mishkaNightWalkLvl = 1
+    
     $ forestDiscovered = True ###TEMPORARILY SET TO TRUE FOR THE DEMO
     $ libraryDiscovered = True ###TEMPORARILY SET TO TRUE FOR THE DEMO
     $ gardenDiscovered = True ###TEMPORARILY SET TO TRUE FOR THE DEMO

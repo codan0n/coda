@@ -180,7 +180,7 @@ label nightWalks:
 
     "The cool night air feels refreshing."
     
-    $ nightWalkIndex = (nightWalkIndex + 1) % 2
+    #$ nightWalkIndex = (nightWalkIndex + 1) % 2
     
     if nightWalkIndex == 0:
         n "What will you do?"
@@ -208,39 +208,192 @@ label nightWalks:
     
 label roseNight:
     $ roseNightWalkActive = True
+
+    if roseNightWalkLvl == 1:
+        call roseNightWalkLvl1
+        
+        roseNightWalkLvl =+ 1
+        
+        return
+    elif roseNightWalkLvl == 2:
+        call roseNightWalkLvl2
+        
+        roseNightWalkLvl =+ 1
+        
+        return
+    elif roseNightWalkLvl == 3:
+        call roseNightWalkLvl3
+        
+        roseNightWalkLvl =+ 1
+        
+        return
+    else:
+        return
+    
+    
+
+    
     
     return
     
 label claireNight:
     $ claireNightWalkActive = True
     
+    if claireNightWalkLvl == 1:
+        call claireNightWalkLvl1
+        
+        claireNightWalkLvl =+ 1
+        
+        return
+    elif claireNightWalkLvl == 2:
+        call claireNightWalkLvl2
+        
+        claireNightWalkLvl =+ 1
+        
+        return
+    elif claireNightWalkLvl == 3:
+        call claireNightWalkLvl3
+        
+        claireNightWalkLvl =+ 1
+        
+        return
+    else:
+        return
+    
     return
     
 label avaNight:
     $ avaNightWalkActive = True
     
+    if avaNightWalkLvl == 1:
+        call avaNightWalkLvl1
+        
+        avaNightWalkLvl =+ 1
+        
+        return
+    elif avaNightWalkLvl == 2:
+        call avaNightWalkLvl2
+        
+        avaNightWalkLvl =+ 1
+        
+        return
+    elif avaNightWalkLvl == 3:
+        call avaNightWalkLvl3
+        
+        avaNightWalkLvl =+ 1
+        
+        return
+    else:
+        return
+    
     return
 label gunnerNight:
     $ gunnerNightWalkActive = True
     
+    if gunnerNightWalkLvl == 1:
+        call gunnerNightWalkLvl1
+        
+        gunnerNightWalkLvl =+ 1
+        
+        return
+    elif gunnerNightWalkLvl == 2:
+        call gunnerNightWalkLvl2
+        
+        gunnerNightWalkLvl =+ 1
+        
+        return
+    elif gunnerNightWalkLvl == 3:
+        call gunnerNightWalkLvl3
+        
+        gunnerNightWalkLvl =+ 1
+        
+        return
+    else:
+        return
+    
     return
 label roriNight:
     $ roriNightWalkActive = True
+    
+    if roriNightWalkLvl == 1:
+        call roriNightWalkLvl1
+        
+        roriNightWalkLvl =+ 1
+        
+        return
+    elif roriNightWalkLvl == 2:
+        call roriNightWalkLvl2
+        
+        roriNightWalkLvl =+ 1
+        
+        return
+    elif roriNightWalkLvl == 3:
+        call roriNightWalkLvl3
+        
+        roriNightWalkLvl =+ 1
+        
+        return
+    else:
+        return
+    
+
     
     return
     
 label ellenNight:
     $ ellenNightWalkActive = True
     
+    if ellenNightWalkLvl == 1:
+        call ellenNightWalkLvl1
+        
+        ellenNightWalkLvl =+ 1
+        
+        return
+    elif ellenNightWalkLvl == 2:
+        call ellenNightWalkLvl2
+        
+        ellenNightWalkLvl =+ 1
+        
+        return
+    elif ellenNightWalkLvl == 3:
+        call ellenNightWalkLvl3
+        
+        ellenNightWalkLvl =+ 1
+        
+        return
+    else:
+        return
+    
     return
 
 label avaGunnerNight:
-    
+    n "avaGunnerNight scene"
     
     return
 
 label mishkaNight:
     $ mishkaNightWalkActive = True
+    
+    if mishkaNightWalkLvl == 1:
+        call mishkaNightWalkLvl1
+        
+        mishkaNightWalkLvl =+ 1
+        
+        return
+    elif mishkaNightWalkLvl == 2:
+        call mishkaNightWalkLvl2
+        
+        mishkaNightWalkLvl =+ 1
+        
+        return
+    elif mishkaNightWalkLvl == 3:
+        call mishkaNightWalkLvl3
+        
+        mishkaNightWalkLvl =+ 1
+        
+        return
+    else:
+        return
     
     return
     

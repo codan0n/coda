@@ -429,7 +429,7 @@ label chapter3:
     n "It suddenly hits you that things are going pretty well for the first time in your life. You're in an Ivy League university, you've got friends, your bills are paid... what more could you ask for?"
     n "That's it, you can't just lie in bed when you're so full of positive energy. You've gotta go for a /nightwalk/"
     
-    call nightwalks
+    call nightWalks
     
     
     
