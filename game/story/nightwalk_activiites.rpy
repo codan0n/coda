@@ -44,14 +44,36 @@ label roseNightWalkLvl1:
     menu:
         n "{cps=0}It turns out to be your history project partner!{/cps}"
         "Be polite":
-            n ""
+            n "Heya Rose! I love the new outfit! What are you doingout so late?"
         "Call her a slur":
-            player "Well if it isn't the trashiest of pandas!"
+            player "Well if it isn't the trashiest of pandas! What are you doing out so late?"
+        "Politely call her a slur":
+            player "Hi Rose! What's the least trashy trash panda I know doing out so late?"
+
+    rose @ say "What does it look like? I'm running."
     
-    show rose at center with move:
-        ypos y_rose
+    player "Hey that's cool. Running and stuff. Y'know humans can run too. We're like the best at it too. Endurance hunters and all that."
     
-    rose "Ew, who let you here?"
+    rose @ say "Psh yeah whatever."
+    
+    n "Rose scoffs and speeds along, vanishing from your sight."
+    
+    menu:
+        "Try and catch up to her":
+            n "You're not properly dressed for this but you can easily catch up to her. Probably."
+            n "Slowly accelerating your gait, you start to jog, then go into a run."
+            n "At this point you're matching Rose's speed but you had such a late start you'll never catch up. Your only option is to sprint."
+            n "With a quick lunge forward, you take long strides, practically leaping forward with each step."
+            n "Oh no."
+            n "It suddenly hits you how out of shape you are. The first few steps were nearly effortless but the moment you need to take a breath, you're done for."
+            n "Gasping for air, you feel your body drained of energy and your sprint slows to a pitiful shamble."
+            
+        "Wait for her to lap around":
+            n "She runs pretty fast and you haven't stretched or anything. You're not even wearing the right clothes to be running anyway."
+            n "You'll just wait for her to come back around to continue your conversation."
+
+
+
     
     
     return
