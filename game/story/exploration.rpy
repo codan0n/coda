@@ -187,6 +187,8 @@ label nightWalks:
         menu:
             "Wander aimlessly":
                 $ randomSelected = renpy.random.choice(nightEvents)
+                
+                call expression randomSelected
             "Meet with Rose" if roseNightWalkActive:
                 "You'll check and see if Rose is around."
             "Meet with Rori" if roriNightWalkActive:
@@ -212,19 +214,19 @@ label roseNight:
     if roseNightWalkLvl == 1:
         call roseNightWalkLvl1
         
-        roseNightWalkLvl =+ 1
+        $ roseNightWalkLvl =+ 1
         
         return
     elif roseNightWalkLvl == 2:
         call roseNightWalkLvl2
         
-        roseNightWalkLvl =+ 1
+        $ roseNightWalkLvl =+ 1
         
         return
     elif roseNightWalkLvl == 3:
         call roseNightWalkLvl3
         
-        roseNightWalkLvl =+ 1
+        $ roseNightWalkLvl =+ 1
         
         return
     else:
@@ -242,19 +244,19 @@ label claireNight:
     if claireNightWalkLvl == 1:
         call claireNightWalkLvl1
         
-        claireNightWalkLvl =+ 1
+        $ claireNightWalkLvl =+ 1
         
         return
     elif claireNightWalkLvl == 2:
         call claireNightWalkLvl2
         
-        claireNightWalkLvl =+ 1
+        $ claireNightWalkLvl =+ 1
         
         return
     elif claireNightWalkLvl == 3:
         call claireNightWalkLvl3
         
-        claireNightWalkLvl =+ 1
+        $ claireNightWalkLvl =+ 1
         
         return
     else:
@@ -268,19 +270,19 @@ label avaNight:
     if avaNightWalkLvl == 1:
         call avaNightWalkLvl1
         
-        avaNightWalkLvl =+ 1
+        $ avaNightWalkLvl =+ 1
         
         return
     elif avaNightWalkLvl == 2:
         call avaNightWalkLvl2
         
-        avaNightWalkLvl =+ 1
+        $ avaNightWalkLvl =+ 1
         
         return
     elif avaNightWalkLvl == 3:
         call avaNightWalkLvl3
         
-        avaNightWalkLvl =+ 1
+        $ avaNightWalkLvl =+ 1
         
         return
     else:
@@ -293,19 +295,19 @@ label gunnerNight:
     if gunnerNightWalkLvl == 1:
         call gunnerNightWalkLvl1
         
-        gunnerNightWalkLvl =+ 1
+        $ gunnerNightWalkLvl =+ 1
         
         return
     elif gunnerNightWalkLvl == 2:
         call gunnerNightWalkLvl2
         
-        gunnerNightWalkLvl =+ 1
+        $ gunnerNightWalkLvl =+ 1
         
         return
     elif gunnerNightWalkLvl == 3:
         call gunnerNightWalkLvl3
         
-        gunnerNightWalkLvl =+ 1
+        $ gunnerNightWalkLvl =+ 1
         
         return
     else:
@@ -318,19 +320,19 @@ label roriNight:
     if roriNightWalkLvl == 1:
         call roriNightWalkLvl1
         
-        roriNightWalkLvl =+ 1
+        $ roriNightWalkLvl =+ 1
         
         return
     elif roriNightWalkLvl == 2:
         call roriNightWalkLvl2
         
-        roriNightWalkLvl =+ 1
+        $ roriNightWalkLvl =+ 1
         
         return
     elif roriNightWalkLvl == 3:
         call roriNightWalkLvl3
         
-        roriNightWalkLvl =+ 1
+        $ roriNightWalkLvl =+ 1
         
         return
     else:
@@ -346,28 +348,23 @@ label ellenNight:
     if ellenNightWalkLvl == 1:
         call ellenNightWalkLvl1
         
-        ellenNightWalkLvl =+ 1
+        $ ellenNightWalkLvl =+ 1
         
         return
     elif ellenNightWalkLvl == 2:
         call ellenNightWalkLvl2
         
-        ellenNightWalkLvl =+ 1
+        $ ellenNightWalkLvl =+ 1
         
         return
     elif ellenNightWalkLvl == 3:
         call ellenNightWalkLvl3
         
-        ellenNightWalkLvl =+ 1
+        $ ellenNightWalkLvl =+ 1
         
         return
     else:
         return
-    
-    return
-
-label avaGunnerNight:
-    n "avaGunnerNight scene"
     
     return
 
@@ -377,19 +374,19 @@ label mishkaNight:
     if mishkaNightWalkLvl == 1:
         call mishkaNightWalkLvl1
         
-        mishkaNightWalkLvl =+ 1
+        $ mishkaNightWalkLvl =+ 1
         
         return
     elif mishkaNightWalkLvl == 2:
         call mishkaNightWalkLvl2
         
-        mishkaNightWalkLvl =+ 1
+        $ mishkaNightWalkLvl =+ 1
         
         return
     elif mishkaNightWalkLvl == 3:
         call mishkaNightWalkLvl3
         
-        mishkaNightWalkLvl =+ 1
+        $ mishkaNightWalkLvl =+ 1
         
         return
     else:
@@ -1759,45 +1756,6 @@ label deanCafe:
     return
 
 
-label avaGunnerNight:
-    "ava and gunner night scene"
-    
-    return
-
-
-label roriNight:
-    "rori night scene"
-    
-    return
-
-
-label roseNight:
-    "rose night scene"
-    
-    return
-
-
-label mishkaNight:
-    "mishka night scene"
-    
-    return
-
-
-label claireNight:
-    "claire night scene"
-    
-    return
-
-label avaNight:
-    "ava night scene"
-    
-    return
-    
-    
-label gunnerNight:
-    "gunner night scene"
-    
-    return
     
 label generateWeather:
     "weather test start"

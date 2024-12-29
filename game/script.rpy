@@ -2936,6 +2936,16 @@ layeredimage rose skirt handonhip dismissive pendant:
         pos (625,-62)
         attribute say:
             "images/bubble.png"
+layeredimage rose athletic furious:
+    at sprite_highlight('rose')
+    always:
+        'images/characters/rose/rose athletic furious.png'
+    group saying:
+        xzoom -.9
+        yzoom .9
+        pos (625,-62)
+        attribute say:
+            "images/bubble.png"
 layeredimage rose skirt furiouspose pendant:
     at sprite_highlight('rose')
     always:
@@ -3139,19 +3149,19 @@ label start:
     $ gunnerRaid = False
     $ gaveCinRoll = False
     
-    roseNightWalkLvl = 1
-    gunnerNightWalkLvl = 1
-    roriNightWalkLvl = 1
-    avaNightWalkLvl = 1
-    claireNightWalkLvl = 1
-    ellenNightWalkLvl = 1
-    mishkaNightWalkLvl = 1
+    $ roseNightWalkLvl = 1
+    $ gunnerNightWalkLvl = 1
+    $ roriNightWalkLvl = 1
+    $ avaNightWalkLvl = 1
+    $ claireNightWalkLvl = 1
+    $ ellenNightWalkLvl = 1
+    $ mishkaNightWalkLvl = 1
     
-    $ forestDiscovered = True ###TEMPORARILY SET TO TRUE FOR THE DEMO
-    $ libraryDiscovered = True ###TEMPORARILY SET TO TRUE FOR THE DEMO
-    $ gardenDiscovered = True ###TEMPORARILY SET TO TRUE FOR THE DEMO
-    $ trackDiscovered = True ###TEMPORARILY SET TO TRUE FOR THE DEMO
-    $ townDiscovered = True ###TEMPORARILY SET TO TRUE FOR THE DEMO
+    $ forestDiscovered = False
+    $ libraryDiscovered = False
+    $ gardenDiscovered = False
+    $ trackDiscovered = False
+    $ townDiscovered = False
     $ avaClaireLunch = False
     $ clairephonewhat = False
     $ clairephonethx = False
@@ -3183,7 +3193,7 @@ label start:
     $ forestEvents = [] #["roseForest", "claireForest"]
     $ gardenEvents = ["mishkaGarden"]
     $ cafeEvents = ["oliviaCafe"]
-    $ nightEvents = ["gunnerNight", "avaNight", "claireNight", "mishkaNight", "roseNight", "avaGunnerNight", "roriNight"]
+    $ nightEvents = ["gunnerNight", "avaNight", "claireNight", "mishkaNight", "roseNight", "roriNight"]
     #$ locationsAvailable = ["forestLocation", "gardenLocation", "townLocation", "trackLocation"]
     
     $ clairepath = False
