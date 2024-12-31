@@ -145,6 +145,11 @@ label gunnerNightWalkLvl3:
 label avaNightWalkLvl1:
     # see ava and gunner walking together, flirting. They're surprised to see you.
     
+    scene bg campus with fade
+    
+    show box with Dissolve(.2):
+        ypos 0
+    
     n "Walking through the campus at night almost kinda feels like you're breaking and entering, even though it's technically your own home."
     n "It just feels like a place where you're not supposed to be, like any building after operating hours."
     n "That doesn't stop the occasional hooligan from slinking around and howling at random intervals."
@@ -162,8 +167,14 @@ label avaNightWalkLvl1:
     
     ava @ say "What are the odds!"
     
-    show ava typical happy
-    show gunner neutral
+    show ava typical happy at center:
+        ypos y_ava
+        xoffset -300
+        xzoom -1
+    show gunner neutral at center:
+        ypos y_gunner
+        xoffset -670
+        xzoom -1
     
     gunner @ say "Sup [name]!"
     
@@ -216,22 +227,88 @@ label avaNightWalkLvl1:
                     gunner @ say "Man, I thought you were a lot cooler, [name]."
                     gunner @ say "Why'd you have to prove me wrong?"
                     
+                    n "Ava is silent but this argument has clearly put a damper on her mood."
+                    n "You all stand around quietly until one of you makes up an excuse to go back to your dorm and the others follow suit."
+                    
                 "Gain respect for Gunner":
                     n "Sounds like he's got a lot more going on than he shows on the surface."
                     n "He may have just acted like a whiny baby in front of his crush, but it took guts to say what's on his mind."
                     
                     player "Y'know, I thought you were just a scumbag dudebro with daddy's money, but maybe you're onto something. Maybe you are a real feline being."
                     
-                    gunner @ say "I can be both."
+                    gunner @ say "I can be both!"
                     
+                    player "A real hustler but a genuine sensitive guy underneath."
                     
+                    ava @ say "Aww~"
                     
+                    player "Like the kind Rori talks about."
                     
+                    gunner @ say "Hey whoa slow down there bucko. That's my roommate you're talking about."
                     
+                    ava @ say "Huh? Is Rori into sensitive guys?"
+                    ava @ say "Do I have *more* competition to deal with?"
+                    
+                    gunner @ say "What? No! It's not like that at all!"
+                    
+                    player "I dunno bro, it's kinda sus that you two sleep in the same room."
+                    
+                    gunner @ say "H-hey it's not like that at all!"
+                    
+                    player "And what's all this about being room \'mates\'?"
+                    
+                    ava @ say "Snrk"
+                    ava @ say "Alright I think that's enough teasing, boys~"
+                    ava @ say "Let's all just get along now, k?"
+                    
+                    gunner @ say "Yeah yeah, great bants [name]."
+                    
+                    player "Thanks. No hard feelings?"
+                    
+                    gunner @ say "Nah we chill, homie."
+                    
+                    n "You walk along with Gunner and Ava, cracking dumb jokes until you all become too tired to continue."
                 
-                    gunner @ say "Hustlers hustle!"
+                    
         "Let it go":
-            player "Nothing."
+            player "Nothing. Forget it."
+            
+            gunner @ say "Huh. That's what I thought."
+            
+            n "Ava chimes in to relieve the tension."
+            
+            ava @ say "Hey, would you like to walk with us, [name]? You and Gunner bounce off each other so well, it's always fun conversation!"
+            
+            player "We do?"
+            
+            gunner @ say "You bet! I'm like the suave schemer and you're the relatable everyman. It's a classic comedy pairing!"
+            
+            player "Thanks? It sounded like you just called me boring but okay."
+            
+            gunner @ say "That's exactly what the average ordinary guy would say!"
+            
+            n "Ava giggles at your impromptu comedy routine."
+            
+            ava @ say "Oh you two are such a handful~"
+            ava @ say "Whatever will I do with you?"
+            
+            player "This either ends in heartbreak or a threesome."
+            
+            gunner @ say "There's your signature dry humor! We should do standup!"
+            
+            player "I agree! Cause I'm not gonna take all your shit lying down!"
+            
+            ava @ say "Oh boy, here come the puns."
+            
+            gunner @ say "Yeah [name], think of the poor translators who will have to make that make sense in another language."
+            
+            player "Sorry, I should have known it'd be hard for them to come up with worse jokes than ours."
+            #player "They could come up with an original joke, but they'll have a hard time coming up with ones worse than ours."
+            
+            ava @ say "They're so bad they're good."
+            
+            n "You walk along with Gunner and Ava, cracking dumb jokes until you all become too tired to continue."
+            
             
         "Name a more obscure artist":
             player "I'm just saying Van Gogh and Ansel Adams are like babies first artists."
@@ -270,7 +347,42 @@ label avaNightWalkLvl1:
             ava @ say "I don't *want* to be murdered! That wasn't the question!"
             ava @ say "I'm just saying it would be a really good photo just for the story!"
             
+            gunner @ say "And this has nothing to do with your serial killer fetish?"
             
+            ava @ say "It's not a fetish!"
+            
+            player "I've heard this one before. Next she'll say it's \'a lifestyle.\'"
+            
+            ava @ say "Oh shush you!"
+            
+            show ava typical unimpressed 
+            
+            ava @ say "I'm sure you guys masturbate to weirder stuff."
+            
+            menu:
+                "Yeah, I do":
+                    player "Actually I do. That's not a problem, is it?"
+                    
+                    ava @ say "I don't even wanna know what you jerk off to if it's worse than serial killers."
+                "No, I don't":
+                    show ava typical embarrassed
+                    show gunner displeased
+                
+                    player "I don't actually. HMOFA is less weird than getting off to serial killers."
+                    
+                    ava @ say "HMOFA? What is that?"
+                    
+                    player "Human male on female anthro."
+                    
+                    ava @ say "O-oh gosh! I didn't know you were into that stuff!"
+                "Nofap":
+                    player "I'm on nofap actually. I didn't know you were such a degenerate."
+                    
+                    ava @ say "Rude!"
+            
+            gunner @ say "Never goon."
+            
+            n "You reflect on Gunner's wise words as you walk alongside him and Ava, bantering about random topics until you become too sleepy to continue and you all return to your dorms."
 
     return
     
@@ -290,14 +402,187 @@ label avaNightWalkLvl3:
     
     
 label claireNightWalkLvl1:
+    #find claire geocaching. she does it at night so nobody sees her and finds the caching spots
+    #she shows you one in a sewer drain and one in a dead street lamp
+    
+    n "Bumbling around in the night sure is fun. You never know who you might bump into."
+    n "Literally."
+    n "You trip over something low to the ground, but instead of chipping your teeth on the asphalt below, you land on something incredibly soft."
+    n "And large."
+    
+    claire @ say "Oh my, [name], right here in the middle of the street?~"
+    
+    n "You found yourself on top of Claire, who was crouched on all fours for some reason."
+    n "You roll off of her and turn on your phone's flashlight."
+    n "She appears to have her arm buried in a storm water drain on the side of the street."
+    
+    player "Claire? What are you doing down there at this hour?"
+    
+    claire @ say "Shhshshsh! Turn that light off or everyone will see!"
+    
+    n "You oblige her and turn off your light."
+    
+    player "What's all this about?"
+    
+    claire @ say "Aha! Got it!"
+    
+    n "You hear the scraping of metal against concrete as Claire pulls a small box out from the drain."
+    
+    player "What is that?"
+    
+    claire @ say "It's a box!"
+    
+    n "She pops the latches up and opens the box. You're half expecting there to be a severed hand or something equally creepy inside."
+    n "But it turns out to just be a bunch of random junk and some scraps of paper."
+    
+    player "Who's box is this?"
+    
+    claire @ say "No one's!"
+    
+    player "Why was it in the drain?"
+    
+    claire @ say "Because someone put it there!"
+    
+    player "Why is it full of junk?"
+    
+    claire @ say "People put whatever they happen to have in here!"
+    
+    player "...Why?"
+    
+    claire @ say "That's what geocaching is all about!"
+    
+    player "Geocaching?"
+    
+    claire @ say "Yeah! You know, geographical caching."
+    
+    player "But why??????"
+    
+    n "Claire pulls a bead bracelet out from her pocket and deposits it into the box."
+    
+    claire @ say "It's like a game! You gotta find the box and your reward is a little trinket to put in the next box!"
+    claire @ say "See anything you want?"
+    
+    n "She holds the box up to your face. What catches your eye are some toy army men, trading cards, bottlecaps, a rubber duck."
+    n "Which should you take?"
+    
+    menu:
+        "Army men":
+            n "You pick up one of the based army dudes holding a rifle over his head like he's crossing water."
+            n "He was probably on his way to commit war crimes in some third world country but got taken prisoner in that box for who knows how long."
+            #n "Don't worry little guy, you can live out the rest of your life in peace and get your domestic abuse charges dropped and classified as PTSD incidents."
+            
+            n "You pocket the trinket and turn to Claire."
+            
+            player "Okay, now what?"
+                    
+            claire @ say "Now as proof of our achievement..."
+            
+            n "She picks up the pencil that was in the box and unfolds a sheet of paper. Scrawled on it are various names and dates."
+            n "These must be the people who found this cache and when."
+            n "She writes her name as well as yours on it, dates it, then folds it back up and closes the box before returning it to its original position."
+            
+            claire @ say "Whew, wasn't that fun!"
+            
+            player "I don't know? I just got here and now I have a plastic army man."
+            
+        "Trading cards":
+            n "The cards are of the common variety but they're pretty old. You might even say vintage."
+            n "Oh god no don't call them that, these are the same cards you had when you were like 5. You're not vintage yet."
+            n "You've seen the prices some of the cards from this generation go for nowadays but these are just the filler cards they filled half the packs with."
+            
+            n "You pocket the trinket and turn to Claire."
+            
+            player "Okay, now what?"
+                    
+            claire @ say "Now as proof of our achievement..."
+            
+            n "She picks up the pencil that was in the box and unfolds a sheet of paper. Scrawled on it are various names and dates."
+            n "These must be the people who found this cache and when."
+            n "She writes her name as well as yours on it, dates it, then folds it back up and closes the box before returning it to its original position."
+            
+            claire @ say "Whew, wasn't that fun!"
+            
+            player "I don't know? I just got here and now I have some old trading cards."
+        
+        "Bottlecaps":
+            n "You scoop up a handful of bottlecaps. Some of them have jokes on the underside, some are blank."
+            n "One of them has the soda company's logo that they haven't used in like 50 years. This one has gotta be worth more than 5 cents at least."
+            
+            n "You pocket the trinket and turn to Claire."
+            
+            player "Okay, now what?"
+                    
+            claire @ say "Now as proof of our achievement..."
+            
+            n "She picks up the pencil that was in the box and unfolds a sheet of paper. Scrawled on it are various names and dates."
+            n "These must be the people who found this cache and when."
+            n "She writes her name as well as yours on it, dates it, then folds it back up and closes the box before returning it to its original position."
+            
+            claire @ say "Whew, wasn't that fun!"
+            
+            player "I don't know? I just got here and now I have a vintage bottle cap."
+        
+        "Rubber duck":
+            n "Rubber duck my beloved..."
+            n "This cold hard box is no place for you. You belong in a warm bubble bath."
+        
+            n "You pocket the trinket and turn to Claire."
+            
+            player "Okay, now what?"
+                    
+            claire @ say "Now as proof of our achievement..."
+            
+            n "She picks up the pencil that was in the box and unfolds a sheet of paper. Scrawled on it are various names and dates."
+            n "These must be the people who found this cache and when."
+            n "She writes her name as well as yours on it, dates it, then folds it back up and closes the box before returning it to its original position."
+            
+            claire @ say "Whew, wasn't that fun!"
+            
+            player "I don't know? I just got here and now I have a rubber duck."
+            
+    player "Why did we have to do this in darkness again?"
+    
+    claire @ say "It's like hide and seek! If we found the cache when everyone could see us, then everyone would know its location!"
+    claire @ say "Hmm, how about we do another one? Then you can join me for the full adventure!"
+    
+    player "Do I have a choice?"
+    
+    claire @ say "Nope!"
+    
+    n "Claire grabs your hand and rushes you along the campus streets. You can barely keep up with her excited hopping."
+    n "You wind up at the school's running track, where half the area is illuminated by large stadium lights."
+    
+    claire @ say "Okayokayokay so someone hides a cache and then posts the approximate GPS coordinates for it online and then geocachers go out and find it!"
+    
+    player "That's it? So it really is just hide and seek but with an inanimate object."
+    
+    claire @ say "Yup! It's a lot of fun actually and gets you exploring~"
+    claire @ say "The coordinates say it's somewhere in this area. There's a lot of places it could be hidden though! Any idea where we should start looking?"
+    
+    menu:
+        "Bleachers":
+        
+        "Lamp posts":
+        
+        ""
     
     
-    n "claire nightwalk part 1"
+    
+    
+    claire @ say "When we were talking about hobbies earlier it got me thinking I need a new one! So I looked up hobbies and this was one I hadn't tried!"
+    
+    n "She's really happy to have something new to do."
+    
+    
+    
+    
+    
     
 
     return
     
 label claireNightWalkLvl2:
+    #underside of the campus fountain statue
     
     n "claire night walk part 2"
 
@@ -334,6 +619,8 @@ label ellenNightWalkLvl3:
     
     
 label roriNightWalkLvl1:
+    #rori climbs stuff due to his instincts, but only does it at night where he's less likely to be caught. He get paranoid and jumpy when the player discovers him, but offers to teach you how to climb
+
     n "rori nightwalk 1"
     
     return
