@@ -559,12 +559,97 @@ label claireNightWalkLvl1:
     claire @ say "Yup! It's a lot of fun actually and gets you exploring~"
     claire @ say "The coordinates say it's somewhere in this area. There's a lot of places it could be hidden though! Any idea where we should start looking?"
     
-    menu:
-        "Bleachers":
+    $ checkedBleachers = False
+    $ checkedLamp = False
+    $ checkedShed = False
+
+label cachingHunt1:
+    if checkedBleachers == False or checkedLamp == False or checkedShed == False:
+        menu:
+            "Bleachers" if checkedBleachers == False:
+                $ lastChecked = "bleachers"
+                $ checkedBleachers = True
+                
+                player "Let's check under the bleachers. There's tons of places you could hide a small box and it would blend right in."
+                
+                claire @ say "Good thinking! You take the one on the right and I'll check the one on the left."
+                
+                n "That'll make things faster but with only one pair of eyes, you might overlook the box. Using your phone as a flashlight, you slink around to the back side of the bleachers and commence your search."
+                n "Wind rattles the thin aluminum seats. It feels like the whole thing will collapse onto you at any moment."
+                n "All the shadows from the stands dance as you move your light source around, making it hard to look for anything."
+                n "You scan the ridges under the seats but come up empty."
+                n "After looking over everything twice, Claire returns to you from across the field."
+                
+                claire @ say "Find anything yet?"
+                
+                player "Nothing."
+                
+                claire @ say "Dang. Wanna try looking somewhere else?"
+                
+                jump cachingHunt1
+            "Lamp posts" if checkedLamp == False:
+                $ lastChecked = "lamp"
+                $ checkedLamp = True
+                
+                player "How about the around lamp posts?"
+                
+                claire @ say "Good idea! Sometimes they have covers at the base you can lift up and hide things in."
+                claire @ say "You go that way along the track and I'll go this way so we each only have to check half of them."
+                
+                player "K. Meet you at the other end of the track."
+                
+                n "You head in the opposite direction of Claire, inspecting every lamp post along the way."
+                n "Just as Claire said, some of them have a shroud covering some wires that you can just lift up."
+                n "No geocaching boxes to be found however."
+
+                claire @ say "You find it??"
+                
+                player "Nope."
+                
+                claire @ say "Aaargh!"
+                claire @ say "Got any other ideas?"
+                
+                jump cachingHunt1
+            "Equipment shed" if checkedShed == False:
+                $ lastChecked = "shed"
+                $ checkedShed = True
+                
+                player "That equipment shed probably has some good hiding spots."
+                
+                claire @ say "Agreed! Non-cachers would probably just think it's supposed to be there if they did stumble upon it."
+                
+                player "Can we even get inside? It's probably locked up at night."
+                
+                n "Claire bends down and hoists the garage door up."
+                
+                claire @ say "You were saying?~"
+                
+                n "Judging by the screeching of the door, it probably was locked. These doors just aren't built to withstand the bnnuy though."
+                n "You and Claire begin rummaging through the various pieces of equipment in the shed."
+                n "It reeks of gasoline and grass clippings thanks to the lawnmower that's stored here. You cover your nose and dig around in every place that could conceal a box."
+                
+                claire @ say "I don't think it's in here."
+                
+                player "Yeah, I don't see anywhere it could be."
+                
+                claire @ say "Wanna try looking somewhere else?"
+                
+                player "Yeah let's get out of here."
+                
+                n "Claire yanks on the garage door and pulls it down after you step outside."
+                
+                jump cachingHunt1
         
-        "Lamp posts":
+    if lastChecked == "bleachers":
+    
+    
         
-        ""
+    elif lastChecked == "lamp":
+    
+    
+        
+    elif lastChecked == "shed":
+        n "As you're "
     
     
     
@@ -572,7 +657,10 @@ label claireNightWalkLvl1:
     claire @ say "When we were talking about hobbies earlier it got me thinking I need a new one! So I looked up hobbies and this was one I hadn't tried!"
     
     n "She's really happy to have something new to do."
+    n "She'd probably love to do this again with you."
     
+    claire @ say "This was a lot of fun!"
+    claire @ say "I'd love to do this again with you!"
     
     
     
