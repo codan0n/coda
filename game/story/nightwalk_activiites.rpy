@@ -641,20 +641,95 @@ label cachingHunt1:
                 jump cachingHunt1
         
     if lastChecked == "bleachers":
+        player "Yeah, let's get out from under here."
     
-    
+        n "As you're squeezing past the metal framework of the bleachers, your foot strikes a support beam."
+        
+        player "Ow!"
+        
+        claire @ say "Wait, did you hear that?"
+        
+        player "Hear what?"
+        
+        claire @ say "Kick that beam again!"
+        
+        n "You hesitate, considering the pain in your toes from the last kick, before going for it anyway."
+        
+        claire @ say "It sounded like a loose latch being jostled!"
+        
+        n "Claire follows the diagonal beam up to where it joins the rest of the structure."
+        n "It wasn't visible from the underside but now that you're behind the bleachers, you can make out a metallic box resting in a cranny where support beams meet."
+        
+        claire @ say "Good work, [name]!"
+        
+        n "Claire brings the box down and pops open the latches."
         
     elif lastChecked == "lamp":
-    
-    
+        player "I guess we could just walk around until we find another potential hiding spot."
+        
+        claire @ say "Yeah, that looks like our only option."
+        
+        n "As you explore the area, you notice a section that's particularly dark. Upon closer inspection, it appears a lamp post is supposed to be illuminating this place but the bulb is burnt out."
+        n "It's the only one you haven't checked so you tug on the base covering, not really expecting anything."
+        n "To yours and Claire's shock, a metallic box similar to the one she found earlier lies beneath."
+        
+        claire @ say "Ohmygosh what a sneaky spot!"
+        claire @ say "Good find, [name]!"
+        
+        n "Claire pops open the latches and lifts the lid."
         
     elif lastChecked == "shed":
-        n "As you're "
+        n "As you're exiting the shed, you notice a sparkle in the corner of your eye."
+        n "There's a ridge under the awning and you can make out a shiny piece of metal up there."
+        n "You point to it."
+        
+        player "Do you see that? Can you reach it?"
+        
+        n "Claire has no trouble grabbing hold of it and pulling it down. In her paws is a box similar to the one she found before."
+        
+        claire @ say "Aha! Good eye, [name]!"
+        
+        n "She sets it down on the ground and opens the latches."
+        
+    n "Inside, the box is empty aside from a pencil and a sheet of paper taped to the bottom."
+    n "Only one name is written on it, and it dates back two years."
     
+    claire @ say "That must be whoever set up this geocache."
+    claire @ say "This makes us the first to find it!!"
     
+    n "Claire scrawls down your names and the current date."
     
+    claire @ say "Dang, I didn't bring another reward. Now whoever finds this will think I'm just a taker and not a giver!"
+
+    menu:
+        "Put your new trinket inside":
+            n "You pull your newly acquired trinket from the last box and deposit it inside."
+            n "Better to leave the next geocacher with a fun prize than for you to carry around more junk."
+            
+            claire @ say "Aww how sweet of you!"
+            
+            n "Claire pulls you into a side hug and nuzzles the top of your head."
+            
+            player "Just trying to be a good geocacher."
+            
+            claire @ say "The next finder will appreciate it! Ksksksks!"
+            
+            n "Claire puts the lid back on and secures the latches, returning the box to its original location."
+        "Leave it empty":
+            n "You decide to hold onto your memento as a reminder of tonight's events."
+            n "Sorry next cacher, you get nothing."
+            
+            player "It's ok, I'm sure they'll understand."
+            
+            n "Claire dejectedly puts the lid back on and secures the latches, returning the box to its original location."
+            
+    claire @ say "Well, that's geocaching for you! What did you think?"
     
-    claire @ say "When we were talking about hobbies earlier it got me thinking I need a new one! So I looked up hobbies and this was one I hadn't tried!"
+    player "It's... something."
+    
+    claire @ say "I'm glad I started doing it! There's a bunch of caches around here."
+    claire @ say "When we were talking about hobbies earlier it got me thinking I needed a new one! So I looked up stuff to do and this was one I hadn't tried before!"
+    claire @ say "Soooo thanks for leading me down this rabbit hole!"
     
     n "She's really happy to have something new to do."
     n "She'd probably love to do this again with you."
@@ -662,10 +737,19 @@ label cachingHunt1:
     claire @ say "This was a lot of fun!"
     claire @ say "I'd love to do this again with you!"
     
+    n "Wow it's like she can read your mind."
     
+    ###if you have high claire points
     
+    claire "You like big bunnies, don't you [name]?"
     
+    n "GET OUT OF MY HEAD!!!"
     
+    player "Maybe we can do this again next time I go out on one of my signature nightwalks."
+    
+    claire @ say "Yeah!"
+    
+    n "You bid Claire a good night and return to your dorm for some much needed sleep."
 
     return
     

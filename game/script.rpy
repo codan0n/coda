@@ -3193,7 +3193,7 @@ label start:
     $ forestEvents = [] #["roseForest", "claireForest"]
     $ gardenEvents = ["mishkaGarden"]
     $ cafeEvents = ["oliviaCafe"]
-    $ nightEvents = ["gunnerNight", "avaNight", "claireNight", "mishkaNight", "roseNight", "roriNight"]
+    $ nightEvents = ["avaNight", "claireNight", "mishkaNight", "roseNight", "roriNight"] #re-add gunnerNight when it's ready
     #$ locationsAvailable = ["forestLocation", "gardenLocation", "townLocation", "trackLocation"]
     
     $ clairepath = False
