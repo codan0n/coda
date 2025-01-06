@@ -1875,7 +1875,7 @@ label firstDayOfClass:
     show box with Dissolve(.2):
         ypos 0
 
-    n "Next up you've got Introduction to Probability and Statistics. You signed up for it so you could learn how to properly balance your crit chance with other stats in games."
+    n "Next up you've got Introduction to Probability and Statistics. You signed up for it so you could learn how to properly balance your crit chance with other stats in role playing games."
 
     if metGunner == True:
         n "Along the way you bump into a familiar feline."
@@ -3483,7 +3483,7 @@ label avaClaireGunnerLunch:
     ava @ say "Ever try drawing?"
     
     #claire @ say "Already drew everything I wanted to draw."
-    claire @ say "Yeah but it was too easy."
+    claire @ say "They had to build a whole new wing at my local museum just for my paintings."
     
     gunner @ say "Fishing?"
     

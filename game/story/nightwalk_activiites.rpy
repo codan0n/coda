@@ -402,9 +402,6 @@ label avaNightWalkLvl3:
     
     
 label claireNightWalkLvl1:
-    #find claire geocaching. she does it at night so nobody sees her and finds the caching spots
-    #she shows you one in a sewer drain and one in a dead street lamp
-    
     n "Bumbling around in the night sure is fun. You never know who you might bump into."
     n "Literally."
     n "You trip over something low to the ground, but instead of chipping your teeth on the asphalt below, you land on something incredibly soft."
@@ -793,7 +790,8 @@ label ellenNightWalkLvl3:
 label roriNightWalkLvl1:
     #rori climbs stuff due to his instincts, but only does it at night where he's less likely to be caught. He get paranoid and jumpy when the player discovers him, but offers to teach you how to climb
 
-    n "rori nightwalk 1"
+    n "Your nightwalk brings you to an unassuming brick wall, much like any other brick wall the building here are made of."
+    n "But this one "
     
     return
     
@@ -812,7 +810,97 @@ label roriNightWalkLvl3:
     
     
 label mishkaNightWalkLvl1:
-    n "mishka nightwalk 1"
+    n "Your night walk through the campus leads you past the cafe. A dim glow shines through the windows, and for a moment you realize what it feels like to be a moth because you're oddly drawn to it."
+    n "The glass is foggy but you can make out some movement inside."
+    n "Is Coffee Zone really open this late at night or is it just like a janitor or something cleaning up?"
+    n "Ah fuck it, you could go for a drink if the door isn't locked."
+    n "To your surprise, it's not."
+    
+    scene bg cafe with fade
+    
+    n "Inside only half the lights are on. You find nobody at the counter, but a repetitive clicking sound reaches your ears."
+    n "Sitting in a dark corner, Mishka fiddles with a machine atop a table, pushing something through it."
+    
+    mishka @ say "*Squeak!*"
+    mishka @ say "Goodness [name], you nearly scared me to death!"
+    
+    player "Sorry, didn't mean to. I almost jumped out of my socks when I saw you there myself."
+    player "What are you doing here so late?"
+    
+    n "Mishka looks away, almost bashfully."
+    
+    mishka @ say "Ah you know, just doing some sewing. There was another tear in this coat I needed to patch up."
+    
+    n "She sticks her claws through a hole in the fabric."
+    
+    mishka @ say "I could have just sewn it by hand but I didn't have the right colored thread at home so I figured I would just do it here."
+    
+    player "...Why does the cafe have a sewing machine?"
+    
+    n "Mishka releases the pedal and the machine stops. She appears to be caught off guard."
+    
+    mishka @ say "Well uh... I'm not sure how to say..."
+    
+    menu:
+        "Go on":
+            player "Go on."
+            
+            mishka @ say "It's just... my apartment is rather small after all."
+            mishka @ say "I don't have a good place to set up a sewing machine. So I keep it in the closet here."
+            mishka @ say "Please don't tell anybody! I know I'm not supposed to have it here but using a machine is so much faster!"
+            
+            player "Your secret is safe with me."
+        "Drop it":
+            player "Hey that's pretty cool. I guess if I ever need to sew something while sipping coffee I can just come here!"
+            
+            mishka @ say "R-right! Anytime!"
+    
+    n "She finishes up sewing on the patch in no time, with straight and even stitching all throughout."
+    
+    player "Nice. It looks almost good as new!"
+    
+    n "Mishka sighs."
+    
+    mishka @ say "Just one more patch added on. Soon it will be nothing but patchwork."
+    
+    menu:
+        "It gives it character":
+            player "The repairs give it character. Patches are in style!"
+            
+            mishka @ say "I don't want it to be stylish, I want it without coffee stains and scuffs and tears and bullet holes!"
+            
+        "Can't be hard to find a new one":
+            player "A new milsurp jacket shouldn't be too hard to find once that one wears down."
+            
+            mishka @ say "I don't want a new one, this one is special!"
+            
+    n "In a rare display of frustration, she huffs and turns away from you."
+    n "You wait a moment before muttering some kind of apology, unsure of what you did."
+    
+    mishka @ say "Nemaye, I shouldn't have raised my voice."
+    mishka @ say "I'm just upset whenever a piece of this fabric gets destroyed because it once belonged to my father."
+    
+    n "She holds up the jacket, inspecting the new patch's stitches from both the exterior and the interior."
+    
+    mishka @ say "It's like losing a little piece of him each time but I don't want to stop wearing it."
+    
+    n "It suddenly all makes sense. This isn't just some memento from home, it has sentimental value."
+    n "She almost never takes that jacket off, even when it's hot."
+    n "Even now, she puts it back on once she's satisfied with the stitching."
+    
+    player "It must mean a lot to you."
+    player "You may have to repair it sometimes and cover it up with patches but the inner lining is always the same."
+    player "You'll always be wearing your father's jacket because all these patches and threads are sewn into the original fabric."
+    
+    mishka @ say "Dyakuyu [name]..."
+    
+    n "She turns back to you with a soft smile."
+    
+    mishka @ say "Would you... like to stay and have a coffee with me?"
+    
+    player "Of course!"
+    
+    n "Mishka unplugs the sewing machine and hauls it over to the closet, then gets started on your drinks. You stay up late into the night chatting, even after your cups are empty."
 
     return
     
