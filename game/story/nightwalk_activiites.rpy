@@ -788,11 +788,128 @@ label ellenNightWalkLvl3:
     
     
 label roriNightWalkLvl1:
-    #rori climbs stuff due to his instincts, but only does it at night where he's less likely to be caught. He get paranoid and jumpy when the player discovers him, but offers to teach you how to climb
+    scene bg campus with fade
+    
+    show box with Dissolve(.2):
+        ypos 0
+
+    #rori climbs stuff due to his instincts, but only does it at night where he's less likely to be caught. He get paranoid and jumpy when the player discovers him and embarrassed, but offers to teach you how to climb
 
     n "Your nightwalk brings you to an unassuming brick wall, much like any other brick wall the building here are made of."
-    n "But this one "
+    n "But this one is different. Tiny pebbles fall from it and pelt your head."
+    n "When you step away from it and look up, you see a shadowy figure scaling the face of the building, jumping from brick to brick."
+    n "He's on his way down and takes the last few jumps quicker than you expect. When he reaches the ground, his momentum leads him to nearly collide with you."
     
+    rori @ say "Aaaaah!"
+    rori @ say "I'msosorrypleasedon'tcallthecops."
+    
+    player "Whoa take it easy. You didn't even bump into me."
+    
+    rori @ say "Huh? Oh it's just you [name]. I take it you couldn't sleep either?"
+    
+    player "Nah, so I came out for a night walk."
+    player "It looks like you went out for a night climb though! How do you even do that? There's nowhere to grip."
+    
+    rori @ say "Oh gosh, you saw all that? Just- please delete that from your memory please."
+    
+    player "What? Why? It looked cool!"
+    
+    rori @ say "It's an addiction! There's nothing cool about it!"
+    
+    player "You're addicted... to climbing?"
+    
+    rori @ say "Shshshshsh! Not so loud!"
+    rori @ say "I just can't help myself! These hooves were built for it!"
+    rori @ say "My only comfort is that I can restrain myself long enough to wait until night so nobody will see me but apparently that's not good enough!"
+    
+    player "Dude chill, it's not that big a deal."
+    
+    rori @ say "Please don't tell me you saw me lick the wall too!"
+    
+    show rori anxious at center:
+        ypos y_rori
+    
+    rori @ say "You gotta understand, there's *salt* on the walls bro! It's irresistable!"
+    
+    player "I didn't see you lick the wall."
+    
+    rori @ say "Oh."
+    
+    player "..."
+    
+    rori @ say "..."
+    
+    player "Does it taste good?"
+    
+    rori @ say "When you get up to the 4th floor or so."
+    
+    player "Nice."
+    
+    menu:
+        "I wanna climb":
+            n "You feel around the wall, searching for any place to grip. The mortar between the bricks is rough but too narrow, only the very tips of your fingers can rest between them."
+            
+            rori @ say "What are you doing?"
+        
+            player "Trying to see if I can climb this. Was there a ledge you used or something?"
+            
+            rori @ say "No, the bricks were enough for me."
+            rori @ say "You really shouldn't be trying to climb this though."
+            
+            player "Why? Think I'll fall and hurt myself?"
+            
+            rori @ say "I'm worried you'll get addicted to it!"
+            
+            n "You don't really have a plan but decide to test your abilities regardless by clamping down on a brick with all your finger strength and pushing both feet off the ground."
+            n "You lodge the edges of your boots into the mortar a few inches above the ground and manage to stay clinging to the wall for a few seconds before your hands give out, dropping back down to the ground."
+            
+            player "Whew! Are you *sure* you don't have some antigravity tech that gets you up there?"
+            
+            rori @ say "It's all just in the weight balance. It helps to have upper body strength too."
+            
+            player "Gotchya."
+            
+            n "You give it one more attempt but manage to hold on for even less time than before."
+            
+            rori @ say "You probably just need to start on something easier."
+            rori @ say "*Not* that I'm advocating for this filthy habit, I'm just saying."
+            
+            player "Heh, I'll get to your level someday."
+            
+            rori @ say "Hopefully not!"
+            
+            player "Just you wait and see, hoofboy~"
+            
+            rori @ say "D-don't call me that!"
+            
+        "I'm good on the ground":
+            n "You look up at the building, counting six stories including the ground floor."
+            
+            player "I don't know how you do it. I'd fall right off instantly."
+            
+            rori @ say "It's not so hard, you just slip your hooves into the grooves and balance your weight on the contact points."
+            rori @ say "This wall even has a 0.5 degree incline so I could stay up there all day if I wanted to."
+            
+            player "I guess having hooves is a prerequisite."
+            
+            n "You pull your hands out of your pockets and wiggle your fingers."
+            
+            player "These things would let me down once I got high enough to fall to my death."
+            
+            rori @ say "Yeah, probably."
+            rori @ say "You'd have to work your way up."
+            rori @ say "Not that you'd *want* to. You may think you want to but that's how every addiction starts."
+            
+            player "Haha I don't think I'm gonna get addicted to climbing."
+            
+            rori @ say "That's how it gets you! Nobody expects it to happen to them, but it's such an alluring habit that'll ruin your life!"
+            
+            player "I'll take your word for it, hoofboy."
+            
+            rori @ say "D-don't call me that!"
+            
+    n "You walk Rori back to his dorm and bid him a good night before returning to your own dorm for some sleep now that you've gotten the zoomies out of you."
+
     return
     
 label roriNightWalkLvl2:

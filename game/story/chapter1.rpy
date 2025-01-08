@@ -3517,7 +3517,7 @@ label avaClaireGunnerLunch:
     
     show claire derp
     
-    claire @ say "I use my gold medal from the Olympics shooting contest as a coaster."
+    claire @ say "I use my gold medal from the Olympics shooting competition as a coaster."
     
     n "Wow, she's already done it all and she's not even in her 20s. She's like the total opposite of you."
     
