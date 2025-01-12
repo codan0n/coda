@@ -342,8 +342,6 @@ label chapter3:
     
     scene bg hospital with fade
     
-    #doctor tells you there's not a trace of corvid-19 in you, but gives you some new pills to take anyway. a preventative measure
-    
     n "After checking in to the hospital, a nurse did the routine blood pressure and temperature tests, then left you alone to wait for the doctor."
     n "Your muscles tense up as your mind wanders, fearing the worst."
     n "What if the doctor comes in and tells you you only have a few months left to live?"
@@ -419,7 +417,7 @@ label chapter3:
     n "No, the doctor seems too sure that's not the case. Is it some new strain that's not detectable by known methods?"
     n "Would it even still be CORVID then if it's that different? She said there wasn't a trace of it in you."
     n "Doesn't it go against basic virology for something to be so contagious when the whole target population is dead?"
-    n "Other anthromorphs don't carry it, and you were vaccinated against the only strain you'd been in contact with. Your parents caught it shortly after you were born but it doesn't infect infants."
+    n "Other anthromorphs don't carry it, and you were vaccinated against the only strain you'd been in contact with. Your parents caught it shortly after you were born but it's not supposed to infect infants."
     n "Maybe it really is some random disease like when your stomach hurts for a little too long and it'll go away eventually."
     
     scene bg codadorm with fade
@@ -431,5 +429,177 @@ label chapter3:
     
     call nightWalks
     
+    scene bg black with fade
+    
+    n "The following day..."
+    
+    scene bg campus with fade
+    
+    show box with Dissolve(.2):
+        ypos 0
+    
+    n "Another day in history class where Rose is a bitch to you? Who could have guessed!"
+    n "At least you got let out early and can prepare for statistics. There were a few homework problems you should double check."
+    n "It can wait until after you get a snack at a vending machine though."
+    
+    scene bg schoolhallways with dissolve
+    
+    show box with Dissolve(.2):
+        ypos 0
+    
+    n "You went ahead and made your way to the math building. The snacks stocked here are pretty decent and you need to be here anyway."
+    n "Except some jackass is standing in front of the vending machine and apparently can't make up his mind."
+    n "Seriously, it's been like two minutes and fourteen seconds and he still hasn't moved."
+    
+    player "Hey buddy, gonna buy a snack sometime today?"
+    
+    n "The person tenses up and mumbles something."
+    
+    rori @ say "S-sorry, I'll just be a second."
+    
+    player "What the...? Rori?"
+    
+    n "The ram turns his head around to face you."
+    
+    rori @ say "Huh? Oh hey [name]!"
+    
+    player "Dude hurry up and buy something already, I'm gonna be late for class at this rate."
+    player "Wait, what are you doing?"
+    
+    n "You just now notice a wire coming from Rori's sleeve that's plugged into the card swiper on the machine."
+    
+    player "Are you... hacking?"
+    
+    rori @ say "Shh!"
+    rori @ say "It's not hacking!"
+    rori @ say "I'm just tricking the machine into giving me what I want."
+    
+    player "Sounds like hacking to me."
+    
+    rori @ say "Maybe it would be if it was actually working."
+    rori @ say "I can't believe the random code I pulled off github doesn't function as advertised!"
+    
+    player "Inconceivable!"
+    
+    n "Rori pulls on his hoodie and reveals a tiny computer thing he's concealing."
+    
+    rori @ say "Maybe my blueberry pi just doesn't have enough RAM to crack the security code."
+    rori @ say "I knew I should have gotten the 4GB model."
+    
+    n "Rori sighs and unplugs the wire from the card slot."
+    
+    rori @ say "Whatever. I've spent enough time here looking suspicious. I'll just pay for snacks like a normie."
+    
+    n "Rori tries swiping his card but the machine gives an error."
+    
+    rori @ say "Aw what? Don't tell me I bricked it."
+    
+    menu:
+        "LOL":
+            player "It would be funny if you did."
+            
+            rori @ say "Gosh I hope not. I don't wanna get caught vandalizing one of these. It'd cost a fortune to replace it!"
+            
+            player "Relax, I don't think anyone noticed you. These things break all the time."
+        "Let me try it":
+            player "Maybe it just doesn't like your card. Let me try mine."
+            
+            n "You slap your card against it and it gives the same error. Using the chip reader and magnetic strip yield the same result."
+            
+            player "Yup you borked it."
+        "You're going to jail":
+            player "RIP, you're going to jail for this."
+            
+            rori @ say "D-don't say that!"
+            
+    n "Rori sighs and leans his back against the machine. He slips down it until he's sitting on the floor."
+    
+    rori @ say "I just wanted to get free snacks for a special someone."
+    
+    player "Oh?"
+    player "You know you don't have to constantly give someone gifts to impress them."
+    
+    rori @ say "You don't get it."
+    
+    n "Man, he is really sulking."
+    
+    menu:
+        "Sit next to him":
+            $ roriPoints =+ 1
+            
+            n "You drop down to the floor along side him."
+            n "You end up shoulder to shoulder with him, trying not to be an obstruction to the foot traffic of students who look at you weird, but they're all math autists so who cares what they think."
+            n "A sudden tingling sensation runs up your arm, followed by some ticklish feeling on your face like whiskers touching your cheeks."
+            n "You look down and see a small fuzzy critter with a big bulging eye staring up at you."
+            n "It lets out a squeak before jumping off you and into Rori's hooves."
+            
+            player "What the fuck?"
+        "Remain standing":
+            n "You remain on your feet, resolute and dignified."
+    
+            player "Come on man, you look like a kid throwing a tantrum down there. At least stand up."
+    
+            n "Rori seems to ignore you, instead drawing circles on the floor with a hoof."
+            
+            player "Please don't be this autistic, you're obstructing the hallway traffic."
+            
+            n "Rori slowly starts to rise back to his feet. Wait, what the hell is he holding?"
+            
+    show rori neutral rat at center with dissolve:
+        ypos y_rori
+            
+    player "Is that the rat from the other week?"
+    
+    rori @ say "Yup. His eye is messed up so I made a cute little eyepatch for him."
+    
+    player "You befriended him?"
+    
+    rori @ say "It wasn't hard. I just kept giving him food."
+    rori @ say "That's why I was trying to hack the vending machine."
+    
+    player "You should have said something!"
+    player "Based Robinhood stealing from the rich and giving to the poor starving rats."
+    
+    rori @ say "Heh I don't think he's starving anymore, not with how much I feed him."
+    
+    player "What's his name?"
+    
+    rori @ say "I don't know, I didn't think to ask."
+    rori @ say "How about... Guts?"
+    
+    player "Is that a Berzerk reference?"
+    #player "Because he has one eye?"
+    
+    rori @ say "Yes."
+    rori @ say "He's had a rough life and only has one eye so it fits."
+    
+    player "Nice to meet you, Guts."
+    
+    rori @ say "I think he remembers you."
+    
+    player "He better, after all the trouble I went through to get those pretzels for him."
+    
+    ###have a line that says if you gave your money to the hobo or to lina then you don't have any to buy a snack
+    
+    player "Do you come here just to see him?"
+    
+    rori @ say "I have a class here earlier in the day. I just check up on him if he happens to be under the vending machine."
+    
+    player "That reminds me, I should get to class now."
+    
+    rori @ say "Okay! Take care!"
+    
+    player "See you guys later."
+    
+    n "You hold out a finger for Guts to inspect and you give him a little chin rub."
+    
+    scene bg campus with fade
+    
+    n "After class, Gunner tagged along with you as usual, but Rori was nowhere to be found."
+    n "Instead you were joined by your Tuesday/Thursday friends."
     
     
+    
+    
+    
+    #after stats, you bump into ava claire and gunner who are making plans for the weekend but you gotta go lie down

@@ -2,6 +2,32 @@ label chapter1:
 
 #    "test"
 #    
+    $ muffin = "delicious"
+    $ bagel = "savory"
+    $ pastry = muffin
+
+
+    if pastry == muffin:
+        n "this pastry is [pastry]"
+
+
+
+    #######
+    
+    label pastry:
+        $ choice = "muffin"
+        
+        return choice
+        
+    n "you chose a [pastry]"
+    #call pastry?
+    # pastryChoice = pastry
+    
+    #test using default to set values not previously set for save compatibility
+    
+
+
+
 #    scene bg campus with fade
 #    
 #    show gunner neutral at left

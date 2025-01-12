@@ -2493,6 +2493,16 @@ layeredimage rori neutral:
         pos (4,33)
         attribute say:
             "images/bubble.png"
+layeredimage rori rat neutral:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori rat neutral.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
 layeredimage rori embarrassed:
     at sprite_highlight('rori')
     always:
