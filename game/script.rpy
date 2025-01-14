@@ -3149,79 +3149,90 @@ layeredimage volginova neutral:
             "images/bubble.png"
    
 
-label start:
-    # variables
-    $ dating = ""
-    $ currentWeather = "sunny"
-    $ daysSinceRain = 1
-    $ avaClaireGarden = False
-    $ avaUrbex = False
-    $ gunnerRaid = False
-    $ gaveCinRoll = False
-    
-    $ roseNightWalkLvl = 1
-    $ gunnerNightWalkLvl = 1
-    $ roriNightWalkLvl = 1
-    $ avaNightWalkLvl = 1
-    $ claireNightWalkLvl = 1
-    $ ellenNightWalkLvl = 1
-    $ mishkaNightWalkLvl = 1
-    
-    $ forestDiscovered = False
-    $ libraryDiscovered = False
-    $ gardenDiscovered = False
-    $ trackDiscovered = False
-    $ townDiscovered = False
-    $ avaClaireLunch = False
-    $ clairephonewhat = False
-    $ clairephonethx = False
-    $ mishkaMallSpecialActive = False
-    $ mishkaMallSpecialPlayed = False
-    $ statsSkill = 0
-    $ frenchSkill = 0
-    $ historySkill = 0
-    $ literatureSkill = 0
-    $ roriPoints = 0
-    $ ellenPoints = 0
-    $ rosePoints = 0
-    $ avaPoints = 0
-    $ clairePoints = 0
-    
-    $ currentbook = "The Death of Ivan Ilyich"
-    $ nightWalkIndex = 0
-    $ roseNightWalkActive = False
-    $ claireNightWalkActive = False
-    $ roriNightWalkActive = False
-    $ avaNightWalkActive = False
-    $ gunnerNightWalkActive = False
-    $ ellenNightWalkActive = False
-    $ mishkaNightWalkActive = False
-    
-    $ afterClassExploration = ["mainStreetIntro", "gardenIntro", "forestIntro", "runningTrackIntro"]
-    $ townEvents = ["linaTown"]#, celestineTown"]
-    $ trackEvents = ["gunnerTrack"]#, "roriTrack"]
-    $ forestEvents = [] #["roseForest", "claireForest"]
-    $ gardenEvents = ["mishkaGarden"]
-    $ cafeEvents = ["oliviaCafe"]
-    $ nightEvents = ["avaNight", "claireNight", "mishkaNight", "roseNight", "roriNight"] #re-add gunnerNight when it's ready
-    #$ locationsAvailable = ["forestLocation", "gardenLocation", "townLocation", "trackLocation"]
-    
-    $ clairepath = False
-    $ avapath = False
-    $ roripath = False
-    $ ellenpath = False
-    $ rosepath = False
-    $ mishkapath = False
-    $ gaveUmbrella = False
-    $ badEnd = 0
-    $ goodEnd = 0
-    $ boygirlfriend = ""
-    $ roseTrade = False
-    $ roseBias = False
-    $ claireBias = False
-    $ roriDormIntroSeen = False
-    $ avaClaireDormIntroSeen = False
 
+
+
+# variables
+default dating = ""
+default currentWeather = "sunny"
+default daysSinceRain = 1
+default currentbook = "The Death of Ivan Ilyich"
+
+default gaveUmbrella = False
+default avaClaireGarden = False
+default avaUrbex = False
+default gunnerRaid = False
+default gaveCinRoll = False
+default roseTrade = False
+default avaClaireLunch = False
+default clairephonewhat = False
+default clairephonethx = False
+default mishkaMallSpecialActive = False
+default mishkaMallSpecialPlayed = False
+default calledRoriNerd = False
+
+default roseNightWalkLvl = 1
+default gunnerNightWalkLvl = 1
+default roriNightWalkLvl = 1
+default avaNightWalkLvl = 1
+default claireNightWalkLvl = 1
+default ellenNightWalkLvl = 1
+default mishkaNightWalkLvl = 1
+
+default statsSkill = 0
+default frenchSkill = 0
+default historySkill = 0
+default literatureSkill = 0
+
+default roriPoints = 0
+default ellenPoints = 0
+default rosePoints = 0
+default avaPoints = 0
+default clairePoints = 0
+default badEnd = 0
+default goodEnd = 0
+
+default nightWalkIndex = 0
+default roseNightWalkActive = False
+default claireNightWalkActive = False
+default roriNightWalkActive = False
+default avaNightWalkActive = False
+default gunnerNightWalkActive = False
+default ellenNightWalkActive = False
+default mishkaNightWalkActive = False
+
+default forestDiscovered = False
+default libraryDiscovered = False
+default gardenDiscovered = False
+default trackDiscovered = False
+default townDiscovered = False
+
+default afterClassExploration = ["mainStreetIntro", "gardenIntro", "forestIntro", "runningTrackIntro"]
+default townEvents = []#"linaTown", "celestineTown"]
+default trackEvents = ["gunnerTrack"]#, "roriTrack"]
+default forestEvents = [] #["roseForest", "claireForest"]
+default gardenEvents = ["mishkaGarden"]
+default cafeEvents = ["oliviaCafe"]
+default libraryEvents = []
+default nightEvents = ["avaNight", "claireNight", "mishkaNight", "roseNight", "roriNight"] #re-add gunnerNight when it's ready
+default$ locationsAvailable = ["forestLocation", "gardenLocation", "townLocation", "trackLocation"]
+
+default clairepath = False
+default avapath = False
+default roripath = False
+default ellenpath = False
+default rosepath = False
+default mishkapath = False
+
+default roseBias = False
+default claireBias = False
+
+default roriDormIntroSeen = False
+default avaClaireDormIntroSeen = False
+
+
+label start:
+    
     #places characters centered
     transform norm:
         yalign 0

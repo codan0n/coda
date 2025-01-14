@@ -2,28 +2,28 @@ label chapter1:
 
 #    "test"
 #    
-    $ muffin = "delicious"
-    $ bagel = "savory"
-    $ pastry = muffin
-
-
-    if pastry == muffin:
-        n "this pastry is [pastry]"
-
-
-
-    #######
-    
-    label pastry:
-        $ choice = "muffin"
-        
-        return choice
-        
-    n "you chose a [pastry]"
-    #call pastry?
-    # pastryChoice = pastry
-    
-    #test using default to set values not previously set for save compatibility
+#    $ muffin = "delicious"
+#    $ bagel = "savory"
+#    $ pastry = muffin
+#
+#
+#    if pastry == muffin:
+#        n "this pastry is [pastry]"
+#
+#
+#
+#    #######
+#    
+#    label pastry:
+#        $ choice = "muffin"
+#        
+#        return choice
+#        
+#    n "you chose a [pastry]"
+#    #call pastry?
+#    # pastryChoice = pastry
+#    
+#    #test using default to set values not previously set for save compatibility
     
 
 
@@ -476,8 +476,6 @@ label college_orientation:
     show rori laugh
 
     rori @ say "Computer engineering! I've always loved messing around with computers. I taught myself how to program since my high school didn't have any classes for it."
-
-    $ calledRoriNerd = False
 
     menu:
         rori "{cps=0}Computer engineering! I've always loved messing around with computers. I taught myself how to program since my high school didn't have any classes for it.{/cps}"

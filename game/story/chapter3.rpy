@@ -720,11 +720,11 @@ label chapter3:
     n "He suddenly wheezes and reaches for his drink, downing half the cup before setting it down."
     
     gunner @ say "Okay it doesn't hit you at first but when it does it's like getting hot brass down your shirt."
-    gunner @ say "Still not the spiciest I ever had."
+    gunner @ say "Still not the spiciest I ever had though."
     
     ava @ say "I think it's supposed to get spicier the further down you go."
     
-    player "A real 9 circles of hell, I'm sure."
+    #player "A real 9 circles of hell, I'm sure."
     
     show claire outdoors derp
     
@@ -736,7 +736,8 @@ label chapter3:
     
     player "Heh, easy."
     
-    n "And then it hits you. You cough uncontrollably for a few seconds as you frantically reach for your drink, taking a few sips until the fire in your mouth has been extinguished."
+    n "And then it hits you."
+    n "You cough uncontrollably for a few seconds as you frantically reach for your drink, taking a few sips until the fire in your mouth has been extinguished."
     
     player "Ack! You were right, it does have a delayed kick to it."
     
@@ -756,7 +757,7 @@ label chapter3:
     
     ava @ say "Look, [name] can do it just fine!"
     
-    gunner @ say "Yeah but look how much [heshe]'s sweating though!"
+    gunner @ say "Yeah but look how much he's sweating though!"
     
     player "We humans evolved to eat food like this not out of necessity but out of pure dumbfuckery and stubbornness."
     
@@ -773,7 +774,7 @@ label chapter3:
     
     show claire outdoors embarassed
     
-    claire @ say "All I'm sayin' is, he's competitive! He'd totally be down for it!"
+    claire @ say "All I'm sayin' is that he's competitive! He'd totally be down for it!"
     
     gunner @ say "What???"
     
@@ -785,7 +786,7 @@ label chapter3:
     
     ava @ say "Claire shush!"
     
-    n "Gunner's ears perk up. If you had fluffy adjustable ears, they'd be perked too."
+    n "Gunner's ears perk up."
     
     player "What sort of prize?"
     
@@ -795,60 +796,75 @@ label chapter3:
     
     claire @ say "Whatever you want bby~"
     
-    gunner @ say "I'd finish this thing right now if I could get a lapdance."
+    ava @ say "She suggested something rather... spicy."
+    ava @ say "Which I'm not gonna do."
     
-    show claire outdoors embarassed
+    claire @ say "But there has to be a priiiiiize!"
     
-    claire @ say "That's it? I was gonna suggest something... spicier ksksksksks!"
+    ava @ say "There already is one! The bowl is free if you finish it!"
     
-    show ava casual angry
+    claire @ say "There needs to be one for whoever does it first!"
     
-    ava @ say "Oh quiet you! I'm not just gonna hand out lapdances to anyone who can eat spicy food!"
+    ava @ say "Well I'm not gonna suck the winner's dick just because they can eat spicy food!"
     
-    claire @ say "I would."
+    gunner @ say "OwO"
     
-    player "Okay how about just sitting in the winner's lap?"
+    claire @ say "How about just holding his hand? Or is that still too lewd for you?"
     
-    show ava casual concerned
+    ava @ say "Well... I guess I can do that."
     
-    ava @ say "Hrm..."
+    gunner @ say "Sounds like we've got a competition then, [name]!"
     
-    show claire outdoors lusty
+    player "Can I choose who I hold hands with when I win?"
     
-    claire @ say "Come onnnnn, I know you wanna do it! Have some fun every once in a while!"
+    n "Your friends all look to each other and mutter in agreement."
     
-    n "Everyone stares at Ava expectantly."
-
-    show ava casual annoyed
+    gunner @ say "Yeah, I don't see why not. Other than the fact that you *won't* be winning this."
+    gunner @ say "Hope you won't be too jealous when I walk home holding Ava's wing~"
     
-    ava @ say "...Alright fine! I'll do it, but this is just a one time offer!"
+    default holdingHands = "No one"
     
-    show claire outdoors heyeah
+    menu:
+        "Do it for Ava":
+            $ avaPoints =+ 1
+            $ holdingHands = "Ava"
+            
+            player "Maybe in another one of your lives catboy, because I'm gonna be the one touching those soft feathers."
+        "Do it for Rori":
+            $ roriPoints =+1
+        
+            player "Nah, I'm gonna win and hold hooves with Rori all the way back to the dorms."
+            
+            rori @ say "*Bleat!*"
+            rori @ say "W-why me?"
+            
+            player "Because you're cute and those hooves were made for holding human hands."
+        "Do it for Claire":
+            $ clairePoints =+ 1
+            
+            player "Nah, I'm gonna win and hold Claire's paw all the way back to her dorm."
+            
+            claire @ say "R-really?!"
+            
+            player ""
+        "Play the reverse card":
+            $ avaPoints += 1
+        
+            player ""
+        
+        "I literally don't care":
+            $ avaPoints =- 1
+            $ clairePoints =- 1
+            $ roriPoints =- 1
+        
+            player "I don't care about holding anyone's hand, I'm just doing this to make you lose, catboy."
     
-    claire @ say "I call dibs on the loser's lap!"
     
-    show ava casual happy
     
-    n "Gunner grimaces at the thought."
     
-    show claire outdoors neutral
     
-    gunner @ say "Well, I can't say no to the chance to have a pretty bird in my lap. I just hope Claire's ass doesn't crush you when you lose, [name]!"
     
-    player "Nah, Ava's cute butt is gonna be perched right here."
     
-    n "You pat your thigh."
-    n "Ava hides her face behind a wing, too embarassed to face anyone."
-    
-    show ava casual unimpressed
-    
-    ava @ say "Guyyysss!"
-    
-    rori @ say "For the record, I had nothing to do with this."
-    
-    show ava casual smile
-    
-    gunner @ say "Enough talk! Our duel for soft feathery cheeks begins now!"
     
     n "You and Gunner dig into your bowls, haphazardously taking large bites to get through it quicker."
     n "Gunner is getting better at using the chopsticks, grabbing whole clumps of noodles at once."
