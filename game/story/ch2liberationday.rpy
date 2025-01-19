@@ -830,7 +830,7 @@ label liberation_day:
                 #menu:
                 #    ava "{cps=0}Aww, want me to snuggle you tonight and protect you?~{/cps}"
                 #    "Yes please":
-                $ avaPoints = avaPoints + 1
+                $ avaPoints =+ 1
                 
                 player "That would be delightful."
                 
@@ -1889,9 +1889,6 @@ label liberation_day:
             
             gunner @ say "Looks like you found the jackpot heheh!"
             
-            $ avaPantsu = False
-            $ clairePantsu = False
-            
             menu:
                 gunner "{cps=0}Looks like you found the jackpot heheh!{/cps}"
                 "Take Ava's panties":
@@ -2479,8 +2476,6 @@ label liberation_day:
         show fortune:
             xoffset 160
         with move
-         
-        $ gnugift = False
 
         menu:
             n "{cps=0}Rose starts to walk across the street to the other sidewalk.{/cps}"
@@ -2578,6 +2573,7 @@ label liberation_day:
                     n "{cps=0}Give money to the fortune teller?{/cps}"
                     "Yes":
                         $ gnugift = True
+                        $ moneySpent =+ 5
                         
                         n "You won't be any poorer for giving him the money since you didn't realize you had it in the first place."
                         n "You hand over the crumpled bill and await the wisdom of the gnu."

@@ -1,6 +1,8 @@
 label chapter3:
     scene bg black with fade
     
+    $ townEvents.append("linaTown")
+    
     n "A few weeks later"
     
     scene bg cafe with dissolve
@@ -97,9 +99,10 @@ label chapter3:
     menu:
         margaret "{cps=0}Damn, I was really counting on that cinnamon bun to get me through today...{/cps=0}"
         "Offer Miss Ellen your cinnamon roll":
-            $ ellenPoints = ellenPoints + 1
+            $ ellenPoints =+ 1
             $ gaveCinRoll = True
-            $ badEnd = badEnd + 1
+            $ badEnd =+ 1
+            
             player "Well... I could give you mine. I don't really mind."
             
             show mishka happy
@@ -247,7 +250,7 @@ label chapter3:
     
     menu:
         "Of course!":
-            $ clairePoints = clairePoints + 1
+            $ clairePoints =+ 1
             
             player "Of course! I wanted to walk you to class today."
             
@@ -647,6 +650,26 @@ label chapter3:
     
     scene bg town with fade
     
+    show box with Dissolve(.2):
+        ypos 0
+        
+    show ava typical happy at center:
+        ypos y_ava
+        xoffset 300
+    show claire sweater happy at center:
+        ypos y_claire
+        xoffset 650
+    show rori neutral at center:
+        ypos y_rori
+        xzoom -1
+        xoffset -325
+    show gunner neutral at center:
+        ypos y_gunner
+        xoffset -775
+        xzoom -1
+        
+    with dissolve
+    
     n "Gunner brought you to a lively restaurant in town and Rori joined up with you on the way."
     n "He was right, the seating was quick for your group despite the long line. He got you an outdoors table, fitting for such a pleasant day."
     n "After ordering drinks, you retreated to the restroom to take care of some business."
@@ -654,13 +677,13 @@ label chapter3:
     
     player "What? Why do you all look so smug?"
     
-    show ava casual daydream
+    #show ava typical daydream
     
     ava @ say "You took so long we decided to go ahead and order for you!"
     
     player "Really? Nothing too expensive I hope..."
     
-    show ava casual smile
+    #show ava casual smile
     
     ava @ say "Quite the contrary! ...If you can finish it, that is."
     
@@ -687,7 +710,7 @@ label chapter3:
     
     gunner @ say "Hahaha sorry [name] but I swear it wasn't my idea! Ava thought it would be funny to order it for you and well, I didn't want you to suffer alone!"
     
-    show ava casual unimpressed
+    #show ava casual unimpressed
     
     ava @ say "I was only half serious!"
     #ava @ say "Hehehehe *chirp~*"
@@ -697,7 +720,7 @@ label chapter3:
     #player "It's fine. I mean, how spicy can it be? It smells pretty good in fact."
     player "It's fine. Humans evolved to eat this kinda stuff. In fact, it smells pretty good!"
     
-    show ava casual happy
+    #show ava casual happy
     
     ava @ say "You sure? I don't wanna be responsible for killing ya."
     
@@ -726,11 +749,11 @@ label chapter3:
     
     #player "A real 9 circles of hell, I'm sure."
     
-    show claire outdoors derp
+    #show claire outdoors derp
     
     claire @ say "Alright [name], your turn!"
     
-    show claire outdoors neutral
+    #show claire outdoors neutral
     
     n "Unlike Gunner, you actually know how to use chopsticks and pick up a clump of noodles to slurp. It doesn't taste any different than the generic spicy ramen you could find at any grocery store."
     
@@ -745,7 +768,7 @@ label chapter3:
     
     rori @ say "What? No way! Keep your peppers off my lemongrass tofu!"
     
-    show ava casual smile
+    #show ava casual smile
     
     ava @ say "What's the matter, don't think you can finish it all on your own?"
     
@@ -753,7 +776,7 @@ label chapter3:
     
     n "You silently take another, smaller bite. You're already sweating."
     
-    show ava casual overjoyed
+    #show ava casual overjoyed
     
     ava @ say "Look, [name] can do it just fine!"
     
@@ -761,7 +784,7 @@ label chapter3:
     
     player "We humans evolved to eat food like this not out of necessity but out of pure dumbfuckery and stubbornness."
     
-    show ava casual flattered
+    #show ava casual flattered
     
     #n "The group snickers at your self-deprecating joke."
     n "As Ava takes a bite out of her meal, Claire leans in and whispers something to her, causing her feathers to floof up and almost makes her choke on her food."
@@ -772,17 +795,17 @@ label chapter3:
     
     ava @ say "Nothing hahaha nothing!"
     
-    show claire outdoors embarassed
+    #show claire outdoors embarassed
     
     claire @ say "All I'm sayin' is that he's competitive! He'd totally be down for it!"
     
     gunner @ say "What???"
     
-    show claire outdoors derp
+    #show claire outdoors derp
     
     claire @ say "I just said there should be a prize for whoever finishes their spicy bowl first!"
     
-    show ava casual annoyed
+    #show ava casual annoyed
     
     ava @ say "Claire shush!"
     
@@ -790,7 +813,7 @@ label chapter3:
     
     player "What sort of prize?"
     
-    show claire outdoors lusty
+    #show claire outdoors lusty
     
     n "Claire giggles and winks at you."
     
@@ -826,12 +849,23 @@ label chapter3:
     
     menu:
         "Do it for Ava":
-            $ avaPoints =+ 1
+            $ avaPoints =+ 2
             $ holdingHands = "Ava"
             
-            player "Maybe in another one of your lives catboy, because I'm gonna be the one touching those soft feathers."
+            player "Maybe in another one of your lives catboy, because tonight I'll be the one walking her home."
+            
+            claire @ say "Gee Ava, how come you get *two* cuties competing for you?"
+            
+            if avaPoints > 4:
+                ava @ say "Maybe I'm just that irresistable!"
+                ava @ say "Do your best you two~"
+            else:
+                ava @ say "I dunno but this should be fun to watch!"
+                ava @ say "Just try not to die, you two."
+                
         "Do it for Rori":
-            $ roriPoints =+1
+            $ roriPoints =+ 2
+            $ holdingHands = "Rori"
         
             player "Nah, I'm gonna win and hold hooves with Rori all the way back to the dorms."
             
@@ -839,65 +873,131 @@ label chapter3:
             rori @ say "W-why me?"
             
             player "Because you're cute and those hooves were made for holding human hands."
+            
+            if roriPoints > 4:
+                rori @ say "Well, I guess we can hold hands just this once..."
+                
+                n "Rori tries to hide his smile but you can see it in his eyes, he wants you to win."
+            else:
+                rori @ say "If you say so..."
+            
+            claire @ "D'awww you two are so adorable!"
+            
+            gunner @ say "..."
+            gunner @ say "Whatever floats your boat bro."
         "Do it for Claire":
-            $ clairePoints =+ 1
+            $ clairePoints =+ 2
+            $ holdingHands = "Claire"
             
             player "Nah, I'm gonna win and hold Claire's paw all the way back to her dorm."
             
-            claire @ say "R-really?!"
+            if clairePoints > 4:
+                claire @ say "You can hold my paws in my dorm too, all the way til morning~"
+                
+                ava @ say "Claire! You perv!"
+                
+                claire @ say "Who's gonna be the pervert when you'll be watching us?"
+                
+                ava @ say "If [name] wins I'm locking you out of our dorm."
+            else:
+                claire @ say "R-really?!"
+                
+                player "At least to your dorm. Maybe further."
+                
+                claire @ say "Oh yeah, we're definitely going further~"
             
-            player ""
         "Play the reverse card":
             $ avaPoints += 1
+            $ holdingHands = "Gunner"
         
-            player ""
+            player "The only hand you'll be holding is mine after I win."
+            
+            n "Gunner nearly spits out his drink."
+            
+            gunner @ say "Say what?!"
+            
+            #n "Ava snickers"
+            
+            #ava @ say "Ooh now I don't know who to root for~"
+            ava @ say "Ooh now that would be fun to see~"
+            
+            claire @ say "My favorite crack ship."
+            
+            rori @ say "You'll never be able to make gay jokes again, Gunner."
+            
+            #gunner @ say "If anything, I'll become even more homophobic if I have to hold [name]'s hand."
+            
+            show gunner eyesclosed smile
+            show rori sleepy
+            show ava typical unimpressed
+            show claire sweater surprised earsup
+            
+            gunner @ say "Do not underestimate my homophobia."
+            
+            claire @ say "He's too powerful!"
+            
+            ###gunner @ say "Shut up, there's nothing gay about holding your homie's hand."
+            #rori takes a pic
         
         "I literally don't care":
             $ avaPoints =- 1
             $ clairePoints =- 1
             $ roriPoints =- 1
+            $ holdingHands = "No one"
         
             player "I don't care about holding anyone's hand, I'm just doing this to make you lose, catboy."
+            
+            gunner @ say "A man with nothing to fight for but the sake of fighting. I don't know wether to admire you or pity you."
+            
+            player "Both works."
+            
+            gunner @ say "Both it is."
     
-    
-    
-    
-    
-    
-    
-    
+    gunner @ say "Enough talking! Let's get this competition started already!"
+
     n "You and Gunner dig into your bowls, haphazardously taking large bites to get through it quicker."
     n "Gunner is getting better at using the chopsticks, grabbing whole clumps of noodles at once."
-    n "Your tongue stings and you soon run out of water, taking to chewing on ice cubes to dull the pain."
-    n "Your mouth is on fire but you can't rest for even a moment if you want to beat Gunner when he's this determined."
-    n "He's panting like a dog and his eyes are sweating but he's not slowing down."
-    n "The pain is unbearable at this point. You haven't taken a bite in a few seconds but the feeling is getting exponentially worse every second."
-    n "You're feeling woozy. Should you press on?"
+    n "Your tongue stings and soon your water runs out. You take to chewing on ice cubes to dull the pain."
+    
+    claire @ say "Look at 'em go!"
+    
+    ava @ say "Are you two alright? [name], you are *drenched* in sweat right now."
+    
+    n "You give a thumbs up and do your best to smile through your suffering."
+    
+    gunner @ say "Roriii!"
+    gunner @ say "Lemme have your drink! I'll give you a thousand dollars for it!"
+    
+    rori @ say "Hm. No."
+    
+    gunner @ say "Whaaaaat?! Come on! Two thousand?"
+    
+    n "Gunner is panting like a dog and tears are running down his cheeks."
+    
+    gunner @ say "Five grand? That's all I brought with me!"
+    
+    rori @ say "Sorry but I'm enjoying watching you suffer too much."
+    
+    n "The pain is unbearable at this point. Your mouth is on fire and you're feeling woozy."
+    n "Should you press on?"
     
     menu:
-        n "{cps=0}You're feeling woozy. Should you press on?{/cps}"
+        n "{cps=0}Should you press on?{/cps}"
         "Keep going":
-            #finished
-            $ avaPoints += 1
-            n "No, you're not giving up. You can do this. You will assert your dominance!"
+            $ spicyVictory = True
+            
+            n "No, you're not giving up. You can do this. You must assert your dominance!"
             n "You're nearing the bottom of the bowl now. Gunner is struggling with his last few bites."
-            n "You grab the bowl and vaccuum the rest down into your stomach."
-            n "It's finished. You won. You close your eyes and revel in your victory."
+            n "Your vision goes blurry and your hands tremble but you do not yield."
+            n "Your very existence is pain but you've learned to live with it. Embrace it. You just have to swallow one more time. 
+            
+            claire @ say "Oh my gosh he actually did it!"
+            
+            player "I-"
             
             stop music fadeout 1.0
             
-            scene bg black with fade
-
-            #hide box
-
-            #show bg calendar
-            #show tfriday at center
-            #with Dissolve(.5)
-
-            #pause .6
-            #show tforwardslash
-            #pause .2
-            #show tbackslash
+            scene bg black
 
             pause .65
             
@@ -908,8 +1008,8 @@ label chapter3:
             
             #play music "audio/music/vylet - tenderness.ogg" fadein 1.5
             
-            n "Urgh... you feel like death. Every breath you take hurts. You can't feel your tongue but you can feel your intestines are punishing you for your hubris."
-            n "You can't remember a thing after winning your little contest last night. You must have passed out."
+            n "Urgh... you feel like death. Every breath you take hurts. Your mouth is numb but you can feel your intestines are punishing you for your hubris."
+            n "You can't remember a thing after winning your little contest. You must have passed out."
             
             show kitsuragi at center with dissolve
             
@@ -918,16 +1018,91 @@ label chapter3:
             player "It was worth it."
             
             kitsuragi "I'm sure it was."
-            kitsuragi "Anyway, you may be dying but you could at least try not to reduce your lifespan any further."
+            #kitsuragi "Anyway, you may be dying but you could at least try not to reduce your lifespan any further."
+            #kitsuragi "I guess my speech about not doing anything stupid fell upon deaf ears."
+            kitsuragi "I guess my advice about not doing anything stupid fell upon deaf ears."
             
             player "How long am I gonna be stuck here this time?"
             
-            kitsuragi "Now that you're awake you're free to go. I'm not gonna bother writing up a prescription but you can pick up some pills at the pharmacy. Just tell them I gave you the diagnosis 'butthurt.'"
+            kitsuragi "Now that you're awake you're free to go. Take this to the pharmacy, they'll give you some pills to settle your stomach."
+            
+            n "She hands you a note that just says BUTTHURT with three underlines."
+            
             kitsuragi "Now get out of my hospital."
             
             hide kitsuragi with dissolve
             
-            n "The doctor leaves the room, leaving you to ponder your life decisions and muster the energy to get up, trying not to put undue stress on your abdomen on the way home."
+            n "The doctor leaves the room, leaving you to ponder your life decisions and muster the energy to get up, trying not to put undue stress on your abdomen."
+            n "When you reach the hospital lobby you're surprised to see your friends there waiting for you."
+            
+            gunner @ say "Looks like the legend is back among the living!"
+            
+            rori @ say "[name]! Are you okay?"
+            
+            claire @ say "We were afraid we like, totally killed you! Ksksksksks!"
+            
+            ava @ say "You didn't have to do all that just to impress us you know!"
+            #ava @ say "But it was still impressive..."
+            
+            player "But it was impressive, was it not?"
+            
+            if holdingHands == "No one":
+                ava @ say "Mmh, I suppose it was... for a human!"
+                
+                player "What's that supposed to mean?"
+                
+                ava @ say "Oh nothing~"
+                ava @ say "We're just glad you survived!"
+                
+                player "Me too. I think I'm gonna be out of commission for the next few days though."
+                
+                claire @ say "That's alright! Come on, let's walk you home~"
+                
+                player "You all didn't have to wait on me you know."
+                
+                gunner @ say "What and just leave you here to die alone? Not a chance!"
+                
+                rori @ say "We shouldn't have even ordered that stupid dish for you."
+                
+                claire @ say "Yeahhh our bad. We didn't think it would be like \"go to the hospital\" levels of spicy!"
+                
+                player "It's alright guys, I had a good time."
+                
+                ava @ say "So did we!"
+                ava @ say "You should have seen the looks on your faces!"
+                
+                gunner @ say "Hey in our defense those spices are specifically designed to be used as torture devices!"
+                
+                ava @ say "Birds can eat them just fine!"
+                ava @ say "You mammals are so silly~"
+                
+                rori @ say "It's true, birds have no receptors to taste capsaicin."
+                
+                claire @ say "She may be able to handle the peppers but can she handle *my* spiciness?~"
+                
+                ava @ say "I don't think anybody can~"
+                
+                claire @ say "Ksksksks I'll take that as a compliment~"
+                
+                n "Eventually you manage to corale your friend group out of the hospital and stop them from making a scene."
+                n "Your gut still hurts but you have no regrets."
+                
+            else:
+                player "Now where's my prize?"
+            
+                if holdingHands == "Ava":
+                    
+                if holdingHands == "Claire":
+                    
+                if holdingHands == "Rori":
+                    
+                if holdingHands == "Gunner":
+                    
+            
+            
+            
+            
+            
             
             scene bg codadorm with fade
             

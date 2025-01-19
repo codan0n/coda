@@ -276,8 +276,6 @@ label week2Tuesday:
     
     player "Cool, cool."
     
-    $ mishkaMall = False
-    
     menu:
         player "{cps=0}Cool, cool.{/cps}"
         "Ask if she wants to hang out":
@@ -423,12 +421,15 @@ label week2Tuesday:
     menu:
         n "{cps=0}He's not.{/cps}"
         "Look at Rose's answers.":
-            $ rosePoints = rosePoints - 1
-            $ badEnd = badEnd + 1
+            $ rosePoints =- 1
+            $ badEnd =+ 1
+            
             n "Any way to pass, right? It's not like history is that important anyway."
             n "You sneak a few glances at Rose's sheet until she seems to notice."
 
             if gaveUmbrella == True:
+                $ historyCheated = True
+                
                 n "Rose gives you an angry look but decides to move her paper a little closer so you can read it more easily."
                 n "Is this thanks for giving her your umbrella the other day?"
                 n "You need to ask her to return that some time."
@@ -664,6 +665,7 @@ label week2Tuesday:
     menu:
         n "{cps=0}You can listen to music and chill and get some homework done.{/cps}"
         "Arcoonian book":
+            $ readArcoonianBook = True
             $ rosePoints += 1
             
             n "You take a look at the book Mr. Rothbauer gave you, \"The Rise and Fall of the Arcoonians.\""
@@ -985,7 +987,7 @@ label week2Tuesday:
             
             n "Claire lets out a disappointed sigh but doesn't say anything."
         "Okay!":
-            $ clairePoints = clairePoints + 1
+            $ clairePoints =+ 1
             
             show ava happy
             
@@ -1010,8 +1012,8 @@ label week2Tuesday:
 
             player "Great..."
         "Alright but I'm getting my picture taken with you next.":
-            $ clairePoints = clairePoints - 1
-            $ avaPoints = avaPoints + 1
+            $ clairePoints =- 1
+            $ avaPoints =+ 1
             
             show ava happy
             
@@ -1167,7 +1169,7 @@ label week2Tuesday:
     menu:
         rose "{cps=0}Give those to me. Now.{/cps=0}"
         "Only if you let me write a page of the project":
-            $ goodEnd = goodEnd + 1
+            $ goodEnd =+ 1
             
             n "You might end up regretting this later but you feel bad for making Rose do all the work."
             n "You have to at least put in a minimal effort."
@@ -2673,7 +2675,7 @@ label hospital_bound:
                     n "Luckily you had your headphones in your bag as well. You put them on and start reading."
                     n "Il fait un temps affreux translates to the weather is terrible! Take note of the use of Il fait, which means it makes or it does, rather than it is..."
                 "Browse pinstagram":
-                    $ avaPoints = avaPoints + 1
+                    $ avaPoints =+ 1
                     
                     n "You know what, you really don't feel like doing homework right now."
                     n "Instead, you'd like to indulge in the finer arts society has to offer."
@@ -2833,7 +2835,7 @@ label hospital_bound:
         jump aftermenu2
 
     label choice4:
-        $ clairePoints = clairePoints + 1
+        $ clairePoints =+ 1
         $ clairephonethx = True
 
         call phone_after_menu from _call_phone_after_menu_3
@@ -3102,13 +3104,6 @@ label leaving_hospital:
     
     #n "The doctor said to take it easy, so you're just gonna relax in bed all day."
     
-
-
-
-
-
-    
-    
     #n "You still have class in a few hours after all."
     #n "When it comes time for you to go to bed, you pop another one of those pills, as instructed."
     #n "You're already getting sick of them but you gotta do what you gotta do to stay alive you guess."
@@ -3262,7 +3257,7 @@ label monty_hall:
             herschel @ say "Very good Gunner, I'll add a point to your final grade."
             
         "Change your selection":
-            $ goodEnd = goodEnd + 1
+            $ goodEnd =+ 1
             
             n "Before you can say anything, Gunner pipes up."
             
@@ -3978,6 +3973,8 @@ label ellen_feeding_ducks:
             ava @ say "W-where did that come from?!"
             
         "She's FAT!":
+            $ calledClaireFat =+ 1
+            
             player "It's because you're fat."
             
             show claire surprised earsup
@@ -4035,6 +4032,9 @@ label ellen_feeding_ducks:
                     
                     ava @ say "Oof."
                 "Yes":
+                    $ claireBias =+ 1
+                    $ calledClaireFat =+ 1
+                    
                     player "I'm just saying your should eat a salad every so often."
                     
                     show claire happy
@@ -4432,7 +4432,7 @@ label ellen_feeding_ducks:
                 player "Nah bro, the vibes are off on this one."
                 
                 gunner @ say "Dude what."
-                gunner @ say "You gay or something?"
+                gunner @ say "Are you gay or something?"
                 gunner @ say "You can ogle Rori's ass while we sneak around if that's the case."
                 
                 show rori anxious
@@ -4457,7 +4457,12 @@ label ellen_feeding_ducks:
     hide rori
     with dissolve
     
+    if mishkaMallSpecialActive == True:
+        $ badEnd =+ 1
+    
+    #set to false because you're missing mishka's mall scene if you go with gunner or ava
     $ mishkaMallSpecialActive = False
+    
     
     n "What should you do with your free time?"
     
@@ -4621,7 +4626,7 @@ label liberation_eve:
             menu:
                 player "{cps=0}Oh right. That.{/cps=0}"
                 "I think I'm dying":
-                    $ ellenPoints = ellenPoints + 1
+                    $ ellenPoints =+ 1
 
                     player "I think I'm dying."
 
@@ -5374,7 +5379,7 @@ label liberation_eve:
     menu:
         n "{cps=0}Now's your chance.{/cps=0}"
         "Sit next to Claire":
-            $ clairePoints = clairePoints + 1
+            $ clairePoints =+ 1
             
             n "Surprisingly, Claire has not occupied your bed and has instead opted recline against it whilst sitting on the floor, her arm elbow deep in a bag of chips."
             n "You decide to join her down there and grab a handful of chips when she takes her paw out."
@@ -5472,7 +5477,7 @@ label liberation_eve:
             n "You're getting pretty sleepy though so you hurry and get ready for bed."
 
         "Sit next to Ava":
-            $ avaPoints = avaPoints + 1
+            $ avaPoints =+ 1
             
             n "Ava had decided to occupy your bed, which is fine because it's the most comfortable spot and you wanted to sit next to her anyway."
             n "You plop down on it, bouncing her up into the air."
@@ -5637,7 +5642,7 @@ label liberation_eve:
             n "You're getting pretty sleepy so you hurry and get ready for bed."
 
         "Sit next to Rori":
-            $ roriPoints = roriPoints + 1
+            $ roriPoints =+ 1
 
             n "You approach Rori, who is sitting in your desk chair."
 

@@ -559,6 +559,7 @@ label claireNightWalkLvl1:
     $ checkedBleachers = False
     $ checkedLamp = False
     $ checkedShed = False
+    $ lastChecked = ""
 
 label cachingHunt1:
     if checkedBleachers == False or checkedLamp == False or checkedShed == False:

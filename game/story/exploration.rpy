@@ -211,6 +211,8 @@ label nightWalks:
 label roseNight:
     $ roseNightWalkActive = True
 
+    ###use an array to set scenes
+
     if roseNightWalkLvl == 1:
         call roseNightWalkLvl1
         
@@ -1095,7 +1097,7 @@ label linaTown:
     menu:
         lina "{cps=0}Unless you've got someplace to be...{/cps}"
         "Stay and chat.":
-            $ goodEnd = goodEnd + 1
+            $ goodEnd =+ 1
             
             player "In that case, I suppose I can stay and chat a while longer."
             
@@ -1148,11 +1150,15 @@ label linaTown:
             menu:
                 n "{cps=0}Should you give her a tip?{/cps}"
                 "Tip $5":
-                    n "You pull a 5 dollar bill from your wallet and drop it in her case."
+                    $ moneySpent =+ 5
+                    
+                    n "You pull a crisp 5 dollar bill from your wallet and drop it in her case."
                     
                     lina @ say "Thanks!~"
                 
                 "Tip $20":
+                    $ moneySpent =+ 20
+                    
                     n "Oh what the hell, she deserves it more than you do."
                     n "You drop a 20 in her case and watch her eyes light up."
                     
@@ -1189,11 +1195,15 @@ label linaTown:
             
             menu:
                 "Tip $5":
-                    n "You pull a 5 dollar bill from your wallet and drop it in her case."
+                    $ moneySpent =+ 5
+                    
+                    n "You pull a crisp 5 dollar bill from your wallet and drop it in her case."
                     
                     lina @ say "Thanks!~"
                 
                 "Tip $20":
+                    $ moneySpent =+ 20
+                    
                     n "Oh what the hell, she deserves it more than you do."
                     n "You drop a 20 in her case and watch her eyes light up."
                     
@@ -1250,7 +1260,7 @@ label linaTown:
     menu:
         ava "{cps=0}It's not a true art!{/cps}"
         "Like photography?":
-            $ avaPoints = avaPoints - 1
+            $ avaPoints =- 2
     
             player "Like how photography is just pointing and clicking?"
             
