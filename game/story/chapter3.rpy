@@ -935,9 +935,6 @@ label chapter3:
             gunner @ say "Do not underestimate my homophobia."
             
             claire @ say "He's too powerful!"
-            
-            ###gunner @ say "Shut up, there's nothing gay about holding your homie's hand."
-            #rori takes a pic
         
         "I literally don't care":
             $ avaPoints =- 1
@@ -989,7 +986,7 @@ label chapter3:
             n "No, you're not giving up. You can do this. You must assert your dominance!"
             n "You're nearing the bottom of the bowl now. Gunner is struggling with his last few bites."
             n "Your vision goes blurry and your hands tremble but you do not yield."
-            n "Your very existence is pain but you've learned to live with it. Embrace it. You just have to swallow one more time. 
+            n "Your very existence is pain but you've learned to live with it. Embrace it. You just have to swallow one more time."
             
             claire @ say "Oh my gosh he actually did it!"
             
@@ -1034,6 +1031,24 @@ label chapter3:
             
             n "The doctor leaves the room, leaving you to ponder your life decisions and muster the energy to get up, trying not to put undue stress on your abdomen."
             n "When you reach the hospital lobby you're surprised to see your friends there waiting for you."
+            
+            show ava typical happy at center:
+                ypos y_ava
+                xoffset 300
+            show claire sweater happy at center:
+                ypos y_claire
+                xoffset 650
+            show rori neutral at center:
+                ypos y_rori
+                xzoom -1
+                xoffset -325
+            show gunner neutral at center:
+                ypos y_gunner
+                xoffset -775
+                xzoom -1
+                
+            with dissolve
+            
             
             gunner @ say "Looks like the legend is back among the living!"
             
@@ -1086,372 +1101,508 @@ label chapter3:
                 
                 n "Eventually you manage to corale your friend group out of the hospital and stop them from making a scene."
                 n "Your gut still hurts but you have no regrets."
+                n "You'll be out of commission for at least a day or two. Hopefully you didn't just cause permanent damage to your digestive tract."
                 
             else:
                 player "Now where's my prize?"
+                
+                n "You hold out your hand expectantly."
             
                 if holdingHands == "Ava":
+                    ava @ say "After all the trouble you went through, I suppose you deserve it~"
+                    
+                    if avaPoints > 5:                    
+                        n "Ava smiles and wraps her wing around your arm."
+                    else:
+                        n "Ava takes your hand in her wing. Her feathers are so soft, you can't resist stroking them with your thumb."
+                        
+                        ava @ say "Hey, watch the plumage! They only go in one direction."
+                        
+                        player "Woops sorry."
+                        
+                        n "You hastily straighten out her feathers."
+                        
+                    gunner @ say "It should have been meeeeee!"
+                    
+                    player "I have two hands, you can hold my free one."
+                    
+                    gunner @ say "Not what I meant!"
+                    
+                    ava @ say "Better luck next time!"
+                    
+                    claire @ say "And if you strike out again, I know a lonely bunny gal who could keep you company~ Ksksksksks!"
+                    
+                    n "Gunner shudders."
+                    
+                    gunner @ say "Ugh. We gonna go back home or stand in the hospital lobby all night?"
+                    
+                    rori @ say "Yeah, we should head home. It's gotten pretty late."
+                    rori @ say "Plus we're kind of making a scene here."
+                    
+                    n "Basking in the glory of holding Ava's wing, you make your departure from the hospital with your entourage of fluffy companions."
+                        
+                    if avaPoints > 4:    
+                        scene bg codadorm with fade
+                        
+                        n "Ava leaned on you as you walked back towards campus."
+                        n "Almost like she likes you or something. Weird."
+                    
+                    n "It even seemed like she wanted to stay with you a while longer but your tummy hurts too much and you just want to sleep it off."
                     
                 if holdingHands == "Claire":
+                    claire @ say "Oh yeah I almost forgot!"
+                    
+                    n "Claire grabs hold of your hand like she's trying to break it."
+                    
+                    player "Ow! Ease up some."
+                    
+                    claire @ say "Sorry, I got a little too excited."
+                    
+                    n "She relaxes her grip just slightly. You wouldn't be able to break free even if you wanted to."
+                    
+                    ava @ say "Totally not desperate at all. Nope, not one bit."
+                    
+                    if clairePoints > 4:
+                        claire @ say "I'm never letting go!"
+                        
+                        player "I guess this is my life now."
+                        
+                        ava @ say "Try not to sound so excited, [name]!"
+                        
+                        claire @ say "Are you not happy to hold my paw...?"
+                        claire @ say "I thought this is what you wanted."
+                        
+                        player "I literally risked my life for this moment, why wouldn't I want this?"
+                        
+                        claire @ say "Ohmygosh you're right! You *could* have died!!"
+                        
+                        ava @ say "Don't be so dramatic."
+                        
+                        claire @ say "All just to hold this little bunny's paw?"
+                        
+                        gunner @ say "\"Little?\""
+                        
+                        claire @ say "Well I'm all yours now, [name]! Take us back to your dorm and I'll show you what hand holding is all about~"
+                        
+                        rori @ say "Maybe don't say that super loud in a public setting?"
+                        
+                        player "Alright, how about we all just head outside?"
+                        player "Oh and your paw is very nice to hold by the way."
+                        
+                        n "You feel Claire's weight tug on you as her body goes limp. Her knees tremble, yet she maintains her grasp on your hand."
+                        n "She fans her blushing face with her free paw."
+                        
+                        claire @ say "Y-yeah it is pretty hot in here, don't you think? *Gulp* haha I feel like I'm about to faint...!"
+                        
+                        ava @ say "Good thing we're in a hospital in case you do."
+                        
+                        gunner @ say "Come on guys, exit's this way."
+                        
+                    else:
+                        claire @ say "Don't be jealous~"
+                        claire @ say "Well, it's okay to be a little jealous! Who *wouldn't* wanna hold a human male's hand?"
+                    
+                        gunner @ say "Me."
+                        
+                        claire @ say "You don't know what you're missing out on~"
+                        
+                        ava @ say "What's it like?"
+                        
+                        claire @ say "It's like a fine leather that's warm to the touch and fits perfectly in my paw with a firm yet gentle grasp!"
+                        
+                        rori @ say "That does sound kinda nice..."
+                        
+                        gunner @ say "If you guys are done gushing over your human hand fetish, can we please go home?"
+                        
+                        claire @ say "I could gush more but yeah I'd rather head to [name]'s dorm ASAP."
+                    
+                    n "You and your crew of fluffy companions file out of the hospital and headed back toward campus."
+                    n "Claire was giddy the whole way but the pain in your stomach began to flare up after walking so much."
+                    n "She practically begged to stay with you when you reached your dorm but the others managed to pry her off you so you could rest."
                     
                 if holdingHands == "Rori":
+                    n "Rori looks around shyly before nervously grabbing onto your pinkie finger."
+                    
+                    player "What is that? You call that hand holding?"
+                    
+                    rori @ say "Ack! Sorry!"
+                    rori @ say "I've never held someone's hand before!"
+                    
+                    claire @ say "Aww, you're taking away his hand holding virginity!"
+                    
+                    rori @ say "D-don't say it like that!"
+                    
+                    n "You pull Rori's hand closer and interweave your fingers between his hoof-finger things."
+                    
+                    rori @ say "O-o-oh my goshhh t-this is really happening...!"
+                    
+                    if roriPoints > 4:
+                        player "Don't be shy, you know you want this."
+                        
+                        rori @ say "Maybe, just a little..."
+                    
+                        gunner @ say "LOL he wants more than just some hand holding."
+                    else:
+                        player "See? That's not so bad, now is it?"
+                        
+                        n "You can feel how tense Rori is through his hand."
+                        
+                        rori @ say "Y-yeah, just two bros holding hands because of some silly bet! Nothing else to it!"
+                        
+                        gunner @ say "Holy cope lmao"
+                        
+                    rori @ say "Shut up! Don't ruin this moment!"
+                        
+                    gunner @ say "Okay bro, chill."
+                    
+                    ava @ say "Well I think you two look pretty cute together!"
+                    
+                    if avaPoints > 5:
+                        n "She mutters something under her breath."
+                        
+                        ava @ say "But me and [name] would be even cuter..."
+                        
+                    rori @ say "Heh, thanks."
+                        
+                    player "Shall we head back to the dorms then?"
+                    
+                    rori @ say "Ba-a-a-ah! Of course!"
+                    
+                    if roriPoints > 4:  
+                        rori @ say "But could we maybe take the scenic route? It's a nice night out and..."
+                        
+                        player "And you wanna hold my hand a little longer. Gotchya."
+                        
+                        rori @ say "Something like that...!"
+                        
+                        claire @ say "D'awww~"
+                        
+                        gunner @ say "Ick."
+                        
+                    scene bg black with fade
+                    
+                    n "Rori eventually got more comfortable holding your hand as you walked back to your dorm."
+                    n "It became so natural that he didn't want to let go."
+                    n "But all good things must come to an end. You thought about inviting him to stay for a sleepover but your tummy had started hurting again and you just wanted to rest."
+                        
                     
                 if holdingHands == "Gunner":
+                    gunner @ say "... You're serious?"
                     
+                    player "I didn't dominate you in our competition to *not* hold your paw."
+                    
+                    claire @ say "Come on, a deal's a deal, Gunner!"
+                    
+                    ava @ say "Haha yeah just do it! It'll be really funny haha OvO"
+                    
+                    rori @ say "What's the matter Gunner? Afraid you'll turn gay?"
+                    
+                    gunner @ say "Shut up, there's nothing gay about holding your homie's hand."
+                    
+                    n "The cat snatches your hand, trying his best to act nonchalant about it but he can't hide the disgusted look on his face."
+                    n "His claws dig into your flesh. He's trying to get you to let go but he underestimates your stubbornness."
+                    
+                    player "Great! How about we go for a walk through campus now?"
+                    
+                    gunner @ say "Really bro?"
+                    
+                    n "Rori snickers and pulls out his phone, snapping a pic of you and your catty cohort with a loud shutter sound."
+                    
+                    gunner @ say "DELETE THAT!"
+                    
+                    rori @ say "lol no"
+                    
+                    n "Gunner lunges to grab Rori's phone but you restrain him."
+                    
+                    player "Bad kitty!"
+                    
+                    n "He hisses at you while the rest of the group laughs. Eventually he settles down and accepts his defeat."
+                    
+                    ava @ say "You two are so cute together! You should hold hands more often~"
+                    
+                    claire @ say "Yeah Ava's definitely gonna be writing fanfiction about this later."
+                    
+                    ava @ say "Shush, you!"
+                    
+                    gunner @ say "The things I put up with to have a chance with a hot secretary bird."
+                    
+                    claire @ say "Yaoi is so fucking hot."
+                    
+                    rori @ say "...Bet."
+                    
+                    gunner @ say "I have no idea why girls are so into this sort of thing."
+                    
+                    player "Because if one guy is hot then two guys is twice as hot."
+                    
+                    gunner @ say "Yeah but two guys *together???* What does the woman even get out of this?"
+                    
+                    ava @ say "Snrk"
+                    ava @ say "I'll cut you a deal Gunner, anything you do with [name] while holding hands, I'll do with you~"
+                    
+                    gunner @ say "Yeah? Well I don't think [name] is gonna let me bend him over and-"
+                
+                    ava @ say "Before you finish that statement let me be clear that I'm just joking around...!"
+                    
+                    n "Well? Should you draw out this \"\"\"purely hypothetical\"\"\" scenario to fulfill Ava's desires?"
+                    
+                    menu:
+                        "Aw hell no!":
+                            $ rejectedAvasproposal = True
+                        
+                            n "Aw hell no, you're not letting Ava's indecisiveness decide your actions!"
+                            n "You won't indulge in her degenerate fantasies, to play the role of the bottom in some college chick's gay porno ideas. That bird needs to pick a side already!"
+                            
+                            player "Oh suuuure, let me suck Gunner's dick so he can get some beak later."
+                            
+                            show gunner cheeky1
+                            show ava typical enamored
+                            show claire sweater surprised earsup
+                            show rori worried noblush
+                            
+                            gunner @ say "You'd do that? For me...?"
+                            
+                            player "Hell no!"
+                            #player "I'm like an ozone molecule, I form strong bonds in pairs, not trios!"
+                            
+                            #rori @ say "Ozone is O3, not O2."
+                            
+                            #player "Well fuck, there goes my college student tier analogy."
+                            
+                            #player "Ever heard of pairbonding?"
+                            #gunner @ say "Well right now it looks like you're pairbonded to *me*"
+                            
+                            player "I don't want any part of this isoceles love triangle shipwreck-in-progress!"
+                            
+                            claire @ say "That's right! Human males are for pairbonding only!"
+                            
+                            n "Ava looks a bit disappointed but quickly stows it away."
+                            
+                            ava @ say "H-hey it was just a funny thought that popped into my head is all! No need to get so defensive!"
+                            
+                            n "Gunner shakes his head, seemingly achieving some sense of clarity."
+                            
+                            gunner @ say "[name]'s right, I could never allow my dick to be touched by another man, not even for guaranteed bird sexo. That would be hella gay."
+                            # I just don't swing that way."
+                            gunner @ say "Besides..."
+                            
+                            n "Gunner snaps his paw and winks at Ava."
+                            
+                            gunner @ say "I don't need a cheap trick like that to win in the end~"
+                            gunner @ say "Sometimes you have to lose the battle and hold your bro's hand to win the war."
+                            
+                            ava @ say "Hmm..."
+                            ava @ say "In that case, may the best man win!"
+                            
+                            claire @ say "I call dibs on the loser!"
+                            
+                            gunner @ say "...Now I definitely have to win."
+                            gunner @ say "Come on, let's get out of here before anybody important sees me like this."
+                            
+                            n "You made your way back to campus, holding Gunner's paw the whole time. You revelled in how uncomfortable it made him and thwarted his attempts to escape."
+                            n "Only when you reached your dorm did you mercifully release him."
+                        "Just a smooch":
+                            n "You don't know if you're ruining your chances with Ava or boosting them but you're doing this for the memes."
+                            
+                            player "Best I can do tonight is a smooch."
+                            
+                            n "Gunner turns his eyes toward Ava, then back to you, then back to Ava before finally coming to a stop looking at you with a mixture of apprehension and gratitude."
+                            
+                            gunner @ say "...For real?"
+                            
+                            player "I mean we're already holding hands."
+                            player "What's one little kiss gonna do?"
+                            player "Aside from giving these fujoshis a nice show that is?"
+                            
+                            ava @ say "Yes... Ha ha ha... {u}yes{/u}!"
+                            
+                            gunner @ say "Ughhh you drive a hard bargain!"
+                            gunner @ say "This is a classic strong-arming technique I read about in \"The Art of the Deal\" where you try and turn someone's homies into homos."
+                            gunner @ say "And to that I say no deal."
+                            
+                            ava @ say "Aww..."
+                            
+                            player "Don't worry, he'll come around to the idea."
+                            
+                            claire @ say "Shoulda bargained better."
+                            claire @ say "Offer him a blowie next time!"
+                            
+                            ava @ say "Claire please."
+                            
+                            claire @ say "What? That's just common business sense! There's a whole chapter about it in \"The Art of the Deal!\""
+                            
+                            gunner @ say "Too late, my decision is final!"
+                            gunner @ say "Now let's get out of here before anybody important sees me like this."
+                            
+                            n "You made your way back to campus, holding Gunner's paw the whole time. You revelled in how uncomfortable it made him and thwarted his attempts to escape."
+                            n "Only when you reached your dorm did you mercifully release him."
+                            
+                            
+                            
+                            
+                        "Suggest a compromise":
+                            $ rejectedAvasproposal = True
+                        
+                            player "What? Why do I have to be the bottom?"
+                            player "If Ava wants us so bad she can bottom for both of us."
+                            
+                            ava @ say "T-that...!"
+                            ava @ say "...Could actually be arranged~"
+                            ava @ say "Purely in a hypothetical sense of course! As a philosophical exercise!"
+                            
+                            claire @ say "Holy shit they're actually planning a threesome."
+                            
+                            rori @ say "I know, it's insane."
+                            
+                            ava @ say "Quiet you two! We're merely discussing the complex social dynamics of intersecting bonding rituals!"
+                            
+                            claire @ say "Who gets your beak and who gets your tailfeathers?"
+                            
+                            ava @ say "It's none of your business!"
+                            
+                            n "You feel Gunner's paw grip tightly around your hand, trembling. You'd almost forgotten that you were bound to him in this way."
+                            n "Seeing you two forced to act as an inseperable pair sure is doing a number on Ava, huh?"
+                            
+                            claire @ say "Fine, keep your secrets! I'll just ask them directly which they'd prefer!"
+                            claire @ say "Well? Which would it be, [name]?"
+                            
+                            menu:
+                                "Beak":
+                                    n "This conversation is rapidly approaching critical levels of awkwardness. This is definitely not the topic you should be discussing in a hospital lobby at 9PM."
+                                    n "You can barely utter out the word."
+                                    
+                                    claire @ say "Don't try and weasel out of this one, you knew what you were getting into when you suggested a compromise!"
+                                    
+                                    player "B... Beak."
+                                "Tailfeathers":
+                                    n "This conversation is rapidly approaching critical levels of awkwardness. This is definitely not the topic you should be discussing in a hospital lobby at 9PM."
+                                    n "You can barely utter out the word."
+                                    
+                                    claire @ say "Don't try and weasel out of this one, you knew what you were getting into when you suggested a compromise!"
+                                    
+                                    player "T... Tailfeathers."
+                                
+                            claire @ say "There, I just got you some new fanfic material~"
+                            
+                            ava @ say "Haha y-yeah just some harmless fanfiction..."
+                            
+                            n "Gunner appears to be stumped, weighing his options and chances carefully. He suddenly clears his throat and speaks up."
+                            
+                            gunner @ say "Okay enough of the hypothetical bullshit."
+                            gunner @ say "There will be no threesomes unless it's with me, Ava, and Ava's twin sister."
+                            gunner @ say "It's all or nothing with me. No compromises."
+                            
+                            rori @ say "Wow, that's actually... kinda based of you."
+                            rori @ say "Or at least it would be if I didn't know you're just afraid of seeing [name]'s dick."
             
-            
-            
-            
-            
-            
-            scene bg codadorm with fade
-            
-            play music "audio/music/vylet - リラックス.ogg" fadein 1.0
-            
-            show box with Dissolve(.2):
-                ypos 0
-            
-            n "You collapse onto your bed as soon as you make it back to your dorm."
-            n "Your phone buzzing is the only thing stopping you from falling back to sleep."
-            
-            call phone_start from _call_phone_start_52 
-
-            call message_start("Ava", "Hey [name]! You doing alright?", "avaavi.png") from _call_message_start_69 
-            call message("Ava", "Sorry we just kinda dumped you at the hospital :/", "avaavi.png") from _call_message_375 
-
-            call reply_message("Yeah.") from _call_reply_message_279 
-            call reply_message("wtf happened last night") from _call_reply_message_280
-
-            call message("Ava", "You passed out literally as soon as you finished your bowl", "avaavi.png") from _call_message_376 
-            call message("Ava", "But hey at least you won the contest!", "avaavi.png") from _call_message_377 
-            
-            call reply_message("Woo") from _call_reply_message_281
-            call reply_message("My stomach will never be the same") from _call_reply_message_282
-
-            call message("Ava", "RIP", "avaavi.png") from _call_message_378 
-            call message("Ava", "I'm glad you're okay though", "avaavi.png") from _call_message_379 
-            call message("Ava", "I was kinda rooting for you lol", "avaavi.png") from _call_message_380 
-            
-            call reply_message("Oh?") from _call_reply_message_283
-            call reply_message("You didn't wanna sit in Gunner's lap?") from _call_reply_message_284
-            
-            if avaPoints >= 4:
-                #untested
-                #need to determine if points requirement is too high
-                call message("Ava", "I'd rather sit in yours :P", "avaavi.png") from _call_message_381 
+                            gunner @ say "Each piece has its role in the grand scheme of things."
+                            gunner @ say "I know there's at least one timeline where maximizing my homophobia stat gets me a waifu."
+                            
+                            player "Hey, if it works good for you."
+                            
+                            n "Ava finally manages to shake off her horny stupor and feel shame after getting turned down."
+                            
+                            ava @ say "Haha it was all just a fun hypothetical to ponder anyway! *Yaaawn* is anybody else sleepy? I think we should all forget about this and go to bed."
+                            
+                            gunner @ say "Agreed."
+                            
+                            scene bg black
+                            
+                            n "You made your way back to campus, holding Gunner's paw the whole time. You revelled in how uncomfortable it made him and thwarted his attempts to escape."
+                            n "Only when you reached your dorm did you mercifully release him."
+                            
+                n "It was nice to hold someone's hand all the way back to your dorm though. Makes you feel special."
+                n "You should find a way to do it without accepting stupid challenges and tearing up your guts."
+                         
                 
-                call reply_message("It's free anytime") from _call_reply_message_285
                 
-                #call message("Ava", "Noted~", "avaavi.png") 
-                #call message("Ava", "Maybe I'll swing by later to \'study\' OvO", "avaavi.png") 
-                call message("Ava", "OvO", "avaavi.png") from _call_message_382 
-                call message("Ava", "I've got a busy schedule but I'll try to squeeze you in~", "avaavi.png") from _call_message_383 
                 
-                call reply_message("Lookin forward to it UwU") from _call_reply_message_286
-                
-                call message("Ava", "Hehe same~", "avaavi.png") from _call_message_384 
-                
-                call phone_end from _call_phone_end_60         
-                
-                #call message("Ava", "Allow me to see what my consultant says", "avaavi.png") 
-                
-                #call message("Claire", "This is Ava's consultant.", "claireavi.png") 
-                #call message("Claire", "As a result of unfortunately landing you in the hospital last night, I would like to offer you compensation in the form of a makeout session", "claireavi.png") 
-                #call message("Claire", "administered by my client Ava Montblanc at a time of your choosing", "claireavi.png") 
-                #call message("Claire", "you can also totally feel her up and stuff lol", "claireavi.png") 
-                #call message("Claire", "no bra too", "claireavi.png") 
-                
-                #call message("Ava", "AAAA WHAT NO I DID NOT AGREE TO THIS", "avaavi.png") 
-                
-                #call message("Claire", "Too late, the offer's been sent :P", "claireavi.png") 
-                
-                #call screen phone_reply("Accept offer","avaaccept","Decline offer","avadecline")
-                
-                #label avaaccept:
-                    #call phone_after_menu
-                    
-                    #call message_start("me", "Deal", "testimage.png") 
-                    
-                    #call message("Ava", "Oh my gosh Claire whyyyy ;-;", "avaavi.png") 
-                    
-                    #call message("Claire", "she's acting hard to get but i know she wants it :P", "claireavi.png") 
-                    
-                    #call reply_message("Claire's influence is truly limitless")
-                    
-                    #call message("Claire", "just wait until our next sleepover >:3", "claireavi.png") 
-                    
-                    #call message("Ava", "You guys are so lewd >.>", "avaavi.png") 
-                    
-                    #call message("Claire", "i am literally handing you a once in a lifetime opportunity to get with a human on a silver platter", "claireavi.png") 
-                    #call message("Claire", "you should be more thankful", "claireavi.png") 
-                    
-                    #call message("Ava", "Hmph!", "avaavi.png") 
-                    
-                    #call message("Ava", "Hey WTF!", "avaavi.png") 
-                    
-                    #call message("Claire", "I just put a lock on her underwear drawer", "claireavi.png") 
-                    #call message("Claire", "no bra for you until you uphold your end of the deal with [name]!", "claireavi.png") 
-                    
-                    #call message("Ava", "My panties were in there too!", "avaavi.png") 
-                    
-                    #call message("Claire", "I guess that sweetens the deal even more :P", "claireavi.png") 
-                    
-                    #call reply_message("")
-                    #ava says she was planning on hanging out with gunner today, player can come with if they want. she says if you play your cards right you'll get your prize
-                    #player teases she better hope that thin shirt of hers doesn't get wet, it's supposed to rain tomorrow
-                    
-                    
-                    #grind session at party
-                    #negotiating my bird butt
-                    
-                    #may i spank it
-                    
-                    #once
-                    
-                    #good deal
-
-                    #call phone_end
-                
-                #label avadecline:
-                    #$ avaPoints += 1
-                    #call phone_after_menu
-                    
-                    #call message_start("me", "Nah don't worry about it", "testimage.png") 
-                    
-                    #call message("Claire", "are you sure? i know she's playin hard to get but she's thiiiis close to doin it", "claireavi.png") 
-                    
-                    #call message("Ava", "I am not!", "avaavi.png") 
-                    
-                    #call reply_message("Yeah it's fine. I just wanted the glory of beating Gunner last night.")
-                    
-                    #call message("Claire", "awwww so humble <3", "claireavi.png") 
-                    #call message("Claire", "well if you change your mind, I'll be your consolation prize~", "claireavi.png") 
-                    
-                    #call message("Ava", "Hrmph!", "avaavi.png") 
-                    #call message("Ava", "And I guesssss I can give you a smooch on the cheek or something", "avaavi.png") 
-                    
-                    #call message("Claire", "See! I told you she'd come around! Just needed some jealousy as motivation~", "claireavi.png") 
-                    
-                    #call reply_message("you're too kind, both of you~")
-                    
-                    #call message("Claire", "That reminds me!", "claireavi.png") 
-                    #call message("Claire", "I'm going fishing with that ram boi if you wanna come~", "claireavi.png") 
-                    
-                    #call reply_message("Wow, you're really pushing him to get outdoors more huh")
-                    #call reply_message("Around what time? I'm feeling kinda beat today")
-                    
-                    #call message("Claire", "We can go tomorrow but it's gotta be bright and early!", "claireavi.png") 
-                    
-                    #call reply_message("You coming, Ava?")
-                    
-                    #call message("Ava", "I would but I already made plans with Gunner", "avaavi.png") 
-                    #call message("Ava", "We're going urban exploring again, this time at the old train station", "avaavi.png") 
-                    
-                    #call screen phone_reply("Go fishing","claireaccept","Ask to join Ava","clairedecline")
-                    
-                    #label claireaccept:
-                        #$ clairePoints += 1
-                        #$ roriPoints += 1
-                        #call phone_after_menu
-                        
-                        #call message_start("me", "Ah damn enjoy your adventure. Watch out for hobos.", "testimage.png") 
-                        #call reply_message("I'm gonna catch a big fish with Claire and Rori lol")
-                        
-                        
-                    
-                    
-                    
-                    
-                    
-                    #move the talk about fishing trip/urbex to sunday morning
-                    
-                    
-                    
-                
-                    #label clairedecline:
-                        #$ avaPoints += 1
-                        #call phone_after_menu
-                        
-                        #call reply_message("Is this an Ava x Gunner exclusive or do you have room for one more?")
-                        
-                        #call message("Ava", "I was hoping you'd ask to join~", "avaavi.png") 
-                        #call message("Ava", "As much as I like Gunner, he's kinda.... ", "avaavi.png") 
-                        #call message("Ava", "Uhhhh", "avaavi.png") 
-                        #call message("Ava", "Well you know how he is", "avaavi.png") 
-                        
-                        #call reply_message("I get what you mean")
-                        
-                        #call message("Claire", "I sense a love triangle~", "claireavi.png") 
-                        #call message("Claire", "Or perhaps a love quadrilateral if I'm involved idk if I am or not", "claireavi.png") 
-                        
-                        #call message("Ava", "Shush, the adults are talking", "avaavi.png") 
-                        
-                        #call message("Claire", "Don't silence me!", "claireavi.png") 
-                        #call message("Claire", "Like it or not, you'll have to choose one way or another eventually!", "claireavi.png") 
-                        #call message("Claire", "Or a three way if you're so inclined uwu", "claireavi.png") 
-                        
-                        #call message("Ava", "Blocked", "avaavi.png") 
-                        
-                        #call message("Claire", "Hey! Rude!", "claireavi.png") 
-                        #call message("Claire", "[name] call Ava a whore for me, thx", "claireavi.png") 
-                        
-                        #you live in the same room, you do it
-                        
-                        #claire "oh yeah"
-                        #claire "Ow! She threw a textbook at me"
-                        #claire "And now she's trying to strangle me with a bra"
-                        
-                        #n "god you wish you could see that"
-                        #call reply_message("Claire says you're a slut, Ava")
-                        
-                        #call message("Ava", "Well it takes one to know one!", "avaavi.png") 
-                        
-                        #call phone_end
-            else:
-                #finished
-                call message("Ava", "I was leaving it to chance really", "avaavi.png") from _call_message_385 
-                call message("Ava", "Or rather, whoever was most determined", "avaavi.png") from _call_message_386 
-                call message("Ava", "Which ended up being you! ^v^~", "avaavi.png") from _call_message_387 
-                
-                call reply_message("Cool so where's my lapdance?") from _call_reply_message_287
-                
-                call message("Ava", "Hey, I only said I'd sit in the victor's lap!", "avaavi.png") from _call_message_388 
-                
-                call reply_message("And yet my lap remains empty") from _call_reply_message_288    
-                
-                call message("Ava", "Can we continue this conversation later? Something just came up.", "avaavi.png") from _call_message_389 
-                
-                call reply_message("fffffine but don't think i'll just forget about it!") from _call_reply_message_289    
-                
-                call message("Ava", "Of course not~ I'm excited to see where this goes myself~", "avaavi.png") from _call_message_390 
-            
-                call phone_end from _call_phone_end_61
-                
-            #n "That's enough texting for today."
-            n "It's a beautiful day out but your stomach still hurts from yesterday, so you resign yourself to catching up on some classwork between watching videos online."
-                    
+                jump chapter3AfterWeekend
+                            
+                            
         "Concede":
-            #untested
-            n "It would be wise to admit defeat. There's no point in hurting yourself over this."
+            n "You can't... You just can't go on."
+            n "This isn't worth it."
+            n "You're feeling woozy and tears are streaming down your cheeks. Is this really worth it?"
+            n "If you take one more bite, you're pretty sure you'll be out of commission for the rest of the weekend."
+            n "Maybe it's time to give up."
             
-            player "No more. I can't go any further."
+            player "That's it, no more."
             
             n "You sit there, brain fried from the traumatic spices, suckling on an ice cube as Gunner finishes his bowl and claims victory."
             
-            show ava casual overjoyed
+            gunner @ say "THROUGH THE FIRE AND FLAMES, I EMERGE VICTORIOUS!"
+            gunner @ say "*Inhales*"
+            gunner @ say "AAAAAAAAAAAAAAAAAAA!!!!"
             
-            gunner @ say "THROUGH THE FIRE AND FLAMES, I EMERGE VICTORIOUS! *inhale* AAAAAAAAAAAAAAAAAAA"
-            
-            n "He sits panting for a while before trying to take a sip of water."
+            n "The waitress comes by and refills your drinks. Gunner chugs his in one go."
             
             gunner @ say "EVEN THE WATER BURNS!!!"
             
-            show ava casual happy
-            
             ava @ say "You alright, big guy?"
             
-            gunner @ say "No"
-            gunner @ say "I need"
-            gunner @ say "I need your avian ass right here on my lap cause I just owned [name] and brought glory to all of catkind."
-            
-            show ava casual daydream
+            gunner @ say "Not really but whatever."
+            gunner @ say "I am in"
+            gunner @ say "so much pain right now."
+            gunner @ say "But it'll be worth it to hold your wing."
             
             n "Ava stifles a giggle."
             
             ava @ say "Oh pft. Fine. I said I would, and I guess you do kinda deserve it."
             
-            show ava:
-                xpos -150
-            with move
+            rori @ say "You put up a good fight, [name]. It just wasn't meant to be."
             
-            pause .1
+            claire @ say "You put on a good show too!"
             
-            show ava casual concerned
-            
-            n "Ava stands up and walks over, visibly hesitant, but a thumbs up from Claire is enough to convince her to go with it."
-            
-            show ava casual flattered at flipright
-            
-            n "She pushes out her rear, flaunting her tail feathers and sits down on Gunner's lap."
-            n "She lets out a surprised chirp as he grabs her by the waist and pulls her closer."
-            n "Feels bad man."
-            
-            show claire outdoors lusty
-            
-            claire @ say "Alright, your turn [name]!"
-            
-            player "Wha"
-            
-            n "You were too busy chugging water and sulking to notice Claire's giant ass looming over you."
-            n "You have no time to prepare as it comes crashing down, making the seat you're sitting in groan and creak as 300 pounds of bunny crushes your legs."
-            n "You can't even see over her when she leans back and settles in."
-            
-            player "This is fine."
-            
-            n "However, even being pinned between an uncomfortable chair and a BBW (big beautiful waifu) is nothing compared to the smoldering spice lingering in your mouth."
-            n "You probably made the right choice in not continuing, even if you do have to pay for the meal now."
-            
-            show ava casual smile
-            
-            ava @ say "You comfy, Claire?"
-            
-            show claire outdoors embarassed
-            
-            claire @ say "Yup! Ksksksks!"
-            
-            show ava casual overjoyed
-            
-            ava @ say "Same~"
-            ava @ say "*Chirp*~"
-            
-            show claire outdoors neutral
-            
-            claire @ say "I just feel bad cause now Rori's left out!"
-            
-            rori @ say "O-oh that's quite alright..! I wouldn't want to uh, steal the glory from [name] so you can stay over there with [himher]."
-            
-            n "You catch a glance at Gunner. The bastard shoots you a smug grin and wraps his arms around the bird sitting in his lap."
-            n "Fuck, why did you even suggest this silly contest in the first place?"
-            
-            show ava casual happy
-            
+            ava @ say "You boys looked so silly~"
             ava @ say "Mind if I try a bite, [name]?"
             
-            player "Wha? Are you sure? I'm literally dying over here."
+            player "You sure? It's kinda spicy."
             
-            show ava casual smile
-            
-            ava @ say "I'm sure I'll be fine~"
+            ava @ say "Oh I think I can handle it~"
             
             n "Ava reacher over with her fork and takes a stab at your red hot molten lava in a bowl."
             n "You watch in horror as she takes a big bite and swallows it."
             
-            show ava casual daydream
-            
             ava @ say "Hmm. Kinda bland if you ask me."
             
-            gunner @ say "Whoaaaa!!! How can you eat something like that so casually?"
+            gunner @ say "The fuck?"
+            gunner @ say "How can you eat something so spicy? Are you Mexican or something?"
             
-            show ava casual smile
+            ava @ say "Breee~ A magician never reveals her secrets!"
             
-            ava @ say "Hehe~ It's a secret~"
+            rori @ say "Birds don't have receptors of capsaicin, so they can't taste spicy foods."
             
-            rori @ say "Ohh I think I know! I read that birds don't have receptors for capsaicin, the thing that makes things spicy."
+            ava @ say "Ya got me! Hehe it was fun watching you guys struggle with something so mild!"
             
-            show ava casual overjoyed
+            gunner @ say "Well I'm glad we could offer some amusement for the night."
+            gunner @ say "I am never doing this again."
             
-            ava @ say "Breeee~ Ya got me! It was fun watching you guys suffer from something so mild!"
+            player "Same."
             
-            show ava casual happy
+            scene bg black with dissolve
             
-            n "Ava pulls your bowl closer to her and continues eating it like it's nothing."
+            n "The rest of the night was a blur. You felt like you were going to pass out a few times but you managed to hold it together."
+            n "Gunner was kind enough to pay for your meal but not kind enough to avoid gloating as he held Ava's wing on the way back to campus."
             
-            ###if you had ava sit by you during the movie night, comment on how he's getting his revenge
+        #end day. if you won, skip 2 days. if you lost, skip 1 day and explore on the next
+        
+        
+        
+        
+        
+        jump chapter3AfterWeekend
+        
+label chapter3AfterWeekend:
+    n ""
+        
+        
+        
+        
+        
             
-            n "The night goes on and eventually Claire gives you a break when you all decide to head back home."
-            n "Ava and Gunner sure seemed to have a good time, and even though Rori was maidenless he still seemed to enjoy spending time with everyone."
-            n "Even you had a few laughs once you no longer felt like death was preferable to your situation."
-            n "Still, losing the contest kinda bummed you out more than expected."
+               
+                    
+        
             
             stop music fadeout 1.0
         
@@ -1495,12 +1646,9 @@ label chapter3:
             
             call phone_end from _call_phone_end_62
             
-            n "You're getting pretty tired of this love triangle bullshit. Sooner or later she's gonna have to pick a side."
+            n "You're getting pretty tired of this love triangle bullshit."
             n "It's a beautiful day out but your stomach still hurts from yesterday, so you resign yourself to catching up on some classwork between watching videos online."
     
     
-    ####spicy food friday night, explore on sunday?
-        #the reward for winning the contest is holding hands with ava. loser gets rori or claire
-        #claire: Wow ava that's way more lewd than what I suggested!
-        #choose who you wanna hold hands with at the start (including gunner "Wh-what?! My brother in Christ, that is a bit sus."), or if you don't care and just want to beat gunner. hold hands as you leave the hospital
     
+        

@@ -3186,6 +3186,7 @@ default gnugift = False
 default moneySpent = 0
 default gaveCinRoll = False
 default spicyVictory = False
+default rejectedAvasproposal = False
 
 default roseNightWalkLvl = 1
 default gunnerNightWalkLvl = 1

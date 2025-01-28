@@ -1007,7 +1007,7 @@ label liberation_day:
                     
                     ava @ say "Yeah but our bodies don't know that! It's the proximity that counts!"
                     
-                    player "Next time can we at least be nude?"
+                    player "Next time can we at least not be fully clothed?"
                     
                     ava @ say "Hmm..."
                     
