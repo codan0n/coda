@@ -2737,20 +2737,18 @@ label hospital_bound:
 
     call message("Claire", "Ur cute btw", "claireavi.png") from _call_message_45
 
-    call screen phone_reply("What?","choice3","Thanks?","choice4")
+    call screen phone_reply("Me??","choice3","No u","choice4")
 
     label choice3:
         $ clairephonewhat = True
 
         call phone_after_menu from _call_phone_after_menu_2
 
-        call message_start("me", "What?", "testimage.png") from _call_message_start_9
+        call message_start("me", "Me??", "testimage.png") from _call_message_start_9
 
-        call message("Claire", "What?", "claireavi.png") from _call_message_46
+        call message("Claire", "Yeah you!", "claireavi.png") from _call_message_46
 
-        call reply_message("...") from _call_reply_message_32
-        call reply_message("Idk") from _call_reply_message_33
-        call reply_message("Nvm") from _call_reply_message_34
+        call reply_message("Idk about that") from _call_reply_message_33
 
         call message("Claire", "Wait", "claireavi.png") from _call_message_47
 
@@ -2839,9 +2837,9 @@ label hospital_bound:
         $ clairephonethx = True
 
         call phone_after_menu from _call_phone_after_menu_3
-        call message_start("me", "Thanks?", "testimage.png") from _call_message_start_10
+        call message_start("me", "No u~", "testimage.png") from _call_message_start_10
 
-        call message("Claire", "Ur welcome cutie~ ksksksksks ;)", "claireavi.png") from _call_message_55
+        call message("Claire", "Aaaaaaaa thxhxhxhxhxadsfjaksdfafokdwjpoiqefsa", "claireavi.png") from _call_message_55
 
         call reply_message("Ok i think you've had too much to drink") from _call_reply_message_41
 
@@ -4682,8 +4680,123 @@ label liberation_eve:
             n "Better hurry along now!"
 
         "Don't follow her":
-            ###write an event happen during this time
             n "It's kinda creepy to stalk your professor like that. You should just chill for the next half hour you have before your next class."
+            n "You loiter around the campus until a couple of familiar faces approach you, one with a friendly smile and the other looking like she wants to kill you."
+            
+            show nicodemus
+            show rose
+            
+            nicodemus @ say "Good day, [name]! Enjoying the fair weather?"
+            
+            rose @ say "There, we said hi. Can we go now?"
+            
+            nicodemus @ say "What's the rush, lass? Can't a dean have a pleasant chat with his future alumni?"
+            
+            player "Nice to see you again, Mr. Kazcynski. What do I owe the pleasure?"
+            
+            #nicodemus @ say "There's hardly an occasion, I just happened to see you there while I was out walking with my... granddaughter here."
+            nicodemus @ say "There's hardly an occasion, I just happened to see you there while I was out walking with my granddaughter here."
+            
+            n "Rose looks away, clearly uninterested in the conversation."
+            
+            nicodemus @ say "I hear the two of you have a history course together! My little Rose just adores history! It was her favorite subject in high scool!"
+            nicodemus @ say "It may seem like the past is this finite thing that's gone and left us, but there are more stories than can be told in a lifetime, showing what civilization is truly capable of!"
+            nicodemus @ say "I think it was my war stories that got Rose interested in the first place bahaha!"
+            
+            rose @ say "Grandpa... shut up already, you said we'd get coffee before my next class."
+            
+            n "The dean checks his wristwatch and smiles."
+            
+            nicodemus @ say "We've still got plenty of time! Humor me!"
+            
+            n "Rose huffs and crosses her arms."
+            
+            player "Well I got out of literature early so I'm just waiting for French to start."
+            
+            nicodemus @ say "French huh! The only French I know are the battle cries of my comrades as we pushed to liberate Paris!"
+            nicodemus @ say "\"Avec moi!\" \"Au feu! Au feu!\" \"En avant!\""
+            nicodemus @ say "And let me tell you, those Parisian women sure were grateful for la résistance and their allies!"
+            
+            n "As annoyed as Rose wants to be, she can't help but smirk at her grandfather's gusto."
+            
+            #rose @ say "We get it, you were a solder who saw some action."
+            
+            nicodemus @ say "But that's all in the past now, today I'm just a humble university dean."
+            nicodemus @ say "Which means I'm curious as to how your experience here at Harmonia is going, [name]. I trust your grades are satisfactory."
+            nicodemus @ say "More importantly, have you made any significant bonds?"
+            
+            menu:
+                "I think so":
+                    $ avaPoints += 1
+                    $ clairePoints += 1
+                    $ roriPoints += 1
+                
+                    player "I think so. I have a group I hang out with pretty regularly."
+                    
+                    nicodemus @ say "Good!"
+                    nicodemus @ say "I'd hate for you to have your nose in the books all day and miss out on making friends."
+                    nicodemus @ say "And what about a girlfriend? Have you found one yet?"
+                    
+                    player "Err, no."
+                    
+                    nicodemus @ say "You hear that, Rose? This could be your chance."
+                    
+                    rose @ say "Pass."
+                    
+                    nicodemus @ say "Whaaat? Why not? [name] is a perfectly suitable young lad!"
+                    
+                    rose @ say "He's not my type."
+                    
+                    nicodemus @ say "Fine, have it your way."
+                    nicodemus @ say "Sorry [name], my granddaughter has a tough exterior but I promise she's a real sweetheart once you get to know her!"
+                    
+                    rose @ say "Hmph!"
+                    
+                    nicodemus @ say "Well we better be off to get that coffee I promised. It was good seeing you again!"
+                    
+                    player "It was nice talking with you again, sir."
+                    
+                    nicodemus @ say "I'd like to sit down and have coffee with you as well sometime when we're not all in a hurry."
+                    nicodemus @ say "Then you can go into depth about all the hijinx you and your friends have been up to! Bahaha!"
+                    
+                    player "Of course!"
+                    
+                    rose @ say "We really have to be on our way now."
+                    
+                    nicodemus @ say "Right, sorry to cut into our weekly coffee time Rose."
+                    nicodemus @ say "Have a nice holiday, [name]!"
+                    
+                    player "Thanks, you too!"
+                    
+                    n "The raccoons head off in the direction of the cafe. Rose is probably complaining she had to endure a few minutes talking with you, but she seems to admire her grandfather."
+                    n "Likewise, he seems to care deeply for her. It almost seemed like he was the one who raised her."
+                    n "There's still some time before class begins but you can take a leisurely stroll around campus first."
+                    
+                "I'm not sure":
+                    $ rosePoints =+ 1
+                    $ ellenPoints =+ 1
+                    
+                    player "I'm not really sure. I talk to a few people but I dunno if we're still gonna be talking in a few years."
+                    
+                    nicodemus @ say "I see."
+                    nicodemus @ say "Perhaps it will take some more time for you to establish a strong relationship. But keep at it!"
+                    nicodemus @ say "Rose also has trouble making friends. Maybe you two could-"
+                    
+                    rose @ say "No thanks."
+                    
+                    nicodemus @ say "Come now Rose, how long do you plan to be a loner?"
+                    
+                    rose @ say "With any luck, the rest of my life."
+            
+                    
+                
+                    #nicodemus says he'd like to get coffee with you sometime. rose blocks the attempt to do it now. or dean says he want to sit without a rush
+            
+                
+            
+            #nicodemus and rose. nicodemus asks how things are going and wishes you a nice holiday
+    
+    $ cafeEvents.append("nicodemusCafe")
     
     scene bg classroom with fade
 

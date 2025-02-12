@@ -3936,7 +3936,7 @@ label avaClaireGunnerLunch:
 
     n "After winding down a bit in your dorm, you lie in bed and look at your phone."
     
-    ###$ cafeEvents.append("claireCafe")
+    $ cafeEvents.append("claireCafe")
 
     call phone_start from _call_phone_start_1
 

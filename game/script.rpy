@@ -3160,6 +3160,7 @@ default currentbook = "The Death of Ivan Ilyich"
 
 
 #need to order these approximately chronologically
+default currentSeason = "summer"
 default calledRoriNerd = False
 default metGunner = False
 default metClaire = False

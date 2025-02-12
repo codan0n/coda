@@ -754,6 +754,7 @@ label claireForest:
     
 label roseForest:
     "rose forest scene"
+    #rose meditating in the woods
     return
 
 label roriTrack:
@@ -767,11 +768,17 @@ label roriTrack:
     show rori neutral with dissolve:
         ypos y_rori
     
-    rori @ say "Hey name! Didn't expect to find you here."
+    rori @ say "Hey [name]! Didn't expect to find you here."
     
     player "Yeah I didn't think I'd see you here either."
     
     rori @ say "Gunner somehow convinced me I need to start working out if I wanna maintain my -ahem- \"twinkish figure.\""
+    
+    player "He's right, you never know when you'll hit twink death and become a bear."
+    
+    rori @ say "Nooo I don't wanna be a bear! I like being a ram!"
+    
+    player "So what workouts have you been doing?"
     
     
     
@@ -1384,7 +1391,18 @@ label mishkaCafe:
 
 
 label claireCafe:
+    $ clairePoints =+ 1
+    
     "claire cafe scene"
+    
+    
+    #You decided to take up Claire's offer to get coffee together and invited her to the cafe
+    #you were kinda tired and was hoping the caffeine would wake you up but it just does the opposite
+    #she rambles about something and you lose focus
+    #she asks 'what do you think of that?'
+    #choice to either distract her (tell her her hair is pretty today) or give a vague answer (yeah that's crazy)
+    #these cafe scenes have the characters hint at their past
+    
     return
 
 
@@ -1400,6 +1418,10 @@ label trishCafe:
 
 label ellenCafe:
     "ellen cafe scene"
+    return
+    
+label margaretCafe:
+    "miss ellen cafe scene"
     return
 
 label oliviaCafe:

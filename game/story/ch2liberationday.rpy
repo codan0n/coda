@@ -2455,9 +2455,9 @@ label liberation_day:
 
         n "Rose grips her knife tighter."
 
-        rose @ say "What do you want? Money? Nobody carries cash anymore."
+        rose @ say "What do you want? Money? A sandwich? Drugs? To be a drain on society?"
         
-        #fortune "I have no need for money, everything I work with is free."
+        #fortune "I have no need for any of those, everything I work with is free."
         fortune @ say "I am merely one of fate's messengers."
         fortune @ say "You may decline to hear your fortune if you wish, but it will reach you one way or another, sooner or later."
         #fortune teller gives rose a false fortune, knowing that she doesn't pay?
@@ -2587,7 +2587,7 @@ label liberation_day:
                         hide fortune with dissolve
 
                         n "You unclench your fist and look down at what he gave you."
-                        n "It's a short cable with a USB C connector at one end and a headphone jack input on the other."
+                        n "It's a brass wheel, no larger than a coin. There's a smaller wheel inlayed on the side and a groove in between where they connect."
                         n "What the hell kind of puzzle game bullshit is this?"
                         n "You look up with a confused expression, about to ask what this is for but the fortune teller is nowhere to be found."
                     "No":

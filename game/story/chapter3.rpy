@@ -1,4 +1,6 @@
 label chapter3:
+    4 currentSeason = "autumn"
+    
     scene bg black with fade
     
     $ townEvents.append("linaTown")
@@ -1512,9 +1514,7 @@ label chapter3:
                             
                 n "It was nice to hold someone's hand all the way back to your dorm though. Makes you feel special."
                 n "You should find a way to do it without accepting stupid challenges and tearing up your guts."
-                         
-                
-                
+                n "The rest of your weekend is spent huddled in a fetal position in bed, recovering from the tummy ache of the century. You won, but at what cost?"
                 
                 jump chapter3AfterWeekend
                             
@@ -1584,71 +1584,243 @@ label chapter3:
             n "The rest of the night was a blur. You felt like you were going to pass out a few times but you managed to hold it together."
             n "Gunner was kind enough to pay for your meal but not kind enough to avoid gloating as he held Ava's wing on the way back to campus."
             
-        #end day. if you won, skip 2 days. if you lost, skip 1 day and explore on the next
-        
-        
-        
-        
-        
-        jump chapter3AfterWeekend
-        
-label chapter3AfterWeekend:
-    n ""
-        
-        
-        
-        
-        
-            
-               
-                    
-        
-            
-            stop music fadeout 1.0
-        
-            scene bg black with fade
-
-            hide box
-
-            show bg calendar
-            show tfriday at center
-            with Dissolve(.5)
-
-            pause .6
-            show tforwardslash
-            pause .2
-            show tbackslash
-
-            pause .7
-            
             scene bg codadorm with fade
             
             n "You wake up feeling dizzy, almost kinda hungover."
             n "Your poor intestines are still groaning in pain even after you made several trips to the bathroom."
-            n "Last night was not worth the trouble, just to lose."
+            n "Last night was not worth the trouble just to lose."
             
-            call phone_start from _call_phone_start_53 
+            if holdingHands == "Ava"
+                call phone_start from _call_phone_start_53 
 
-            call message_start("Ava", "Hey [name]! You doing alright?", "avaavi.png") from _call_message_start_70 
-            call message("Ava", "Thought I'd check in on you", "avaavi.png") from _call_message_391 
+                call message_start("Ava", "Hey [name]! You doing alright?", "avaavi.png") from _call_message_start_70 
+                call message("Ava", "Thought I'd check in on you", "avaavi.png") from _call_message_391 
 
-            call reply_message("Yeah, jsut hating every moment of existence.") from _call_reply_message_290 
+                call reply_message("Yeah, jsut hating every moment of existence.") from _call_reply_message_290 
+                
+                call message("Ava", "Oof, sorry about last night", "avaavi.png") from _call_message_392 
+                call message("Ava", "I thought for sure you'd win!", "avaavi.png") from _call_message_393 
+                
+                call reply_message("Really? I guess we both underestimated Gunner") from _call_reply_message_291 
+                
+                call message("Ava", "He's pretty determined, you gotta give him that!", "avaavi.png") from _call_message_394 
+                call message("Ava", "Better luck next time~", "avaavi.png") from _call_message_395 
+                
+                call reply_message("yeah lol") from _call_reply_message_292 
+                
+                call phone_end from _call_phone_end_62
+                
+                n "You're getting pretty tired of this love triangle bullshit."
+                n "You'd go over and kick Gunner's ass right now if your stomach wasn't in constant agony."
             
-            call message("Ava", "Oof, sorry about last night", "avaavi.png") from _call_message_392 
-            call message("Ava", "I thought for sure you'd win!", "avaavi.png") from _call_message_393 
+            else:
+                "Your stomach is still in unrelenting agony so you're just gonna take it easy for now."
             
-            call reply_message("Really? I guess we both underestimated Gunner") from _call_reply_message_291 
+            n "All you can do today is lie in bed and study while idly browsing the web."
+                
+            scene bg black with dissolve
             
-            call message("Ava", "He's pretty determined, you gotta give him that!", "avaavi.png") from _call_message_394 
-            call message("Ava", "Better luck next time~", "avaavi.png") from _call_message_395 
+            scene bg codadorm with dissolve
             
-            call reply_message("yeah lol") from _call_reply_message_292 
+            n "Your intestines have finally settled and you're feeling well enough to go out."
             
-            call phone_end from _call_phone_end_62
+            call afterClassOptions
             
-            n "You're getting pretty tired of this love triangle bullshit."
-            n "It's a beautiful day out but your stomach still hurts from yesterday, so you resign yourself to catching up on some classwork between watching videos online."
+        
+        jump chapter3AfterWeekend
+        
+label chapter3AfterWeekend:
+    #knock over rose's cassette player in class on accident, can give her the repair gear if you have it or offer to cashapp her but she doesn't have the app (or a phone)
+    n "Monday again."
+    n "At least your guts are no longer begging for death after Friday's dinner and you can return to class in peace."
     
+    n "The classroom is pretty lively by the time you arrive. Everyone's chatting and laughing except for Rose."
+    n "She sits with her head facing towards the window, staring out at the courtyard. A small rectangular box sits on her desk with a wire snaking around and splitting off into two ends that terminate at her ears."
+    n "Weird, it doesn't look like any phone you've seen before."
+    n "As you're squeezing between the row of desks you hear something fall to the ground with the sound of clattering plastics and shattering glass."
+    n "The whole room goes silent and all eyes are on you."
     
+    rose @ say "Hey!"
     
+    n "Tiny paws pull at your shirt and you come face to face with a pissed-off raccoon."
+    n "She's standing atop her desk and only barely matches your height."
+    
+    rose @ say "Pick that up. Now!"
+    
+    n "She points to all the pieces of her contraption scattered across the floor."
+    
+    menu:
+        "Refuse":
+            $ rosePoints =- 1
+            
+            player "You've got hand-like paws, pick it up yourself."
+            
+            rose @ say "You fucking knocked it over!"
+            
+            player "And who's fault is that? Try not leaving your toys hanging precariously over your desk next time."
+    
+            ###knife sprite
+    
+            rose @ say "I'm going to kill y-"
+        
+            rothbauer @ say "Good morning class! I hope you're all had a nice weekend!"
+            
+            n "Rose silently folds her knife and sits back in her chair."
+            n "She reaches down and picks up the main body of the device. The individual plastic pieces have all popped out of their sockets."
+            n "You can see now it was one of those old portable cassette players. The tape is still inside, albeit spilling out of the cassette itself in an unholy tangled mess."
+            n "Rose sighs and tosses the chassis into her bag, not even bothering with the other pieces strewn about the floor."
+            n "She spends half the class sullenly untangling the tape and spooling it back into the cassette."
+            n "To your surprise, she doesn't stab you after class. She just picked up her bag and left, looking too sad to be angry."
+        
+        "Comply":
+            player "O-okay."
+            
+            n "You drop down to your knees and pick up every bit you find and deposit it onto Rose's desk."
+            
+            rose @ say "Ugh, what am I supposed to do with broken pieces of plastic and shards of glass? Kindly cut your throat open with those if you find a piece that's long enough."
+            
+            player "I'll get right on that."
+            
+            n "Rose slots the pieces back together as you find them, though some are obviously too broken to be repaired like the window and some clips."
+            n "You've gathered all the parts, or at least all the ones you can see from this aisle. Wait, there's one more under your desk."
+            n "You reach for it and pass it up to Rose before sitting in your chair."
+            
+            rose @ say "Is that the flywheel? God dammit it's cracked to hell. Cheap piece of shit plastic, probably made by inferior human hands..."
+            rose @ say "You're paying for this!"
+            
+            if gnugift = True:
+                $ rosePoints =+ 1
+                n "Wait a minute, that looks just like the gizmo that based homeless guy gave you."
+                n "You've been carrying it around just like he said and now it finally has a use."
+                
+                player "Wait a second, try using this."
+                
+                n "You hold out the wheel to her. She gives you a skeptical look."
+                
+                rose @ say "Why do you have one of these?"
+                
+                player "That psychic hobo told me to!"
+                
+                rose @ say "Do you always take advice from crackheads?"
+                rose @ say "This probably isn't going to work but I'm desperate enough to try it."
+                
+                n "Rose slots the flywheel into place and wraps a rubber band around it, connecting it to another series of wheels and gears within the cassette box."
+                n "Her eyes go wide when she presses the play button and the rotors spin, pulling the tape along and producing muffled music from the earphones."
+                
+                rose @ say "It... actually works!"
+                rose @ say "That's one hell of a coincidence."
+                
+                player "It's no coincidence, I think that guy could really see the future!"
+                
+                rose @ say "I see a future where he steals your kidneys if you meet again."
+                
+                player "You should thank him for giving me that piece to fix your cassette player!"
+                
+                rose @ say "No, *you* should watch where you're going next time and avoid knocking over my things in the first place!"
+                
+                n "You mutter under your breath."
+                
+                player "Maybe don't leave fragile objects leaning off your desk..."
+                
+                rose @ say "What was that?"
+                
+                rothbauer @ say "Good morning class! Let's get right into it today, why don't we!"
+                
+                n "Thank you professor, you came in at just the right time to get Rose off your back."
+            else:
+                player "For the wheely thing?"
+                
+                rose @ say "For the whole thing! It's ruined!"
+                
+                player "Okay okay, so like how much? 5 bucks? 10?"
+                
+                rose @ say "You just destroyed a vintage Walkfan WM-3X Special Edition, of which there are only like a dozen left in the world!"
+                
+                player "So it's priceless is what I'm hearing."
+                
+                rose @ say "Well I'm definitely not gonna find another one up for sale!"
+                rose @ say "I don't know, maybe I can retrofit the guts of a TCM-100 into the shell and pretend it's the same thing."
+                
+                player "And how much for one of those?"
+                
+                rose @ say "$500."
+                
+                player "Five hudred dollarydoos?!"
+                
+                rose @ say "Yeah, just 500. You're not poor are you?"
+                
+                player "Uhh..."
+                
+                n "500 dollars is a substantial chunk of your life savings."
+                
+                menu:
+                    "Pay":
+                        $ rosePoints =+ 1
+                        
+                        n "This kind of is your fault, even if Rose is being a cunt about it."
+                        
+                        player "You have cashapp?"
+                        
+                        n "Rose's signature glare becomes even more condescending than usual."
+                        
+                        rose @ say "No, I don't use demonic proprietary junkware like that."
+                        
+                        player "Well I don't walk around with $500 in my pocket every day!"
+                        
+                        rose @ say "You could have just said you're poor then."
+                        
+                        player "Doesn't your grandpa like own the university? Why don't you ask him to buy you a million Walkfans?"
+                        player "Those things are so old he probably has a bunch lying around from when he was a kid."
+                        player "Pretty sure that tech dates back to the cretaceous period."
+                        
+                        rothbauer @ say "Did I hear someone mention the cretaceous period?"
+                        
+                        n "Mr. Rothbauer may have just saved your life. Rose looked like she was ready to maul you before he stepped in."
+                        
+                        rothbauer @ say "Oh is that a cassette tape? Ah, I have fond memories of those back in my day!"
+                        rothbauser @ say "Of course they were marketed as the hip new thing despite existing for millions of years. Probably."
+                        rothbauer @ say "They had that technology mastered in the early cretaceous period. At least that's how the theory goes."
+                        rothauer @ say "The government doesn't want you to know this but so much of modern technology is based on the dinosaurs' achievements."
+                        rothbauer @ say "I'll save it for another day though because we've got a lot to cover today!"
+                        
+                        n "You dig out your notebook and avoid looking at Rose for the rest of the class. Hopefully she just forgets about your debt."
+                    "Don't pay":
+                        player "Actually yes, I am poor."
+                        
+                        rose @ say "Well stop it!"
+                        
+                        player "Stop... being poor?"
+                        
+                        rose @ say "Yes! If there's one thing that rivals how deplorable humans are, it's poor \"\"\"people.\"\"\""
+                        rose @ say "Being poor isn't just something that happens by misfortune, poverty is literally God telling you that you suck."
+                        rose @ say "Poors just don't have what it takes to have money and power. They'd rather coast by living paycheck to paycheck doing silly things like renting apartments and paying taxes."
+                        
+                        player "Hey, it's not that easy being poor! Imagine if you couldn't afford stuff."
+                        
+                        rose @ say "Then I'd kill myself."
+                        rose @ say "Consider that a recommendation for you and your kind."
+                        
+                        player "So does this mean you'll let me off the hook for the $500?"
+                        
+                        rose @ say "*Sigh*"
+                        rose @ say "If your kind weren't so despicable, I might pity you."
+                        rose @ say "There's no point in hounding you for the money, you'll just end up robbing some innocent wealthy person for the money if you get desperate."
+                        rose @ say "Instead all I ask in exchange for you breaking my practically one-of-a-kind vintage cassette player, is that you consider suicide."
+                        
+                        player "Deal!"
+                        
+                        n "Sucker."
+                        n "You already do that every night."
+                        
+                        n "Rose scoffs and shoves the remains of her cassette player into her bag. Shortly afterwards, Mr. Rothbauer arrives to begin the lecture."
+                    
+            
+    
+    scene bg black with fade
+       
+    n "The rest of the day passes by uneventfully."
+
+    scene bg codadorm with fade
+
+    n ""
         
