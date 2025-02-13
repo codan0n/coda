@@ -4766,12 +4766,6 @@ label liberation_eve:
                     nicodemus @ say "Right, sorry to cut into our weekly coffee time Rose."
                     nicodemus @ say "Have a nice holiday, [name]!"
                     
-                    player "Thanks, you too!"
-                    
-                    n "The raccoons head off in the direction of the cafe. Rose is probably complaining she had to endure a few minutes talking with you, but she seems to admire her grandfather."
-                    n "Likewise, he seems to care deeply for her. It almost seemed like he was the one who raised her."
-                    n "There's still some time before class begins but you can take a leisurely stroll around campus first."
-                    
                 "I'm not sure":
                     $ rosePoints =+ 1
                     $ ellenPoints =+ 1
@@ -4788,13 +4782,36 @@ label liberation_eve:
                     
                     rose @ say "With any luck, the rest of my life."
             
+                    nicodemus @ say "Hah! Such dry humor, I love it!"
+                    nicodemus @ say "Don't worry, you'll find your match some day."
+                    nicodemus @ say "Both of you will, I'm sure of it."
                     
-                
-                    #nicodemus says he'd like to get coffee with you sometime. rose blocks the attempt to do it now. or dean says he want to sit without a rush
-            
-                
-            
-            #nicodemus and rose. nicodemus asks how things are going and wishes you a nice holiday
+                    rose @ say "Whatever."
+                    rose @ say "Can we go now?"
+                    
+                    nicodemus @ say "Someone's eager for some caffeine, isn't she! Bahaha you always were crabby without it!"
+                    nicodemus @ say "You know she started drinking coffee when she was 12 years old! Always black, she's never even tried it with creamer!"
+                    
+                    rose @ say "I like it as it is, no need to ruin the flavor with extra junk."
+                    
+                    nicodemus @ say "Well I suppose we better be off now. It was good chatting with you again [name]!"
+                    
+                    n "You mostly just sat and listened but it was still a pleasant interaction."
+                    
+                    player "Always a pleasure to have a casual chat with the dean."
+                    
+                    nicodemus @ say "I do hope we can get together for coffee sometime and have a nice sit-down conversation. Get to know how your studies and experience are going in more detail."
+                    
+                    player "Yeah, maybe next time. I gotta run to French now."
+                    
+                    nicodemus @ say "Au revoir! Bahaha!"
+                    nicodemus @ say "And have a nice holiday!"
+                    
+            player "Thanks, you too!"
+                    
+            n "The raccoons head off in the direction of the cafe. Rose is probably complaining she had to endure a few minutes talking with you, but she seems to admire her grandfather."
+            n "Likewise, he seems to care deeply for her. It almost seemed like he was the one who raised her."
+            n "There's still some time before class begins so you enjoy a stroll at a leisurely pace, basking in the crisp autumn air while being warmed by the sun's light."
     
     $ cafeEvents.append("nicodemusCafe")
     
