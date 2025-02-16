@@ -1864,9 +1864,14 @@ label chapter3AfterWeekend:
     margaret @ say "Ya gotta do what ya gotta do to survive the work day."
     margaret @ say "...But it does seem a tad irresponsible to smoke in a hospital."
     
+    n "There's a brief lull in the conversation as neither of you are sure what to say next."
+    n "You try and think of something while she looks off to the side and blows out smoke."
+    
     player "Can I ask you a question?"
     
     margaret "I'm a professor, it's my job to answer your questions."
+    
+    n "Perhaps a personal question to get to understand her better."
     
     menu:  
         "Why did you become a professor?"
@@ -1892,6 +1897,9 @@ label chapter3AfterWeekend:
             player "Dang."
             player "Too smart to write young adult vampire fanfiction disguised as literature, but not smart enough to dethrone Shakespeare."
             
+            margaret @ say "Unfortunately my circumstances aren't particularly rare. I'm just one of the lucky ones to at least get a job that's at least related to my lit degree."
+            margaret @ say "But I can't say I'm too happy with the result."
+            
         "Did you ever actually enjoy teaching?":
             player "You don't seem to have much passion for teaching."
             player "Was it ever enjoyable for you?"
@@ -1905,6 +1913,8 @@ label chapter3AfterWeekend:
             #margaret @ say "From what I gather, yes."
             #margaret @ say "At least that's the situation most people find themselves in once they grow up."
             margaret @ say "I don't know if there's any way it's 'supposed' to go, I just know nothing in life has ever worked out the way I wanted it to."
+            margaret @ say "Unfortunately my circumstances aren't particularly rare. I'm just one of the lucky ones to at least get a job that's at least related to my lit degree."
+            margaret @ say "But I can't say I'm too happy with the result."
             
         "How did you get into literature?":
             player "How did you get into literature?"
@@ -1912,14 +1922,43 @@ label chapter3AfterWeekend:
             margaret @ say "The same way anyone does, I spent my youth reading books."
             margaret @ say "You read enough of the right literature, and you become captivated by the sheer expanse of imagination and creativity an author can tame."
             margaret @ say "Something like a mere painting or photograph only captures a moment in a scene, but a novel gives you a whole world crafted from all kinds of feelings and messages the writer wishes to express."
+            margaret @ say "For the same reason I enjoy watching movies but those really don't have the same impact since they're over and done with so quickly."
+            margaret @ say "Simply put, I just like a good story!"
             
+            player "Who doesn't?"
+            player "But I get what you mean. There's a lot you can do in writing to evoke a certain feeling while still giving enough room for interpretation."
+            
+            margaret @ say "Exactly! No two people will read a book the same way! Even going back and rereading a book makes me feel a different way each time as I've grown older."
+            margaret @ say "Though at this point I've become so familiar with the required reading for this course, the magic is gone for those books I used to adore."
+            
+            player "If you love stories so much why don't you write some of your own?"
     
-    
-    
-    
-    
-    margaret @ say "Unfortunately my circumstances aren't particularly rare. I'm just one of the lucky ones to at least get a job that's at least related to my lit degree."
-    margaret @ say "But I can't say I'm too happy with the result."
+            margaret @ say "That's the problem, hun. I haven't got any to tell."
+            
+            player "Surely you could come up with something. You're a literature professor after all! You should know what makes for a good book."
+            
+            margaret @ say "I'm afraid it doesn't work that way. I'm as close to writing a good book as I am directing a blockbuster movie or painting the Sistine Chapel."
+            margaret @ say "Just because I can pick apart good writing from bad doesn't mean I can produce something original."
+            margaret @ say "People can only write what they know, and all I know is reading books and one bad romance."
+            
+            n "Ms. Ellen takes a drag from her cigarette, then adds"
+            
+            margaret @ say "Not to say I didn't give it a shot, but I'm a much better professor than I am a writer. And I'm a pretty lousy professor."
+            
+            player "So why'd you become one?"
+            
+            n "She has to think for a moment, as if she's being searching for an answer to that question for a long time."
+            
+            margaret @ say "I thought if I could have a career being around the books I held so dear that everything would be alright."
+            margaret @ say "And that I wouldn't become bitter and begin to resent the only thing in life that brought me joy."
+            
+            player "I'm sorry to hear that. If it means anything, you're my favorite professor."
+            
+            margaret @ say "Aww, they say flattery will get you nowhere but..."
+            
+            n "Her tail is wagging. You feel like you've just been standing around and listening to her talk but you must be doing something right."
+            n "Ms. Ellen takes another puff and her grin fades away."
+            
     margaret @ say "I was fooled into thinking that becoming a professor would make me feel... prestigious."
     margaret @ say "When all I do is explain old books to rich brats."
     
@@ -1937,19 +1976,22 @@ label chapter3AfterWeekend:
             
             margaret @ say "Something more... adventurous I'll say."
             margaret @ say "More travel, less desk work. Something worth writing about."
-            
-            player ""
         "Most people don't get the life they want":
             player "Most people don't get the life they want."
             
             margaret @ say "That may be true but..."
             
-    n "She pulls out another cigarette, pauses before lighting it, and decides to put it away."
+    n "She pulls out another cigarette and puts it to her mouth but pauses before lighting it. Seemingly changing her mind, she puts the ligher away."
     
     margaret @ say "It's about time for class to begin, isn't it?"
     margaret @ say "Go ahead and run along now."
     margaret @ say "Don't wait up for me. Wouldn't want to get caught coming down from here with a student."
     
+    player "Sure thing. See you in class."
+    
+    n "She gives you a wave as you go back to the stairwell. Looking back one last time, you see her light the cigarette in her mouth."
+    
+    scene bg lecturehall with fade
     
     
     
@@ -1958,67 +2000,4 @@ label chapter3AfterWeekend:
     
     
     
-    
-    
-    
-    show margaret neutral at center with dissolve
-
-                                ellen @ say "Want one?"
-
-                                player "I'm good."
-
-                                show margaret smoking neutral
-
-                                n "She lights one up and blows out a cloud of smoke."
-
-                                ellen @ say "So what was it you wanted to talk about?"
-
-                                player "I dunno."
-                                player "..."
-                                #player "You said you were going through a mid life crisis? What's that all about?"
-                                #ellen @ say "Oh it's nothing for you to worry about."
-                                #player "..."
-                                #player "I'll tell you my story if you tell me yours first."
-                                #ellen @ say "..."
-                                #ellen @ say "Alright, fine."
-
-                                ellen @ say "..."
-
-                                player "..."
-
-                                ellen @ say "Huh."
-                                ellen @ say "Well, why don't I tell you my troubles, then you can decide if you wanna talk about yours."
-
-                                player "That works for me."
-
-                                n "Miss Ellen takes another drag from her cigarette."
-
-                                show ellen sad
-
-                                ellen @ say "Where to start..."
-                                ellen @ say "Y'know I never wanted to be a teacher."
-
-                                player "Then why'd you become one?"
-
-                                ellen @ say "Dunno. I wasn't sure what else to do and nothing else was working either."
-                                ellen @ say "My ex-husband convinced me to try it."
-                                ellen @ say "I wanted to be a writer but to be honest, I hate my writing."
-                                ellen @ say "Not just the end result but the whole process involved."
-                                ellen @ say "It's frustrating and it never feels good enough and hardly anybody appreciates the work you put into it."
-
-                                show ellen smoking
-
-                                ellen @ say "I just liked the idea of being a best-selling author like those other women."
-                                ellen @ say "But now I'm well past my prime, stuck in a job I hate with no accomplishments, no goals, not even a family..."
-                                ellen @ say "I guess that's why I picked up smoking."
-
-                                player "Wow uh"
-                                player "Dang."
-                                player "I didn't realize you had it so rough."
-
-                                ellen @ say "That's what happens when you get old and can't find anything that makes you happy."
-    
-    
-    
-    #ellen rooftop scene
         
