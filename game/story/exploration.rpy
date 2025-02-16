@@ -1421,7 +1421,91 @@ label ellenCafe:
     return
     
 label margaretCafe:
-    "miss ellen cafe scene"
+    #make this part of ellen's cafe scene
+#    n "Ms. Ellen reclines against the bench and sighs."
+#
+#    show margaret melancholy
+#
+#    margaret @ say "It's nice to get to talk to one of my students like this."
+#    margaret @ say "Most are either intimidated by me or just see me as an obstacle to their degree."
+#
+#    player "Yeah I'm not really too into the whole college thing."
+#    player "I just come to class out of habit and sometimes I learn interesting things."
+#    player "I like hearing your rants about authors' beliefs."
+#
+#    show margaret flattered
+#
+#    margaret @ say "Is that so? I always feel so embarrassed after those little tirades! I suppose I just can't help myself."
+#
+#    player "I guess literature would lend itself most to expression. Not much room for interpretation in statistics or French."
+#
+#    show margaret neutral
+#
+#    margaret @ say "Au contraire, le langage limite nos pensées."
+#
+#    player "What??"
+#
+#    margaret @ say "There's certain things you can't express in one language alone."
+#    margaret @ say "Even if you mastered English, which very few people have done mind you, other languages open your mind up to new thoughts."
+#    #margaret @ say "That's what Celestine taught me. You know her, right?"
+#    margaret @ say "That's what Sera taught me. You might know her as Mrs. Celestine."
+#
+#    player "Yeah, she's my French teacher."
+#
+#    margaret @ say "I thought so. She's nice. And wise. You should listen to her."
+#    margaret @ say "She's told me about you."
+#
+#    player "Wait, you know Mrs. celestine??"
+#
+#
+#
+#
+#    #reserved for part 2
+#
+#                    margaret @ say "I didn't used to be. I used to try really hard."
+#                    margaret @ say "But after teaching here... I've seen so many cheaters graduate. So many people dumber than a rock coast through their degree with their parents' money and end up in important jobs."
+#                    margaret @ say "That's just the path in life they've had given to them."
+#                    margaret @ say "The administration pressures us to just shut up and take the bribes. Not little things like cinnamon rolls, I'm talking cars and vacation homes."
+#                    
+#                    player "How many vacation homes does a professor need??"
+#                    
+#                    margaret @ say "I wish I had one. They only offer those to smooth things over when senator So-and-So's dipshit son gets in trouble with the law for assaulting some poor sorority girl."
+#                    margaret @ say "The most I've ever got was a strange case where I think the student enjoyed giving me money?"
+#                    margaret @ say "I suckered him out of nearly twenty grand over a couple semesters."
+#                    
+#                    player "You lucky dog."
+#                    
+#                    show margaret happy
+#                    
+#                    margaret @ say "Hehehehe~"
+#                    
+#                    show margaret neutral
+#                    
+#                    margaret @ say "You won't have to do that much to pass my class though. Just listening to me rant is enough for me. It's a lot cheaper than therapy, that's for sure."
+#                    
+#                    n "Ms. Ellen sighs."
+#                    
+#                    show margaret sad
+#
+#
+#
+#^split this scene into 2 parts because it drags on for too long. Split at the "just how old do you think I am" part? have a flashback to it later when you sit on the bench alone? Or make this part part of the ellen cafe scene later
+#    show margaret melancholy
+#            
+#    margaret @ say "Thanks for sitting and talking with me. It really made my day worthwhile."
+#    margaret @ say "There's more to you that makes you special than just being the last human."        
+#
+#    player "I don't know about that. I'm just like anyone else. Just doing whatever society expects me to do. Go to school. Pay taxes. That sort of thing."
+#    
+#    margaret @ say "You're very kind and have your own unique perspective. You can uplift people without realizing it."
+#    
+#    player "I'm glad you think so. I try. Well no, I don't really try. I just want to live a comfortable life and be happy with others."
+#
+#    show margaret neutral
+#    
+#    margaret @ say "Perhaps that's all you need to do."
+
+
     return
 
 label oliviaCafe:

@@ -1820,7 +1820,205 @@ label chapter3AfterWeekend:
        
     n "The rest of the day passes by uneventfully."
 
-    scene bg codadorm with fade
+    scene bg schoolhallways with fade
 
-    n ""
+    n "As you're going up the stairs on your way to literature, you catch a whiff of cigarette smoke."
+    n "Where there's smoke, there's probably a vaguely depressed literature professor dog having a midlife crisis moment."
+    n "Better check the roof. You've got time as long as she's still up there."
+    
+    scene bg roof with dissolve
+    
+    $ cafeEvents.append("margaretCafe")
+    
+    n "Your suspicions are confirmed when you see Ms. Ellen leaning on the wall watching the horizon."
+    
+    player "Couldn't wait until you got up on the roof to light up, huh?"
+    
+    margaret @ say "Hm?"
+    
+    player "The stairwell reeks of tobacco."
+    
+    margaret @ say "Oh shoot. Ah well, nothing to do about it now."
+    
+    n "She takes a long drag from her cigarette, seemingly amused by her own defiance of the rules."
+    
+    player "So what brings you up here again?"
+    
+    margaret @ say "Just wanted to admire the view~"
+    margaret @ say "Sure is a long way down, isn't it?"
+    
+    player "You're telling me after I just climbed six flights of stairs."
+    
+    margaret @ say "I guess it's a long way up too."
+    margaret @ say "By the way, how are you feeling? I don't have to worry about you falling out of your chair again do I?"
+    
+    player "I don't think so. I got it looked at and the doctor was like \"Yeah I don't know what's wrong with you but these meds will help. Probably.\""
+    
+    margaret @ say "And do they?"
+    
+    player "I think so."
+    player "That doctor also smokes ciggies where they're not allowed."
+    
+    #margaret @ say "Sounds like you've got a type."
+    
+    margaret @ say "Ya gotta do what ya gotta do to survive the work day."
+    margaret @ say "...But it does seem a tad irresponsible to smoke in a hospital."
+    
+    player "Can I ask you a question?"
+    
+    margaret "I'm a professor, it's my job to answer your questions."
+    
+    menu:  
+        "Why did you become a professor?"
+            player "What made you want to become a professor?"
+         
+            margaret @ say "You're acting like this was my first choice of profession."
+            
+            player "Well what was that?"
+            
+            n "She hesitates. Not because she's uncomfortable answering but rather because she's reminiscing."
+            
+            margaret @ say "I wanted to be a writer."
+            
+            player "And instead you became a... professional reader?"
+            
+            margaret @ say "Well you know how the saying goes. \"Those who can't do, teach.\""
+            
+            player "What do you mean? You couldn't write? But tons of borderline illiterate people write for a living."
+            
+            margaret @ say "That's part of the problem. You either make it writing at the highest level or you succeed making slop. There's not much room anywhere in between."
+            margaret @ say "And guess where my writing skills lie."
+            
+            player "Dang."
+            player "Too smart to write young adult vampire fanfiction disguised as literature, but not smart enough to dethrone Shakespeare."
+            
+        "Did you ever actually enjoy teaching?":
+            player "You don't seem to have much passion for teaching."
+            player "Was it ever enjoyable for you?"
+            
+            margaret @ say "At one point I thought it was. Or at least I tried to convince myself of that."
+            margaret @ say "The thing about abandoning your dreams in favor of some silly career that's meant to be serious, is that you convince yourself that you actually wanted this."
+            margaret @ say "And that all your past hopes weren't realistic. They were just some delusions you had, so now's it time to find happiness in this new thing you thought you'd hate."
+            
+            player "That's kinda bleak. Is becoming a real adult supposed to be like that?"
+            
+            #margaret @ say "From what I gather, yes."
+            #margaret @ say "At least that's the situation most people find themselves in once they grow up."
+            margaret @ say "I don't know if there's any way it's 'supposed' to go, I just know nothing in life has ever worked out the way I wanted it to."
+            
+        "How did you get into literature?":
+            player "How did you get into literature?"
+            
+            margaret @ say "The same way anyone does, I spent my youth reading books."
+            margaret @ say "You read enough of the right literature, and you become captivated by the sheer expanse of imagination and creativity an author can tame."
+            margaret @ say "Something like a mere painting or photograph only captures a moment in a scene, but a novel gives you a whole world crafted from all kinds of feelings and messages the writer wishes to express."
+            
+    
+    
+    
+    
+    
+    margaret @ say "Unfortunately my circumstances aren't particularly rare. I'm just one of the lucky ones to at least get a job that's at least related to my lit degree."
+    margaret @ say "But I can't say I'm too happy with the result."
+    margaret @ say "I was fooled into thinking that becoming a professor would make me feel... prestigious."
+    margaret @ say "When all I do is explain old books to rich brats."
+    
+    player "Some people need books explained to them."
+    
+    margaret @ say "I agree, however..."
+    
+    n "Ms. Ellen reaches the end of her cigarette. She flicks it to the ground, letting it burn out on the concrete."
+    
+    margaret @ say "This is not the life I wanted."
+    
+    menu:
+        "And that would be...?":
+            player "And that would be...?"
+            
+            margaret @ say "Something more... adventurous I'll say."
+            margaret @ say "More travel, less desk work. Something worth writing about."
+            
+            player ""
+        "Most people don't get the life they want":
+            player "Most people don't get the life they want."
+            
+            margaret @ say "That may be true but..."
+            
+    n "She pulls out another cigarette, pauses before lighting it, and decides to put it away."
+    
+    margaret @ say "It's about time for class to begin, isn't it?"
+    margaret @ say "Go ahead and run along now."
+    margaret @ say "Don't wait up for me. Wouldn't want to get caught coming down from here with a student."
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    show margaret neutral at center with dissolve
+
+                                ellen @ say "Want one?"
+
+                                player "I'm good."
+
+                                show margaret smoking neutral
+
+                                n "She lights one up and blows out a cloud of smoke."
+
+                                ellen @ say "So what was it you wanted to talk about?"
+
+                                player "I dunno."
+                                player "..."
+                                #player "You said you were going through a mid life crisis? What's that all about?"
+                                #ellen @ say "Oh it's nothing for you to worry about."
+                                #player "..."
+                                #player "I'll tell you my story if you tell me yours first."
+                                #ellen @ say "..."
+                                #ellen @ say "Alright, fine."
+
+                                ellen @ say "..."
+
+                                player "..."
+
+                                ellen @ say "Huh."
+                                ellen @ say "Well, why don't I tell you my troubles, then you can decide if you wanna talk about yours."
+
+                                player "That works for me."
+
+                                n "Miss Ellen takes another drag from her cigarette."
+
+                                show ellen sad
+
+                                ellen @ say "Where to start..."
+                                ellen @ say "Y'know I never wanted to be a teacher."
+
+                                player "Then why'd you become one?"
+
+                                ellen @ say "Dunno. I wasn't sure what else to do and nothing else was working either."
+                                ellen @ say "My ex-husband convinced me to try it."
+                                ellen @ say "I wanted to be a writer but to be honest, I hate my writing."
+                                ellen @ say "Not just the end result but the whole process involved."
+                                ellen @ say "It's frustrating and it never feels good enough and hardly anybody appreciates the work you put into it."
+
+                                show ellen smoking
+
+                                ellen @ say "I just liked the idea of being a best-selling author like those other women."
+                                ellen @ say "But now I'm well past my prime, stuck in a job I hate with no accomplishments, no goals, not even a family..."
+                                ellen @ say "I guess that's why I picked up smoking."
+
+                                player "Wow uh"
+                                player "Dang."
+                                player "I didn't realize you had it so rough."
+
+                                ellen @ say "That's what happens when you get old and can't find anything that makes you happy."
+    
+    
+    
+    #ellen rooftop scene
         
