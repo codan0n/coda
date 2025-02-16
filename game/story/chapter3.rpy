@@ -1993,10 +1993,20 @@ label chapter3AfterWeekend:
     
     scene bg lecturehall with fade
     
+    margaret @ say "...So we see that The Odyssey is really a tale about overcoming the many relentless challenges in life and reaping the rewards."
+    margaret @ say "It's as tragic as it is uplifting! And although most of us will never get shipwrecked or fight giant cyclopses..."
+    margaret @ say "...the underlying hero's journey has a universal quality that everyone can relate to and forms the basis for pretty much every story told since."
+    margaret @ say "Be sure to review the key terms we discussed during this module because they will definitely make an appearance on the test!"
+    margaret @ say "That's all for today. Class dismissed!"
+    
+    n "Damn, Ms. Ellen is good at flipping a switch and acting like nothing's wrong when she lectures. If you didn't know any better you'd think she's pretty happy with her life."
+    n "The way she smiles at students and wags her tail on the way out of the lecture hall disguises the Ellen you know on the rooftops."
     
     
     
     
+    ###then chat with claire before french about her hiking trip
+    ###on friday claire runs off to prepare for the trip and you talk to ava one on one
     
     
     
