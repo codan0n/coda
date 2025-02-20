@@ -2860,6 +2860,14 @@ label hospital_bound:
         call message_img("Claire", "Enjoy~", "pic1.png") from _call_message_img
         
         call reply_message("BOOBA") from _call_reply_message_144
+        call reply_message("Wait why are you wearing santa hats?")
+        
+        call message_img("Claire", "idklol", "pic1.png")
+        call message_img("Claire", "its festivv", "pic1.png")
+        
+        call reply_message("It's August")
+        
+        call message_img("Claire", "shshshshush up and enjoy teh boobz lol", "pic1.png")
 
         call phone_end from _call_phone_end_7
 
@@ -3876,13 +3884,15 @@ label ellen_feeding_ducks:
     
     ava @ say "Ugh, don't remind me."
     
+    ###claire @ say "Girl chill, nobody saw your titties!"
+    
     show claire derp
     
     claire @ say "I had to drink like an entire keg of beer to even feel anything!"
     
     show ava unimpressed
     
-    ava @ say "I don't know how you can stomach it."
+    ava @ say "I don't know how you could even stomach it."
     
     show claire sweater leaning suggestive -
     

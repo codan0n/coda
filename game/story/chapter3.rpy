@@ -1814,7 +1814,197 @@ label chapter3AfterWeekend:
                         
                         n "Rose scoffs and shoves the remains of her cassette player into her bag. Shortly afterwards, Mr. Rothbauer arrives to begin the lecture."
                     
+    scene bg lecturehall with fade
+    
+    gunner @ say "Duuuuude Ava texted me yesterday!"
+    
+    player "So?"
+    
+    gunner @ say "Get this, she texted *me* first! That's how you know she wants to have sex with me!"
+    
+    player "Oh? Congratulations."
+    player "But I think she's texted me first before. Does that mean she wants to have sex with me too?"
+    
+    gunner @ say "Counterpoint: women don't know what they want."
+    gunner @ say "She was probably confused and hysterical. Many such cases."
+    gunner @ say "But this time I'm sure she wants big catboy cock."
+    
+    player "And why's that?"
+    
+    gunner @ say "Because she invited me to go \"shooting\" with her this weekend."
+
+    player "Like a photoshoot? Where?"
+    
+    gunner @ say "Yeah we're gonna hike up this mountain, take some pics of trees or whatever, then I'm gonna shoot my load in her."
+    
+    player "Did either of you explicitly mention that last part?"
+    
+    gunner @ say "No, but it was implied."
+    
+    menu:
+        "Cool, have fun":
+            #$ avaPoints =- 1
             
+            player "Cool, have fun with that."
+            player "I'm probably gonna watch boating accident documentaries or something this weekend."
+            
+            gunner @ say "Nice."
+            gunner @ say "I was in a \"boating accident\" once."
+            gunner @ say "And now I have a closet full of untraceable guns."
+        "Doubt":
+            $ avaPoints += 1
+            
+            player "I doubt that but okay."
+            player "Are you sure she didn't get mixed up and mean to send those messages to me?"
+            
+            gunner @ say "Nah she'd know something was off if she detected the slightest hint of rizz from you."
+            
+    n "*Bzzz bzzz*"
+    n "Oh look you've got a text. You wonder who it could be from."
+            
+    call phone_start
+    
+    call message_start("Ava", "Hiya [name]! You busy this weekend?", "avaavi.png") 
+    
+    call reply_message("Not sure yet. Why what's up?") 
+            
+    call message("Ava", "I was just wondering if you'd wanna come hiking in the mountains with Gunner and me ^v^", "avaavi.png") 
+            
+    call phone_end         
+    
+    player "Ava just invited me to come with you two."
+    
+    gunner @ say "Whaaaa?!"
+    gunner @ say "Dude say no!"
+    
+    player "Why? It sounds like a fun time."
+    
+    gunner @ say "I don't want this hike to be a sausagefest! Just tell her you already have plans."
+    
+    n "Gunner slips a $100 bill onto your desk."
+    
+    menu:
+        "Accept his bribe":
+            $ avaPoints =- 1
+            
+            player "Fine, I didn't wanna go anyway."
+            player "I'll text her and say I already made plans with someone."
+            
+            call phone_start
+    
+            call message_start("me", "Hey sorry I just remembered I promised to hang out with Rori this weekend", "testimage.png") 
+            
+            call message("Ava", "Aww oki", "avaavi.png") 
+            call message("Ava", "Maybe next weekend you and I can go somewhere!", "avaavi.png") 
+            call message("Ava", "just the two of us lol", "avaavi.png") 
+            
+            call reply_message("Maybe!") 
+            call reply_message("Have a nice hike! Take some pretty photos!") 
+            
+            call message("Ava", "I will!", "avaavi.png") 
+                    
+            call phone_end         
+            
+            player "Done."
+            player "Good luck with your date."
+            
+            gunner @ say "Thanks bro, you're a livesaver :3c"
+        
+        "Decline":
+            player "Hmm. No thanks, a hundred dollars isn't worth much compared to a date with Ava."
+        
+            gunner @ say "Name your price then."
+            
+            player "Your entire net worth plus one Zimbabwe dollar."
+            
+            gunner @ say "But if I acquire one Zimbabwe dollar then that gets added to my net worth so I have to get another one which also adds to my net worth!"
+            gunner @ say "It's an infinite financial loop!"
+            
+            player "Bingo."
+            
+            gunner @ say "Hmph!"
+            gunner @ say "Fine, I guess I can't stop you from tagging along."
+            gunner @ say "But at the end of the day Ava's will only be falling for *me.*"
+            
+            player "If you say so."
+            
+            call phone_start
+    
+            call message_start("me", "Yeah that sounds like a great time!", "testimage.png") 
+            
+            call message("Ava", "Yay ^v^", "avaavi.png") 
+            call message("Ava", "We'll come get you on Saturday", "avaavi.png") 
+            call message("Ava", "Be sure to bring water and snacks!", "avaavi.png") 
+            
+            call reply_message("Will do!") 
+            call reply_message("Can't wait to see a master photographer in action!") 
+            
+            call message("Ava", "Hehe *snap*", "avaavi.png") 
+                    
+            call phone_end         
+            
+            player "Yup, this'll be a weekend to remember!"
+            
+            n "Gunner just glares at you, clearly displeased."
+        
+        "Make it $200":
+            $ avaPoints =- 2
+            $ badEnd =+ 1
+            
+            n "You stash the money into your pocket, but you can definitely get more from him."
+            
+            player "Only $100? I thought you liked Ava more than that."
+    
+            gunner @ say "Yeah I'm lowballing you lmao"
+            
+            player "Make it $200 and we have a deal."
+            
+            gunner @ say "Easy."
+            
+            n "Gunner opens his wallet and flips through a large stack of crisp green banknotes."
+            
+            gunner @ say "Oop, this is kinda embarassing. Do you have change for a $10,000 bill?"
+            
+            player "I didn't even know they made those."
+            
+            gunner @ say "Ah screw it, let me just send it to you on PayPossum. What's your account name?"
+            
+            n "You give him your email and he types it into his phone. A minute later you get a notification saying you've received $1000."
+            
+            player "You sent me $1000?"
+            
+            gunner @ say "Did I? I must have hit too many zeros. Whatevs, you can keep it."
+            
+            player "Man, I should do business with you more often."
+            
+            gunner @ say "Yeah yeah, now text Ava and tell you you can't come."
+            
+            call phone_start
+    
+            call message_start("me", "Hey sorry I just remembered I promised to hang out with Rori this weekend", "testimage.png") 
+            
+            call message("Ava", "Aww oki", "avaavi.png") 
+            call message("Ava", "Maybe next weekend you and I can go somewhere!", "avaavi.png") 
+            call message("Ava", "just the two of us lol", "avaavi.png") 
+            
+            call reply_message("Maybe!") 
+            call reply_message("Have a nice hike! Take some pretty photos!") 
+            
+            call message("Ava", "I will!", "avaavi.png") 
+                    
+            call phone_end         
+            
+            player "Done."
+            player "Good luck with your date."
+            
+            gunner @ say "Thanks bro, you're a livesaver :3c"
+            
+    herschel @ say "Good day class! Today will be an easy day since we'll just have a quiz then go over some homework problems."
+    
+    gunner @ say "The fuck? A quiz and *then* a review of the lesson?"
+    gunner @ say "Bitch is *trying* to fail us."
+    
+    herschel @ say "Clear your desks except for a pencil and a scratch sheet of paper!"
     
     scene bg black with fade
        
@@ -1985,7 +2175,7 @@ label chapter3AfterWeekend:
     
     margaret @ say "It's about time for class to begin, isn't it?"
     margaret @ say "Go ahead and run along now."
-    margaret @ say "Don't wait up for me. Wouldn't want to get caught coming down from here with a student."
+    margaret @ say "Don't wait up for me. Wouldn't want to get caught coming down from here with a student~"
     
     player "Sure thing. See you in class."
     
@@ -2002,11 +2192,87 @@ label chapter3AfterWeekend:
     n "Damn, Ms. Ellen is good at flipping a switch and acting like nothing's wrong when she lectures. If you didn't know any better you'd think she's pretty happy with her life."
     n "The way she smiles at students and wags her tail on the way out of the lecture hall disguises the Ellen you know on the rooftops."
     
+    scene bg classroom with dissolve
     
+    celestine @ say "...On se voit jeudi, la classe!"
+    celestine @ say "You're all doing so well, I'm very proud of you!"
+    celestine @ say "Keep up your studies and I'm sure you'll all pass with flying colors!"
     
+    claire @ say "Don't you just love French, [name]?"
+    claire @ say "They say it's the language of love~"
     
-    ###then chat with claire before french about her hiking trip
-    ###on friday claire runs off to prepare for the trip and you talk to ava one on one
+    menu:
+        "I hate it":
+            $ clairepoints =- 1
+            
+            player "I hate the French with every fiber of my being."
+            
+            claire @ say "Aww don't be such a downer! If not for the French we might not have a class together!"
+            
+            player "Yeah now I hate them even more."
+            
+            claire @ say "What's that supposed to mean?"
+            
+            player "Uhh..."
+            
+            n "Quick, press spacebar to distract her and avoid a dramatic overreaction!"
+            
+            player "Hey do you wanna get coffee?"
+            
+            claire @ say "Hell yeah!!"
+        "It's nice when you speak it":
+            $ clairepoints =+ 1
+            
+            player "I like whenever you speak it."
+            player "You already sound like it's your native tongue."
+            
+            claire @ say "Ksksksks merci beaucoup, [name]~"
+            
+            player "Hnnnng that's so hot!"
+            
+            claire @ say "Oui? Wait til you hear what I sound like in bed~"
+            
+            n "What could she possibly mean by this? Does she snore when she sleeps? Maybe you should ask Ava later."
+            
+            claire @ say "By the way, you wanna get coffee with me and Ava today?"
+            
+            n "You've got nothing better to do."
+            
+            player "Why not."
+            
+            claire @ say "Yay~"
+        "No strong feelings":
+            player "I have no strong feelings towards it."
+            player "It's just an elective credit I have to get out of the way."
+    
+            claire @ say "Well I'm glad we just happened to be together in the same class and sit right next to each other and be study partners and get to hang out every other day~"
+            
+            n "Claire has a dumb grin on her face. She's leaning so far into you that her desk is left balancing on two legs."
+            
+            player "Yeah it's pretty cool I guess."
+            
+            claire @ say "You guess??"
+            
+            n "Her desk topples back to its original position with a loud thud that reverberates around the entire room a few times."
+            
+            player "I mean uhh... yeah I'm glad to get to see you so often."
+            
+            claire @ say "Really???"
+            
+            player "Yeah in fact I was thinking we could get coffee?"
+            
+            claire @ say "Right now?"
+            
+            player "Uh huh."
+            
+            claire @ say "Ohmygosh I have to tell Ava about this!"
+            
+            player "Tell her about what? We're just getting coffee together..."
+            
+            n "Claire pulls out her phone and ignores you while texting up a storm to Ava."
+            
+    
+     #ask ava about her trip with gunner. claire tries to get in but ava denies her. Claire gets upset and plans her own hiking trip with rori.(claire "I see, you wanna hog alllll the boys to yourself!") 
     
     
     
