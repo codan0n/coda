@@ -830,7 +830,7 @@ label liberation_day:
                 #menu:
                 #    ava "{cps=0}Aww, want me to snuggle you tonight and protect you?~{/cps}"
                 #    "Yes please":
-                $ avaPoints = avaPoints + 1
+                $ avaPoints =+ 1
                 
                 player "That would be delightful."
                 
@@ -1007,7 +1007,7 @@ label liberation_day:
                     
                     ava @ say "Yeah but our bodies don't know that! It's the proximity that counts!"
                     
-                    player "Next time can we at least be nude?"
+                    player "Next time can we at least not be fully clothed?"
                     
                     ava @ say "Hmm..."
                     
@@ -1889,9 +1889,6 @@ label liberation_day:
             
             gunner @ say "Looks like you found the jackpot heheh!"
             
-            $ avaPantsu = False
-            $ clairePantsu = False
-            
             menu:
                 gunner "{cps=0}Looks like you found the jackpot heheh!{/cps}"
                 "Take Ava's panties":
@@ -2458,9 +2455,9 @@ label liberation_day:
 
         n "Rose grips her knife tighter."
 
-        rose @ say "What do you want? Money? Nobody carries cash anymore."
+        rose @ say "What do you want? Money? A sandwich? Drugs? To be a drain on society?"
         
-        #fortune "I have no need for money, everything I work with is free."
+        #fortune "I have no need for any of those, everything I work with is free."
         fortune @ say "I am merely one of fate's messengers."
         fortune @ say "You may decline to hear your fortune if you wish, but it will reach you one way or another, sooner or later."
         #fortune teller gives rose a false fortune, knowing that she doesn't pay?
@@ -2479,8 +2476,6 @@ label liberation_day:
         show fortune:
             xoffset 160
         with move
-         
-        $ gnugift = False
 
         menu:
             n "{cps=0}Rose starts to walk across the street to the other sidewalk.{/cps}"
@@ -2578,6 +2573,7 @@ label liberation_day:
                     n "{cps=0}Give money to the fortune teller?{/cps}"
                     "Yes":
                         $ gnugift = True
+                        $ moneySpent =+ 5
                         
                         n "You won't be any poorer for giving him the money since you didn't realize you had it in the first place."
                         n "You hand over the crumpled bill and await the wisdom of the gnu."
@@ -2591,7 +2587,7 @@ label liberation_day:
                         hide fortune with dissolve
 
                         n "You unclench your fist and look down at what he gave you."
-                        n "It's a short cable with a USB C connector at one end and a headphone jack input on the other."
+                        n "It's a brass wheel, no larger than a coin. There's a smaller wheel inlayed on the side and a groove in between where they connect."
                         n "What the hell kind of puzzle game bullshit is this?"
                         n "You look up with a confused expression, about to ask what this is for but the fortune teller is nowhere to be found."
                     "No":

@@ -276,8 +276,6 @@ label week2Tuesday:
     
     player "Cool, cool."
     
-    $ mishkaMall = False
-    
     menu:
         player "{cps=0}Cool, cool.{/cps}"
         "Ask if she wants to hang out":
@@ -423,12 +421,15 @@ label week2Tuesday:
     menu:
         n "{cps=0}He's not.{/cps}"
         "Look at Rose's answers.":
-            $ rosePoints = rosePoints - 1
-            $ badEnd = badEnd + 1
+            $ rosePoints =- 1
+            $ badEnd =+ 1
+            
             n "Any way to pass, right? It's not like history is that important anyway."
             n "You sneak a few glances at Rose's sheet until she seems to notice."
 
             if gaveUmbrella == True:
+                $ historyCheated = True
+                
                 n "Rose gives you an angry look but decides to move her paper a little closer so you can read it more easily."
                 n "Is this thanks for giving her your umbrella the other day?"
                 n "You need to ask her to return that some time."
@@ -664,6 +665,7 @@ label week2Tuesday:
     menu:
         n "{cps=0}You can listen to music and chill and get some homework done.{/cps}"
         "Arcoonian book":
+            $ readArcoonianBook = True
             $ rosePoints += 1
             
             n "You take a look at the book Mr. Rothbauer gave you, \"The Rise and Fall of the Arcoonians.\""
@@ -985,7 +987,7 @@ label week2Tuesday:
             
             n "Claire lets out a disappointed sigh but doesn't say anything."
         "Okay!":
-            $ clairePoints = clairePoints + 1
+            $ clairePoints =+ 1
             
             show ava happy
             
@@ -1010,8 +1012,8 @@ label week2Tuesday:
 
             player "Great..."
         "Alright but I'm getting my picture taken with you next.":
-            $ clairePoints = clairePoints - 1
-            $ avaPoints = avaPoints + 1
+            $ clairePoints =- 1
+            $ avaPoints =+ 1
             
             show ava happy
             
@@ -1167,7 +1169,7 @@ label week2Tuesday:
     menu:
         rose "{cps=0}Give those to me. Now.{/cps=0}"
         "Only if you let me write a page of the project":
-            $ goodEnd = goodEnd + 1
+            $ goodEnd =+ 1
             
             n "You might end up regretting this later but you feel bad for making Rose do all the work."
             n "You have to at least put in a minimal effort."
@@ -2673,7 +2675,7 @@ label hospital_bound:
                     n "Luckily you had your headphones in your bag as well. You put them on and start reading."
                     n "Il fait un temps affreux translates to the weather is terrible! Take note of the use of Il fait, which means it makes or it does, rather than it is..."
                 "Browse pinstagram":
-                    $ avaPoints = avaPoints + 1
+                    $ avaPoints =+ 1
                     
                     n "You know what, you really don't feel like doing homework right now."
                     n "Instead, you'd like to indulge in the finer arts society has to offer."
@@ -2735,20 +2737,18 @@ label hospital_bound:
 
     call message("Claire", "Ur cute btw", "claireavi.png") from _call_message_45
 
-    call screen phone_reply("What?","choice3","Thanks?","choice4")
+    call screen phone_reply("Me??","choice3","No u","choice4")
 
     label choice3:
         $ clairephonewhat = True
 
         call phone_after_menu from _call_phone_after_menu_2
 
-        call message_start("me", "What?", "testimage.png") from _call_message_start_9
+        call message_start("me", "Me??", "testimage.png") from _call_message_start_9
 
-        call message("Claire", "What?", "claireavi.png") from _call_message_46
+        call message("Claire", "Yeah you!", "claireavi.png") from _call_message_46
 
-        call reply_message("...") from _call_reply_message_32
-        call reply_message("Idk") from _call_reply_message_33
-        call reply_message("Nvm") from _call_reply_message_34
+        call reply_message("Idk about that") from _call_reply_message_33
 
         call message("Claire", "Wait", "claireavi.png") from _call_message_47
 
@@ -2833,13 +2833,13 @@ label hospital_bound:
         jump aftermenu2
 
     label choice4:
-        $ clairePoints = clairePoints + 1
+        $ clairePoints =+ 1
         $ clairephonethx = True
 
         call phone_after_menu from _call_phone_after_menu_3
-        call message_start("me", "Thanks?", "testimage.png") from _call_message_start_10
+        call message_start("me", "No u~", "testimage.png") from _call_message_start_10
 
-        call message("Claire", "Ur welcome cutie~ ksksksksks ;)", "claireavi.png") from _call_message_55
+        call message("Claire", "Aaaaaaaa thxhxhxhxhxadsfjaksdfafokdwjpoiqefsa", "claireavi.png") from _call_message_55
 
         call reply_message("Ok i think you've had too much to drink") from _call_reply_message_41
 
@@ -2860,6 +2860,14 @@ label hospital_bound:
         call message_img("Claire", "Enjoy~", "pic1.png") from _call_message_img
         
         call reply_message("BOOBA") from _call_reply_message_144
+        call reply_message("Wait why are you wearing santa hats?")
+        
+        call message_img("Claire", "idklol", "pic1.png")
+        call message_img("Claire", "its festivv", "pic1.png")
+        
+        call reply_message("It's August")
+        
+        call message_img("Claire", "shshshshush up and enjoy teh boobz lol", "pic1.png")
 
         call phone_end from _call_phone_end_7
 
@@ -3102,13 +3110,6 @@ label leaving_hospital:
     
     #n "The doctor said to take it easy, so you're just gonna relax in bed all day."
     
-
-
-
-
-
-    
-    
     #n "You still have class in a few hours after all."
     #n "When it comes time for you to go to bed, you pop another one of those pills, as instructed."
     #n "You're already getting sick of them but you gotta do what you gotta do to stay alive you guess."
@@ -3262,7 +3263,7 @@ label monty_hall:
             herschel @ say "Very good Gunner, I'll add a point to your final grade."
             
         "Change your selection":
-            $ goodEnd = goodEnd + 1
+            $ goodEnd =+ 1
             
             n "Before you can say anything, Gunner pipes up."
             
@@ -3414,6 +3415,7 @@ label ellen_feeding_ducks:
     
     show box with Dissolve(.2):
         ypos 0
+        
     
     n "Amid the myriad of fuzzy animals passing by on their way to class, you spot a glum dog sitting on a bench overlooking a pond."
     n "Wild ducks and squirrels surround her, feeding on the bits of bread and seeds she scatters about."
@@ -3482,7 +3484,7 @@ label ellen_feeding_ducks:
                     show margaret melancholy -shocked
                     
                     margaret @ say "Then perhaps you're doing quite well as a jellyfish~"
-                    margaret @ say "I suppose I'm more like a wolf. Always chasing after things, relentlessly, until I left my pack behind."
+                    margaret @ say "I fancy myself more like a wolf. Always chasing after things, relentlessly, until I left my pack behind."
                     
                     player "Why not start a new pack? I was sort of a lone wolf too until I got here and started making friends."
                     
@@ -3514,7 +3516,7 @@ label ellen_feeding_ducks:
                     
                     show margaret sad 
                     
-                    margaret @ say "Every English major I taught ended up killing themselves or wanting to."
+                    margaret @ say "Every English major I've taken under my wing ended up killing themselves or trying to."
                     
                     player "That's not really your fault."
                     
@@ -3522,11 +3524,12 @@ label ellen_feeding_ducks:
                     
                     player "Why not quit?"
                     
-                    margaret @ say "And do what? I'm too old to find a new career I enjoy, and the pay is good here."
+                    margaret @ say "And do what? I'm too old to find a new career I enjoy, and the pay here is good enough."
                     
-                    player "Is money everything? I've never had much so I dunno if it's worth working for. And you're not that old."
+                    #player "Is money everything? I've never had much so I dunno if it's worth working for. And you're not that old."
+                    player "You're not that old"
                     
-                    margaret @ say "You get used to a certain amount and then it becomes difficult to go back."
+                    #margaret @ say "You get used to a certain amount and then it becomes difficult to go back."
                     
                     show margaret neutral
                 
@@ -3552,7 +3555,7 @@ label ellen_feeding_ducks:
                     
                     show margaret happy
                     
-                    margaret @ say "Do yourself a favor and drop philosophy class."
+                    margaret @ say "Do yourself a favor and drop philosophy class. You're clearly failing it."
                     
                     player "I'm not even taking philosophy!"
                     
@@ -3619,13 +3622,14 @@ label ellen_feeding_ducks:
                     player "You've been doing this for a while, huh?"
                     
                     margaret @ say "Yup."
-                    margaret @ say "This was the first date I went on with my ex, ages ago."
+                    margaret @ say "The first date I went on with my ex was to a pond to feed the ducks. There were a couple of geese too."
+                    margaret @ say "That feels like ages ago."
                     
                     show margaret melancholy
                     
                     margaret @ say "Now I'm just an old lady feeding the birds on my own."
                     
-                    n "She looks over to you, then back at the ducks."
+                    #n "She looks over to you, then back at the pond."
                     
                     #margaret @ say "Sometimes with a curious student, but not often."
                     
@@ -3653,18 +3657,39 @@ label ellen_feeding_ducks:
             margaret @ say "Either you're flattering me or you don't know what a woman in her late 20s looks like."
             
             player "Hey, I'm pretty sure I've seen students who look older than you!"
+            player "Like that guy that sits in the desk up front, on the side. He sets up the projector sometimes."
             
             show margaret neutral
             
-            margaret @ say "I'll take that as a compliment~"
-            margaret @ say "Some students just have a late start but I've had a few who inexplicably show up once then retake the class years later."
+            margaret @ say "..."
+            margaret @ say "...You mean my teacher's assistant?"
             
-            player "Heh, wouldn't you be happy to see me in your class again in a few years?"
+            player "Is that what he is?"
+            
+            margaret @ say "Yes. He sits in class and watches me teach to get experience on how to lecture. He also grades a lot of the class's papers. You didn't think I did it all on my own, did you?"
+            
+            player "I guess I never considered it."
+            player "Not to brag or anything but I also know how to press the power button on a projector. Do you think I'd make a good teacher's assistant?"
+            
+            margaret @ say "Hmm, can you tolerate reading a hundred high school level essays every night for really low pay?"
+            
+            player "High school tier literacy would be an improvement over the people I'm used to arguing online with."
+            player "Plus I'd get to hang out with you!"
             
             show margaret happy
             
-            margaret @ say "I'd rather see you in my graduate course~"
-            margaret @ say "What about you? Would you want to see me again?"
+            margaret @ say "Oh? Maybe if I'm still here when you're working on your master's degree you can come back and be my TA. Would you like that?"
+            
+            #margaret @ say "I'll take that as a compliment~"
+            #margaret @ say "Some students just have a late start but I've had a few who inexplicably show up once then retake the class years later."
+            margaret @ say ""
+            
+            #player "Heh, wouldn't you be happy to see me in your class again in a few years?"
+            
+            #show margaret happy
+            
+            #margaret @ say "I'd rather see you in my graduate course~"
+            #margaret @ say "What about you? Would you want to see me again?"
             
             player "Only if you're still as beautiful."
             
@@ -3677,7 +3702,8 @@ label ellen_feeding_ducks:
             margaret @ say "Oh you! Hehehehe you're really quite the jester, aren't you?"
             margaret @ say "Smart move. Only the fool can be spared the queen's wrath after all~"
             
-            player "Hahaha really though, I think it would be cool to see you again after this semester. Maybe we could get coffee or something?"
+            player "Hahaha I don't know why I said that, it just sorta popped into my head."
+            player "But really though, I think it would be cool to see you again after this semester. Maybe we could get coffee or something?"
             
             show margaret neutral
             
@@ -3772,7 +3798,7 @@ label ellen_feeding_ducks:
             
             margaret @ say "But don't be afraid to say hi whenever you see me~"
             
-            player "Same goes for you! I'd love to sit and chat with you over a coffee sometime."
+            player "Same goes for you! Maybe we could sit and chat over a coffee sometime."
             
             margaret @ say "I'm sure that can be arranged~"
             #and if it's your treat, I'll be sure to give you a treat in return~
@@ -3792,90 +3818,6 @@ label ellen_feeding_ducks:
     
     stop music fadeout 2.0
             
-#make this part of ellen's cafe scene
-#    n "Ms. Ellen reclines against the bench and sighs."
-#
-#    show margaret melancholy
-#
-#    margaret @ say "It's nice to get to talk to one of my students like this."
-#    margaret @ say "Most are either intimidated by me or just see me as an obstacle to their degree."
-#
-#    player "Yeah I'm not really too into the whole college thing."
-#    player "I just come to class out of habit and sometimes I learn interesting things."
-#    player "I like hearing your rants about authors' beliefs."
-#
-#    show margaret flattered
-#
-#    margaret @ say "Is that so? I always feel so embarrassed after those little tirades! I suppose I just can't help myself."
-#
-#    player "I guess literature would lend itself most to expression. Not much room for interpretation in statistics or French."
-#
-#    show margaret neutral
-#
-#    margaret @ say "Au contraire, le langage limite nos pensées."
-#
-#    player "What??"
-#
-#    margaret @ say "There's certain things you can't express in one language alone."
-#    margaret @ say "Even if you mastered English, which very few people have done mind you, other languages open your mind up to new thoughts."
-#    #margaret @ say "That's what Celestine taught me. You know her, right?"
-#    margaret @ say "That's what Sera taught me. You might know her as Mrs. Celestine."
-#
-#    player "Yeah, she's my French teacher."
-#
-#    margaret @ say "I thought so. She's nice. And wise. You should listen to her."
-#    margaret @ say "She's told me about you."
-#
-#    player "Wait, you know Mrs. celestine??"
-#
-#
-#
-#
-#    #reserved for part 2
-#
-#                    margaret @ say "I didn't used to be. I used to try really hard."
-#                    margaret @ say "But after teaching here... I've seen so many cheaters graduate. So many people dumber than a rock coast through their degree with their parents' money and end up in important jobs."
-#                    margaret @ say "That's just the path in life they've had given to them."
-#                    margaret @ say "The administration pressures us to just shut up and take the bribes. Not little things like cinnamon rolls, I'm talking cars and vacation homes."
-#                    
-#                    player "How many vacation homes does a professor need??"
-#                    
-#                    margaret @ say "I wish I had one. They only offer those to smooth things over when senator So-and-So's dipshit son gets in trouble with the law for assaulting some poor sorority girl."
-#                    margaret @ say "The most I've ever got was a strange case where I think the student enjoyed giving me money?"
-#                    margaret @ say "I suckered him out of nearly twenty grand over a couple semesters."
-#                    
-#                    player "You lucky dog."
-#                    
-#                    show margaret happy
-#                    
-#                    margaret @ say "Hehehehe~"
-#                    
-#                    show margaret neutral
-#                    
-#                    margaret @ say "You won't have to do that much to pass my class though. Just listening to me rant is enough for me. It's a lot cheaper than therapy, that's for sure."
-#                    
-#                    n "Ms. Ellen sighs."
-#                    
-#                    show margaret sad
-#
-#
-#
-#^split this scene into 2 parts because it drags on for too long. Split at the "just how old do you think I am" part? have a flashback to it later when you sit on the bench alone? Or make this part part of the ellen cafe scene later
-#    show margaret melancholy
-#            
-#    margaret @ say "Thanks for sitting and talking with me. It really made my day worthwhile."
-#    margaret @ say "There's more to you that makes you special than just being the last human."        
-#
-#    player "I don't know about that. I'm just like anyone else. Just doing whatever society expects me to do. Go to school. Pay taxes. That sort of thing."
-#    
-#    margaret @ say "You're very kind and have your own unique perspective. You can uplift people without realizing it."
-#    
-#    player "I'm glad you think so. I try. Well no, I don't really try. I just want to live a comfortable life and be happy with others."
-#
-#    show margaret neutral
-#    
-#    margaret @ say "Perhaps that's all you need to do."
-
     scene bg lecturehall with fade
 
     play music "audio/music/mere - retrograde.ogg" fadein .5
@@ -3942,13 +3884,15 @@ label ellen_feeding_ducks:
     
     ava @ say "Ugh, don't remind me."
     
+    ###claire @ say "Girl chill, nobody saw your titties!"
+    
     show claire derp
     
     claire @ say "I had to drink like an entire keg of beer to even feel anything!"
     
     show ava unimpressed
     
-    ava @ say "I don't know how you can stomach it."
+    ava @ say "I don't know how you could even stomach it."
     
     show claire sweater leaning suggestive -
     
@@ -3978,6 +3922,8 @@ label ellen_feeding_ducks:
             ava @ say "W-where did that come from?!"
             
         "She's FAT!":
+            $ calledClaireFat =+ 1
+            
             player "It's because you're fat."
             
             show claire surprised earsup
@@ -4035,6 +3981,9 @@ label ellen_feeding_ducks:
                     
                     ava @ say "Oof."
                 "Yes":
+                    $ claireBias =+ 1
+                    $ calledClaireFat =+ 1
+                    
                     player "I'm just saying your should eat a salad every so often."
                     
                     show claire happy
@@ -4432,7 +4381,7 @@ label ellen_feeding_ducks:
                 player "Nah bro, the vibes are off on this one."
                 
                 gunner @ say "Dude what."
-                gunner @ say "You gay or something?"
+                gunner @ say "Are you gay or something?"
                 gunner @ say "You can ogle Rori's ass while we sneak around if that's the case."
                 
                 show rori anxious
@@ -4457,7 +4406,12 @@ label ellen_feeding_ducks:
     hide rori
     with dissolve
     
+    if mishkaMallSpecialActive == True:
+        $ badEnd =+ 1
+    
+    #set to false because you're missing mishka's mall scene if you go with gunner or ava
     $ mishkaMallSpecialActive = False
+    
     
     n "What should you do with your free time?"
     
@@ -4621,7 +4575,7 @@ label liberation_eve:
             menu:
                 player "{cps=0}Oh right. That.{/cps=0}"
                 "I think I'm dying":
-                    $ ellenPoints = ellenPoints + 1
+                    $ ellenPoints =+ 1
 
                     player "I think I'm dying."
 
@@ -4677,8 +4631,140 @@ label liberation_eve:
             n "Better hurry along now!"
 
         "Don't follow her":
-            ###write an event happen during this time
             n "It's kinda creepy to stalk your professor like that. You should just chill for the next half hour you have before your next class."
+            n "You loiter around the campus until a couple of familiar faces approach you, one with a friendly smile and the other looking like she wants to kill you."
+            
+            show nicodemus
+            show rose
+            
+            nicodemus @ say "Good day, [name]! Enjoying the fair weather?"
+            
+            rose @ say "There, we said hi. Can we go now?"
+            
+            nicodemus @ say "What's the rush, lass? Can't a dean have a pleasant chat with his future alumni?"
+            
+            player "Nice to see you again, Mr. Kazcynski. What do I owe the pleasure?"
+            
+            #nicodemus @ say "There's hardly an occasion, I just happened to see you there while I was out walking with my... granddaughter here."
+            nicodemus @ say "There's hardly an occasion, I just happened to see you there while I was out walking with my granddaughter here."
+            
+            n "Rose looks away, clearly uninterested in the conversation."
+            
+            nicodemus @ say "I hear the two of you have a history course together! My little Rose just adores history! It was her favorite subject in high scool!"
+            nicodemus @ say "It may seem like the past is this finite thing that's gone and left us, but there are more stories than can be told in a lifetime, showing what civilization is truly capable of!"
+            nicodemus @ say "I think it was my war stories that got Rose interested in the first place bahaha!"
+            
+            rose @ say "Grandpa... shut up already, you said we'd get coffee before my next class."
+            
+            n "The dean checks his wristwatch and smiles."
+            
+            nicodemus @ say "We've still got plenty of time! Humor me!"
+            
+            n "Rose huffs and crosses her arms."
+            
+            player "Well I got out of literature early so I'm just waiting for French to start."
+            
+            nicodemus @ say "French huh! The only French I know are the battle cries of my comrades as we pushed to liberate Paris!"
+            nicodemus @ say "\"Avec moi!\" \"Au feu! Au feu!\" \"En avant!\""
+            nicodemus @ say "And let me tell you, those Parisian women sure were grateful for la résistance and their allies!"
+            
+            n "As annoyed as Rose wants to be, she can't help but smirk at her grandfather's gusto."
+            
+            #rose @ say "We get it, you were a solder who saw some action."
+            
+            nicodemus @ say "But that's all in the past now, today I'm just a humble university dean."
+            nicodemus @ say "Which means I'm curious as to how your experience here at Harmonia is going, [name]. I trust your grades are satisfactory."
+            nicodemus @ say "More importantly, have you made any significant bonds?"
+            
+            menu:
+                "I think so":
+                    $ avaPoints += 1
+                    $ clairePoints += 1
+                    $ roriPoints += 1
+                
+                    player "I think so. I have a group I hang out with pretty regularly."
+                    
+                    nicodemus @ say "Good!"
+                    nicodemus @ say "I'd hate for you to have your nose in the books all day and miss out on making friends."
+                    nicodemus @ say "And what about a girlfriend? Have you found one yet?"
+                    
+                    player "Err, no."
+                    
+                    nicodemus @ say "You hear that, Rose? This could be your chance."
+                    
+                    rose @ say "Pass."
+                    
+                    nicodemus @ say "Whaaat? Why not? [name] is a perfectly suitable young lad!"
+                    
+                    rose @ say "He's not my type."
+                    
+                    nicodemus @ say "Fine, have it your way."
+                    nicodemus @ say "Sorry [name], my granddaughter has a tough exterior but I promise she's a real sweetheart once you get to know her!"
+                    
+                    rose @ say "Hmph!"
+                    
+                    nicodemus @ say "Well we better be off to get that coffee I promised. It was good seeing you again!"
+                    
+                    player "It was nice talking with you again, sir."
+                    
+                    nicodemus @ say "I'd like to sit down and have coffee with you as well sometime when we're not all in a hurry."
+                    nicodemus @ say "Then you can go into depth about all the hijinx you and your friends have been up to! Bahaha!"
+                    
+                    player "Of course!"
+                    
+                    rose @ say "We really have to be on our way now."
+                    
+                    nicodemus @ say "Right, sorry to cut into our weekly coffee time Rose."
+                    nicodemus @ say "Have a nice holiday, [name]!"
+                    
+                "I'm not sure":
+                    $ rosePoints =+ 1
+                    $ ellenPoints =+ 1
+                    
+                    player "I'm not really sure. I talk to a few people but I dunno if we're still gonna be talking in a few years."
+                    
+                    nicodemus @ say "I see."
+                    nicodemus @ say "Perhaps it will take some more time for you to establish a strong relationship. But keep at it!"
+                    nicodemus @ say "Rose also has trouble making friends. Maybe you two could-"
+                    
+                    rose @ say "No thanks."
+                    
+                    nicodemus @ say "Come now Rose, how long do you plan to be a loner?"
+                    
+                    rose @ say "With any luck, the rest of my life."
+            
+                    nicodemus @ say "Hah! Such dry humor, I love it!"
+                    nicodemus @ say "Don't worry, you'll find your match some day."
+                    nicodemus @ say "Both of you will, I'm sure of it."
+                    
+                    rose @ say "Whatever."
+                    rose @ say "Can we go now?"
+                    
+                    nicodemus @ say "Someone's eager for some caffeine, isn't she! Bahaha you always were crabby without it!"
+                    nicodemus @ say "You know she started drinking coffee when she was 12 years old! Always black, she's never even tried it with creamer!"
+                    
+                    rose @ say "I like it as it is, no need to ruin the flavor with extra junk."
+                    
+                    nicodemus @ say "Well I suppose we better be off now. It was good chatting with you again [name]!"
+                    
+                    n "You mostly just sat and listened but it was still a pleasant interaction."
+                    
+                    player "Always a pleasure to have a casual chat with the dean."
+                    
+                    nicodemus @ say "I do hope we can get together for coffee sometime and have a nice sit-down conversation. Get to know how your studies and experience are going in more detail."
+                    
+                    player "Yeah, maybe next time. I gotta run to French now."
+                    
+                    nicodemus @ say "Au revoir! Bahaha!"
+                    nicodemus @ say "And have a nice holiday!"
+                    
+            player "Thanks, you too!"
+                    
+            n "The raccoons head off in the direction of the cafe. Rose is probably complaining she had to endure a few minutes talking with you, but she seems to admire her grandfather."
+            n "Likewise, he seems to care deeply for her. It almost seemed like he was the one who raised her."
+            n "There's still some time before class begins so you enjoy a stroll at a leisurely pace, basking in the crisp autumn air while being warmed by the sun's light."
+    
+    $ cafeEvents.append("nicodemusCafe")
     
     scene bg classroom with fade
 
@@ -5374,7 +5460,7 @@ label liberation_eve:
     menu:
         n "{cps=0}Now's your chance.{/cps=0}"
         "Sit next to Claire":
-            $ clairePoints = clairePoints + 1
+            $ clairePoints =+ 1
             
             n "Surprisingly, Claire has not occupied your bed and has instead opted recline against it whilst sitting on the floor, her arm elbow deep in a bag of chips."
             n "You decide to join her down there and grab a handful of chips when she takes her paw out."
@@ -5472,7 +5558,7 @@ label liberation_eve:
             n "You're getting pretty sleepy though so you hurry and get ready for bed."
 
         "Sit next to Ava":
-            $ avaPoints = avaPoints + 1
+            $ avaPoints =+ 1
             
             n "Ava had decided to occupy your bed, which is fine because it's the most comfortable spot and you wanted to sit next to her anyway."
             n "You plop down on it, bouncing her up into the air."
@@ -5637,7 +5723,7 @@ label liberation_eve:
             n "You're getting pretty sleepy so you hurry and get ready for bed."
 
         "Sit next to Rori":
-            $ roriPoints = roriPoints + 1
+            $ roriPoints =+ 1
 
             n "You approach Rori, who is sitting in your desk chair."
 

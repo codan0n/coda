@@ -480,7 +480,7 @@ label college_orientation:
     menu:
         rori "{cps=0}Computer engineering! I've always loved messing around with computers. I taught myself how to program since my high school didn't have any classes for it.{/cps}"
         "Hahaha nerrrrd":
-            $ roriPoints = roriPoints - 1
+            $ roriPoints =- 1
             $ calledRoriNerd = True
 
             show rori neutral
@@ -514,7 +514,7 @@ label college_orientation:
             player "I'll cross that one off the list."
 
         "Play any games?":
-            $ roriPoints = roriPoints + 1
+            $ roriPoints =+ 1
             
             show rori neutral
 
@@ -1103,11 +1103,7 @@ label exploring_campus:
     n "Going straight across is the quickest way to the restaurants, so you head in with your eyes forward."
     n "You know the moment you look at any of them, some representative will drag you into an involuntary conversation."
     n "Almost there... Almost... Just a few more meters."
-    
-    $ metGunner = False
-    $ metClaire = False
-    $ metAva = False
-    
+        
     $ randumb = renpy.random.randint(0, 1)
     
     #for testing
@@ -1421,7 +1417,7 @@ label exploring_campus:
                 
                 gunner @ say "Hahahaha if that's your type there's plenty of jacked Alpha guys. They practically live at the gym."
             "Lay off him, dude":
-                $roriPoints =+ 1
+                $ roriPoints =+ 1
                 
                 player "So what? Lay off him, dude."
                 
@@ -2328,7 +2324,8 @@ label secondDayOfClass:
     menu:
         celestine "{cps=0}Next up, you there!{/cps}"
         "Same as Claire, it was random.":
-            $ clairePoints = clairePoints + 1
+            $ clairePoints =+ 1
+            
             n "You shrug."
 
             player "Same as Claire, it was just kind of random and all the other language classes were taken."
@@ -2577,7 +2574,6 @@ label secondDayOfClass:
 
         "I already have plans":
             $ avaClaireLunch = False
-            $ roriPoints = roriPoints + 1
             
             player "Sorry, I already have plans. Maybe another time?"
             
@@ -2715,8 +2711,6 @@ label thirdDayOfClass:
     n "Already off to a better start than every other group project you've been a part of."
     
 label thirdDayOfClassStats:
-    $ acceptedGunnersMoney = False
-    
     scene bg lecturehall with fade
 
     play music "audio/music/mere - schooldaze faster.ogg" fadein .5
@@ -2968,6 +2962,8 @@ label thirdDayOfClassStats:
         menu:
             gunner "{cps=0}I accidentally withdrew too much cash and now my wallet barely fits in my pocket, so I don't mind.{/cps}"
             "Decline":
+                $ acceptedGunnersMoney = False
+                
                 player "I can pay for myself."
                 
                 gunner @ say "Heh suit yourself."
@@ -3933,8 +3929,6 @@ label avaClaireGunnerLunch:
 
     scene bg codadorm with fade
     
-    $ trolledAva = False
-    
     play music "audio/music/vylet - wish.ogg" fadein 0.5
 
     show box with Dissolve(.2):
@@ -3942,7 +3936,7 @@ label avaClaireGunnerLunch:
 
     n "After winding down a bit in your dorm, you lie in bed and look at your phone."
     
-    ###$ cafeEvents.append("claireCafe")
+    $ cafeEvents.append("claireCafe")
 
     call phone_start from _call_phone_start_1
 
@@ -4514,14 +4508,12 @@ label thursday1:
     claire @ say "'...study?'"
 
     n "She says with a wink and playfully nudges you."
-    
-    $ calledClaireFat1 = False
 
     menu:
         n "{cps=0}She says with a wink and playfully nudges you.{/cps=0}"
         "I'd love to!":
             $ frenchSkill =+ 1
-            $ clairePoints = clairePoints + 1
+            $ clairePoints =+ 1
             
             player "I'd love to!"
             
@@ -4744,13 +4736,8 @@ label thursday1:
             jump thursdayNight1Study
             
         "Sorry, I'm not into fat chicks.":
-            #$ claireBias = True
-            #$ roriPoints =- 1
-            #$ avaPoints =- 1
-            #$ ellenPoints =- 1
-            #$ rosePoints =- 1
-            
-            $ calledClaireFat1 = True
+            $ claireBias =+ 1
+            $ calledClaireFat =+ 1
             
             player "Sorry, I'm not into fat chicks."
             
@@ -4795,7 +4782,7 @@ label thursdayNight1Study:
             n "You pick up your French textbook and practice some lessons."
         "Literature":
             $ literatureSkill =+ 1
-            n "You open your totally legally acquired epub of The Death of Ivan Ilyich and start reading."
+            n "You open your totally legally acquired epub of [currentbook] and start reading."
         "History":
             $ historySkill =+ 1
             n "You crack open your History textbook and read up on some ancient cultures."
@@ -5453,7 +5440,7 @@ label sunday2:
         n "{cps=0}You'll take that as a no.{/cps=0}"
         "Offer your umbrella.":
             $ goodEnd = goodEnd + 1
-            $ rosePoints = rosePoints + 1
+            $ rosePoints = + 1
             $ gaveUmbrella = True
             
             n "You can't let her go out in that storm without at least an umbrella."
@@ -5535,7 +5522,7 @@ label sunday2Evening:
             n "You pick up your French textbook and practice some lessons."
         "Literature":
             $ literatureSkill =+ 1
-            n "You open your totally legally acquired epub of The Death of Ivan Ilyich and start reading."
+            n "You open your totally legally acquired epub of [currentbook] and start reading."
         "History":
             $ historySkill =+ 1
             n "You crack open your History textbook and read up on some ancient cultures."

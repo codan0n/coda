@@ -3165,18 +3165,36 @@ default currentWeather = "sunny"
 default daysSinceRain = 1
 default currentbook = "The Death of Ivan Ilyich"
 
-default gaveUmbrella = False
-default avaClaireGarden = False
-default avaUrbex = False
-default gunnerRaid = False
-default gaveCinRoll = False
-default roseTrade = False
+
+#need to order these approximately chronologically
+default currentSeason = "summer"
+default calledRoriNerd = False
+default metGunner = False
+default metClaire = False
+default metAva = False
 default avaClaireLunch = False
-default clairephonewhat = False
-default clairephonethx = False
+default acceptedGunnersMoney = False
+default trolledAva = False
+default mishkaMall = False
 default mishkaMallSpecialActive = False
 default mishkaMallSpecialPlayed = False
-default calledRoriNerd = False
+default calledClaireFat = 0
+default gaveUmbrella = False
+default historyCheated = False
+default readArcoonianBook = False
+default avaClaireGarden = False
+default roseTrade = False
+default clairephonewhat = False
+default clairephonethx = False
+default avaUrbex = False
+default gunnerRaid = False
+default avaPantsu = False
+default clairePantsu = False
+default gnugift = False
+default moneySpent = 0
+default gaveCinRoll = False
+default spicyVictory = False
+default rejectedAvasproposal = False
 
 default roseNightWalkLvl = 1
 default gunnerNightWalkLvl = 1
@@ -3192,12 +3210,15 @@ default historySkill = 0
 default literatureSkill = 0
 
 default roriPoints = 0
+default gunnerPoints = 0
 default ellenPoints = 0
 default rosePoints = 0
 default avaPoints = 0
 default clairePoints = 0
 default badEnd = 0
 default goodEnd = 0
+default roseBias = 0
+default claireBias = 0
 
 default nightWalkIndex = 0
 default roseNightWalkActive = False
@@ -3230,9 +3251,6 @@ default roripath = False
 default ellenpath = False
 default rosepath = False
 default mishkapath = False
-
-default roseBias = False
-default claireBias = False
 
 default roriDormIntroSeen = False
 default avaClaireDormIntroSeen = False
