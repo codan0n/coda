@@ -213,6 +213,12 @@ layeredimage nicodemus neutral:
     at sprite_highlight('nicodemus')
     always:
         'images/characters/nicodemus neutral.png'
+    group lighting:
+        xzoom .9
+        yzoom .90
+        pos (600,156)
+        attribute light:
+            'images/characters/rose/rose athletic dismissive.png'
     group saying:
         #xysize(1920,1080)
         xzoom .9
@@ -3153,6 +3159,7 @@ layeredimage volginova neutral:
 
 
 # variables
+
 default dating = ""
 default currentWeather = "sunny"
 default daysSinceRain = 1
@@ -3215,7 +3222,7 @@ default gardenEvents = ["mishkaGarden"]
 default cafeEvents = ["oliviaCafe"]
 default libraryEvents = []
 default nightEvents = ["avaNight", "claireNight", "mishkaNight", "roseNight", "roriNight"] #re-add gunnerNight when it's ready
-default$ locationsAvailable = ["forestLocation", "gardenLocation", "townLocation", "trackLocation"]
+default locationsAvailable = ["forestLocation", "gardenLocation", "townLocation", "trackLocation"]
 
 default clairepath = False
 default avapath = False
