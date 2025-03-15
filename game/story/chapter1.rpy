@@ -3527,13 +3527,19 @@ label avaClaireGunnerLunch:
     
     show ava annoyed
     
-    ava @ say "Acting?"
+    ava @ say "Ever thought about working out?"
     
     show claire flustered
     
-    claire @ say "Blacklisted from the industry for... reasons."
+    claire @ say "Hey underneath all this fat I'm pure muscle!"
     
-    gunner @ say "Guns?"
+    #ava @ say "Acting?"
+    
+    #show claire flustered
+    
+    #claire @ say "Blacklisted from the industry for... reasons."
+    
+    gunner @ say "Do you like guns?"
     
     show claire derp
     

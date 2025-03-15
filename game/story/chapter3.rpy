@@ -2215,7 +2215,7 @@ label chapter3AfterWeekend:
             
             player "Uhh..."
             
-            n "Quick, press spacebar to distract her and avoid a dramatic overreaction!"
+            n "Press spacebar to distract her and avoid a dramatic overreaction!"
             
             player "Hey do you wanna get coffee?"
             
@@ -2259,7 +2259,7 @@ label chapter3AfterWeekend:
             
             claire @ say "Really???"
             
-            player "Yeah in fact I was thinking we could get coffee?"
+            player "Yeah. In fact I was thinking maybe we could get coffee?"
             
             claire @ say "Right now?"
             
@@ -2270,6 +2270,14 @@ label chapter3AfterWeekend:
             player "Tell her about what? We're just getting coffee together..."
             
             n "Claire pulls out her phone and ignores you while texting up a storm to Ava."
+            
+            claire @ say "Aaaaaa she's already at the cafe! We can meet up!"
+    
+    n "Claire takes your hand and whisks you out of the classroom."
+    
+    scene bg cafe with fade
+    
+    
             
     
      #ask ava about her trip with gunner. claire tries to get in but ava denies her. Claire gets upset and plans her own hiking trip with rori.(claire "I see, you wanna hog alllll the boys to yourself!") 
