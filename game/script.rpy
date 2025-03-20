@@ -213,6 +213,12 @@ layeredimage nicodemus neutral:
     at sprite_highlight('nicodemus')
     always:
         'images/characters/nicodemus neutral.png'
+    group lighting:
+        xzoom .9
+        yzoom .90
+        pos (600,156)
+        attribute light:
+            'images/characters/rose/rose athletic dismissive.png'
     group saying:
         #xysize(1920,1080)
         xzoom .9
@@ -3153,6 +3159,7 @@ layeredimage volginova neutral:
 
 
 # variables
+
 default dating = ""
 default currentWeather = "sunny"
 default daysSinceRain = 1

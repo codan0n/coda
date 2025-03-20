@@ -1883,6 +1883,10 @@ label chapter3AfterWeekend:
     
     n "Gunner slips a $100 bill onto your desk."
     
+    
+    ###change to a $200 bill. they're rare so they cost $500 but gunner exchanges for them just to flex
+    ###gunner forgot his wallet and this is all he had on him
+    
     menu:
         "Accept his bribe":
             $ avaPoints =- 1
