@@ -2203,23 +2203,46 @@ label chapter3AfterWeekend:
     
     menu:
         "I hate it":
-            $ clairepoints =- 1
-            
             player "I hate the French with every fiber of my being."
             
             claire @ say "Aww don't be such a downer! If not for the French we might not have a class together!"
             
-            player "Yeah now I hate them even more."
+            menu:
+                "Now I hate them even more":
+                    $ clairepoints =- 1
+                    
+                    player "Yeah now I hate them even more."
             
-            claire @ say "What's that supposed to mean?"
+                    claire @ say "What's that supposed to mean?"
+                    
+                    player "Uhh..."
+                    
+                    claire @ say "Oh I get it!"
+                    claire @ say "You were just joking. Haha..."
+                    
+                    n "Aw now you feel bad. Claire's the only reason you aren't failing this class."
+                    n "You should show your appreciation."
+                    
+                    player "Yeah sorry, dumb joke. Hey, you wanna get coffee?"
+                    
+                    claire @ say "Right now?"
+                    
+                    player "Whenever you're free."
+                    
+                    claire @ say "Right now it is!!"
+                    
+                    #n "Press spacebar to distract her and avoid a dramatic overreaction!"
+                    #n "Oh fug here come the waterworks."
+                    #n "Abort abort abort"
+                    
+                    #player "I mean "
+                    
+                "That's ONE redeeming quality":
+                    player "I guess that's ONE redeeming aspect of their existence."
+                    player "But hey class is over. You wanna get a coffee?"
+                    
+                    claire @ say "Hell yeah!!"
             
-            player "Uhh..."
-            
-            n "Press spacebar to distract her and avoid a dramatic overreaction!"
-            
-            player "Hey do you wanna get coffee?"
-            
-            claire @ say "Hell yeah!!"
         "It's nice when you speak it":
             $ clairepoints =+ 1
             
@@ -2238,9 +2261,10 @@ label chapter3AfterWeekend:
             
             n "You've got nothing better to do."
             
-            player "Why not."
+            player "Yeah, why not?"
             
             claire @ say "Yay~"
+            
         "No strong feelings":
             player "I have no strong feelings towards it."
             player "It's just an elective credit I have to get out of the way."
@@ -2263,7 +2287,7 @@ label chapter3AfterWeekend:
             
             claire @ say "Right now?"
             
-            player "Uh huh."
+            player "Uh yeah?"
             
             claire @ say "Ohmygosh I have to tell Ava about this!"
             
