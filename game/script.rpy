@@ -3191,6 +3191,7 @@ default gunnerRaid = False
 default avaPantsu = False
 default clairePantsu = False
 default gnugift = False
+default money = 0
 default moneySpent = 0
 default gaveCinRoll = False
 default spicyVictory = False

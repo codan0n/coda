@@ -1874,8 +1874,8 @@ label chapter3AfterWeekend:
     
     player "Ava just invited me to come with you two."
     
-    gunner @ say "Whaaaa?!"
-    gunner @ say "Dude say no!"
+    gunner @ say "What the fuck?"
+    gunner @ say "Dude, say no!!"
     
     player "Why? It sounds like a fun time."
     
@@ -1883,13 +1883,15 @@ label chapter3AfterWeekend:
     
     n "Gunner slips a $100 bill onto your desk."
     
-    
-    ###change to a $200 bill. they're rare so they cost $500 but gunner exchanges for them just to flex
-    ###gunner forgot his wallet and this is all he had on him
+    default gunnerBribeAccepted = False
     
     menu:
         "Accept his bribe":
             $ avaPoints =- 1
+            
+            $ gunnerBribeAccepted = True
+            
+            $ money = money + 100
             
             player "Fine, I didn't wanna go anyway."
             player "I'll text her and say I already made plans with someone."
@@ -1954,6 +1956,10 @@ label chapter3AfterWeekend:
         "Make it $200":
             $ avaPoints =- 2
             $ badEnd =+ 1
+            
+            $ gunnerBribeAccepted = True
+            
+            $ money = money + 1100
             
             n "You stash the money into your pocket, but you can definitely get more from him."
             
@@ -2305,11 +2311,161 @@ label chapter3AfterWeekend:
     
     scene bg cafe with fade
     
+    ava @ say "Hey! Over here!"
     
+    n "You see Ava's wing waving you over once you step foot into the cafe."
+    n "She's sitting at a table with Gunner."
+    
+    if gunnerBribeAccepted == False:
+        n "He's sipping on an iced latte and staring you down."
+    
+    claire @ say "Heyyyy!!!"
+    claire @ say "How's it goin?"
+    
+    ava @ say "We're just planning our trip for this weekend! Trying to find the best spots to shoot and whatnot."
+    
+    gunner @ say "We're gonna be hiking alllll over the place! Might even camp out there overnight."
+    
+    if gunnerBribeAccepted == False:
+        player "Oh? Sounds like we have a long trip ahead of us."
+        
+        claire @ say "\"We?\" \"Us?\""
+
+        ava @ say "Yeah! Me, Gunner and [name] are going out to the mountains to take photos of the autumn leaves!"
+        
+        claire @ say "Gee Ava, why do you get *two* cute boys to go out with you?"
+        
+        ava @ say "I-it's not like a date! We're just going as friends!"
+        
+        claire @ say "Suuuure~ In that case, can I come along?"
+        
+        ava @ say "Err..."
+        
+        gunner @ say "Sorry, we already made our reservations."
+        
+        ava @ say "Right! Our reservations..."
+        
+        claire @ say "I see how it is. You just wanna hog all the boys to yourself!"
+        claire @ say "No room for this big bunny in your grand scheme."
+        claire @ say "Well fine! I'll just have my own weekend adventure with a boy or two!"
+        
+        n "Claire storms out of the cafe, leaving you speechless."
+        
+        gunner @ say "Damn, what a drama queen."
+        
+        ava @ say "Ugh she gets like this."
+        ava @ say "I feel kinda bad though. I didn't mean to exclude her but that doesn't mean we have to do *everything* together all the time, does it?"
+        
+        menu:
+            "You *are* her best friend":
+                player "I mean you kinda are her best friend."
+                player "She probably thought you were getting tired of her."
+                
+                ava @ say "I guess I can see how she'd react that way."
+                ava @ say "I'll talk to her after she's calmed down and see if I can make it up to her."
+                
+                gunner @ say "Whatever it takes, as long as she doesn't ruin our outting this weekend."
+                
+                ava @ say "You're the one got us into this with your 'reservations' lie!"
+                
+                gunner @ say "Hey, you didn't want her to come with us either."
+                
+                ava @ say "I guess..."
+                
+                player "It's alright if you don't wanna hang out with Claire all the time. She can be kinda overbearing."
+                
+                ava @ say "It's not that!"
+                ava @ say "She'd understand if this was a date, but it's not so it looks like I'm pushing her away."
+                ava @ say "She told me people are always pushing her out of their lives, but we actually get along. Now I feel like I've let her down..."
+                
+                gunner @ say "Man, girl friendship is complicated."
+                
+                player "I mean, how would you feel if I was gonna spend the whole weekend with Ava and Claire and we purposely didn't invite you?"
+                
+                gunner @ say "I guess I'd be a little jelly."
+                gunner @ say "Wait... does that mean Claire has a crush on *me*???"
+                
+                ava @ say "Definitely not on *you*!"
+                
+                gunner @ say "Oh! So she's into..."
+                
+                n "Gunner raises a brow and looks in your direction."
+                
+                ava @ say "It's kinda obvious, isn't it? But I don't think he even knows."
+                
+                player "Knows what?"
+                player "Anyway, that's not the point I was trying to make."
+                player "I just meant that we probably could have done a double date thing but like as friends."
+                
+                ava @ say "Yeah..."
+                
+                gunner @ say "Well too late now. Might as well enjoy ourselves. Claire can come next time I guess."
+                
+                
+            "She'll get over it":
+                player "She's overreacting. She'll get over it."
+                
+                ava @ say "I sure hope so..."
+                
+                gunner @ say "Yeah she was acting a little crazy there. What's with her today?"
+                
+                player "I guess she just doesn't like feeling left out?"
+                
+                ava @ say "Who does?"
+                ava @ say "She told me people are always pushing her out of their lives, but we actually get along. Now I feel like I've let her down."
+                ava @ say "Maybe we should have invited her after all..."
+                
+                gunner @ say "Well it's too late for that now."
+                
+                player "Maybe she can come next time?"
+                
+                gunner @ say "Already have one guy intruding on my time with Ava, what's one more?"
+                
+                player "That's the spirit!"
+                
+                ava @ say "H-hey, I can choose to spend my time with whoever I want!"
+                
+                gunner @ say "And you still chose me~"
+                
+                player "And me!"
+                
+                ###annoyed sprite
+                gunner @ say "How sweet."
+                
+            "Change your plans":
+                player "Hey you know what? I think I'll go out with Claire this weekend. Wouldn't want her to feel lonely."
+                
+                gunner @ say "Really? That would be so based."
+                
+                ava @ say "Are you sure? "
+                
+    
+    gunner @ say "Anyway, where were we? The trail up to that mountain looked tough but the view should be killer."
+    
+    n "You look down at Gunner's phone showing the map of the area you'll be in and help with the trip planning."
+    
+    else:
+        #asdf
+    
+        
+        #ava @ say "And I need to pad out my landscape portfolio."
+        
+    
+    
+    #meet up with ava and gunner at the cafe and discuss plans. gunner is bitter if you're tagging along
+    
+    #brief chat with mishka about your convoluted weekend plans
             
     
      #ask ava about her trip with gunner. claire tries to get in but ava denies her. Claire gets upset and plans her own hiking trip with rori.(claire "I see, you wanna hog alllll the boys to yourself!") 
+     
+     #ava asks what you're doing with rori
+     #you should actually see if rori's even free this weekend
+     #text him
+     #if you're free, you mention that you're hanging with rori this weekend (you even text him) but claire redirects your plans to spend time with you both
+    #ava "wait is this what you're doing with Rori"
     
+    #ends with ava running to her club meet/next class
     
     
         
