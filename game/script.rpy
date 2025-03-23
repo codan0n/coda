@@ -3179,6 +3179,7 @@ default mishkaMall = False
 default mishkaMallSpecialActive = False
 default mishkaMallSpecialPlayed = False
 default calledClaireFat = 0
+default chosenHobby = "none"
 default gaveUmbrella = False
 default historyCheated = False
 default readArcoonianBook = False

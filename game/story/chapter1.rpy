@@ -3573,6 +3573,8 @@ label avaClaireGunnerLunch:
     menu:
         n "{cps=0}Quickly, you have to come up with a cooler hobby.{/cps}"
         "Climbing":
+            $ chosenHobby = "climbing"
+            
             player "I like to climb stuff."
             
             show ava concerned
@@ -3613,6 +3615,9 @@ label avaClaireGunnerLunch:
         "Driving":
             ###you end up watching initial D and playing racing sims
             #later on someone has to drive. "does anyone know how to drive manual?"
+            
+            $ chosenHobby = "driving"
+            
             player "..."
             player "......"
             player "........."
@@ -3668,6 +3673,8 @@ label avaClaireGunnerLunch:
             
         "Bushcraft":
             ###if you choose this option, you start looking into that hobby and can build a fire for claire later on
+            
+            $ chosenHobby = "bushcraft"
             
             n "What's a word nobody actually uses? Maybe you can confuse them to avoid having to talk about it."
             

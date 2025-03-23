@@ -2211,6 +2211,8 @@ label chapter3AfterWeekend:
     claire @ say "Don't you just love French, [name]?"
     claire @ say "They say it's the language of love~"
     
+    default dissedClaire = False
+    
     menu:
         "I hate it":
             player "I hate the French with every fiber of my being."
@@ -2220,6 +2222,7 @@ label chapter3AfterWeekend:
             menu:
                 "Now I hate them even more":
                     $ clairepoints =- 1
+                    $ dissedClaire = True
                     
                     player "Yeah now I hate them even more."
             
@@ -2400,6 +2403,9 @@ label chapter3AfterWeekend:
                 ava @ say "Yeah..."
                 
                 gunner @ say "Well too late now. Might as well enjoy ourselves. Claire can come next time I guess."
+                gunner @ say "Anyway, where were we? The trail up to that mountain looked tough but the view should be killer."
+    
+                n "You look down at Gunner's phone showing the map of the area you'll be in and help with the trip planning."
                 
                 
             "She'll get over it":
@@ -2431,18 +2437,354 @@ label chapter3AfterWeekend:
                 
                 ###annoyed sprite
                 gunner @ say "How sweet."
+                gunner @ say "Anyway, where were we? The trail up to that mountain looked tough but the view should be killer."
+    
+                n "You look down at Gunner's phone showing the map of the area you'll be in and help with the trip planning."
                 
             "Change your plans":
+                $ avaPoints =- 2
+                $ clairePoints =+ 2
+                
                 player "Hey you know what? I think I'll go out with Claire this weekend. Wouldn't want her to feel lonely."
                 
                 gunner @ say "Really? That would be so based."
                 
-                ava @ say "Are you sure? "
+                ava @ say "Are you sure?"
+                
+                player "Yeah it's fine. You'll get Gunner to keep you company and I'll get a big fluffy bunny with H cup tits to enjoy."
+                
+                ava @ say "I guess that works out for everyone?"
+                ava @ say "They're only G cup by the way."
+                
+                gunner @ say "Bigger isn't always better."
+                
+                ava @ say "That's what I'm saying!"
+                
+                player "Sorry to cancel our plans last minute like this."
+                
+                ava @ say "It's alright! Big bunnies need love too!"
+                
+                gunner @ say "Don't worry, Ava and I will have tons of fun alone in the woods~"
+                gunner @ say "Did I sound like a serial killer just then?"
+                
+                ava @ say "You did, but that's kinda hot."
+                
+                gunner @ say "Meow~"
+                
+                ava @ say "Hehehe *chirp~*"
+                
+                player "Okay yeah I'm just gonna go find Claire then while you do your predator/prey LARP."
+                player "Have fun on your trip!"
+                
+                gunner @ say "Oh, we will~"
+                
+                ava @ say "See ya!"
+                
+                scene bg campus with fade
+                
+                n "You find Claire sulking in the shade of a tree."
+                n "Orange leaves blow in the wind and get caught in her hair."
+                n "She wipes them away as you approach."
+                
+                claire @ say "[name]...? What are you doing here?"
+                
+                player "You mind if I sit next to you?"
+                
+                claire @ say "You actually want to sit next to me?"
+                
+                player "Yeah? Why wouldn't I?"
+                
+                if calledClaireFat > 0:
+                    claire @ say "I thought I wasn't your type."
+                    
+                    player "Everyone has their preferences. That doesn't mean we can't be friends."
+                
+                if dissedClaire == True:
+                    claire @ say "Well you said you didn't like having French with me."
+                    
+                    player "Okay that was kinda mean. I said it without thinking."
+                    player "I guess I just don't share your enthusiasm for that class."
+                    player "But I'd probably die of boredom if you weren't in it with me."
+                
+                player "You're my friend, I can't just let you be sulky like this."
+                
+                claire @ say "I thought you didn't care at all..."
+                
+                player "Just cause I don't wanna do everything together doesn't mean I don't enjoy spending time with you."
+                
+                claire @ say "Aw, you're just sayin' that."
+                
+                player "No really. I cancelled my plans with Ava cause I'd rather chill with you this weekend."
+                
+                claire @ say "Wha-"
+                claire @ say "Y-you didn't have to do that!"
+                
+                player "I know. I just wanted to."
+                player "Are you still free?"
+                
+                claire @ say "Um um...!"
+                claire @ say "Yes I'm free! But okay so I texted Rori already inviting him to hang out. I hope you don't mind, but I can't just cancel on him!"
+                
+                player "That's alright, as long as this isn't some triple date thing."
+                
+                claire @ say "No no it's not like that!"
+                claire @ say "I just invited him to go camping with me!"
+                claire @ say "It's perfectly normal to go camping with your gay friend, okay?!"
+                
+                if clairePoints > 3:
+                    player "I guess that means I won't have any competition."
+                
+                    claire @ say "Huh?"
+                    
+                    player "Nothing."
+                    
+                player "Yeah I don't mind Rori tagging along."
+                player "I never thought he'd be the camping type though."
+                
+                claire @ say "Oh he's not. He was reeaallly reluctant to agree but I have my ways to persuade people~"
+                
+                player "Damn, your womanly charm works on homos?"
+                
+                claire @ say "It's really easy to bully people smaller than you heh"
+                
+                player "So everyone in your case?"
+                
+                claire @ say "Yeah~"
+                claire @ say "Don't worry, I won't bully you too much."
+                claire @ say "Unless you want me to~"
+                
+                default claireBullyLevel = 0
+                
+                menu:
+                    "Hahaha nooooo pls don't bully me x3":
+                        $ claireBullyLevel = 2
+                        
+                        player "Hahaha noooo please don't bully little ol' me!"
+                        
+                        claire @ say "Ksksksks don't make it so easy and I won't~"
+                        claire @ say "Or maybe I will anyway... dweeb!"
+                        
+                        player "Hnnnng"
+                        
+                        n "You swear, every day this rabbit finds a new way to push your buttons in all the right ways."
+                        
+                        menu:
+                            "This is fine.":
+                                n "That's a fair level of bullying. No need to push further into degenerate territory."
+                                
+                                claire @ say "Guess I'll be spending the weekend with two dorks!"
+                                
+                                player "Heh yeah..."
+                                
+                                claire @ say "Don't worry, we'll all have fun~"
+                                claire @ say "I'll figure out where we're going and some stuff to do while we're out in the wild!"
+                                claire @ say "Thanks for comin' over here to cheer me up."
+                                claire @ say "I guess you're good for something after all, humie~"
+                                
+                                player "A-anytime."
+                                
+                                claire @ say "Ksksksks good boy~"
+                                
+                                n "You swear you're about to faint."
+                                
+                                claire @ say "See you around~ It's gonna be a lot more fun hanging out knowing I can bully you a little~"
+                                
+                                player "*Gulp*"
+                                player "Y-yeah for sure."
+                                
+                                n "What have you gotten yourself into?"
+                                
+                            "You can bully harder than that":
+                                $ claireBullyLevel = 3
+                                
+                                n "May the lord have mercy on you."
+                                
+                                player "Sounded like you were holding back."
+                                
+                                claire @ say "I was. You want more?"
+                                
+                                player "Yes please."
+                                
+                                claire @ say "Gimme your wallet."
+                                
+                                n "She said that with no hesitation."
+                                
+                                player "Huh? That wasn't what I was exp-"
+                                
+                                claire @ say "Shut up and gimme your wallet."
+                                
+                                player "B-but"
+                                
+                                claire @ say "Hurry up! I ain't got all day."
+                                
+                                player "O-okay..."
+                                
+                                n "You clumsily fish your wallet out of your pocket and shakily hand it to Claire."
+                                n "She rifles through your bills and tosses your cards in every direction."
+                                
+                                player "Hey! Stop that!"
+                                
+                                n "You reach over and collect your ID and some credit cards."
+                                
+                                claire @ say "Wooooow that's all you have? There's barely enough in here to pay for my dinner!"
+                                claire @ say "And carrying change? What are you gonna do with a nickel? I didn't know you were *that* poor! Ksksksks!"
+                                
+                                player "You never know when you'll need an extra 5 cents to cover something!"
+                                
+                                claire @ say "You can keep the coins but I'll be taking this~"
+                                
+                                n "She grabs a couple of twenties and stuffs them into her bra."
+                                
+                                $ money =- 60
+                                
+                                player "What the hell! Give that back!"
+                                
+                                claire @ say "Nah, I don't think I will~"
+                                claire @ say "Thanks for the snack money, dweeb~"
+                                
+                                n "Claire plants a smooch into her paw then pushes the same paw to your forehead, pushing you to the ground."
+                                n "Before you can retaliate (admit it, you wouldn't do anything), she gets up and walks off."
+                                n "At least you get a great view of her rear for your troubles."
+                                
+                                claire @ say "See you around, loser~"
+                                
+                                n "You lie there on the ground wondering what just happened."
+                                n "Well, you got what you asked for."
+                                n "This is a dangerous game, but perhaps you like to live dangerously."
+                                n "And you've never been so hard in your life."
+                                
+                    "Maybe a little bullying is fine":
+                        $ claireBullyLevel = 1
+                        
+                        player "You can bully a little. As long as it's sexy."
+                        
+                        claire @ say "Sexy is what I do best~"
+                        
+                        player "Haha please don't bully me with your fat boobs, that would be the worst haha"
+                        
+                        claire @ say "I'm gonna smother you with 'em~"
+                        
+                        player "Haha nooo anything but that, please don't-"
+                        
+                        n "With lightning speed, Claire is on top of you, hugging you tight."
+                        n "Too tight."
+                        n "You feel the air being squeezed out of your lungs but big bunny boobs are covering your face so you don't really mind."
+                        n "Easily top 5 ways to die."
+                        n "Your vision starts to fade as oxygen deprivation sets in."
+                        
+                        scene bg black with dissolve
+                        
+                        n "That's better."
+                        
+                        claire @ say "Oh my gosh are you alright?"
+                        
+                        scene bg campus with dissolve
+                        
+                        n "Noooo, death's sweet embrace! Come back! You will never have a chance to die in such a based way ever again!"
+                        
+                        claire @ say "If you don't start breathing in 5 seconds Imma start giving you mouth-to-mouth resuscitation."
+                        
+                        player "asdf"
+                        
+                        claire @ say "Yay you're alive!"
+                        claire @ say "Maybe a bit brain damaged but living nonetheless!"
+                        
+                        player "I think the brain damage was always there."
+                        
+                        claire @ say "Sorry, I didn't mean to literally almost kill you with my boobs."
+                        
+                        player "It's alright, I was asking for it."
+                        
+                        claire @ say "Ksksksks you wouldn't be the first~"
+                        
+                        n "She hops up to her feet, towering over you."
+                        
+                        claire @ say "I'll figure out where we're going and some stuff to do while we're out in the wild!"
+                        
+                        player "Sounds good. Can't wait!"
+                        
+                        claire @ say "Thanks for comin' over here to cheer me up."
+                        claire @ say "I guess you're good for something after all, humie~"
+                        claire @ say "See you around~"
+                        claire @ say "It's gonna be a lot more fun hanging out knowing I can bully you a little~"
+                                
+                        player "*Gulp*"
+                        player "Y-yeah for sure."
+                        
+                        n "What have you gotten yourself into?"
+                        
+                    "Seriously, no bullying":
+                        $ claireBullyLevel = 0
+                        
+                        player "I was bullied enough in middle school, I don't need it here."
+                        
+                        claire @ say "Okay! No bullying the dear sweet precious [name], just love and praise!"
+                        
+                        player "It's all my fragile ego can take."
+                        
+                        claire @ say "No worries, I got you covered~"
+                        
+                        n "Claire pulls you into a warm embrace. This is no ordinary hug, somehow you can feel the genuine affection and care through her soft fur pressing against you."
+                        n "Your breathing slows and a sudden calmness comes over you as you wrap your arm around her, just enjoying the moment while a gentle breeze carries the autumn leaves around you."
+                        n "You had no idea how much you needed this."
+                        n "Eventually Claire eases up, still loosely holding onto you."
+                        
+                        claire @ say "How was that?"
+                        
+                        player "Hfdsafalkds;asd"
+                        player "Gooood"
+                        
+                        claire @ say "Good~"
+                        claire @ say "Anytime you need some bunny love, just ask and you shall receive~"
+                        
+                        player "Noted."
+                        
+                        claire @ say "Thanks for comin' over here to cheer me up~"
+                        
+                        player "No problem. It's what friends do, right?"
+                        
+                        if clairePoints > 4:
+                            claire @ say "You sure we're just gonna be friends?"
+                            
+                            menu:
+                                "What else would we be?":
+                                    player "What else would we be? Enemies?"
+                                    
+                                    claire @ say "Enemies with benefits maybe?"
+                                    
+                                    player "...What kind of benefits?"
+                                    
+                                    n "Claire leans in close with a devious grin."
+                                    
+                                    claire @ say "Sexy benefits~"
+                                    
+                                    player "W-we'll work up to it maybe."
+                            
+                                "You never know":
+                                    $ clairePoints =+ 1
+                                    
+                                    player "You never know. Wouldn't it be really funny if we ended up dating?"
+                                    
+                                    claire @ say "Yes, that would be hilarious!"
+                                    claire @ say "Please Frith let this happen, it would be so fucking funny!"
+                                    
+                                    player "Hahaha I know right?"
+                        
+                        
+                        claire @ say "I'll figure out where we're going and some stuff to do while we're out in the wild!"
+                        
+                        player "Sounds good. Can't wait!"
+                        
+                        
+                        
+                        
+                
+                        
+                    
+                
                 
     
-    gunner @ say "Anyway, where were we? The trail up to that mountain looked tough but the view should be killer."
     
-    n "You look down at Gunner's phone showing the map of the area you'll be in and help with the trip planning."
     
     else:
         #asdf
