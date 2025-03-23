@@ -1884,10 +1884,13 @@ label chapter3AfterWeekend:
     n "Gunner slips a $100 bill onto your desk."
     
     default gunnerBribeAccepted = False
+    default claireHike = False
+    default avaHike = False
     
     menu:
         "Accept his bribe":
             $ avaPoints =- 1
+            $ claireHike = True
             
             $ gunnerBribeAccepted = True
             
@@ -1917,6 +1920,8 @@ label chapter3AfterWeekend:
             gunner @ say "Thanks bro, you're a livesaver :3c"
         
         "Decline":
+            $ avaHike = True
+            
             player "Hmm. No thanks, a hundred dollars isn't worth much compared to a date with Ava."
         
             gunner @ say "Name your price then."
@@ -1956,6 +1961,7 @@ label chapter3AfterWeekend:
         "Make it $200":
             $ avaPoints =- 2
             $ badEnd =+ 1
+            $ claireHike = True
             
             $ gunnerBribeAccepted = True
             
@@ -2444,6 +2450,8 @@ label chapter3AfterWeekend:
             "Change your plans":
                 $ avaPoints =- 2
                 $ clairePoints =+ 2
+                $ avaHike = False
+                $ claireHike = True
                 
                 player "Hey you know what? I think I'll go out with Claire this weekend. Wouldn't want her to feel lonely."
                 
@@ -2759,55 +2767,1767 @@ label chapter3AfterWeekend:
                                     claire @ say "Sexy benefits~"
                                     
                                     player "W-we'll work up to it maybe."
+                                    
+                                    claire @ say "Good to have a backup plan~"
                             
                                 "You never know":
                                     $ clairePoints =+ 1
                                     
                                     player "You never know. Wouldn't it be really funny if we ended up dating?"
                                     
-                                    claire @ say "Yes, that would be hilarious!"
                                     claire @ say "Please Frith let this happen, it would be so fucking funny!"
                                     
-                                    player "Hahaha I know right?"
+                                    player "Hahaha I know, right?"
+                                    
+                                    n "Now that you think of it, maybe Claire *is* girlfriend material."
+                                    n "But would she really be down for that?"
+                                    n "It feels too soon to ask her out."
                         
+                        else:
+                            n "Claire's ear twitches."
+                            
+                            claire @ say "Haha yeah, friends, that's what we are. Just good friends."
+                            claire @ say "...For now!"
+                            
+                            player "What's that supposed to mean?"
+                            
+                            claire @ say "Ksksksks you'll find out~"
+                        
+                        n "Claire stands up and stretches."
                         
                         claire @ say "I'll figure out where we're going and some stuff to do while we're out in the wild!"
                         
                         player "Sounds good. Can't wait!"
                         
-                        
-                        
-                        
-                
-                        
-                    
-                
-                
-    
-    
     
     else:
-        #asdf
-    
+        player "Hope you two have fun!"
+        
+        claire @ say "Yeah, a hiking trip sounds great with this weather!"
+        
+        gunner @ say "Sorry but this is just a me and Ava thing."
+        
+        claire @ say "Ooh a date????????????"
+        
+        ava @ say "Haha nooo not a date! I invited [name] to come along too but he already has plans."
+        
+        claire @ say "Hey a date can include two cute boys! You're cute enough to pull 'em both!"
+        
+        ava @ say "Oh shush you~"
+        ava @ say "Speaking of which, what are you doing with Rori this weekend, [name]?"
+        
+        n "What *are* you doing with Rori this weekend?"
+        n "You already forgot about your lie from earlier, but you guess this would be an ideal time to ask if Rori wants to hang out."
+        
+        player "We're probably just gonna play video games at his dorm or something."
+        
+        gunner @ say "Lame."
+        
+        claire @ say "Yeah, wouldn't you rather do something more adventurous?"
+        
+        player "I wouldn't mind, but I dunno about Rori."
+        
+        claire @ say "Leave that to me! I'll convince him to come out adventuring with us!"
+        
+        player "\"Us?\" Now you're tagging along?"
+        
+        claire @ say "What else am I supposed to do when my best roommate is busy gettin' busy with a catboy?"
+        
+        ava @ say "Hey! We're just hiking and taking photos!"
+        
+        claire @ say "Suuuure~ Ksksksksks!"
+        claire @ say "Well, [name]? You down to go on an adventure with me and Rori this weekend?"
+        
+        player "What? You just stole my hangout buddy and now you're inviting me to come with you?"
+        
+        claire @ say "...Yes."
+        
+        player "Fine. Where are we even going?"
+        
+        claire @ say "Ksksksks it's a secret!"
+        
+        gunner @ say "Sounds like a date!"
+        
+        ava @ say "Wait, who's dating who?"
+        
+        claire @ say "Well it can't be me and Rori."
+        
+        ava @ say "Rori and [name] then?"
+        
+        gunner @ say "Or [name] and Claire."
+        
+        claire @ say "Or both!"
+        
+        gunner @ say "Ick."
+        
+        player "I'm confident in saying this is certainly not a date."
+        
+        claire @ say "That works for me!"
+        
+        player "Good, now that that's settled, can we get some drinks?"
+        
+        claire @ say "Oh yeah! That's what we came here for, isn't it?"
+        
+        n "You and Claire order some drinks and chat with Ava and Gunner for a bit."
         
         #ava @ say "And I need to pad out my landscape portfolio."
+        #ends with ava running to her club meet/next class
+        
+        scene bg black with dissolve
+        
+        n "The next few days go by uneventfully."
+        
+        scene bg codadorm with dissolve
+    
+        if claireHike == True:
+            n "Today's the day you're supposed to... do something with Claire and Rori."
+            
+            
+            #get text from claire asking if you're ready
+            #not sure if ready but go anyway
+            
+            
+        
+        if avaHike == True:
+            n "Today's the day you're supposed to go hiking with Ava and Gunner."
+            n "They decided it's going to be an overnight trip so you dumped your notebooks and packed all kinds of gear into your school bag."
+        
         
     
     
-    #meet up with ava and gunner at the cafe and discuss plans. gunner is bitter if you're tagging along
-    
-    #brief chat with mishka about your convoluted weekend plans
-            
-    
-     #ask ava about her trip with gunner. claire tries to get in but ava denies her. Claire gets upset and plans her own hiking trip with rori.(claire "I see, you wanna hog alllll the boys to yourself!") 
      
-     #ava asks what you're doing with rori
-     #you should actually see if rori's even free this weekend
-     #text him
-     #if you're free, you mention that you're hanging with rori this weekend (you even text him) but claire redirects your plans to spend time with you both
-    #ava "wait is this what you're doing with Rori"
-    
-    #ends with ava running to her club meet/next class
     
     
+    
+    
+    
+    
+    
+    
+    claire @ say "...and that one that just flew by is a house sparrow! They originated from Europe and are kind of an invasive species but their population has been on the decline for the past fifty years."
+        
+        n "Claire had decided to take Rori deep into the woods to teach him about the outdoors and you got caught up in it."
+        n "She's been banging out facts about random plants and animals the whole way."
+        n "She's also been grabbing dry grass and small twigs and putting them in her pocket."
+        
+        rori @ say "Can we take a break? My hooves hurt from all this walking."
+        
+        player "Yeah and it's getting dark. Shouldn't we turn back?"
+        
+        claire @ say "Hmm... Alright, fine. But first I wanna show you something!"
+        
+        n "You and Rori sit down on a nearby fallen log while the bunny drags her boot over the ground repeatedly, kicking away leaves and debris until there's nothing but dirt."
+        
+        claire @ say "Have either of you made a fire before?"
+        
+        n "You and Rori shake your heads."
+        
+        show claire outdoors heyeah
+        
+        claire @ say "Well y'all're about to learn!"
+        
+        show claire outdoors neutral
+        
+        claire @ say "I like to start by doing this so the surrounding leaves won't catch on fire and potentially spread beyond a little area."
+        #claire @ say "Also if the ground is damp you can sometimes get a dry patch of ground to work with."
+        #claire @ say "Alternatively you can make a bed of sticks or logs to start your fire on top of!"
+        
+        n "You look over to Rori who oddly seems to be paying close attention to everything Claire is saying."
+        
+        claire @ say "We'll need to find some dry, dead wood to burn. If it's just lying on the ground it'll probably be damp or soaked, so try and find stuff that's propped up on top of something."
+        
+        n "Claire gestures for you to follow her off the trail and into the thicket."
+        
+        show claire outdoors surprised
+        
+        claire @ say "Ah here we go! A nice cedar branch! The oils in this will burn easily!"
+        
+        show claire outdoors neutral
+        
+        n "You and Rori look around for suitable branches."
+        n "The ram grabs a random stick hanging off a tree."
+        
+        rori @ say "What about this one?"
+        
+        claire @ say "Not so ideal. You can see it still has green leaves on it so it probably was alive recently and just fell off the tree."
+        claire @ say "Try breaking it in half."
+        
+        n "Rori stuggles to bend it but it keeps bouncing back to its original shape."
+        n "He hands it to you but you can't get it to break even when using your knee."
+        
+        claire @ say "A pretty good indicator of how well it will burn is how easy it is to break."
+        claire @ say "Old dry sticks break easy but greener stuff is full of water and is kinda elastic like that one."
+        
+        n "Claire helps you find suitable sticks until you've got a nicely sized bundle, which you deposit at the fire pit she dug."
+        
+        claire @ say "Great! We've got a good mix of branches and sticks of various sizes! Now comes the hard part!"
+        
+        n "Rori sighs, winded from collecting all that wood."
+        
+        rori @ say "You mean that was the *easy* part?"
+        
+        claire @ say "Yup! By far the hardest part is starting a fire and keeping it alive!"
+        claire @ say "That's why I've been collecting this along the way!"
+        
+        n "She sticks her paws into her pockets and pulls out the stuff she'd been gathering."
+        
+        claire @ say "When you start a fire you have to build your way up from the easiest to burn stuff to the hardest."
+        claire @ say "Dead brown grasses are common everywhere all year round and make great kindling!"
+        
+        n "You pick up a branch with a thick bundle of brown pine needles on the end."
+        
+        player "What about this? Will this work?"
+        
+        claire @ say "Nope! Leaves, including pine needles, don't make for great fire starters. They just don't burn easily or long enough."
+        claire @ say "Try that thing right next to you though!"
+        
+        n "She points to a tall shoot sprouting from the ground. It's brown and has some kind of soft cotton-y seeds on the end."
+        
+        claire @ say "Cattail seeds will ignite if you just look at them wrong! Great mix of fiberous material but also being airy for the fire to breathe."
+        
+        n "Rori picks a similarly fluffy plant and begins to chew on it."
+        
+        show claire outdoors surprised
+        
+        claire @ say "Hey! Don't eat our tinder!"
+        
+        show rori anxious
+        
+        rori @ say "Sorry! I'm just hungry from all this walking!"
+        
+        show claire outdoors neutral
+        
+        claire @ say "Would you rather be hungry or cold?"
+        
+        rori @ say "...Hungry I guess."
+        
+        show rori neutral
+        
+        claire @ say "Having enough material to start the fire is crucial!"
+        claire @ say "You always need at least twice as much tinder and kindling as you think you need so go ahead and look for more dry straw-like stuff and the smallest twigs you can find."
+        
+        n "As tiring as this is, you have to admit it's kinda fun. This sort of thing is in your blood after all."
+        n "Your caveman instincts call to you to build fire and make sharp stick to kill mammoths and to reject the enslavement of the modern world."
+        n "Rori seems to be getting into it too. Maybe because of all that time behind a computer screen, this stuff seems novel and interesting to the both of you."
+        n "You both return to Claire with big handfuls of grass, seeds, reeds and sticks."
+        
+        claire @ say "Perfect! Let's just arrange these sticks by size here..." 
+        
+        n "Rori quickly sorts the sticks in neat bundles from smallest to largest."
+        
+        claire @ say "And now we just grab our grass, mix in a few of our tiniest twigs and shape it into a bird's nest like so."
+        
+        n "The bunny bends the material into a tight circle."
+        
+        claire @ say "And now we're ready to go!"
+        claire @ say "Rori, would you do the honors? I got a lighter in one of my pockets."
+        
+        show rori anxious
+        
+        n "Rori blushes like mad as he digs around Claire's pockets trying to find her lighter while she holds the bird's nest."
+        n "You're not sure if you should be jealous."
+        
+        show rori neutral
+        
+        rori @ say "Found it! Finally..."
+        
+        claire @ say "Nice! Go ahead and hold it under the nest and light it up!"
+        
+        n "The fluffy bundle catches flame within a few seconds. Claire holds onto it, tilting it so the rising flames encompass the whole thing before setting it down on top of some sticks."
+        
+        claire @ say "And now we just gradually stack sticks on top!"
+        claire @ say "Do the smallest ones first and only go up in size once the previous ones catch on fire."
+        
+        n "Claire fans the flame with her paw while you pile sticks onto it."
+        n "The tinder burns quickly, and after a few seconds it turns to ash, leaving mostly only embers left."
+        
+        player "Damn, it went out so fast..."
+        
+        rori @ say "Yeah, I thought we had a good little flame going on there."
+        
+        claire @ say "Not to worry! Check this out~"
+        
+        show claire outdoors horny
+        
+        n "Claire gets on all fours and sticks her face close to the smoldering remains. She takes a deep breath and blows on it, making it glow red hot in the dwindling sunlight."
+        n "...Does she have to make that face?"
+        n "A few more breaths and the remaining kindling reignites."
+        
+        show claire outdoors neutral
+        
+        claire @ say "You kinda have to baby the fire until it can sustain itself."
+        claire @ say "Now that the smaller twigs are hot they should light up when the kindling flames surround them."
+        
+        n "You and Rori watch in awe as what she said comes true. She starts to arrange slightly larger sticks around the little flame and in time those burn too."
+        n "Soon enough you have a fire reaching up almost as tall as you are just from gradually piling on more sticks, being careful not to smother the flame."
+        
+        claire @ say "See? It's not so hard!"
+        
+        rori @ say "Yeah, that was actually pretty cool! I wanna build more fires now!"
+        
+        n "Claire roughly pulls the ram into a side hug."
+        
+        show claire with move:
+            xpos 310
+            
+        pause .1
+        
+        show claire:
+            xzoom 1
+        
+        rori @ say "Ack!"
+        
+        claire @ say "That's the spirit! You two can come camping with me and we'll make all the fires we want ksksksks!"
+        
+        n "Thankfully you managed not to be victim to Claire's bone breaking grasp."
+        n "But the thought of camping with your friends does sound nice. Could invite Gunner and Ava, maybe even Mishka."
+        n "The three of you continue to feed the fire while sitting and telling stories. Claire even brought snacks."
+        
+        stop music fadeout 1.3
+        
+        n "Suddenly you hear a rustling in the woods."
+        
+        show claire outdoors surprised
+        
+        n "Both Claire's and Rori's ears perk up but in the darkness you can't see a thing."
+        n "The sound of frantic footsteps crunching leaves and snapping twigs gets closer until two familiar faces show up in the light of the fire."
+        
+        
+        show ava unsure at center:
+            xpos -350
+            xzoom -1
+        show gunner neutral at center:
+            xpos -600
+            xzoom -1
+        with dissolve
+        
+        ava @ say "Aaaah! Claire?! What are you doing here??"
+        
+        claire @ say "I could ask you the same thing!"
+        
+        show claire outdoors neutral
+        
+        gunner @ say "Heyyy Rori and [name]! The gang's all here!"
+        
+        rori @ say "Why were you two running through the woods?"
+        
+        gunner @ say "We're being hunted by a skinwalker, man!"
+        
+        n "Rori rolls his eyes and sighs."
+        
+        rori @ say "Ava, what's the real reason?"
+        
+        show ava seriously
+        
+        ava @ say "Well I don't think it was a skinwalker but maybe more like a wendigo or something."
+        
+        show claire outdoors heyeah
+        
+        claire @ say "They probably got caught having sex in the woods by a creepy old redneck ksksksksksk!"
+        
+        show ava pose angry
+        
+        ava @ say "Uh, no!"
+        
+        show ava pose concerned
+        show claire outdoors surprised
+        
+        ava @ say "Look, I even have proof! I took a photo of the creature!"
+        
+        n "Ava holds up her camera and switches it on."
+        n "Everyone gathers around her as it boots up and she navigates to the photo library."
+        n "The shots are dark and you can make out what appears to be fresh blood on the trees but other than that there's no creature to be seen."
+        
+        show ava concerned -pose
+        show claire outdoors neutral
+        
+        ava @ say "What? But I know it was there! Gunner you saw it too!"
+        
+        gunner @ say "Yeah, it was right there with its back to us right next to that tree right there!"
+        
+        show rori anxious
+        
+        rori @ say "I mean, it was probably a mountain lion or something and you just missed it? Still pretty spooky."
+        
+        show rori neutral
+        show ava annoyed
+        
+        ava @ say "No, I know I had it in frame, I could see it through the viewfinder when I took the shots!"
+        
+        show ava concerned
+        
+        ava @ say "Unless..."
+        
+        n "Ava switches off her camera."
+        
+        show ava typical neutral
+        
+        ava @ say "Of course! Anything supernatural can't be recorded digitally."
+        ava @ say "I knew I should have brought my film camera today..."
+        ava @ say "I'll get a shot of it next time."
+        
+        gunner @ say "Next time? I'm not coming back here again, that's for sure! That thing was totally gonna eat us! I could see it in its eyes!"
+        
+        show ava annoyed
+        
+        ava @ say "Well not everyone is a scaredy cat!"
+        
+        gunner @ say "Yeah, and not everyone has wings to get away!"
+        
+        player "Whatever it was, we should be safe here. Wild animals fear the fire."
+        
+        n "Claire throws another couple of sticks onto the flames."
+        
+        show ava typical neutral
+        
+        claire @ say "Might as well get cozy if we're gonna stay here a while!"
+        
+        rori @ say "We're not gonna stay here all night are we? I still have homework to finish."
+        
+        claire @ say "Just until these two calm down."
+        claire @ say "Until then, you are all cordially invited to join the cuddle puddle!"
+        
+        player "The what"
+        
+        #play sound "ambient/outdoors night crickets.ogg" fadein 1.0
+        #play music "audio/music/vylet pony - Reading at Night.ogg" fadein 1.5
+        play music "audio/music/vylet - Over Equestria.ogg" fadein 1.0
+        
+        n "You are soon encompassed by soft bunny fluff, followed shortly by coarse ram fur."
+        
+        player "Oof!"
+        
+        if heshe == "he":
+            gunner @ say "Sorry bro, didn't mean to step on your balls."
+        else:
+            gunner @ say "Sorry, didn't mean to step on your tits."
+            
+        player "It's k."
+        
+        n "Typical cat behavior, stepping all over you."
+        n "At least Ava doesn't weigh much as she crawls over you to snuggle with Gunner."
+        
+        ava @ say "'Scuse me!"
+        
+        claire @ say "Everyone comfy?"
+        
+        rori @ say "Yup! I can't remember the last time I was a part of something like this."
+        
+        n "You settle in to the warm fur and feathers surrounding you, which is admittedly probably the comfiest feeling you've ever experienced."
+        
+        player "Claire, you are the softest mattress I've ever laid on."
+        
+        claire @ say "Thanks!"
+        
+        show claire outdoors surprised
+        
+        claire @ say "Hey! Ava, no making out in the cuddle puddle unless you brought smooches for everyone!"
+        
+        show ava unimpressed
+        
+        ava @ say "Oh my gosh Claire I'm nottt!"
+        
+        gunner @ say "Not yet~"
+        
+        show ava embarassed
+        
+        ava @ say "SHush!"
+        
+        n "Gunner pulls Ava closer and tickles her. At least that's what you think is happening. It's hard to tell from where you are."
+        
+        show ava flattered
+        
+        ava @ say "Hehehehe ahhh stoppit!!"
+        
+        rori @ say "Get a room you two!"
+        
+        show ava typical neutral
+        show claire outdoors neutral
+        
+        gunner @ say "Says the guy with his head resting on the biggest tits in Harmonia."
+        
+        rori @ say "Wha? I'm not..!"
+        
+        show claire outdoors embarassed
+        
+        claire @ say "You're on my boobs, dude."
+        
+        rori @ say "Oh heck I'm so sorry!"
+        
+        show claire outdoors derp
+        
+        claire @ say "Nah, go ahead and motorboat 'em, I don't care."
+        
+        show ava waitwhat
+        
+        ava @ say "Claire!"
+        
+        claire @ say "What?"
+        
+        show ava annoyed
+        
+        ava @ say "Did *you* bring enough for the class?"
+        
+        show claire outdoors lusty
+        
+        claire @ say "It was an open invitation."
+        
+        gunner @ say "Snrk!"
+        
+        show ava angry
+        
+        ava @ say "Why are you so lewd!"
+        
+        show claire outdoors derp
+        
+        claire @ say "Cause I wanna know who has a crush on me!"
+        
+        show ava unimpressed
+        
+        ava @ say "And you do that by acting like a slut?"
+        ava @ say "You're probably just making someone who does like you jealous!"
+        
+        claire @ say "You're one to talk!"
+        
+        ava @ say "W-what?!"
+        
+        gunner @ say "She's bluffing! She knows there's no way Rori would try anything."
+        
+        #show ava typical neutral
+        
+        claire @ say "You never know! Somebody might take up the offer!"
+        
+        show claire outdoors lusty
+        
+        n "Claire suddenly glares in your direction."
+        
+        claire @ say "Isn't that right, [name]?"
+        
+        menu:
+            claire "{cps=0}Isn't that right, [name]?{/cps}"
+            "Let Rori keep his pillow":
+                #finished
+                $ clairePoints -= 1
+                n "You turn away from that dreadful stare. It frightens you."
+                
+                player "Th-that's alright, Rori can keep his uh 'pillows.'"
+                
+                claire @ say "Suit yourself! Not everyone can handle such great tits~"
+                
+                n "The bunny pulls Rori in closer. You can hear his bones cracking and the air leaving his lungs."
+                n "Poor guy. It was nice knowing him."
+                n "Amidst the endless bickering and sexual innuendos, you nestle in and close your eyes."
+                n "You're cozy, next to a fire, with your friends... what more could you want?"
+                n "This is good, isn't it?"
+                
+                
+                #ava @ say "Oh my gosh Claire, can you leave the poor ram alone for 5 seconds?"
+                
+                #claire @ say "Suit yourself! I better not catch you trying to motorboat ava's tiny tits though!"
+                #horny ramblings of a madman
+                #mad ramblings of a hornyman
+                #claire "Oh? Perhaps you'd prefer to rest your head on Ava's birdy butt then~"
+                #ava "Aww, now you're left out! I'll let you rest your head on my ass if you want!"
+            "Move aside, Rori":
+                #finished
+                player "Move aside Rori, you're hogging the pillows!"
+                
+                show rori with move:
+                    xpos 600
+                    
+                n "You switch places with Rori and get comfy with your head in between Claire's breasts."
+                
+                claire @ say "See? It worked!!"
+                
+                show ava angry
+                
+                ava @ say "This proves nothing! Seduction has nothing to do with romance!"
+                
+                claire @ say "Sorry Ava, [name] can't hear you with their ears covered by my massive titties~"
+                    
+                player "I fall asleep face down and end my turn."
+                #btw i sleep face down
+                
+                n "You roll over and close your eyes, ignoring the brewing storm around you."
+                n "Ava is seething but she's not entirely wrong. Bunny boobs are nice regardless of whether or not you'd go out with Claire."
+                n "But now that you're thinking of it, is Claire actually interested in you??"
+                n "That would explain why she's always been flirty with you... But doesn't she do that with everyone?"
+                n "Or does she try extra hard with you?"
+                n "The more you think about it, the further you drift into slumber..."
+            #alternatively you static out and pass out
+        
+        #claire @ say "Maybe you should try it sometime?"
+        
+        #claire @ say "Sorry I have correct opinions and great tits~"
+        
+        #claire @ say "Um it's called having fun? Maybe try it sometime?"
+        
+        #ava @ say "Hmph!"
+        
+        #n "Even in the cuddle puddle those two can't help but argue."
+        
+        
+        
+        #ava @ say "..."
+        #ava @ say "Well to whom it may concern, my ass has a special one time offer! One free spank for anyone who's interested!"        
+        
+        #rori @ say "OWO"
+        
+        #claire @ say "See? That's what I'm talkin' about!"
+        #claire @ say "Now that's more like it!"
+        #that's the spirit!
+        
+        #n "You may never get a chance like this again. Should you go for it?"
+        
+        #menu:
+        #    "Just one couldn't hurt, right?":
+        #        n "Your hand winds up and comes down with the force of a thousand virgins."
+                
+        #        show ava overjoyed
+                
+        #        ava @ say "SQUAWK!"
+                
+        #        n "Two slaps echo through the forest in quick succession."
+        #        n "You look Gunner in the eye, both of your hands on Ava's cheeks."
+        #        n "The genie has been let out of the bottle now. War has officially been declared."
+                
+         #   "Nope, too risky":
+         #       n "You can't. Raptor Jesus can judge you all he wants but you don't want to piss off the bird gods too."
+         #       n "Gunner however has no such inhibitions and winds up for a smack that's sure to feel like slapping the a pillow from a 5 star hotel."
+         #       n "To everyone's shock, not just one but two soft slaps ring out, echoing through the forest."
+         #       n "You look down and see both Gunner and Rori's hands on Ava's ass."
+                
+         #       gunner @ say "You son of a bitch, I'll kill you!"
+                
+         #       n "Just as Gunner pounces, claws ready to tear out Rori's neck, you feel the familiar sensation of being abruptly pulled out of a dream."
+                
+        ###fade to white, fade back in 
+        scene bg black with fade
+        
+        pause .7
+        
+        scene bg waterfall with fade
+        
+        show box with Dissolve(.2):
+            ypos 0
+
+        show claire outdoors neutral:
+            xpos 310        
+        show rori neutral:
+            xpos 600
+        show ava typical neutral at center:
+            xpos -350
+            xzoom -1
+        show gunner neutral at center:
+            xpos -600
+            xzoom -1
+        with dissolve
+        
+        claire @ say "[name]! Time to wake up, sleepyhead!"
+        
+        n "You blink a few times, trying to recall where you are."
+        #n "You're surrounded by warmth and floof and everyone is staring at you."
+        n "That's right, you were forcefully indoctrinated into the cuddle cult and then you fell asleep."
+        
+        claire @ say "Did you have a nice nap?"
+        
+        player "Mhm~"
+        
+        show ava excited
+        
+        ava @ say "Nothing like a nice cuddle to bring one's spirits up~"
+        
+        show ava typical neutral
+        
+        rori @ say "Yeah, this was quite a novel experience!"
+        
+        gunner @ say "Hopefully whatever was chasing us has gotten bored and fucked off by now."
+        
+        #claire @ say "Ksksksks you sure fall asleep quick! Did you know you talk in your sleep?"
+        
+        #player "Wha? What did I say??"
+        
+        #ava @ say "Something about my ass???"
+        
+        #n "Gunner busts out laughing."
+        
+        #gunner @ say "Pffftahahahahahaa! You're a hoot and a half, you know that [name]?"
+        
+        #ava @ say "Hmph!"
+        
+        #claire @ say "Aww don't be mad, Ava. You should be honored [name] has dreams about your feathery butt!"
+        
+        #n "Ava tries to maintain her composure but even she starts to crack up."
+        
+        #ava @ say "Kshh, okay maybe it was a little funny hehehe~"
+        
+        #n "Claire pulls everyone together for a tight hug."
+        
+        #claire @ say "I'm so glad I met you all <3"
+        
+        #rori @ say "*wheeze* I'm... glad... too..."
+        
+        #claire @ say "You all ready to go back into town?"
+        
+        show ava pose ohyou
+        
+        ava @ say "Hah, yeah... I already forgot we were being hunted by a mythological creature."
+        
+        claire @ say "I'd say it's about time we get out of here."
+        
+        show ava typical neutral
+        
+        gunner @ say "We should be fine with the five of us travelling together."
+        gunner @ say "Just have to make sure nobody gets picked off and skinwalkered."
+        
+        player "If it's a skinwalker versus Claire, my money's on the 300 pound 7 foot tall bunny."
+        
+        gunner @ say "For sure. Lanky cryptids BTFO."
+        
+        show claire outdoors embarassed
+        
+        claire @ say "350 pounds but who's keeping track am I right?"
+        
+        rori @ say "We're like a Dragons and Dungeons party transported into the real world."
+        
+        show claire outdoors derp
+        
+        claire @ say "Hah! Tonight has been way more fun than any LARP club I've been to!"
+        
+        rori @ say "Now I wanna write a campaign based on this trip. I think I'll call it Cryptids and Crypts."
+        
+        show claire outdoors surprised
+        
+        claire @ say "I'd play it!"
+        
+        n "Your party stamps out the dying campfire and covers it with dirt in preparation for finally leaving the woods behind and returning to your comfy dorms."
+        #n "Claire invites everyone to continue the cuddle puddle at her dorm next weekend"
+        
+        stop sound fadeout 1.0
+        stop music fadeout 1.0
+        
+        jump aftercuddlepuddle
+        
+    label gunnerdecline:
+        #untested
+        call phone_after_menu from _call_phone_after_menu_17
+        
+        call message_start("me", "Nah", "testimage.png") from _call_message_start_68
+        call reply_message("I wanna hang out with Ava too lmao") from _call_reply_message_271
+        
+        call message("Gunner", "WTF", "gunneravi.png") from _call_message_368
+        call message("Gunner", "I thought we were bros", "gunneravi.png") from _call_message_369
+        
+        call reply_message("Ya we are but I don't think she's into you") from _call_reply_message_272 
+        call reply_message("I think she's more into humans :/") from _call_reply_message_273
+        
+        call message("Gunner", "Oh fuck off", "gunneravi.png") from _call_message_370
+        
+        call reply_message("Dude chill") from _call_reply_message_274
+        call reply_message("If she likes you she'd let you know") from _call_reply_message_275
+        call reply_message("Til then, I'm gonna shoot my shot with her") from _call_reply_message_276
+        
+        call message("Gunner", "...", "gunneravi.png") from _call_message_371
+        
+        call message("Ava", "Well? We're about to head out soon.", "avaavi.png") from _call_message_372
+        
+        call reply_message("Hey yeah that sounds like a great time!") from _call_reply_message_277
+        
+        call message("Ava", "Great! We'll come get you right now!", "avaavi.png") from _call_message_373 
+
+        call reply_message("k, see you in a bit") from _call_reply_message_278 
+
+        call message("Ava", ":>", "avaavi.png") from _call_message_374 
+        
+        call phone_end from _call_phone_end_59
+        
+        scene bg waterfall with fade
+        
+        play music "audio/music/Evan Schaeffer - Whigg Meadow.ogg" fadein 0.1
+        
+        show box with Dissolve(.2):
+            ypos 0
+        
+        show gunner neutral at center:
+            xzoom -1
+            xpos -400
+        with dissolve
+        
+        player "Is she done yet? She said we'd be done before sundown."
+        
+        gunner @ say "Huh? What's the matter, you afraid of the dark or something?"
+        
+        player "I can't see anything!"
+        
+        gunner @ say "Oh right. Human eyes. Lmao."
+        
+        #ava swoops down animation
+        
+        n "You hear a rustling of leaves high above in the tree beside you. Shortly after, Ava swoops down and perches lightly on the ground."
+        
+        show ava portrait neutral at center with dissolve:
+            xpos 300
+        
+        ava @ say "All done! I got some decent shots of the city lights from up there."
+        
+        player "Great. Can we go home now?"
+        
+        show ava typical neutral
+        
+        ava @ say "Sure thing! Wait a sec, has anyone seen my lens cap?"
+        
+        gunner @ say "I thought you had it on you when you flew up?"
+        
+        show ava concerned
+        
+        ava @ say "Uhh no? I thought I gave it to you?"
+        
+        player "I don't remember seeing a lens cap."
+        
+        stop music fadeout .5
+        
+        pause .2
+        
+        #play sound "audio/vyletcreatureaudio/vy_creature01_misc_06.opus"
+        
+        play sound "audio/sound effects/monster roar 1.wav"
+        
+        creature "RRRRRAAAWWWRRRRRR"
+        
+        pause 1
+        
+        gunner @ say "What the hell was that?!"
+        
+        player "Uhh mountain lion maybe? I've heard tales of strange noises coming from them."
+        
+        #play sound "audio/vyletcreatureaudio/vy_creature01_misc_07.opus"
+        
+        creature "RRREEEEEEEEEEEEEeeeeeeeeee..."
+        
+        pause 1
+        
+        gunner @ say "What about that?!"
+        
+        #replace with wind in trees sfx
+        play music "audio/ambient/outdoors night crickets.ogg" fadein 1.5
+        
+        ava @ say "A chupacabra? Maybe some sort of sasquatch?"
+        
+        player "Sounded more like a skinwalker to me."
+        
+        show gunner at shudder
+        
+        n "Gunner shudders."
+        
+        gunner @ say "Don't even joke about that!"
+        
+        show ava overjoyed
+        
+        ava @ say "Wouldn't it be awesome if it was a spirit of the forest?"
+        
+        ###if player talked about ghosts during the old hospital thing, have them talk about it more here
+        
+        show ava typical neutral
+        
+        gunner @ say "Whatever it is, it sounds like it's pissed."
+        gunner @ say "We should leave before we get mauled, eaten, seduced or any combination of those by whatever lurks these woods at night!"
+        
+        n "Gunner starts down the trail back to where you came from."
+        
+        show ava annoyed
+        
+        ava @ say "Wait, what about my lens cap?"
+        
+        gunner @ say "Forget about the 2 cents worth of plastic, I'll buy you a new one when we get back!"
+        
+        #play sound "audio/vyletcreatureaudio/vy_creature01_misc_17.ogg"
+        
+        creature "HHHHHHHHHssssssss"
+        
+        pause 1
+        
+        player "Ok what the fuck that is not a natural cry."
+        
+        ava @ say "It sounded more distant that time..."
+        
+        gunner @ say "Good! Now can we please get a move on?"
+        
+        n "Gunner grabs Ava's wing, dragging her down the slope with him."
+        
+        ava @ say "Hold up! There's still some light out!"
+        
+        gunner @ say "So?"
+        
+        ava @ say "So I wanna get a photo of this mysterious creature!"
+        ava @ say "This could be a once in a lifetime opportunity!"
+        
+        gunner @ say "Are you out of your mind? It's just a mountian lion or something. There's probably a billion photos of them on the internet."
+        gunner @ say "It's not worth sticking around for."
+        gunner @ say "Not to mention people get mauled by them all the time!"
+        
+        ava @ say "Mmh..."
+        ava @ say "Maybe it is just a regular wild animal but I feel like this is happening for a reason."
+        ava @ say "I have to see for myself if this is a worthwhile shot or not. And if it's a little dangerous then so be it!"
+        ava @ say "Nobody ever won an award taking photos in their back yard. This art is all about the adventure, bringing out the mystique of the world!"
+        
+        stop music fadeout 2.0
+        
+        play music "audio/music/vylet - dance of the macabre.ogg" fadein 1.0
+        
+        #play sound "audio/vyletcreatureaudio/vy_creature01_misc_12.opus"
+        creature "CCCCCLLLLOOOOOSSSSSSEEEEERRRRRRR....."
+        
+        show gunner at hop
+        
+        pause .1
+        
+        show gunner at flipleft
+        
+        pause .3
+        
+        show gunner at flipright
+        
+        pause .3
+        
+        show gunner at shudder
+        
+        n "Gunner jumps, startled by the noise."
+        
+        gunner @ say "Did you just hear that?"
+        
+        ava @ say "It sounded like it was telling us to come closer."
+        
+        player "Generally a bad idea, based on every horror movie ever."
+        
+        gunner @ say "That's it, I'm out."
+        
+        hide gunner with dissolve
+        
+        ava @ say "Jeez, what a pussy."
+        ava @ say "Come on [name], you'll come with me right?"
+
+        menu:
+            ava "{cps=0}Come on [name], you'll come with me right?{/cps}"
+            "Sure, I ain't afraid of no ghosts.":
+                $ avaPoints += 1
+                player  "Sure, I ain't afraid of no ghosts."
+                
+                show ava overjoyed
+                
+                ava @ say "I knew I could count on you~"
+                
+                show ava typical neutral
+                
+                ava @ say "Come on, the sound was coming from that direction."
+                
+                n "You and Ava quickly make your way through the woods. She holds onto your hand, guiding you through the darkness."
+                n "The further you go, the more you start to regret your decision."
+                n "Your caveman instincts are telling you that whatever is out there has a clear advantage over you and could kill you without a second thought."
+                
+                ava @ say "Wait! There!"
+                
+                n "Ava stops behind a tree and pokes her head out from around it."
+                
+                ava @ say "Hold this."
+                
+                n "She unscrews the lens from her camera and passes it to you."
+                n "You can only just see her outline in the minimal light offered by the fallen sun as she attaches a telephoto lens onto her camera."
+                n "The bird takes aim at something in the distance you can't possibly hope to see."
+                n "You squint your eyes and notice some rustling brush amidst the darkness."
+                n "*click click click click*"
+                n "Ava takes several shots in quick succession, masking the soft footsteps as something approaches from behind."
+                
+                show gunner neutral at center with dissolve:
+                    xpos -300
+                    xzoom -1
+                
+                gunner @ say "Holy shit, what the fuck is that thing??"
+                
+                n "You turn around to see a wide eyed Gunner standing behind you, staring in despair at the apparent abyss."
+                
+                show ava annoyed
+                
+                ava @ say "Shh!"
+                
+                show ava typical neutral
+                
+                n "Ava looks down at her camera for a moment to adjust some settings."
+                n "When she puts the viewfinder back up to her face she seems to look around, confused."
+                
+                show ava unsure
+                
+                ava @ say "Huh? Where'd it go? It was right there just a second ago!"
+                
+                player "Uhh Ava, I can't see much but it looks like the rustling grass is getting closer."
+                
+                gunner @ say "It must have smelled us! Come on, you got your shots, let's get out of here!"
+                
+                n "Gunner grabs both you and Ava by your shirt collars and hustles back to the trail."
+                
+                show ava pose annoyed
+                
+                ava @ say "Hey let go! Just one more shot!"
+                
+                hide gunner
+                hide ava
+                with dissolve
+                
+                n "The smell of blood and rot wafts past your nose. You chance a look behind you and feel a chill run down your spine when you see two glowing orbs staring at you."
+                n "Gunner lets go of you as you overtake him and make it down the mountian even faster than him."
+                n "The haunting scent only dissipates when you spot a warm glow between the leaves in the distance. Your caveman instincts tell you that must be a safe place."
+                
+                stop music fadeout 1.5
+                
+                n "Out of breath and fueled solely be adrenaline, you double time it to what ends up being a campfire way out here of all places."
+                n "The smokey air and comforting heat are all you need to feel safe again."
+                n "You don't even notice the campers until you hear their voices."
+                
+                play music "audio/music/vylet - Over Equestria.ogg" fadein 1.0
+                
+                show claire outdoors neutral at center:
+                    xpos 700
+                show rori neutral at center:
+                    xpos 300
+                show ava typical neutral:
+                    xpos -300
+                    xzoom -1
+                show gunner neutral: 
+                    xpos -600
+                    xzoom -1
+                with dissolve
+                
+                claire @ say "Ava?"
+                
+                rori @ say "Gunner? And [name]! What are you guys doing here?"
+                
+                player "Getting chased by skinwalkers apparently!"
+                
+                claire @ say "Lmao did you three get caught fuckin' in the woods?"
+                
+                gunner @ say "We definitely would have gotten horrifically murdered if we were."
+                gunner @ say "That's how it always goes in like every horror film. The poor college students just trying to get laid always meet a gruesome end."
+                
+                n "Rori rolls his eyes and sighs."
+                
+                rori @ say "Ava, what happened out there?"
+                
+                ava @ say "Well I don't think it was a skinwalker but maybe more like a wendigo or something."
+        
+                rori @ say "Pics or it didn't happen."
+                
+                ava @ say "Don't give me that look! I have proof! I do have pics!"
+        
+                n "Ava holds up her camera and switches it on."
+                n "Everyone gathers around her as it boots up and she navigates to the photo library."
+                n "The shots are dark and you can make out what appears to be fresh blood on the trees but other than that there's no creature to be seen."
+                
+                show ava concerned -pose
+                show claire outdoors neutral
+                
+                ava @ say "What? But I know it was there! Gunner you saw it too!"
+                
+                gunner @ say "Yeah, it was right there with its back to us right next to that tree right there!"
+                
+                show rori anxious
+                
+                rori @ say "I mean, it was probably a mountain lion or something and you just missed it? Still pretty spooky."
+                
+                show rori neutral
+                show ava annoyed
+                
+                ava @ say "No, I know I had it in frame, I could see it through the viewfinder when I took the shots!"
+                
+                show ava concerned
+                
+                ava @ say "Unless..."
+                
+                n "Ava switches off her camera."
+                
+                show ava typical neutral
+                
+                ava @ say "Of course! Anything supernatural can't be recorded digitally."
+                ava @ say "I knew I should have brought my film camera today..."
+                ava @ say "I'll get a shot of it next time."
+                
+                gunner @ say "Next time? I'm not coming back here again, that's for sure! That thing was totally gonna eat us! I could see it in its eyes!"
+                
+                show ava annoyed
+                
+                ava @ say "Well not everyone is a scaredy cat!"
+                
+                gunner @ say "Yeah, and not everyone has wings to get away!"
+                
+                player "Whatever it was, we should be safe here. Wild animals fear the fire."
+                
+                n "Claire throws another couple of sticks onto the flames."
+                
+                show ava typical neutral
+                
+                claire @ say "Might as well get cozy if we're gonna stay here a while!"
+                
+                rori @ say "We're not gonna stay here all night are we? I still have homework to finish."
+                
+                claire @ say "Just until these two calm down."
+                claire @ say "Until then, you are all cordially invited to join the cuddle puddle!"
+                
+                player "The what"
+                
+                pause .1
+                
+                show claire:
+                    xpos 550
+                show rori:
+                    xpos 250
+                show ava:
+                    xpos -250
+                show gunner:
+                    xpos -500
+                with move
+                
+                n "You are soon encompassed by soft bunny fluff, followed shortly by coarse ram fur."
+                
+                #play sound "ambient/outdoors night crickets.ogg" fadein 1.0
+                #play music "audio/music/vylet pony - Reading at Night.ogg" fadein 1.5
+                play music "audio/music/vylet - Over Equestria.ogg" fadein 1.0
+                
+                player "Oof!"
+                
+                if heshe == "he":
+                    gunner @ say "Sorry bro, didn't mean to step on your balls."
+                else:
+                    gunner @ say "Sorry, didn't mean to step on your tits."
+                    
+                player "It's k."
+                
+                n "Typical cat behavior, stepping all over you."
+                n "At least Ava doesn't weigh much as she crawls over you to snuggle in between you and Gunner."
+                        
+                ava @ say "'Scuse me!"
+                
+                claire @ say "Everyone comfy?"
+                
+                n "You settle in to the warm fur and feathers surrounding you, which is admittedly probably the comfiest feeling you've ever experienced."
+                
+                rori @ say "Yup!"
+
+                player "Claire, you are the softest mattress I've ever laid on."
+                
+                show claire outdoors derp
+
+                claire @ say "Thanks!"
+                
+                show claire outdoors surprised
+
+                claire @ say "Whoa now Ava, I know you're excited to be snuggling your crushes but keep your pants on."
+                
+                show ava waitwhat
+                
+                ava @ say "What?! You're the one with Rori's head between your tits!"
+                
+                show claire outdoors neutral                
+                show rori laugh
+                
+                rori @ say "\[*Happy ram noises*\]"
+                
+                show rori neutral
+                
+                #claire @ say "Don't be jealous, you get two cuties all for yourself~"
+                #claire @ say "Wanna trade?"
+                
+                show claire outdoors lusty
+                
+                claire @ say "And *you're* the one sandwiched between two cuties~"
+                
+                show ava annoyed
+                
+                ava @ say "Y-you engineered it to happen like this!"
+                
+                show claire outdoors embarassed
+                
+                claire @ say "You're welcome~"
+                claire @ say "Ksksksks~"
+                
+                n "Even in the cuddle puddle those two can't stop arguing."
+                
+                ava @ say "Huff!"
+                
+                show claire outdoors derp
+                
+                claire @ say "My paw can't reach. Someone spank Ava for being ungrateful."
+                #claire @ say "It's up to you rori"
+                #rori @ say "Who, me??"
+                
+                show ava annoyed
+                
+                ava @ say "Oh my gosh, don't you dare!"
+                
+                show claire outdoors embarassed
+                
+                claire @ say "What, you told me you were into that!"
+                
+                show ava embarassed
+                
+                ava @ say "Shshshshhhh!!!"
+                ava @ say "I did not!"
+                
+                show claire outdoors lusty
+                
+                claire @ say "Twenty bucks says you'll squawk~"
+                
+                show ava angry
+                
+                ava @ say "SHut"
+                
+                n "You may never get a chance like this again. Should you go for it?"
+                
+                menu:
+                    n "{cps=0}You may never get a chance like this again. Should you go for it?{/cps}"
+                    "Just one couldn't hurt, right?":
+                        n "It'll be funny, right?"
+                        n "She's vaguely into you so she'll allow it, right?"
+                        n "Your hand winds up and comes down with the force of a thousand virgins."
+                        
+                        show ava overjoyed
+                        
+                        ava @ say "Squawk~"
+                        
+                        show gunner at hop
+                        
+                        gunner @ say "Hey, paws off my bird!"
+                        
+                        n "Gunner hisses and attacks with his claws, digging them into your neck."
+                        
+                        player "AAAAAAH OH FUCK GET HIM OFF ME!"
+                        
+                        #n "Two slaps echo through the forest in quick succession."
+                        
+                        #n "You look Gunner in the eye, both of your hands on Ava's cheeks."
+                        #n "The genie has been let out of the bottle now. War has officially been declared."
+                        
+                    "Nope, too risky":
+                        #n "You can't. Raptor Jesus can judge you all he wants but you don't want to piss off the bird gods too."
+                        n "You can't do it. What would she think? What would everyone else think?"
+                        n "Gunner however has no such inhibitions and winds up for a smack that's sure to feel like slapping the a pillow from a 5 star hotel."
+                        #n "To everyone's shock, not just one but two soft slaps ring out, echoing through the forest."
+                        
+                        show ava overjoyed
+                        
+                        ava @ say "Squawk~"
+                        
+                        #n "You look down and see both Gunner and Rori's hands on Ava's ass."
+                        
+                        #gunner @ say "You son of a bitch, I'll kill you!"
+                        
+                        #n "Just as Gunner pounces, claws ready to tear out Rori's neck, you feel the familiar sensation of being abruptly pulled out of a dream."
+                        
+                ###fade to white, fade back in 
+                scene bg white 
+                
+                pause .1
+                
+                scene bg waterfall with dissolve
+                
+                show box:
+                    ypos 0
+                
+                claire @ say "[name]! Wake up, sleepyhead!"
+                
+                n "You blink a few times, trying to recall where you are."
+                
+                show claire outdoors neutral:
+                    xpos 550
+                show rori neutral:
+                    xpos 250
+                show ava typical neutral:
+                    xpos -250
+                    xzoom -1
+                show gunner neutral:
+                    xpos -500
+                    xzoom -1
+                with dissolve
+                
+                
+                n "You're surrounded by warmth and floof and everyone is staring at you."
+                n "That's right, you were forcefully indoctrinated into the cuddle cult and then..."
+                
+                show claire outdoors embarassed
+                
+                claire @ say "Ksksksks you sure fall asleep quick! Did you know you talk in your sleep?"
+                
+                player "Wha? What did I say??"
+                
+                show ava embarassed
+                
+                ava @ say "Something about my 'feathery booty'???"
+                
+                n "Gunner busts out laughing."
+                
+                gunner @ say "Pffftahahahahahaa! You're a hoot and a half, you know that [name]?"
+                
+                show ava angry
+                
+                ava @ say "Hmph!"
+                
+                show claire outdoors derp
+                
+                claire @ say "Aww don't be mad, Ava. You should be honored [name] has dreams about your feathery butt!"
+                
+                n "Ava tries to maintain her composure but even she starts to crack up."
+                
+                show ava flattered
+                
+                ava @ say "Kshh, okay maybe it was a little funny hehehe~"
+                
+                show claire outdoors neutral
+                
+                n "Claire pulls everyone together for a tight hug."
+                
+                #show ava typical neutral
+                
+                claire @ say "I'm so glad I met you all <3"
+                
+                rori @ say "*wheeze* I'm... glad... too..."
+                
+                claire @ say "You all ready to go back into town?"
+                        
+                show ava portrait neutral
+                
+                ava @ say "Hah, yeah... I already forgot we were being hunted by a mythological creature."
+                
+                claire @ say "I'd say it's about time we get out of here."
+                
+                show ava typical neutral
+                
+                gunner @ say "We should be fine with the five of us travelling together."
+                gunner @ say "Just have to make sure nobody gets picked off and skinwalkered."
+                
+                player "If it's a skinwalker versus Claire, my money's on the 300 pound 7 foot tall bunny."
+                
+                gunner @ say "For sure. Lanky cryptids BTFO."
+                
+                show claire outdoors embarassed
+                
+                claire @ say "350 pounds but who's keeping track am I right?"
+                
+                rori @ say "We're like a Dragons and Dungeons party transported into the real world."
+                
+                show claire outdoors derp
+                
+                claire @ say "Hah! Tonight has been way more fun than any LARP club I've been to!"
+                
+                rori @ say "Now I wanna write a campaign based on this trip. I think I'll call it Cryptids and Crypts."
+                
+                show claire outdoors surprised
+                
+                claire @ say "I'd play it!"
+                
+                n "Your party stamps out the dying campfire and covers it with dirt in preparation for finally leaving the woods behind and returning to your comfy dorms."
+                #n "Claire invites everyone to continue the cuddle puddle at her dorm next weekend"
+                
+                stop sound fadeout 1.0
+                stop music fadeout 1.0
+                
+                jump aftercuddlepuddle
+                
+                
+            "Nah, I'm a pussy like Gunner, let's get out of here.":
+                player "Nah, I'm a pussy like Gunner, let's get out of here."
+                
+                show ava angry
+                
+                ava @ say "Ugh, you cowards!"
+                ava @ say "Fine, you two can run away but I'm going after it!"
+                
+                n "Ava turns around and takes flight in the direction of the noises."
+                
+                hide ava with dissolve
+                
+                show gunner neutral with dissolve:
+                    xpos -300
+                    xzoom -1
+                
+                gunner @ say "Aww hell. It's too dangerous to leave her alone. We better go after her."
+                
+                player "Y-yeah. You lead the way."
+                
+                hide gunner with dissolve
+                
+                n "It's so dark you can't see past your nose. You have to hold onto Gunner's tail otherwise you'd get lost in seconds."
+                n "The further you go, the more you start to regret your decision."
+                n "Your caveman instincts are telling you that whatever is out there has a clear advantage over you and could kill you without a second thought."
+                n "After what feels like an eternity, you come across Ava perched in a low branch with her camera pointed at something."
+                
+                show ava annoyed with dissolve:
+                    yalign 0
+                    xpos 300
+                
+                ava @ say "Shh!"
+                
+                show ava concerned
+                ava @ say "Almosssst..."
+                
+                n "You can only just see her outline in the dim light offered by the dusk sky as she slowly adjusts the focus ring on a chunky telephoto lens."
+                n "The bird takes aim at something in the distance you can't possibly hope to see."
+                n "Ava takes several shots in quick succession."
+                n "*click click click click*"
+                n "You squint your eyes and notice some rustling brush amidst the darkness."
+                n "Gunner stealthily claws his way up the tree to Ava's height and manages to catch sight of what she's shooting."
+                
+                show gunner neutral at center:
+                    xpos -600
+                    xzoom -1
+                
+                gunner @ say "Holy shit, what the fuck is that thing??"
+                
+                player "What's going on? I can't see anything but I hear leaves rustling and it sounds like it's getting closer?"
+                
+                gunner @ say "It must have smelled us! Come on, you got your shots, let's get out of here!"
+                
+                n "Gunner grabs Ava and hops down from the tree, pulling you by your shirt collar away from there."
+                
+                show ava pose annoyed
+                
+                ava @ say "Hey let go! Lemme get just one more shot!"
+                
+                hide gunner
+                hide ava
+                with dissolve
+                
+                n "The smell of blood and rot wafts past your nose. You chance a look behind you and feel a chill run down your spine when you see two glowing orbs staring at you."
+                n "Gunner lets go of you as you overtake him and make it down the mountian even faster than him."
+                n "The haunting scent only dissipates when you spot a warm glow between the leaves in the distance. Your caveman instincts tell you that must be a safe place."
+                
+                stop music fadeout 1.5
+                
+                n "Out of breath and fueled solely be adrenaline, you double time it to what ends up being a campfire way out here of all places."
+                n "The smokey air and comforting heat are all you need to feel safe again."
+                n "You don't even notice the campers until you hear their voices."
+                
+                play music "audio/music/vylet - Over Equestria.ogg" fadein 1.0
+                
+
+                show claire outdoors neutral at center:
+                    xpos 700
+                show rori neutral at center:
+                    xpos 300
+                show ava typical neutral:
+                    xpos -300
+                    xzoom -1
+                show gunner neutral: 
+                    xpos -600
+                    xzoom -1
+                with dissolve
+                
+                claire @ say "Ava?"
+                
+                rori @ say "Gunner? And [name]! What are you guys doing here?"
+                
+                player "Getting chased by skinwalkers apparently!"
+                
+                claire @ say "Lmao did you three get caught fuckin' in the woods?"
+                
+                gunner @ say "If we were, we definitely would have gotten slashered! Like in every horror the movie with college characters!"
+                
+                rori @ say "Ava, what happened out there?"
+                
+                ava @ say "Well I don't think it was a skinwalker but maybe more like a wendigo or something."
+        
+                n "Rori sighs and rolls his eyes."
+                
+                rori @ say "Pics or it didn't happen."
+                
+                ava @ say "Don't give me that look! I have proof! I took photos!"
+        
+                n "Ava holds up her camera and switches it on."
+                n "Everyone gathers around her as it boots up and she navigates to the photo library."
+                n "The shots are dark and you can make out what appears to be fresh blood on the trees but other than that there's no creature to be seen."
+        
+                show ava concerned -pose
+                show claire outdoors neutral
+                
+                ava @ say "What? But I know it was there! Gunner you saw it too!"
+                
+                gunner @ say "Yeah, it was right there with its back to us right next to that tree right there!"
+                
+                show rori anxious
+                
+                rori @ say "I mean, it was probably a mountain lion or something and you just missed it? Still pretty spooky."
+                
+                show rori neutral
+                show ava annoyed
+                
+                ava @ say "No, I know I had it in frame, I could see it through the viewfinder when I took the shots!"
+                
+                show ava concerned
+                
+                ava @ say "Unless..."
+                
+                n "Ava switches off her camera."
+                
+                show ava typical neutral
+                
+                ava @ say "Of course! Anything supernatural can't be recorded digitally."
+                ava @ say "I knew I should have brought my film camera today..."
+                ava @ say "I'll get a shot of it next time."
+                
+                gunner @ say "Next time? I'm not coming back here again, that's for sure! That thing was totally gonna eat us! I could see it in its eyes!"
+                
+                show ava annoyed
+                
+                ava @ say "Well not everyone is a scaredy cat!"
+                
+                gunner @ say "Yeah, and not everyone has wings to get away!"
+                
+                player "Whatever it was, we should be safe here. Wild animals fear the fire."
+                
+                n "Claire throws another couple of sticks onto the flames."
+                
+                show ava typical neutral
+                show claire outdoors heyeah
+                
+                claire @ say "Might as well get cozy if we're gonna stay here a while!"
+                
+                rori @ say "We're not gonna stay here all night are we? I still have homework to finish."
+                
+                show claire outdoors neutral
+                
+                claire @ say "Just until these two calm down."
+                claire @ say "Until then, you are all cordially invited to join the cuddle puddle!"
+                
+                #this is the pussy out route, has some stuff you don't see in brave route
+
+                player "The what"
+                
+                pause .1
+                
+                show claire:
+                    xpos 550
+                show rori:
+                    xpos 250
+                show ava:
+                    xpos -250
+                show gunner:
+                    xpos -500
+                with move
+                
+                n "You are soon encompassed by soft bunny fluff, followed shortly by coarse ram fur."
+                
+                #play sound "ambient/outdoors night crickets.ogg" fadein 1.0
+                #play music "audio/music/vylet pony - Reading at Night.ogg" fadein 1.5
+                play music "audio/music/vylet - Over Equestria.ogg" fadein 1.0
+                
+                player "Oof!"
+                
+                if heshe == "he":
+                    gunner @ say "Sorry bro, didn't mean to step on your balls."
+                else:
+                    gunner @ say "Sorry, didn't mean to step on your tits."
+                    
+                player "It's k."
+                
+                n "Typical cat behavior, stepping all over you."
+
+                ava @ say "'Scuse me!"
+                
+                n "Ava flutters past you to perch upon Gunner."
+                
+                claire @ say "Everyone comfy?"
+                
+                rori @ say "Yup!"
+                
+                n "You settle in to the warm fur and feathers surrounding you, which is admittedly probably the comfiest feeling you've ever experienced."
+                
+                player "Claire, you are the softest mattress I've ever laid on."
+                
+                show claire outdoors derp
+        
+                claire @ say "Thanks!"
+                
+                show claire outdoors embarassed
+                
+                claire @ say "You should try using Ava's butt as a pillow sometime!"
+                
+                show ava angry
+                
+                ava @ say "Shshshs don't say that!"
+                
+                show claire outdoors neutral
+                
+                claire @ say "What, it's true! At least your feathery butt is the softest pillow I've ever used."
+                
+                rori @ say "...I wanna hear the story of how that happened."
+                
+                show ava embarassed
+                
+                ava @ say "D-don't worry about it! Besides, *you're* the one with the softest pillows in Harmonia right now."
+                
+                rori @ say "Huh? What do you mean?"
+                
+                show claire outdoors derp
+                
+                claire @ say "Your head's on my tits dude."
+                
+                show rori anxious
+                
+                rori @ say "Wha? Oh my gosh, I didn't even mean to...!"
+                
+                show claire outdoors embarassed
+                
+                claire @ say "Ksksksks it's fine!"
+                
+                show rori neutral
+                
+                n "Claire wraps her arms around Rori's body, preventing him from escaping."
+                
+                show claire outdoors neutral
+                
+                claire @ say "Poor [name] though isn't snuggling anyone in particular!"
+                
+                show ava excited
+                
+                ava @ say "Yeah [name], hurry up and choose your threesome hehehe!"
+                
+                show claire outdoors lusty
+                
+                claire @ say "Wow I didn't expect you of all people to say that Ava."
+                
+                show ava embarassed
+                
+                ava @ say "I didn't mean like-"
+                
+                show claire outdoors derp
+                
+                claire @ say "Ksksks yes you did!"
+                
+                menu:
+                    claire "{cps=0}Ksksks yes you did!{/cps}"
+                    "Choose Rori and Claire.":
+                        $ roriPoints += 1
+                        $ clairePoints += 1
+                        player "Well I wouldn't mind sharing a pillow with Rori."
+                        
+                        show claire outdoors lusty
+                        
+                        claire @ say "Go ahead!~ That's why I got two of 'em!"
+                        
+                        n "Claire grabs hold of you and pulls you in right next to Rori."
+                        
+                        rori @ say "Oh hi."
+                        
+                        player "Sup."
+                        player "Come here often?"
+                        
+                        rori @ say "Not really."
+                        
+                        player "It's nice isn't it?"
+                        
+                        rori @ say "Yeah it's not bad."
+                        
+                        show claire outdoors neutral
+                        
+                        claire @ say "Ava please tell me you and Gunner are having a less awkward flirting experience than these two."
+                        
+                        n "Claire looks over to them."
+                        
+                        claire @ say "Oh. He's got his paws on her ass. He must be doin' something right."
+                        
+                        ava @ say "He's uhh, just testing that theory you proposed!"
+                        
+                        gunner @ say "About her soft feathery ass."
+                        
+                        claire @ say "You're welcome~"
+                        
+                        gunner @ say "Thank you based bunny!"
+                        
+                        claire @ say "Heh. They make a cute couple, don't you think?"
+                        
+                        #rori @ say ""
+                        
+                        menu:
+                            claire "{cps=0}Heh. They make a cute couple, don't you think?{/cps}"
+                            "Yeah I guess.":
+                                player "Yeah I guess"
+                            "...":
+                                player "..."
+                            
+                            "Sure do!":
+                                $ avaPoints =- 1
+                                player "They sure do!"
+                            
+                        show claire outdoors lusty
+                        
+                        claire @ say "But we make a cuter trio~"
+                        
+                        rori @ say "To be fair, you two are doing all the heavy lifting."
+                        
+                        show claire outdoors derp
+                        
+                        claire @ say "Aww don't be so humble!"
+                        
+                        if roriPoints >= clairePoints:
+                            show claire outdoors neutral
+                            
+                            claire @ say "I know for a fact [name] thinks you're cuter than me~"
+                            
+                            rori @ say "That can't possibly be true!!"
+                            
+                            player "...Well it is."
+                            
+                            rori @ say "!"
+                            rori @ say "Why is it everytime I'm with you all you try to make me blush?!"
+                            
+                        else:
+                            show claire outdoors neutral
+                            
+                            claire @ say "You and [name] would be just as cute as Ava and Gunner!"
+                            
+                            show ava concerned
+                            
+                            ava @ say "Wow, for once she's not making herself the center of attention. She must really mean that!"
+                            
+                            claire @ say "It's true!"
+                            claire @ say "...But me and [name] would be the cutest couple. Just sayin'."
+                            
+                            show ava angry
+                            
+                            ava @ say "Oh there it is! I knew you couldn't go more than half a second without making things it about you!"
+                            
+                            show claire outdoors lusty
+                            
+                            claire @ say "Ksksksks shush and enjoy your catboy~"
+                            
+                            show ava waitwhat
+                            
+                            ava @ say "Don't tell me what to- *SQUAWK!*"
+                            
+                            claire @ say "Look at her, always scolding me for being too sexy when she lets Gunner get away with lewding her up in the cuddle puddle, a place for wholesome snuggles!"
+                            claire @ say "Well, if they're going that far we might as well go all the way, right Rori? [name]?"
+                            ###
+                            n "unfinished"
+                            
+                            #pantsless rori
+                            #wake up from dream
+                        
+                    
+                    "Choose Ava and Gunner.":
+                        $ avaPoints += 1
+                        player "I volunteer to test the theory that Ava is softer than Claire."
+                        
+                        show ava waitwhat
+                        
+                        ava @ say "...I guess I brought this upon myself, didn't I?"
+                        
+                        show claire outdoors lusty
+                        
+                        claire @ say "You sure did~"
+                        
+                        n "You roll over onto Ava, who is lying on Gunner. Who is lying on Claire."
+                        n "It's more like a cuddle tower than a puddle at this point but you're not complaining."
+                        ###
+                        n "unfinished"
+        
+                        #lie on top of ava, bird sandwich
+        
+                stop music fadeout 2.0
+        
         
