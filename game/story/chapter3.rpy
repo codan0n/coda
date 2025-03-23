@@ -2882,10 +2882,104 @@ label chapter3AfterWeekend:
         if claireHike == True:
             n "Today's the day you're supposed to... do something with Claire and Rori."
             
+            call phone_start
             
-            #get text from claire asking if you're ready
-            #not sure if ready but go anyway
+            call message_start("Claire", "You ready?", "claireavi.png") 
+            call message("Claire", "For some", "claireavi.png") 
+            call message("Claire", "A D V E N T U R E ?", "claireavi.png") 
+
+            call reply_message("I have no idea what we're doing today") 
+            call reply_message("but yeah i'm ready") 
             
+            call message("Claire", "Yay!", "claireavi.png") 
+            call message("Claire", "Meet me at the quad", "claireavi.png") 
+            
+            call reply_message("k") 
+
+            call phone_end
+            
+            scene bg campus with fade
+            
+            n "Walking up, you spot Rori looking uncomfortable next to an excited Claire waving at you."
+            
+            claire @ say "Over here [name]!!!"
+            
+            player "Sup guys."
+            
+            rori @ say "Hey..."
+            
+            n "Oh right, you sorta dragged him into this."
+            
+            menu:
+                "Ready to have some fun?":
+                    n "Maybe if you have a positive attitude he'll enjoy this more."
+                    
+                    player "You ready to have some fun?"
+                    
+                    rori @ say "Err, I guess? I still don't know what we're doing. Or why we're doing it for that matter."
+                    
+                    claire @ say "The what's and why's aren't important!"
+                    claire @ say "What's important is us three are going on a hiking trip!!"
+                    
+                    player "That's it? That's the big secret?"
+                    
+                    rori @ say "And you felt the need to bring me along?"
+                    
+                    claire @ say "Why not! Have you ever been hiking?"
+                    
+                    rori @ say "A few times."
+                    
+                    claire @ say "It's fun isn't it!"
+                    
+                    rori @ say "..."
+                    
+                    player "It'll be fun with us, trust me."
+                    
+                    rori @ say "If you say so."
+                    
+                    n "He looks miserable already."
+                    
+                    #claire @ say "Well let's get this show on the road!"
+                
+                "Sorry for getting you involved in this":
+                    n "Poor guy, he didn't ask to get involved in any of this."
+                    
+                    player "Sorry bro, I just wanted to play some vidya and chill or something."
+                    
+                    rori @ say "It's alright. Doing that every weekend gets dull. This... shakes it up a little at the very least."
+                    
+                    claire @ say "That's the spirit! I'll make an outdoorsman out of you, just wait and see!"
+                
+                "How'd Claire convince you to come?":
+                    n "You wonder how Claire even managed to get him to join you. Did she threaten him?"
+                    
+                    player "I know this isn't your thing but we didn't want you to be alone this weekend."
+                    player "So uh, how did Claire convince you to come?"
+                    
+                    claire @ say "Uh, we don't have to get into the details...!"
+                    
+                    rori @ say "It was weird, she like begged me to hang out with her."
+                    
+                    n "Rori shows you his phone. There's a full screen text message from Claire with her just repeating the word \"PLEASE\""
+                    n "There's a few \";^;\" thrown in too."
+                    n "So that's Claire's feminine charm at work."
+                    n "Maybe that's the best she can do on someone with Rori's preferences."
+                    
+                    rori @ say "She seemed desperate so eventually I just gave in."
+                    
+                    claire @ say "What can I say? It worked!"
+                    
+            claire @ say "Anyway, let's get going!!!"
+                    
+            scene bg forest with fade
+            
+            
+                    
+                    
+                    
+                    
+                    
+            #rori talks about how girls make him uncomfortable
             
         
         if avaHike == True:
