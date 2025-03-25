@@ -3211,6 +3211,7 @@ default frenchSkill = 0
 default historySkill = 0
 default literatureSkill = 0
 
+default roryPoints = 0
 default roriPoints = 0
 default gunnerPoints = 0
 default ellenPoints = 0
