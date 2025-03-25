@@ -3332,25 +3332,76 @@ label chapter3AfterWeekend:
                             n "Rori does as instructed and presses down on the lighter switch under the tinder."
                 
                     n "Almost immediately the dry grass combusts into a ball of fire, burning brightly in the darkening woods."
+                    n "Claire puts it down in a pile of small twigs but it burns out so quickly it doesn't have a chance to ignite the wood."
+                    
+                    rori @ say "Aww, all that hard work for nothing."
+                    
+                    claire @ "Au contrair~"
+                    
+                    n "The bunny gets down on all fours and blows into the smoldering remains of the tinder bundle. Glowing orange embers light up and more smoke rises from it the more she blows."
+                    n "With enought breaths, the twigs alight like match sticks, keeping the bundle hot until the bigger sticks reach their combustion point as well."
+                    n "Against all odds, the thickest sticks you gathered burn high into the sky. Despite the cool autumn air around you, the fire is already making you sweat."
+                    n "Claire rolls some logs into the blaze and pokes at them with a long stick."
+                    
+                    claire @ say "And there we have it!"
+                    
+                    rori @ say "Wow, I did not expect that to actually work."
+                    
+                    claire @ say "If it's smokin' ya just gotta give it some air and it'll burn!"
+                    
+                    player "My caveman ancestors are smiling down at me right now. I have rediscovered fire."
+                    
+                    claire @ say "Do you like it?"
+                    
+                    player "I love it! It gives me a weird sense of comfort."
+                    
+                    rori @ say "I have a strange urge to hop into it."
+                    
+                    claire @ say "Hey no sheep in my fire!"
+                    claire @ say "Grab a stick and let's toast some marshmallows!"
+                    
+                    n "Claire pulls a bag out from her shirt and tosses the sweet sugary fluffs to you."
+                    
+                    player "Yay diabetes!"
+                    
+                    rori @ say "Finally, I'm starving after all that hiking."
+                    
+                    n "You have to admit, it's pretty rewarding to come all this way out, build a fire from scratch, and sit back with some toasted marshmallows surrounded by friends."
+                    n "Claire gets so distracted telling stories that she accidentally lets her marshmallows ignite before frantically trying to blow out the fire."
+                    n "Even Rori lightens up after nomming a few."
+                    n "Suddenly the two of them snap their heads to the woods, ears perked up. You can't see a think in the darkness however."
+                    
+                    player "What? What is it?"
+                    
+                    rori @ say "Shh! Something's coming!"
+                    
+                    n "Claire stands up, ready to fight."
+                    n "Rori sniffs the air."
+                    n "A moment later you hear leaves crunching underfoot as something rapidly approaches."
+                    n "A flash of white briefly appears before colliding with you, sending your body reeling backward."
+                    n "As you tumble to the ground, you see Claire catch hold of something, pinning it down."
+                    
+                    gunner @ say "Get off me you fat fuck!"
+                    
+                    ava @ say "Ohmygosh [name]! Are you alright??"
+                    
+                    n "Dazed and blinded by the fire, you lean up and rapidly blink."
+                    
+                    ava @ say "Sorry, I didn't mean to fly right into you!"
+                    
+                    claire @ say "Ava? Is that you?"
+                    
+                    rori @ say "Gunner? What the hell are you doing here?"
+                    
+                    gunner @ say "About to get raped by this rabid rabbit apparently."
+                    
+                    claire @ say "Not tonight, sorry."
+                    
+                    n "Claire rolls off of Gunner. He gets up and brushes himself off."
                     
                     
                     
-                    
-                    
-                    
-                    
-                
-            #fire almost goes out but claire blows on it to ignite
-                
-            #something about caveman genetics making you apt at firemaking
-            
-            #claire @ say "Let's look for dead standing trees or branches propped up off the ground so they won't be moist from the soil."
-            
-            n "Both Claire's and Rori's ears perk up but in the darkness you can't see a thing."
-        n "The sound of frantic footsteps crunching leaves and snapping twigs gets closer until two familiar faces show up in the light of the fire."
-            
-                    
-            
+            #view of the sky while everyone talks, no sprites visible
             #the whole cuddle puddle scene is about revelations
                 #find out claire has a crush on you
                 #find out rori is intimidated by women
