@@ -1,5 +1,5 @@
 label chapter3:
-    4 currentSeason = "autumn"
+    $ currentSeason = "autumn"
     
     scene bg black with fade
     
@@ -1590,7 +1590,7 @@ label chapter3:
             n "Your poor intestines are still groaning in pain even after you made several trips to the bathroom."
             n "Last night was not worth the trouble just to lose."
             
-            if holdingHands == "Ava"
+            if holdingHands == "Ava":
                 call phone_start from _call_phone_start_53 
 
                 call message_start("Ava", "Hey [name]! You doing alright?", "avaavi.png") from _call_message_start_70 
@@ -1627,7 +1627,7 @@ label chapter3:
             call afterClassOptions
             
         
-        jump chapter3AfterWeekend
+    jump chapter3AfterWeekend
         
 label chapter3AfterWeekend:
     #knock over rose's cassette player in class on accident, can give her the repair gear if you have it or offer to cashapp her but she doesn't have the app (or a phone)
@@ -2080,7 +2080,7 @@ label chapter3AfterWeekend:
     n "Perhaps a personal question to get to understand her better."
     
     menu:  
-        "Why did you become a professor?"
+        "Why did you become a professor?":
             player "What made you want to become a professor?"
          
             margaret @ say "You're acting like this was my first choice of profession."
@@ -3385,9 +3385,9 @@ label chapter3AfterWeekend:
                     
                     ava @ say "Ohmygosh [name]! Are you alright??"
                     
-                    n "Dazed and blinded by the fire, you lean up and rapidly blink."
+                    n "Dazed and blinded by the fire, you lean up and rapidly blink, trying to make sense of the situation."
                     
-                    ava @ say "Sorry, I didn't mean to fly right into you!"
+                    ava @ say "Sorry! I didn't mean to fly right into you!"
                     
                     claire @ say "Ava? Is that you?"
                     
@@ -3399,15 +3399,23 @@ label chapter3AfterWeekend:
                     
                     n "Claire rolls off of Gunner. He gets up and brushes himself off."
                     
+                    ava @ say "Ooh are those marshmallows? Mind if I take one?"
+                    
+                    n "The bird grabs the stick you had dropped and fixes a new marshmallow to the tip."
+                    
+                    gunner @ say "Uh, are you forgetting about the wendigo right behind us?"
+                    
+                    ava @ say "We should be safe as long as we're near this fire!"
+                    
+                    claire @ say "You guys found a wendigo?"
                     
                     
-            #view of the sky while everyone talks, no sprites visible
-            #the whole cuddle puddle scene is about revelations
-                #find out claire has a crush on you
-                #find out rori is intimidated by women
-                #find out ava can't decide between you and gunner
-                #find out gunner is insecure about something
-                #reveal something about yourself
+                    #do a little skip where they sorta explain it then cuddle puddle
+                    
+                    
+                    
+                    
+
             
         
         if avaHike == True:
@@ -3419,6 +3427,17 @@ label chapter3AfterWeekend:
     
      
     
+    
+label cuddlepuddle:
+    ""
+
+            #view of the sky while everyone talks, no sprites visible
+            #the whole cuddle puddle scene is about revelations
+                #find out claire has a crush on you
+                #find out rori is intimidated by women
+                #find out ava can't decide between you and gunner
+                #find out gunner is insecure about something
+                #reveal something about yourself
     
     
     
