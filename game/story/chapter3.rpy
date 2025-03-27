@@ -3415,7 +3415,7 @@ label chapter3AfterWeekend:
             
             #do a little skip where they sorta explain it then cuddle puddle
             
-                    
+            jump cuddlepuddle        
                     
                     
 
@@ -3426,7 +3426,177 @@ label chapter3AfterWeekend:
             n "They decided it's going to be an overnight trip so you dumped your notebooks and packed all kinds of gear into your school bag."
             n "Gunner said he'd bring a tent so you load up on snacks and water."
             
-    
+            call phone_start
+
+            call message_start("Ava", "Heya! You ready for our trip?", "avaavi.png") 
+
+            call reply_message("Yup, just finished packing") 
+            call reply_message("Is Gunner still acting pissy because I'm coming?") 
+            
+            call message("Ava", "Yeahhhh but he'll get over it!", "avaavi.png") 
+            call message("Ava", "I'm sure we'll all have a great time ^v^", "avaavi.png") 
+            call message("Ava", "Meet us at the trailhead, k?", "avaavi.png") 
+            
+            call reply_message("On my way") 
+            
+            call phone_end
+            
+            n "Oh boy, a camping trip with a bird who has a crush on you and the cat who has a crush on her, what could go wrong?"
+            
+            scene bg woods with fade
+            
+            n "After hiking all day, you arrived at the peak of a mountain just in time for the golden hour of sunset."
+            n "Ava excitedly flutters around taking photos from atop various tree branches while you and Gunner catch your breath and sit on the edge of the cliff."
+            n "You pick up a rock and toss it down into the chasm. A few seconds later you hear it fall through some foliage and thud against the ground."
+            
+            gunner @ say "Damn, we're pretty high up aren't we?"
+            
+            player "Yeah. Can't believe we hiked all this way."
+            player "My legs are killing me."
+            
+            gunner @ say "Heh, sounds like you need to spend more time at the gym."
+            gunner @ say "... But yeah fuck this hike."
+            gunner @ say "At least the view makes it all worth it."
+            
+            n "Gunner looks up at the tree Ava's perched upon, her ass in plain view of you both."
+            
+            menu:
+                "Totally worth it":
+                    $ avaPoints =+ 1
+                    
+                    player "Totally worth it. I'd hike Mount Everest for her."
+                    
+                    gunner @ say "Oh yeah? Well I'd hike K2 with one paw tied behind my back for her!"
+                    
+                    player "Is that all? I'd jump into a volcano for her!"
+                    
+                    gunner @ say "No you wouldn't, because I'd be the one to push you in!"
+                    
+                    ava @ say "Shush up down there! You're distracting me from getting this shot!!"
+                    
+                    gunner @ say "Yeah [name], quiet down or she'll miss her shot!"
+                    
+                    player "You're the one distracting her!"
+                    player "Ava, do you want me to throw Gunner off this cliff for you?"
+                    
+                    ava @ say "Mmh, not yet."
+                    
+                    gunner @ say "I'd like to see him try!"
+                "Meh":
+                    $ avaPoints =- 1
+                    
+                    player "Meh, I've seen better."
+                    
+                    gunner @ say "No you haven't. There doesn't exist an ass better than hers."
+                    
+                    player "Dude, is that the only reason you're into her?"
+                    
+                    gunner @ say "No, but a nice ass is number one on my priority list for women."
+                    
+                    ava @ say "Shush up down there! You're distracting me from getting this shot!!"
+                    
+                    gunner @ say "Yeah [name], quiet down or she'll miss her shot!"
+                    
+                    player "You're the one distracting her!"
+                    player "Ava, do you want me to throw Gunner off this cliff for you?"
+                    
+                    ava @ say "Mmh, not yet."
+                    
+                    gunner @ say "I'd like to see him try!"
+                "Ignore her":
+                    n "You ignore the bird in favor of the gorgeous sunset painted before you by nature."
+                    n "The sun allows you some time to stare in its direction without searing your corneas as it falls toward the horizon."
+                    n "Its final burst of warmth mixes with the cool wind blowing from the night side of the planet to provide the coziest atmosphere imaginable."
+                    n "This sure beats arguing with strangers on the internet."
+                    
+            player "Yo Ava, you almost done up there?"
+            
+            ava @ say "Just a few more shots...!"
+            ava @ say "Why don't you boys make yourselves useful and get the tent set up?"
+            
+            gunner @ say "On it!"
+            
+            n "Gunner makes a competition out of it by rapidly putting the frame together on his own, trying to make you look slow and incompetent."
+            n "Not to be outdone, you pull your weight and hook the fabric of the tent through the rods and ground it with the stakes."
+            n "Gunner is practically on top of you putting the rain cover in place."
+            n "His paw \"accidentally\" slips and yanks one of the rods out, hindering your progress."
+            
+            player "Hey! Watch where you're going!"
+            
+            gunner "You watch where you're putting the stakes!"
+            
+            menu:
+                "Counter sabotage him":
+                    n "Nobody gets away with undoing your hard work!"
+                    n "You let your hand \"accidentally\" loosen one of the straps Gunner put in place, letting the whole rain fly collapse."
+                    
+                    gunner @ say "You bastard! You did that on purpose!"
+                    
+                    player "Dunno what you're talking about."
+                    
+                    gunner @ say "I saw you!"
+                    
+                    player "Stop blaming me and fix your shit!"
+                    
+                    if gunnerPoints < 0:
+                        n "He snarls at you before lunging right over the tent and pouncing right on top of you."
+                        
+                        gunner @ say "I've had it with you antagonizing me every step of the way!"
+                        
+                        player "You think *I'm* the one antagonizing *you?*"
+                        
+                        gunner @ say "You couldn't just let me go on a date with Ava! You just had to weasel your way in! You're a jealous fuck, you know that!!"
+                        
+                        n "Gunner tries to swipe at your face with his claws but you manage to hold him at bay."
+                        
+                        player "You're such an entitled rich brat! You think the world revolves around you getting together with your crush because you *always* have to have it your way!"
+                        
+                        gunner @ say "What other way is there?!"
+                        
+                        n "His pointed teeth sink into your arm, causing you to spazz out and throw him off you."
+                        n "He glares at you from a couple of feet away but instantly brightens up as soon as Ava swoops down like nothing even happened."
+                        
+                        ava @ say "Whew, I got some great shots up there! You guys alright?"
+                        
+                        gunner @ say "Yup! We were just play fighting. I let [name] win 'cause I'm such a nice guy."
+                        gunner @ say "The tent's all set up too! Just gotta fix the rain fly aaaannnd... done!"
+                        
+                        player "Yeah, just \"play\" fighting. I totally kicked his ass by the way, I dunno if you saw."
+                        
+                    else:
+                        n "He looks like he's about to pounce on you but decides it's not worth it."
+                        
+                        gunner @ say "Whatever dude. You'd never even get this tent set up without me."
+                        
+                        n "He quietly fixes the rain fly while you do your final checks on your parts."
+                        n "Ava swoops down and nods approvingly."
+                        
+                        ava @ say "Wow, nice work guys! It looks so comfy!"
+                        
+                        gunner @ say "Heh, it'll be nice and warm inside! Plenty of space for all of us, plus I splurged and bought the bear-proof fabric version so we can sleep in peace~"
+                        
+                        ava @ say "Nice! Sounds like you really thought of everything!"
+                        
+                        gunner @ say "Oh please, when you're this rich you can afford to sleep like royalty, even in these backwater no name woods."
+                        
+                        player "Kinda defeats the purpose of camping, doesn't it?"
+                        
+                        gunner @ say "Well you're free to sleep outside with all the mosquitoes and cougars and bears and homeless."
+                        
+                        player "...Nah, the tent's fine."
+                "Just fix your section":
+                    n "You're not going to play his immature games. You'll do your part and be done with it."
+            
+            
+            #finish making tent, cook meal, fade to black, start hearing something rustling and coming closer, ava may or may not cling to you or gunner for comfort. gunner's not scared until the bear cuts through the fabric, then you all run.
+            
+            ava @ say "Alright, that's enough shooting for today. Has anyone seen my lens cap?"
+            
+            n "Come to think of it, that rock you threw earlier might not have been a rock."
+            
+            
+            #get startled by a bear
+            #claire suplexes the bear
     
      
     
