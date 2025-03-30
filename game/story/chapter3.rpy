@@ -3406,12 +3406,45 @@ label chapter3AfterWeekend:
             
             n "The bird grabs the stick you had dropped and fixes a new marshmallow to the tip."
             
-            gunner @ say "Uh, are you forgetting about the wendigo right behind us?"
+            gunner @ say "Uh, are you forgetting about the crazy guy right behind us?"
             
-            ava @ say "We should be safe as long as we're near this fire!"
+            ava @ say "Claire will protect us!"
+        
+            claire @ say "You're being chased by someone?"
             
-            claire @ say "You guys found a wendigo?"
+            gunner @ say "Yeah this homeless guy invaded our tent and started heckling us for change. We barely managed to escape with our credit scores intact!"
+            gunner @ say "Then he started ranting about linux and free software... I've never been so scared in my life."
             
+            rori @ say "*cough*"
+            
+            claire @ say "Well don't you worry any further, if anyone steps foot in this camp I'll suplex them~"
+            
+            ava @ say "Aww, thanks Claire~"
+            
+            player "How do you manage to run into a psychotic computer nerd *this* far into the woods?"
+            
+            rori @ say "*Ahem!!!*"
+            
+            gunner @ say "Rori you're lucky you weren't there. This guy would have complained that you weren't running a deblobbed kernel."
+            
+            rori @ say "Oh he's one of those purists."
+            
+            ava @ say "I have no idea what that means but let's just try and put it all behind us."
+            ava @ say "I'm more surprised to see you all out here!"
+            
+            claire @ say "Well you went off to have your fun camping trip on your own which gave me the idea to do the same with these two!"
+            
+            gunner @ say "Wow, you got Rori to come outside? Did you blackmail him?"
+            
+            rori @ say "For your information, I was starting to enjoy my time out here!"
+            
+            ava @ say "Were you planning on staying the night? Where's your tent?"
+            
+            claire @ say "We were just gonna cuddle puddle~"
+            
+            player "Excuse me? What's a cuddle puddle?"
+            
+            claire @ say "You'll find out~"
             
             #do a little skip where they sorta explain it then cuddle puddle
             
@@ -3563,6 +3596,18 @@ label chapter3AfterWeekend:
                         
                         player "Yeah, just \"play\" fighting. I totally kicked his ass by the way, I dunno if you saw."
                         
+                        
+                        if avaPoints > 5:
+                            ava @ say "I'll take your word for it~"
+                        else:
+                            ava @ say "Suuuure, I believe you~"
+                            
+                        ava @ say "How about we get dinner started then huddle up inside the tent!"
+                        
+                        gunner @ say "Sounds good to me!"
+                        
+                        player "Yeah, some food would be nice."
+                        
                     else:
                         n "He looks like he's about to pounce on you but decides it's not worth it."
                         
@@ -3586,31 +3631,691 @@ label chapter3AfterWeekend:
                         player "...Nah, the tent's fine."
                 "Just fix your section":
                     n "You're not going to play his immature games. You'll do your part and be done with it."
+                    n "Dammit, he ended up finishing before you and now here comes Ava."
+                            
+                    ava @ say "Alright, that's enough shooting for today. Has anyone seen my lens cap?"
+                    
+                    gunner @ say "Nope."
+                    
+                    n "Come to think of it, that rock you threw earlier might not have been a rock."
+                    
+                    player "Yeah no. What's it look like?"
+                    
+                    ava @ say "Nevermind, I've got a spare in my bag."
+                    ava @ say "Nice work on the tent though! It looks so comfy!"
+                    
+                    player "It will be once I finish getting this peg into the- argh there we go!"
+                    
+                    gunner @ say "Heh, it'll be nice and warm inside! Plenty of space for all of us, plus I splurged and bought the bear-proof edition so we can sleep in peace~"
+                    
+                    ava @ say "Nice! Sounds like you really thought of everything!"
+                    
+                    gunner @ say "Oh please, when you're this rich you can afford to sleep like royalty, even in these backwater no name woods."
+                    
+                    player "Kinda defeats the purpose of camping, doesn't it?"
+                    
+                    gunner @ say "Well you're free to sleep outside with all the mosquitoes and cougars and bears and homeless."
+                    
+                    player "...Nah, the tent's fine."
+
+            scene bg black with dissolve
             
+            n "After a warm meal, the three of you retired to the tent, crawling inside your sleeping bags as the wind outside picked up."
+            n "The constant sound of leaves rustling and twigs snapping made it hard to fall asleep but eventually you could remain awake no longer."
             
-            #finish making tent, cook meal, fade to black, start hearing something rustling and coming closer, ava may or may not cling to you or gunner for comfort. gunner's not scared until the bear cuts through the fabric, then you all run.
+            scene bg black with fade
             
-            ava @ say "Alright, that's enough shooting for today. Has anyone seen my lens cap?"
+            n "An unknown amount of time passes before something stirs you awake."
+            n "You can't quite tell what it is at first but at some point you felt as if you weren't alone."
+            n "Aside than Ava and Gunner's presence, you felt as though there was someone else... watching you."
+            n "They could sense it too, judging by their stirring from slumber."
             
-            n "Come to think of it, that rock you threw earlier might not have been a rock."
+            gunner @ say "Mrrrrp. What time is it?"
+            gunner @ say "Wait, what is that?"
             
+            n "The cat's ears perk up, pointed in the direction of a subtle but steady sound of footsteps trudging through leaves."
             
+            ava @ say "Hmm? Is it morning already?"
+            
+            player "No, it's probably just a deer or something."
+            
+            gunner @ say "FUCK OFF DEER!!!"
+            
+            n "You get a zombie-like moan in return, followed by hurried footsteps approaching you directly."
+            
+            gunner @ say "I don't think that's a deer..."
+            
+            player "Way to go, you let him know our position!"
+            
+            gunner @ say "Chill, this ain't no cheap tent for poor people! Even if it's a bear we'll be safe."
+            
+            ava @ say "Still, all that separates us from a potentially murderous unknown entity all the way out here where no one can hear us scream is a millimeter of fabric..."
+            
+            n "The three of you hold your collective breath as the creature enters your campsite and begins rummaging through the containers and supplies you left outside the tent."
+            
+            if avaPoints > 5:
+                n "Ava clings to you, subtly shaking while staring at the opaque canvas of the tent that makes it impossible to tell what lies beyond."
+            
+            else:
+                n "Ava clings to Gunner subtly shaking while staring at the opaque canvas of the tent that makes it impossible to tell what lies beyond."
+            
+            n "Only audio cues can clue you in to what's happening outside."
+            n "Latches being flipped open, bags being unzipped, buttons coming undone..."
+            n "What sort of wild animal can do such things with so much precision?"
+            n "Finally a sillouette comes into view in front of the tent, followed by the zipper coming undone."
+            
+            fortune @ say "Hey, you have any change? Change for a poor guy down on his luck? God bless."
+            
+            gunner @ say "Holy fuck! It's a hobo!!"
+            
+            n "Gunner springs into action, kicking a pillow at the assailant. It bounces off his head ineffectively."
+            
+            fortune @ say "Would you like to buy my book on open source software? I'll sign it if you have a pen."
+            
+            gunner @ say "It's so over...!"
+            
+            ava @ say "Guys, close your eyes!"
+            
+            n "Ava grabs her camera and clicks the shutter release button, flashbanging the hobo and blinding him. The three of you take the opportunity to evacuate the tent."
+            n "Gunner takes the time to trap the hobo by zipping him inside the tent."
+            
+            fortune @ say "W-wait, I'll code printer drivers for food...!"
+            
+            gunner @ say "You get what you deserve, poorfag!"
+            
+            player "Was that really necessary?"
+            
+            gunner @ say "You have to be extremely cautious around these middle class folk. They're wild and unpredictable. They're known to bite you just for something as cheap as a solid gold wristwatch!"
+            gunner @ say "I felt my credit score dropping just by being near him."
+            gunner @ say "I knew I should have got the hobo-proof tent instead..."
+            
+            ava @ say "What do we do now?"
+            
+            n "The tent begins to collapse on itself as the hobo thrashes about inside it."
+            
+            gunner @ say "I say we make a break for it before he escapes!"
+            
+            ava @ say "Yeah, let's bail. This is NOT the kind of suave charismatic serial killer I always hoped to encounter."
+            
+            player "Yeah, he's just an average linux developer."
+            
+            fortune @ say "What you're referring to linux is actually GNU/linux or as I've recently taken to calling it, GNU+linux as..."
+            
+            n "You've seemingly enraged him and you can see his hooves pulling the tent frabric apart."
+            n "Now would be a good time to start running."
+            
+            player "OK I think we seriously need to leave."
+            
+            n "Ava takes to the skies while Gunner skitters ahead, leaving you to catch up on your endurance-hunter legs."
+            
+            #was originally going to be a bear but turns out to be the gnu hobo from earlier
             #get startled by a bear
             #claire suplexes the bear
     
+            n "After catching up to the others and running for your life for a few minutes, you see a light in the distance. Naturally, you're drawn to it. Fire good."
+            n "Gunner reaches it first but immediately gets thrown to the ground and pinned by a large figure."
+            n "Before you can even react, you're dragged down to the ground and held in place as well."
+            
+            claire @ say "Well well well, looks like I caught myself two more cuties~"
+            
+            n "Ava comes to your rescue, pecking at Claire's head."
+            
+            ava @ say "Get off them! They're *mine!*"
+            
+            claire @ say "Sheesh, you won't even share just a little?"
+            
+            n "The bunny rolls off of you and Gunner and you get a chance to look around."
+            n "Rori is sitting nearby, toasting a marshmallow above a campfire."
+            
+            rori @ say "Oh hey guys. Didn't expect to run into you tonight."
+            
+            gunner @ say "You and me both! What are you doing all the way out here?"
+            
+            rori @ say "Um, Claire wanted to go camping I guess but she said all her other friends were busy so she kinda dragged me along."
+            rori @ say "But it's okay because it actually turned out to be kinda fun!"
+            
+            gunner @ say "I'm glad at least one of us is having a good time. We got ambushed by this crazy homeless guy. I think we shook him off though."
+            
+            rori @ say "You mean there's some psycho stalking you in these woods?"
+            
+            claire @ say "Don't worry, I'll protect you all if he comes back!"
+            claire @ say "Now we can all camp together!"
+            claire @ say "Relax, grab a stick and some marshmallows, then we'll all cuddle puddle once the fire dies down~"
+            
+            player "Excuse me? What's a cuddle puddle?"
+            
+            claire @ say "You'll find out~"
+            
+            jump cuddlepuddle
      
     
-    
 label cuddlepuddle:
-    ""
+    n "The smoldering remains of the camp fire barely illuminated anything anymore as the night went on."
+    n "Ava and Gunner's mood lightened up considerably in the comfort of Claire and Rori, and you all felt right at home, joking and chattering away like normal."
+    #n "All that's missing is Mishka's coffee to sip on while "
+    n "The breeze has picked up, replacing the nice warm air with a chilling environment."
+    
+    claire @ say "*Yaaaawn*"
+    claire @ say "It's gettin' pretty late, isn't it?"
+    
+    ava @ say "Yeah, it's been a long day."
+    
+    gunner @ say "I don't think that hobo is coming for us after all."
+    
+    rori @ say "We better not get murdered in our sleep because you lured him to us."
+    
+    claire @ say "We'll all be fine, I can take on any forest critter~"
+    
+    player "Shall we get ready for bed then? I didn't bring a sleeping bag or anything..."
+    
+    claire @ say "That's alright, I'll keep you warm! Everyone come and get some snuggles, first come first serve!"
+    
+    n "Claire flops onto the ground, grabbing your hand on the way down and dragging you with her."
+    
+    player "Hey what-"
+    
+    n "She ends up lying on her side, holding you as her little spoon and enveloping you in warm, soft bunny."
+    
+    claire @ say "Who's next?"
+    
+    $ cuddlePuddleOrder = ["claire", "player", "", "", ""]
+    
+    menu:
+        "Rori":
+            $ roriPoints =+ 1
+            $ cuddlePuddleOrder[2] = "rori"
+            
+            player "Get over here, Rori!"
+            
+            rori @ say "*Bleat!*"
+            rori @ say "M-me?"
+            
+            player "There's no one else here named Rori, right?"
+            
+            claire @ say "Aw yeah, get some~"
+            
+            ava @ say "Claire shush, he's clearly shy about this."
+            
+            claire @ say "Sounds like he just needs a push!"
+            
+            ava @ say "Maybe he'd be more comfortable if the positions were swapped?"
+            
+            gunner @ say "There's no way Rori is anything but a bottom."
+            
+            menu:
+                "I'm bottom-er":
+                    $ cuddlePuddleOrder[2] = "player"
+                    $ cuddlePuddleOrder[1] = "rori"
+                    
+                    player "Oh yeah? What does that make me if I'd bottom for Rori?"
+                    
+                    ava @ say "OvO"
+                    
+                    gunner @ say "Gaaaaaay"
+                    
+                    claire @ say "Hawt"
+                    
+                    rori @ say "*sigh*"
+                    rori @ say "Move over. I can be a service top."
+                    
+                    n "Rori drags you out of Claire's clutches and takes your spot before pulling you into his grasp."
+                    n "His fur is much more stiff and coarse than the rabbit's but somehow you feel even more comfortable."
+                    
+                    rori @ say "There, happy?"
+                    
+                    player "Y-ye..."
+                    
+                    rori @ say "Adorable~"
+                    
+                    n "He buries his snout in your hair, his warm breath beating against the back of your neck."
+                    
+                    claire @ say "Okay, who's next?"
+                    
+                    menu:
+                        "Ava":
+                            $ cuddlePuddleOrder[3] = "ava"
+                            $ cuddlePuddleOrder[4] = "gunner"
+                            
+                            ava @ say "Me me me!"
+                            
+                            n "Ava flutters over and settles in front of you. You wrap your arms around her and snuggle her close."
+                            
+                            gunner @ say "Aw, no fair."
+                            
+                            ava @ say "Did you really want my place right in front of [name] that bad?"
+                            
+                            gunner @ say "This is the problem with cuddle puddles."
+                            
+                            n "Gunner resigns himself to the innermost part of the pile of fluffy critters + you. Claire wraps herself around you all, providing a nice warm blanket."
+                            
+                        "Gunner":
+                            $ cuddlePuddleOrder[3] = "gunner"
+                            $ cuddlePuddleOrder[4] = "ava"
+                            
+                            gunner @ say "Hands off my waifu."
+                            
+                            n "Gunner slides in next. You're not sure if you're supposed to put your arms around him or what."
+                            
+                            gunner @ say "It's not gay if it's a cuddle puddle, everyone knows that."
+                            
+                            claire @ say "Formally, yes, but we're all using our imagination here."
+                            
+                            ava @ say "Breeee~"
+                            ava @ say "Here, you can snuggle me to take your mind off [name] being right behind you~"
+                            
+                            n "With Ava taking the final position, Claire wraps herself around the fluffy pile, providing a nice warm blanket."
+                            
+                "Come get topped Rori":
+                    player "Come get topped, Rori. In a non-sexual way."
+                    
+                    rori @ say "Of course. This is a cuddle puddle after all. No sexo."
+                    
+                    if roriPoints > 4:
+                        n "He says that and then pushes his butt right up against your crotch as he lays down."
+                    else:
+                        n "You nervously wrap your arms around him."
+                
+                    claire @ say "Who's next?"
+                    
+                    menu:
+                        "Ava":
+                            $ cuddlePuddleOrder[3] = "ava"
+                            $ cuddlePuddleOrder[4] = "gunner"
+                            
+                            gunner @ say "Do I have to choose?"
+                            
+                            claire @ say "You either let the gay goat snuggle your waifu or you bottom for him."
+                            
+                            rori @ say "Excuse me, I am a *ram!*"
+                            
+                            ava @ say "I don't mind going next! I bet Rori's a great snuggler!"
+                            
+                            rori @ say "*Gulp*"
+                            rori @ say "Y-yeah..."
+                            
+                            n "Ava casually nestles into Rori, who seems reluctant to move his arms around her."
+                            
+                            ava @ say "Lighten up! It's just friendly cuddles!"
+                            
+                            n "She has to practically drag Rori by the hoof to snuggle her."
+                            
+                            rori @ say "S-sorry..."
+                            
+                            gunner @ say "Alright, my turn. Lemme show ya how it's done!"
+                            
+                            n "Gunner slides into the final position of the cuddle puddle and arches his back into Ava, stretching his arms out."
+                            
+                            ava @ say "Aww~ Who's a good kitty?~"
+                            
+                            gunner @ say "Meeee~ :3"
+                            
+                            n "Claire wraps herself around the fluffy pile, providing a nice warm blanket for all."
+                            
+                        
+                        "Gunner":
+                            $ cuddlePuddleOrder[3] = "gunner"
+                            $ cuddlePuddleOrder[4] = "ava"
+                        
+                            gunner @ say "This is bullshit, why do I have to bottom for Rori?"
+                            
+                            ava @ say "At least you get me all to yourself~"
+                            
+                            gunner @ say "Rori, I swear if you get a boner..."
+                            
+                            rori @ say "Trust me, I won't."
+                            
+                            ava @ say "Nobody will mind if you do though!"
+                            
+                            gunner @ say "Yeah yeah, now get over here, birdie~"
+                            
+                            n "Gunner reluctantly gets into position in front of Rori, trying his best to ignore him while he snuggles his bird."
+                            
+                            n "Claire wraps herself around the fluffy pile, providing a nice warm blanket for all."
+            
+        "Ava":
+            $ avaPoints =+ 1
+            $ cuddlePuddleOrder[2] = "ava"
+            
+            player "Maybe Ava?"
+            
+            if avaPoints > 4:
+                ava @ say "I'd love to!"
+            else:
+                ava @ say "Hmmm... alright!"
+                
+            n "Ava nestles in comfortably in your grasp."
+                
+            gunner @ say "Lucky bastard..."
+            
+            menu:
+                "Gunner next":
+                    n "Gunner slides right in after Ava."
+                    
+                    gunner @ say "What? It's only natural I'd get this spot."
+                    
+                    player "Why, so you can snuggle ram butt?"
+                    
+                    rori @ say "Y'know, I could just sleep over there, it's fine really."
+                    
+                    claire @ say "Nope! The rules state that everyone has to get in on the cuddle puddle!"
+                    
+                    rori @ say "Really? What rules?"
+                    
+                    claire @ say "Just get in before ya freeze to death!"
+                    
+                    rori @ say "Ugh, fine."
+                    
+                    n "Claire wraps herself around the fluffy pile, providing a nice warm blanket for all."
+                            
+                "Rori next":
+                    player "Rori? You wanna join us?"
+                    
+                    rori @ say "W-what? Why me?"
+                    
+                    gunner @ say "What kinda game are you playing, [name]? That spot is obviously reserved for me!"
+                    
+                    ava @ say "I don't mind! Everyone deserves a fair chance in the cuddle puddle!"
+                    
+                    rori @ say "O-okay..."
+                    
+                    n "Rori hesitantly flops onto his side in front of Ava. She pulls him closer in a friendly embrace but you can tell he's uncomfortable."
+                    
+                    rori @ say "Alright, I guess it's your turn now Gunner."
+                    
+                    gunner @ say "Is this really what you wanted to see?"
+                    
+                    claire @ say "Yup."
+                    
+                    ava @ say "Yes."
+                    
+                    menu:
+                        "Yeah":
+                            player "Yeah."
+                        "Not really":
+                            player "It's not really what I had in mind but it's too late to change the order now."
+                            
+                    gunner @ say "Fujoshis, I swear..."
+                    
+                    n "Gunner rolls his eyes and slides in in front of Rori."
+                    
+                    gunner @ say "Just don't get any funny ideas, ram."
+                    
+                    rori @ say "Trust me, you're not my type."
+                    
+                    n "Claire wraps herself around the fluffy pile, providing a nice warm blanket for all."
+                            
+        "Gunner":
+            $ gunnerPoints =- 1
+            $ avaPoints =+ 1
+            $ cuddlePuddleOrder[2] = "gunner"
+        
+            player "Get over here, Gunner!"
+            
+            gunner @ say "What? Why? I wanna cuddle puddle with Ava!"
+            
+            claire @ say "I vote for Gunner next."
+            
+            ava @ say "Me too!"
+            
+            rori @ say "Yeah, Gunner's next."
+            
+            gunner @ say "Fine fine. It's not gay if it's a cuddle puddle, everyone knows that."
+            
+            menu:
+                "Rori next":
+                    $ roriPoints =- 1
+                    $ cuddlePuddleOrder[3] = "rori"
+                    $ cuddlePuddleOrder[4] = "ava"
+                    
+                    player "Good, because Rori's next."
+                    
+                    rori @ say "W-what?"
+                    rori @ say "Why me??"
+                    
+                    player "Because it's funny."
+                    
+                    gunner @ say "...Seriously?"
+                    
+                    claire @ say "Come on, we don't judge!"
+                    
+                    ava @ say "Three boys in a row though OvO"
+                    
+                    claire @ say "Keep your pants on, girl~"
+                    claire @ say "That leaves you last! Enjoy some ram snuggles~"
+                    
+                    ava @ say "Well... I can't say I ever expected this. But anything goes when you're in the cuddle puddle!"
+                    
+                    rori @ say "This feels like the least optimal configuration... no offense Ava."
+                    
+                    ava @ say "Don't worry about it haha. At least I don't have to worry about anything sticking me from behind *chirp!*"
+                    
+                    n "Gunner desperately tries to reach his paws over Rori and to touch Ava's feathers."
+                    
+                    gunner @ say "It's not faaaaaiiiirrr!"
+                    
+                    rori @ say "Tell me about it."
+                    
+                    n "Claire wraps herself around the fluffy pile, providing a nice warm blanket for all."
+                            
+                "Ava next":
+                    $ cuddlePuddleOrder[3] = "ava"
+                    $ cuddlePuddleOrder[4] = "rori"
+                    
+                    gunner @ say "But Ava's coming up in front of me >:3"
+                    
+                    n "Ava nestles in in front of Gunner, being pulled in for some tight snuggles."
+                    
+                    ava @ say "*Chirp!* Rori you're next!"
+                    
+                    rori @ say "S-sure um... I've never done this before so..."
+                    
+                    ava @ say "No need to be shy! C'mere!"
+                    
+                    n "Ava welcomes him in with open wings, nuzzling him as he joins the cuddle puddle."
+                    
+                    rori @ say "This feels so awkward."
+                    
+                    n "Claire wraps herself around the fluffy pile, providing a nice warm blanket for all."
+                            
+    claire @ say "Everyone comfy?"
+            
+    n "A collection of murmured agreement fills the air. You have to admit, this is a pretty nice arrangement. You can hardly feel the cold night air at all."
+    
+    claire @ say "Y'know, I'm glad to have friends now who'll do this with me."
+    claire @ say "I always got excluded from the cuddle puddle at sleepovers."
+    
+    ava @ say "No way, me too!"
+    ava @ say "I dunno what everyone's problem was with me, so this is like my first time!"
+    
+    rori @ say "Really? I thought only the quiet unpopular guys like me never got invited to them."
+    
+    player "I never had the opportunity either so this is me losing my cuddle orgy virginity too."
+    
+    claire @ say "Ahem, this is a cuddle *puddle* not an orgy, [name]."
+    
+    player "Sorry."
+    
+    gunner @ say "You guys have seriously never done this? I've been in at least a dozen puddles."
+    
+    claire @ say "Nope! Never had a boyfriend either. Or a girlfriend. Didn't really have friends at all in high school come to think of it."
+    
+    ava @ say "Same! I was always so focused on studies but... I guess people just tended to not like me for some reason."
+    
+    rori @ say "Wow, I guess we have more in common than I thought. You two always seemed like the preppy popular girls in school."
+    
+    player "Yeah I thought femcels were a myth."
+    
+    ava @ say "We're cursed I tell you!"
+    
+    gunner @ say "How can *you* be a femcel when I'm literally right here? Female celibacy is always voluntary."
+    
+    ava @ say "W-well that's because..."
+    ava @ say "I can't decide if you're the right one for me!"
+    ava @ say "I mean I *do* like you but... maybe there's someone else I like more?"
+    
+    gunner @ say "Aw man..."
+    
+    ava @ say "It's super confusing I know, and I'm not equipped to understand these feelings either."
+    ava @ say "I'm not saying we don't have a future together, I'm just trying to navigate the whole thing in my head before I go diving in!"
+    
+    claire @ say "I get you Ava, you may have feelings for Gunner but how could anyone resist [name]?~"
+    claire @ say "I gotta snatch up that last human boy on Earth before someone else does!"
+    
+    rori @ say "Is that the only reason you're into him?"
+    
+    claire @ say "W-well it may have been before I got to know him..!"
+    claire @ say "But now I see him as a sweet kindhearted loveable goofball who's mine!!!"
+    claire @ say "The first time ever I held a boy's hand was with [name]! We're meant to be together!"
+    
+    player "Wait you have a crush on me?"
+    
+    n "The whole group groans in frustration."
+    
+    gunner @ say "Dude..."
+    
+    ava @ say "From day one this bunny has been trying to get you in her bed."
+    
+    rori @ say "Even I could tell she's dying to make you her boyfriend."
+    
+    claire @ say "I guess the jig is up huh?"
+    claire @ say "Yeah it's kinda true!"
+    claire @ say "I want you [name]~"
+    
+    n "Wow, that's a lot to take in. You never would have imagined such a thing."
+    
+    player "This whole time I thought you were just being friendly!"
+    
+    gunner @ say "How oblivious can you be?!"
+    
+    player "Sorry, I dropped out of school and lived in almost complete isolation since I was like 13. I don't really have a great source of context for this sort of thing."
+    player "You're really nice Claire, but I'll have to think about us being together."
+    player "I'm not shooting you down just yet but I don't wanna get your hopes up."
+    
+    claire @ say "Wow uh"
+    claire @ say "Y-yeah that's fair haha"
+    claire @ say "Don't worry about it, this doesn't affect our friendship at all we can still be friends"
+    claire @ say "I was just throwin' it out there that I like you ya know?"
+    
+    player "I appreciate the straightforwardness."
+    
+    if avaPoints > 4:
+        ava @ say "Yeah if it wasn't clear I'm kinda into you too. [name]."
+        
+        player "Whaaaat?! Two chicks are into me? Why??"
+        
+        ava @ say "I just think you're really sincere and smart and you're fun to be around."
+        ava @ say "Is that a normal reason to be into a guy? I'm not sure."
+    
+    if roriPoints > 4:
+        rori @ say "While we're at it, I might as well say I think you're pretty swell, [name], and I'd probably go out with you if you asked."
+        
+        player "Holy moly, that's a bombshell!"
+        player "Am I being pranked right now?"
+        
+        rori @ say "No dude, you're chill. I'd totally kiss and play video games or do whatever gay couples do."
+    
+    gunner @ say "You're telling me none of you nerds have ever been in a relationship before?"
+    
+    player "Sorry not everyone can be Chad Thundercock with a gazillion dollars to throw at whatever you fancy."
+    
+    gunner @ say "Hey, girls don't like me for my money, it's my charm that does all the heavy lifting."
+    
+    rori @ say "What charm?"
+    
+    gunner @ say "You know. Being smooth. Suave. Cool. Handsome and muscular. Funny. Pretending to be sensitive but not too much of a pussy."
+    
+    rori @ say "Ugh. Why can't girls just be attracted to someone who is just themselves?"
+    
+    ava @ say "Plenty of girls like a regular, genuine guy!"
+    
+    rori @ say "Yeah but it's so hard to even just *talk* to girls. I always feel like I'm gonna scare them off by being too nerdy or say something awkward."
+    rori @ say "You'd probably never hang out with me if not for this being an established friend group."
+    
+    claire @ say "I invited you to come camping with me alone, didn't I?"
+    
+    rori @ say "Well yeah but, that's only because you got kicked out of Ava and Gunner's plans."
+    rori @ say "I guess I just don't feel a sort of comradery with females. Like we just don't have enough in common to really be on the same side."
+    rori @ say "They're just this weird intimidating creature that looks down on you for no reason?"
+    
+    ava @ say "Aww Rori, I had no idea you felt that way."
+    ava @ say "We see you as our friend, but you have to admit you *are* pretty shy. Maybe if you opened up more you'd feel more welcome."
+    
+    rori @ say "Yeah thanks, but I've seen what happens when guys \"open up\" to girls."
+    
+    gunner @ say "Hey, a lot of girls are like that but not all of them."
+    gunner @ say "I feel like Ava's one of the good ones. Claire's fine too, just not my type."
+    gunner @ say "There was a girl I dated in high school who was everything I didn't know I needed. Nicest girl you can imagine."
+    gunner @ say "Only problem was that she was a human, so you can guess how that ended."
+    
+    player "..."
+    player "I'm sorry dude."
+    player "That really sucks."
+    
+    gunner @ say "Yeah thanks. What can you do though?"
+    
+    player "You know, I haven't really thought much about it. By "\"it\" I mean like my legacy and stuff that I'll leave behind as the last human."
+    
+    claire @ say "Have you considered getting this rabbit pregnant?"
+    
+    ava @ say "Humans can't impregnate rabbits."
+    
+    claire @ say "You don't know that! Maybe nobody has tried hard enough!"
+    
+    player "I guess that's an option."
+    player "I meant more like what my dreams and goals are. What I wanna get out of my life."
+    player "Because right now I haven't really got anything."
+    
+    rori @ say "Whatever it ends up being, I'm happy to be a part of that journey!"
+    
+    ava @ say "Same! You guys are like, something special."
+    
+    gunner @ say "This is definitely one of my more memorable friend groups."
+    
+    claire @ say "Crazy to think we've only known each other for like 2 months but it feels like 2 years."
+    
+    player "Aww, thanks guys~"
+    player "I didn't really know what I was getting into coming to this university but you're more than I could have asked for."
+    
+    n "Claire squeezes the cuddle puddle together tightly."
+    
+    claire @ say "I love you guys~"
+    
+    ava @ say "Love you too, Claire~"
+    
+    gunner @ say "I'm kinda jealous how girls can say they love each other, but when homies say it, it's kinda gay."
+    
+    rori @ say "Yeah. It's too much, even for me."
+    
+    player "How about we just say we enjoy each others' company?"
+    
+    gunner @ say "That works for me."
+    
+    rori @ say "I'm gettin' a bit sleepy."
+    rori @ say "Goodnight you all. I enjoy your company~"
+    
+    claire @ say "Nini Rori!"
+    
+    ava @ say "I can barely keep my eyes open too. Night guys!"
+    
+    claire @ say "Nini Ava!"
+    
+    gunner @ say "I'll keep an eye half open in case that hobo returns but yeah, goodnight everyone."
+    
+    claire @ say "Nini Gunner!"
+    
+    player "*Yawn*"
+    player "I guess it's our turn now huh?"
+    
+    claire @ say "Yup!"
+    claire @ say "Nini [name]!"
+    
+    player "Goodnight Claire."
+    
+    n "You close your eyes, sandwiched between your fluffy friends, finding comfort in their warmth."
+    
+    scene bg black with fade
 
-            #view of the sky while everyone talks, no sprites visible
-            #the whole cuddle puddle scene is about revelations
-                #find out claire has a crush on you
-                #find out rori is intimidated by women
-                #find out ava can't decide between you and gunner
-                #find out gunner is insecure about something
-                #reveal something about yourself
+    #view of the sky while everyone talks
     
     
     
