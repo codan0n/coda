@@ -4253,7 +4253,7 @@ label cuddlepuddle:
     
     gunner @ say "Yeah thanks. What can you do though?"
     
-    player "You know, I haven't really thought much about it. By "\"it\" I mean like my legacy and stuff that I'll leave behind as the last human."
+    player "You know, I haven't really thought much about it. By \"it\" I mean like my legacy and stuff that I'll leave behind as the last human."
     
     claire @ say "Have you considered getting this rabbit pregnant?"
     

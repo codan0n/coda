@@ -181,7 +181,7 @@ define y_lina = 1470
 define y_ava = 1465
 define y_mishka = 1550
 define y_roth = 1750
-define y_nicodemus = 1550
+define y_nicodemus = 1400
 define y_trish = 1300
 define y_fortune = 1100
 
@@ -212,18 +212,18 @@ define config.say_attribute_transition_layer = "master"
 layeredimage nicodemus neutral:
     at sprite_highlight('nicodemus')
     always:
-        'images/characters/nicodemus neutral.png'
-    group lighting:
-        xzoom .9
-        yzoom .90
-        pos (600,156)
-        attribute light:
-            'images/characters/rose/rose athletic dismissive.png'
+        'images/characters/nicodemus/nicodemus neutral.png'
+#    group lighting:
+#        xzoom .9
+#        yzoom .90
+#        pos (600,156)
+#        attribute light:
+#            'images/characters/rose/rose athletic dismissive.png'
     group saying:
         #xysize(1920,1080)
-        xzoom .9
+        xzoom -.9
         yzoom .90
-        pos (600,156)
+        pos (670,-83)
         attribute say:
             "images/bubble.png"
 

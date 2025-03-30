@@ -28,7 +28,7 @@ label chapter1:
 
 
 
-#    scene bg campus with fade
+#    scene bg campus summer day clear with fade
 #    
 #    show gunner neutral at left
 #    show rori neutral at right
@@ -162,7 +162,8 @@ label chapter1:
     
     ########
     
-    scene bg campus_sunny_day with dissolve
+    #scene bg campus summer day clear_sunny_day with dissolve
+    scene bg campus summer day clear with dissolve
     #background names can't have capital letters
     
     play music "audio/music/vylet - Hard to Say Anything.ogg" fadein .4
@@ -176,7 +177,7 @@ label chapter1:
     nicodemus @ say "...that about concludes our tour of Harmonia's campus. What did you think? Not too pretentious, I hope! Bahahaha!"
     nicodemus @ say "I'm reminded of when I was a new student here myself. A bit nervous but so full of wonder and excitement! It felt like anything was possible!"
     nicodemus @ say "Forging lifelong friendships! Making a name for myself in the academic community! Joining clubs and causing a ruckus!"
-    nicodemus @ say "Why, I even found the love of my life sitting under that cedar tree over there."
+    nicodemus @ say "Why, I even found the love of my life sitting under that oak tree over there."
     nicodemus @ say "My point is, anybody can blow through four years of university, get their diploma and proceed with their life like it never even happened."
     nicodemus @ say "But I implore you to really make the most of what you've been given!"
     nicodemus @ say "Study hard but take some time to search for something that makes you happy, whether that's being with friends or making your mark on society or just living in the moment!"
@@ -253,7 +254,7 @@ label nicodemusQuestions:
             n "You've been trying not to think about it, but that's what your species will be once you die."
             n "All that will be left of you are stories and photographs."
             
-            scene bg campus_sunny_day with dissolve    
+            scene bg campus summer day clear with dissolve    
             
             show box with Dissolve(.2):
                 ypos 0      
@@ -776,7 +777,7 @@ label college_orientation:
 
     n "Thank goodness they finally decided to move out of the way. The bunny alone was blocking the double doors leading outside."
 
-    scene bg campus with dissolve
+    scene bg campus summer night clear with dissolve
 
     play music "audio/ambient/outdoors night crickets.ogg" fadein .4
 
@@ -1089,7 +1090,7 @@ label exploring_campus:
 
     stop music fadeout 1.0
 
-    scene bg campus with fade
+    scene bg campus summer day clear with fade
 
     play music "audio/music/vylet - there.ogg" fadein .5
 
@@ -1680,7 +1681,7 @@ label exploring_campus:
 
     stop music fadeout 1.0
 
-    scene bg campus with dissolve
+    scene bg campus summer day clear with dissolve
 
     play music "audio/ambient/outdoors people talking.ogg" fadein .5
 
@@ -1888,7 +1889,7 @@ label firstDayOfClass:
 
     stop music fadeout 1.0
 
-    scene bg campus with fade
+    scene bg campus summer day clear with fade
 
     play music "audio/ambient/outdoors people talking.ogg" fadein .5
 
@@ -2430,7 +2431,7 @@ label secondDayOfClass:
         
     stop music fadeout 1.0
 
-    scene bg campus with fade
+    scene bg campus summer day clear with fade
 
     show box with Dissolve(.2):
         ypos 0
@@ -2818,7 +2819,7 @@ label thirdDayOfClassStats:
 
     stop music fadeout .5
 
-    scene bg campus with fade
+    scene bg campus summer day clear with fade
 
     play music "audio/music/vylet - Our Light and After (ft. Pepper Mei).ogg" fadein .5
 
@@ -4174,7 +4175,7 @@ label afterAvaText1:
         n "You could be a responsible student and study to make up for the class time you missed... or you could go out on a nightwalk on campus."
         n "You know which one your heart is telling you."
         
-        scene bg campus with fade
+        scene bg campus summer day clear with fade
         
         play music "audio/music/vylet - yeah i'm ok thanks for asking.ogg" fadein .4
         
@@ -4498,7 +4499,7 @@ label thursday1:
 
     stop music fadeout 1.0
 
-    scene bg campus with fade
+    scene bg campus summer day clear with fade
 
     #play sound "audio/ambient talking.ogg" fadein .5
     play music "audio/music/Vylet Pony - Cozy Pone.ogg"
@@ -4835,7 +4836,7 @@ label friday1:
     n "You've made it to the end of your first week back in school."
     n "Just have to get today's classes knocked out, then you'll be free for two whole days."
     
-    scene bg campus with fade
+    scene bg campus summer day clear with fade
     
     play music "audio/ambient/outdoors people talking.ogg" fadein .5
     
@@ -5307,7 +5308,7 @@ label rooftop_party:
 
     stop music fadeout .5
 
-    scene bg campus with dissolve
+    scene bg campus summer day clear with dissolve
 
     #play sound "audio/ambient/outdoors night crickets.ogg" fadein .4
     play music "audio/music/vylet - wish.ogg"
