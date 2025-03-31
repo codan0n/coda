@@ -26,7 +26,11 @@ label chapter3:
 
     player "Actually I was eyeing that cinnamon roll."
 
+    show mishka standing tongueout
+    
     mishka @ say "Oh lucky you, it's our last one! They sell out very quickly!"
+    
+    show mishka neutral standing
 
     player "They must be good if everyone wants one!"
     
@@ -34,22 +38,29 @@ label chapter3:
 
     mishka @ say "Yes, fully of sugar and sweetness! When I first came to America I had no concept of a 'cinnamon roll' but it soon became a favorite of mine hehe!"
     
-    show mishka neutral
+    show mishka neutral standing
 
     player "I'll take it to go please. I have to be in class in a few minutes."
+    
+    show mishka neutral standing wink 2
 
     mishka @ say "Gotchya!"
+    
+    show mishka neutral standing -
 
     n "Mishka places the pastry in a bag and slides it over to you as you swipe your card through the machine."
     
-    show mishka winki
+    show mishka none
+    show mishka neutral
 
     mishka @ say "Spasibah! Have great day!"
     
-    show mishka neutral
+    n "The door to the cafe opens and the clacking of high heels approaches the counter in a hurry."
+    
+    show mishka neutral standing
     
     show margaret neutral at offscreenright:
-        yalign 0
+        ypos y_margaret
     
     #hide mishka with dissolve
 
@@ -58,19 +69,23 @@ label chapter3:
     pause .2
 
     show margaret neutral:
-        xpos 350
+        xpos 900
         ypos y_margaret
     show mishka:
-        xpos -440
+        xoffset -425
     with move
 
-    margaret @ say "Oh hello there, [name]. I guess we're both cutting it short on time before class today, aren't we?"
+    margaret @ say "Oh, hello there, [name]! I guess we're both cutting it short on time before class today, aren't we?"
     
     player "Good morning Ms. Ellen. Sorry but Coffee Zone is worth being late for!"
     
+    show mishka anxious smile
+    
+    mishka @ say "Heh, it's nothing special, really..."
+    
     margaret @ say "I wouldn't be here right now if it wasn't!"
     
-    mishka @ say "Oh you~"
+    show mishka neutral standing
     
     margaret @ say "We're just having a quiz today so this gives students some extra time to prepare."
     
@@ -115,7 +130,7 @@ label chapter3:
 
             margaret @ say "Oh my goodness, I'm flattered but a teacher could never accept such a gift from a student!"
             
-            show mishka neutral
+            show mishka neutral standing
 
             player "No really, I just remembered I'm not supposed to eat sugary things when I'm on these pills so..."
 
@@ -178,7 +193,7 @@ label chapter3:
                 n "You just write something that kinda makes sense and turn it in when you're done."
 
         "Don't offer Miss Ellen your cinnamon roll":
-            show mishka neutral
+            show mishka neutral standing
             
             player "Better luck next time."
 
@@ -206,7 +221,8 @@ label chapter3:
             
             play music "audio/music/mere - retrograde.ogg" fadein .5
 
-            show margaret neutral at center with dissolve
+            show margaret neutral at center with dissolve:
+                ypos y_margaret
 
             show box with Dissolve(.2):
                 ypos 0
@@ -214,6 +230,9 @@ label chapter3:
             margaret @ say "Good morning class! I hope you studied well for today's quiz!"
 
             n "Ms. Ellen hands out papers to everyone, glaring at you as she hands you yours."
+            
+            hide margaret with dissolve
+            
             n "She isn't still mad about the cinnamon roll thing, is she?"
             n "Hopefully she doesn't take it out on your grades."
 
@@ -223,6 +242,9 @@ label chapter3:
             else:
                 n "After looking over the quiz and realizing you're not prepared to answer any of these questions, you begin to regret not giving up your cinnamon roll this morning."
                 n "You do the best you can and sheepishly turn it in."
+                
+    show margaret neutral at center with dissolve:
+        ypos y_margaret
             
     margaret @ say "...Is that everyone's?"
     
@@ -239,12 +261,16 @@ label chapter3:
     
     scene bg campus summer day clear with fade
     
+    show box with Dissolve(.2):
+        ypos 0
+    
     n "Getting out of your first class of the day early sucks because you have to loiter around waiting for your next class."
     n "The minutes pass by and students gradually pour out from the buildings surrounding you."
     n "One of those students notices your idleness and makes a beeline for you."
     
     show claire flannel happy at center with dissolve:
         ypos y_claire
+        matrixcolor BrightnessMatrix(0.05)
         
     claire @ say "[name]!!! Ohmygosh you waited out here for me???"
     
@@ -308,44 +334,91 @@ label chapter3:
             celestine @ say "Hmm, not quite. You've used the passé form here, which would be like saying \"I did my homework\" or \"I have done my homework.\""
             celestine @ say "I asked specifically for \"I was doing my homework\" which would be \"Je faisais mes devoirs.\""
             celestine @ say "Note that we use je instead of j'ai. See the difference? Anyway, moving on..."
+            
+    n "Mrs. Celestine rambles about grammatical rules for the rest of the class duration."
         
     scene bg campus summer day clear with fade
     
-    show ava happy at center:
+    show box with Dissolve(.2):
+        ypos 0
+        
+    n "After class you met up with Ava as usual."
+    
+    show ava casual happy at center:
         ypos y_ava
+        xoffset 400
+        matrixcolor BrightnessMatrix(0.05)
     show claire flannel happy at center:
         ypos y_claire
+        xoffset -400
+        xzoom -1
+        matrixcolor BrightnessMatrix(0.05)
     with dissolve
     
     ava @ say "...You two have any plans after class?"
     
     claire @ say "Mmmh nope! Why?"
     
+    show ava casual excited
+    
     ava @ say "I wanted to see if you wanted to go out shooting with me!"
+    
+    show claire flannel derp
+    show ava casual happy
     
     claire @ say "I would but I didn't bring my gun!"
     
-    ava @ say "I meant with cameras. I'll even let you borrow one!"
+    show ava casual unamused
+    
+    ava @ say "I meant with cameras."
+    
+    show ava casual happy
+    
+    ava @ say "I'll even let you borrow one!"
     ava @ say "I just love shooting in autumn, it's my favorite season."
+    
+    show ava casual whimsical
+    
     ava @ say "The leaves are so pretty, especially at sunset~"
+    
+    #show ava casual happy
     
     player "I'd love to join you but I've got a doctor's appointment later today."
     
+    show ava casual concerned
+    show claire flannel surprised earsup
+    
     ava @ say "Aww, hopefully it's nothing serious?"
     
+    claire @ say "Yeah, we can't have our [name] dyin' on us!"
+    
     player "Just a checkup."
+    
+    show claire flannel happy
+    show ava casual happy
     
     ava @ say "Well, if you ever have a moment to go shooting, just let me know!"
     
     player "I will. See you two later!"
     
+    show ava casual excited
+    
     ava @ say "See ya!"
     
+    show claire flannel derp
+    
     claire @ say "Byeee~"
+    
+    hide claire
+    hide ava
+    with dissolve
     
     n "You wave goodbye as Claire and Ava head to their next classes."
     
     scene bg hospital with fade
+    
+    show box with Dissolve(.2):
+        ypos 0
     
     n "After checking in to the hospital, a nurse did the routine blood pressure and temperature tests, then left you alone to wait for the doctor."
     n "Your muscles tense up as your mind wanders, fearing the worst."
@@ -426,6 +499,9 @@ label chapter3:
     n "Maybe it really is some random disease like when your stomach hurts for a little too long and it'll go away eventually."
     
     scene bg codadorm with fade
+    
+    show box with Dissolve(.2):
+        ypos 0
     
     n "With your pills in hand, you returned to your dorm for the evening but you're still too giddy to go to sleep."
     n "You legit thought you might be dying and were ready to give up on everything, but now you have a future to look forward to."

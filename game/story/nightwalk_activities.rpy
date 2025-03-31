@@ -1,7 +1,7 @@
 ###nightwalk events
 
 label roseNightWalkLvl1:
-    scene bg campus with fade
+    scene bg campus summer night clear with fade
     
     show box with Dissolve(.2):
         ypos 0
@@ -145,7 +145,7 @@ label gunnerNightWalkLvl3:
 label avaNightWalkLvl1:
     # see ava and gunner walking together, flirting. They're surprised to see you.
     
-    scene bg campus with fade
+    scene bg campus summer night clear with fade
     
     show box with Dissolve(.2):
         ypos 0
@@ -175,28 +175,50 @@ label avaNightWalkLvl1:
         ypos y_gunner
         xoffset -670
         xzoom -1
+    with dissolve
     
     gunner @ say "Sup [name]!"
     
+    show ava typical excited
+    
     ava @ say "Hii [name]! What are you doing out so late?"
     
+    show ava typical happy
+    
     player "Hey guys. I just couldn't sleep so I went out for a walk. Then I overheard you two uh... chatting."
+    
+    show ava reaching concerned
     
     ava @ say "O-oh yeah? Just how much did you hear?"
     
     player "Not much, just that Gunner's an art guy now apparently."
     
-    gunner @ say "You know it! I was telling Ava earlier about how much I admire Ansel Adams' deep contrast in his black and white photography."
+    show gunner eyesclosed catface
+    show ava typical shy
     
-    ava @ say "Truly a pioneer!"
+    gunner @ say "You know it!"
+    
+    show gunner determined
+    
+    gunner @ say "I was telling Ava earlier about how much I admire Ansel Adams' deep contrast in his black and white photography."
+    
+    show ava typical overjoyed
+    show gunner optimistic
+    
+    ava @ say "Truly a pioneer in his field!"
+    
+    show gunner neutral
     
     player "Riiiight. Are you sure you didn't just look up who the most famous photographer is 5 minutes before your little hangout?"
+    
+    show gunner annoyed
+    show ava typical concerned
     
     gunner @ say "What are you trying to say, bro?"
     
     menu:
         "Chastise him":
-            player "That you're a manipulative fraud who's only personality is having money."
+            player "That you're a manipulative fraud who's only personality is having money!"
             
             gunner @ say "Spoken like a true poor. You let your jealousy blind you to the fact that I'm a real person with real beliefs, ideas, and values."
             
@@ -789,7 +811,7 @@ label ellenNightWalkLvl3:
     
     
 label roriNightWalkLvl1:
-    scene bg campus with fade
+    scene bg campus summer night clear with fade
     
     show box with Dissolve(.2):
         ypos 0

@@ -226,7 +226,177 @@ layeredimage nicodemus neutral:
         pos (670,-83)
         attribute say:
             "images/bubble.png"
-
+            
+layeredimage ava casual excited:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava casual excited.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava glowy angry:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava glowy angry.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava glowy concerned:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava glowy concerned.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava glowy embarrassed:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava glowy embarrassed.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava glowy excited:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava glowy excited.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava glowy flattered:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava glowy flattered.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava glowy grouchy browless:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava glowy grouchy browless.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava glowy grouchy:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava glowy grouchy.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava glowy neutral:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava glowy neutral.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava glowy smug:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava glowy smug.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava glowy suggestive:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava glowy suggestive.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava glowy unamused:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava glowy unamused.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava casual whimsical:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava casual whimsical.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava glowy unsure:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava glowy unsure.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava glowy waitwhat:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava glowy waitwhat.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava casual unamused:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava casual unamused.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
+layeredimage ava glowy whimsical:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava glowy whimsical.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
 layeredimage ava typical neutral:
     at sprite_highlight('ava')
     always:
