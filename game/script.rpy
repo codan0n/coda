@@ -2002,8 +2002,279 @@ layeredimage mere neutral:
         attribute say:
             "images/bubble.png"
 
-            
-            
+
+
+
+layeredimage mishka jacketless frown:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka jacketless frown.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka jacketless nervous anxious:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka jacketless nervous anxious.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka jacketless nervous sad:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka jacketless nervous sad.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka jacketless nervous sleep:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka jacketless nervous sleep.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka jacketless nervous tongueout 2:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka jacketless nervous tongueout 2.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka jacketless nervous tongueout:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka jacketless nervous tongueout.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka jacketless nervous wink 2 tongueout:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka jacketless nervous wink 2 tongueout.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka jacketless nervous wink:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka jacketless nervous wink.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka jacketless nervous:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka jacketless nervous.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka jacketless neutral:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka jacketless neutral.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka jacketless overjoyed:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka jacketless overjoyed.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka jacketless sad nervous:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka jacketless sad nervous.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka jacketless sleep:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka jacketless sleep.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka jacketless tongueout:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka jacketless tongueout.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka jacketless wink 1:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka jacketless wink 1.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka jacketless wink 2 tongueout:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka jacketless wink 2 tongueout.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka jacketless wink tongueout:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka jacketless wink tongueout.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka jacketless wink:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka jacketless wink.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka neutral standing:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka neutral standing.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka standing frown:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka standing frown.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka standing overjoyed:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka standing overjoyed.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka standing sleep:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka standing sleep.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka standing tongueout:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka standing tongueout.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka standing wink 1 tongueout:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka standing wink 1 tongueout.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka standing wink 1:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka standing wink 1 tongueout.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka standing wink 2 tongueout:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka standing wink 2 tongueout.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
+layeredimage mishka standing wink 2:
+    at sprite_highlight('mishka')
+    always:
+        'images/characters/mishka/mishka standing wink 2.png'
+    group saying:
+        xzoom .95
+        yzoom 1
+        pos (-70,-7)
+        attribute say:
+            "images/bubble.png"
 layeredimage mishka anxious sad:
     at sprite_highlight('mishka')
     always:
@@ -2489,6 +2760,609 @@ layeredimage olivia looking:
         attribute say:
             "images/bubble.png"
     
+    
+    
+    
+layeredimage rori angry neutral:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori angry neutral.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori angry rat:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori angry rat.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori angry:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori angry.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori armscrossed angry:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori armscrossed angry.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori armscrossed anxious:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori armscrossed anxious.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori armscrossed asleep:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori armscrossed asleep.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori armscrossed cheery blush:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori armscrossed cheery blush.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori armscrossed cheery:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori armscrossed cheery.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori armscrossed concerned blush:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori armscrossed concerned blush.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori armscrossed concerned:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori armscrossed concerned.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori armscrossed drunk:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori armscrossed drunk.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori armscrossed embarrassed:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori armscrossed embarrassed.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori armscrossed embarrassed2:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori armscrossed embarrassed2.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori armscrossed flattered:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori armscrossed flattered.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori armscrossed happy lookingaway blush:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori armscrossed happy lookingaway blush.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori armscrossed laugh eyeopen:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori armscrossed laugh eyeopen.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori armscrossed laugh:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori armscrossed laugh eyeopen.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori armscrossed neutral lookingaway:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori armscrossed neutral lookingaway.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori armscrossed neutral:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori armscrossed neutral lookingaway.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori armscrossed silly:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori armscrossed silly.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori armscrossed sleepy blush:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori armscrossed sleepy blush.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori armscrossed sleepy:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori armscrossed sleepy.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori armscrossed smile blush:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori armscrossed smile blush.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori armscrossed smile:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori armscrossed smile.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori armscrossed supersmug blushing lookingaway:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori armscrossed supersmug blushing lookingaway.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori armscrossed supersmug:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori armscrossed supersmug.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori armscrossed surprised eyesclosed:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori armscrossed surprised eyesclosed.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori armscrossed surprised:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori armscrossed surprised.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori armscrossed worried:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori armscrossed worried.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori armscrossed worried2:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori armscrossed worried2.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori armscrossed yawn lookingaway blush:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori armscrossed yawn lookingaway blush.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori armscrossed:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori armscrossed.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori drunk alert armscrossed:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori drunk alert armscrossed.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori rat anxious:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori rat anxious.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori rat anxious2:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori rat anxious2.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori rat asleep:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori rat asleep.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori rat blushing:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori rat blushing.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori rat cheery blush:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori rat cheery blush.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori rat concerned blush:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori rat concerned blush.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori rat concerned:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori rat concerned.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori rat drunk alert:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori rat drunk alert.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori rat drunk:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori rat drunk.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori rat embarrassed:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori rat embarrassed.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori rat embarrassed2:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori rat embarrassed2.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori rat flattered blush:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori rat flattered blush.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori rat laugh eyeopen:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori rat laugh eyeopen.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori rat laugh:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori rat laugh.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori rat neutral:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori rat neutral.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori rat sassy:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori rat sassy.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori rat silly:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori rat silly.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori rat sleepy blush:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori rat sleepy blush.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori rat sleepy:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori rat sleepy.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori rat smile:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori rat smile.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori rat supersmug blushing lookingaway:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori rat supersmug blushing lookingaway.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori rat supersmug:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori rat supersmug.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori rat surprised:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori rat surprised.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori rat worried:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori rat worried.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori rat worried2:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori rat worried2.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori rat yawn lookingaway blush:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori rat yawn lookingaway blush.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+layeredimage rori sassy:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori sassy.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
 layeredimage rori neutral:
     at sprite_highlight('rori')
     always:

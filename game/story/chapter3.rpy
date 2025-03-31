@@ -30,7 +30,7 @@ label chapter3:
 
     player "They must be good if everyone wants one!"
     
-    show mishka overjoyed
+    show mishka happy
 
     mishka @ say "Yes, fully of sugar and sweetness! When I first came to America I had no concept of a 'cinnamon roll' but it soon became a favorite of mine hehe!"
     
@@ -237,7 +237,7 @@ label chapter3:
     margaret @ say "Be sure to start studying for it sooner rather than later!"
     margaret @ say "That's all I have for you. Class dismissed!"
     
-    scene bg campus with fade
+    scene bg campus summer day clear with fade
     
     n "Getting out of your first class of the day early sucks because you have to loiter around waiting for your next class."
     n "The minutes pass by and students gradually pour out from the buildings surrounding you."
@@ -309,7 +309,7 @@ label chapter3:
             celestine @ say "I asked specifically for \"I was doing my homework\" which would be \"Je faisais mes devoirs.\""
             celestine @ say "Note that we use je instead of j'ai. See the difference? Anyway, moving on..."
         
-    scene bg campus with fade
+    scene bg campus summer day clear with fade
     
     show ava happy at center:
         ypos y_ava
@@ -438,7 +438,7 @@ label chapter3:
     
     n "The following day..."
     
-    scene bg campus with fade
+    scene bg campus summer day clear with fade
     
     show box with Dissolve(.2):
         ypos 0
@@ -598,7 +598,7 @@ label chapter3:
     
     n "You hold out a finger for Guts to inspect and you give him a little chin rub."
     
-    scene bg campus with fade
+    scene bg campus summer day clear with fade
     
     n "After class, Gunner tagged along with you as usual, but Rori was nowhere to be found."
     n "Instead you're joined by your Tuesday/Thursday friends."
@@ -2491,7 +2491,7 @@ label chapter3AfterWeekend:
                 
                 ava @ say "See ya!"
                 
-                scene bg campus with fade
+                scene bg campus summer day clear with fade
                 
                 n "You find Claire sulking in the shade of a tree."
                 n "Orange leaves blow in the wind and get caught in her hair."
@@ -2689,7 +2689,7 @@ label chapter3AfterWeekend:
                         
                         claire @ say "Oh my gosh are you alright?"
                         
-                        scene bg campus with dissolve
+                        scene bg campus summer day clear with dissolve
                         
                         n "Noooo, death's sweet embrace! Come back! You will never have a chance to die in such a based way ever again!"
                         
@@ -2906,7 +2906,7 @@ label chapter3AfterWeekend:
 
             call phone_end
             
-            scene bg campus with fade
+            scene bg campus summer day clear with fade
             
             n "Walking up, you spot Rori looking uncomfortable next to an excited Claire waving at you."
             

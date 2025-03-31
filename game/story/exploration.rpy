@@ -1511,7 +1511,8 @@ label margaretCafe:
 label oliviaCafe:
     $ cafeEvents.remove("oliviaCafe")
     
-    scene bg campus with fade
+    scene bg campus summer day clear with fade
+    ###make sure season is right
 
     show box:
         ypos 0
@@ -1528,6 +1529,7 @@ label oliviaCafe:
 
     show olivia neutral at offscreenright:
         ypos y_olivia
+        matrixcolor BrightnessMatrix(0.05)
     show olivia at offscreenleft with MoveTransition(delay=1.0):
         ypos y_olivia
 

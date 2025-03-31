@@ -126,7 +126,7 @@ label chapter2start:
     
     stop music fadeout 2.0
     
-    scene bg campus with fade
+    scene bg campus summer day clear with fade
     
     show box with Dissolve(.2):
         ypos 0
@@ -232,7 +232,7 @@ label week2Tuesday:
     
     n "Mrs. Celestine goes over some terms and typical everyday sayings, then has the class recite them and practice in groups."
     
-    scene bg campus with fade
+    scene bg campus summer day clear with fade
     
     play music "audio/music/vylet - Hard to Say Anything.ogg" fadein .4
     
@@ -241,6 +241,7 @@ label week2Tuesday:
     
     show claire sweater happy at center with dissolve:
         ypos y_claire
+        matrixcolor BrightnessMatrix(0.05)
     
     claire @ say "Wish I could stay and chat [name] but I've got sorority duties to take care of today!"
     claire @ say "See you later!"
@@ -255,6 +256,7 @@ label week2Tuesday:
     
     show mishka neutral at center with dissolve:
         ypos y_mishka
+        matrixcolor BrightnessMatrix(0.05)
         
     mishka @ say "Hello!"
     
@@ -795,7 +797,7 @@ label week2Tuesday:
 
     pause .7
     
-    scene bg campus with fade
+    scene bg campus summer day clear with fade
     
     show box with Dissolve(.2):
         ypos 0
@@ -811,10 +813,12 @@ label week2Tuesday:
     show ava typical happy at center:
         ypos y_ava
         xoffset 500
+        matrixcolor BrightnessMatrix(0.05)
     show claire sweater happy at center:
         ypos y_claire
         xoffset -500
         xzoom -1
+        matrixcolor BrightnessMatrix(0.05)
     with dissolve
         
     ava @ say "[name]!! You're here!"
@@ -852,10 +856,12 @@ label week2Tuesday:
         #xzoom -1
         xoffset 450
         ypos y_ava
+        matrixcolor BrightnessMatrix(0.05)
     show claire sweater happy at center:
         xzoom -1
         xoffset -450
         ypos y_claire
+        matrixcolor BrightnessMatrix(0.05)
     with dissolve
 
     n "Claire hops around whimsically from one plant to another, sniffing the flowers and admiring the multitude of plants."
@@ -1351,7 +1357,7 @@ label week2Tuesday:
 
     stop music fadeout 1.3
 
-    scene bg campus with fade
+    scene bg campus summer day clear with fade
 
     show box with Dissolve(.2):
         ypos 0
@@ -1364,6 +1370,7 @@ label week2Tuesday:
         ypos y_gunner
         xzoom -1
         xoffset -480
+        matrixcolor BrightnessMatrix(0.05)
     
     gunner "Yeah so then I'm like \"fuck you\" and -- oh hi Rori!"
     
@@ -1374,6 +1381,7 @@ label week2Tuesday:
     show rori surprised at center with dissolve:
         ypos y_rori
         xoffset 480
+        matrixcolor BrightnessMatrix(0.05)
     
     rori @ say "Aaah!"
     
@@ -1737,7 +1745,7 @@ label week2Tuesday:
     
     stop music fadeout 2.0
     
-    scene bg campus with dissolve
+    scene bg campus summer night clear with dissolve
     
     show box with Dissolve(.2):
         ypos 0
@@ -1748,9 +1756,11 @@ label week2Tuesday:
         ypos y_gunner
         xoffset -375
         xzoom -1
+        matrixcolor BrightnessMatrix(-0.05)
     show rori neutral at center:
         ypos y_rori
         xoffset 375
+        matrixcolor BrightnessMatrix(-0.05)
     with dissolve
     
     show gunner snoring
@@ -1865,6 +1875,8 @@ label beauty_and_the_beast:
     stop music fadeout 2.0
     
     scene bg roof with fade
+    
+    ###overcast day
     
     #make ellen gentler
     
@@ -2044,7 +2056,7 @@ label beauty_and_the_beast:
 
     stop music fadeout 1.0
 
-    scene bg campus with fade
+    scene bg campus summer day clear with fade
     
     show box with Dissolve(.2):
         ypos 0
@@ -2055,9 +2067,11 @@ label beauty_and_the_beast:
         xzoom -1
         ypos y_claire
         xoffset -450
+        matrixcolor BrightnessMatrix(0.05)
     
     show ava at offscreenright:
         ypos y_ava
+        matrixcolor BrightnessMatrix(0.05)
 
     claire @ say "...That was a pretty good movie, wasn't it? I'm a sucker for any kind of romantic film!"
 
@@ -2164,7 +2178,7 @@ label beauty_and_the_beast:
 
     pause .7
     
-    scene bg campus with fade
+    scene bg campus summer day clear with fade
 
     play music "audio/ambient/outdoors people talking.ogg" fadein .5
 
@@ -2176,7 +2190,7 @@ label beauty_and_the_beast:
 
     show bg static2
     pause .02
-    show bg campus
+    show bg campus summer day clear
 
     n "It becomes difficult to breathe and you feel a sharp pain thrashing about your whole body."
     n "Your vision begins to fade as you drop down to your hands and knees."
@@ -2185,7 +2199,7 @@ label beauty_and_the_beast:
     pause .02
     show bg static2
     pause .02
-    show bg campus
+    show bg campus summer day clear
 
     n "The last thing you recall is slumping to the ground and hearing someone call your name."
 
@@ -3300,7 +3314,7 @@ label monty_hall:
             
     stop music fadeout 1.0
     
-    scene bg campus with fade
+    scene bg campus summer day clear with fade
     
     play music "audio/music/vylet - Ordinarily.ogg" fadein .4
     
@@ -3312,10 +3326,12 @@ label monty_hall:
     show rori neutral at center:
         ypos y_rori
         xoffset 450
+        matrixcolor BrightnessMatrix(0.05)
     show gunner neutral at center:
         ypos y_gunner
         xoffset -450
         xzoom -1
+        matrixcolor BrightnessMatrix(0.05)
     with dissolve
     
     rori @ say "Sup. You all done for the day?"
@@ -3409,7 +3425,7 @@ label monty_hall:
     pause .7
 
 label ellen_feeding_ducks:
-    scene bg campus with fade
+    scene bg campus summer day clear with fade
     
     play music "audio/music/vylet - Tranquility and Happiness.ogg" 
     
@@ -3424,6 +3440,7 @@ label ellen_feeding_ducks:
     
     show margaret sad at center with dissolve:
         ypos y_margaret
+        matrixcolor BrightnessMatrix(0.05)
     
     margaret @ say "Hm? Oh it's you."
     
@@ -3855,7 +3872,7 @@ label ellen_feeding_ducks:
     
     stop music fadeout 2.0
     
-    scene bg campus with fade
+    scene bg campus summer day clear with fade
     
     play music "audio/music/vylet - Catching On.ogg" fadein .4
     
@@ -3866,9 +3883,11 @@ label ellen_feeding_ducks:
         ypos y_claire
         xoffset -500
         xzoom -1
+        matrixcolor BrightnessMatrix(0.05)
     show ava typical happy at center:
         ypos y_ava
         xoffset 500
+        matrixcolor BrightnessMatrix(0.05)
     with dissolve
     
     ava @ say "Glad you're back among the living [name]! We were starting to get seriously worried about you."
@@ -4152,7 +4171,7 @@ label ellen_feeding_ducks:
     
     stop music fadeout 2.0
     
-    scene bg campus with fade
+    scene bg campus summer day clear with fade
     
     play music "audio/music/vylet - Destiny Station.ogg" fadein .4
     
@@ -4162,6 +4181,7 @@ label ellen_feeding_ducks:
     show gunner neutral at center with dissolve:
         ypos y_gunner
         xoffset 500
+        matrixcolor BrightnessMatrix(0.05)
     
     gunner @ say "LMAO are you gonna \'study hard\' this weekend, [name]?"
     
@@ -4239,6 +4259,7 @@ label ellen_feeding_ducks:
         ypos y_rori
         xzoom -1
         xoffset -500
+        matrixcolor BrightnessMatrix(0.05)
         
     rori @ say "Sup guys."
     
@@ -4632,10 +4653,24 @@ label liberation_eve:
 
         "Don't follow her":
             n "It's kinda creepy to stalk your professor like that. You should just chill for the next half hour you have before your next class."
+            
+            scene bg campus summer day clear with fade
+            
+            show box with Dissolve(.2):
+                ypos 0
+            
             n "You loiter around the campus until a couple of familiar faces approach you, one with a friendly smile and the other looking like she wants to kill you."
             
-            show nicodemus
-            show rose
+            show nicodemus neutral at center:
+                ypos y_nicodemus
+                xzoom -1
+                xoffset 400
+                matrixcolor BrightnessMatrix(0.05)
+            show rose skirt handonhip dismissive pendant at center:
+                xoffset -400
+                ypos y_rose
+                matrixcolor BrightnessMatrix(0.05)
+            with dissolve
             
             nicodemus @ say "Good day, [name]! Enjoying the fair weather?"
             

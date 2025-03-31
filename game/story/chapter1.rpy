@@ -173,6 +173,7 @@ label chapter1:
         
     show nicodemus neutral at center with dissolve:
         ypos y_nicodemus
+        matrixcolor BrightnessMatrix(0.05)
     
     nicodemus @ say "...that about concludes our tour of Harmonia's campus. What did you think? Not too pretentious, I hope! Bahahaha!"
     nicodemus @ say "I'm reminded of when I was a new student here myself. A bit nervous but so full of wonder and excitement! It felt like anything was possible!"
@@ -261,6 +262,7 @@ label nicodemusQuestions:
                 
             show nicodemus neutral at center with dissolve:
                 ypos y_nicodemus
+                matrixcolor BrightnessMatrix(0.05)
             
             nicodemus @ say "He was a good friend, someone you could always count on. But as time went on, the burden of being the last of his kind got to him."
             nicodemus @ say "He withdrew himself from everyone and eventually withered away, like some forgotten house plant. I'd hate for you to suffer the same fate."
@@ -801,6 +803,7 @@ label college_orientation:
 
     show rori neutral at center with dissolve:
         ypos y_rori
+        matrixcolor BrightnessMatrix(-0.05)
 
     rori @ say "Hey! [name]!"
     rori @ say "Leaving already?"
@@ -1128,10 +1131,12 @@ label exploring_campus:
         show claire sweater happy wave:
             ypos y_claire
             xoffset 400
+            matrixcolor BrightnessMatrix(0.05)
         show ava typical happy:
             ypos y_ava
             xzoom -1
             xoffset -400
+            matrixcolor BrightnessMatrix(0.05)
         with move
 
         claire @ say "Holy Frith, it's you! You were at the thing last night, weren't you?"
@@ -1321,6 +1326,7 @@ label exploring_campus:
         show gunner neutral at center with dissolve:
             ypos y_gunner
             xoffset 375
+            matrixcolor BrightnessMatrix(0.05)
 
         gunner @ say "Hey there! I saw you checkin' out the frats and thought you should know Alpha Alpha Alpha is the best one!"
         
@@ -1357,6 +1363,7 @@ label exploring_campus:
             xzoom -1
             xpos 385
             ypos y_rori
+            matrixcolor BrightnessMatrix(0.05)
         
         rori @ say "Oh, hello again [name]!"
         rori @ say "I see you've met my roommate."
@@ -2439,6 +2446,7 @@ label secondDayOfClass:
     show claire sweater happy at center with dissolve:
         xzoom -1
         ypos y_claire
+        matrixcolor BrightnessMatrix(0.05)
         
     play music "audio/music/Evan Schaeffer - Aqueduct.ogg" fadein .5
 
@@ -2463,6 +2471,7 @@ label secondDayOfClass:
     show ava pose annoyed at center with moveinright:
         ypos y_ava
         xoffset 450
+        matrixcolor BrightnessMatrix(0.05)
         
     claire @ say "What's up?"
 
@@ -2842,10 +2851,12 @@ label thirdDayOfClassStats:
         show claire sweater overjoyed at center:
             ypos y_claire
             xoffset 500
+            matrixcolor BrightnessMatrix(0.05)
         show ava typical happy at center:
             xzoom -1
             xoffset -520
             ypos y_ava
+            matrixcolor BrightnessMatrix(0.05)
         with dissolve
         
         show claire sweater overjoyed
@@ -4175,7 +4186,7 @@ label afterAvaText1:
         n "You could be a responsible student and study to make up for the class time you missed... or you could go out on a nightwalk on campus."
         n "You know which one your heart is telling you."
         
-        scene bg campus summer day clear with fade
+        scene bg campus summer night clear with fade
         
         play music "audio/music/vylet - yeah i'm ok thanks for asking.ogg" fadein .4
         
@@ -4189,6 +4200,7 @@ label afterAvaText1:
         
         show rori concerned at center with dissolve:
             ypos y_rori
+            matrixcolor BrightnessMatrix(-0.05)
         
         rori @ say "[name]? What are you doing out so late?"
         
@@ -4509,6 +4521,7 @@ label thursday1:
 
     show claire sweater happy at offscreenright:
         ypos y_claire
+        matrixcolor BrightnessMatrix(0.05)
 
     claire "[name]! Wait up!!!"
 
@@ -4957,6 +4970,7 @@ label rooftop_party:
 
     show gunner cheeky1 at center with dissolve:
         ypos y_gunner
+        matrixcolor BrightnessMatrix(-0.05)
 
     gunner @ say "[name]!!!! Ya made it!"
 
@@ -4983,6 +4997,7 @@ label rooftop_party:
         xzoom -1
         xoffset -475
         ypos y_rori
+        matrixcolor BrightnessMatrix(-0.05)
     show gunner neutral:
         xoffset 450
     with move
@@ -5260,6 +5275,7 @@ label rooftop_party:
         xzoom -1
         xoffset 0
         ypos y_rori
+        matrixcolor BrightnessMatrix(-0.05)
 
     player "Hey, we gotta go. Now."
 
@@ -5308,7 +5324,7 @@ label rooftop_party:
 
     stop music fadeout .5
 
-    scene bg campus summer day clear with dissolve
+    scene bg campus summer night clear with dissolve
 
     #play sound "audio/ambient/outdoors night crickets.ogg" fadein .4
     play music "audio/music/vylet - wish.ogg"
@@ -5318,10 +5334,12 @@ label rooftop_party:
     
     show gunner at offscreenleft:
         yalign 0
+        matrixcolor BrightnessMatrix(-0.05)
     
     show rori drunk at center with dissolve:
         xoffset 500
         ypos y_rori
+        matrixcolor BrightnessMatrix(-0.05)
 
     n "Once outside, you hear some rustling in the leaves and Gunner appears."
 

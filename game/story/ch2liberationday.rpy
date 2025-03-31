@@ -2862,6 +2862,12 @@ label liberation_day:
                 n "You help her onto one of the mounts, then take one for yourself."
                 n "The carousel slowly begins to spin, and the lights flicker in time with the music."
                 n "The mall becomes a blur and your horse gently pushes you up and down."
+                
+                scene mishka carousel with dissolve
+                
+                show box with Dissolve(.2):
+                    ypos 0
+                
                 n "Looking back towards Mishka, she seems to be having the time of her life."
                 n "She smiles and waves to you. You try to wave back but almost lose your balance and slip off the horse."
                 n "When the ride comes to an end, you're a bit dizzy but wish it had gone on just a while longer."
@@ -2892,10 +2898,21 @@ label liberation_day:
                 n "It's like you're on display for the rest of the mall-goers."
                 n "It was embarrassing when you were a child and it's even more humiliating now."
                 n "But it's a small price to pay to see Mishka happy. It's probably her first time on such a ride."
+                
+                scene mishka carousel with dissolve
+                
+                show box with Dissolve(.2):
+                    ypos 0
+                    
                 n "You crane your neck around to see her grinning from ear to ear on the mount behind you."
                 n "As the ride goes on, you start to relax and get used to it. Even enjoy it a little."
                 n "By the time it ends, you're a bit dizzy but wish it had gone on just a while longer."
+               
+        scene bg mall with dissolve
                 
+        show box with Dissolve(.2):
+            ypos 0
+            
         show mishka derp at center with dissolve:
             ypos y_mishka
             
