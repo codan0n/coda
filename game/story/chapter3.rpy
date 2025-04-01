@@ -928,19 +928,27 @@ label chapter3:
     #player "It's fine. I mean, how spicy can it be? It smells pretty good in fact."
     player "It's fine. Humans evolved to eat this kinda stuff. In fact, it smells pretty good!"
     
-    #show ava casual happy
+    show ava typical concerned
     
     ava @ say "You sure? I don't wanna be responsible for killing ya."
     
     player "Yeah! I mean, I didn't have any restaurants like this where I grew up but I always enjoyed spicy food. They probably just hype it up for marketing. How hot could it be?"
     
+    show ava typical happy
+    show gunner determined
+    
     gunner @ say "I guess we're about to find out!"
     
     n "Gunner grabs his chopsticks, fumbling with them for a bit trying to grab a slice of beef on top of the noodles."
     
+    show gunner pissed
+    
     gunner @ say "Goddammit... fuck... almost... dangit... Where's a fork when you need one? Ah screw it."
     
     n "He stabs the meat with a chopstick and puts it in his mouth while the whole squad watches with curiosity and anticipation."
+    
+    show gunner frown1
+    show rori neutral lookingaway
     
     rori @ say "Well. He's not dead yet."
     
@@ -948,24 +956,35 @@ label chapter3:
     
     gunner @ say "Huh. That was... not so ba-"
     
+    show gunner gruff
+    
     n "He suddenly wheezes and reaches for his drink, downing half the cup before setting it down."
+    
+    show gunner uncomfy
     
     gunner @ say "Okay it doesn't hit you at first but when it does it's like getting hot brass down your shirt."
     gunner @ say "Still not the spiciest I ever had though."
+
+    show ava typical neutral
+    show rori none
+    show rori armscrossed neutral
     
     ava @ say "I think it's supposed to get spicier the further down you go."
     
     #player "A real 9 circles of hell, I'm sure."
     
-    #show claire outdoors derp
+    show claire sweater derp
     
     claire @ say "Alright [name], your turn!"
     
-    #show claire outdoors neutral
+    show claire sweater happy
+    show ava typical happy
     
     n "Unlike Gunner, you actually know how to use chopsticks and pick up a clump of noodles to slurp. It doesn't taste any different than the generic spicy ramen you could find at any grocery store."
     
     player "Heh, easy."
+    
+    show rori concerned
     
     n "And then it hits you."
     n "You cough uncontrollably for a few seconds as you frantically reach for your drink, taking a few sips until the fire in your mouth has been extinguished."
@@ -974,75 +993,122 @@ label chapter3:
     
     gunner @ say "I told you! Here Rori, have some of this."
     
+    show rori none
+    show rori armscrossed
+    show claire sweater giggle
+    
     rori @ say "What? No way! Keep your peppers off my lemongrass tofu!"
     
-    #show ava casual smile
+    show ava typical smug
     
     ava @ say "What's the matter, don't think you can finish it all on your own?"
+    
+    show gunner wink frown
+    show claire sweater happy
+    show rori armscrossed neutral
     
     gunner @ say "I'm sure I could, I just dunno if the discount is gonna be worth being bathroom-bound all day tomorrow."
     
     n "You silently take another, smaller bite. You're already sweating."
     
-    #show ava casual overjoyed
+    show ava typical overjoyed
     
     ava @ say "Look, [name] can do it just fine!"
+    
+    show ava typical happy
+    show gunner uncomfy
     
     gunner @ say "Yeah but look how much he's sweating though!"
     
     player "We humans evolved to eat food like this not out of necessity but out of pure dumbfuckery and stubbornness."
     
-    #show ava casual flattered
+    show claire sweater leaning suggestive
     
     #n "The group snickers at your self-deprecating joke."
     n "As Ava takes a bite out of her meal, Claire leans in and whispers something to her, causing her feathers to floof up and almost makes her choke on her food."
+    
+    show claire sweater giggle
+    show ava profile embarrassed
     
     ava @ say "Whaaaat? Claire oh my gosh no!"
     
     gunner @ say "What? What did she say?"
     
+    show ava pose shy
+    
     ava @ say "Nothing hahaha nothing!"
     
-    #show claire outdoors embarassed
+    show claire sweater flustered
     
     claire @ say "All I'm sayin' is that he's competitive! He'd totally be down for it!"
     
+    show gunner gruff
+    
     gunner @ say "What???"
     
-    #show claire outdoors derp
+    show claire sweater derp
     
     claire @ say "I just said there should be a prize for whoever finishes their spicy bowl first!"
     
-    #show ava casual annoyed
+    show ava typical annoyed
     
     ava @ say "Claire shush!"
+    
+    show gunner cheeky1
     
     n "Gunner's ears perk up."
     
     player "What sort of prize?"
     
-    #show claire outdoors lusty
+    show claire sweater giggle
     
     n "Claire giggles and winks at you."
     
     claire @ say "Whatever you want bby~"
     
+    show ava pose shy
+    
     ava @ say "She suggested something rather... spicy."
     ava @ say "Which I'm not gonna do."
     
+    show claire sweater surprised earsup
+    
     claire @ say "But there has to be a priiiiiize!"
+    
+    show claire happy -earsup
+    show ava pose annoyed
     
     ava @ say "There already is one! The bowl is free if you finish it!"
     
+    show claire sweater derp
+    
     claire @ say "There needs to be one for whoever does it first!"
+    
+    show ava pose angry
     
     ava @ say "Well I'm not gonna suck the winner's dick just because they can eat spicy food!"
     
     gunner @ say "OwO"
     
+    show rori armscrossed yawn lookingaway blush
+    
+    rori @ say "Man, girls are crazy."
+    
+    show gunner cheeky1
+    
+    gunner @ say "I know right, isn't it awesome?"
+    
+    show rori armscrossed neutral -lookingaway
+    show claire sweater giggle
+    
     claire @ say "How about just holding his hand? Or is that still too lewd for you?"
     
+    show ava pose shy
+    
     ava @ say "Well... I guess I can do that."
+    
+    show gunner motivated
+    show ava pose concerned
     
     gunner @ say "Sounds like we've got a competition then, [name]!"
     
@@ -1051,6 +1117,9 @@ label chapter3:
     n "Your friends all look to each other and mutter in agreement."
     
     gunner @ say "Yeah, I don't see why not. Other than the fact that you *won't* be winning this."
+    
+    show gunner eyesclosed catface
+    
     gunner @ say "Hope you won't be too jealous when I walk home holding Ava's wing~"
     
     default holdingHands = "No one"
@@ -1060,7 +1129,9 @@ label chapter3:
             $ avaPoints =+ 2
             $ holdingHands = "Ava"
             
-            player "Maybe in another one of your lives catboy, because tonight I'll be the one walking her home."
+            show gunner neutral
+            
+            player "Maybe in another one of your lives catboy, because tonight *I'll* be the one walking her home."
             
             claire @ say "Gee Ava, how come you get *two* cuties competing for you?"
             
@@ -1074,6 +1145,8 @@ label chapter3:
         "Do it for Rori":
             $ roriPoints =+ 2
             $ holdingHands = "Rori"
+            
+            show gunner neutral
         
             player "Nah, I'm gonna win and hold hooves with Rori all the way back to the dorms."
             
@@ -1097,6 +1170,8 @@ label chapter3:
             $ clairePoints =+ 2
             $ holdingHands = "Claire"
             
+            show gunner neutral
+            
             player "Nah, I'm gonna win and hold Claire's paw all the way back to her dorm."
             
             if clairePoints > 4:
@@ -1117,6 +1192,8 @@ label chapter3:
         "Play the reverse card":
             $ avaPoints += 1
             $ holdingHands = "Gunner"
+            
+            show gunner neutral
         
             player "The only hand you'll be holding is mine after I win."
             
@@ -1149,6 +1226,8 @@ label chapter3:
             $ clairePoints =- 1
             $ roriPoints =- 1
             $ holdingHands = "No one"
+            
+            show gunner neutral
         
             player "I don't care about holding anyone's hand, I'm just doing this to make you lose, catboy."
             
@@ -4524,9 +4603,3 @@ label cuddlepuddle:
     #view of the sky while everyone talks
     
     
-    
-    
-    
-    
-    
-        
