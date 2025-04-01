@@ -1119,6 +1119,7 @@ label chapter3:
     gunner @ say "Yeah, I don't see why not. Other than the fact that you *won't* be winning this."
     
     show gunner eyesclosed catface
+    show ava typical smug
     
     gunner @ say "Hope you won't be too jealous when I walk home holding Ava's wing~"
     
@@ -1129,40 +1130,69 @@ label chapter3:
             $ avaPoints =+ 2
             $ holdingHands = "Ava"
             
-            show gunner neutral
+            show gunner frown1
+            show ava typical excited
             
             player "Maybe in another one of your lives catboy, because tonight *I'll* be the one walking her home."
             
+            show ava typical happy
+            show claire sweater laughing
+            
             claire @ say "Gee Ava, how come you get *two* cuties competing for you?"
             
+            show claire sweater happy
+            
             if avaPoints > 4:
+                show ava profile smug
+            
                 ava @ say "Maybe I'm just that irresistable!"
+                
+                show ava typical smug
+                
                 ava @ say "Do your best you two~"
             else:
+                show ava typical smug
+            
                 ava @ say "I dunno but this should be fun to watch!"
+                
+                show ava typical whimsical
+                
                 ava @ say "Just try not to die, you two."
                 
         "Do it for Rori":
             $ roriPoints =+ 2
             $ holdingHands = "Rori"
             
-            show gunner neutral
+            show gunner frown1
         
             player "Nah, I'm gonna win and hold hooves with Rori all the way back to the dorms."
             
+            show ava typical enamored
+            show claire sweater happy
+            show rori armscrossed surprised
+            
             rori @ say "*Bleat!*"
+            
+            show ava typical happy
+            show rori armscrossed concerned blush
+            
             rori @ say "W-why me?"
             
             player "Because you're cute and those hooves were made for holding human hands."
             
             if roriPoints > 4:
+                show rori cheery blush
+                
                 rori @ say "Well, I guess we can hold hands just this once..."
                 
                 n "Rori tries to hide his smile but you can see it in his eyes, he wants you to win."
             else:
+                show rori none
+                show rori worried
+                
                 rori @ say "If you say so..."
             
-            claire @ "D'awww you two are so adorable!"
+            claire @ say "D'awww you two are so adorable!"
             
             gunner @ say "..."
             gunner @ say "Whatever floats your boat bro."
@@ -1170,50 +1200,78 @@ label chapter3:
             $ clairePoints =+ 2
             $ holdingHands = "Claire"
             
-            show gunner neutral
+            show gunner frown1
+            show claire sweater surprised earsup
             
             player "Nah, I'm gonna win and hold Claire's paw all the way back to her dorm."
             
+            show ava typical concerned
+            
             if clairePoints > 4:
+                show claire none
+                show claire sweater suggestive
+                
                 claire @ say "You can hold my paws in my dorm too, all the way til morning~"
+                
+                show ava typical embarrassed
                 
                 ava @ say "Claire! You perv!"
                 
                 claire @ say "Who's gonna be the pervert when you'll be watching us?"
                 
+                show ava typical agitated
+                
                 ava @ say "If [name] wins I'm locking you out of our dorm."
             else:
+                show claire none
+                show claire sweater overjoyed
+                
                 claire @ say "R-really?!"
                 
                 player "At least to your dorm. Maybe further."
+                
+                show claire sweater suggestive
                 
                 claire @ say "Oh yeah, we're definitely going further~"
             
         "Play the reverse card":
             $ avaPoints += 1
             $ holdingHands = "Gunner"
+            $ gunnerPoints =- 1
             
-            show gunner neutral
+            show gunner frown1
         
             player "The only hand you'll be holding is mine after I win."
             
+            show gunner disgusted
+            
             n "Gunner nearly spits out his drink."
             
+            show gunner hissing
+            
             gunner @ say "Say what?!"
+            
+            show ava pose smug
             
             #n "Ava snickers"
             
             #ava @ say "Ooh now I don't know who to root for~"
             ava @ say "Ooh now that would be fun to see~"
             
+            show claire sweater happy
+            
             claire @ say "My favorite crack ship."
             
+            show rori armscrossed laugh eyeopen
+            
             rori @ say "You'll never be able to make gay jokes again, Gunner."
+            
+            show rori armscrossed neutral lookingaway
             
             #gunner @ say "If anything, I'll become even more homophobic if I have to hold [name]'s hand."
             
             show gunner eyesclosed smile
-            show rori sleepy
+            show rori armscrossed sleepy
             show ava typical unimpressed
             show claire sweater surprised earsup
             
@@ -1225,17 +1283,28 @@ label chapter3:
             $ avaPoints =- 1
             $ clairePoints =- 1
             $ roriPoints =- 1
+            $ ellenPoints =+1
+            $ rosePoints =+1
             $ holdingHands = "No one"
             
-            show gunner neutral
+            show gunner frown1
+            show ava typical happy
+            show claire sweater happy
         
             player "I don't care about holding anyone's hand, I'm just doing this to make you lose, catboy."
+            
+            show gunner determined
             
             gunner @ say "A man with nothing to fight for but the sake of fighting. I don't know wether to admire you or pity you."
             
             player "Both works."
             
             gunner @ say "Both it is."
+            
+    show ava typical happy
+    show claire sweater happy
+    show rori armscrossed neutral
+    show gunner motivated
     
     gunner @ say "Enough talking! Let's get this competition started already!"
 
@@ -1243,11 +1312,17 @@ label chapter3:
     n "Gunner is getting better at using the chopsticks, grabbing whole clumps of noodles at once."
     n "Your tongue stings and soon your water runs out. You take to chewing on ice cubes to dull the pain."
     
+    show claire sweater giggle
+    
     claire @ say "Look at 'em go!"
     
     ava @ say "Are you two alright? [name], you are *drenched* in sweat right now."
     
     n "You give a thumbs up and do your best to smile through your suffering."
+    
+    show claire sweater happy
+    
+    show gunner disgusted
     
     gunner @ say "Roriii!"
     gunner @ say "Lemme have your drink! I'll give you a thousand dollars for it!"
@@ -1260,10 +1335,14 @@ label chapter3:
     
     gunner @ say "Five grand? That's all I brought with me!"
     
+    show rori armscrossed silly
+    
     rori @ say "Sorry but I'm enjoying watching you suffer too much."
     
     n "The pain is unbearable at this point. Your mouth is on fire and you're feeling woozy."
     n "Should you press on?"
+    
+    show rori armscrossed neutral
     
     menu:
         n "{cps=0}Should you press on?{/cps}"
@@ -1274,6 +1353,8 @@ label chapter3:
             n "You're nearing the bottom of the bowl now. Gunner is struggling with his last few bites."
             n "Your vision goes blurry and your hands tremble but you do not yield."
             n "Your very existence is pain but you've learned to live with it. Embrace it. You just have to swallow one more time."
+
+            show claire sweater surprised earsup
             
             claire @ say "Oh my gosh he actually did it!"
             
@@ -1295,24 +1376,25 @@ label chapter3:
             n "Urgh... you feel like death. Every breath you take hurts. Your mouth is numb but you can feel your intestines are punishing you for your hubris."
             n "You can't remember a thing after winning your little contest. You must have passed out."
             
-            show kitsuragi at center with dissolve
+            show kitsuragi at center with dissolve:
+                ypos y_kitsuragi
             
-            kitsuragi "Hello again [name]. I wish I could say it's nice to see you again, but the story your friends told me when they dragged you here has left me appalled by your stupidity."
+            kitsuragi @ say "Hello again [name]. I wish I could say it's nice to see you again, but the story your friends told me when they dragged you here has left me appalled by your stupidity."
             
             player "It was worth it."
             
-            kitsuragi "I'm sure it was."
+            kitsuragi @ say "I'm sure it was."
             #kitsuragi "Anyway, you may be dying but you could at least try not to reduce your lifespan any further."
             #kitsuragi "I guess my speech about not doing anything stupid fell upon deaf ears."
-            kitsuragi "I guess my advice about not doing anything stupid fell upon deaf ears."
+            kitsuragi @ say "I guess my advice about not doing anything stupid fell upon deaf ears."
             
             player "How long am I gonna be stuck here this time?"
             
-            kitsuragi "Now that you're awake you're free to go. Take this to the pharmacy, they'll give you some pills to settle your stomach."
+            kitsuragi @ say "Now that you're awake you're free to go. Take this to the pharmacy, they'll give you some pills to settle your stomach."
             
             n "She hands you a note that just says BUTTHURT with three underlines."
             
-            kitsuragi "Now get out of my hospital."
+            kitsuragi @ say "Now get out of my hospital."
             
             hide kitsuragi with dissolve
             
@@ -1336,15 +1418,25 @@ label chapter3:
                 
             with dissolve
             
-            
+            show gunner cheeky1
+
             gunner @ say "Looks like the legend is back among the living!"
+            
+            show rori concerned
             
             rori @ say "[name]! Are you okay?"
             
+            show claire sweater pose laughing
+            
             claire @ say "We were afraid we like, totally killed you! Ksksksksks!"
+            
+            show claire sweater happy
+            show ava typical annoyed
             
             ava @ say "You didn't have to do all that just to impress us you know!"
             #ava @ say "But it was still impressive..."
+            
+            show ava typical happy
             
             player "But it was impressive, was it not?"
             
@@ -1394,37 +1486,76 @@ label chapter3:
                 player "Now where's my prize?"
                 
                 n "You hold out your hand expectantly."
+                
+                show claire none
+                show claire sweater happy
+                show rori neutral
             
                 if holdingHands == "Ava":
+                    show ava typical shy
+                    show gunner frown1
+                    
                     ava @ say "After all the trouble you went through, I suppose you deserve it~"
                     
-                    if avaPoints > 5:                    
+                    show gunner uncomfy
+                    
+                    if avaPoints > 4:                    
+                        show ava typical overjoyed
+                    
                         n "Ava smiles and wraps her wing around your arm."
                     else:
                         n "Ava takes your hand in her wing. Her feathers are so soft, you can't resist stroking them with your thumb."
+                        
+                        show ava typical agitated
                         
                         ava @ say "Hey, watch the plumage! They only go in one direction."
                         
                         player "Woops sorry."
                         
+                        show ava typical happy
+                        
                         n "You hastily straighten out her feathers."
+                        
+                    show gunner itsover
                         
                     gunner @ say "It should have been meeeeee!"
                     
                     player "I have two hands, you can hold my free one."
                     
+                    show gunner annoyed
+                    
                     gunner @ say "Not what I meant!"
+                    
+                    show ava typical smug
                     
                     ava @ say "Better luck next time!"
                     
+                    show claire sweater pose suggestive
+                    
                     claire @ say "And if you strike out again, I know a lonely bunny gal who could keep you company~ Ksksksksks!"
+                    
+                    show gunner frown1
                     
                     n "Gunner shudders."
                     
                     gunner @ say "Ugh. We gonna go back home or stand in the hospital lobby all night?"
                     
+                    show rori armscrossed worried
+                    
                     rori @ say "Yeah, we should head home. It's gotten pretty late."
+                    
+                    show rori armscrossed surprised
+                    
                     rori @ say "Plus we're kind of making a scene here."
+                    
+                    show rori armscrossed neutral
+                    show ava typical whimsical
+                    
+                    ava @ say "Come on, let's get outta here."
+                    
+                    show ava typical happy
+                    
+                    scene bg black with fade
                     
                     n "Basking in the glory of holding Ava's wing, you make your departure from the hospital with your entourage of fluffy companions."
                         
@@ -1508,23 +1639,35 @@ label chapter3:
                     n "She practically begged to stay with you when you reached your dorm but the others managed to pry her off you so you could rest."
                     
                 if holdingHands == "Rori":
+                    show rori worried
+                
                     n "Rori looks around shyly before nervously grabbing onto your pinkie finger."
                     
                     player "What is that? You call that hand holding?"
                     
+                    show rori asleep
+                    
                     rori @ say "Ack! Sorry!"
                     rori @ say "I've never held someone's hand before!"
                     
+                    show rori concerned
+                    
                     claire @ say "Aww, you're taking away his hand holding virginity!"
+                    
+                    show rori neutral blushing
                     
                     rori @ say "D-don't say it like that!"
                     
                     n "You pull Rori's hand closer and interweave your fingers between his hoof-finger things."
                     
+                    show rori smirk blush
+                    
                     rori @ say "O-o-oh my goshhh t-this is really happening...!"
                     
                     if roriPoints > 4:
                         player "Don't be shy, you know you want this."
+                        
+                        show rori smug blushing
                         
                         rori @ say "Maybe, just a little..."
                     
@@ -1532,37 +1675,61 @@ label chapter3:
                     else:
                         player "See? That's not so bad, now is it?"
                         
+                        show rori concerned blushing
+                        
                         n "You can feel how tense Rori is through his hand."
                         
                         rori @ say "Y-yeah, just two bros holding hands because of some silly bet! Nothing else to it!"
                         
                         gunner @ say "Holy cope lmao"
                         
+                    show rori surprised
+                        
                     rori @ say "Shut up! Don't ruin this moment!"
+                    
+                    show rori smirk blush
                         
                     gunner @ say "Okay bro, chill."
                     
+                    show ava typical excited
+                    
                     ava @ say "Well I think you two look pretty cute together!"
                     
-                    if avaPoints > 5:
+                    if avaPoints > 4:
+                        show ava typical shy
+                        
                         n "She mutters something under her breath."
                         
                         ava @ say "But me and [name] would be even cuter..."
+                    
+                    show ava typical happy
+                    show rori flattered blushing
                         
                     rori @ say "Heh, thanks."
                         
                     player "Shall we head back to the dorms then?"
                     
+                    show rori cheery blush
+                    
                     rori @ say "Ba-a-a-ah! Of course!"
                     
-                    if roriPoints > 4:  
+                    if roriPoints > 4:
+                        show rori flattered blushing
+                        
                         rori @ say "But could we maybe take the scenic route? It's a nice night out and..."
                         
                         player "And you wanna hold my hand a little longer. Gotchya."
                         
+                        show rori happy
+                        
                         rori @ say "Something like that...!"
                         
+                        show rori neutral
+                        show claire sweater suggestive
+                        
                         claire @ say "D'awww~"
+                        
+                        show gunner disgusted
                         
                         gunner @ say "Ick."
                         
@@ -1574,15 +1741,28 @@ label chapter3:
                         
                     
                 if holdingHands == "Gunner":
+                    show gunner frown1
+                    
                     gunner @ say "... You're serious?"
                     
                     player "I didn't dominate you in our competition to *not* hold your paw."
                     
+                    show claire sweater pose suggestive earsup
+                    
                     claire @ say "Come on, a deal's a deal, Gunner!"
+                    
+                    show ava typical overjoyed
                     
                     ava @ say "Haha yeah just do it! It'll be really funny haha OvO"
                     
+                    show rori armscrossed silly
+                    
                     rori @ say "What's the matter Gunner? Afraid you'll turn gay?"
+                    
+                    show gunner annoyed
+                    show ava typical happy
+                    show claire none
+                    show claire sweater happy
                     
                     gunner @ say "Shut up, there's nothing gay about holding your homie's hand."
                     
@@ -1605,17 +1785,36 @@ label chapter3:
                     
                     n "He hisses at you while the rest of the group laughs. Eventually he settles down and accepts his defeat."
                     
+                    show ava overjoyed
+                    
                     ava @ say "You two are so cute together! You should hold hands more often~"
+                    
+                    show ava happy
+                    show claire sweater suggestive
                     
                     claire @ say "Yeah Ava's definitely gonna be writing fanfiction about this later."
                     
-                    ava @ say "Shush, you!"
+                    show ava typical angry
+                    
+                    ava @ say "I am not!"
+                    
+                    show gunner itsover
                     
                     gunner @ say "The things I put up with to have a chance with a hot secretary bird."
                     
+                    show gunner displeased
+                    show ava typical enamored
+                    show claire sweater giggle
+                    
                     claire @ say "Yaoi is so fucking hot."
                     
+                    show rori armscrossed smile blush
+                    
                     rori @ say "...Bet."
+                    
+                    show gunner frown1
+                    show claire sweater happy
+                    show rori armscrossed neutral
                     
                     gunner @ say "I have no idea why girls are so into this sort of thing."
                     
@@ -1623,10 +1822,15 @@ label chapter3:
                     
                     gunner @ say "Yeah but two guys *together???* What does the woman even get out of this?"
                     
-                    ava @ say "Snrk"
+                    show ava typical suggestive
+                    
                     ava @ say "I'll cut you a deal Gunner, anything you do with [name] while holding hands, I'll do with you~"
                     
+                    show ava typical smug
+                    
                     gunner @ say "Yeah? Well I don't think [name] is gonna let me bend him over and-"
+                    
+                    show ava typical shocked
                 
                     ava @ say "Before you finish that statement let me be clear that I'm just joking around...!"
                     
@@ -1662,37 +1866,76 @@ label chapter3:
                             
                             claire @ say "That's right! Human males are for pairbonding only!"
                             
+                            show ava typical concerned
+                            
                             n "Ava looks a bit disappointed but quickly stows it away."
                             
+                            show claire sweater happy -earsup
+                            show rori neutral
+                            show gunner frown1
+                            show ava typical shy
+                            
                             ava @ say "H-hey it was just a funny thought that popped into my head is all! No need to get so defensive!"
+                            
+                            show gunner itsover
                             
                             n "Gunner shakes his head, seemingly achieving some sense of clarity."
                             
                             gunner @ say "[name]'s right, I could never allow my dick to be touched by another man, not even for guaranteed bird sexo. That would be hella gay."
                             # I just don't swing that way."
+                            
+                            show gunner determined
+                            
                             gunner @ say "Besides..."
+                            
+                            show gunner wink catface
                             
                             n "Gunner snaps his paw and winks at Ava."
                             
+                            show ava typical happy
+                            
                             gunner @ say "I don't need a cheap trick like that to win in the end~"
+                            
+                            show gunner neutral
+                            
                             gunner @ say "Sometimes you have to lose the battle and hold your bro's hand to win the war."
                             
                             ava @ say "Hmm..."
+                            
+                            show ava typical whimsical
+                            
                             ava @ say "In that case, may the best man win!"
+                            
+                            show claire sweater laughing
                             
                             claire @ say "I call dibs on the loser!"
                             
+                            show claire sweater happy
+                            show gunner frown1
+                            
                             gunner @ say "...Now I definitely have to win."
+                            
+                            show gunner neutral
+                            
                             gunner @ say "Come on, let's get out of here before anybody important sees me like this."
+                            
+                            scene bg black with dissolve
                             
                             n "You made your way back to campus, holding Gunner's paw the whole time. You revelled in how uncomfortable it made him and thwarted his attempts to escape."
                             n "Only when you reached your dorm did you mercifully release him."
                         "Just a smooch":
                             n "You don't know if you're ruining your chances with Ava or boosting them but you're doing this for the memes."
                             
+                            show ava typical shocked
+                            show gunner gruff
+                            show claire sweater surprised earsup
+                            show rori armscrossed worried
+                            
                             player "Best I can do tonight is a smooch."
                             
                             n "Gunner turns his eyes toward Ava, then back to you, then back to Ava before finally coming to a stop looking at you with a mixture of apprehension and gratitude."
+                            
+                            show gunner frown1
                             
                             gunner @ say "...For real?"
                             
@@ -1700,30 +1943,61 @@ label chapter3:
                             player "What's one little kiss gonna do?"
                             player "Aside from giving these fujoshis a nice show that is?"
                             
+                            show ava typical motivated
+                            
                             ava @ say "Yes... Ha ha ha... {u}yes{/u}!"
                             
+                            show gunner displeased
+                            
                             gunner @ say "Ughhh you drive a hard bargain!"
+                            
+                            show gunner itsover
+                            
                             gunner @ say "This is a classic strong-arming technique I read about in \"The Art of the Deal\" where you try and turn someone's homies into homos."
+                            
+                            show gunner determined
+                            
                             gunner @ say "And to that I say no deal."
+                            
+                            show claire sweater happy -earsup
+                            show ava typical neutral
+                            show rori armscrossed neutral
                             
                             ava @ say "Aww..."
                             
                             player "Don't worry, he'll come around to the idea."
                             
+                            show claire sweater suggestive
+                            
                             claire @ say "Shoulda bargained better."
+                            
+                            show claire sweater suggestive earsup
+                            
                             claire @ say "Offer him a blowie next time!"
+                            
+                            show ava typical angry
+                            show claire none
+                            show claire sweater giggle
                             
                             ava @ say "Claire please."
                             
+                            show claire happy
+                            
                             claire @ say "What? That's just common business sense! There's a whole chapter about it in \"The Art of the Deal!\""
                             
+                            show ava typical concerned
+                            show gunner displeased
+                            
                             gunner @ say "Too late, my decision is final!"
+                            
+                            show gunner frown1
+                            
                             gunner @ say "Now let's get out of here before anybody important sees me like this."
+                            
+                            scene bg black with dissolve
                             
                             n "You made your way back to campus, holding Gunner's paw the whole time. You revelled in how uncomfortable it made him and thwarted his attempts to escape."
                             n "Only when you reached your dorm did you mercifully release him."
-                            
-                            
                             
                             
                         "Suggest a compromise":
@@ -1733,14 +2007,26 @@ label chapter3:
                             player "If Ava wants us so bad she can bottom for both of us."
                             
                             ava @ say "T-that...!"
+                            
+                            show ava typical suggestive
+                            show claire sweater surprised earsup
+                            show rori armscrossed concerned blush
+                            
                             ava @ say "...Could actually be arranged~"
+                            
+                            show ava typical embarrassed
+                            
                             ava @ say "Purely in a hypothetical sense of course! As a philosophical exercise!"
                             
                             claire @ say "Holy shit they're actually planning a threesome."
                             
                             rori @ say "I know, it's insane."
                             
+                            show ava typical angry
+                            
                             ava @ say "Quiet you two! We're merely discussing the complex social dynamics of intersecting bonding rituals!"
+                            
+                            show claire sweater giggle
                             
                             claire @ say "Who gets your beak and who gets your tailfeathers?"
                             
@@ -1749,9 +2035,15 @@ label chapter3:
                             n "You feel Gunner's paw grip tightly around your hand, trembling. You'd almost forgotten that you were bound to him in this way."
                             n "Seeing you two forced to act as an inseperable pair sure is doing a number on Ava, huh?"
                             
+                            show claire sweater laughing
+                            
                             claire @ say "Fine, keep your secrets! I'll just ask them directly which they'd prefer!"
                             
+                            show ava reaching embarrassed
+                            
                             ava @ say "W-wait!"
+                            
+                            show claire sweater suggestive
                             
                             claire @ say "Well? Which would it be, [name]?"
                             
@@ -1762,6 +2054,8 @@ label chapter3:
                                     
                                     claire @ say "Don't try and weasel out of this one, you knew what you were getting into when you suggested a compromise!"
                                     
+                                    show gunner itsover
+                                    
                                     player "B... Beak."
                                 "Tailfeathers":
                                     n "This conversation is rapidly approaching critical levels of awkwardness. This is definitely not the topic you should be discussing in a hospital lobby at 9PM."
@@ -1769,25 +2063,45 @@ label chapter3:
                                     
                                     claire @ say "Don't try and weasel out of this one, you knew what you were getting into when you suggested a compromise!"
                                     
+                                    show gunner itsover
+                                    
                                     player "T... Tailfeathers."
-                                
+                            
                             claire @ say "There, I just got you some new fanfic material~"
+                            
+                            show ava typical shy
                             
                             ava @ say "Haha y-yeah just some harmless fanfiction..."
                             
+                            show claire sweater happy
+                            show gunner displeased
+                            show rori none
+                            show rori armscrossed neutral
+                            
                             n "Gunner appears to be stumped, weighing his options and chances carefully. He suddenly clears his throat and speaks up."
                             
+                            show ava typical concerned
+                            
                             gunner @ say "Okay enough of the hypothetical bullshit."
-                            gunner @ say "There will be no threesomes unless it's with me, Ava, and Ava's twin sister."
+                            gunner @ say "There will be no threesomes unless it's with me, Ava, and Ava's long lost twin sister."
                             gunner @ say "It's all or nothing with me. No compromises."
                             
+                            show rori armscrossed neutral lookingaway
+                            
                             rori @ say "Wow, that's actually... kinda based of you."
+                            
+                            show rori armscrossed sleepy
+                            
                             rori @ say "Or at least it would be if I didn't know you're just afraid of seeing [name]'s dick."
+                            
+                            show gunner determined
             
                             gunner @ say "Each piece has its role in the grand scheme of things."
                             gunner @ say "I know there's at least one timeline where maximizing my homophobia stat gets me a waifu."
                             
                             player "Hey, if it works good for you."
+                            
+                            show ava typical whimsical
                             
                             n "Ava finally manages to shake off her horny stupor and feel shame after getting turned down."
                             
@@ -1795,7 +2109,7 @@ label chapter3:
                             
                             gunner @ say "Agreed."
                             
-                            scene bg black
+                            scene bg black with dissolve
                             
                             n "You made your way back to campus, holding Gunner's paw the whole time. You revelled in how uncomfortable it made him and thwarted his attempts to escape."
                             n "Only when you reached your dorm did you mercifully release him."
@@ -1818,13 +2132,21 @@ label chapter3:
             
             n "You sit there, brain fried from the traumatic spices, suckling on an ice cube as Gunner finishes his bowl and claims victory."
             
+            show gunner motivated
+            
+            gunner @ say "AHAHAHAHA YESSSS"
             gunner @ say "THROUGH THE FIRE AND FLAMES, I EMERGE VICTORIOUS!"
             gunner @ say "*Inhales*"
+            
+            show gunner pissed
+            
             gunner @ say "AAAAAAAAAAAAAAAAAAA!!!!"
             
             n "The waitress comes by and refills your drinks. Gunner chugs his in one go."
             
             gunner @ say "EVEN THE WATER BURNS!!!"
+            
+            show ava reaching concerned
             
             ava @ say "You alright, big guy?"
             
@@ -1832,6 +2154,8 @@ label chapter3:
             gunner @ say "I am in"
             gunner @ say "so much pain right now."
             gunner @ say "But it'll be worth it to hold your wing."
+            
+            show ava typical shy
             
             n "Ava stifles a giggle."
             
@@ -1841,8 +2165,12 @@ label chapter3:
             
             claire @ say "You put on a good show too!"
             
+            show ava typical suggestive
+            
             ava @ say "You boys looked so silly~"
             ava @ say "Mind if I try a bite, [name]?"
+            
+            show ava typical smug
             
             player "You sure? It's kinda spicy."
             
@@ -1851,16 +2179,26 @@ label chapter3:
             n "Ava reacher over with her fork and takes a stab at your red hot molten lava in a bowl."
             n "You watch in horror as she takes a big bite and swallows it."
             
+            show ava typical neutral
+            
             ava @ say "Hmm. Kinda bland if you ask me."
             
             gunner @ say "The fuck?"
             gunner @ say "How can you eat something so spicy? Are you Mexican or something?"
             
+            show ava profile whimsical
+            
             ava @ say "Breee~ A magician never reveals her secrets!"
+            
+            show rori armscrossed neutral lookingaway
             
             rori @ say "Birds don't have receptors of capsaicin, so they can't taste spicy foods."
             
+            show ava profile smug
+            
             ava @ say "Ya got me! Hehe it was fun watching you guys struggle with something so mild!"
+            
+            show gunner disgusted
             
             gunner @ say "Well I'm glad we could offer some amusement for the night."
             gunner @ say "I am never doing this again."
@@ -1873,6 +2211,9 @@ label chapter3:
             n "Gunner was kind enough to pay for your meal but not kind enough to avoid gloating as he held Ava's wing on the way back to campus."
             
             scene bg codadorm with fade
+            
+            show box with Dissolve(.2):
+                ypos 0
             
             n "You wake up feeling dizzy, almost kinda hungover."
             n "Your poor intestines are still groaning in pain even after you made several trips to the bathroom."
@@ -1910,6 +2251,9 @@ label chapter3:
             
             scene bg codadorm with dissolve
             
+            show box with Dissolve(.2):
+                ypos 0
+            
             n "Your intestines have finally settled and you're feeling well enough to go out."
             
             call afterClassOptions
@@ -1918,9 +2262,19 @@ label chapter3:
     jump chapter3AfterWeekend
         
 label chapter3AfterWeekend:
+    scene bg codadorm with fade
+    
+    show box with Dissolve(.2):
+        ypos 0
+
     #knock over rose's cassette player in class on accident, can give her the repair gear if you have it or offer to cashapp her but she doesn't have the app (or a phone)
     n "Monday again."
-    n "At least your guts are no longer begging for death after Friday's dinner and you can return to class in peace."
+    n "At least your intestines are no longer begging for death after Friday's dinner and you can return to class in peace."
+    
+    scene bg classroom with fade
+    
+    show box with Dissolve(.2):
+        ypos 0
     
     n "The classroom is pretty lively by the time you arrive. Everyone's chatting and laughing except for Rose."
     n "She sits with her head facing towards the window, staring out at the courtyard. A small rectangular box sits on her desk with a wire snaking around and splitting off into two ends that terminate at her ears."

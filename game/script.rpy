@@ -3693,6 +3693,16 @@ layeredimage rori smirk lookingaway:
         pos (4,33)
         attribute say:
             "images/bubble.png"
+layeredimage rori smirk blush:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori smirk blush.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
 layeredimage rori smirk:
     at sprite_highlight('rori')
     always:
