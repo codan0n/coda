@@ -542,6 +542,9 @@ label chapter3:
     
     n "The ram turns his head around to face you."
     
+    show rori anxious at center with dissolve:
+        ypos y_rori
+    
     rori @ say "Huh? Oh hey [name]!"
     
     player "Dude hurry up and buy something already, I'm gonna be late for class at this rate."
@@ -551,27 +554,46 @@ label chapter3:
     
     player "Are you... hacking?"
     
+    show rori sassy
+    
     rori @ say "Shh!"
     rori @ say "It's not hacking!"
+    
+    show rori smirk lookingaway
+    
     rori @ say "I'm just tricking the machine into giving me what I want."
     
     player "Sounds like hacking to me."
     
+    show rori concerned
+    
     rori @ say "Maybe it would be if it was actually working."
+    
+    show rori angry neutral
+    
     rori @ say "I can't believe the random code I pulled off github doesn't function as advertised!"
     
     player "Inconceivable!"
     
     n "Rori pulls on his hoodie and reveals a tiny computer thing he's concealing."
     
+    show rori armscrossed sleepy
+    
     rori @ say "Maybe my blueberry pi just doesn't have enough RAM to crack the security code."
+    rori @ say "Poor thing's swap partition is probably choking to death."
     rori @ say "I knew I should have gotten the 4GB model."
+    
+    show rori none
+    show rori armscrossed
     
     n "Rori sighs and unplugs the wire from the card slot."
     
     rori @ say "Whatever. I've spent enough time here looking suspicious. I'll just pay for snacks like a normie."
     
     n "Rori tries swiping his card but the machine gives an error."
+    
+    show rori none
+    show rori anxious
     
     rori @ say "Aw what? Don't tell me I bricked it."
     
@@ -591,18 +613,32 @@ label chapter3:
         "You're going to jail":
             player "RIP, you're going to jail for this."
             
+            show rori at shudder
+            
             rori @ say "D-don't say that!"
+            
+    show rori armscrossed asleep
             
     n "Rori sighs and leans his back against the machine. He slips down it until he's sitting on the floor."
     
     rori @ say "I just wanted to get free snacks for a special someone."
     
-    player "Oh?"
-    player "You know you don't have to constantly give someone gifts to impress them."
+    if roriPoints > 3:
+        player "You don't have to get me anything, you know."
+        
+        rori @ say "I'm not talking about you."
     
-    rori @ say "You don't get it."
+    else:
+        player "Oh?"
+        player "You know you don't have to constantly give someone gifts to impress them."
+        
+    show rori armscrossed embarrassed2    
+    
+    rori @ say "You wouldn't get it."
     
     n "Man, he is really sulking."
+    
+    hide rori with dissolve
     
     menu:
         "Sit next to him":
@@ -631,17 +667,26 @@ label chapter3:
             
     player "Is that the rat from the other week?"
     
+    show rori rat smile
+    
     rori @ say "Yup. His eye is messed up so I made a cute little eyepatch for him."
     
     player "You befriended him?"
     
     rori @ say "It wasn't hard. I just kept giving him food."
+    
+    show rori rat worried
+    
     rori @ say "That's why I was trying to hack the vending machine."
     
     player "You should have said something!"
     player "Based Robinhood stealing from the rich and giving to the poor starving rats."
     
+    show rori rat supersmug
+    
     rori @ say "Heh I don't think he's starving anymore, not with how much I feed him."
+    
+    show rori rat neutral
     
     player "What's his name?"
     
@@ -656,17 +701,23 @@ label chapter3:
     
     player "Nice to meet you, Guts."
     
+    show rori rat silly
+    
     rori @ say "I think he remembers you."
     
     player "He better, after all the trouble I went through to get those pretzels for him."
     
     ###have a line that says if you gave your money to the hobo or to lina then you don't have any to buy a snack
     
+    show rori rat neutral
+    
     player "Do you come here just to see him?"
     
     rori @ say "I have a class here earlier in the day. I just check up on him if he happens to be under the vending machine."
     
     player "That reminds me, I should get to class now."
+    
+    show rori rat smile 
     
     rori @ say "Okay! Take care!"
     
@@ -676,40 +727,92 @@ label chapter3:
     
     scene bg campus summer day clear with fade
     
+    show box with Dissolve(.2):
+        ypos 0
+    
+    show gunner neutral at center with dissolve:
+        ypos y_gunner
+        xoffset -600
+        xzoom -1
+    
+    show ava at offscreenright:
+        ypos y_ava
+    show claire at offscreenright:
+        ypos y_claire
+    
     n "After class, Gunner tagged along with you as usual, but Rori was nowhere to be found."
     n "Instead you're joined by your Tuesday/Thursday friends."
     
+    pause .2
+    
+    show ava typical happy:
+        ypos y_ava
+        xoffset -950
+    show claire sweater happy:
+        ypos y_claire
+        xoffset -850
+    with move
+        
+    
     claire @ say "Look Ava, cute boys!"
+    
+    show ava typical suggestive
     
     ava @ say "Where? Oh you mean these two?"
     
+    show ava typical happy
+    show claire sweater surprised earsup
+    
     claire @ say "Who else!"
+    
+    show claire none
+    show claire sweater happy
     
     gunner @ say "Hello ladies~"
     
     player "Watch out Gunner, these two are out for blood."
     
+    show ava typical smug
+    
     ava @ say "Ah yes, fluffy bunnies and secretary birds, two of the deadliest predators."
     
     player "I've seen Attack of the Killer Rabbits, I know what you're capable of."
+    
+    show claire sweater suggestive
     
     claire @ say "It's true, we can be viscious~"
     claire @ say "I wouldn't mind taking a bite out of you in particular, [name]~"
     claire @ say "I bet humans taste delicious~"
     
+    show ava typical unimpressed
+    
     ava @ say "Claire everyone knows rabbits are herbivores."
+    
+    show claire sweater flustered
     
     claire @ say "Don't act like you're not curious about what humans taste like too!"
     
+    show claire sweater happy
+    show gunner itsover
+    
     gunner @ say "Ahem."
+    
+    show gunner optimistic
+    
     gunner @ say "Speaking of lunch, I was gonna suggest we all go out somewhere to eat."
+    
+    show ava typical excited
     
     ava @ say "That's a great idea! I just had back to back exams so I'm starving!"
     
+    show ava typical happy
+    
     claire @ say "I just ate but I could go for seconds!"
     
-    ###variation depending on if the player is into fat bitches
-    player "Hnnnnng."
+    ###variation depending on if the player is into fat bitches, and one if player is not into fat bitches
+    #if calledClaireFat > 0:
+        
+    #player "Hnnnnng."
     
     gunner @ say "I know a good Thai place in town if you're down."
     
@@ -717,12 +820,22 @@ label chapter3:
     
     player "Sounds good to me."
     
-    ava @ say "Yeah let's hurry before the weekend crowds come."
+    ava @ say "Yeah but let's hurry before the weekend crowds come."
+    
+    show gunner eyesclosed catface
     
     gunner @ say "Lines won't be a problem, I know the owner of the restaurant."
+    
+    show gunner cheeky1
+    
     gunner @ say "Last time I had to wait longer than 10 seconds I simply threatened to have my dad's goons burn down his establishment and I've never had any problems since."
     
+    show ava pose concerned
+    show claire sweater surprised earsup
+    
     ava @ say "..."
+    
+    show gunner optimistic
     
     gunner @ say "I'll text my roommate Rori and see if he wants to come along!"
     
@@ -751,25 +864,36 @@ label chapter3:
     n "Gunner brought you to a lively restaurant in town and Rori joined up with you on the way."
     n "He was right, the seating was quick for your group despite the long line. He got you an outdoors table, fitting for such a pleasant day."
     n "After ordering drinks, you retreated to the restroom to take care of some business."
+    
+    show ava pose smug
+    show claire sweater suggestive 
+    show gunner cheeky1
+    show rori supersmug
+    
     n "When you returned, your group of friends eyed you with sinister expressions."
     
     player "What? Why do you all look so smug?"
     
-    #show ava typical daydream
+    show ava typical suggestive
     
     ava @ say "You took so long we decided to go ahead and order for you!"
     
-    player "Really? Nothing too expensive I hope..."
+    show ava typical smug
     
-    #show ava casual smile
+    player "Really? Nothing too expensive I hope..."
     
     ava @ say "Quite the contrary! ...If you can finish it, that is."
     
     n "You raise a brow and are about to ask what she meant when the waitress arrives and sets everyone's meals on the table."
     
+    show ava typical happy
+    show claire sweater giggle
+    show rori neutral
+    show gunner neutral
+    
     #show waitress at center with dissolve
     
-    waitress "Aaaand for you the spicy ramen bowl challenge! Remember, it's only free if you manage to finish it all on your own!"
+    waitress "Aaaand for you we have the spicy ramen bowl challenge! Remember, it's only free if you manage to finish it all on your own!"
     waitress "Please sign here so we're not liable for any damages to your short term or long term health. Good luck!"
     
     n "She hands you a pen and paper, which you absentmindedly sign, confused as to why you have to sign something just to have hot sauce in your pasta."
@@ -782,16 +906,22 @@ label chapter3:
     
     n "She does a little bow and heads back inside."
     
-    hide waitress with dissolve
+    show claire sweater happy
+    show rori armscrossed anxious
     
     rori @ say "Yeesh, it's making my eyes water already. I can even taste it from all the way over here!"
     
+    show rori armscrossed neutral
+    show gunner charming
+    
     gunner @ say "Hahaha sorry [name] but I swear it wasn't my idea! Ava thought it would be funny to order it for you and well, I didn't want you to suffer alone!"
     
-    #show ava casual unimpressed
+    show gunner neutral
+    show ava typical whimsical
     
     ava @ say "I was only half serious!"
-    #ava @ say "Hehehehe *chirp~*"
+    
+    show ava typical happy
     
     claire @ say "You can have some of what I got if it's too spicy for you [name]."
     

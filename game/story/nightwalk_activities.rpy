@@ -582,19 +582,31 @@ label claireNightWalkLvl1:
     
     player "Claire? What are you doing down there at this hour?"
     
+    show claire sweater surprised earsup
+    
     claire @ say "Shhshshsh! Turn that light off or everyone will see!"
+    
+    show claire sweater happy -earsup
     
     n "You oblige her and turn off your light."
     
     player "What's all this about?"
     
+    show claire sweater laughing
+    
     claire @ say "Aha! Got it!"
     
     n "You hear the scraping of metal against concrete as Claire pulls a small box out from the drain."
     
+    show claire sweater happy
+    
     player "What is that?"
     
+    show claire sweater giggle
+    
     claire @ say "It's a box!"
+    
+    show claire sweater happy
     
     n "She pops the latches up and opens the box. You're half expecting there to be a severed hand or something equally creepy inside."
     n "But it turns out to just be a bunch of random junk and some scraps of paper."
@@ -617,14 +629,23 @@ label claireNightWalkLvl1:
     
     player "Geocaching?"
     
+    show claire sweater flustered
+    
     claire @ say "Yeah! You know, geographical caching."
     
     player "But why??????"
     
+    show claire happy
+    
     n "Claire pulls a bead bracelet out from her pocket and deposits it into the box."
     
     claire @ say "It's like a game! You gotta find the box and your reward is a little trinket to put in the next box!"
+    
+    show claire sweater leaning suggestive
+    
     claire @ say "See anything you want?"
+    
+    hide claire with dissolve
     
     n "She holds the box up to your face. What catches your eye are some toy army men, trading cards, bottlecaps, a rubber duck."
     n "Which should you take?"
@@ -638,8 +659,13 @@ label claireNightWalkLvl1:
             n "You pocket the trinket and turn to Claire."
             
             player "Okay, now what?"
+            
+            show claire sweater overjoyed at center with dissolve:
+                ypos y_claire
                     
             claire @ say "Now as proof of our achievement..."
+            
+            show claire sweater happy
             
             n "She picks up the pencil that was in the box and unfolds a sheet of paper. Scrawled on it are various names and dates."
             n "These must be the people who found this cache and when."
@@ -657,8 +683,13 @@ label claireNightWalkLvl1:
             n "You pocket the trinket and turn to Claire."
             
             player "Okay, now what?"
+            
+            show claire sweater overjoyed at center with dissolve:
+                ypos y_claire
                     
             claire @ say "Now as proof of our achievement..."
+            
+            show claire sweater happy
             
             n "She picks up the pencil that was in the box and unfolds a sheet of paper. Scrawled on it are various names and dates."
             n "These must be the people who found this cache and when."
@@ -675,8 +706,13 @@ label claireNightWalkLvl1:
             n "You pocket the trinket and turn to Claire."
             
             player "Okay, now what?"
+            
+            show claire sweater overjoyed at center with dissolve:
+                ypos y_claire
                     
             claire @ say "Now as proof of our achievement..."
+            
+            show claire sweater happy
             
             n "She picks up the pencil that was in the box and unfolds a sheet of paper. Scrawled on it are various names and dates."
             n "These must be the people who found this cache and when."
@@ -693,8 +729,13 @@ label claireNightWalkLvl1:
             n "You pocket the trinket and turn to Claire."
             
             player "Okay, now what?"
+            
+            show claire sweater overjoyed at center with dissolve:
+                ypos y_claire
                     
             claire @ say "Now as proof of our achievement..."
+            
+            show claire sweater happy
             
             n "She picks up the pencil that was in the box and unfolds a sheet of paper. Scrawled on it are various names and dates."
             n "These must be the people who found this cache and when."
@@ -711,16 +752,27 @@ label claireNightWalkLvl1:
     
     player "Do I have a choice?"
     
+    show claire sweater pose laughing
+    
     claire @ say "Nope!"
+    
+    show claire sweater happy -pose
     
     n "Claire grabs your hand and rushes you along the campus streets. You can barely keep up with her excited hopping."
     n "You wind up at the school's running track, where half the area is illuminated by large stadium lights."
+    
+    show claire sweater giggle
     
     claire @ say "Okayokayokay so someone hides a cache and then posts the approximate GPS coordinates for it online and then geocachers go out and find it!"
     
     player "That's it? So it really is just hide and seek but with an inanimate object."
     
+    show claire sweater derp
+    
     claire @ say "Yup! It's a lot of fun actually and gets you exploring~"
+    
+    show claire sweater happy
+    
     claire @ say "The coordinates say it's somewhere in this area. There's a lot of places it could be hidden though! Any idea where we should start looking?"
     
     $ checkedBleachers = False
@@ -739,11 +791,17 @@ label cachingHunt1:
                 
                 claire @ say "Good thinking! You take the one on the right and I'll check the one on the left."
                 
-                n "That'll make things faster but with only one pair of eyes, you might overlook the box. Using your phone as a flashlight, you slink around to the back side of the bleachers and commence your search."
+                hide claire with dissolve
+                
+                n "That'll make things faster but with only one pair of eyes, you might overlook the box."
+                n "Using your phone as a flashlight, you slink around to the back side of the bleachers and commence your search."
                 n "Wind rattles the thin aluminum seats. It feels like the whole thing will collapse onto you at any moment."
                 n "All the shadows from the stands dance as you move your light source around, making it hard to look for anything."
                 n "You scan the ridges under the seats but come up empty."
                 n "After looking over everything twice, Claire returns to you from across the field."
+                
+                show claire sweater happy at center with dissolve:
+                    ypos y_claire
                 
                 claire @ say "Find anything yet?"
                 
@@ -756,16 +814,21 @@ label cachingHunt1:
                 $ lastChecked = "lamp"
                 $ checkedLamp = True
                 
-                player "How about the around lamp posts?"
+                player "How about around the lamp posts?"
                 
                 claire @ say "Good idea! Sometimes they have covers at the base you can lift up and hide things in."
                 claire @ say "You go that way along the track and I'll go this way so we each only have to check half of them."
                 
                 player "K. Meet you at the other end of the track."
                 
+                hide claire with dissolve
+                
                 n "You head in the opposite direction of Claire, inspecting every lamp post along the way."
                 n "Just as Claire said, some of them have a shroud covering some wires that you can just lift up."
                 n "No geocaching boxes to be found however."
+                
+                show claire sweater happy at center with dissolve:
+                    ypos y_claire
 
                 claire @ say "You find it??"
                 
@@ -787,15 +850,25 @@ label cachingHunt1:
                 
                 n "Claire bends down and hoists the garage door up."
                 
+                show claire sweater pose suggestive earsup
+                
                 claire @ say "You were saying?~"
                 
                 n "Judging by the screeching of the door, it probably was locked. These doors just aren't built to withstand the bnnuy though."
+                
+                show claire none
+                show claire sweater happy
+                
                 n "You and Claire begin rummaging through the various pieces of equipment in the shed."
                 n "It reeks of gasoline and grass clippings thanks to the lawnmower that's stored here. You cover your nose and dig around in every place that could conceal a box."
+                
+                show claire sweater sad
                 
                 claire @ say "I don't think it's in here."
                 
                 player "Yeah, I don't see anywhere it could be."
+                
+                show claire sweater happy
                 
                 claire @ say "Wanna try looking somewhere else?"
                 
@@ -859,8 +932,16 @@ label cachingHunt1:
     n "Inside, the box is empty aside from a pencil and a sheet of paper taped to the bottom."
     n "Only one name is written on it, and it dates back two years."
     
+    show claire sweater surprised earsup
+    
     claire @ say "That must be whoever set up this geocache."
+    
+    show claire none
+    show claire sweater overjoyed
+    
     claire @ say "This makes us the first to find it!!"
+    
+    show claire sweater happy
     
     n "Claire scrawls down your names and the current date."
     
@@ -871,11 +952,15 @@ label cachingHunt1:
             n "You pull your newly acquired trinket from the last box and deposit it inside."
             n "Better to leave the next geocacher with a fun prize than for you to carry around more junk."
             
+            show claire sweater flustered
+            
             claire @ say "Aww how sweet of you!"
             
             n "Claire pulls you into a side hug and nuzzles the top of your head."
             
             player "Just trying to be a good geocacher."
+            
+            show claire sweater laughing
             
             claire @ say "The next finder will appreciate it! Ksksksks!"
             
@@ -886,7 +971,11 @@ label cachingHunt1:
             
             player "It's ok, I'm sure they'll understand."
             
+            show claire sweater sad
+            
             n "Claire dejectedly puts the lid back on and secures the latches, returning the box to its original location."
+            
+    show claire sweater happy
             
     claire @ say "Well, that's geocaching for you! What did you think?"
     
@@ -894,21 +983,31 @@ label cachingHunt1:
     
     claire @ say "I'm glad I started doing it! There's a bunch of caches around here."
     claire @ say "When we were talking about hobbies earlier it got me thinking I needed a new one! So I looked up stuff to do and this was one I hadn't tried before!"
+    
+    show claire sweater flustered
+    
     claire @ say "Soooo thanks for leading me down this rabbit hole!"
     
     n "She's really happy to have something new to do."
     n "She'd probably love to do this again with you."
     
     claire @ say "This was a lot of fun!"
+    
+    show claire sweater derp
+    
     claire @ say "I'd love to do this again with you!"
     
     n "Wow it's like she can read your mind."
     
-    ###if you have high claire points
+    #if you have high claire points
+    if clairePoints > 4:
+        show claire sweater pose suggestive
+        
+        claire "You like big bunnies, don't you [name]?"
     
-    claire "You like big bunnies, don't you [name]?"
-    
-    n "GET OUT OF MY HEAD!!!"
+        n "GET OUT OF MY HEAD!!!"
+        
+    show claire sweater happy
     
     player "Maybe we can do this again next time I go out on one of my signature nightwalks."
     
