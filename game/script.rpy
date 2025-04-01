@@ -347,6 +347,16 @@ layeredimage ava glowy unamused:
         pos (-80,-30)
         attribute say:
             "images/bubble.png"
+layeredimage ava profile overjoyed:
+    at sprite_highlight('ava')
+    always:
+        'images/characters/ava/ava profile overjoyed.png'
+    group saying:
+        xzoom .9
+        yzoom 1.0
+        pos (-80,-30)
+        attribute say:
+            "images/bubble.png"
 layeredimage ava casual whimsical:
     at sprite_highlight('ava')
     always:
@@ -2285,10 +2295,10 @@ layeredimage mishka jacketless overjoyed:
         pos (-70,-7)
         attribute say:
             "images/bubble.png"
-layeredimage mishka jacketless sad nervous:
+layeredimage mishka jacketless sad2 nervous:
     at sprite_highlight('mishka')
     always:
-        'images/characters/mishka/mishka jacketless sad nervous.png'
+        'images/characters/mishka/mishka jacketless sad2 nervous.png'
     group saying:
         xzoom .95
         yzoom 1
@@ -3116,7 +3126,7 @@ layeredimage rori armscrossed neutral lookingaway:
 layeredimage rori armscrossed neutral:
     at sprite_highlight('rori')
     always:
-        'images/characters/rori/rori armscrossed neutral lookingaway.png'
+        'images/characters/rori/rori armscrossed neutral.png'
     group saying:
         xzoom .75
         yzoom .6
@@ -3993,7 +4003,37 @@ layeredimage rose skirt handonhip dismissive pendant:
     group saying:
         xzoom -.9
         yzoom .9
-        pos (625,-62)
+        pos (680,-62)
+        attribute say:
+            "images/bubble.png"
+layeredimage rose athletic irritated:
+    at sprite_highlight('rose')
+    always:
+        'images/characters/rose/rose athletic irritated.png'
+    group saying:
+        xzoom -.9
+        yzoom .9
+        pos (680,-62)
+        attribute say:
+            "images/bubble.png"
+layeredimage rose athletic dismissive lookingaway:
+    at sprite_highlight('rose')
+    always:
+        'images/characters/rose/rose athletic dismissive lookingaway.png'
+    group saying:
+        xzoom -.9
+        yzoom .9
+        pos (680,-62)
+        attribute say:
+            "images/bubble.png"
+layeredimage rose athletic dismissive:
+    at sprite_highlight('rose')
+    always:
+        'images/characters/rose/rose athletic dismissive.png'
+    group saying:
+        xzoom -.9
+        yzoom .9
+        pos (680,-62)
         attribute say:
             "images/bubble.png"
 layeredimage rose athletic furious:
@@ -4003,7 +4043,7 @@ layeredimage rose athletic furious:
     group saying:
         xzoom -.9
         yzoom .9
-        pos (625,-62)
+        pos (680,-62)
         attribute say:
             "images/bubble.png"
 layeredimage rose skirt furiouspose pendant:

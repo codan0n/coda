@@ -38,25 +38,39 @@ label roseNightWalkLvl1:
     
     pause .1
     
-    show rose at center with move:
+    show rose athletic dismissive at center with move:
         ypos y_rose
     
     menu:
         n "{cps=0}It turns out to be your history project partner!{/cps}"
         "Be polite":
-            n "Heya Rose! I love the new outfit! What are you doingout so late?"
+            n "Heya Rose! I love the new outfit! What are you doing out so late?"
         "Call her a slur":
             player "Well if it isn't the trashiest of pandas! What are you doing out so late?"
+            
+            show rose athletic furious
         "Politely call her a slur":
             player "Hi Rose! What's the least trashy trash panda I know doing out so late?"
+            
+            show rose athletic furious
 
     rose @ say "What does it look like? I'm running."
     
     player "Hey that's cool. Running and stuff. Y'know humans can run too. We're like the best at it too. Endurance hunters and all that."
     
+    show rose athletic dismissive lookingaway
+    
     rose @ say "Psh yeah whatever."
     
+    pause .2
+    
+    show rose at offscreenleft with move:
+        ypos y_rose
+    
     n "Rose scoffs and speeds along, vanishing from your sight."
+    
+    show rose at offscreenright:
+        ypos y_rose
     
     menu:
         "Try and catch up to her":
@@ -69,11 +83,23 @@ label roseNightWalkLvl1:
             n "Gasping for air, you feel your body drained of energy and your sprint slows to a pitiful shamble."
             n "You're still breathing heavily when Rose laps back around."
             
+            pause .1
+    
+            show rose athletic dismissive -lookingaway at center with move:
+                ypos y_rose
+            
             rose @ say "Wow that was pathetic. You look like you're dying."
             
             n "You flash her an \"OK\" symbol with your hand because you're too winded to talk."
             
+            show rose athletic irritated
+            
             rose @ say "You should just kill yourself now and save yourself further embarrassment."
+            
+            pause .2
+    
+            show rose at offscreenleft with move:
+                ypos y_rose
             
             n "You give her a thumbs up and watch as she jogs another lap."
             n "Maybe you should practice more, then she'll be impressed."
@@ -84,17 +110,31 @@ label roseNightWalkLvl1:
             n "You'll just wait for her to come back around to continue your conversation."
             n "Oh here she comes."
             
+            show rose athletic dismissive -lookingaway at center with move:
+                ypos y_rose
+            
             player "You come here often?"
+            
+            show rose athletic furious
             
             rose @ say "Only when no one else is around."
             
             player "I get it, I'm shy about working out in front of people too. Probably why I don't go to the gym much."
             
+            show rose athletic irritated
+            
             rose @ say "..."
             
             player "Hey, you wanna be running partners?"
             
+            show rose dismissive
+            
             rose @ say "No."
+            
+            pause .2
+    
+            show rose at offscreenleft with move:
+                ypos y_rose
             
             n "She runs ahead, leaving you in the dust."
             n "Maybe you should practice running, then she'll be impressed."
@@ -156,7 +196,7 @@ label avaNightWalkLvl1:
     n "You even hear the odd bird chirping despite it being well past their bed time."
     n "Speaking of birds, a familiar voice bounces off the brick walls and into your ears."
     
-    ava @ say "Hehehe you're actually kinda funny when you're not being misogynistic or bragging about being rich!"
+    ava @ say "Hehehe you're actually kinda funny when you're not being misogynistic or flaunting your wealth!"
     
     gunner @ say "Thank you, I try my best to be all three of those things."
     
@@ -220,11 +260,17 @@ label avaNightWalkLvl1:
         "Chastise him":
             player "That you're a manipulative fraud who's only personality is having money!"
             
+            show gunner displeased
+            
             gunner @ say "Spoken like a true poor. You let your jealousy blind you to the fact that I'm a real person with real beliefs, ideas, and values."
             
-            ava @ say "Hey, Gunner..."
+            show ava pose concerned
+            
+            ava @ say "Hey now, Gunner..."
             
             gunner @ say "You and everyone else thinks that just because I'm free from being a debt slave that I gotta be the villain huh? Well newsflash pal, even with your dollar store sneakers you're still richer than 99\% of the planet!"
+            
+            show ava reaching concerned
             
             ava @ say "Maybe chill out a bit..."
             
@@ -237,7 +283,7 @@ label avaNightWalkLvl1:
                     player "Dude you need to calm down. I was just bantering and you turned it into a personal attack."
                     
                     gunner @ say "Well maybe I'm sick of people misinterpreting my entire character when I have more depth than all the NPCs around here!"
-                    gunner @ say "Everyone dogpiles on me because rich man bad but no one cares to see me for who I really am!"
+                    gunner @ say "Everyone dogpiles on me because rich man bad but almost no one cares to see me for who I really am!"
                     
                     player "Maybe because you're an asshole."
                     
@@ -246,11 +292,19 @@ label avaNightWalkLvl1:
                     
                     player "Save it for your therapist."
                     
+                    show gunner itsover
+                    
                     gunner @ say "Man, I thought you were a lot cooler, [name]."
                     gunner @ say "Why'd you have to prove me wrong?"
                     
+                    #show ava profile concerned
+                    
                     n "Ava is silent but this argument has clearly put a damper on her mood."
                     n "You all stand around quietly until one of you makes up an excuse to go back to your dorm and the others follow suit."
+                    
+                    hide gunner
+                    hide ava
+                    with dissolve
                     
                 "Gain respect for Gunner":
                     n "Sounds like he's got a lot more going on than he shows on the surface."
@@ -258,18 +312,34 @@ label avaNightWalkLvl1:
                     
                     player "Y'know, I thought you were just a scumbag dudebro with daddy's money, but maybe you're onto something. Maybe you are a real feline being."
                     
+                    show gunner motivated
+                    
                     gunner @ say "I can be both!"
                     
+                    show ava typical happy
+                    
                     player "A real hustler but a genuine sensitive guy underneath."
+                    
+                    show ava profile overjoyed
                     
                     ava @ say "Aww~"
                     
                     player "Like the kind Rori talks about."
                     
+                    show gunner hissing
+                    
                     gunner @ say "Hey whoa slow down there bucko. That's my roommate you're talking about."
                     
+                    show ava typical shocked
+                    show gunner neutral
+                    
                     ava @ say "Huh? Is Rori into sensitive guys?"
+                    
+                    show ava typical embarrassed
+                    
                     ava @ say "Do I have *more* competition to deal with?"
+                    
+                    show gunner uncomfy
                     
                     gunner @ say "What? No! It's not like that at all!"
                     
@@ -279,17 +349,35 @@ label avaNightWalkLvl1:
                     
                     player "And what's all this about being room \'mates\'?"
                     
+                    show ava typical whimsical
+                    
                     ava @ say "Snrk"
+                    
+                    show ava typical shy
+                    
                     ava @ say "Alright I think that's enough teasing, boys~"
+                    
+                    show ava typical happy
+                    
                     ava @ say "Let's all just get along now, k?"
                     
+                    show gunner eyesclosed catface
+                    
                     gunner @ say "Yeah yeah, great bants [name]."
+                    
+                    show gunner neutral
                     
                     player "Thanks. No hard feelings?"
                     
                     gunner @ say "Nah we chill, homie."
                     
-                    n "You walk along with Gunner and Ava, cracking dumb jokes until you all become too tired to continue."
+                    show ava typical excited
+                    
+                    ava @ say "Good! Can't have my two favorite guys fighting like that!"
+                    
+                    show ava typical happy
+                    
+                    n "You walk along with Gunner and Ava, cracking dumb jokes until it gets too late out."
                 
                     
         "Let it go":
@@ -299,15 +387,24 @@ label avaNightWalkLvl1:
             
             n "Ava chimes in to relieve the tension."
             
+            show ava typical excited
+            
             ava @ say "Hey, would you like to walk with us, [name]? You and Gunner bounce off each other so well, it's always fun conversation!"
             
+            show ava typical happy
+            show gunner disgusted
+            
             player "We do?"
+            
+            show gunner charming
             
             gunner @ say "You bet! I'm like the suave schemer and you're the relatable everyman. It's a classic comedy pairing!"
             
             player "Thanks? It sounded like you just called me boring but okay."
             
             gunner @ say "That's exactly what the average ordinary guy would say!"
+            
+            show ava typical whimsical
             
             n "Ava giggles at your impromptu comedy routine."
             
@@ -316,31 +413,54 @@ label avaNightWalkLvl1:
             
             player "This either ends in heartbreak or a threesome."
             
+            show ava typical shy
+            show gunner cheeky1
+            
             gunner @ say "There's your signature dry humor! We should do standup!"
             
             player "I agree! Cause I'm not gonna take all your shit lying down!"
             
+            show ava typical neutral
+            
             ava @ say "Oh boy, here come the puns."
+            
+            show gunner displeased
             
             gunner @ say "Yeah [name], think of the poor translators who will have to make that make sense in another language."
             
             player "Sorry, I should have known it'd be hard for them to come up with worse jokes than ours."
             #player "They could come up with an original joke, but they'll have a hard time coming up with ones worse than ours."
             
+            show ava typical smug
+            show gunner neutral
+            
             ava @ say "They're so bad they're good."
             
-            n "You walk along with Gunner and Ava, cracking dumb jokes until you all become too tired to continue."
+            n "You walk along with Gunner and Ava, cracking dumb jokes until it gets too late out."
             
             
         "Name a more obscure artist":
-            player "I'm just saying Van Gogh and Ansel Adams are like babies first artists."
+            player "I'm just saying Van Gogh and Ansel Adams are like baby's first artists."
             player "Now Ray Metzker? That was a true photographer. He could really tell a story and evoke a feeling without resorting to snapshots of natural landscapes from a high vantage point"
+            
+            show ava typical shy
+            
             player "With his more abstract and tesselated works, I think he'd be more your style, Ava."
+            
+            show ava typical suggestive
             
             ava @ say "Yeah, creating something new from composites is pretty cool."
             
+            show ava typical smug
+            
             gunner @ say "Well, Metzker was good at transforming the real into fantastical mirages, but if you're talking about true photographers, look no further than Robert Landsburg."
+            
+            show gunner eyesclosed smile
+            
             gunner @ say "Dude was literally dying in a volcano and still taking shots. What a legend."
+            
+            show gunner optimistic
+            
             gunner @ say "What would you like your final photo to be? I'd want it to be me getting attacked by a great white shark."
             
             menu:
@@ -355,12 +475,18 @@ label avaNightWalkLvl1:
             
             player "What about you, Ava?"
             
+            show ava typical enamored
+            
             ava @ say "Well um...!"
             ava @ say "You know that one pic of that girl before she got murdered?"
+            
+            show gunner frown1
             
             gunner @ say "No? Which one?"
             
             player "Oh yeah, I know the one. Where she's standing on like a pier and holding her arms out and stepping back?"
+            
+            show ava typical embarrassed
             
             ava @ say "Yeah that one!"
             
@@ -375,6 +501,8 @@ label avaNightWalkLvl1:
             
             player "I've heard this one before. Next she'll say it's \'a lifestyle.\'"
             
+            show ava typical angry
+            
             ava @ say "Oh shush you!"
             
             show ava typical unimpressed 
@@ -384,6 +512,9 @@ label avaNightWalkLvl1:
             menu:
                 "Yeah, I do":
                     player "Actually I do. That's not a problem, is it?"
+                    
+                    show gunner disgusted
+                    show ava 
                     
                     ava @ say "I don't even wanna know what you jerk off to if it's worse than serial killers."
                 "No, I don't":
@@ -400,7 +531,13 @@ label avaNightWalkLvl1:
                 "Nofap":
                     player "I'm on nofap actually. I didn't know you were such a degenerate."
                     
+                    show gunner neutral
+                    
+                    show ava typical annoyed
+                    
                     ava @ say "Rude!"
+                    
+            show gunner itsover
             
             gunner @ say "Never goon."
             
@@ -424,6 +561,11 @@ label avaNightWalkLvl3:
     
     
 label claireNightWalkLvl1:
+    scene bg campus summer night clear with fade
+    
+    show box with Dissolve(.2):
+        ypos 0
+
     n "Bumbling around in the night sure is fun. You never know who you might bump into."
     n "Literally."
     n "You trip over something low to the ground, but instead of chipping your teeth on the asphalt below, you land on something incredibly soft."
@@ -434,6 +576,9 @@ label claireNightWalkLvl1:
     n "You found yourself on top of Claire, who was crouched on all fours for some reason."
     n "You roll off of her and turn on your phone's flashlight."
     n "She appears to have her arm buried in a storm water drain on the side of the street."
+    
+    show claire sweater wave happy at center with dissolve:
+        ypos y_claire
     
     player "Claire? What are you doing down there at this hour?"
     
@@ -823,38 +968,65 @@ label roriNightWalkLvl1:
     n "When you step away from it and look up, you see a shadowy figure scaling the face of the building, jumping from brick to brick."
     n "He's on his way down and takes the last few jumps quicker than you expect. When he reaches the ground, his momentum leads him to nearly collide with you."
     
+    show rori angry at center:
+        ypos -3000
+        
+    pause .2
+    
+    show rori with move:
+        ypos y_rori
+    
     rori @ say "Aaaaah!"
+    
+    show rori armscrossed embarrassed2
+    
     rori @ say "I'msosorrypleasedon'tcallthecops."
     
     player "Whoa take it easy. You didn't even bump into me."
+    
+    show rori armscrossed neutral
     
     rori @ say "Huh? Oh it's just you [name]. I take it you couldn't sleep either?"
     
     player "Nah, so I came out for a night walk."
     player "It looks like you went out for a night climb though! How do you even do that? There's nowhere to grip."
     
+    show rori armscrossed surprised
+    
     rori @ say "Oh gosh, you saw all that? Just- please delete that from your memory please."
     
     player "What? Why? It looked cool!"
+    
+    show rori armscrossed worried2
     
     rori @ say "It's an addiction! There's nothing cool about it!"
     
     player "You're addicted... to climbing?"
     
+    show rori armscrossed anxious
+    
     rori @ say "Shshshshsh! Not so loud!"
     rori @ say "I just can't help myself! These hooves were built for it!"
+    
+    show rori armscrossed embarrassed2
+    
     rori @ say "My only comfort is that I can restrain myself long enough to wait until night so nobody will see me but apparently that's not good enough!"
     
     player "Dude chill, it's not that big a deal."
     
+    show rori armscrossed surprised eyesclosed
+    
     rori @ say "Please don't tell me you saw me lick the wall too!"
     
-    show rori anxious at center:
+    show rori armscrossed anxious at center:
         ypos y_rori
     
     rori @ say "You gotta understand, there's *salt* on the walls bro! It's irresistable!"
     
     player "I didn't see you lick the wall."
+    
+    show rori none
+    show rori concerned
     
     rori @ say "Oh."
     
@@ -864,6 +1036,8 @@ label roriNightWalkLvl1:
     
     player "Does it taste good?"
     
+    show rori neutral
+    
     rori @ say "When you get up to the 4th floor or so."
     
     player "Nice."
@@ -872,21 +1046,35 @@ label roriNightWalkLvl1:
         "I wanna climb":
             n "You feel around the wall, searching for any place to grip. The mortar between the bricks is rough but too narrow, only the very tips of your fingers can rest between them."
             
+            show rori anxious
+            
             rori @ say "What are you doing?"
         
             player "Trying to see if I can climb this. Was there a ledge you used or something?"
             
+            show rori neutral
+            
             rori @ say "No, the bricks were enough for me."
+            
+            show rori armscrossed concerned
+            
             rori @ say "You really shouldn't be trying to climb this though."
             
             player "Why? Think I'll fall and hurt myself?"
             
+            show rori armscrossed embarrassed2
+            
             rori @ say "I'm worried you'll get addicted to it!"
+            
+            hide rori with dissolve
             
             n "You don't really have a plan but decide to test your abilities regardless by clamping down on a brick with all your finger strength and pushing both feet off the ground."
             n "You lodge the edges of your boots into the mortar a few inches above the ground and manage to stay clinging to the wall for a few seconds before your hands give out, dropping back down to the ground."
             
             player "Whew! Are you *sure* you don't have some antigravity tech that gets you up there?"
+            
+            show rori armscrossed neutral at center with dissolve:
+                ypos y_rori
             
             rori @ say "It's all just in the weight balance. It helps to have upper body strength too."
             
@@ -894,14 +1082,26 @@ label roriNightWalkLvl1:
             
             n "You give it one more attempt but manage to hold on for even less time than before."
             
+            show rori none
+            show rori yawn lookingaway blush
+            
             rori @ say "You probably just need to start on something easier."
+            
+            show rori angry neutral
+            
             rori @ say "*Not* that I'm advocating for this filthy habit, I'm just saying."
             
+            show rori neutral
+            
             player "Heh, I'll get to your level someday."
+            
+            show rori concerned
             
             rori @ say "Hopefully not!"
             
             player "Just you wait and see, hoofboy~"
+            
+            show rori angry
             
             rori @ say "D-don't call me that!"
             
@@ -910,8 +1110,12 @@ label roriNightWalkLvl1:
             
             player "I don't know how you do it. I'd fall right off instantly."
             
+            show rori armscrossed cheery
+            
             rori @ say "It's not so hard, you just slip your hooves into the grooves and balance your weight on the contact points."
             rori @ say "This wall even has a 0.5 degree incline so I could stay up there all day if I wanted to."
+            
+            hide rori with dissolve
             
             player "I guess having hooves is a prerequisite."
             
@@ -919,17 +1123,29 @@ label roriNightWalkLvl1:
             
             player "These things would let me down once I got high enough to fall to my death."
             
+            show rori armscrossed neutral at center with dissolve:
+                ypos y_rori
+            
             rori @ say "Yeah, probably."
             rori @ say "You'd have to work your way up."
+            
+            show rori armscrossed anxious at shudder
+            
             rori @ say "Not that you'd *want* to. You may think you want to but that's how every addiction starts."
             
             player "Haha I don't think I'm gonna get addicted to climbing."
+            
+            show rori armscrossed embarrassed2
             
             rori @ say "That's how it gets you! Nobody expects it to happen to them, but it's such an alluring habit that'll ruin your life!"
             
             player "I'll take your word for it, hoofboy."
             
+            show rori angry
+            
             rori @ say "D-don't call me that!"
+            
+    hide rori with dissolve
             
     n "You walk Rori back to his dorm and bid him a good night before returning to your own dorm for some sleep now that you've gotten the zoomies out of you."
 
@@ -950,6 +1166,11 @@ label roriNightWalkLvl3:
     
     
 label mishkaNightWalkLvl1:
+    scene bg campus summer night clear with fade
+    
+    show box with Dissolve(.2):
+        ypos 0
+
     n "Your night walk through the campus leads you past the cafe. A dim glow shines through the windows, and for a moment you realize what it feels like to be a moth because you're oddly drawn to it."
     n "The glass is foggy but you can make out some movement inside."
     n "Is Coffee Zone really open this late at night or is it just like a janitor or something cleaning up?"
@@ -958,24 +1179,43 @@ label mishkaNightWalkLvl1:
     
     scene bg cafe with fade
     
+    show box with Dissolve(.2):
+        ypos 0
+            
     n "Inside only half the lights are on. You find nobody at the counter, but a repetitive clicking sound reaches your ears."
     n "Sitting in a dark corner, Mishka fiddles with a machine atop a table, pushing something through it."
     
+    show mishka jacketless frown at center:
+        ypos y_mishka
+    
     mishka @ say "*Squeak!*"
+    
+    show mishka jacketless tongueout
+    
     mishka @ say "Goodness [name], you nearly scared me to death!"
+    
+    show mishka jacketless neutral
     
     player "Sorry, didn't mean to. I almost jumped out of my socks when I saw you there myself."
     player "What are you doing here so late?"
     
+    show mishka jacketless nervous anxious
+    
     n "Mishka looks away, almost bashfully."
     
-    mishka @ say "Ah you know, just doing some sewing. There was another tear in this coat I needed to patch up."
+    mishka @ say "Ah you know, just doing some sewing."
+    
+    mishka @ say "There was another tear in this coat I needed to patch up."
     
     n "She sticks her claws through a hole in the fabric."
+    
+    show mishka jacketless neutral
     
     mishka @ say "I could have just sewn it by hand but I didn't have the right colored thread at home so I figured I would just do it here."
     
     player "...Why does the cafe have a sewing machine?"
+    
+    show mishka jacketless sad2 nervous
     
     n "Mishka releases the pedal and the machine stops. She appears to be caught off guard."
     
@@ -987,17 +1227,30 @@ label mishkaNightWalkLvl1:
             
             mishka @ say "It's just... my apartment is rather small after all."
             mishka @ say "I don't have a good place to set up a sewing machine. So I keep it in the closet here."
+            
+            show mishka jacketless frown
+            
             mishka @ say "Please don't tell anybody! I know I'm not supposed to have it here but using a machine is so much faster!"
             
             player "Your secret is safe with me."
+            
+            show mishka jacketless overjoyed
+            
+            mishka @ say "Oh duzhe dyakuyu!!"
         "Drop it":
             player "Hey that's pretty cool. I guess if I ever need to sew something while sipping coffee I can just come here!"
             
+            show mishka jacketless anxious nervous
+            
             mishka @ say "R-right! Anytime!"
+            
+    show mishka jacketless neutral
     
     n "She finishes up sewing on the patch in no time, with straight and even stitching all throughout."
     
     player "Nice. It looks almost good as new!"
+    
+    show mishka jacketless frown
     
     n "Mishka sighs."
     
@@ -1007,18 +1260,29 @@ label mishkaNightWalkLvl1:
         "It gives it character":
             player "The repairs give it character. Patches are in style!"
             
-            mishka @ say "I don't want it to be stylish, I want it without coffee stains and scuffs and tears and bullet holes!"
+            mishka @ say "I don't want it to be stylish! I want it without coffee stains and scuffs and tears and bullet holes!"
             
         "Can't be hard to find a new one":
             player "A new milsurp jacket shouldn't be too hard to find once that one wears down."
             
             mishka @ say "I don't want a new one, this one is special!"
             
+    show mishka at flipright
+    show mishka jacketless nervous anxious
+            
     n "In a rare display of frustration, she huffs and turns away from you."
+    
     n "You wait a moment before muttering some kind of apology, unsure of what you did."
     
+    show mishka jacketless nervous sad
+    
     mishka @ say "Nemaye, I shouldn't have raised my voice."
+    
+    show mishka jacketless nervous sad2
+    
     mishka @ say "I'm just upset whenever a piece of this fabric gets destroyed because it once belonged to my father."
+    
+    show mishka jacketless frown
     
     n "She holds up the jacket, inspecting the new patch's stitches from both the exterior and the interior."
     
@@ -1026,19 +1290,38 @@ label mishkaNightWalkLvl1:
     
     n "It suddenly all makes sense. This isn't just some memento from home, it has sentimental value."
     n "She almost never takes that jacket off, even when it's hot."
+    
+    hide mishka with dissolve
+    
+    pause .35
+    
+    show mishka sad at center with dissolve:
+        ypos y_mishka
+        xzoom -1
+    
     n "Even now, she puts it back on once she's satisfied with the stitching."
     
     player "It must mean a lot to you."
+    
+    mishka @ say "It means so much."
+    
     player "You may have to repair it sometimes and cover it up with patches but the inner lining is always the same."
     player "You'll always be wearing your father's jacket because all these patches and threads are sewn into the original fabric."
     
+    mishka @ say "Yeah, I guess so."
     mishka @ say "Dyakuyu [name]..."
+    
+    show mishka neutral standing
     
     n "She turns back to you with a soft smile."
     
     mishka @ say "Would you... like to stay and have a coffee with me?"
     
     player "Of course!"
+    
+    show mishka happy tongueout
+    
+    mishka @ say "Oorah!"
     
     n "Mishka unplugs the sewing machine and hauls it over to the closet, then gets started on your drinks. You stay up late into the night chatting, even after your cups are empty."
 
