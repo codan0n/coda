@@ -4013,7 +4013,7 @@ layeredimage rose skirt handonhip dismissive pendant:
     group saying:
         xzoom -.9
         yzoom .9
-        pos (680,-62)
+        pos (625,-62)
         attribute say:
             "images/bubble.png"
 layeredimage rose athletic irritated:
@@ -4023,7 +4023,7 @@ layeredimage rose athletic irritated:
     group saying:
         xzoom -.9
         yzoom .9
-        pos (680,-62)
+        pos (625,-62)
         attribute say:
             "images/bubble.png"
 layeredimage rose athletic dismissive lookingaway:
@@ -4033,7 +4033,7 @@ layeredimage rose athletic dismissive lookingaway:
     group saying:
         xzoom -.9
         yzoom .9
-        pos (680,-62)
+        pos (625,-62)
         attribute say:
             "images/bubble.png"
 layeredimage rose athletic dismissive:
@@ -4043,7 +4043,7 @@ layeredimage rose athletic dismissive:
     group saying:
         xzoom -.9
         yzoom .9
-        pos (680,-62)
+        pos (625,-62)
         attribute say:
             "images/bubble.png"
 layeredimage rose athletic furious:
@@ -4053,7 +4053,17 @@ layeredimage rose athletic furious:
     group saying:
         xzoom -.9
         yzoom .9
-        pos (680,-62)
+        pos (625,-62)
+        attribute say:
+            "images/bubble.png"
+layeredimage rose skirt armscrossed shy pendant:
+    at sprite_highlight('rose')
+    always:
+        'images/characters/rose/rose skirt armscrossed shy pendant.png'
+    group saying:
+        xzoom -.9
+        yzoom .9
+        pos (625,-62)
         attribute say:
             "images/bubble.png"
 layeredimage rose skirt furiouspose pendant:
@@ -4186,20 +4196,60 @@ layeredimage rose skirt armscrossed dismissive:
         pos (625,-62)
         attribute say:
             "images/bubble.png"
-layeredimage rose skirt armscrossed shy pendant:
+layeredimage rose skirt handonhip shy pendant:
     at sprite_highlight('rose')
     always:
-        'images/characters/rose/rose skirt armscrossed shy pendant.png'
+        'images/characters/rose/rose skirt handonhip shy pendant.png'
     group saying:
         xzoom -.9
         yzoom .9
         pos (625,-62)
         attribute say:
             "images/bubble.png"
-layeredimage rose skirt handonhip shy pendant:
+layeredimage rose skirt handonhip dismissive:
     at sprite_highlight('rose')
     always:
-        'images/characters/rose/rose skirt handonhip shy pendant.png'
+        'images/characters/rose/rose skirt handonhip dismissive.png'
+    group saying:
+        xzoom -.9
+        yzoom .9
+        pos (625,-62)
+        attribute say:
+            "images/bubble.png"
+layeredimage rose skirt handonhip smug:
+    at sprite_highlight('rose')
+    always:
+        'images/characters/rose/rose skirt handonhip smug.png'
+    group saying:
+        xzoom -.9
+        yzoom .9
+        pos (625,-62)
+        attribute say:
+            "images/bubble.png"
+layeredimage rose skirt handonhip shy:
+    at sprite_highlight('rose')
+    always:
+        'images/characters/rose/rose skirt handonhip shy.png'
+    group saying:
+        xzoom -.9
+        yzoom .9
+        pos (625,-62)
+        attribute say:
+            "images/bubble.png"
+layeredimage rose skirt armscrossed unsure:
+    at sprite_highlight('rose')
+    always:
+        'images/characters/rose/rose skirt armscrossed unsure.png'
+    group saying:
+        xzoom -.9
+        yzoom .9
+        pos (625,-62)
+        attribute say:
+            "images/bubble.png"
+layeredimage rose skirt furiouspose:
+    at sprite_highlight('rose')
+    always:
+        'images/characters/rose/rose skirt furiouspose.png'
     group saying:
         xzoom -.9
         yzoom .9

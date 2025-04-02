@@ -241,13 +241,19 @@ label liberation_day:
         n "*Crck*"
         n "A dim purplish glow gradually fills the room."
         
-        show ava typical glowy agitated at center with dissolve:
+        show ava glowy grouchy browless at center with dissolve:
             ypos y_ava
         
         ava @ say "I brought some glowsticks. Good to have in case your batteries run out. Or for creating ambiance."
+        
+        show ava none
+        show ava glowy smug
+        
         ava @ say "And they're my favorite color."
         
         player "Whoa! Ava, your feathers..!"
+        
+        show ava glowy unsure
         
         n "She turns around, looking over her plumage."
         
@@ -263,27 +269,42 @@ label liberation_day:
         
         player "They're all pretty and stuff!"
         
+        show ava glowy whimsical
+        
         ava @ say "Oh my gosh thanks? I didn't really do anything special with them today though."
         
         player "But you have patterns on them now!"
         
+        show ava glowy concerned -typical
+        
         ava @ say "I always have patterns on them. That's just how they are."
         
         player "I never noticed them before!"
+        
+        show ava glowy neutral
         
         ava @ say "Hmm, okay I think I know what's going on."
         
         n "She waves a glowstick over her wing feathers and more patterns become visible."
         
         ava @ say "The ultraviolet frequencies from the glowstick must be close enough to your visible light spectrum to reveal these."
+        
+        show ava glowy smug
+        
         ava @ say "It's like a blacklight."
         ava @ say "You're probably only seeing a fraction of them. They're normally only visible to avians."
         
         player "Wow. Do all birds have patterns on their feathers?"
         
+        show ava glowy flattered
+        
         ava @ say "Just the pretty ones~"
         
+        show ava glowy neutral
+        
         n "Ava cracks another glowstick and wanders further into the room."
+        
+        show ava glowy unsure
             
         ava @ say "You comin- oh god [name]! What's with your foot?"
         
@@ -293,7 +314,11 @@ label liberation_day:
         
         player "Oh. Fuck."
         
+        show ava glowy embarrassed
+        
         ava @ say "Holy Hoole that looks bad... Stay right there, I'll- I dunno, I'll figure something out."
+        
+        show ava glowy concerned
         
         n "Ava looks around and finds an old wooden cane for you to lean on."
         
@@ -303,7 +328,9 @@ label liberation_day:
         
         player "Where's a doctor when you need one?"
         
-        ava @ say "Can you walk? We should get you to a real hospital asap."
+        show ava glowy unsure
+        
+        ava @ say "Can you walk? We should get you to a real hospital ASAP."
         
         n "Ava lets you lean on her as the two of you exit the room and head back down the stairway."
         n "It takes a long time but you eventually make it back to the ground floor."

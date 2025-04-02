@@ -176,7 +176,8 @@ label chapter3:
             show box with Dissolve(.2):
                 ypos 0
 
-            show margaret neutral at center with dissolve
+            show margaret neutral at center with dissolve:
+                ypos y_margaret
 
             margaret @ say "Good morning class! I hope you studied well for today's quiz!"
 
@@ -2285,6 +2286,11 @@ label chapter3AfterWeekend:
     rose @ say "Hey!"
     
     n "Tiny paws pull at your shirt and you come face to face with a pissed-off raccoon."
+    
+    show rose skirt furiouspose at center with dissolve:
+        ypos y_rose
+        xoffset -400
+    
     n "She's standing atop her desk and only barely matches your height."
     
     rose @ say "Pick that up. Now!"
@@ -2297,15 +2303,22 @@ label chapter3AfterWeekend:
             
             player "You've got hand-like paws, pick it up yourself."
             
-            rose @ say "You fucking knocked it over!"
+            rose @ say "You're the one who fucking knocked it over!"
             
             player "And who's fault is that? Try not leaving your toys hanging precariously over your desk next time."
     
             ###knife sprite
+            show rose skirt fistsclenched angry knife
     
             rose @ say "I'm going to kill y-"
         
+            show rothbauer at center with dissolve:
+                ypos y_roth
+                xoffset 400
+        
             rothbauer @ say "Good morning class! I hope you're all had a nice weekend!"
+            
+            hide rose with dissolve
             
             n "Rose silently folds her knife and sits back in her chair."
             n "She reaches down and picks up the main body of the device. The individual plastic pieces have all popped out of their sockets."
@@ -2319,7 +2332,13 @@ label chapter3AfterWeekend:
             
             n "You drop down to your knees and pick up every bit you find and deposit it onto Rose's desk."
             
-            rose @ say "Ugh, what am I supposed to do with broken pieces of plastic and shards of glass? Kindly cut your throat open with those if you find a piece that's long enough."
+            show rose skirt armscrossed unsure
+            
+            rose @ say "Ugh, what am I supposed to do with broken pieces of plastic and shards of glass?"
+            
+            show rose skirt armscrossed annoyed
+            
+            rose @ say "Kindly cut your throat open with those if you find a piece that's long enough."
             
             player "I'll get right on that."
             
@@ -2327,36 +2346,56 @@ label chapter3AfterWeekend:
             n "You've gathered all the parts, or at least all the ones you can see from this aisle. Wait, there's one more under your desk."
             n "You reach for it and pass it up to Rose before sitting in your chair."
             
+            show rose skirt fistsclenched angry
+            
             rose @ say "Is that the flywheel? God dammit it's cracked to hell. Cheap piece of shit plastic, probably made by inferior human hands..."
             rose @ say "You're paying for this!"
             
-            if gnugift = True:
+            if gnugift == True:
                 $ rosePoints =+ 1
+                
                 n "Wait a minute, that looks just like the gizmo that based homeless guy gave you."
                 n "You've been carrying it around just like he said and now it finally has a use."
                 
                 player "Wait a second, try using this."
                 
+                show rose skirt handonhip annoyed
+                
                 n "You hold out the wheel to her. She gives you a skeptical look."
                 
                 rose @ say "Why do you have one of these?"
                 
-                player "That psychic hobo told me to!"
+                player "That psychic hobo told me to hold onto it!"
+                
+                show rose skirt armscrossed dismissive
                 
                 rose @ say "Do you always take advice from crackheads?"
+                
+                show rose skirt armscrossed unsure
+                
                 rose @ say "This probably isn't going to work but I'm desperate enough to try it."
                 
                 n "Rose slots the flywheel into place and wraps a rubber band around it, connecting it to another series of wheels and gears within the cassette box."
+                
+                show rose skirt handonhip shy
+                
                 n "Her eyes go wide when she presses the play button and the rotors spin, pulling the tape along and producing muffled music from the earphones."
                 
                 rose @ say "It... actually works!"
+                
+                show rose handonhip smug
+                
                 rose @ say "That's one hell of a coincidence."
                 
                 player "It's no coincidence, I think that guy could really see the future!"
                 
+                show rose skirt handonhip dismissive
+                
                 rose @ say "I see a future where he steals your kidneys if you meet again."
                 
                 player "You should thank him for giving me that piece to fix your cassette player!"
+                
+                show rose handonhip annoyed
                 
                 rose @ say "No, *you* should watch where you're going next time and avoid knocking over my things in the first place!"
                 
@@ -2364,7 +2403,13 @@ label chapter3AfterWeekend:
                 
                 player "Maybe don't leave fragile objects leaning off your desk..."
                 
+                show rose skirt armscrossed annoyed
+                
                 rose @ say "What was that?"
+                
+                show rothbauer at center with dissolve:
+                    ypos y_roth
+                    xoffset 400
                 
                 rothbauer @ say "Good morning class! Let's get right into it today, why don't we!"
                 
@@ -2372,28 +2417,40 @@ label chapter3AfterWeekend:
             else:
                 player "For the wheely thing?"
                 
+                show rose skirt fistsclenched angry
+                
                 rose @ say "For the whole thing! It's ruined!"
                 
                 player "Okay okay, so like how much? 5 bucks? 10?"
+                
+                show rose skirt armscrossed annoyed
                 
                 rose @ say "You just destroyed a vintage Walkfan WM-3X Special Edition, of which there are only like a dozen left in the world!"
                 
                 player "So it's priceless is what I'm hearing."
                 
+                show rose none
+                show rose skirt armscrossed furious pendant
+                
                 rose @ say "Well I'm definitely not gonna find another one up for sale!"
+                
+                show rose skirt armscrossed dismissive -pendant
+                
                 rose @ say "I don't know, maybe I can retrofit the guts of a TCM-100 into the shell and pretend it's the same thing."
                 
                 player "And how much for one of those?"
                 
-                rose @ say "$500."
+                show rose skirt handonhip shy
                 
-                player "Five hudred dollarydoos?!"
+                rose @ say "$900."
                 
-                rose @ say "Yeah, just 500. You're not poor are you?"
+                player "Nine hudred dollarydoos?!"
+                
+                rose @ say "Yeah, just 900. You're not poor are you?"
                 
                 player "Uhh..."
                 
-                n "500 dollars is a substantial chunk of your life savings."
+                n "900 dollars is a substantial chunk of your life savings."
                 
                 menu:
                     "Pay":
@@ -2403,35 +2460,52 @@ label chapter3AfterWeekend:
                         
                         player "You have cashapp?"
                         
+                        show rose skirt handonhip annoyed
+                        
                         n "Rose's signature glare becomes even more condescending than usual."
                         
                         rose @ say "No, I don't use demonic proprietary junkware like that."
                         
-                        player "Well I don't walk around with $500 in my pocket every day!"
+                        player "Well I don't walk around with $900 in my pocket every day!"
+                        
+                        show rose skirt handonhip dismissive
                         
                         rose @ say "You could have just said you're poor then."
                         
-                        player "Doesn't your grandpa like own the university? Why don't you ask him to buy you a million Walkfans?"
+                        player "Doesn't your grandpa like, own the university? Why don't you ask him to buy you a million Walkfans?"
+                        
+                        show rose skirt fistsclenched angry
+                        
                         player "Those things are so old he probably has a bunch lying around from when he was a kid."
                         player "Pretty sure that tech dates back to the cretaceous period."
+                        
+                        show rothbauer at center with dissolve:
+                            ypos y_roth
+                            xoffset 400
                         
                         rothbauer @ say "Did I hear someone mention the cretaceous period?"
                         
                         n "Mr. Rothbauer may have just saved your life. Rose looked like she was ready to maul you before he stepped in."
                         
                         rothbauer @ say "Oh is that a cassette tape? Ah, I have fond memories of those back in my day!"
-                        rothbauser @ say "Of course they were marketed as the hip new thing despite existing for millions of years. Probably."
+                        rothbauer @ say "Of course they were marketed as the hip new thing despite existing for millions of years. Probably."
                         rothbauer @ say "They had that technology mastered in the early cretaceous period. At least that's how the theory goes."
-                        rothauer @ say "The government doesn't want you to know this but so much of modern technology is based on the dinosaurs' achievements."
+                        rothbauer @ say "The government doesn't want you to know this but so much of modern technology is based on the dinosaurs' achievements."
                         rothbauer @ say "I'll save it for another day though because we've got a lot to cover today!"
+                        
+                        hide rose with dissolve
                         
                         n "You dig out your notebook and avoid looking at Rose for the rest of the class. Hopefully she just forgets about your debt."
                     "Don't pay":
                         player "Actually yes, I am poor."
                         
+                        show rose skirt fistsclenched angry
+                        
                         rose @ say "Well stop it!"
                         
                         player "Stop... being poor?"
+                        
+                        show rose skirt furiouspose
                         
                         rose @ say "Yes! If there's one thing that rivals how deplorable humans are, it's poor \"\"\"people.\"\"\""
                         rose @ say "Being poor isn't just something that happens by misfortune, poverty is literally God telling you that you suck."
@@ -2439,10 +2513,14 @@ label chapter3AfterWeekend:
                         
                         player "Hey, it's not that easy being poor! Imagine if you couldn't afford stuff."
                         
+                        show rose skirt handonhip annoyed
+                        
                         rose @ say "Then I'd kill myself."
                         rose @ say "Consider that a recommendation for you and your kind."
                         
-                        player "So does this mean you'll let me off the hook for the $500?"
+                        player "So does this mean you'll let me off the hook for the $900?"
+                        
+                        show rose skirt handonhip dismissive
                         
                         rose @ say "*Sigh*"
                         rose @ say "If your kind weren't so despicable, I might pity you."
@@ -2457,6 +2535,12 @@ label chapter3AfterWeekend:
                         n "Rose scoffs and shoves the remains of her cassette player into her bag. Shortly afterwards, Mr. Rothbauer arrives to begin the lecture."
                     
     scene bg lecturehall with fade
+    
+    show box with Dissolve(.2):
+        ypos 0
+        
+    show gunner cheeky1 at center with dissolve:
+        ypos y_gunner
     
     gunner @ say "Duuuuude Ava texted me yesterday!"
     

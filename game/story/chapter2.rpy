@@ -4666,7 +4666,7 @@ label liberation_eve:
                 xzoom -1
                 xoffset 400
                 matrixcolor BrightnessMatrix(0.05)
-            show rose skirt handonhip dismissive pendant at center:
+            show rose skirt handonhip annoyed pendant at center:
                 xoffset -400
                 ypos y_rose
                 matrixcolor BrightnessMatrix(0.05)
@@ -4674,9 +4674,15 @@ label liberation_eve:
             
             nicodemus @ say "Good day, [name]! Enjoying the fair weather?"
             
+            show rose skirt handonhip dismissive pendant
+            
             rose @ say "There, we said hi. Can we go now?"
             
             nicodemus @ say "What's the rush, lass? Can't a dean have a pleasant chat with his future alumni?"
+            
+            show rose skirt armscrossed shy pendant
+            
+            rose @ say "Ugh."
             
             player "Nice to see you again, Mr. Kazcynski. What do I owe the pleasure?"
             
@@ -4689,13 +4695,17 @@ label liberation_eve:
             nicodemus @ say "It may seem like the past is this finite thing that's gone and left us, but there are more stories than can be told in a lifetime, showing what civilization is truly capable of!"
             nicodemus @ say "I think it was my war stories that got Rose interested in the first place bahaha!"
             
-            rose @ say "Grandpa... shut up already, you said we'd get coffee before my next class."
+            show rose skirt armscrossed dismissive pendant
+            
+            rose @ say "Shut up already gramps, you said we'd get coffee before my next class."
             
             n "The dean checks his wristwatch and smiles."
             
             nicodemus @ say "We've still got plenty of time! Humor me!"
             
-            n "Rose huffs and crosses her arms."
+            show rose skirt armscrossed shy pendant
+            
+            n "Rose huffs and rolls her eyes."
             
             player "Well I got out of literature early so I'm just waiting for French to start."
             
@@ -4703,11 +4713,16 @@ label liberation_eve:
             nicodemus @ say "\"Avec moi!\" \"Au feu! Au feu!\" \"En avant!\""
             nicodemus @ say "And let me tell you, those Parisian women sure were grateful for la résistance and their allies!"
             
+            show rose skirt armscrossed flattered pendant
+            
             n "As annoyed as Rose wants to be, she can't help but smirk at her grandfather's gusto."
             
             #rose @ say "We get it, you were a solder who saw some action."
             
             nicodemus @ say "But that's all in the past now, today I'm just a humble university dean."
+            
+            show rose skirt armscrossed shy pendant
+            
             nicodemus @ say "Which means I'm curious as to how your experience here at Harmonia is going, [name]. I trust your grades are satisfactory."
             nicodemus @ say "More importantly, have you made any significant bonds?"
             
@@ -4716,6 +4731,7 @@ label liberation_eve:
                     $ avaPoints += 1
                     $ clairePoints += 1
                     $ roriPoints += 1
+                    $ gunnerPoints =+ 1
                 
                     player "I think so. I have a group I hang out with pretty regularly."
                     
@@ -4727,18 +4743,31 @@ label liberation_eve:
                     
                     nicodemus @ say "You hear that, Rose? This could be your chance."
                     
+                    show rose skirt armscrossed annoyed pendant
+                    
                     rose @ say "Pass."
                     
                     nicodemus @ say "Whaaat? Why not? [name] is a perfectly suitable young lad!"
+                    
+                    show rose skirt armscrossed dismissive pendant
                     
                     rose @ say "He's not my type."
                     
                     nicodemus @ say "Fine, have it your way."
                     nicodemus @ say "Sorry [name], my granddaughter has a tough exterior but I promise she's a real sweetheart once you get to know her!"
                     
+                    show rose skirt armscrossed furious
+                    
                     rose @ say "Hmph!"
                     
                     nicodemus @ say "Well we better be off to get that coffee I promised. It was good seeing you again!"
+                    
+                    show rose skirt armscrossed dismissive
+                    
+                    rose @ say "It's about time."
+                    
+                    show rose none
+                    show rose skirt armscrossed shy pendant
                     
                     player "It was nice talking with you again, sir."
                     
@@ -4766,9 +4795,14 @@ label liberation_eve:
                     
                     nicodemus @ say "Come now Rose, how long do you plan to be a loner?"
                     
+                    show rose skirt armscrossed dismissive pendant
+                    
                     rose @ say "With any luck, the rest of my life."
             
                     nicodemus @ say "Hah! Such dry humor, I love it!"
+                    
+                    show rose skirt armscrossed shy pendant
+                    
                     nicodemus @ say "Don't worry, you'll find your match some day."
                     nicodemus @ say "Both of you will, I'm sure of it."
                     
@@ -4777,6 +4811,8 @@ label liberation_eve:
                     
                     nicodemus @ say "Someone's eager for some caffeine, isn't she! Bahaha you always were crabby without it!"
                     nicodemus @ say "You know she started drinking coffee when she was 12 years old! Always black, she's never even tried it with creamer!"
+                    
+                    show rose skirt armscrossed annoyed pendant
                     
                     rose @ say "I like it as it is, no need to ruin the flavor with extra junk."
                     
@@ -4794,6 +4830,10 @@ label liberation_eve:
                     nicodemus @ say "And have a nice holiday!"
                     
             player "Thanks, you too!"
+            
+            hide rose
+            hide nicodemus
+            with dissolve
                     
             n "The raccoons head off in the direction of the cafe. Rose is probably complaining she had to endure a few minutes talking with you, but she seems to admire her grandfather."
             n "Likewise, he seems to care deeply for her. It almost seemed like he was the one who raised her."
