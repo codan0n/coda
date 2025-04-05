@@ -2541,6 +2541,7 @@ label chapter3AfterWeekend:
         
     show gunner cheeky1 at center with dissolve:
         ypos y_gunner
+        xzoom -1
     
     gunner @ say "Duuuuude Ava texted me yesterday!"
     
@@ -2549,10 +2550,21 @@ label chapter3AfterWeekend:
     gunner @ say "Get this, she texted *me* first! That's how you know she wants to have sex with me!"
     
     player "Oh? Congratulations."
+    
+    show gunner annoyed
+    
     player "But I think she's texted me first before. Does that mean she wants to have sex with me too?"
     
+    show gunner displeased
+    
     gunner @ say "Counterpoint: women don't know what they want."
+    
+    show gunner itsover
+    
     gunner @ say "She was probably confused and hysterical. Many such cases."
+    
+    show gunner mischief
+    
     gunner @ say "But this time I'm sure she wants big catboy cock."
     
     player "And why's that?"
@@ -2561,15 +2573,21 @@ label chapter3AfterWeekend:
 
     player "Like a photoshoot? Where?"
     
+    show gunner neutral
+    
     gunner @ say "Yeah we're gonna hike up this mountain, take some pics of trees or whatever, then I'm gonna shoot my load in her."
     
     player "Did either of you explicitly mention that last part?"
+    
+    show gunner eyesclosed catface
     
     gunner @ say "No, but it was implied."
     
     menu:
         "Cool, have fun":
             #$ avaPoints =- 1
+            
+            show gunner neutral
             
             player "Cool, have fun with that."
             player "I'm probably gonna watch boating accident documentaries or something this weekend."
@@ -2579,6 +2597,8 @@ label chapter3AfterWeekend:
             gunner @ say "And now I have a closet full of untraceable guns."
         "Doubt":
             $ avaPoints += 1
+            
+            show gunner neutral
             
             player "I doubt that but okay."
             player "Are you sure she didn't get mixed up and mean to send those messages to me?"
@@ -2600,12 +2620,22 @@ label chapter3AfterWeekend:
     
     player "Ava just invited me to come with you two."
     
+    show gunner annoyed
+    
     gunner @ say "What the fuck?"
+    
+    n "Gunner snaps his pencil in half."
+    n "Damn, it was a mechanical one too. Those are hard to break."
+    
+    show gunner hissing
+    
     gunner @ say "Dude, say no!!"
     
     player "Why? It sounds like a fun time."
     
     gunner @ say "I don't want this hike to be a sausagefest! Just tell her you already have plans."
+    
+    show gunner charming
     
     n "Gunner slips a $100 bill onto your desk."
     
@@ -2623,6 +2653,9 @@ label chapter3AfterWeekend:
             $ money = money + 100
             
             player "Fine, I didn't wanna go anyway."
+            
+            show gunner cheeky1
+            
             player "I'll text her and say I already made plans with someone."
             
             call phone_start
@@ -2643,10 +2676,14 @@ label chapter3AfterWeekend:
             player "Done."
             player "Good luck with your date."
             
+            show gunner cutie
+            
             gunner @ say "Thanks bro, you're a livesaver :3c"
         
         "Decline":
             $ avaHike = True
+
+            show gunner annoyed
             
             player "Hmm. No thanks, a hundred dollars isn't worth much compared to a date with Ava."
         
@@ -2654,10 +2691,15 @@ label chapter3AfterWeekend:
             
             player "Your entire net worth plus one Zimbabwe dollar."
             
+            show gunner disgusted
+            
+            gunner @ say "What the?"
             gunner @ say "But if I acquire one Zimbabwe dollar then that gets added to my net worth so I have to get another one which also adds to my net worth!"
             gunner @ say "It's an infinite financial loop!"
             
             player "Bingo."
+            
+            show gunner displeased
             
             gunner @ say "Hmph!"
             gunner @ say "Fine, I guess I can't stop you from tagging along."
@@ -2696,28 +2738,42 @@ label chapter3AfterWeekend:
             n "You stash the money into your pocket, but you can definitely get more from him."
             
             player "Only $100? I thought you liked Ava more than that."
+            
+            show gunner neutral
     
             gunner @ say "Yeah I'm lowballing you lmao"
             
             player "Make it $200 and we have a deal."
             
+            show gunner eyesclosed catface
+            
             gunner @ say "Easy."
             
             n "Gunner opens his wallet and flips through a large stack of crisp green banknotes."
+            
+            show gunner frown1
             
             gunner @ say "Oop, this is kinda embarassing. Do you have change for a $10,000 bill?"
             
             player "I didn't even know they made those."
             
+            show gunner neutral
+            
             gunner @ say "Ah screw it, let me just send it to you on PayPossum. What's your account name?"
             
             n "You give him your email and he types it into his phone. A minute later you get a notification saying you've received $1000."
             
+            show gunner frown1
+            
             player "You sent me $1000?"
+            
+            show gunner neutral
             
             gunner @ say "Did I? I must have hit too many zeros. Whatevs, you can keep it."
             
             player "Man, I should do business with you more often."
+            
+            show gunner determined
             
             gunner @ say "Yeah yeah, now text Ava and tell you you can't come."
             
@@ -2739,9 +2795,23 @@ label chapter3AfterWeekend:
             player "Done."
             player "Good luck with your date."
             
+            show gunner cheeky1
+            
             gunner @ say "Thanks bro, you're a livesaver :3c"
             
+    
+    pause .2
+    
+    show gunner with move:
+        xoffset -450
+        
+    show herschel at center with dissolve:
+        ypos y_herschel
+        xoffset 400
+            
     herschel @ say "Good day class! Today will be an easy day since we'll just have a quiz then go over some homework problems."
+    
+    show gunner annoyed
     
     gunner @ say "The fuck? A quiz and *then* a review of the lesson?"
     gunner @ say "Bitch is *trying* to fail us."
@@ -2753,6 +2823,9 @@ label chapter3AfterWeekend:
     n "The rest of the day passes by uneventfully."
 
     scene bg schoolhallways with fade
+    
+    show box with Dissolve(.2):
+        ypos 0
 
     n "As you're going up the stairs on your way to literature, you catch a whiff of cigarette smoke."
     n "Where there's smoke, there's probably a vaguely depressed literature professor dog having a midlife crisis moment."
@@ -2760,15 +2833,23 @@ label chapter3AfterWeekend:
     
     scene bg roof with dissolve
     
+    show box with Dissolve(.2):
+        ypos 0
+    
     $ cafeEvents.append("margaretCafe")
     
     n "Your suspicions are confirmed when you see Ms. Ellen leaning on the wall watching the horizon."
     
     player "Couldn't wait until you got up on the roof to light up, huh?"
     
+    show margaret smoking intrigued at center with dissolve:
+        ypos y_margaret
+    
     margaret @ say "Hm?"
     
     player "The stairwell reeks of tobacco."
+    
+    show margaret melancholy
     
     margaret @ say "Oh shoot. Ah well, nothing to do about it now."
     
@@ -2776,13 +2857,20 @@ label chapter3AfterWeekend:
     
     player "So what brings you up here again?"
     
+    show margaret smoking neutral
+    
     margaret @ say "Just wanted to admire the view~"
     margaret @ say "Sure is a long way down, isn't it?"
     
     player "You're telling me after I just climbed six flights of stairs."
     
     margaret @ say "I guess it's a long way up too."
+    
+    show margaret smoking intrigued shocked
+    
     margaret @ say "By the way, how are you feeling? I don't have to worry about you falling out of your chair again do I?"
+    
+    show margaret smoking intrigued -shocked
     
     player "I don't think so. I got it looked at and the doctor was like \"Yeah I don't know what's wrong with you but these meds will help. Probably.\""
     
@@ -2793,25 +2881,40 @@ label chapter3AfterWeekend:
     
     #margaret @ say "Sounds like you've got a type."
     
+    show margaret smoking melancholy
+    
     margaret @ say "Ya gotta do what ya gotta do to survive the work day."
+    
+    show margaret smoking sad shocked
+    
     margaret @ say "...But it does seem a tad irresponsible to smoke in a hospital."
+    
+    show margaret none
+    show margaret smoking intrigued
     
     n "There's a brief lull in the conversation as neither of you are sure what to say next."
     n "You try and think of something while she looks off to the side and blows out smoke."
     
     player "Can I ask you a question?"
     
+    show margaret smoking happy
+    
     margaret "I'm a professor, it's my job to answer your questions."
+    
+    show margaret smoking neutral
     
     n "Perhaps a personal question to get to understand her better."
     
     menu:  
         "Why did you become a professor?":
             player "What made you want to become a professor?"
+            
+            show margaret none
+            show margaret sad smoking
          
             margaret @ say "You're acting like this was my first choice of profession."
             
-            player "Well what was that?"
+            player "Well what was your first choice?"
             
             n "She hesitates. Not because she's uncomfortable answering but rather because she's reminiscing."
             
@@ -2819,24 +2922,43 @@ label chapter3AfterWeekend:
             
             player "And instead you became a... professional reader?"
             
+            show margaret smoking intrigued shocked
+            
             margaret @ say "Well you know how the saying goes. \"Those who can't do, teach.\""
+            
+            show margaret none
+            show margaret sad smoking
             
             player "What do you mean? You couldn't write? But tons of borderline illiterate people write for a living."
             
+            show margaret none
+            show margaret smoking intrigued
+            
             margaret @ say "That's part of the problem. You either make it writing at the highest level or you succeed making slop. There's not much room anywhere in between."
+            
+            show margaret smoking melancholy
+            
             margaret @ say "And guess where my writing skills lie."
             
             player "Dang."
             player "Too smart to write young adult vampire fanfiction disguised as literature, but not smart enough to dethrone Shakespeare."
             
             margaret @ say "Unfortunately my circumstances aren't particularly rare. I'm just one of the lucky ones to at least get a job that's at least related to my lit degree."
+            
+            show margaret smoking sad shocked
+            
             margaret @ say "But I can't say I'm too happy with the result."
             
         "Did you ever actually enjoy teaching?":
             player "You don't seem to have much passion for teaching."
             player "Was it ever enjoyable for you?"
             
+            show margaret smoking melancholy
+            
             margaret @ say "At one point I thought it was. Or at least I tried to convince myself of that."
+            
+            show margaret smoking sad
+            
             margaret @ say "The thing about abandoning your dreams in favor of some silly career that's meant to be serious, is that you convince yourself that you actually wanted this."
             margaret @ say "And that all your past hopes weren't realistic. They were just some delusions you had, so now's it time to find happiness in this new thing you thought you'd hate."
             
@@ -2852,20 +2974,39 @@ label chapter3AfterWeekend:
             player "How did you get into literature?"
             
             margaret @ say "The same way anyone does, I spent my youth reading books."
+            
+            show margaret smoking happy
+            
             margaret @ say "You read enough of the right literature, and you become captivated by the sheer expanse of imagination and creativity an author can tame."
+            
+            show margaret smoking neutral
+            
             margaret @ say "Something like a mere painting or photograph only captures a moment in a scene, but a novel gives you a whole world crafted from all kinds of feelings and messages the writer wishes to express."
             margaret @ say "For the same reason I enjoy watching movies but those really don't have the same impact since they're over and done with so quickly."
+            
+            show margaret smoking happy
+            
             margaret @ say "Simply put, I just like a good story!"
+            
+            show margaret smoking neutral
             
             player "Who doesn't?"
             player "But I get what you mean. There's a lot you can do in writing to evoke a certain feeling while still giving enough room for interpretation."
             
             margaret @ say "Exactly! No two people will read a book the same way! Even going back and rereading a book makes me feel a different way each time as I've grown older."
+            
+            show margaret smoking melancholy
+            
             margaret @ say "Though at this point I've become so familiar with the required reading for this course, the magic is gone for those books I used to adore."
             
             player "If you love stories so much why don't you write some of your own?"
+            
+            show margaret smoking melancholy shocked
     
             margaret @ say "That's the problem, hun. I haven't got any to tell."
+            
+            show margaret none
+            show margaret smoking sad
             
             player "Surely you could come up with something. You're a literature professor after all! You should know what makes for a good book."
             
@@ -2875,21 +3016,34 @@ label chapter3AfterWeekend:
             
             n "Ms. Ellen takes a drag from her cigarette, then adds"
             
+            show margaret none
+            show margaret smoking intrigued
+            
             margaret @ say "Not to say I didn't give it a shot, but I'm a much better professor than I am a writer. And I'm a pretty lousy professor."
             
             player "So why'd you become one?"
             
             n "She has to think for a moment, as if she's being searching for an answer to that question for a long time."
             
+            show margaret smoking melancholy shocked
+            
             margaret @ say "I thought if I could have a career being around the books I held so dear that everything would be alright."
+            
+            show margaret none
+            show margaret smoking sad
+            
             margaret @ say "And that I wouldn't become bitter and begin to resent the only thing in life that brought me joy."
             
             player "I'm sorry to hear that. If it means anything, you're my favorite professor."
+            
+            show margaret smoking melancholy
             
             margaret @ say "Aww, they say flattery will get you nowhere but..."
             
             n "Her tail is wagging. You feel like you've just been standing around and listening to her talk but you must be doing something right."
             n "Ms. Ellen takes another puff and her grin fades away."
+            
+    show margaret sad smoking
             
     margaret @ say "I was fooled into thinking that becoming a professor would make me feel... prestigious."
     margaret @ say "When all I do is explain old books to rich brats."
@@ -2900,11 +3054,16 @@ label chapter3AfterWeekend:
     
     n "Ms. Ellen reaches the end of her cigarette. She flicks it to the ground, letting it burn out on the concrete."
     
+    show margaret none
+    show margaret sad
+    
     margaret @ say "This is not the life I wanted."
     
     menu:
         "And that would be...?":
             player "And that would be...?"
+            
+            show margaret melancholy
             
             margaret @ say "Something more... adventurous I'll say."
             margaret @ say "More travel, less desk work. Something worth writing about."
@@ -2913,10 +3072,21 @@ label chapter3AfterWeekend:
             
             margaret @ say "That may be true but..."
             
+    show margaret smoking sad
+            
     n "She pulls out another cigarette and puts it to her mouth but pauses before lighting it. Seemingly changing her mind, she puts the ligher away."
     
+    show margaret smoking intrigued shocked
+    
     margaret @ say "It's about time for class to begin, isn't it?"
+    
+    show margaret none
+    show margaret smoking melancholy
+    
     margaret @ say "Go ahead and run along now."
+    
+    show margaret smoking neutral
+    
     margaret @ say "Don't wait up for me. Wouldn't want to get caught coming down from here with a student~"
     
     player "Sure thing. See you in class."
@@ -2924,6 +3094,12 @@ label chapter3AfterWeekend:
     n "She gives you a wave as you go back to the stairwell. Looking back one last time, you see her light the cigarette in her mouth."
     
     scene bg lecturehall with fade
+    
+    show box with Dissolve(.2):
+        ypos 0
+        
+    show margaret neutral at center with dissolve:
+        ypos y_margaret
     
     margaret @ say "...So we see that The Odyssey is really a tale about overcoming the many relentless challenges in life and reaping the rewards."
     margaret @ say "It's as tragic as it is uplifting! And although most of us will never get shipwrecked or fight giant cyclopses..."
@@ -2936,11 +3112,31 @@ label chapter3AfterWeekend:
     
     scene bg classroom with dissolve
     
+    show box with Dissolve(.2):
+        ypos 0
+        
+    show celestine neutral at center with dissolve:
+        ypos y_celestine
+    
     celestine @ say "...On se voit jeudi, la classe!"
+    
+    show celestine excited
+    
     celestine @ say "You're all doing so well, I'm very proud of you!"
+    
+    show celestine neutral
+    
     celestine @ say "Keep up your studies and I'm sure you'll all pass with flying colors!"
     
+    hide celestine with dissolve
+    
+    show claire sweater wave happy at center with dissolve:
+        ypos y_claire
+    
     claire @ say "Don't you just love French, [name]?"
+    
+    show claire sweater overjoyed 
+    
     claire @ say "They say it's the language of love~"
     
     default dissedClaire = False
@@ -2948,6 +3144,8 @@ label chapter3AfterWeekend:
     menu:
         "I hate it":
             player "I hate the French with every fiber of my being."
+            
+            show claire sweater flustered
             
             claire @ say "Aww don't be such a downer! If not for the French we might not have a class together!"
             
@@ -2957,10 +3155,14 @@ label chapter3AfterWeekend:
                     $ dissedClaire = True
                     
                     player "Yeah now I hate them even more."
+                    
+                    show claire sweater surprised earsup
             
                     claire @ say "What's that supposed to mean?"
                     
                     player "Uhh..."
+                    
+                    show claire sweater sad
                     
                     claire @ say "Oh I get it!"
                     claire @ say "You were just joking. Haha..."
@@ -2970,9 +3172,13 @@ label chapter3AfterWeekend:
                     
                     player "Yeah sorry, dumb joke. Hey, you wanna get coffee?"
                     
+                    show claire sweater surprised earsup
+                    
                     claire @ say "Right now?"
                     
                     player "Whenever you're free."
+                    
+                    show claire sweater laughing
                     
                     claire @ say "Right now it is!!"
                     
@@ -2983,16 +3189,24 @@ label chapter3AfterWeekend:
                     #player "I mean "
                     
                 "That's ONE redeeming quality":
+                    show claire sweater happy
+                    
                     player "I guess that's ONE redeeming aspect of their existence."
                     player "But hey class is over. You wanna get a coffee?"
+                    
+                    show claire sweater laughing
                     
                     claire @ say "Hell yeah!!"
             
         "It's nice when you speak it":
             $ clairepoints =+ 1
             
+            show claire sweater happy
+            
             player "I like whenever you speak it."
             player "You already sound like it's your native tongue."
+            
+            show claire sweater leaning suggestive
             
             claire @ say "Ksksksks merci beaucoup, [name]~"
             
@@ -3002,15 +3216,21 @@ label chapter3AfterWeekend:
             
             n "What could she possibly mean by this? Does she snore when she sleeps? Maybe you should ask Ava later."
             
+            show claire sweater surprised earsup
+            
             claire @ say "By the way, you wanna get coffee with me and Ava today?"
             
             n "You've got nothing better to do."
             
             player "Yeah, why not?"
             
+            show claire sweater overjoyed
+            
             claire @ say "Yay~"
             
         "No strong feelings":
+            show claire sweater happy
+            
             player "I have no strong feelings towards it."
             player "It's just an elective credit I have to get out of the way."
     
@@ -3020,11 +3240,17 @@ label chapter3AfterWeekend:
             
             player "Yeah it's pretty cool I guess."
             
+            show claire sweater surprised earsup
+            
             claire @ say "You guess??"
+            
+            show claire sweater sad
             
             n "Her desk topples back to its original position with a loud thud that reverberates around the entire room a few times."
             
             player "I mean uhh... yeah I'm glad to get to see you so often."
+            
+            show claire sweater surprised earsup
             
             claire @ say "Really???"
             
@@ -3034,17 +3260,24 @@ label chapter3AfterWeekend:
             
             player "Uh yeah?"
             
+            show claire sweater overjoyed
+            
             claire @ say "Ohmygosh I have to tell Ava about this!"
             
             player "Tell her about what? We're just getting coffee together..."
             
             n "Claire pulls out her phone and ignores you while texting up a storm to Ava."
             
+            show claire sweater flustered
+            
             claire @ say "Aaaaaa she's already at the cafe! We can meet up!"
     
     n "Claire takes your hand and whisks you out of the classroom."
     
     scene bg cafe with fade
+    
+    show box with Dissolve(.2):
+        ypos 0
     
     ava @ say "Hey! Over here!"
     
@@ -3216,6 +3449,12 @@ label chapter3AfterWeekend:
                 
                 scene bg campus summer day clear with fade
                 
+                show box with Dissolve(.2):
+                    ypos 0
+                
+                show claire sweater sad at center with dissolve:
+                    ypos y_claire
+                
                 n "You find Claire sulking in the shade of a tree."
                 n "Orange leaves blow in the wind and get caught in her hair."
                 n "She wipes them away as you approach."
@@ -3338,6 +3577,8 @@ label chapter3AfterWeekend:
                                 claire @ say "I was. You want more?"
                                 
                                 player "Yes please."
+                                
+                                show claire sweater happy
                                 
                                 claire @ say "Gimme your wallet."
                                 
