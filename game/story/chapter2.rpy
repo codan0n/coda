@@ -4433,10 +4433,21 @@ label ellen_feeding_ducks:
     #set to false because you're missing mishka's mall scene if you go with gunner or ava
     $ mishkaMallSpecialActive = False
     
+    scene bg black with fade
     
-    n "What should you do with your free time?"
+    n "Some time passes and the sun dips beneath the horizon, yet you're unable to sleep."
+    n "You decide to go for a night walk around the campus."
     
-    call afterClassOptions from _call_afterClassOptions_2
+    scene bg campus summer night clear with fade
+    
+    show box with Dissolve(.2):
+        ypos 0
+    
+    call nightWalks
+    
+    #n "What should you do with your free time?"
+    
+    #call afterClassOptions from _call_afterClassOptions_2
                 
     stop music fadeout 2.0            
     

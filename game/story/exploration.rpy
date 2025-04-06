@@ -184,25 +184,33 @@ label nightWalks:
     
     if nightWalkIndex == 0:
         n "What will you do?"
+        
         menu:
             "Wander aimlessly":
                 $ randomSelected = renpy.random.choice(nightEvents)
                 
                 call expression randomSelected
-            "Meet with Rose" if roseNightWalkActive:
-                "You'll check and see if Rose is around."
-            "Meet with Rori" if roriNightWalkActive:
-                "You'll check and see if Rori is around."
-            "Meet with Gunner" if gunnerNightWalkActive:
-                "You'll check and see if Gunner is around."
-            "Meet with Claire" if claireNightWalkActive:
-                "You'll check and see if Claire is around."
-            "Meet with Ava" if avaNightWalkActive:
-                "You'll check and see if Ava is around."
-            "Meet with Ellen" if ellenNightWalkActive:
-                "You'll check and see if Ellen is around."
-            "Meet with Mishka" if mishkaNightWalkActive:
-                "You'll check and see if Mishka is around."
+            #"Meet with Rose" if roseNightWalkActive:
+            #    n "You'll check and see if Rose is around."
+            #    n "unfinished"
+            #"Meet with Rori" if roriNightWalkActive:
+            #    n "You'll check and see if Rori is around."
+            #    n "unfinished"
+            #"Meet with Gunner" if gunnerNightWalkActive:
+            #    n "You'll check and see if Gunner is around."
+            #    n "unfinished"
+            #"Meet with Claire" if claireNightWalkActive:
+            #    n "You'll check and see if Claire is around."
+            #    n "unfinished"
+            #"Meet with Ava" if avaNightWalkActive:
+            #    n "You'll check and see if Ava is around."
+            #    n "unfinished"
+            #"Meet with Ellen" if ellenNightWalkActive:
+            #    n "You'll check and see if Ellen is around."
+            #    n "unfinished"
+            #"Meet with Mishka" if mishkaNightWalkActive:
+            #    n "You'll check and see if Mishka is around."
+            #    n "unfinished"
     else:
         call genericNightWalk from _call_genericNightWalk
     

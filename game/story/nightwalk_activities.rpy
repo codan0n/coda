@@ -1,6 +1,8 @@
 ###nightwalk events
 
 label roseNightWalkLvl1:
+    $ nightEvents.remove("roseNight")
+
     scene bg campus summer night clear with fade
     
     show box with Dissolve(.2):
@@ -183,6 +185,7 @@ label gunnerNightWalkLvl3:
     
     
 label avaNightWalkLvl1:
+    $ nightEvents.remove("avaNight")
     # see ava and gunner walking together, flirting. They're surprised to see you.
     
     scene bg campus summer night clear with fade
@@ -561,6 +564,8 @@ label avaNightWalkLvl3:
     
     
 label claireNightWalkLvl1:
+    $ nightEvents.remove("claireNight")
+    
     scene bg campus summer night clear with fade
     
     show box with Dissolve(.2):
@@ -1055,6 +1060,8 @@ label ellenNightWalkLvl3:
     
     
 label roriNightWalkLvl1:
+    $ nightEvents.remove("roriNight")
+    
     scene bg campus summer night clear with fade
     
     show box with Dissolve(.2):
@@ -1265,6 +1272,8 @@ label roriNightWalkLvl3:
     
     
 label mishkaNightWalkLvl1:
+    $ nightEvents.remove("mishkaNight")
+    
     scene bg campus summer night clear with fade
     
     show box with Dissolve(.2):
