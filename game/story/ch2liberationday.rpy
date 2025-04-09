@@ -2895,7 +2895,9 @@ label liberation_day:
                 show box with Dissolve(.2):
                     ypos 0
                 
-                n "Looking back towards Mishka, she seems to be having the time of her life."
+                n "The carousel whirls around, dazzling you with its lights and mirrors."
+                n "You avoid looking at yourself in the reflection but you see Mishka through one apparently having the time of her life."
+                #n "Looking back towards Mishka, she seems to be having the time of her life."
                 n "She smiles and waves to you. You try to wave back but almost lose your balance and slip off the horse."
                 n "When the ride comes to an end, you're a bit dizzy but wish it had gone on just a while longer."
                 
@@ -2930,8 +2932,10 @@ label liberation_day:
                 
                 show box with Dissolve(.2):
                     ypos 0
-                    
-                n "You crane your neck around to see her grinning from ear to ear on the mount behind you."
+                
+                n "The carousel whirls around, dazzling you with its lights and mirrors."
+                n "You avoid looking at yourself in the reflection but you see Mishka through one apparently having the time of her life."
+                #n "You crane your neck around to see her grinning from ear to ear on the mount behind you."
                 n "As the ride goes on, you start to relax and get used to it. Even enjoy it a little."
                 n "By the time it ends, you're a bit dizzy but wish it had gone on just a while longer."
                

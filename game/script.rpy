@@ -3653,6 +3653,16 @@ layeredimage rori smug:
         pos (4,33)
         attribute say:
             "images/bubble.png"
+layeredimage rori supersmug blushing:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori supersmug blushing.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
 layeredimage rori supersmug:
     at sprite_highlight('rori')
     always:

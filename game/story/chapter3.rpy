@@ -3657,11 +3657,11 @@ label chapter3AfterWeekend:
                 
                 show claire sweater giggle
                 
-                claire @ say "I just invited him to go camping with me!"
+                claire @ say "I just invited him to go hiking with me!"
                 
                 show claire sweater sad
                 
-                claire @ say "It's perfectly normal to go camping with your gay friend, okay?!"
+                claire @ say "It's perfectly normal to go hiking with your gay friend, okay?!"
                 
                 if clairePoints > 3:
                     player "I guess that means I won't have any competition."
@@ -3673,11 +3673,11 @@ label chapter3AfterWeekend:
                     player "Nothing."
                 
                 player "Yeah I don't mind Rori tagging along."
-                player "I never thought he'd be the camping type though."
+                player "I never thought he'd be the hiking type though."
                 
                 show claire sweater happy -earsup
                 
-                claire @ say "Oh he's not. He was reeaallly reluctant to agree but I have my ways to persuade people~"
+                claire @ say "Oh he's not. He was reeaallly reluctant to agree but I have my ways of persuading people~"
                 
                 player "Damn, your womanly charm works on homos?"
                 
@@ -3961,6 +3961,8 @@ label chapter3AfterWeekend:
                         
                         player "Sounds good. Can't wait!"
                         
+                jump claireRoriHikeAltStart
+                        
     
     else:
         player "Hope you two have fun!"
@@ -3979,7 +3981,7 @@ label chapter3AfterWeekend:
         ava @ say "Speaking of which, what are you doing with Rori this weekend, [name]?"
         
         n "What *are* you doing with Rori this weekend?"
-        n "You already forgot about your lie from earlier, but you guess this would be an ideal time to ask if Rori wants to hang out."
+        n "You already forgot about your lie from earlier, but you guess you should see if he's free to hang out."
         
         player "We're probably just gonna play video games at his dorm or something."
         
@@ -4041,13 +4043,17 @@ label chapter3AfterWeekend:
         
         scene bg codadorm with dissolve
     
-    if claireHike == True:
+    #if claireHike == True:
         ###if you didn't change your plans with Ava, include a segment where you text Rori and arrange the trip
         #if you go with ava you don't see this scene
         #if you initially planned to go with ava then changed plans, this scene plays
         #if you never planned to go with Ava, then Claire mentioned she'd do something with rori at the cafe
     
         ###claire may have mentioned it's a camping trip by this point
+        
+        show box:
+            ypos 0
+            
         n "Today's the day you're supposed to... do something with Claire and Rori."
         
         call phone_start
@@ -4068,7 +4074,19 @@ label chapter3AfterWeekend:
         
         scene bg campus summer day clear with fade
         
+        show box:
+            ypos 0
+        
         n "Walking up, you spot Rori looking uncomfortable next to an excited Claire waving at you."
+        
+        show rori anxious at center:
+            ypos y_rori
+            xzoom -1
+            xoffset -500
+        show claire flannel happy at center:
+            ypos y_claire
+            xoffset 500
+        with dissolve
         
         claire @ say "Over here [name]!!!"
         
@@ -4076,6 +4094,7 @@ label chapter3AfterWeekend:
         
         rori @ say "Hey..."
         
+        n "He does not look happy to be here."
         n "Oh right, you sorta dragged him into this."
         
         menu:
@@ -4084,10 +4103,16 @@ label chapter3AfterWeekend:
                 
                 player "You ready to have some fun?"
                 
-                rori @ say "Err, I guess? I still don't know what we're doing. Or why we're doing it for that matter."
+                show rori concerned
+                
+                rori @ say "Err, I guess? I still don't know where we're going. Or why we're doing it for that matter."
+                
+                show claire flannel derp
                 
                 claire @ say "The what's and why's aren't important!"
                 claire @ say "What's important is us three are going on a hiking trip!!"
+                
+                show claire happy
                 
                 player "That's it? That's the big secret?"
                 
@@ -4122,11 +4147,11 @@ label chapter3AfterWeekend:
                 n "You wonder how Claire even managed to get him to join you. Did she threaten him?"
                 
                 player "I know this isn't your thing but we didn't want you to be alone this weekend."
-                player "So uh, how did Claire convince you to come?"
+                player "So uh, how did Claire convince you to come with us?"
                 
                 claire @ say "Uh, we don't have to get into the details...!"
                 
-                rori @ say "It was weird, she like begged me to hang out with her."
+                rori @ say "It was weird, she like... begged me to hang out with her."
                 
                 n "Rori shows you his phone. There's a full screen text message from Claire with her just repeating the word \"PLEASE\""
                 n "There's a few \";^;\" thrown in too."
@@ -4138,485 +4163,906 @@ label chapter3AfterWeekend:
                 claire @ say "What can I say? It worked!"
                 
         claire @ say "Anyway, let's get going!!!"
+            
+        jump claireRoriHikeContinued
+        
+label claireRoriHikeAltStart:
+
+    scene bg black with dissolve
+        
+    n "The next few days go by uneventfully."
+    
+    scene bg codadorm with dissolve
+    
+    show box:
+        ypos 0
+
+    n "Today's the day you're supposed to go on some adventure with Claire and Rori."
+        
+    call phone_start
+    
+    call message_start("Claire", "You ready", "claireavi.png") 
+    call message("Claire", "For our trip?", "claireavi.png") 
+
+    call reply_message("Yeah I guess idk about Rori tho") 
+    
+    call message("Claire", "Don't worry he'll be fine!", "claireavi.png") 
+    call message("Claire", "Meet us at the quad!", "claireavi.png") 
+    
+    call reply_message("k") 
+
+    call phone_end
+    
+    scene bg campus summer day clear with fade
+    
+    show box:
+        ypos 0
+    
+    n "Walking up, you spot Rori looking uncomfortable next to an excited Claire waving at you."
+    
+    show rori anxious at center:
+        ypos y_rori
+        xzoom -1
+        xoffset -500
+    show claire flannel happy at center:
+        ypos y_claire
+        xoffset 500
+    with dissolve
+
+    claire @ say "Over here [name]!!!"
+    
+    player "Sup guys."
+    
+    rori @ say "Hey..."
+    
+    n "He does not look happy to be here."
+    n "Oh right, you sorta dragged him into this."
+    
+    menu:
+        "Ready to have some fun?":
+            n "Maybe if you have a positive attitude he'll enjoy this more."
+            
+            player "You ready to have some fun?"
+            
+            show rori concerned
+            
+            rori @ say "Err, I guess? I still don't know why you felt the need to invite me on a hiking trip."
+            
+            show claire flannel derp
+            
+            claire @ say "Cause it's good to get outside and do stuff with friends!"
+            
+            show claire happy
+            
+            claire @ say "Have you ever been hiking before?"
+            
+            show rori armscrossed sleepy
+            
+            rori @ say "A few times."
+            
+            claire @ say "It's fun isn't it!"
+            
+            rori @ say "..."
+            
+            player "It'll be fun with us, trust me."
+            
+            show rori armscrossed neutral lookingaway
+            
+            rori @ say "If you say so."
+            
+            n "He looks miserable already."
+            
+            #claire @ say "Well let's get this show on the road!"
+        
+        "Sorry for getting you involved in this":
+            n "Poor guy, he didn't ask to get involved in any of this."
+            
+            player "Sorry bro, I just wanted to play some vidya and chill or something."
+            
+            rori @ say "It's alright. Doing that every weekend gets dull. This... shakes it up a little at the very least."
+            
+            claire @ say "That's the spirit! I'll make an outdoorsman out of you, just wait and see!"
+        
+        "How'd Claire convince you to come?":
+            n "You wonder how Claire even managed to get him to join you. Did she threaten him?"
+            
+            player "I know this isn't your thing but we didn't want you to be alone this weekend."
+            player "So uh, how did Claire convince you to come with us?"
+            
+            show claire flustered
+            
+            claire @ say "Uh, we don't have to get into the details...!"
+            
+            show rori armscrossed neutral
+            
+            rori @ say "It was weird, she like... begged me to hang out with her."
+            
+            n "Rori shows you his phone. There's a full screen text message from Claire with her just repeating the word \"PLEASE\""
+            n "There's a few \";^;\" thrown in too."
+            n "So that's Claire's feminine charm at work."
+            n "Maybe that's the best she can do on someone with Rori's preferences."
+            
+            show rori sleepy
+            
+            rori @ say "She seemed desperate so eventually I just gave in."
+            
+            show claire derp
+            
+            claire @ say "What can I say? It worked!"
+            
+    claire @ say "Anyway, let's get going!!!"
+    
+    jump claireRoriHikeContinued
+        
+label claireRoriHikeContinued:
+    scene bg forest with fade
+    
+    show box:
+        ypos 0
+    
+    n "Claire took you and Rori far into the woods, well beyond being able to hear cars in the distance."
+    n "She guides you along a seemingly abandoned trail. It's become overgrown but you can see the remnants from when it was frequently hiked."
+    
+    show rori armscrossed concerned at center:
+        ypos y_rori
+        xzoom -1
+        xoffset -525
+    show claire flannel happy at center:
+        ypos y_claire
+        xoffset 525
+    with dissolve
+    
+    rori @ say "Are you sure this is the right way?"
+    
+    n "He looks down at his phone."
+    
+    rori @ say "I don't even get signal anymore."
+    
+    player "Yeah, where are we even going anyway?"
+    
+    show claire laughing
+    
+    claire @ say "I dunno! It's fun to just get lost sometimes!"
+    
+    show rori anxious
+    
+    rori @ say "Lost?!"
+    
+    show claire flustered
+    
+    claire @ say "Just a little!"
+    
+    show claire happy
+    
+    claire @ say "Ooh here's a good spot!"
+    
+    n "You've come to a small clearing where the tree branches and brush have stopped jutting into your sides."
+    
+    player "A good spot for what? It's getting dark so we should probably turn back soon."
+    
+    show claire at hop
+    
+    claire @ say "Nonsense! We're staying the night out here!"
+    
+    show rori yawn surprised
+    
+    rori @ say "What? You didn't mention that before!"
+    
+    show rori none
+    show rori anxious
+    
+    rori @ say "I have to do my gacha dailies and feed my neopets and and and-"
+    
+    claire @ say "Aw that digitimon stuff can wait! This right here is the *real world!*"
+    claire @ say "Don't you wanna get away from everything for a bit and enjoy the calmness of nature?"
+    
+    player "What about food and water?"
+    
+    claire @ say "I got us covered! You think I wouldn't pack snacks for my homies?"
+    
+    show rori sassy
+    
+    rori @ say "And a tent to sleep in?"
+    
+    show claire flustered
+    
+    claire @ say "Who needs a tent? I'll keep us all warm~"
+    
+    player "What if a bear attacks us?"
+    
+    show claire derp
+    
+    claire @ say "Then I'll kick its ass!"
+    
+    n "This is the least prepared you have ever been in the wild but somehow Claire's reassurance puts you somewhat at ease."
+    n "You look to Rori who is visibly disturbed by the idea of sleeping in the woods tonight."
+    
+    show claire happy
+    
+    menu:
+        "I dunno if this is a good idea":
+            show rori neutral
                 
-        scene bg forest with fade
+            player "I dunno if this is a good idea."
+            player "We didn't sign up for any of this."
+            
+            show claire surprised earsup
+            
+            claire @ say "And yet you followed me several miles into the woods this late?"
+            
+            show rori armscrossed angry
+            
+            rori @ say "We thought you had a plan!"
+            
+            show claire flustered
+            
+            claire @ say "I did! My plan was to find a camping spot and roast some marshmallows with the boys!"
+            
+            show rori armscrossed sleepy
+            
+            rori @ say "You say that like it's that simple."
+            
+            show claire derp
+            
+            claire @ say "It is that easy! We just gotta get a fire started!"
+            
+            show claire laughing
+            
+            claire @ say "What else are you gonna do, hike all the way back in the dark?"
+            
+            show rori none
+            show rori angry
+            
+            rori @ say "I might!"
+            
+            player "That kinda sounds more dangerous than staying here."
+            
+            show claire happy
+            
+            claire @ say "Exactly! So are you gonna help me build a campfire or not?"
+            
+            show rori sleepy
+            
+            n "Rori slumps his shoulders and sighs."
+            
+            rori @ say "Why are women like this?"
         
-        n "Claire took you and Rori far into the woods, well beyond being able to hear cars in the distance."
-        n "She guides you along a seemingly abandoned trail. It's become overgrown but you can see the remnants from when it was frequently hiked."
+        "It'll be alright":
+            show rori neutral
+            
+            player "It'll be alright. It's just for one night after all. Claire, you sound like you've done this before."
+            
+            claire @ say "Plenty of times!"
+            
+            show rori armscrossed sleepy
+            
+            rori @ say "Well... I guess I don't have much of a choice with the sun going down like this."
+            
+            show rori none
+            show rori armscrossed
+            
+            rori @ say "But we're leaving as soon as the sun rises tomorrow."
+            
+            show claire at hop
+            
+            claire @ say "Deal!"
+            claire @ say "Now let's get started building a campfire!"
+            
+        "Fine, let's do it.":
+            show rori neutral
+            
+            player "I would have preferred if you told us about this ahead of time."
+            
+            show claire flustered
+            
+            claire @ say "Would you have even agreed to come if you knew beforehand?"
+            
+            show rori none
+            show rori armscrossed
+            
+            rori @ say "I wouldn't have."
+            
+            player "I dunno, but we're here now so we might as well make the most of it."
+            
+            show claire happy at hop
+            
+            claire @ say "Exactly! Now let's get that campfire started!"
+            
+    show rori none
+    show rori neutral
         
-        rori @ say "Are you sure this is the right way?"
+    n "Claire had been grabbing pawfuls of dry grass and small twigs and stuffing them in her pockets the whole way here."
+    n "She clears a spot on the ground and dumps her collection onto the dirt."
+    
+    claire @ say "There's our tinder, now we just need some kindling and fuel to burn!"
+    claire @ say "You boys know what makes for good kindling?"
+    
+    if chosenHobby == "bushcraft":
+        n "Ever since you lied about being into bushcraft, you've been doing research into it and learning a few things."
         
-        n "He looks down at his phone."
+        player "I sure do!"
+        player "We're gonna need some dry sticks, starting small and working our way up to branches and logs."
         
-        rori @ say "I don't even get signal anymore."
+        show claire suggestive
         
-        player "Yeah, where are we even going anyway?"
+        claire @ say "Précisément!"
         
-        claire @ say "I dunno! It's fun to just get lost sometimes!"
+        show claire derp
         
-        rori @ say "Lost?!"
+        claire @ say "We'll start with a tiny little fire and build it up til the logs are hot enough to keep burning."
         
-        claire @ say "Just a little!"
-        claire @ say "Ooh here's a good spot!"
+    else:
+        n "You and Rori look to each other and both shrug your shoulders."
         
-        n "You've come to a small clearing where the tree branches and brush have stopped jutting into your sides."
+        rori @ say "I've never made a fire so..."
         
-        player "A good spot for what? It's getting dark so we should probably turn back soon."
+        player "Yeah, fires are so last century."
         
-        claire @ say "Nonsense! We're staying the night out here!"
+        show claire surprised earsup
         
-        rori @ say "What? You didn't mention that before! I have to do my gacha dailies and feed my neopets and and and-"
+        claire @ say "You boys spend too much time in front of your computers!"
         
-        claire @ say "Aw that digitimon stuff can wait! This right here is the *real world!*"
-        claire @ say "Don't you wanna get away from everything for a bit and enjoy the calmness of nature?"
+        show claire laughing
         
-        player "What about food and water?"
+        claire @ say "Well today yer gonna learn some outdoors skills!"
         
-        claire @ say "I got us covered! You think I wouldn't pack snacks for my homies?"
+        show rori none
+        show rori armscrossed
         
-        rori @ say "And a tent to sleep in?"
+        rori @ say "But the outdoors suuuuuucks!"
         
-        claire @ say "Who needs a tent? I'll keep us all warm~"
+        show claire suggestive
         
-        player "What if a bear attacks us?"
+        claire @ say "It sucks good though~"
         
-        claire @ say "Then I'll kick its ass!"
+        show claire happy
         
-        n "This is the least prepared you have ever been in the wild but somehow Claire's reassurance puts you somewhat at ease."
-        n "You look to Rori who is visibly disturbed by the idea of sleeping in the woods tonight."
+        claire @ say "Making a fire is easy! We just need to get some dry wood!"
+    
+    claire @ say "Gather as much as you can, 'cause we'll need a bunch!"
+    
+    hide claire with dissolve
+    
+    n "Claire hops off into the thicket, leaving you and Rori alone."
+    n "The ram sighs."
+    
+    pause .2
+    
+    show rori sleepy at center with move:
+        ypos y_rori
+        xoffset 0
+    
+    #menu:
+    #    "Better get moving":
+    #        player "We better get moving. Don't wanna get stuck in the dark without enough firewood."
+            
+    #        rori @ say "Yeah..."
+    #    "You alright?":
+    $ roriPoints =+ 1
+    
+    player "You alright?"
+    
+    rori @ say "Yeah, I just..."
+    rori @ say "I dunno why I'm here and doing this."
+    rori @ say "I hate being outside with all the bugs and the sun and getting tired walking around with nothing to do but I guess I don't have a choice now."
+    
+    show rori concerned
+    
+    player "Come on, it's just a little weekend adventure. It's not like we're gonna die out here."
+    
+    show rori worried noblush
+    
+    rori @ say "That's not it, it's more like"
+    rori @ say "Like I can't believe I let someone I barely know dictate what I'm doing."
+    
+    show rori armscrossed concerned
+    
+    player "You mean Claire dragging us into this?"
+    player "That's just how she is. She's just trying to have a good time with us."
+    
+    rori @ say "Yeah but she's kinda..."
+    
+    if roriPoints > 2:
+        player "Pushy?"
+        
+        show rori armscrossed surprised
+        
+        rori @ say "Exactly!"
+        
+        show rori none
+        show rori armscrossed angry
+        
+        rori @ say "She's the type of girl who wants to do things *her* way and hardly considers what others want."
+        
+        player "She's not as bad as Gunner."
+        
+        if gunnerRaid == True:
+            player "Claire's not even making us do anything illegal."
+        
+        show rori armscrossed concerned
+        
+        rori @ say "At least Gunner's a guy so he *somewhat* gets me."
+        
+        player "You think Gunner, who regularly calls you a fag, gets you more than Claire?"
+        
+        show rori armscrossed anxious
+        
+        rori @ say "W-well... yeah!"
+        
+        show rori none
+        show rori angry
+        
+        rori @ say "We may not get along that much but he still sees me as a bro."
+        
+        show rori none
+        show rori yawn lookingaway blush
+        
+        rori @ say "Just the kind of bro who's quiet and keeps to himself and does nerd shit."
+        
+        show rori worried
+        
+        rori @ say "Claire on the other hoof doesn't get that at all."
+        
+        show rori sassy
+        
+        rori @ say "Girls are just so fundamentally separated from guys that they can't even begin to comprehend or empathize or care about what *we* want."
+        
+        show rori sleepy
+        
+        rori @ say "At least not on the level of how guys can."
+        
+        player "Is that why...?"
+        
+        show rori none
+        show rori armscrossed
+        
+        rori @ say "Yes that's why I'm gay, so what?"
         
         menu:
-            "I dunno if this is a good idea":
-                player "I dunno if this is a good idea."
-                player "We didn't sign up for any of this."
-                
-                claire @ say "And yet you followed me several miles into the woods this late?"
-                
-                rori @ say "We thought you had a plan!"
-                
-                claire @ say "I did! My plan was to find a camping spot and roast some marshmallows with the boys!"
-                
-                rori @ say "You say that like it's that easy."
-                
-                claire @ say "It is that easy! We just gotta get a fire started!"
-                claire @ say "What else are you gonna do, hike all the way back in the dark?"
-                
-                rori @ say "I might!"
-                
-                player "That kinda sounds more dangerous than staying here."
-                
-                claire @ say "Exactly! So are you gonna help me build a campfire or not?"
-                
-                n "Rori slumps his shoulders and sighs."
-                
-                rori @ say "Why are women like this?"
-            
-            "It'll be alright":
-                player "It'll be alright. It's just for one night after all. Claire, you sound like you've done this before."
-                
-                claire @ say "Plenty of times!"
-                
-                rori @ say "Well... I guess I don't have much of a choice with the sun going down like this."
-                rori @ say "But we're leaving as soon as the sun rises tomorrow."
-                
-                claire @ say "Deal!"
-                claire @ say "Now let's get started building a campfire!"
-                
-            "Fine, let's do it.":
-                player "I would have preferred if you told us about this ahead of time."
-                
-                claire @ say "Would you have even agreed to come if you knew beforehand?"
-                
-                #crossed arms
-                rori @ say "I wouldn't have."
-                
-                player "I dunno, but we're here now so we might as well make the most of it."
-                
-                claire @ say "Exactly! Now let's get that campfire started!"
-            
-        n "Claire had been grabbing pawfuls of dry grass and small twigs and stuffing them in her pockets the whole way here."
-        n "She clears a spot on the ground and dumps her collection onto the dirt."
-        
-        claire @ say "There's our tinder, now we just need some kindling and fuel to burn!"
-        claire @ say "You boys know what makes for good kindling?"
-        
-        if chosenHobby == "bushcraft":
-            n "Ever since you lied about being into bushcraft, you've been doing research into it and learning a few things."
-            
-            player "I sure do!"
-            ###fix this awful line
-            player "We're gonna need some dry sticks, starting small and working our way up to branches and logs."
-            
-            claire @ say "Précisément!"
-            claire @ say "We'll start with a tiny little fire and build it up til the logs are hot enough to keep burning."
-            
-        else:
-            n "You and Rori look to each other and both shrug your shoulders."
-            
-            rori @ say "I've never made a fire so..."
-            
-            player "Yeah, fires are so last century."
-            
-            claire @ say "You boys spend too much time in front of your computers!"
-            claire @ say "Well today yer gonna learn some outdoors skills!"
-            
-            rori @ say "But the outdoors suuuuuucks!"
-            
-            claire @ say "It sucks good though~"
-            claire @ say "Making a fire is easy! We just need to get some dry wood!"
-        
-        claire @ say "Gather as much as you can, 'cause we'll need a bunch!"
-        
-        n "Claire hops off into the thicket, leaving you and Rori alone."
-        n "The ram sighs."
-        
-        #menu:
-        #    "Better get moving":
-        #        player "We better get moving. Don't wanna get stuck in the dark without enough firewood."
-                
-        #        rori @ say "Yeah..."
-        #    "You alright?":
-        $ roriPoints =+ 1
-        
-        player "You alright?"
-        
-        rori @ say "Yeah, I just..."
-        rori @ say "I dunno why I'm here and doing this."
-        rori @ say "It's so much not my thing but I don't have a choice now."
-        
-        player "Come on, it's just a little weekend adventure. It's not like we're gonna die out here."
-        
-        rori @ say "That's not it, it's more like"
-        rori @ say "Like I can't believe I let someone I barely know dictate what I'm doing."
-        
-        player "You mean Claire dragging us into this?"
-        player "That's just how she is. She's just trying to have a good time with us."
-        
-        rori @ say "Yeah but she's kinda..."
-        
-        if roriPoints > 3:
-            player "Pushy?"
-            
-            rori @ say "Exactly!"
-            rori @ say "She's the type of girl who wants to do things *her* way and hardly considers what others want."
-            
-            player "She's not as bad as Gunner."
-            
-            if gunnerRaid == True:
-                player "Claire's not even making us do anything illegal."
-            
-            rori @ say "At least Gunner's a guy so he *somewhat* gets me."
-            
-            player "You think Gunner, who regularly calls you a fag, gets you more than Claire?"
-            
-            rori @ say "W-well... yeah!"
-            rori @ say "We may not get along that much but he still sees me as a bro."
-            rori @ say "Just the kind of bro who's quiet and keeps to himself and does nerd shit."
-            rori @ say "Claire on the other hoof doesn't get that at all."
-            rori @ say "Girls are just so fundamentally separated from guys that they can't even begin to comprehend or empathize or care about what *we* want."
-            rori @ say "At least not on the level of how guys can."
-            
-            player "Is that why...?"
-            
-            rori @ say "Yes that's why I'm gay, so what?"
-            
-            menu:
-                "Me too lol":
-                    $ roriPoints =+ 2
-                    $ clairePoints =- 1
-                    $ avaPoints =- 1
-                    $ ellenPoints =- 1
-                    $ rosePoints =- 1
-                    
-                    player "No yeah I totally understand. Girls are weird mysterious creatures from another dimension."
-                    player "Bros are where it's at."
-                    player "Homos before hoes."
-                    
-                    rori @ say "Wait you're gay too?"
-                    
-                    player "Gay? Hell no, I just like cute boys."
-                    
-                    rori @ say "Sounds pretty gay."
-                    
-                    menu:
-                        "Maybe just a little":
-                            player "Maybe just a little."
-                            
-                            rori @ say "Suuuuure~"
-                            
-                            n "Rori's little tail happily swishes back and forth."
-                            
-                            rori @ say "But we should really start gathering firewood before it gets dark!"
-                        "Only for you":
-                            $ roriPoints =+ 1
-                            
-                            player "Think whatever you want, I'm not gay just because I'd do gay stuff with you."
-                            
-                            rori @ say "W-with who??"
-                            
-                            player "No one."
-                            player "A cute sheepy boi maybe."
-                            
-                            rori @ say "Baaah~"
-                            rori @ say "I'll take that as a compliment..."
-                            rori @ say "We should really be gathering firewood though! It'll get dark soon!"
-                            
-                    n "The two of your start grabbing sticks and pulling fallen branches out from underneath leaves."
-                    n "It might just be the dim lighting playing tricks on you but you could swear Rori was checking you out a few times, especially when you bent over to pick up a twig."
-                    
-                    
-                "Fair":
-                    player "Fair. I guess guys are more straightforward and easy to understand."
-                    
-                    rori @ say "Exactly. If I had a boyfriend I could just be like \"Hey you wanna play Team Fortress 2 and jerk each other off?\""
-                    rori @ say "With girls you have to read their freaking mind or they'll get mad at you and belittle you and throw things at you."
-                    
-                    menu:
-                        "Are you speaking from experience?":
-                            player "Are you sure they're really like that? Are you speaking from experience?"
-                            
-                            rori @ say "... I don't wanna get into it right now."
-                            
-                            player "Okay then. How about we just get the firewood now?"
-                            
-                            rori @ say "Yeah, that sounds good."
-                        "You wanna play Team Fortress 2?":
-                            $ roriPoints =+ 1
-                            
-                            player "Hey you wanna play Team Fortress 2?"
-                            
-                            rori @ say "OwO"
-                            rori @ say "*Ahem*"
-                            rori @ say "I mean, I'd rather be doing anything else than picking up firewood."
-                            
-                            player "We should probably hurry up with that. All I've got are a couple of twigs."
-            
-                "Girls aren't so bad":
-                    $ roriPoints =- 1
-                    $ roryPoints =+ 1
-                    
-                    player "Girls aren't so bad. They have nice boobs."
-                    
-                    rori @ say "Not worth it to walk straight into hell for boobs."
-                    
-                    player "It is for me."
-                    
-                    rori @ say "You and a lot of other guys."
-                    rori @ say "We should probably hurry up with the firewood before it gets too dark."
-            
-        else:
-            player "Kinda what?"
-            
-            rori @ say "You know..."
-            rori @ say "She's like a lot of girls. Everything revolves around them and they don't really care about what others want."
-            
-            player "I don't think Claire's like that. She probably genuinely thought we'd enjoy this sort of thing."
-            
-            rori @ say "Yeah and she was dead wrong because she doesn't know a thing about us."
-            rori @ say "We're just pawns in her little game so that *she* can have fun."
-            
-            menu:
-                "Yeah she went too far this time":
-                    player "I agree, she went a little too far this time."
-                    player "I'll ask her to be more considerate next time."
-                "It's just a misunderstanding":
-                    player "It's just a little misunderstanding. We can ask her to be more considerate next time."
-                    
-            rori @ say "Or we could just refuse to go on her next \"adventure\" altogether."
-            
-            player "That too."
-            player "Let's just collect some firewood and survive this night, then go back home like nothing ever happened."        
-                    
-            rori @ say "That's all we can do at this point."
-            
-        n "Around the time that you've gathered a good pile of wood in the middle of your camp site, Claire returns carrying a whole tree trunk on her shoulder."
-        n "The ground shakes when she throws it to the ground."
-        
-        claire @ say "Ta-dah! I figured y'all would want a place to sit."
-        
-        player "Wow uh, thanks."
-        
-        rori @ say "That must have weighed a ton!"
-        
-        claire @ say "Aw shucks guys, it was nothin'~"
-        claire @ say "Looks like we got a good amount of wood to burn! Just gotta start with the-"
-        claire @ say "Hey! Quit eating our tinder!"
-        
-        n "You look to Rori who's munching on some of the dry grass Claire laid out earlier."
-        
-        rori @ say "Sorry... I got hungry."
-        
-        claire @ say "How are we gonna toast marshmallows if we can't get our fire started?"
-        
-        n "Claire snatches up the remaining tinder and bundles it up into a circle with both her paws."
-        
-        claire @ say "You boys watching? First we take the easiest to burn stuff and hold it together like a bird's nest."
-        claire @ say "Once the grass ignites, it'll heat up the tiniest of twigs and once those combust, those will heat up the slightly bigger twigs and so on."
-        claire @ say "Oop, could one of you grab my lighter? I think it's in my back pocket~"
-        
-        menu:
-            "Jump at the opportunity":
-                $ clairePoints =+ 1
-                
-                player "I got it!"
-                
-                n "Claire grins and sways her hips while you dig around in her back pocket, feeling around for the lighter a little too long."
-                
-                rori @ say "Hurry up before I freeze to death!"
-                
-                if claireBullyLevel > 0:
-                    claire @ say "Ksksksks check the other pocket, dweeb~"
-                else:
-                    claire @ say "Ksksksks check the other pocket, hun~"
-                
-                n "Turns out you were grabbing around the wrong pocket."
-                
-                player "Oh. Here it is. Heh."
-                
-                claire @ say "Now would you do the honors? Just hold the flame right underneath the bundle!"
-                
-                if claireBullyLevel > 0:
-                    claire @ say "Try not to burn yourself, dummy."
-                
-                n "You do as instructed and press down on the lighter switch under the tinder."
-                
-            "Just use your own lighter":
+            "Me too lol":
+                $ roriPoints =+ 2
                 $ clairePoints =- 1
+                $ avaPoints =- 1
+                $ ellenPoints =- 1
+                $ rosePoints =- 1
                 
-                player "No worries, I'll just use my own!"
+                show rori armscrossed concerned blush
                 
-                n "Claire frowns as you flip the lid off your lighter with a click and hold the flame underneath the tinder bundle."
+                player "No yeah I totally understand. Girls are weird mysterious creatures from another dimension."
+                player "Bros are where it's at."
+                player "Homos before hoes."
                 
-            "Let Rori get it":
+                show rori none
+                show rori surprised
+                
+                rori @ say "Wait you're gay too?"
+                
+                player "Gay? Hell no, I just like cute boys."
+                
+                show rori supersmug blushing
+                
+                rori @ say "Sounds pretty gay."
+                
+                menu:
+                    "Maybe just a little":
+                        player "Maybe just a little."
+                        
+                        show rori smirk lookingaway
+                        
+                        rori @ say "Suuuuure~"
+                        
+                        n "Rori's little tail happily swishes back and forth."
+                        
+                        show rori soyface
+                        
+                        rori @ say "But we should really start gathering firewood before it gets dark!"
+                    "Only for you":
+                        $ roriPoints =+ 1
+                        
+                        player "Think whatever you want, I'm not gay just because I'd do gay stuff with you."
+                        
+                        show rori surprised
+                        
+                        rori @ say "W-with who??"
+                        
+                        show rori worried
+                        
+                        player "No one."
+                        player "A cute sheepy boi maybe."
+                        
+                        show rori yawn blush
+                        
+                        rori @ say "Baaah~"
+                        
+                        show rori smug blushing
+                        
+                        rori @ say "I'll take that as a compliment..."
+                        
+                        show rori anxious 
+                        
+                        rori @ say "We should really be gathering firewood though! It'll get dark soon!"
+                        
+                hide rori with dissolve
+                        
+                n "The two of your start grabbing sticks and pulling fallen branches out from underneath leaves."
+                n "It might just be the dim lighting playing tricks on you but you could swear Rori was checking you out a few times, especially when you bent over to pick up a twig."
+                
+                
+            "Fair":
+                player "Fair. I guess guys are more straightforward and easy to understand."
+                
+                show rori yawn lookingaway blush
+                
+                rori @ say "Exactly. If I had a boyfriend I could just be like \"Hey you wanna play Team Fortress 2 and jerk each other off?\""
+                
+                show rori sleepy -blush
+                
+                rori @ say "With girls you have to read their freaking mind or they'll get mad at you and belittle you and throw things at you."
+                
+                menu:
+                    "Are you speaking from experience?":
+                        player "Are you sure they're really like that? Are you speaking from experience?"
+                        
+                        show rori none
+                        show rori armscrossed
+                        
+                        rori @ say "... I don't wanna get into it right now."
+                        
+                        player "Okay then. How about we just get the firewood now?"
+                        
+                        show rori armscrossed neutral
+                        
+                        rori @ say "Yeah, that sounds good."
+                    "You wanna play Team Fortress 2 and...?":
+                        $ roriPoints =+ 1
+                        
+                        player "Hey you wanna play Team Fortress 2 and...? Uh... j-j-jerk off..."
+                        
+                        show rori surprised
+                        
+                        rori @ say "OwO"
+                        
+                        show rori worried noblush
+                        
+                        rori @ say "*Ahem*"
+                        
+                        show rori neutral
+                        
+                        rori @ say "I mean, I'd rather be doing anything else than picking up firewood."
+                        
+                        player "We should probably hurry up with that. All I've got are a couple of twigs."
+                        
+                hide rori with dissolve
+        
+            "Girls aren't so bad":
                 $ roriPoints =- 1
+                $ roryPoints =+ 1
                 
-                n "You sit with your arms crossed waiting for Rori to do it."
+                player "Girls aren't so bad. They have nice boobs."
                 
-                rori @ say "Seriously? Ugh, I'll get it."
+                rori @ say "Not worth it to walk straight into hell for boobs."
                 
-                n "Rori looks away as he sticks his hoof in Claire's back pocket and pulls out the lighter."
+                player "It is for me."
+                
+                show rori armscrossed sleepy
+                
+                rori @ say "You and a lot of other guys."
+                rori @ say "We should probably hurry up with the firewood before it gets too dark."
+                
+                hide rori with dissolve
+        
+    else:
+        player "Kinda what?"
+        
+        show rori sleepy
+        
+        rori @ say "You know..."
+        
+        show rori none
+        show rori armscrossed
+        
+        rori @ say "She's like a lot of girls. Everything revolves around them and they don't really care about what others want."
+        
+        player "I don't think Claire's like that. She probably genuinely thought we'd enjoy this sort of thing."
+        
+        rori @ say "Yeah and she was dead wrong because she doesn't know a thing about us."
+        rori @ say "We're just pawns in her little game so that *she* can have fun."
+        
+        menu:
+            "Yeah she went too far this time":
+                player "I agree, she went a little too far this time."
+                player "I'll ask her to be more considerate next time."
+            "It's just a misunderstanding":
+                player "It's just a little misunderstanding. We can ask her to be more considerate next time."
+                
+        rori @ say "Or we could just refuse to go on her next \"adventure\" altogether."
+        
+        player "That too."
+        player "Let's just collect some firewood and survive this night, then go back home like nothing ever happened."        
+                
+        show rori sleepy
+        
+        rori @ say "That's all we can do at this point."
+        
+    hide rori with dissolve
+        
+    n "Around the time that you've gathered a good pile of wood in the middle of your camp site, Claire returns carrying a whole tree trunk on her shoulder."
+    n "The ground shakes when she throws it to the ground."
     
-                claire @ say "Now would you do the honors? Just hold the flame right underneath the bundle!"
-                
-                n "Rori does as instructed and presses down on the lighter switch under the tinder."
+    show rori neutral at center:
+        ypos y_rori
+        xzoom -1
+        xoffset -525
+    show claire flannel happy at center:
+        ypos y_claire
+        xoffset 525
+    with dissolve    
     
-        n "Almost immediately the dry grass combusts into a ball of fire, burning brightly in the darkening woods."
-        n "Claire puts it down in a pile of small twigs but it burns out so quickly it doesn't have a chance to ignite the wood."
-        
-        rori @ say "Aww, all that hard work for nothing."
-        
-        claire @ "Au contrair~"
-        
-        n "The bunny gets down on all fours and blows into the smoldering remains of the tinder bundle. Glowing orange embers light up and more smoke rises from it the more she blows."
-        n "With enought breaths, the twigs alight like match sticks, keeping the bundle hot until the bigger sticks reach their combustion point as well."
-        n "Against all odds, the thickest sticks you gathered burn high into the sky. Despite the cool autumn air around you, the fire is already making you sweat."
-        n "Claire rolls some logs into the blaze and pokes at them with a long stick."
-        
-        claire @ say "And there we have it!"
-        
-        rori @ say "Wow, I did not expect that to actually work."
-        
-        claire @ say "If it's smokin' ya just gotta give it some air and it'll burn!"
-        
-        player "My caveman ancestors are smiling down at me right now. I have rediscovered fire."
-        
-        claire @ say "Do you like it?"
-        
-        player "I love it! It gives me a weird sense of comfort."
-        
-        rori @ say "I have a strange urge to hop into it."
-        
-        claire @ say "Hey no sheep in my fire!"
-        claire @ say "Grab a stick and let's toast some marshmallows!"
-        
-        n "Claire pulls a bag out from her shirt and tosses the sweet sugary fluffs to you."
-        
-        player "Yay diabetes!"
-        
-        rori @ say "Finally, I'm starving after all that hiking."
-        
-        n "You have to admit, it's pretty rewarding to come all this way out, build a fire from scratch, and sit back with some toasted marshmallows surrounded by friends."
-        n "Claire gets so distracted telling stories that she accidentally lets her marshmallows ignite before frantically trying to blow out the fire."
-        n "Even Rori lightens up after nomming a few."
-        n "Suddenly the two of them snap their heads to the woods, ears perked up. You can't see a think in the darkness however."
-        
-        player "What? What is it?"
-        
-        rori @ say "Shh! Something's coming!"
-        
-        n "Claire stands up, ready to fight."
-        n "Rori sniffs the air."
-        n "A moment later you hear leaves crunching underfoot as something rapidly approaches."
-        n "A flash of white briefly appears before colliding with you, sending your body reeling backward."
-        n "As you tumble to the ground, you see Claire catch hold of something, pinning it down."
-        
-        gunner @ say "Get off me you fat fuck!"
-        
-        ava @ say "Ohmygosh [name]! Are you alright??"
-        
-        n "Dazed and blinded by the fire, you lean up and rapidly blink, trying to make sense of the situation."
-        
-        ava @ say "Sorry! I didn't mean to fly right into you!"
-        
-        claire @ say "Ava? Is that you?"
-        
-        rori @ say "Gunner? What the hell are you doing here?"
-        
-        gunner @ say "About to get raped by this rabid rabbit apparently."
-        
-        claire @ say "Not tonight, sorry."
-        
-        n "Claire rolls off of Gunner. He gets up and brushes himself off."
-        
-        ava @ say "Ooh are those marshmallows? Mind if I take one?"
-        
-        n "The bird grabs the stick you had dropped and fixes a new marshmallow to the tip."
-        
-        gunner @ say "Uh, are you forgetting about the crazy guy right behind us?"
-        
-        ava @ say "Claire will protect us!"
+    claire @ say "Ta-dah! I figured y'all would want a place to sit."
     
-        claire @ say "You're being chased by someone?"
-        
-        gunner @ say "Yeah this homeless guy invaded our tent and started heckling us for change. We barely managed to escape with our credit scores intact!"
-        gunner @ say "Then he started ranting about linux and free software licenses... I've never been so scared in my life."
-        
-        rori @ say "*cough*"
-        
-        claire @ say "Well don't you worry any further, if anyone steps foot in this camp I'll suplex them~"
-        
-        ava @ say "Aww, thanks Claire~"
-        
-        player "How do you manage to run into a psychotic computer nerd *this* far into the woods?"
-        
-        rori @ say "*Ahem!!!*"
-        
-        gunner @ say "Rori you're lucky you weren't there. This guy would have complained that you weren't running a deblobbed kernel."
-        
-        rori @ say "Oh he's one of those purists."
-        
-        ava @ say "I have no idea what that means but let's just try and put it all behind us."
-        ava @ say "I'm more surprised to see you all out here!"
-        
-        claire @ say "Well you went off to have your fun camping trip on your own which gave me the idea to do the same with these two!"
-        
-        gunner @ say "Wow, you got Rori to come outside? Did you blackmail him?"
-        
-        rori @ say "For your information, I was starting to enjoy my time out here!"
-        
-        ava @ say "Were you planning on staying the night? Where's your tent?"
-        
-        claire @ say "We were just gonna cuddle puddle~"
-        
-        player "Excuse me? What's a cuddle puddle?"
-        
-        claire @ say "You'll find out~"
-        
-        #do a little skip where they sorta explain it then cuddle puddle
-        
-        jump cuddlepuddle        
-                
-                
+    player "Wow uh, thanks."
+    
+    show rori soyface
+    
+    rori @ say "How'd you lift that?? It must have weighed a ton!"
+    
+    show rori neutral    
+    show claire derp
+    
+    claire @ say "Aw shucks guys, it was nothin'~"
+    
+    show claire happy at hop
+    
+    claire @ say "Looks like we got a good amount of wood to burn! Just gotta start with the-"
+    
+    show claire surprised earsup
+    
+    claire @ say "Hey! Quit eating our tinder!"
+    
+    show rori surprised
+    
+    n "You look to Rori who's munching on some of the dry grass Claire laid out earlier."
+    
+    rori @ say "Sorry... I got hungry."
+    
+    show rori neutral
+    show claire derp
+    
+    claire @ say "How are we gonna toast marshmallows if we can't get our fire started?"
+    
+    show claire happy
+    
+    n "Claire snatches up the remaining tinder and bundles it up into a circle with both her paws."
+    
+    claire @ say "You boys watching? First we take the easiest to burn stuff and bundle it together like a bird's nest..."
+    claire @ say "Once the grass ignites, it'll heat up the tiniest of twigs and once those combust, those will heat up the slightly bigger twigs and so on."
+    
+    show claire surprised earsup
+    
+    claire @ say "Oop, could one of you grab my lighter? I think it's in my back pocket~"
+    
+    menu:
+        "Jump at the opportunity":
+            $ clairePoints =+ 1
+            
+            player "I got it!"
+            
+            show claire suggestive
+            
+            n "Claire grins and sways her hips while you dig around in her back pocket, feeling around for the lighter a little too long."
+            
+            show rori none
+            show rori armscrossed
+            
+            rori @ say "Hurry up before I freeze to death!"
+            
+            if claireBullyLevel > 0:
+                claire @ say "Ksksksks check the other pocket, dweeb~"
+            else:
+                claire @ say "Ksksksks check the other pocket, hun~"
+            
+            n "Turns out you were grabbing around the wrong pocket."
+            
+            player "Oh. Here it is. Heh."
+            
+            show claire happy
+            show rori neutral
+            
+            claire @ say "Now would you do the honors? Just hold the flame right underneath the bundle!"
+            
+            if claireBullyLevel > 1:
+                claire @ say "Try not to burn yourself, dummy."
+            
+            n "You do as instructed and press down on the lighter switch under the tinder."
+            
+        "Just use your own lighter":
+            $ clairePoints =- 1
+            
+            player "No worries, I'll just use my own!"
+            
+            show claire sad
+            
+            n "Claire frowns as you flip the lid off your lighter with a click and hold the flame underneath the tinder bundle."
+            
+        "Let Rori get it":
+            $ roriPoints =- 1
+            
+            n "You sit with your arms crossed waiting for Rori to do it."
+            
+            show claire suggestive
+            show rori sassy
+            
+            rori @ say "Seriously? Ugh, I'll get it."
+            
+            n "Rori looks away as he sticks his hoof in Claire's back pocket and pulls out the lighter."
+
+            claire @ say "Now would you do the honors? Just hold the flame right underneath the bundle!"
+            
+            n "Rori does as instructed and presses down on the lighter switch under the tinder."
+            
+    show claire happy
+    show rori none
+    show rori neutral
+
+    n "Almost immediately the dry grass combusts into a ball of fire, burning brightly in the darkening woods."
+    n "Claire puts it down in a pile of small twigs but it burns out so quickly it doesn't have a chance to ignite the wood."
+    
+    show rori none
+    show rori sleepy
+    
+    rori @ say "Aww, all that hard work for nothing."
+    
+    show rori neutral
+    show claire suggestive
+    
+    claire @ "Au contrair~"
+    
+    show claire happy
+    
+    n "The bunny gets down on all fours and blows into the smoldering remains of the tinder bundle. Glowing orange embers light up and more smoke rises from it the more she blows."
+    n "With enought breaths, the twigs alight like match sticks, keeping the bundle hot until the bigger sticks reach their combustion point as well."
+    n "Against all odds, the thickest sticks you gathered burn high into the sky. Despite the cool autumn air around you, the fire is already making you sweat."
+    n "Claire rolls some logs into the blaze and pokes at them with a long stick."
+    
+    show claire laughing
+    
+    claire @ say "And there we have it!"
+    
+    show rori soyface
+    
+    rori @ say "Wow, I did *not* expect that to actually work."
+    
+    show claire happy
+    show rori neutral
+    
+    claire @ say "If it's smokin' ya just gotta give it some air and it'll burn!"
+    
+    player "My caveman ancestors are smiling down at me right now. I have rediscovered fire."
+    
+    show claire flustered
+    
+    claire @ say "Do you like it?"
+    
+    player "I love it! It gives me a weird sense of comfort."
+    
+    show rori yawn lookingaway blush
+    
+    rori @ say "I have a strange urge to hop into it."
+    
+    show claire surprised earsup
+    show rori concerned
+    
+    claire @ say "Hey no sheep in my fire!"
+    
+    show claire derp
+    show rori neutral
+    
+    claire @ say "Grab a stick and let's toast some marshmallows!"
+    
+    n "Claire pulls a bag out from her shirt and tosses the sweet sugary fluffs to you."
+    
+    player "Yay diabetes!"
+    
+    show claire happy
+    show rori smirk
+    
+    rori @ say "Finally! I'm starving after all that hiking."
+    
+    n "You have to admit, it's pretty rewarding to come all this way out, build a fire from scratch, and sit back with some toasted marshmallows surrounded by friends."
+    n "Claire gets so distracted telling stories that she accidentally lets her marshmallows ignite before frantically trying to blow out the fire."
+    n "Even Rori lightens up after nomming a few."
+    
+    show rori worried noblush
+    show claire surprised earsup
+    
+    n "Suddenly the two of them snap their heads to the woods, ears perked up. You can't see a think in the darkness however."
+    
+    player "What? What is it?"
+    
+    rori @ say "Shh! Something's coming!"
+    
+    n "Claire stands up, ready to fight."
+    n "Rori sniffs the air."
+    n "A moment later you hear leaves crunching underfoot as something rapidly approaches."
+    n "A flash of white briefly appears before colliding with you, sending your body reeling backward."
+    
+    hide claire
+    hide rori
+    with dissolve
+    
+    n "As you tumble to the ground, you see Claire catch hold of something, pinning it down."
+    
+    gunner @ say "Get off me you fat fuck!"
+    
+    ava @ say "Ohmygosh [name]! Are you alright??"
+    
+    n "Dazed and blinded by the fire, you lean up and rapidly blink, trying to make sense of the situation."
+    
+    show ava reaching concerned at center:
+        ypos y_ava
+    with dissolve
+    
+    ava @ say "Sorry! I didn't mean to fly right into you!"
+    
+    claire @ say "Ava? Is that you?"
+    
+    rori @ say "Gunner? What the hell are you doing here?"
+    
+    gunner @ say "About to get raped by this rabid rabbit apparently."
+    
+    claire @ say "Not tonight, sorry."
+    
+    n "Claire rolls off of Gunner. He gets up and brushes himself off."
+    
+    ava @ say "Ooh are those marshmallows? Mind if I take one?"
+    
+    n "The bird grabs the stick you had dropped and fixes a new marshmallow to the tip."
+    
+    gunner @ say "Uh, are you forgetting about the crazy guy right behind us?"
+    
+    ava @ say "Claire will protect us!"
+
+    claire @ say "You're being chased by someone?"
+    
+    gunner @ say "Yeah this homeless guy invaded our tent and started heckling us for change. We barely managed to escape with our credit scores intact!"
+    gunner @ say "Then he started ranting about linux and free software licenses... I've never been so scared in my life."
+    
+    rori @ say "*cough*"
+    
+    claire @ say "Well don't you worry any further, if anyone steps foot in this camp I'll suplex them~"
+    
+    ava @ say "Aww, thanks Claire~"
+    
+    player "How do you manage to run into a psychotic computer nerd *this* far into the woods?"
+    
+    rori @ say "*Ahem!!!*"
+    
+    gunner @ say "Rori you're lucky you weren't there. This guy would have complained that you weren't running a deblobbed kernel."
+    
+    rori @ say "Oh he's one of those purists."
+    
+    ava @ say "I have no idea what that means but let's just try and put it all behind us."
+    ava @ say "I'm more surprised to see you all out here!"
+    
+    claire @ say "Well you went off to have your fun camping trip on your own which gave me the idea to do the same with these two!"
+    
+    gunner @ say "Wow, you got Rori to come outside? Did you blackmail him?"
+    
+    rori @ say "For your information, I was starting to enjoy my time out here!"
+    
+    ava @ say "Were you planning on staying the night? Where's your tent?"
+    
+    claire @ say "We were just gonna cuddle puddle~"
+    
+    player "Excuse me? What's a cuddle puddle?"
+    
+    claire @ say "You'll find out~"
+    
+    #do a little skip where they sorta explain it then cuddle puddle
+    
+    jump cuddlepuddle        
+            
+            
 
             
         
@@ -4848,7 +5294,7 @@ label avaGunnerCampScene:
             
             player "No, it's probably just a deer or something."
             
-            gunner @ say "FUCK OFF DEER!!!"
+            gunner @ say "FUCK OFF, DEER!!!"
             
             n "You get a zombie-like moan in return, followed by hurried footsteps approaching you directly."
             
@@ -4977,7 +5423,16 @@ label cuddlepuddle:
     
     player "Shall we get ready for bed then? I didn't bring a sleeping bag or anything..."
     
-    claire @ say "That's alright, I'll keep you warm! Everyone come and get some snuggles, first come first serve!"
+    
+    if claireBullyLevel > 1:
+        claire @ say "Don't tell me this is your first cuddle puddle! How embarrassing!"
+    
+    elif claireBullyLevel > 0:
+        claire @ say "You seriously think you'll need one?"
+        claire @ say "Get down here and snuggle up with this big beautiful bunny~"
+    
+    else:
+        claire @ say "That's alright, I'll keep you warm! Everyone come and get some snuggles, first come first serve!"
     
     n "Claire flops onto the ground, grabbing your hand on the way down and dragging you with her."
     
@@ -5024,11 +5479,26 @@ label cuddlepuddle:
                     
                     claire @ say "Hawt"
                     
+                    if claireBullyLevel > 1:
+                        claire @ say "I knew you were a bottom but not this much!"
+                    
+                    if claireBullyLevel > 2:
+                        claire @ say "I should peg you the first chance I get~"
+                            
+                        ava @ say "Claire!"
+                        ava @ say "You can't just say that out loud!"
+                        
+                        player "Haha you're joking right?"
+                        player "...Right?"
+                    
                     rori @ say "*sigh*"
                     rori @ say "Move over. I can be a service top."
                     
                     n "Rori drags you out of Claire's clutches and takes your spot before pulling you into his grasp."
                     n "His fur is much more stiff and coarse than the rabbit's but somehow you feel even more comfortable."
+                    
+                    if claireBullyLevel > 1:
+                        claire @ say "Get him, Rori~ Ksksksks~"                    
                     
                     rori @ say "There, happy?"
                     
@@ -5049,7 +5519,7 @@ label cuddlepuddle:
                             
                             n "Ava flutters over and settles in front of you. You wrap your arms around her and snuggle her close."
                             
-                            gunner @ say "Aw, no fair."
+                            gunner @ say "Aw man, no fair."
                             
                             ava @ say "Did you really want my place right in front of [name] that bad?"
                             
@@ -5079,7 +5549,7 @@ label cuddlepuddle:
                     
                     rori @ say "Of course. This is a cuddle puddle after all. No sexo."
                     
-                    if roriPoints > 4:
+                    if roriPoints > 3:
                         n "He says that and then pushes his butt right up against your crotch as he lays down."
                     else:
                         n "You nervously wrap your arms around him."
@@ -5147,12 +5617,14 @@ label cuddlepuddle:
             
             player "Maybe Ava?"
             
-            if avaPoints > 4:
+            if avaPoints > 3:
                 ava @ say "I'd love to!"
+                
+                #it's startin' to get a little toasty! Let's have vote to see if the pants stay on!
             else:
                 ava @ say "Hmmm... alright!"
                 
-            n "Ava nestles in comfortably in your grasp."
+            n "Ava nestles in comfortably within your grasp."
                 
             gunner @ say "Lucky bastard..."
             
