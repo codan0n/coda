@@ -3967,54 +3967,108 @@ label chapter3AfterWeekend:
     else:
         player "Hope you two have fun!"
         
+        show claire sweater overjoyed
+        
         claire @ say "Yeah, a hiking trip sounds great with this weather!"
+        
+        show claire sad
         
         gunner @ say "Sorry but this is just a me and Ava thing."
         
+        show claire suggestive
+        show ava typical embarrassed
+        
         claire @ say "Ooh a date????????????"
+        
+        show ava shy
+        show gunner neutral
         
         ava @ say "Haha nooo not a date! I invited [name] to come along too but he already has plans."
         
+        show claire derp
+        
         claire @ say "Hey a date can include two cute boys! You're cute enough to pull 'em both!"
         
+        show ava whimsical
+        
         ava @ say "Oh shush you~"
+        
+        show ava excited
+        show claire happy
+        
         ava @ say "Speaking of which, what are you doing with Rori this weekend, [name]?"
+        
+        show ava happy
         
         n "What *are* you doing with Rori this weekend?"
         n "You already forgot about your lie from earlier, but you guess you should see if he's free to hang out."
         
         player "We're probably just gonna play video games at his dorm or something."
         
+        show gunner displeased
+        
         gunner @ say "Lame."
+        
+        show claire surprised earsup
         
         claire @ say "Yeah, wouldn't you rather do something more adventurous?"
         
+        show claire none
+        show claire sweater happy
+        show gunner neutral
+        
         player "I wouldn't mind, but I dunno about Rori."
+        
+        show claire at hop
         
         claire @ say "Leave that to me! I'll convince him to come out adventuring with us!"
         
         player "\"Us?\" Now you're tagging along?"
         
+        show claire flustered
+        
         claire @ say "What else am I supposed to do when my best roommate is busy gettin' busy with a catboy?"
+        
+        show ava annoyed
         
         ava @ say "Hey! We're just hiking and taking photos!"
         
+        show claire suggestive
+        
         claire @ say "Suuuure~ Ksksksksks!"
+        
+        show claire happy
+        show ava happy
+        
         claire @ say "Well, [name]? You down to go on an adventure with me and Rori this weekend?"
         
         player "What? You just stole my hangout buddy and now you're inviting me to come with you?"
+        
+        show claire flustered
         
         claire @ say "...Yes."
         
         player "Fine. Where are we even going?"
         
+        show claire overjoyed
+        
         claire @ say "Ksksksks it's a secret!"
+        
+        show claire happy
+        show gunner determined
         
         gunner @ say "Sounds like a date!"
         
+        show ava concerned
+        
         ava @ say "Wait, who's dating who?"
         
+        show gunner neutral
+        show claire derp
+        
         claire @ say "Well it can't be me and Rori."
+        
+        show ava enamored
         
         ava @ say "Rori and [name] then?"
         
@@ -4022,9 +4076,16 @@ label chapter3AfterWeekend:
         
         claire @ say "Or both!"
         
+        show gunner disgusted
+        show claire happy
+        
         gunner @ say "Ick."
         
+        show ava happy
+        
         player "I'm confident in saying this is certainly not a date."
+        
+        show gunner neutral
         
         claire @ say "That works for me!"
         
@@ -4996,75 +5057,149 @@ label claireRoriHikeContinued:
     
     ava @ say "Ohmygosh [name]! Are you alright??"
     
+    show rori neutral at offscreenleft
+    
     n "Dazed and blinded by the fire, you lean up and rapidly blink, trying to make sense of the situation."
     
     show ava reaching concerned at center:
         ypos y_ava
+        xoffset 480
     with dissolve
     
     ava @ say "Sorry! I didn't mean to fly right into you!"
     
+    show claire flannel surprised earsup at center:
+        ypos y_claire
+        xoffset -650
+        xzoom -1
+    with dissolve
+    
     claire @ say "Ava? Is that you?"
+    
+    show rori concerned at center:
+        ypos y_rori
+        xoffset -300
+        xzoom -1
+    show gunner displeased at center:
+        ypos y_gunner
+        xoffset 800
+    with dissolve
     
     rori @ say "Gunner? What the hell are you doing here?"
     
     gunner @ say "About to get raped by this rabid rabbit apparently."
     
+    show claire derp
+    
     claire @ say "Not tonight, sorry."
     
+    show gunner itsover
+    show claire happy
+    
     n "Claire rolls off of Gunner. He gets up and brushes himself off."
+    
+    show ava profile overjoyed at hop
+    show gunner frown1
     
     ava @ say "Ooh are those marshmallows? Mind if I take one?"
     
     n "The bird grabs the stick you had dropped and fixes a new marshmallow to the tip."
     
+    show ava typical happy
+    show gunner annoyed
+    
     gunner @ say "Uh, are you forgetting about the crazy guy right behind us?"
     
+    show ava whimsical
+    
     ava @ say "Claire will protect us!"
+    
+    show claire surprised earsup
 
     claire @ say "You're being chased by someone?"
     
+    show gunner disgusted
+    show ava typical shocked
+    
     gunner @ say "Yeah this homeless guy invaded our tent and started heckling us for change. We barely managed to escape with our credit scores intact!"
+    
+    show gunner itsover
+    
     gunner @ say "Then he started ranting about linux and free software licenses... I've never been so scared in my life."
+    
+    show rori worried
     
     rori @ say "*cough*"
     
+    show gunner frown1
+    show claire suggestive
+    
     claire @ say "Well don't you worry any further, if anyone steps foot in this camp I'll suplex them~"
+    
+    show ava typical smug
+    show claire happy
     
     ava @ say "Aww, thanks Claire~"
     
+    show ava happy
+    
     player "How do you manage to run into a psychotic computer nerd *this* far into the woods?"
+    
+    show rori sassy
     
     rori @ say "*Ahem!!!*"
     
+    show gunner disgusted
+    
     gunner @ say "Rori you're lucky you weren't there. This guy would have complained that you weren't running a deblobbed kernel."
+    
+    show rori armscrossed sleepy
+    show gunner frown1
     
     rori @ say "Oh he's one of those purists."
     
     ava @ say "I have no idea what that means but let's just try and put it all behind us."
     ava @ say "I'm more surprised to see you all out here!"
     
+    show rori none
+    show rori neutral
+    show gunner neutral
+    show claire derp
+    
     claire @ say "Well you went off to have your fun camping trip on your own which gave me the idea to do the same with these two!"
+    
+    show claire happy
+    show gunner motivated
     
     gunner @ say "Wow, you got Rori to come outside? Did you blackmail him?"
     
+    show gunner neutral
+    show rori none
+    show rori armscrossed
+    
     rori @ say "For your information, I was starting to enjoy my time out here!"
     
+    show rori armscrossed neutral
+    show ava concerned
+    
     ava @ say "Were you planning on staying the night? Where's your tent?"
+    
+    show claire flustered
     
     claire @ say "We were just gonna cuddle puddle~"
     
     player "Excuse me? What's a cuddle puddle?"
     
+    show claire suggestive
+    show ava smug
+    
     claire @ say "You'll find out~"
     
     #do a little skip where they sorta explain it then cuddle puddle
     
-    jump cuddlepuddle        
-            
+    jump cuddlepuddle
             
 
-            
         
         #if avaHike == True:
             #jump avaGunnerCampScene
@@ -5405,6 +5540,11 @@ label avaGunnerCampScene:
      
     
 label cuddlepuddle:
+    scene bg forest with fade
+    
+    show box with Dissolve(.2):
+        ypos 0
+
     n "The smoldering remains of the camp fire barely illuminated anything anymore as the night went on."
     n "Ava and Gunner's mood lightened up considerably in the comfort of Claire and Rori, and you all felt right at home, joking and chattering away like normal."
     #n "All that's missing is Mishka's coffee to sip on while "
