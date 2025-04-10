@@ -4177,17 +4177,30 @@ label chapter3AfterWeekend:
                 
                 player "That's it? That's the big secret?"
                 
+                show rori none 
+                show rori armscrossed
+                
                 rori @ say "And you felt the need to bring me along?"
                 
                 claire @ say "Why not! Have you ever been hiking?"
                 
+                show rori sleepy
+                
                 rori @ say "A few times."
+                
+                show claire laughing
                 
                 claire @ say "It's fun isn't it!"
                 
+                show rori concerned
+                
                 rori @ say "..."
                 
+                show claire happy
+                
                 player "It'll be fun with us, trust me."
+                
+                show rori worried
                 
                 rori @ say "If you say so."
                 
@@ -4210,7 +4223,11 @@ label chapter3AfterWeekend:
                 player "I know this isn't your thing but we didn't want you to be alone this weekend."
                 player "So uh, how did Claire convince you to come with us?"
                 
+                show claire flustered
+                
                 claire @ say "Uh, we don't have to get into the details...!"
+                
+                show rori armscrossed neutral
                 
                 rori @ say "It was weird, she like... begged me to hang out with her."
                 
@@ -4219,7 +4236,11 @@ label chapter3AfterWeekend:
                 n "So that's Claire's feminine charm at work."
                 n "Maybe that's the best she can do on someone with Rori's preferences."
                 
+                show rori sleepy
+                
                 rori @ say "She seemed desperate so eventually I just gave in."
+                
+                show claire derp
                 
                 claire @ say "What can I say? It worked!"
                 
@@ -5228,17 +5249,32 @@ label avaGunnerCampScene:
             
             scene bg woods with fade
             
+            show box with Dissolve(.2):
+                ypos 0
+            
             n "After hiking all day, you arrived at the peak of a mountain just in time for the golden hour of sunset."
             n "Ava excitedly flutters around taking photos from atop various tree branches while you and Gunner catch your breath and sit on the edge of the cliff."
             n "You pick up a rock and toss it down into the chasm. A few seconds later you hear it fall through some foliage and thud against the ground."
+            
+            show gunner cheeky1 at center with dissolve:
+                ypos y_gunner
+                xzoom -1
             
             gunner @ say "Damn, we're pretty high up aren't we?"
             
             player "Yeah. Can't believe we hiked all this way."
             player "My legs are killing me."
             
+            show gunner determined
+            
             gunner @ say "Heh, sounds like you need to spend more time at the gym."
+            
+            show gunner uncomfy
+            
             gunner @ say "... But yeah fuck this hike."
+            
+            show gunner wink catface
+            
             gunner @ say "At least the view makes it all worth it."
             
             n "Gunner looks up at the tree Ava's perched upon, her ass in plain view of you both."
