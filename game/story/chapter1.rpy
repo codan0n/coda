@@ -435,7 +435,7 @@ label college_orientation:
                 nameValid = False
             #if not name:
             if name == "":
-                name = "Huey"
+                name = "Hugh"
                 nameValid = True
 
         if nameValid == True:

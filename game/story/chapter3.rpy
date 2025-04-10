@@ -5277,13 +5277,17 @@ label avaGunnerCampScene:
             
             gunner @ say "At least the view makes it all worth it."
             
-            n "Gunner looks up at the tree Ava's perched upon, her ass in plain view of you both."
+            show gunner neutral
+            
+            n "Gunner looks up at the tree Ava's perched upon, her ass in plain view of you both, perfectly framed between the tree branches."
             
             menu:
                 "Totally worth it":
                     $ avaPoints =+ 1
                     
                     player "Totally worth it. I'd hike Mount Everest for her."
+                    
+                    show gunner motivated
                     
                     gunner @ say "Oh yeah? Well I'd hike K2 with one paw tied behind my back for her!"
                     
@@ -5293,6 +5297,8 @@ label avaGunnerCampScene:
                     
                     ava @ say "Shush up down there! You're distracting me from getting this shot!!"
                     
+                    show gunner mischief
+                    
                     gunner @ say "Yeah [name], quiet down or she'll miss her shot!"
                     
                     player "You're the one distracting her!"
@@ -5300,19 +5306,27 @@ label avaGunnerCampScene:
                     
                     ava @ say "Mmh, not yet."
                     
-                    gunner @ say "I'd like to see him try!"
+                    show gunner displeased
+                    
+                    gunner @ say "I'd like to see you try!"
                 "Meh":
                     $ avaPoints =- 1
                     
                     player "Meh, I've seen better."
                     
+                    show gunner displeased
+                    
                     gunner @ say "No you haven't. There doesn't exist an ass better than hers."
                     
                     player "Dude, is that the only reason you're into her?"
                     
-                    gunner @ say "No, but a nice ass is number one on my priority list for women."
+                    show gunner cutie
+                    
+                    gunner @ say "No, but a nice ass *is* number one on my priority list for women."
                     
                     ava @ say "Shush up down there! You're distracting me from getting this shot!!"
+                    
+                    show gunner mischief
                     
                     gunner @ say "Yeah [name], quiet down or she'll miss her shot!"
                     
@@ -5321,7 +5335,9 @@ label avaGunnerCampScene:
                     
                     ava @ say "Mmh, not yet."
                     
-                    gunner @ say "I'd like to see him try!"
+                    show gunner displeased
+                    
+                    gunner @ say "I'd like to see you try!"
                 "Ignore her":
                     n "You ignore the bird in favor of the gorgeous sunset painted before you by nature."
                     n "The sun allows you some time to stare in its direction without searing your corneas as it falls toward the horizon."
@@ -5342,6 +5358,8 @@ label avaGunnerCampScene:
             
             player "Hey! Watch where you're going!"
             
+            show gunner annoyed
+            
             gunner "You watch where you're putting the stakes!"
             
             menu:
@@ -5349,18 +5367,24 @@ label avaGunnerCampScene:
                     n "Nobody gets away with undoing your hard work!"
                     n "You let your hand \"accidentally\" loosen one of the straps Gunner put in place, letting the whole rain fly collapse."
                     
+                    show gunner hissing
+                    
                     gunner @ say "You bastard! You did that on purpose!"
                     
                     player "Dunno what you're talking about."
+                    
+                    show gunner displeased
                     
                     gunner @ say "I saw you!"
                     
                     player "Stop blaming me and fix your shit!"
                     
                     if gunnerPoints < 0:
+                        show gunner pissed
+                    
                         n "He snarls at you before lunging right over the tent and pouncing right on top of you."
                         
-                        gunner @ say "I've had it with you antagonizing me every step of the way!"
+                        gunner @ say "I've had it with you antagonizing me all the time!"
                         
                         player "You think *I'm* the one antagonizing *you?*"
                         
@@ -5370,25 +5394,58 @@ label avaGunnerCampScene:
                         
                         player "You're such an entitled rich brat! You think the world revolves around you getting together with your crush because you *always* have to have it your way!"
                         
+                        show gunner annoyed
+                        
                         gunner @ say "What other way is there?!"
                         
                         n "His pointed teeth sink into your arm, causing you to spazz out and throw him off you."
                         n "He glares at you from a couple of feet away but instantly brightens up as soon as Ava swoops down like nothing even happened."
                         
-                        ava @ say "Whew, I got some great shots up there! You guys alright?"
+                        show gunner at flipleft
+                        
+                        pause .2
+                        
+                        show gunner neutral with move:
+                            xoffset 450
+                        
+                        show ava typical happy at center:
+                            ypos y_ava
+                            xzoom -1
+                            xoffset -450
+                        with dissolve
+                        
+                        ava @ say "Whew, you should see the view from up there! I got so many great shots!"
+                        
+                        show ava reaching concerned
+                        
+                        ava @ say "You guys alright?"
                         
                         gunner @ say "Yup! We were just play fighting. I let [name] win 'cause I'm such a nice guy."
+                        
+                        show gunner eyesclosed smile
+                        
                         gunner @ say "The tent's all set up too! Just gotta fix the rain fly aaaannnd... done!"
+                        
+                        show gunner cutie
                         
                         player "Yeah, just \"play\" fighting. I totally kicked his ass by the way, I dunno if you saw."
                         
+                        if avaPoints > 4:
+                            show ava pose smug
                         
-                        if avaPoints > 5:
                             ava @ say "I'll take your word for it~"
                         else:
+                            show ava pose whimsical
+                            
                             ava @ say "Suuuure, I believe you~"
                             
+                        show ava none
+                        show ava typical excited
+                        
                         ava @ say "How about we get dinner started then huddle up inside the tent!"
+                        
+                        show ava happy
+                        show gunner optimistic
                         
                         gunner @ say "Sounds good to me!"
                         
@@ -5397,20 +5454,50 @@ label avaGunnerCampScene:
                     else:
                         n "He looks like he's about to pounce on you but decides it's not worth it."
                         
+                        show gunner itsover
+                        
                         gunner @ say "Whatever dude. You'd never even get this tent set up without me."
+                        
+                        show gunner frown1
                         
                         n "He quietly fixes the rain fly while you do your final checks on your parts."
                         n "Ava swoops down and nods approvingly."
                         
+                        show gunner at flipleft
+                        
+                        pause .2
+                        
+                        show gunner with move:
+                            xoffset 450
+                        
+                        show ava typical happy at center:
+                            ypos y_ava
+                            xzoom -1
+                            xoffset -450
+                        with dissolve
+                        
                         ava @ say "Wow, nice work guys! It looks so comfy!"
                         
-                        gunner @ say "Heh, it'll be nice and warm inside! Plenty of space for all of us, plus I splurged and bought the bear-proof fabric version so we can sleep in peace~"
+                        show gunner cutie
+                        
+                        gunner @ say "Heh, it'll be nice and warm inside! Plenty of space for all of us!"
+                        
+                        show gunner eyesclosed smile
+                        
+                        gunner @ say "Plus I splurged and bought the bear-proof fabric version so we can sleep in peace~"
+                        
+                        show gunner optimistic
+                        show ava excited
                         
                         ava @ say "Nice! Sounds like you really thought of everything!"
+                        
+                        show ava happy
                         
                         gunner @ say "Oh please, when you're this rich you can afford to sleep like royalty, even in these backwater no name woods."
                         
                         player "Kinda defeats the purpose of camping, doesn't it?"
+                        
+                        show gunner annoyed
                         
                         gunner @ say "Well you're free to sleep outside with all the mosquitoes and cougars and bears and homeless."
                         
@@ -5418,8 +5505,25 @@ label avaGunnerCampScene:
                 "Just fix your section":
                     n "You're not going to play his immature games. You'll do your part and be done with it."
                     n "Dammit, he ended up finishing before you and now here comes Ava."
+                    
+                    show gunner at flipleft
+                    
+                    pause .2
+                    
+                    show gunner neutral with move:
+                        xoffset 450
+                    
+                    show ava typical happy at center:
+                        ypos y_ava
+                        xzoom -1
+                        xoffset -450
+                    with dissolve
                             
-                    ava @ say "Alright, that's enough shooting for today. Has anyone seen my lens cap?"
+                    ava @ say "Alright, that's enough shooting for today."
+                    
+                    show ava shocked
+                    
+                    ava @ say "Has anyone seen my lens cap?"
                     
                     gunner @ say "Nope."
                     
@@ -5427,18 +5531,34 @@ label avaGunnerCampScene:
                     
                     player "Yeah no. What's it look like?"
                     
+                    show ava neutral
+                    
                     ava @ say "Nevermind, I've got a spare in my bag."
+                    
+                    show ava excited
+                    
                     ava @ say "Nice work on the tent though! It looks so comfy!"
+                    
+                    show ava happy
                     
                     player "It will be once I finish getting this peg into the- argh there we go!"
                     
+                    show gunner cheeky1
+                    
                     gunner @ say "Heh, it'll be nice and warm inside! Plenty of space for all of us, plus I splurged and bought the bear-proof edition so we can sleep in peace~"
                     
+                    show ava overjoyed
+                    
                     ava @ say "Nice! Sounds like you really thought of everything!"
+                    
+                    show ava happy
+                    show gunner determined
                     
                     gunner @ say "Oh please, when you're this rich you can afford to sleep like royalty, even in these backwater no name woods."
                     
                     player "Kinda defeats the purpose of camping, doesn't it?"
+                    
+                    show gunner displeased
                     
                     gunner @ say "Well you're free to sleep outside with all the mosquitoes and cougars and bears and homeless."
                     
@@ -5456,10 +5576,24 @@ label avaGunnerCampScene:
             n "Aside than Ava and Gunner's presence, you felt as though there was someone else... watching you."
             n "They could sense it too, judging by their stirring from slumber."
             
+            show gunner displeased at center with dissolve:
+                ypos y_gunner
+                xoffset 400
+                matrixcolor BrightnessMatrix(-0.15)
+            
             gunner @ say "Mrrrrp. What time is it?"
+            
+            show gunner disgusted
+            
             gunner @ say "Wait, what is that?"
             
             n "The cat's ears perk up, pointed in the direction of a subtle but steady sound of footsteps trudging through leaves."
+            
+            show ava typical shocked at center with dissolve:
+                ypos y_ava
+                xzoom -1
+                xoffset -400
+                matrixcolor BrightnessMatrix(-0.15)
             
             ava @ say "Hmm? Is it morning already?"
             
@@ -5469,17 +5603,26 @@ label avaGunnerCampScene:
             
             n "You get a zombie-like moan in return, followed by hurried footsteps approaching you directly."
             
+            show gunner frown1
+            
             gunner @ say "I don't think that's a deer..."
             
             player "Way to go, you let him know our position!"
             
+            show gunner eyesclosed smile
+            
             gunner @ say "Chill, this ain't no cheap tent for poor people! Even if it's a bear we'll be safe."
+            
+            show gunner neutral
+            show ava enamored
             
             ava @ say "Still, all that separates us from a potentially murderous unknown entity all the way out here where no one can hear us scream is a millimeter of fabric..."
             
+            show gunner frown1
+            
             n "The three of you hold your collective breath as the creature enters your campsite and begins rummaging through the containers and supplies you left outside the tent."
             
-            if avaPoints > 5:
+            if avaPoints > 4:
                 n "Ava clings to you, subtly shaking while staring at the opaque canvas of the tent that makes it impossible to tell what lies beyond."
             
             else:
@@ -5490,32 +5633,84 @@ label avaGunnerCampScene:
             n "What sort of wild animal can do such things with so much precision?"
             n "Finally a sillouette comes into view in front of the tent, followed by the zipper coming undone."
             
+            pause .2
+            
+            show gunner annoyed:
+                xoffset 630
+            show ava shocked:
+                xoffset -630
+            with move
+            
+            show fortune at center with dissolve:
+                ypos y_fortune
+            
             fortune @ say "Hey, you have any change? Change for a poor guy down on his luck? God bless."
+            
+            show gunner disgusted
             
             gunner @ say "Holy fuck! It's a hobo!!"
             
             n "Gunner springs into action, kicking a pillow at the assailant. It bounces off his head ineffectively."
             
+            show fortune at flipright
+            
             fortune @ say "Would you like to buy my book on open source software? I'll sign it if you have a pen."
+            
+            show gunner itsover
             
             gunner @ say "It's so over...!"
             
+            show gunner uncomfy
+            
             ava @ say "Guys, close your eyes!"
             
+            show gunner itsover
+            
             n "Ava grabs her camera and clicks the shutter release button, flashbanging the hobo and blinding him. The three of you take the opportunity to evacuate the tent."
-            n "Gunner takes the time to trap the hobo by zipping him inside the tent."
+            
+            scene bg woods with fade
+            
+            show box with Dissolve(.2):
+                ypos 0
+            
+            show gunner displeased at center with dissolve:
+                ypos y_gunner
+                xoffset 400
+                matrixcolor BrightnessMatrix(-0.08)
+            show ava pose concerned at center with dissolve:
+                ypos y_ava
+                xzoom -1
+                xoffset -400
+                matrixcolor BrightnessMatrix(-0.08)
+            with dissolve
+            
+            n "Gunner zips the tent closed, trapping the hobo inside."
             
             fortune @ say "W-wait, I'll code printer drivers for food...!"
+            
+            show gunner annoyed
             
             gunner @ say "You get what you deserve, poorfag!"
             
             player "Was that really necessary?"
             
-            gunner @ say "You have to be extremely cautious around these middle class folk. They're wild and unpredictable. They're known to bite you just for something as cheap as a solid gold wristwatch!"
+            show gunner displeased
+            
+            gunner @ say "You have to be extremely cautious around these middle class folk. They're wild and unpredictable. They're known to stab you just for something as cheap as a solid gold wristwatch!"
+            
+            show gunner disgusted
+            
             gunner @ say "I felt my credit score dropping just by being near him."
-            gunner @ say "I knew I should have got the hobo-proof tent instead..."
+            
+            show gunner itsover
+            
+            gunner @ say "I knew I should have bought the hobo-proof tent instead..."
+            
+            show ava typical shocked
             
             ava @ say "What do we do now?"
+            
+            show gunner disgusted
             
             n "The tent begins to collapse on itself as the hobo thrashes about inside it."
             
@@ -5534,6 +5729,11 @@ label avaGunnerCampScene:
             
             n "Ava takes to the skies while Gunner skitters ahead, leaving you to catch up on your endurance-hunter legs."
             
+            scene bg forest with fade
+            
+            show box with Dissolve(.2):
+                ypos 0
+            
             #was originally going to be a bear but turns out to be the gnu hobo from earlier
             #get startled by a bear
             #claire suplexes the bear
@@ -5541,6 +5741,10 @@ label avaGunnerCampScene:
             n "After catching up to the others and running for your life for a few minutes, you see a light in the distance. Naturally, you're drawn to it. Fire good."
             n "Gunner reaches it first but immediately gets thrown to the ground and pinned by a large figure."
             n "Before you can even react, you're dragged down to the ground and held in place as well."
+            
+            show claire flannel suggestive at center with dissolve:
+                ypos y_claire
+                xoffset 650
             
             claire @ say "Well well well, looks like I caught myself two more cuties~"
             
