@@ -2953,6 +2953,16 @@ layeredimage olivia looking:
     
     
     
+layeredimage rori furious:
+    at sprite_highlight('rori')
+    always:
+        'images/characters/rori/rori furious.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
 layeredimage rori angry neutral:
     at sprite_highlight('rori')
     always:
@@ -4381,6 +4391,7 @@ default gunnerPoints = 0
 default ellenPoints = 0
 default rosePoints = 0
 default avaPoints = 0
+default mishkaPoints = 0
 default clairePoints = 0
 default badEnd = 0
 default goodEnd = 0
