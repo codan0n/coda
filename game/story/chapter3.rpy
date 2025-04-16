@@ -3108,6 +3108,8 @@ label chapter3AfterWeekend:
         
     show margaret neutral at center with dissolve:
         ypos y_margaret
+        xzoom -1
+        xoffset -100
     
     margaret @ say "...So we see that The Odyssey is really a tale about overcoming the many relentless challenges in life and reaping the rewards."
     margaret @ say "It's as tragic as it is uplifting! And although most of us will never get shipwrecked or fight giant cyclopses..."

@@ -803,6 +803,11 @@ label gunnerTrack:
     $ trackEvents.remove("gunnerTrack")
     #check if gunnerTrack number x has been seen yet and play the next one. Use a day counter to prevent this scene from being able to be played 2 days in a row
     
+    scene bg campus summer day clear with fade
+    
+    show box with Dissolve(.2):
+        ypos 0
+    
     #$ gunnerTrackNumber += 1
 
     #only available on sunny days

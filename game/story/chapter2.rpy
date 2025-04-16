@@ -2859,7 +2859,7 @@ label hospital_bound:
         call phone_after_menu from _call_phone_after_menu_3
         call message_start("me", "No u~", "testimage.png") from _call_message_start_10
 
-        call message("Claire", "Aaaaaaaa thxhxhxhxhxadsfjaksdfafokdwjpoiqefsa", "claireavi.png") from _call_message_55
+        call message("Claire", "Aaaaaaaa thxhxhxhxhxadsf jaksdfafokdwjp oiqefsa", "claireavi.png") from _call_message_55
 
         call reply_message("Ok i think you've had too much to drink") from _call_reply_message_41
 
@@ -2877,13 +2877,13 @@ label hospital_bound:
         call reply_message("????") from _call_reply_message_45
 
         call message("Claire", "Sry keep u waiiting, took a bit to conmvince ava", "claireavi.png") from _call_message_61
-        call message_img("Claire", "Enjoy~", "pic1.png") from _call_message_img
+        call message_img("Claire", "Enjoy~", "booba.png") from _call_message_img
         
         call reply_message("BOOBA") from _call_reply_message_144
         call reply_message("Wait why are you wearing santa hats?")
         
-        call message_img("Claire", "idklol", "pic1.png")
-        call message_img("Claire", "its festivv", "pic1.png")
+        call message_img("Claire", "idklol", "claireavi.png")
+        call message_img("Claire", "its festivv", "claireavi.png")
         
         call reply_message("It's August")
         
