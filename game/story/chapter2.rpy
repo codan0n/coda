@@ -34,6 +34,8 @@ label chapter2start:
     menu:
         rothbauer "{cps=0}Anyone?{/cps}"
         "Ancient Egypt":
+            $ historySkill =+ 1
+        
             "No one else says anything so you raise your hand and take a guess."
             
             player "Ancient Egypt?"
@@ -987,12 +989,13 @@ label week2Tuesday:
             
             show ava pose shy
 
-            ava @ say "I understand. I'm kinda the same way haha! But I've been getting more comfortable with it."
+            ava @ say "I understand, I'm kinda the same way! But I've been getting more comfortable with it."
             
             show claire sad
             
             n "Claire lets out a disappointed sigh but doesn't say anything."
         "Okay!":
+            $ photoWithClaire = True
             $ clairePoints =+ 1
             
             show ava happy
@@ -1020,6 +1023,8 @@ label week2Tuesday:
         "Alright but I'm getting my picture taken with you next.":
             $ clairePoints =- 1
             $ avaPoints =+ 1
+            $ photoWithAva = True
+            $ photoWithClaire = True
             
             show ava happy
             
@@ -1176,6 +1181,7 @@ label week2Tuesday:
         rose "{cps=0}Give those to me. Now.{/cps=0}"
         "Only if you let me write a page of the project":
             $ goodEnd =+ 1
+            $ writingHistoryPaper = True
             
             n "You might end up regretting this later but you feel bad for making Rose do all the work."
             n "You have to at least put in a minimal effort."
@@ -3662,6 +3668,7 @@ label ellen_feeding_ducks:
         ellen "{cps=0}And just how old do you think I am, young man?{/cps}"
         "20s":
             $ ellenPoints += 1
+            $ guessEllensAge = 20
             
             #later student ellen comments "you said so yourself, I could pass for being in my 20s!"
             player "I dunno, late 20s?"
@@ -3735,6 +3742,7 @@ label ellen_feeding_ducks:
             margaret @ say "Well it is pretty cute. Just don't expect me to boost your grade for it.... at least not by much!"
             margaret @ say "And yes, coffee together sounds fantastic~"
         "30s":
+            $ guessEllensAge = 30
             player "Early 30s I guess?"
             
             show margaret melancholy
@@ -3777,6 +3785,8 @@ label ellen_feeding_ducks:
             
             margaret @ say "Don't think too much about it."
         "40s":
+            $ guessEllensAge = 40
+            
             player "You're not old until you're like, grandma age."
             
             show margaret sad
@@ -3973,22 +3983,34 @@ label ellen_feeding_ducks:
                     
                     claire @ say "Oh you~"
                     
-                    if calledClaireFat1 == True:
+                    if intoFatChicks == False:
                         claire @ say "I knew you were just playing hard to get when you said you weren't into fat girls before~"
                     
-                    show ava shocked
+                    $ intoFatChicks = True
                     
-                    player "You could even stand to put on a few more pounds haha"
-                    
-                    show claire sweater flustered
-                    
-                    claire @ say "You think so??"
-                    
-                    show ava typical annoyed
-                    
-                    ava @ say "Okay enough with the thinly veiled weight gain fetish talk."
+                    menu:
+                        "Could even be fatter":
+                            $ reallyIntoFatChicks = True
+                            
+                            show ava shocked
+                            
+                            player "You could even stand to put on a few more pounds haha"
+                            
+                            show claire sweater flustered
+                            
+                            claire @ say "You think so??"
+                            
+                            show ava typical annoyed
+                            
+                            ava @ say "Okay enough with the thinly veiled weight gain fetish talk."
+                        "She's the perfect size":
+                            player "You're the perfect size for me."
+                            
+                            claire @ say "Wow, you human men really are something else ksksksks!~"
+                            
                 "Kinda":
                     $ clairePoints =- 1
+                    $ intoFatChicks = False
                     
                     player "N-not at all. You're perfectly friend shaped."
                     
@@ -4002,6 +4024,7 @@ label ellen_feeding_ducks:
                 "Yes":
                     $ claireBias =+ 1
                     $ calledClaireFat =+ 1
+                    $ intoFatChicks = False
                     
                     player "I'm just saying your should eat a salad every so often."
                     
@@ -4075,7 +4098,7 @@ label ellen_feeding_ducks:
     ava @ say "Mysterious~ How about you, [name]?"
     
     if mishkaMallSpecialPlayed == True:
-        player "Sorry, I already have plans to meet with Mishka on Saturday and I can't risk getting stuck in the hospital again."
+        player "Sorry, I already have plans to meet with Mishka on Saturday and I can't risk getting stuck in a hospital again."
         
         ava @ say "Aww..."
         ava @ say "Guess I'll go on my own then."
@@ -4511,7 +4534,8 @@ label liberation_eve:
     menu:
         n "{cps=0}You've got some time before French. Maybe you should try and talk to her?{/cps}"
         "Follow her":
-            $ frenchSkill =- 1
+            $ frenchSkill =- 2
+            $ ellenPoints =+ 2
             
             n "Ms. Ellen seemed kinda out of it today. Perhaps it'd cheer her up if one of her students checked to see if she's alright."
             n "You manage to spot her among the crowd and follow her into the stairwell. The clacking of her heels against the concrete stairs echoes as she approaches the rooftop access door."
@@ -4663,6 +4687,9 @@ label liberation_eve:
             n "Better hurry along now!"
 
         "Don't follow her":
+            $ rosePoints =+1
+            $ roseNicodemusCampusScene = True
+            
             n "It's kinda creepy to stalk your professor like that. You should just chill for the next half hour you have before your next class."
             
             scene bg campus summer day clear with fade

@@ -193,10 +193,10 @@ label chapter1:
     $ name = "player"
     define player = Character("name", color="#2a2a2a", what_color="#9af3a8", callback=name_callback, cb_name = "player")
     
-    $ questionInvite = False
-    $ questionFitIn = False
-    $ questionTour = False
-    $ questionAsked = False
+    default questionInvite = False
+    default questionFitIn = False
+    default questionTour = False
+    default questionAsked = False
     
     $ questionText = "He seems like a nice guy and all, but you just can't escape the feeling like you don't belong here."
 
@@ -1238,6 +1238,7 @@ label exploring_campus:
             claire "{cps=0}What about you, [name]?{/cps}"
             "Yah":
                 $ clairePoints =+ 1
+                $ signedUpForSorority = True
                 
                 player "You know what, sure, sign me up."
                 player "Should be funny when they realize I'm not a girl and kick me out."
@@ -1482,6 +1483,9 @@ label exploring_campus:
         menu:
             gunner "{cps=0}What about you? You down?{/cps}"
             "Join":
+                $ signedUpForFraternity = True
+                $ gunnerpoints =+ 1
+                
                 player "Yeah but only for the free stuff."
                 
                 n "You take the clipboard and lazily scribble your name somewhere on it."
@@ -1495,6 +1499,8 @@ label exploring_campus:
                 n "Gunner holds out his fist."
                 n "As is customary, you are forced to give him a fist bump."
             "Don't join":
+                $ gunnerpoints =- 1
+                
                 player "Nah, I'd rather not."
                 
                 show gunner annoyed
@@ -1560,6 +1566,8 @@ label exploring_campus:
             menu:
                 mishka "{cps=0}It's just how I like things. I can turn them on if you like.{/cps=0}"
                 "Please do":
+                    $ cafeLightsOn = True
+                    
                     player "Please do. I can't see anything in this darkness."
                     
                     mishka @ say "Duzhe dobre."
@@ -2016,6 +2024,8 @@ label firstDayOfClass:
                 
                 gunner @ say "Hah, don't be afraid to laugh, I know I'm funny!"
             "Don't say anything":
+                $ gunnerPoints =- 1
+                
                 n "You pretend you're still waiting for the punchline and remain silent."
                 
                 show gunner frown1
@@ -2376,6 +2386,8 @@ label secondDayOfClass:
             #n "Everything has a meaning? Could that really be true? Or are some things really just arbitrary?"
 
         "Wanted to travel.":
+            $ wantToTravel = True
+            
             n "You shrug."
 
             player "I guess I just wanted to visit France someday."
@@ -2661,7 +2673,7 @@ label thirdDayOfClass:
     n "...9:00AM?!"
     n "My god, the sun probably isn't even up yet. You could stand to lie back down for a few more minutes. Catch a few more Z's so you can start making A's."
     
-    $ bedpilled = False
+    default bedpilled = False
     
     menu:
         "Go back to bed":
@@ -4245,6 +4257,8 @@ label afterAvaText1:
         menu:
             rori "{cps=0}About... well, nevermind. It's dumb.{/cps}"
             "It's probably not dumb":
+                $ roriPoints =+ 1
+                
                 player "If you're thinking about it so hard, it's probably not dumb."
                 
                 show rori concerned
@@ -4541,6 +4555,7 @@ label thursday1:
         "I'd love to!":
             $ frenchSkill =+ 1
             $ clairePoints =+ 1
+            $ claireFrenchSession = 1
             
             player "I'd love to!"
             
@@ -4765,6 +4780,7 @@ label thursday1:
         "Sorry, I'm not into fat chicks.":
             $ claireBias =+ 1
             $ calledClaireFat =+ 1
+            $ intoFatChicks = False
             
             player "Sorry, I'm not into fat chicks."
             

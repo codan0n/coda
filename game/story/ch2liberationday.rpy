@@ -577,6 +577,8 @@ label liberation_day:
         menu:
             gunner "{cps=0}You gonna stay the night here or go back to your dorm?{/cps}"
             "I'll stay here.":
+                $ stayedInHospitalWithGunner = True
+                
                 player "I don't really feel like moving. I'll wait and see if my foot is better in the morning."
                 
                 gunner @ say "I'll stay here with you then. I don't want you to be alone in this shitty place."
@@ -667,9 +669,13 @@ label liberation_day:
                 menu:
                     gunner "{cps=0}Sooo... you're not into her?{/cps}"
                     "I didn't say that":
+                        $ avaPoints =+ 1
+                    
                         player "I didn't say that."
                         player "I'm just saying I didn't pull any moves on her."
                     "She's not my type":
+                        $ avaPoints =- 2
+                        
                         player "Nah she's not really my type."
                         player "We were just hanging out as friends."
                     "Maybe I am":
@@ -832,6 +838,8 @@ label liberation_day:
                 jump ch2End
                     
             "Screw this place.":
+                $ snuggledWithAva = True
+                
                 player "Yeah no, screw this place, I'm going home."
                 
                 n "Gunner hands you your crutch as you get into a sitting position and begin to stand up."
@@ -1006,7 +1014,9 @@ label liberation_day:
 
                 play music "audio/ambient/morning birds.ogg" fadein 1.0
                 
-                if avaPoints >= 3:
+                if avaPoints > 3:
+                    $ avaSnugglePlus = True
+                    
                     n "You're woken up earlier than usual by Ava's stirring."
                     n "It's not even daylight out and she's stretching and tweeting."
                     n "She rolls over and rests a wing on you."
@@ -1474,6 +1484,8 @@ label liberation_day:
         menu:
             gunner "{cps=0}What about you, [name]? Got any preferences?{/cps}"
             "Rose":
+                $ rosePoints =+ 1
+                
                 player "There's this raccoon bitch named Rose in my history class..."
                 
                 gunner @ say "I think I've seen her before. She probably deserves it."
@@ -1490,6 +1502,8 @@ label liberation_day:
                 gunner @ say "This is where it gets interesting. There's a loophole in the system."
                 gunner @ say "If we raid Claire's room, nobody can blame us if we get a little mixed up."
             "Mishka":
+                $ mishkaPoints =+ 1
+                
                 player "So hear me out... Mishka?"
                 
                 gunner @ say "Interesting choice, I didn't expect that from you."
@@ -1507,6 +1521,8 @@ label liberation_day:
                 gunner @ say "This is where it gets interesting. There's a loophole in the system."
                 gunner @ say "If we raid Claire's room, nobody can blame us if we get a little mixed up."
             "Miss Ellen":
+                $ ellenPoints =+ 1
+                
                 player "Haha wouldn't it be funny if we nabbed my literature professor's knickers haha I bet nobody's done that before."
                 
                 gunner @ say "Sounds epic but she probably lives off campus. We're safe only as long as we stay on uni grounds. Outside of that it's like felony level breaking and entering."
@@ -2422,6 +2438,8 @@ label liberation_day:
         fortune @ say "I've been expecting you."
 
         player "Huh? Who are you?"
+        
+        $ metFortune = True
 
         show rose jacket handonhip dismissive at center with dissolve:
             xzoom -1
@@ -2507,6 +2525,8 @@ label liberation_day:
         menu:
             n "{cps=0}Rose starts to walk across the street to the other sidewalk.{/cps}"
             "Aw come on, I wanna hear my fortune!":
+                $ heardFortune = True
+                
                 player "Aw come on, I at least wanna hear my fortune!"
                 
                 show rose handonhip annoyed at flipleft
