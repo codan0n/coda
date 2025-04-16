@@ -6430,36 +6430,103 @@ label cuddlepuddle:
             $ avaPoints =+ 1
             $ cuddlePuddleOrder[2] = "ava"
             
+            show claire happy
+            
             player "Maybe Ava?"
             
+            show ava typical happy at center with dissolve:
+                ypos y_ava
+                xoffset 525            
+            
             if avaPoints > 3:
+                show ava overjoyed
+            
                 ava @ say "I'd love to!"
                 
                 #it's startin' to get a little toasty! Let's have vote to see if the pants stay on!
             else:
                 ava @ say "Hmmm... alright!"
                 
+            pause .2
+            
+            show ava with move:
+                xoffset -200
+            
+            pause .1
+            
+            show ava:
+                xzoom -1
+            
             n "Ava nestles in comfortably within your grasp."
+            
+            player "So soft~"
+            
+            show ava shy
+            
+            ava @ say "Breeee~ Thanks~"
+            
+            show gunner annoyed at center with dissolve:
+                ypos y_gunner
+                xoffset 575
                 
             gunner @ say "Lucky bastard..."
+            
+            show ava happy
             
             menu:
                 "Gunner next":
                     n "Gunner slides right in after Ava."
                     
+                    show gunner behind ava
+                    
+                    pause .2
+                    
+                    show gunner with move:
+                        xoffset 70
+                        
+                    pause .1
+                    
+                    show gunner:
+                        xzoom -1
+                        
+                    show gunner charming
+                    
                     gunner @ say "What? It's only natural I'd get this spot."
                     
+                    show gunner displeased
+                    
                     player "Why, so you can snuggle ram butt?"
+                    
+                    show rori armscrossed worried at center with dissolve:
+                        ypos y_rori
+                        xoffset 650
                     
                     rori @ say "Y'know, I could just sleep over there, it's fine really."
                     
                     claire @ say "Nope! The rules state that everyone has to get in on the cuddle puddle!"
                     
+                    show rori armscrossed neutral
+                    
                     rori @ say "Really? What rules?"
+                    
+                    show claire derp
                     
                     claire @ say "Just get in before ya freeze to death!"
                     
+                    show claire happy
+                    show rori armscrossed angry
+                    
                     rori @ say "Ugh, fine."
+                    
+                    pause .2
+                    
+                    show rori with move:
+                        xoffset 400
+                    
+                    pause .1
+                    
+                    show rori:
+                        xzoom -1
                     
                     n "Claire wraps herself around the fluffy pile, providing a nice warm blanket for all."
                     n "You have a great view of the stars in the sky from down here. You stare up at them in awe while enjoying your friends' company."
@@ -6469,19 +6536,44 @@ label cuddlepuddle:
                 "Rori next":
                     player "Rori? You wanna join us?"
                     
+                    show rori anxious at center with dissolve:
+                        ypos y_rori
+                        xoffset 775
+                    
                     rori @ say "W-what? Why me?"
+                    
+                    show gunner hissing
                     
                     gunner @ say "What kinda game are you playing, [name]? That spot is obviously reserved for me!"
                     
+                    show gunner displeased
+                    show ava excited
+                    
                     ava @ say "I don't mind! Everyone deserves a fair chance in the cuddle puddle!"
+                    
+                    show rori armscrossed embarrassed2
+                    show ava happy
                     
                     rori @ say "O-okay..."
                     
+                    pause .2
+                    
+                    show rori with move:
+                        xoffset 100
+                        
+                    pause .1
+                    
+                    show rori:
+                        xzoom -1
+                    
                     n "Rori hesitantly flops onto his side in front of Ava. She pulls him closer in a friendly embrace but you can tell he's uncomfortable."
+                    
+                    show rori none
+                    show rori armscrossed concerned blush
                     
                     rori @ say "Alright, I guess it's your turn now Gunner."
                     
-                    gunner @ say "Is this really what you wanted to see?"
+                    gunner @ say "Is this really what you all wanted to see?"
                     
                     claire @ say "Yup."
                     
@@ -6489,15 +6581,34 @@ label cuddlepuddle:
                     
                     menu:
                         "Yeah":
-                            player "Yeah."
+                            player "Yeah, it's pretty funny."
                         "Not really":
                             player "It's not really what I had in mind but it's too late to change the order now."
-                            
+                                    
+                    show gunner itsover
+                    
                     gunner @ say "Fujoshis, I swear..."
+                    
+                    show gunner frown1
                     
                     n "Gunner rolls his eyes and slides in in front of Rori."
                     
+                    pause .2
+                    
+                    show rori behind gunner
+                    show gunner with move:
+                        xoffset 275
+                    
+                    pause .1
+                    
+                    show gunner:
+                        xzoom -1
+                    
+                    show gunner annoyed
+                    
                     gunner @ say "Just don't get any funny ideas, ram."
+                    
+                    show rori armscrossed sleepy
                     
                     rori @ say "Trust me, you're not my type."
                     
@@ -6511,17 +6622,47 @@ label cuddlepuddle:
             $ avaPoints =+ 1
             $ cuddlePuddleOrder[2] = "gunner"
         
+            show claire happy
+            
             player "Get over here, Gunner!"
             
-            gunner @ say "What? Why? I wanna cuddle puddle with Ava!"
+            show gunner disgusted at center with dissolve:
+                ypos y_gunner
+                xoffset 575
+            
+            gunner @ say "What!? Why? I wanna cuddle puddle with Ava!"
+            
+            show gunner frown1
             
             claire @ say "I vote for Gunner next."
             
+            show ava typical suggestive at center behind gunner with dissolve:
+                ypos y_ava
+                xoffset 275
+            
             ava @ say "Me too!"
+            
+            show ava typical smug
+            
+            show rori armscrossed silly at center with dissolve:
+                ypos y_rori
+                xoffset 775
             
             rori @ say "Yeah, Gunner's next."
             
+            show rori armscrossed smile
+            show gunner annoyed
+            
             gunner @ say "Fine fine. It's not gay if it's a cuddle puddle, everyone knows that."
+            
+            pause .2
+            
+            show gunner with move:
+                xoffset -180
+                
+            pause .1
+            
+            show gunner at flipright
             
             menu:
                 "Rori next":
@@ -6531,25 +6672,78 @@ label cuddlepuddle:
                     
                     player "Good, because Rori's next."
                     
+                    show ava enamored
+                    show rori anxious
+                    
                     rori @ say "W-what?"
                     rori @ say "Why me??"
                     
                     player "Because it's funny."
                     
+                    show gunner disgusted
+                    
                     gunner @ say "...Seriously?"
+                    
+                    show gunner annoyed
+                    show claire derp
                     
                     claire @ say "Come on, we don't judge!"
                     
+                    show ava overjoyed
+                    
                     ava @ say "Three boys in a row though OvO"
                     
-                    claire @ say "Keep your pants on, girl~"
-                    claire @ say "That leaves you last! Enjoy some ram snuggles~"
+                    show ava shy
+                    show claire suggestive
                     
-                    ava @ say "Well... I can't say I ever expected this. But anything goes when you're in the cuddle puddle!"
+                    claire @ say "Keep your pants on, girl~"
+                    
+                    #ava @ say "Hey, cuddle puddles were traditionally done pantsless in the past!"
+                    
+                    #claire @ say "Okay then, would you like to hold a vote to remove pants from the equation?"
+                    
+                    #ava @ say "M-maybe next time..!"
+                    
+                    ###
+                    
+                    show rori armscrossed sleepy
+                    
+                    rori @ say "Ugh fine whatever, I'll do it."
+                    rori @ say "'scuse me, Ava."
+                    
+                    hide ava with dissolve
+                    
+                    pause .2
+                    
+                    show rori with move:
+                        xoffset 150
+                    
+                    pause .1
+                    
+                    show rori at flipright
+                    
+                    claire @ say "That leaves you last, birdie! Enjoy some ram snuggles~"
+                    
+                    show ava typical shy at center with dissolve:
+                        ypos y_ava
+                        xoffset 350
+                        xzoom -1
+                    
+                    ava @ say "Well... I can't say I ever expected this."
+                    
+                    show ava excited
+                    
+                    ava @ say "But anything goes when you're in the cuddle puddle!"
+                    
+                    show ava happy
                     
                     rori @ say "This feels like the least optimal configuration... no offense Ava."
                     
+                    show ava whimsical
+                    
                     ava @ say "Don't worry about it haha. At least I don't have to worry about anything sticking me from behind *chirp!*"
+                    
+                    show gunner displeased
                     
                     n "Gunner desperately tries to reach his paws over Rori and to touch Ava's feathers."
                     
@@ -6567,17 +6761,51 @@ label cuddlepuddle:
                     $ cuddlePuddleOrder[3] = "ava"
                     $ cuddlePuddleOrder[4] = "rori"
                     
+                    show gunner cutie
+                    
                     gunner @ say "But Ava's coming up in front of me >:3"
+                    
+                    show ava excited
+                    
+                    ava @ say "Gladly!"
+                    
+                    show ava happy
+                    
+                    pause .2
+                    
+                    show ava with move:
+                        xoffset 100
+                        
+                    pause .1
+                    
+                    show ava at flipright
                     
                     n "Ava nestles in in front of Gunner, being pulled in for some tight snuggles."
                     
                     ava @ say "*Chirp!* Rori you're next!"
                     
-                    rori @ say "S-sure um... I've never done this before so..."
+                    show rori anxious
+                    
+                    rori @ say "S-sure um... this is kinda new to me so..."
+                    
+                    show ava overjoyed
                     
                     ava @ say "No need to be shy! C'mere!"
                     
+                    show ava happy
+                    
+                    pause .2
+                    
+                    show rori with move:
+                        xoffset 370
+                        
+                    pause .1
+                        
+                    show rori at flipright
+                    
                     n "Ava welcomes him in with open wings, nuzzling him as he joins the cuddle puddle."
+                    
+                    show rori armscrossed embarrassed2
                     
                     rori @ say "This feels so awkward."
                     
