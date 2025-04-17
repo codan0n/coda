@@ -2120,7 +2120,7 @@ label secondDayOfClass:
 
     scene bg lecturehall with fade
 
-    play music "audio/music/mere - retrograde.ogg" fadein .5
+    play music "audio/music/mere - retrograde slowed.ogg" fadein .5
 
     show box with Dissolve(.2):
         ypos 0
@@ -4381,7 +4381,7 @@ label thursday1:
 
     scene bg lecturehall with fade
     
-    play music "audio/music/mere - retrograde.ogg" fadein .5
+    play music "audio/music/mere - retrograde slowed.ogg" fadein .5
 
     show box with Dissolve(.2):
         ypos 0

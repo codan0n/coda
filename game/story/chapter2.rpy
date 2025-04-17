@@ -156,7 +156,7 @@ label chapter2start:
 label week2Tuesday:
     scene bg lecturehall with fade
 
-    play music "audio/music/mere - retrograde.ogg" fadein .5
+    play music "audio/music/mere - retrograde slowed.ogg" fadein .5
 
     show box with Dissolve(.2):
         ypos 0
@@ -2719,6 +2719,8 @@ label hospital_bound:
 
     show box with Dissolve(.2):
         ypos 0
+        
+    play music "audio/music/Vylet Pony - lemonade.ogg" fadein .5
 
     n "You look around as your brain scrambles to recall where you are."
     n "Oh right, you're still in this dreadful hospital."
@@ -2887,7 +2889,7 @@ label hospital_bound:
         
         call reply_message("It's August")
         
-        call message_img("Claire", "shshshshush up and enjoy teh boobz lol", "pic1.png")
+        call message_img("Claire", "shshshshush up and enjoy teh boobz lol", "claireavi.png")
 
         call phone_end from _call_phone_end_7
 
@@ -3322,7 +3324,7 @@ label monty_hall:
     
     scene bg campus summer day clear with fade
     
-    play music "audio/music/vylet - Ordinarily.ogg" fadein .4
+    play music "audio/music/vylet - someday.ogg" fadein .4
     
     show box with Dissolve(.2):
         ypos 0
@@ -3847,7 +3849,7 @@ label ellen_feeding_ducks:
             
     scene bg lecturehall with fade
 
-    play music "audio/music/mere - retrograde.ogg" fadein .5
+    play music "audio/music/mere - retrograde slowed.ogg" fadein .5
 
     show box with Dissolve(.2):
         ypos 0
@@ -4456,6 +4458,8 @@ label ellen_feeding_ducks:
     #set to false because you're missing mishka's mall scene if you go with gunner or ava
     $ mishkaMallSpecialActive = False
     
+    stop music fadeout 1.0
+    
     scene bg black with fade
     
     n "Some time passes and the sun dips beneath the horizon, yet you're unable to sleep."
@@ -4465,6 +4469,8 @@ label ellen_feeding_ducks:
     
     show box with Dissolve(.2):
         ypos 0
+        
+    play music "audio/ambient/outdoors night crickets.ogg" fadein .4
     
     call nightWalks
     
@@ -4493,7 +4499,7 @@ label liberation_eve:
 
     scene bg lecturehall with fade
 
-    play music "audio/music/mere - retrograde.ogg" fadein .5
+    play music "audio/music/mere - retrograde slowed.ogg" fadein .5
 
     show box with Dissolve(.2):
         ypos 0
@@ -4692,10 +4698,14 @@ label liberation_eve:
             
             n "It's kinda creepy to stalk your professor like that. You should just chill for the next half hour you have before your next class."
             
+            stop music fadeout 1.0
+            
             scene bg campus summer day clear with fade
             
             show box with Dissolve(.2):
                 ypos 0
+                
+            play music "audio/music/Vylet Pony - Cozy Pone.ogg" fadein .4
             
             n "You loiter around the campus until a couple of familiar faces approach you, one with a friendly smile and the other looking like she wants to kill you."
             

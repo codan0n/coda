@@ -110,6 +110,11 @@ label runningTrackIntro:
     $ trackDiscovered = True
     $ afterClassExploration.remove("runningTrackIntro")
     
+    scene bg campus summer day clear with fade
+    
+    show box with Dissolve(.2):
+        ypos 0
+    
     "Before you lies a grassy field encircled by an elliptical ring made of some synthetic material. Bleachers stand tall parallel to the long axis of the ring."
     "Soccer goals rest on the ends of the field, though no game is being played at the moment. Runners jog along the ellipse, speeding past those on their cool down laps walking along the outer edge."
     "Off to the side is a section where various exercise machines and equipment are being used by athletic students. There's even a rock climbing wall over there."

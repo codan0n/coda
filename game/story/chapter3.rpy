@@ -172,7 +172,7 @@ label chapter3:
 
             scene bg lecturehall with fade
             
-            play music "audio/music/mere - retrograde.ogg" fadein .5
+            play music "audio/music/mere - retrograde slowed.ogg" fadein .5
 
             show box with Dissolve(.2):
                 ypos 0
@@ -221,7 +221,7 @@ label chapter3:
 
             scene bg lecturehall with fade
             
-            play music "audio/music/mere - retrograde.ogg" fadein .5
+            play music "audio/music/mere - retrograde slowed.ogg" fadein .5
 
             show margaret neutral at center with dissolve:
                 ypos y_margaret
@@ -260,6 +260,8 @@ label chapter3:
     margaret @ say "Which are coming up in two weeks by the way!"
     margaret @ say "Be sure to start studying for it sooner rather than later!"
     margaret @ say "That's all I have for you. Class dismissed!"
+    
+    stop music fadeout 1.0
     
     scene bg campus summer day clear with fade
     
