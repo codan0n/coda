@@ -1442,7 +1442,7 @@ label liberation_day:
         
         scene bg campus with fade
         
-        play music "audio/music/vylet - wish.ogg" fadein 1.0
+        play music "audio/music/Vylet Pony - lemonade.ogg" fadein 1.0
         
         show box with Dissolve(.2):
             ypos 0
@@ -1674,7 +1674,7 @@ label liberation_day:
 
         scene bg codadorm with fade
         
-        play music "audio/music/vylet - tenderness.ogg" fadein 1.0
+        play music "audio/music/vylet - yeah i'm ok thanks for asking.ogg" fadein 1.0
         
         show box with Dissolve(.2):
             ypos 0    
@@ -2004,7 +2004,7 @@ label liberation_day:
             
             scene bg campus with fade
             
-            play music "audio/music/vylet - wish.ogg" fadein 1.0
+            play music "audio/music/vylet pony - Reading at Night.ogg" fadein 1.0
             
             show box with Dissolve(.2):
                 ypos 0
@@ -2231,6 +2231,8 @@ label liberation_day:
             scene bg black with fade
             
             scene bg codadorm with fade
+            
+            play music "audio/music/vylet - im sorry (apathy).ogg" fadein .4
             
             show box with Dissolve(.2):
                 ypos 0
@@ -2710,6 +2712,8 @@ label liberation_day:
             ypos 0
         
         if mishkaMall == True:
+            $ mishkaPoints =+ 1
+        
             n "Today's the day you finally get to hang out with Mishka."
             n "You put on your nicest casual clothes and head out."
         

@@ -74,7 +74,7 @@ label afterClassOptions:
                         jump afterClassOptions
                 "Cafe":
                     if mishkaMallSpecialActive == True:
-                        call mishkaSpecialScene1
+                        call mishkaSpecialScene1 from _call_mishkaSpecialScene1
                     elif cafeEvents:
                         $ randomSelected = renpy.random.choice(cafeEvents)
                         
@@ -91,7 +91,7 @@ label afterClassOptions:
                         
                     jump dormSleep
                 "Go back":
-                    "jump afterClassOptions"
+                    jump afterClassOptions
         "Study at dorm":
             "You decide to return to your dorm early and get some studying in."
             
@@ -178,33 +178,229 @@ label nightWalks:
     #Can choose who to hang out with if you've done first part of their arc.
     #alternate between generic scenes and specific ones. Can choose who to hang out with if you've done first part of their arc?
 
-    "You decide to go out for the night."
+    "The cool night air feels refreshing."
     
-    $ nightWalkIndex = (nightWalkIndex + 1) % 2
+    #$ nightWalkIndex = (nightWalkIndex + 1) % 2
     
     if nightWalkIndex == 0:
         n "What will you do?"
+        
         menu:
             "Wander aimlessly":
                 $ randomSelected = renpy.random.choice(nightEvents)
-            "Meet with Rose" if roseNightWalkActive:
-                "You'll see if Rose is around"
-            "Meet with Rori" if roriNightWalkActive:
-                "You'll see if Rori is around"
-            "Meet with Gunner" if gunnerNightWalkActive:
-                "You'll see if Gunner is around"
-            "Meet with Claire" if claireNightWalkActive:
-                "You'll see if Claire is around"
-            "Meet with Ava" if avaNightWalkActive:
-                "You'll see if Ava is around"
-            "Meet with Ellen" if ellenNightWalkActive:
-                "You'll see if Ellen is around"
-            "Meet with Mishka" if mishkaNightWalkActive:
-                "You'll see if Mishka is around"
+                
+                call expression randomSelected
+            #"Meet with Rose" if roseNightWalkActive:
+            #    n "You'll check and see if Rose is around."
+            #    n "unfinished"
+            #"Meet with Rori" if roriNightWalkActive:
+            #    n "You'll check and see if Rori is around."
+            #    n "unfinished"
+            #"Meet with Gunner" if gunnerNightWalkActive:
+            #    n "You'll check and see if Gunner is around."
+            #    n "unfinished"
+            #"Meet with Claire" if claireNightWalkActive:
+            #    n "You'll check and see if Claire is around."
+            #    n "unfinished"
+            #"Meet with Ava" if avaNightWalkActive:
+            #    n "You'll check and see if Ava is around."
+            #    n "unfinished"
+            #"Meet with Ellen" if ellenNightWalkActive:
+            #    n "You'll check and see if Ellen is around."
+            #    n "unfinished"
+            #"Meet with Mishka" if mishkaNightWalkActive:
+            #    n "You'll check and see if Mishka is around."
+            #    n "unfinished"
     else:
         call genericNightWalk from _call_genericNightWalk
     
+    return
     
+label roseNight:
+    $ roseNightWalkActive = True
+
+    ###use an array to set scenes
+
+    if roseNightWalkLvl == 1:
+        call roseNightWalkLvl1
+        
+        $ roseNightWalkLvl =+ 1
+        
+        return
+    elif roseNightWalkLvl == 2:
+        call roseNightWalkLvl2
+        
+        $ roseNightWalkLvl =+ 1
+        
+        return
+    elif roseNightWalkLvl == 3:
+        call roseNightWalkLvl3
+        
+        $ roseNightWalkLvl =+ 1
+        
+        return
+    else:
+        return
+    
+    
+
+    
+    
+    return
+    
+label claireNight:
+    $ claireNightWalkActive = True
+    
+    if claireNightWalkLvl == 1:
+        call claireNightWalkLvl1
+        
+        $ claireNightWalkLvl =+ 1
+        
+        return
+    elif claireNightWalkLvl == 2:
+        call claireNightWalkLvl2
+        
+        $ claireNightWalkLvl =+ 1
+        
+        return
+    elif claireNightWalkLvl == 3:
+        call claireNightWalkLvl3
+        
+        $ claireNightWalkLvl =+ 1
+        
+        return
+    else:
+        return
+    
+    return
+    
+label avaNight:
+    $ avaNightWalkActive = True
+    
+    if avaNightWalkLvl == 1:
+        call avaNightWalkLvl1
+        
+        $ avaNightWalkLvl =+ 1
+        
+        return
+    elif avaNightWalkLvl == 2:
+        call avaNightWalkLvl2
+        
+        $ avaNightWalkLvl =+ 1
+        
+        return
+    elif avaNightWalkLvl == 3:
+        call avaNightWalkLvl3
+        
+        $ avaNightWalkLvl =+ 1
+        
+        return
+    else:
+        return
+    
+    return
+label gunnerNight:
+    $ gunnerNightWalkActive = True
+    
+    if gunnerNightWalkLvl == 1:
+        call gunnerNightWalkLvl1
+        
+        $ gunnerNightWalkLvl =+ 1
+        
+        return
+    elif gunnerNightWalkLvl == 2:
+        call gunnerNightWalkLvl2
+        
+        $ gunnerNightWalkLvl =+ 1
+        
+        return
+    elif gunnerNightWalkLvl == 3:
+        call gunnerNightWalkLvl3
+        
+        $ gunnerNightWalkLvl =+ 1
+        
+        return
+    else:
+        return
+    
+    return
+label roriNight:
+    $ roriNightWalkActive = True
+    
+    if roriNightWalkLvl == 1:
+        call roriNightWalkLvl1
+        
+        $ roriNightWalkLvl =+ 1
+        
+        return
+    elif roriNightWalkLvl == 2:
+        call roriNightWalkLvl2
+        
+        $ roriNightWalkLvl =+ 1
+        
+        return
+    elif roriNightWalkLvl == 3:
+        call roriNightWalkLvl3
+        
+        $ roriNightWalkLvl =+ 1
+        
+        return
+    else:
+        return
+    
+
+    
+    return
+    
+label ellenNight:
+    $ ellenNightWalkActive = True
+    
+    if ellenNightWalkLvl == 1:
+        call ellenNightWalkLvl1
+        
+        $ ellenNightWalkLvl =+ 1
+        
+        return
+    elif ellenNightWalkLvl == 2:
+        call ellenNightWalkLvl2
+        
+        $ ellenNightWalkLvl =+ 1
+        
+        return
+    elif ellenNightWalkLvl == 3:
+        call ellenNightWalkLvl3
+        
+        $ ellenNightWalkLvl =+ 1
+        
+        return
+    else:
+        return
+    
+    return
+
+label mishkaNight:
+    $ mishkaNightWalkActive = True
+    
+    if mishkaNightWalkLvl == 1:
+        call mishkaNightWalkLvl1
+        
+        $ mishkaNightWalkLvl =+ 1
+        
+        return
+    elif mishkaNightWalkLvl == 2:
+        call mishkaNightWalkLvl2
+        
+        $ mishkaNightWalkLvl =+ 1
+        
+        return
+    elif mishkaNightWalkLvl == 3:
+        call mishkaNightWalkLvl3
+        
+        $ mishkaNightWalkLvl =+ 1
+        
+        return
+    else:
+        return
     
     return
     
@@ -566,6 +762,7 @@ label claireForest:
     
 label roseForest:
     "rose forest scene"
+    #rose meditating in the woods
     return
 
 label roriTrack:
@@ -579,11 +776,17 @@ label roriTrack:
     show rori neutral with dissolve:
         ypos y_rori
     
-    rori @ say "Hey name! Didn't expect to find you here."
+    rori @ say "Hey [name]! Didn't expect to find you here."
     
     player "Yeah I didn't think I'd see you here either."
     
     rori @ say "Gunner somehow convinced me I need to start working out if I wanna maintain my -ahem- \"twinkish figure.\""
+    
+    player "He's right, you never know when you'll hit twink death and become a bear."
+    
+    rori @ say "Nooo I don't wanna be a bear! I like being a ram!"
+    
+    player "So what workouts have you been doing?"
     
     
     
@@ -599,6 +802,11 @@ label roriTrack:
 label gunnerTrack:
     $ trackEvents.remove("gunnerTrack")
     #check if gunnerTrack number x has been seen yet and play the next one. Use a day counter to prevent this scene from being able to be played 2 days in a row
+    
+    scene bg campus summer day clear with fade
+    
+    show box with Dissolve(.2):
+        ypos 0
     
     #$ gunnerTrackNumber += 1
 
@@ -909,7 +1117,7 @@ label linaTown:
     menu:
         lina "{cps=0}Unless you've got someplace to be...{/cps}"
         "Stay and chat.":
-            $ goodEnd = goodEnd + 1
+            $ goodEnd =+ 1
             
             player "In that case, I suppose I can stay and chat a while longer."
             
@@ -962,11 +1170,15 @@ label linaTown:
             menu:
                 n "{cps=0}Should you give her a tip?{/cps}"
                 "Tip $5":
-                    n "You pull a 5 dollar bill from your wallet and drop it in her case."
+                    $ moneySpent =+ 5
+                    
+                    n "You pull a crisp 5 dollar bill from your wallet and drop it in her case."
                     
                     lina @ say "Thanks!~"
                 
                 "Tip $20":
+                    $ moneySpent =+ 20
+                    
                     n "Oh what the hell, she deserves it more than you do."
                     n "You drop a 20 in her case and watch her eyes light up."
                     
@@ -1003,11 +1215,15 @@ label linaTown:
             
             menu:
                 "Tip $5":
-                    n "You pull a 5 dollar bill from your wallet and drop it in her case."
+                    $ moneySpent =+ 5
+                    
+                    n "You pull a crisp 5 dollar bill from your wallet and drop it in her case."
                     
                     lina @ say "Thanks!~"
                 
                 "Tip $20":
+                    $ moneySpent =+ 20
+                    
                     n "Oh what the hell, she deserves it more than you do."
                     n "You drop a 20 in her case and watch her eyes light up."
                     
@@ -1064,7 +1280,7 @@ label linaTown:
     menu:
         ava "{cps=0}It's not a true art!{/cps}"
         "Like photography?":
-            $ avaPoints = avaPoints - 1
+            $ avaPoints =- 2
     
             player "Like how photography is just pointing and clicking?"
             
@@ -1188,7 +1404,18 @@ label mishkaCafe:
 
 
 label claireCafe:
+    $ clairePoints =+ 1
+    
     "claire cafe scene"
+    
+    
+    #You decided to take up Claire's offer to get coffee together and invited her to the cafe
+    #you were kinda tired and was hoping the caffeine would wake you up but it just does the opposite
+    #she rambles about something and you lose focus
+    #she asks 'what do you think of that?'
+    #choice to either distract her (tell her her hair is pretty today) or give a vague answer (yeah that's crazy)
+    #these cafe scenes have the characters hint at their past
+    
     return
 
 
@@ -1205,11 +1432,100 @@ label trishCafe:
 label ellenCafe:
     "ellen cafe scene"
     return
+    
+label margaretCafe:
+    #make this part of ellen's cafe scene
+#    n "Ms. Ellen reclines against the bench and sighs."
+#
+#    show margaret melancholy
+#
+#    margaret @ say "It's nice to get to talk to one of my students like this."
+#    margaret @ say "Most are either intimidated by me or just see me as an obstacle to their degree."
+#
+#    player "Yeah I'm not really too into the whole college thing."
+#    player "I just come to class out of habit and sometimes I learn interesting things."
+#    player "I like hearing your rants about authors' beliefs."
+#
+#    show margaret flattered
+#
+#    margaret @ say "Is that so? I always feel so embarrassed after those little tirades! I suppose I just can't help myself."
+#
+#    player "I guess literature would lend itself most to expression. Not much room for interpretation in statistics or French."
+#
+#    show margaret neutral
+#
+#    margaret @ say "Au contraire, le langage limite nos pensées."
+#
+#    player "What??"
+#
+#    margaret @ say "There's certain things you can't express in one language alone."
+#    margaret @ say "Even if you mastered English, which very few people have done mind you, other languages open your mind up to new thoughts."
+#    #margaret @ say "That's what Celestine taught me. You know her, right?"
+#    margaret @ say "That's what Sera taught me. You might know her as Mrs. Celestine."
+#
+#    player "Yeah, she's my French teacher."
+#
+#    margaret @ say "I thought so. She's nice. And wise. You should listen to her."
+#    margaret @ say "She's told me about you."
+#
+#    player "Wait, you know Mrs. celestine??"
+#
+#
+#
+#
+#    #reserved for part 2
+#
+#                    margaret @ say "I didn't used to be. I used to try really hard."
+#                    margaret @ say "But after teaching here... I've seen so many cheaters graduate. So many people dumber than a rock coast through their degree with their parents' money and end up in important jobs."
+#                    margaret @ say "That's just the path in life they've had given to them."
+#                    margaret @ say "The administration pressures us to just shut up and take the bribes. Not little things like cinnamon rolls, I'm talking cars and vacation homes."
+#                    
+#                    player "How many vacation homes does a professor need??"
+#                    
+#                    margaret @ say "I wish I had one. They only offer those to smooth things over when senator So-and-So's dipshit son gets in trouble with the law for assaulting some poor sorority girl."
+#                    margaret @ say "The most I've ever got was a strange case where I think the student enjoyed giving me money?"
+#                    margaret @ say "I suckered him out of nearly twenty grand over a couple semesters."
+#                    
+#                    player "You lucky dog."
+#                    
+#                    show margaret happy
+#                    
+#                    margaret @ say "Hehehehe~"
+#                    
+#                    show margaret neutral
+#                    
+#                    margaret @ say "You won't have to do that much to pass my class though. Just listening to me rant is enough for me. It's a lot cheaper than therapy, that's for sure."
+#                    
+#                    n "Ms. Ellen sighs."
+#                    
+#                    show margaret sad
+#
+#
+#
+#^split this scene into 2 parts because it drags on for too long. Split at the "just how old do you think I am" part? have a flashback to it later when you sit on the bench alone? Or make this part part of the ellen cafe scene later
+#    show margaret melancholy
+#            
+#    margaret @ say "Thanks for sitting and talking with me. It really made my day worthwhile."
+#    margaret @ say "There's more to you that makes you special than just being the last human."        
+#
+#    player "I don't know about that. I'm just like anyone else. Just doing whatever society expects me to do. Go to school. Pay taxes. That sort of thing."
+#    
+#    margaret @ say "You're very kind and have your own unique perspective. You can uplift people without realizing it."
+#    
+#    player "I'm glad you think so. I try. Well no, I don't really try. I just want to live a comfortable life and be happy with others."
+#
+#    show margaret neutral
+#    
+#    margaret @ say "Perhaps that's all you need to do."
+
+
+    return
 
 label oliviaCafe:
     $ cafeEvents.remove("oliviaCafe")
     
-    scene bg campus with fade
+    scene bg campus summer day clear with fade
+    ###make sure season is right
 
     show box:
         ypos 0
@@ -1226,6 +1542,7 @@ label oliviaCafe:
 
     show olivia neutral at offscreenright:
         ypos y_olivia
+        matrixcolor BrightnessMatrix(0.05)
     show olivia at offscreenleft with MoveTransition(delay=1.0):
         ypos y_olivia
 
@@ -1570,45 +1887,6 @@ label deanCafe:
     return
 
 
-label avaGunnerNight:
-    "ava and gunner night scene"
-    
-    return
-
-
-label roriNight:
-    "rori night scene"
-    
-    return
-
-
-label roseNight:
-    "rose night scene"
-    
-    return
-
-
-label mishkaNight:
-    "mishka night scene"
-    
-    return
-
-
-label claireNight:
-    "claire night scene"
-    
-    return
-
-label avaNight:
-    "ava night scene"
-    
-    return
-    
-    
-label gunnerNight:
-    "gunner night scene"
-    
-    return
     
 label generateWeather:
     "weather test start"

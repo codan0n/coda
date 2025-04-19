@@ -561,7 +561,7 @@ label week2Tuesday:
     n "Strange, but you feel normal now."
     n "You do your usual morning routine and pack your bag for today's classes."
 
-    play music "audio/music/mere - retrograde.ogg" fadein .5
+    play music "audio/music/mere - retrograde slowed.ogg" fadein .5
 
     scene bg lecturehall with fade
 
@@ -2882,14 +2882,14 @@ label hospital_bound:
         call message_img("Claire", "Enjoy~", "booba.png") from _call_message_img
         
         call reply_message("BOOBA") from _call_reply_message_144
-        call reply_message("Wait why are you wearing santa hats?")
+        call reply_message("Wait why are you wearing santa hats?") from _call_reply_message_32
         
-        call message_img("Claire", "idklol", "claireavi.png")
-        call message_img("Claire", "its festivv", "claireavi.png")
+        call message_img("Claire", "idklol", "claireavi.png") from _call_message_img_1
+        call message_img("Claire", "its festivv", "claireavi.png") from _call_message_img_2
         
-        call reply_message("It's August")
+        call reply_message("It's August") from _call_reply_message_34
         
-        call message_img("Claire", "shshshshush up and enjoy teh boobz lol", "claireavi.png")
+        call message_img("Claire", "shshshshush up and enjoy teh boobz lol", "claireavi.png") from _call_message_img_3
 
         call phone_end from _call_phone_end_7
 
@@ -3324,7 +3324,7 @@ label monty_hall:
     
     scene bg campus summer day clear with fade
     
-    play music "audio/music/vylet - someday.ogg" fadein .4
+    play music "audio/music/vylet - Ordinarily.ogg" fadein .4
     
     show box with Dissolve(.2):
         ypos 0
@@ -4198,7 +4198,7 @@ label ellen_feeding_ducks:
     
     scene bg campus summer day clear with fade
     
-    play music "audio/music/vylet - Destiny Station.ogg" fadein .4
+    play music "audio/music/vylet - by the seaside.ogg" fadein .4
     
     show box with Dissolve(.2):
         ypos 0
@@ -4329,6 +4329,8 @@ label ellen_feeding_ducks:
     
     rori @ say "A... panty raid? What is that? Is that a dungeon in Boarcraft?"
     
+    player "I think it's a tabletop game."
+    
     show gunner determined
     
     gunner @ say "It's where you sneak into a girl's room and steal her panties."
@@ -4354,7 +4356,7 @@ label ellen_feeding_ducks:
     rori @ say "This sounds like the worst risk versus reward ratio of all time."
     
     gunner @ say "Nah bro, it's like unofficially sanctioned by the university. It's a loooooong time tradition."
-    gunner @ say "Our dean did it, Albert Einstein did it, George Washington did it, Plato did it..."
+    gunner @ say "Our dean did it, Albert Einstein did it, George Washington did it, even Aristotle did it..."
     gunner @ say "I'm pretty sure cavemen did it too."
     gunner @ say "Nobody's ever gotten in serious trouble for it."
     
@@ -4472,7 +4474,7 @@ label ellen_feeding_ducks:
         
     play music "audio/ambient/outdoors night crickets.ogg" fadein .4
     
-    call nightWalks
+    call nightWalks from _call_nightWalks
     
     #n "What should you do with your free time?"
     
@@ -4550,7 +4552,7 @@ label liberation_eve:
             
             scene bg roof with fade
             
-            play music "audio/music/Vylet Pony -  Colourless.ogg" fadein .4
+            play music "audio/music/vylet - Colourless.ogg" fadein .4
             
             show box with Dissolve(.2):
                 ypos 0
@@ -5578,11 +5580,15 @@ label liberation_eve:
     n "This room wasn't meant to accomodate five people so there's not a lot of places to sit."
     n "Everyone but you and Gunner has snagged a seat. He's distracted by his insatiable urge to rub his face against the edge of every piece of furniture in the room."
     n "Now's your chance." 
+    
+    stop music fadeout .5
 
     ###maybe extend the scene after the credits roll and you're alone with whoever you sat with after the others leave
     menu:
         n "{cps=0}Now's your chance.{/cps=0}"
         "Sit next to Claire":
+            play music "audio/music/vylet - camelia.ogg" fadein .5
+        
             $ clairePoints =+ 1
             
             n "Surprisingly, Claire has not occupied your bed and has instead opted recline against it whilst sitting on the floor, her arm elbow deep in a bag of chips."
@@ -5957,7 +5963,7 @@ label liberation_eve:
             
     scene bg black with fade
     
-    stop music fadeout 2.0
+    stop music fadeout 1.0
 
     hide box
 

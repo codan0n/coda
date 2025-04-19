@@ -283,7 +283,6 @@ label chapter3:
     player "Huh?"
     
     menu:
-        player "{cps=0}Huh?{/cps}"
         "Of course!":
             $ clairePoints =+ 1
             
@@ -321,7 +320,6 @@ label chapter3:
     celestine @ say "Care to tell us, [name]?"
     
     menu:
-        celestine "{cps=0}Care to tell us, [name]?{/cps}"
         "Je faisais mes devoirs.":
             $ frenchSkill =+ 1
         
@@ -491,7 +489,6 @@ label chapter3:
     kitsuragi @ say "Enjoy your life, just don't do anything stupid."
     
     menu:
-        kitsuragi "{cps=0}Enjoy your life, just don't do anything stupid.{/cps}"
         "I will.":
             player "Thanks, I will."
             player "Enjoy my life that is."
@@ -535,7 +532,7 @@ label chapter3:
         
     play music "audio/ambient/outdoors night crickets.ogg" fadein .4
     
-    call nightWalks from _call_nightWalks_1
+    call nightWalks
     
     scene bg black with fade
     
@@ -629,7 +626,6 @@ label chapter3:
     rori @ say "Aw what? Don't tell me I bricked it."
     
     menu:
-        rori "{cps=0}Aw what? Don't tell me I bricked it.{/cps}"
         "LOL":
             player "It would be funny if you did."
             
@@ -1181,7 +1177,6 @@ label chapter3:
     default holdingHands = "No one"
     
     menu:
-        gunner "{cps=0}Hope you won't be too jealous when I walk home holding Ava's wing~{/cps}"
         "Do it for Ava":
             $ avaPoints =+ 2
             $ holdingHands = "Ava"
@@ -1901,7 +1896,6 @@ label chapter3:
                     n "Well? Should you draw out this \"\"\"purely hypothetical\"\"\" scenario to fulfill Ava's desires?"
                     
                     menu:
-                        n "{cps=0}Well? Should you draw out this \"\"\"purely hypothetical\"\"\" scenario to fulfill Ava's desires?{/cps}"
                         "Aw hell no!":
                             $ rejectedAvasproposal = True
                         
@@ -2113,7 +2107,6 @@ label chapter3:
                             claire @ say "Well? Which would it be, [name]?"
                             
                             menu:
-                                claire "{cps=0}Well? Which would it be, [name]?{/cps}"
                                 "Beak":
                                     $ beakOrTailfeathers = "Beak"
                                 
@@ -2334,7 +2327,7 @@ label chapter3:
             
             n "Your intestines have finally settled and you're feeling well enough to go out."
             
-            call afterClassOptions from _call_afterClassOptions_2
+            call afterClassOptions
             
         
     jump chapter3AfterWeekend
@@ -2377,7 +2370,6 @@ label chapter3AfterWeekend:
     n "She points to all the pieces of her contraption scattered across the floor."
     
     menu:
-        n "{cps=0}She points to all the pieces of her contraption scattered across the floor.{/cps}"
         "Refuse":
             $ rosePoints =- 1
             
@@ -2534,7 +2526,6 @@ label chapter3AfterWeekend:
                 n "900 dollars is a substantial chunk of your life savings."
                 
                 menu:
-                    n "{cps=0}900 dollars is a substantial chunk of your life savings.{/cps}"
                     "Pay":
                         $ rosePoints =+ 1
                         
@@ -2668,7 +2659,6 @@ label chapter3AfterWeekend:
     gunner @ say "No, but it was implied."
     
     menu:
-        gunner "{cps=0}No, but it was implied.{/cps}"
         "Cool, have fun":
             #$ avaPoints =- 1
             
@@ -2693,15 +2683,15 @@ label chapter3AfterWeekend:
     n "*Bzzz bzzz*"
     n "Oh look you've got a text. You wonder who it could be from."
             
-    call phone_start from _call_phone_start_17
+    call phone_start
     
-    call message_start("Ava", "Hiya [name]! You busy this weekend?", "avaavi.png") from _call_message_start_22 
+    call message_start("Ava", "Hiya [name]! You busy this weekend?", "avaavi.png") 
     
-    call reply_message("Not sure yet. Why what's up?") from _call_reply_message_145 
+    call reply_message("Not sure yet. Why what's up?") 
             
-    call message("Ava", "I was just wondering if you'd wanna come hiking in the mountains with Gunner and me ^v^", "avaavi.png") from _call_message_201 
+    call message("Ava", "I was just wondering if you'd wanna come hiking in the mountains with Gunner and me ^v^", "avaavi.png") 
             
-    call phone_end from _call_phone_end_23         
+    call phone_end         
     
     player "Ava just invited me to come with you two."
     
@@ -2729,7 +2719,6 @@ label chapter3AfterWeekend:
     default avaHike = False
     
     menu:
-        n "{cps=0}Gunner slips a $100 bill onto your desk.{/cps}"
         "Accept his bribe":
             $ avaPoints =- 1
             $ claireHike = True
@@ -2744,20 +2733,20 @@ label chapter3AfterWeekend:
             
             player "I'll text her and say I already made plans with someone."
             
-            call phone_start from _call_phone_start_18
+            call phone_start
     
-            call message_start("me", "Hey sorry I just remembered I promised to hang out with Rori this weekend", "testimage.png") from _call_message_start_25 
+            call message_start("me", "Hey sorry I just remembered I promised to hang out with Rori this weekend", "testimage.png") 
             
-            call message("Ava", "Aww oki", "avaavi.png") from _call_message_202 
-            call message("Ava", "Maybe next weekend you and I can go somewhere!", "avaavi.png") from _call_message_203 
-            call message("Ava", "just the two of us lol", "avaavi.png") from _call_message_204 
+            call message("Ava", "Aww oki", "avaavi.png") 
+            call message("Ava", "Maybe next weekend you and I can go somewhere!", "avaavi.png") 
+            call message("Ava", "just the two of us lol", "avaavi.png") 
             
-            call reply_message("Maybe!") from _call_reply_message_146 
-            call reply_message("Have a nice hike! Take some pretty photos!") from _call_reply_message_147 
+            call reply_message("Maybe!") 
+            call reply_message("Have a nice hike! Take some pretty photos!") 
             
-            call message("Ava", "I will!", "avaavi.png") from _call_message_205 
+            call message("Ava", "I will!", "avaavi.png") 
                     
-            call phone_end from _call_phone_end_24         
+            call phone_end         
             
             player "Done."
             player "Good luck with your date."
@@ -2793,20 +2782,20 @@ label chapter3AfterWeekend:
             
             player "If you say so."
             
-            call phone_start from _call_phone_start_19
+            call phone_start
     
-            call message_start("me", "Yeah that sounds like a great time!", "testimage.png") from _call_message_start_26 
+            call message_start("me", "Yeah that sounds like a great time!", "testimage.png") 
             
-            call message("Ava", "Yay ^v^", "avaavi.png") from _call_message_206 
-            call message("Ava", "We'll come get you on Saturday", "avaavi.png") from _call_message_207 
-            call message("Ava", "Be sure to bring water and snacks!", "avaavi.png") from _call_message_208 
+            call message("Ava", "Yay ^v^", "avaavi.png") 
+            call message("Ava", "We'll come get you on Saturday", "avaavi.png") 
+            call message("Ava", "Be sure to bring water and snacks!", "avaavi.png") 
             
-            call reply_message("Will do!") from _call_reply_message_148 
-            call reply_message("Can't wait to see a master photographer in action!") from _call_reply_message_149 
+            call reply_message("Will do!") 
+            call reply_message("Can't wait to see a master photographer in action!") 
             
-            call message("Ava", "Hehe *snap*", "avaavi.png") from _call_message_209 
+            call message("Ava", "Hehe *snap*", "avaavi.png") 
                     
-            call phone_end from _call_phone_end_25         
+            call phone_end         
             
             player "Yup, this'll be a weekend to remember!"
             
@@ -2863,20 +2852,20 @@ label chapter3AfterWeekend:
             
             gunner @ say "Yeah yeah, now text Ava and tell you you can't come."
             
-            call phone_start from _call_phone_start_20
+            call phone_start
     
-            call message_start("me", "Hey sorry I just remembered I promised to hang out with Rori this weekend", "testimage.png") from _call_message_start_27 
+            call message_start("me", "Hey sorry I just remembered I promised to hang out with Rori this weekend", "testimage.png") 
             
-            call message("Ava", "Aww oki", "avaavi.png") from _call_message_210 
-            call message("Ava", "Maybe next weekend you and I can go somewhere!", "avaavi.png") from _call_message_211 
-            call message("Ava", "just the two of us lol", "avaavi.png") from _call_message_212 
+            call message("Ava", "Aww oki", "avaavi.png") 
+            call message("Ava", "Maybe next weekend you and I can go somewhere!", "avaavi.png") 
+            call message("Ava", "just the two of us lol", "avaavi.png") 
             
-            call reply_message("Maybe!") from _call_reply_message_150 
-            call reply_message("Have a nice hike! Take some pretty photos!") from _call_reply_message_151 
+            call reply_message("Maybe!") 
+            call reply_message("Have a nice hike! Take some pretty photos!") 
             
-            call message("Ava", "I will!", "avaavi.png") from _call_message_213 
+            call message("Ava", "I will!", "avaavi.png") 
                     
-            call phone_end from _call_phone_end_26         
+            call phone_end         
             
             player "Done."
             player "Good luck with your date."
@@ -3000,7 +2989,6 @@ label chapter3AfterWeekend:
     n "Perhaps a personal question to get to understand her better."
     
     menu:  
-        n "{cps=0}Perhaps a personal question to get to understand her better.{/cps}"
         "Why did you become a professor?":
             player "What made you want to become a professor?"
             
@@ -3157,7 +3145,6 @@ label chapter3AfterWeekend:
     margaret @ say "This is not the life I wanted."
     
     menu:
-        margaret "{cps=0}This is not the life I wanted.{/cps}"
         "And that would be...?":
             player "And that would be...?"
             
@@ -3248,7 +3235,6 @@ label chapter3AfterWeekend:
     default dissedClaire = False
     
     menu:
-        claire "{cps=0}They say it's the language of love~{/cps}"
         "I hate it":
             player "I hate the French with every fiber of my being."
             
@@ -3257,7 +3243,6 @@ label chapter3AfterWeekend:
             claire @ say "Aww don't be such a downer! If not for the French we might not have a class together!"
             
             menu:
-                claire "{cps=0}Aww don't be such a downer! If not for the French we might not have a class together!{/cps}"
                 "Now I hate them even more":
                     $ clairepoints =- 1
                     $ dissedClaire = True
@@ -3490,7 +3475,6 @@ label chapter3AfterWeekend:
         ava @ say "I feel kinda bad though. I didn't mean to exclude her but that doesn't mean we have to do *everything* together all the time, does it?"
         
         menu:
-            ava "{cps=0}I feel kinda bad though. I didn't mean to exclude her but that doesn't mean we have to do *everything* together all the time, does it?{/cps}"
             "You *are* her best friend":
                 player "I mean you kinda are her best friend."
                 player "She probably thought you were getting tired of her."
@@ -3819,7 +3803,6 @@ label chapter3AfterWeekend:
                 claire @ say "Unless you want me to~"
                 
                 menu:
-                    claire "{cps=0}Unless you want me to~{/cps}"
                     "Hahaha nooooo pls don't bully me x3":
                         $ claireBullyLevel = 2
                         
@@ -3833,7 +3816,6 @@ label chapter3AfterWeekend:
                         n "You swear, every day this rabbit finds a new way to push your buttons in all the right ways."
                         
                         menu:
-                            n "{cps=0}You swear, every day this rabbit finds a new way to push your buttons in all the right ways.{/cps}"
                             "This is fine.":
                                 n "That's a fair level of bullying. No need to push further into degenerate territory."
                                 
@@ -4074,13 +4056,12 @@ label chapter3AfterWeekend:
                         
                         player "No problem. It's what friends do, right?"
                         
-                        if clairePoints > 3:
+                        if clairePoints > 4:
                             show claire sweater suggestive
                         
                             claire @ say "You sure we're just gonna be friends?"
                             
                             menu:
-                                claire "{cps=0}You sure we're just gonna be friends?{/cps}"
                                 "What else would we be?":
                                     player "What else would we be? Enemies?"
                                     
@@ -4304,21 +4285,21 @@ label chapter3AfterWeekend:
             
         n "Today's the day you're supposed to... do something with Claire and Rori."
         
-        call phone_start from _call_phone_start_21
+        call phone_start
         
-        call message_start("Claire", "You ready?", "claireavi.png") from _call_message_start_28 
-        call message("Claire", "For some", "claireavi.png") from _call_message_214 
-        call message("Claire", "A D V E N T U R E ?", "claireavi.png") from _call_message_215 
+        call message_start("Claire", "You ready?", "claireavi.png") 
+        call message("Claire", "For some", "claireavi.png") 
+        call message("Claire", "A D V E N T U R E ?", "claireavi.png") 
 
-        call reply_message("I have no idea what we're doing today") from _call_reply_message_152 
-        call reply_message("but yeah i'm ready") from _call_reply_message_153 
+        call reply_message("I have no idea what we're doing today") 
+        call reply_message("but yeah i'm ready") 
         
-        call message("Claire", "Yay!", "claireavi.png") from _call_message_216 
-        call message("Claire", "Meet me at the quad", "claireavi.png") from _call_message_217 
+        call message("Claire", "Yay!", "claireavi.png") 
+        call message("Claire", "Meet me at the quad", "claireavi.png") 
         
-        call reply_message("k") from _call_reply_message_154 
+        call reply_message("k") 
 
-        call phone_end from _call_phone_end_27
+        call phone_end
         
         stop music fadeout 2.0
         
@@ -4350,7 +4331,6 @@ label chapter3AfterWeekend:
         n "Oh right, you sorta dragged him into this."
         
         menu:
-            n "{cps=0}Oh right, you sorta dragged him into this.{/cps}"
             "Ready to have some fun?":
                 n "Maybe if you have a positive attitude he'll enjoy this more."
                 
@@ -4456,19 +4436,19 @@ label claireRoriHikeAltStart:
 
     n "Today's the day you're supposed to go on some adventure with Claire and Rori."
         
-    call phone_start from _call_phone_start_22
+    call phone_start
     
-    call message_start("Claire", "You ready", "claireavi.png") from _call_message_start_29 
-    call message("Claire", "For our trip?", "claireavi.png") from _call_message_219 
+    call message_start("Claire", "You ready", "claireavi.png") 
+    call message("Claire", "For our trip?", "claireavi.png") 
 
-    call reply_message("Yeah I guess idk about Rori tho") from _call_reply_message_155 
+    call reply_message("Yeah I guess idk about Rori tho") 
     
-    call message("Claire", "Don't worry he'll be fine!", "claireavi.png") from _call_message_220 
-    call message("Claire", "Meet us at the quad!", "claireavi.png") from _call_message_221 
+    call message("Claire", "Don't worry he'll be fine!", "claireavi.png") 
+    call message("Claire", "Meet us at the quad!", "claireavi.png") 
     
-    call reply_message("k") from _call_reply_message_156 
+    call reply_message("k") 
 
-    call phone_end from _call_phone_end_28
+    call phone_end
     
     scene bg campus summer day clear with fade
     
@@ -4498,7 +4478,6 @@ label claireRoriHikeAltStart:
     n "Oh right, you sorta dragged him into this."
     
     menu:
-        n "{cps=0}Oh right, you sorta dragged him into this.{/cps}"
         "Ready to have some fun?":
             n "Maybe if you have a positive attitude he'll enjoy this more."
             
@@ -4664,7 +4643,6 @@ label claireRoriHikeContinued:
     show claire happy
     
     menu:
-        n "{cps=0}You look to Rori who is visibly disturbed by the idea of sleeping in the woods tonight.{/cps}"
         "I dunno if this is a good idea":
             show rori neutral
                 
@@ -4908,7 +4886,6 @@ label claireRoriHikeContinued:
         rori @ say "Yes that's why I'm gay, so what?"
         
         menu:
-            rori "{cps=0}Yes that's why I'm gay, so what?{/cps}"
             "Me too lol":
                 $ roriPoints =+ 2
                 $ clairePoints =- 1
@@ -4936,7 +4913,6 @@ label claireRoriHikeContinued:
                 rori @ say "Sounds pretty gay."
                 
                 menu:
-                    rori "{cps=0}Sounds pretty gay.{/cps}"
                     "Maybe just a little":
                         player "Maybe just a little."
                         
@@ -4993,7 +4969,6 @@ label claireRoriHikeContinued:
                 rori @ say "With girls you have to read their freaking mind or they'll get mad at you and belittle you and throw things at you."
                 
                 menu:
-                    rori "{cps=0}With girls you have to read their freaking mind or they'll get mad at you and belittle you and throw things at you.{/cps}"
                     "Are you speaking from experience?":
                         player "Are you sure they're really like that? Are you speaking from experience?"
                         
@@ -5063,7 +5038,6 @@ label claireRoriHikeContinued:
         rori @ say "We're just pawns in her little game so that *she* can have fun."
         
         menu:
-            rori "{cps=0}We're just pawns in her little game so that *she* can have fun.{/cps}"
             "Yeah she went too far this time":
                 player "I agree, she went a little too far this time."
                 player "I'll ask her to be more considerate next time."
@@ -5141,7 +5115,6 @@ label claireRoriHikeContinued:
     claire @ say "Oop, could one of you grab my lighter? I think it's in my back pocket~"
     
     menu:
-        claire "{cps=0}Oop, could one of you grab my lighter? I think it's in my back pocket~{/cps}"
         "Jump at the opportunity":
             $ clairePoints =+ 1
             
@@ -5459,20 +5432,20 @@ label avaGunnerCampScene:
             n "They decided it's going to be an overnight trip so you dumped your notebooks and packed all kinds of gear into your school bag."
             n "Gunner said he'd bring a tent so you load up on snacks and water."
             
-            call phone_start from _call_phone_start_23
+            call phone_start
 
-            call message_start("Ava", "Heya! You ready for our trip?", "avaavi.png") from _call_message_start_30 
+            call message_start("Ava", "Heya! You ready for our trip?", "avaavi.png") 
 
-            call reply_message("Yup, just finished packing") from _call_reply_message_157 
-            call reply_message("Is Gunner still acting pissy because I'm coming?") from _call_reply_message_158 
+            call reply_message("Yup, just finished packing") 
+            call reply_message("Is Gunner still acting pissy because I'm coming?") 
             
-            call message("Ava", "Yeahhhh but he'll get over it!", "avaavi.png") from _call_message_222 
-            call message("Ava", "I'm sure we'll all have a great time ^v^", "avaavi.png") from _call_message_223 
-            call message("Ava", "Meet us at the trailhead, k?", "avaavi.png") from _call_message_224 
+            call message("Ava", "Yeahhhh but he'll get over it!", "avaavi.png") 
+            call message("Ava", "I'm sure we'll all have a great time ^v^", "avaavi.png") 
+            call message("Ava", "Meet us at the trailhead, k?", "avaavi.png") 
             
-            call reply_message("On my way") from _call_reply_message_159 
+            call reply_message("On my way") 
             
-            call phone_end from _call_phone_end_29
+            call phone_end
             
             n "Oh boy, a camping trip with a bird who has a crush on you and the cat who has a crush on her, what could go wrong?"
             
@@ -5515,7 +5488,6 @@ label avaGunnerCampScene:
             n "Gunner looks up at the tree Ava's perched upon, her ass in plain view of you both, perfectly framed between the tree branches."
             
             menu:
-                n "{cps=0}Gunner looks up at the tree Ava's perched upon, her ass in plain view of you both, perfectly framed between the tree branches.{/cps}"
                 "Totally worth it":
                     $ avaPoints =+ 1
                     
@@ -5594,10 +5566,9 @@ label avaGunnerCampScene:
             
             show gunner annoyed
             
-            gunner @ say "You watch where you're putting the stakes!"
+            gunner "You watch where you're putting the stakes!"
             
             menu:
-                gunner "{cps=0}You watch where you're putting the stakes!{/cps}"
                 "Counter sabotage him":
                     n "Nobody gets away with undoing your hard work!"
                     n "You let your hand \"accidentally\" loosen one of the straps Gunner put in place, letting the whole rain fly collapse."
@@ -6200,7 +6171,6 @@ label cuddlepuddle:
     $ cuddlePuddleOrder = ["claire", "player", "", "", ""]
     
     menu:
-        claire "{cps=0}Who's next?{/cps}"
         "Rori":
             $ roriPoints =+ 1
             $ cuddlePuddleOrder[2] = "rori"
@@ -6239,7 +6209,6 @@ label cuddlepuddle:
             gunner @ say "There's no way Rori is anything but a bottom."
             
             menu:
-                gunner "{cps=0}There's no way Rori is anything but a bottom.{/cps}"
                 "I'm bottom-er":
                     $ cuddlePuddleOrder[2] = "player"
                     $ cuddlePuddleOrder[1] = "rori"
@@ -6327,7 +6296,6 @@ label cuddlepuddle:
                     claire @ say "Okay, who's next?"
                     
                     menu:
-                        claire "{cps=0}Okay, who's next?{/cps}"
                         "Ava":
                             $ cuddlePuddleOrder[3] = "ava"
                             $ cuddlePuddleOrder[4] = "gunner"
@@ -6457,7 +6425,6 @@ label cuddlepuddle:
                     claire @ say "Who's next?"
                     
                     menu:
-                        claire "{cps=0}Who's next?{/cps}"
                         "Ava":
                             $ cuddlePuddleOrder[3] = "ava"
                             $ cuddlePuddleOrder[4] = "gunner"
@@ -7231,7 +7198,6 @@ label cuddlepuddle:
     claire @ say "...Unless you wanna stay up and chat a bit more?"
     
     menu:   
-        claire "{cps=0}...Unless you wanna stay up and chat a bit more?{/cps}"
         "Stay up":
             $ clairePoints =+ 1
             $ stayedUpWithClaire = True
@@ -7271,7 +7237,6 @@ label cuddlepuddle:
             claire @ say "I know you and Ava have a thing going on but I'm not sure how that's gonna work out with Gunner in the picture."
             
             menu:
-                claire "{cps=0}I know you and Ava have a thing going on but I'm not sure how that's gonna work out with Gunner in the picture.{/cps}"
                 "I'm hoping she'll choose me":
                     player "She seems really indecisive but I'm hoping she'll choose me in the end."
                     
@@ -7335,7 +7300,6 @@ label cuddlepuddle:
             player "I'm not gay!"
             
             menu:
-                player "{cps=0}I'm not gay!{/cps}"
                 "Are you really?":
                     if roriPoints > 3:
                         player "But I would fuck that ram."
@@ -7371,7 +7335,6 @@ label cuddlepuddle:
             claire @ say "Well is there anyone else you might be interested in?"
             
             menu:
-                claire "{cps=0}Well is there anyone else you might be interested in?{/cps}"
                 "Maybe...":
                     player "Maybe but..."
                     
@@ -7382,7 +7345,6 @@ label cuddlepuddle:
                     claire @ say "Who?"
                     
                     menu:
-                        claire "{cps=0}Who?{/cps}"
                         "Rose":
                             $ rosePoints =+ 1
                             
@@ -7449,7 +7411,6 @@ label cuddlepuddle:
                             claire @ say "And she's the only professor who goes barefoot?? Who does that?!"
                             
                             menu:
-                                claire "{cps=0}And she's the only professor who goes barefoot?? Who does that?!{/cps}"
                                 "Agree":
                                     player "Provocative French speaking, short dress wearing, paw beans exposed teacher... yeah I get the appeal."
                                     

@@ -189,7 +189,7 @@ label nightWalks:
             "Wander aimlessly":
                 $ randomSelected = renpy.random.choice(nightEvents)
                 
-                call expression randomSelected
+                call expression randomSelected from _call_expression_6
             #"Meet with Rose" if roseNightWalkActive:
             #    n "You'll check and see if Rose is around."
             #    n "unfinished"
@@ -222,19 +222,19 @@ label roseNight:
     ###use an array to set scenes
 
     if roseNightWalkLvl == 1:
-        call roseNightWalkLvl1
+        call roseNightWalkLvl1 from _call_roseNightWalkLvl1
         
         $ roseNightWalkLvl =+ 1
         
         return
     elif roseNightWalkLvl == 2:
-        call roseNightWalkLvl2
+        call roseNightWalkLvl2 from _call_roseNightWalkLvl2
         
         $ roseNightWalkLvl =+ 1
         
         return
     elif roseNightWalkLvl == 3:
-        call roseNightWalkLvl3
+        call roseNightWalkLvl3 from _call_roseNightWalkLvl3
         
         $ roseNightWalkLvl =+ 1
         
@@ -252,19 +252,19 @@ label claireNight:
     $ claireNightWalkActive = True
     
     if claireNightWalkLvl == 1:
-        call claireNightWalkLvl1
+        call claireNightWalkLvl1 from _call_claireNightWalkLvl1
         
         $ claireNightWalkLvl =+ 1
         
         return
     elif claireNightWalkLvl == 2:
-        call claireNightWalkLvl2
+        call claireNightWalkLvl2 from _call_claireNightWalkLvl2
         
         $ claireNightWalkLvl =+ 1
         
         return
     elif claireNightWalkLvl == 3:
-        call claireNightWalkLvl3
+        call claireNightWalkLvl3 from _call_claireNightWalkLvl3
         
         $ claireNightWalkLvl =+ 1
         
@@ -278,19 +278,19 @@ label avaNight:
     $ avaNightWalkActive = True
     
     if avaNightWalkLvl == 1:
-        call avaNightWalkLvl1
+        call avaNightWalkLvl1 from _call_avaNightWalkLvl1
         
         $ avaNightWalkLvl =+ 1
         
         return
     elif avaNightWalkLvl == 2:
-        call avaNightWalkLvl2
+        call avaNightWalkLvl2 from _call_avaNightWalkLvl2
         
         $ avaNightWalkLvl =+ 1
         
         return
     elif avaNightWalkLvl == 3:
-        call avaNightWalkLvl3
+        call avaNightWalkLvl3 from _call_avaNightWalkLvl3
         
         $ avaNightWalkLvl =+ 1
         
@@ -303,19 +303,19 @@ label gunnerNight:
     $ gunnerNightWalkActive = True
     
     if gunnerNightWalkLvl == 1:
-        call gunnerNightWalkLvl1
+        call gunnerNightWalkLvl1 from _call_gunnerNightWalkLvl1
         
         $ gunnerNightWalkLvl =+ 1
         
         return
     elif gunnerNightWalkLvl == 2:
-        call gunnerNightWalkLvl2
+        call gunnerNightWalkLvl2 from _call_gunnerNightWalkLvl2
         
         $ gunnerNightWalkLvl =+ 1
         
         return
     elif gunnerNightWalkLvl == 3:
-        call gunnerNightWalkLvl3
+        call gunnerNightWalkLvl3 from _call_gunnerNightWalkLvl3
         
         $ gunnerNightWalkLvl =+ 1
         
@@ -328,19 +328,19 @@ label roriNight:
     $ roriNightWalkActive = True
     
     if roriNightWalkLvl == 1:
-        call roriNightWalkLvl1
+        call roriNightWalkLvl1 from _call_roriNightWalkLvl1
         
         $ roriNightWalkLvl =+ 1
         
         return
     elif roriNightWalkLvl == 2:
-        call roriNightWalkLvl2
+        call roriNightWalkLvl2 from _call_roriNightWalkLvl2
         
         $ roriNightWalkLvl =+ 1
         
         return
     elif roriNightWalkLvl == 3:
-        call roriNightWalkLvl3
+        call roriNightWalkLvl3 from _call_roriNightWalkLvl3
         
         $ roriNightWalkLvl =+ 1
         
@@ -356,19 +356,19 @@ label ellenNight:
     $ ellenNightWalkActive = True
     
     if ellenNightWalkLvl == 1:
-        call ellenNightWalkLvl1
+        call ellenNightWalkLvl1 from _call_ellenNightWalkLvl1
         
         $ ellenNightWalkLvl =+ 1
         
         return
     elif ellenNightWalkLvl == 2:
-        call ellenNightWalkLvl2
+        call ellenNightWalkLvl2 from _call_ellenNightWalkLvl2
         
         $ ellenNightWalkLvl =+ 1
         
         return
     elif ellenNightWalkLvl == 3:
-        call ellenNightWalkLvl3
+        call ellenNightWalkLvl3 from _call_ellenNightWalkLvl3
         
         $ ellenNightWalkLvl =+ 1
         
@@ -382,19 +382,19 @@ label mishkaNight:
     $ mishkaNightWalkActive = True
     
     if mishkaNightWalkLvl == 1:
-        call mishkaNightWalkLvl1
+        call mishkaNightWalkLvl1 from _call_mishkaNightWalkLvl1
         
         $ mishkaNightWalkLvl =+ 1
         
         return
     elif mishkaNightWalkLvl == 2:
-        call mishkaNightWalkLvl2
+        call mishkaNightWalkLvl2 from _call_mishkaNightWalkLvl2
         
         $ mishkaNightWalkLvl =+ 1
         
         return
     elif mishkaNightWalkLvl == 3:
-        call mishkaNightWalkLvl3
+        call mishkaNightWalkLvl3 from _call_mishkaNightWalkLvl3
         
         $ mishkaNightWalkLvl =+ 1
         

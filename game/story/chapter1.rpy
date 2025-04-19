@@ -2842,7 +2842,7 @@ label thirdDayOfClassStats:
 
     scene bg campus summer day clear with fade
 
-    play music "audio/music/vylet - Our Light and After (ft. Pepper Mei).ogg" fadein .5
+    play music "audio/music/vylet - by the seaside.ogg" fadein .5
 
     show box with Dissolve(.2):
         ypos 0
@@ -4680,9 +4680,13 @@ label thursday1:
             
             scene bg black with dissolve
             
+            stop music fadeout 2.0
+            
             pause .8
             
             scene bg avadorm with fade
+            
+            play music "audio/music/vylet - blockhead.ogg" fadein .4
             
             show box with Dissolve(.2):
                 ypos 0

@@ -3,7 +3,9 @@
 label roseNightWalkLvl1:
     $ nightEvents.remove("roseNight")
 
-    scene bg campus summer night clear with fade
+    scene bg campus summer night clear with dissolve
+    
+    play music "audio/music/vylet - wish.ogg" fadein .5
     
     show box with Dissolve(.2):
         ypos 0
@@ -142,6 +144,7 @@ label roseNightWalkLvl1:
             n "Maybe you should practice running, then she'll be impressed."
             n "You think you've had enough for tonight. Time to head back to your dorm and get some rest."
 
+    stop music fadeout 2.0
     
     return
     
@@ -188,7 +191,9 @@ label avaNightWalkLvl1:
     $ nightEvents.remove("avaNight")
     # see ava and gunner walking together, flirting. They're surprised to see you.
     
-    scene bg campus summer night clear with fade
+    scene bg campus summer night clear with dissolve
+    
+    play music "audio/music/Vylet Pony - lemonade.ogg" fadein .5
     
     show box with Dissolve(.2):
         ypos 0
@@ -260,6 +265,7 @@ label avaNightWalkLvl1:
     gunner @ say "What are you trying to say, bro?"
     
     menu:
+        gunner "{cps=0}What are you trying to say, bro?{/cps}"
         "Chastise him":
             player "That you're a manipulative fraud who's only personality is having money!"
             
@@ -280,6 +286,7 @@ label avaNightWalkLvl1:
             gunner @ say "So get over the fact that I'm more popular, taller, more fit, and more ambitious than you, cause money doesn't buy any of that!"
             
             menu:
+                gunner "{cps=0}So get over the fact that I'm more popular, taller, more fit, and more ambitious than you, cause money doesn't buy any of that!{/cps}"
                 "Lose respect for Gunner":
                     n "Wow he really blew up on you out of nowhere. Kinda cringe."
                     
@@ -467,6 +474,7 @@ label avaNightWalkLvl1:
             gunner @ say "What would you like your final photo to be? I'd want it to be me getting attacked by a great white shark."
             
             menu:
+                gunner "{cps=0}What would you like your final photo to be? I'd want it to be me getting attacked by a great white shark.{/cps}"
                 "Something paranormal":
                     player "I dunno, I guess something paranormal."
                     player "Like that unsolved case where that lady ended up in the rooftop water tower even though there's no way she could have gotten in there."
@@ -513,6 +521,7 @@ label avaNightWalkLvl1:
             ava @ say "I'm sure you guys masturbate to weirder stuff."
             
             menu:
+                ava "{cps=0}I'm sure you guys masturbate to weirder stuff.{/cps}"
                 "Yeah, I do":
                     player "Actually I do. That's not a problem, is it?"
                     
@@ -545,6 +554,8 @@ label avaNightWalkLvl1:
             gunner @ say "Never goon."
             
             n "You reflect on Gunner's wise words as you walk alongside him and Ava, bantering about random topics until you become too sleepy to continue and you all return to your dorms."
+            
+    stop music fadeout 2.0
 
     return
     
@@ -566,7 +577,9 @@ label avaNightWalkLvl3:
 label claireNightWalkLvl1:
     $ nightEvents.remove("claireNight")
     
-    scene bg campus summer night clear with fade
+    scene bg campus summer night clear with dissolve
+    
+    play music "audio/music/Vylet Pony - Cozy Pone.ogg" fadein .5
     
     show box with Dissolve(.2):
         ypos 0
@@ -656,6 +669,7 @@ label claireNightWalkLvl1:
     n "Which should you take?"
     
     menu:
+        n "{cps=0}Which should you take?{/cps}"
         "Army men":
             n "You pick up one of the based army dudes holding a rifle over his head like he's crossing water."
             n "He was probably on his way to commit war crimes in some third world country but got taken prisoner in that box for who knows how long."
@@ -953,6 +967,7 @@ label cachingHunt1:
     claire @ say "Dang, I didn't bring another reward. Now whoever finds this will think I'm just a taker and not a giver!"
 
     menu:
+        claire "{cps=0}Dang, I didn't bring another reward. Now whoever finds this will think I'm just a taker and not a giver!{/cps}"
         "Put your new trinket inside":
             n "You pull your newly acquired trinket from the last box and deposit it inside."
             n "Better to leave the next geocacher with a fun prize than for you to carry around more junk."
@@ -1019,6 +1034,8 @@ label cachingHunt1:
     claire @ say "Yeah!"
     
     n "You bid Claire a good night and return to your dorm for some much needed sleep."
+    
+    stop music fadeout 2.0
 
     return
     
@@ -1062,7 +1079,9 @@ label ellenNightWalkLvl3:
 label roriNightWalkLvl1:
     $ nightEvents.remove("roriNight")
     
-    scene bg campus summer night clear with fade
+    scene bg campus summer night clear with dissolve
+    
+    play music "audio/music/vylet - Hard to Say Anything.ogg" fadein .5
     
     show box with Dissolve(.2):
         ypos 0
@@ -1149,6 +1168,7 @@ label roriNightWalkLvl1:
     player "Nice."
     
     menu:
+        player "{cps=0}Nice.{/cps}"
         "I wanna climb":
             n "You feel around the wall, searching for any place to grip. The mortar between the bricks is rough but too narrow, only the very tips of your fingers can rest between them."
             
@@ -1254,6 +1274,8 @@ label roriNightWalkLvl1:
     hide rori with dissolve
             
     n "You walk Rori back to his dorm and bid him a good night before returning to your own dorm for some sleep now that you've gotten the zoomies out of you."
+    
+    stop music fadeout 2.0
 
     return
     
@@ -1274,7 +1296,9 @@ label roriNightWalkLvl3:
 label mishkaNightWalkLvl1:
     $ nightEvents.remove("mishkaNight")
     
-    scene bg campus summer night clear with fade
+    $ mishkaPoints =+ 1
+    
+    scene bg campus summer night clear with dissolve
     
     show box with Dissolve(.2):
         ypos 0
@@ -1286,6 +1310,8 @@ label mishkaNightWalkLvl1:
     n "To your surprise, it's not."
     
     scene bg cafe with fade
+    
+    play music "audio/music/vylet - blockhead.ogg" fadein .5
     
     show box with Dissolve(.2):
         ypos 0
@@ -1330,6 +1356,7 @@ label mishkaNightWalkLvl1:
     mishka @ say "Well uh... I'm not sure how to say..."
     
     menu:
+        mishka "{cps=0}Well uh... I'm not sure how to say...{/cps}"
         "Go on":
             player "Go on."
             
@@ -1365,6 +1392,7 @@ label mishkaNightWalkLvl1:
     mishka @ say "Just one more patch added on. Soon it will be nothing but patchwork."
     
     menu:
+        mishka "{cps=0}Just one more patch added on. Soon it will be nothing but patchwork.{/cps}"
         "It gives it character":
             player "The repairs give it character. Patches are in style!"
             
@@ -1432,6 +1460,8 @@ label mishkaNightWalkLvl1:
     mishka @ say "Oorah!"
     
     n "Mishka unplugs the sewing machine and hauls it over to the closet, then gets started on your drinks. You stay up late into the night chatting, even after your cups are empty."
+    
+    stop music fadeout 2.0
 
     return
     
