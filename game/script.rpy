@@ -4397,6 +4397,7 @@ default avaCommitted = False
 default roriCommitted = False
 default stayedUpWithClaire = False
 default romanticFantasy = False
+default celestineHot = False
 
 default roseNightWalkLvl = 1
 default gunnerNightWalkLvl = 1

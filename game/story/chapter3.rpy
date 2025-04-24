@@ -3214,6 +3214,8 @@ label chapter3AfterWeekend:
     n "Damn, Ms. Ellen is good at flipping a switch and acting like nothing's wrong when she lectures. If you didn't know any better you'd think she's pretty happy with her life."
     n "The way she smiles at students and wags her tail on the way out of the lecture hall disguises the Ellen you know on the rooftops."
     
+    ###end of demo?
+    
     scene bg classroom with dissolve
     
     play music "audio/music/mere - retrograde.ogg" fadein .5
@@ -4659,12 +4661,12 @@ label claireRoriHikeContinued:
     claire @ say "Then I'll kick its ass!"
     
     n "This is the least prepared you have ever been in the wild but somehow Claire's reassurance puts you somewhat at ease."
-    n "You look to Rori who is visibly disturbed by the idea of sleeping in the woods tonight."
+    n "You look to Rori who is visibly disturbed by the idea of spending a night in the woods tonight."
     
     show claire happy
     
     menu:
-        n "{cps=0}You look to Rori who is visibly disturbed by the idea of sleeping in the woods tonight.{/cps}"
+        n "{cps=0}You look to Rori who is visibly disturbed by the idea of spending a night in the woods tonight.{/cps}"
         "I dunno if this is a good idea":
             show rori neutral
                 
@@ -7228,324 +7230,341 @@ label cuddlepuddle:
     
     stop music fadeout 2.0
     
-    claire @ say "...Unless you wanna stay up and chat a bit more?"
+    if clairePoints > 3:
     
-    menu:   
-        claire "{cps=0}...Unless you wanna stay up and chat a bit more?{/cps}"
-        "Stay up":
-            $ clairePoints =+ 1
-            $ stayedUpWithClaire = True
-            $ romanticFantasy = True
-            
-            ###only 1 scene per char can be shown in 1 playthrough
-            
-            play music "audio/music/vylet - do you remember the song she sang.ogg" fadein .4
-            
-            n "You keep your voice low to not disturb the others."
-            
-            player "Yeah I don't mind chatting with you some more."
-            
-            n "Claire leans over and rests her chin on your head."
-            
-            claire @ say "I just wanted to say I'm glad we met and stuff."
-            claire @ say "And even if you end up rejecting my romantic advances, I still wanna be close friends with you."
-            
-            player "Yeah that sounds good."
-            player "I honestly don't know yet if we'd make a good couple but you guys have been the closest friends I've ever had."
-            
-            claire @ say "Aww~"
-            
-            if claireBullyLevel > 0:
-                claire @ say "That's as adorable as it is pathetic~"
+        claire @ say "...Unless you wanna stay up and chat a bit more?"
+        
+        menu:   
+            claire "{cps=0}...Unless you wanna stay up and chat a bit more?{/cps}"
+            "Stay up":
+                $ clairePoints =+ 1
+                $ stayedUpWithClaire = True
+                $ romanticFantasy = True
                 
-                player "Hey!"
+                ###only 1 scene per char can be shown in 1 playthrough
                 
-                claire @ say "What? You thought I'd stop bullying you just because we're having a heart-to-heart? Ksksksks!"
+                play music "audio/music/vylet - do you remember the song she sang.ogg" fadein .4
                 
-                if claireBullyLevel > 1:
-                    claire @ say "Honestly I should just force you to be my boyfriend~ It's not like you'd do anything to stop me~"
-                    
-            n "The bunny adjusts her snuggling position around everyone and nuzzles your head."
-            
-            claire @ say "Y'know, you're the only one I'm interested in but I'm curious if I have any competition."
-            claire @ say "I know you and Ava have a thing going on but I'm not sure how that's gonna work out with Gunner in the picture."
-            
-            menu:
-                claire "{cps=0}I know you and Ava have a thing going on but I'm not sure how that's gonna work out with Gunner in the picture.{/cps}"
-                "I'm hoping she'll choose me":
-                    player "She seems really indecisive but I'm hoping she'll choose me in the end."
-                    
-                    if avaPoints > 3:
-                        claire @ say "I'd say you have a good chance! She talks about you a lot when it's just us in our dorm~"
-                        
-                        player "Really? What does she say?"
-                        
-                        claire @ say "She likes how sincere you are compared to Gunner. How you're more down to earth and stuff."
-                        
-                        player "I guess not being an obnoxious rich prick is finally paying off for once."
-                    else:
-                        claire @ say "Hm, I'll be honest I think she's one move away from tying the knot with Gunner."
-                        claire @ say "It's hard to beat rich and athletic."
-                        #douchebag dudebro
-                        
-                        player "Fug."
-                        
-                    claire @ say "Yeah."
-                    claire @ say "It's still to early to say for sure though!"
-                    
-                    if intoFatChicks == False:
-                        claire @ say "Maybe I'd have a better chance if I was as skinny as her..."
-                        
-                        player "Don't worry, tons of guys want nothing more than a big beautiful bunny."
-                        
-                        claire @ say "Ksksksks I hope to meet one like you~"
-                    
-                "I don't really care":
-                    $ avaPoints =- 1
-                    
-                    player "I don't really care one way or another."
-                    player "Maybe if she asked me out I'd give her a shot but I don't wanna put in that much energy trying to compete with Gunner."
-                    
-                    claire @ say "Fair. It's hard to beat rich and athletic. Can't really blame her for going for that type of guy."
-                    
-                    if intoFatChicks == True:
-                        claire @ say "Maybe you'd be more interested in her if she weighed more than a sack of feathers! Ksksksks!"
-                        
-                        player "What's that supposed to mean??"
-                        
-                        claire @ say "Nothing! Just that you have a type~"
-                        
-                        player "I can't help enjoying thick curvy women. It's in my DNA."
-                        
-                        if reallyIntoFatChicks == True:
-                            claire @ say "Would ya believe me if I told you I lost about a hundred pounds over the past year?"
-                            
-                            player "No way."
-                            
-                            claire @ say "It's true~"
-                            claire @ say "Ksksksks maybe I'll put all that weight back on just for you~"
-                            
-                            player "Hnnnng that would be nice."
-                            
-                            if claireBullyLevel > 0:
-                                claire @ say "You're such a freak~"
-                            
-            claire @ say "Ok ok ok so what's going on with you and Rori? Are you...?"
-            
-            player "I'm not gay!"
-            
-            menu:
-                player "{cps=0}I'm not gay!{/cps}"
-                "Are you really?":
-                    if roriPoints > 3:
-                        player "But I would fuck that ram."
-                        
-                        claire @ say "I see the way he looks at you~ He'd probably let you~"
+                n "You keep your voice low to not disturb the others."
                 
-                    player "I mean..."
-                    player "Rori is sweet and all. We have a lot in common. I dunno, maybe I'd go out with him? Just to give it a chance?"
+                player "Yeah I don't mind chatting with you some more."
                 
-                    if claireBullyLevel == 2:
-                        claire @ say "Ksksksks I knew it, you're a fag~"
-                        
-                        player "...Maybe~"
-                        
-                        claire @ say "Cute UwU"
-                        
-                    if roriPoints > 3:
-                        claire @ say "I could see you two being a couple! A couple of nerds ksksks~"
-                    
-                    if roriPoints <= 3:
-                        claire @ say "Yeah I dunno if he really feels the same way about you. Maybe you need to be more open with him?"
-                        
-                        player "Hm, yeah I guess I should try and win him over more."
+                n "Claire leans over and rests her chin on your head."
                 
-                "Seriously, not gay.":
-                    player "Rori's cool and all but I haven't really thought about going out with him."
-                    player "I just wanna be bros."
-            
-                    claire @ say "Well if you change your mind, I've got a $50 bet with Ava that you'll go gay!"
+                claire @ say "I just wanted to say I'm glad we met and stuff."
+                claire @ say "And even if you end up rejecting my romantic advances, I still wanna be close friends with you."
+                
+                player "Yeah that sounds good."
+                player "I honestly don't know yet if we'd make a good couple but you guys have been the closest friends I've ever had."
+                
+                claire @ say "Aww~"
+                
+                if claireBullyLevel > 0:
+                    claire @ say "That's as adorable as it is pathetic~"
                     
-                    player "Yeah I don't think you're getting that $50."
+                    player "Hey!"
                     
-            claire @ say "Well is there anyone else you might be interested in?"
-            
-            menu:
-                claire "{cps=0}Well is there anyone else you might be interested in?{/cps}"
-                "Maybe...":
-                    player "Maybe but..."
+                    claire @ say "What? You thought I'd stop bullying you just because we're having a heart-to-heart? Ksksksks!"
                     
-                    claire @ say "But...?"
-                    
-                    player "Ok don't make fun of me but there's a girl I always enjoy seeing but it's hard to explain my feelings."
-                    
-                    claire @ say "Who?"
-                    
-                    menu:
-                        claire "{cps=0}Who?{/cps}"
-                        "Rose":
-                            $ rosePoints =+ 1
+                    if claireBullyLevel > 1:
+                        claire @ say "Honestly I should just force you to be my boyfriend~ It's not like you'd do anything to stop me~"
+                        
+                n "The bunny adjusts her snuggling position around everyone and nuzzles your head."
+                
+                claire @ say "Y'know, you're the only one I'm interested in but I'm curious if I have any competition."
+                claire @ say "I know you and Ava have a thing going on but I'm not sure how that's gonna work out with Gunner in the picture."
+                
+                menu:
+                    claire "{cps=0}I know you and Ava have a thing going on but I'm not sure how that's gonna work out with Gunner in the picture.{/cps}"
+                    "I'm hoping she'll choose me":
+                        player "She seems really indecisive but I'm hoping she'll choose me in the end."
+                        
+                        if avaPoints > 3:
+                            claire @ say "I'd say you have a good chance! She talks about you a lot when it's just us in our dorm~"
                             
-                            player "I don't think you've met her. She's this goth raccoon in my history class."
-                            player "She's always mean to me but that's kinda hot??"
+                            player "Really? What does she say?"
                             
-                            if claireBullyLevel > 0:
-                                claire @ say "Ksksksks I knew it, you have a fetish for being bullied~"
+                            claire @ say "She likes how sincere you are compared to Gunner. How you're more down to earth and stuff."
+                            
+                            player "I guess not being an obnoxious rich prick is finally paying off for once."
+                        else:
+                            claire @ say "Hm, I'll be honest I think she's one move away from tying the knot with Gunner."
+                            claire @ say "It's hard to beat rich and athletic."
+                            #douchebag dudebro
+                            
+                            player "Fug."
+                            
+                        claire @ say "Yeah."
+                        claire @ say "It's still to early to say for sure though!"
+                        
+                        if intoFatChicks == False:
+                            claire @ say "Maybe I'd have a better chance if I was as skinny as her..."
+                            
+                            player "Don't worry, tons of guys want nothing more than a big beautiful bunny."
+                            
+                            claire @ say "Ksksksks I hope to meet one like you~"
+                        
+                    "I don't really care":
+                        $ avaPoints =- 1
+                        
+                        player "I don't really care one way or another."
+                        player "Maybe if she asked me out I'd give her a shot but I don't wanna put in that much energy trying to compete with Gunner."
+                        
+                        claire @ say "Fair. It's hard to beat rich and athletic. Can't really blame her for going for that type of guy."
+                        
+                        if intoFatChicks == True:
+                            claire @ say "Maybe you'd be more interested in her if she weighed more than a sack of feathers! Ksksksks!"
+                            
+                            player "What's that supposed to mean??"
+                            
+                            claire @ say "Nothing! Just that you have a type~"
+                            
+                            player "I can't help enjoying thick curvy women. It's in my DNA."
+                            
+                            if reallyIntoFatChicks == True:
+                                claire @ say "Would ya believe me if I told you I lost about a hundred pounds over the past year?"
                                 
-                                player "I do not!"
-                                player "She doesn't really bully me, it's more like she wants to be on her own."
-                                player "...Okay maybe she does insult me frequently but that's besides the point."
+                                player "No way."
                                 
-                            claire @ say "What's her name?"
+                                claire @ say "It's true~"
+                                claire @ say "Ksksksks maybe I'll put all that weight back on just for you~"
+                                
+                                player "Hnnnng that would be nice."
+                                
+                                if claireBullyLevel > 0:
+                                    claire @ say "You're such a freak~"
+                                
+                claire @ say "Ok ok ok so what's going on with you and Rori? Are you...?"
+                
+                player "I'm not gay!"
+                
+                menu:
+                    player "{cps=0}I'm not gay!{/cps}"
+                    "Are you really?":
+                        if roriPoints > 3:
+                            player "But I would fuck that ram."
                             
-                            player "Rose. Rose Kaczynski."
+                            claire @ say "I see the way he looks at you~ He'd probably let you~"
+                    
+                        player "I mean..."
+                        player "Rori is sweet and all. We have a lot in common. I dunno, maybe I'd go out with him? Just to give it a chance?"
+                    
+                        if claireBullyLevel > 1:
+                            claire @ say "Ksksksks I knew it, you're a fag~"
                             
-                            claire @ say "No way, the dean's granddaughter??"
+                            player "...Maybe~"
                             
-                            player "Yeah, her."
+                            claire @ say "Cute UwU"
                             
-                            claire @ say "Ooh, you'd never have to work for a good grade in your life if you got with her~"
-                            
-                            player "Psh as if that's ever gonna happen. She flat out doesn't like me. At all."
-                            
-                            claire @ say "Ya just gotta get your foot in the door! Show her what a cool guy you are!"
-                            
-                            player "That's the hard part."
+                        if roriPoints > 3:
+                            claire @ say "I could see you two being a couple! A couple of nerds ksksks~"
                         
-                        "Mishka":
-                            $ mishkaPoints =+ 1
+                        if roriPoints <= 3:
+                            claire @ say "Yeah I dunno if he really feels the same way about you. Maybe you need to be more open with him?"
+                            
+                            player "Hm, yeah I guess I should try and win him over more."
+                    
+                    "Seriously, not gay.":
+                        player "Rori's cool and all but I haven't really thought about going out with him."
+                        player "I just wanna be bros."
+                
+                        claire @ say "Well if you change your mind, I've got a $50 bet with Ava that you'll go gay!"
                         
-                            player "So I go to the cafe on campus pretty often and like... Mishka is always just so kind to me."
-                            player "And she's just so cute I just wanna give her a hug but she seems so shy and distant I dunno if she'd ever let me."
-                            
-                            claire @ say "Aww, who wouldn't wanna give sweet little Mishka a hug!"
-                            claire @ say "But yeah I don't know much about her either."
-                            
-                            player "I kinda wish we could hang out with her more often as a group. She seems lonely."
-                            
-                            claire @ say "We should invite her to more stuff!"
-                            claire @ say "Maybe you two will get closer that way!"
-                            
-                            player "Yeah, that'd be nice."
-                            
-                        "Miss Ellen":
-                            $ ellenPoints =+ 1
-                    
-                            player "Uh well... How do I put it..."
-                            player "My Literature professor is kinda hot."
-                            
-                            claire @ say "Oh my~"
-                            claire @ say "I had no idea you were into older women! How am I supposed to compete with that!"
-                            
-                            player "It's not that..!"
-                            player "Okay maybe her MILF vibes have won me over but there's something more to it."
-                            player "I like how... mature she is?"
-                            player "Like she's older and wiser but it's really easy to chat with her. I've never been able to talk with older people like that before."
-                            player "She speaks to me like I'm a friend."
-                            
-                            claire @ say "Aww that does sound pretty sweet~"
-                            claire @ say "I guess if we're talking about teacher crushes, I'll say I'd do stuff with Mrs. Celestine~"
-                            claire @ say "Probably never gonna happen but how can I not think about what kind of antics she's been up to on her travels!"
-                            claire @ say "And she's the only professor who goes barefoot?? Who does that?!"
-                            
-                            menu:
-                                claire "{cps=0}And she's the only professor who goes barefoot?? Who does that?!{/cps}"
-                                "Agree":
-                                    player "Provocative French speaking, short dress wearing, paw beans exposed teacher... yeah I get the appeal."
+                        player "Yeah I don't think you're getting that $50."
+                        
+                claire @ say "Well is there anyone else you might be interested in?"
+                
+                menu:
+                    claire "{cps=0}Well is there anyone else you might be interested in?{/cps}"
+                    "Maybe...":
+                        player "Maybe but..."
+                        
+                        claire @ say "But...?"
+                        
+                        player "Ok don't make fun of me but there's a girl I always enjoy seeing but it's hard to explain my feelings."
+                        
+                        claire @ say "Who?"
+                        
+                        menu:
+                            claire "{cps=0}Who?{/cps}"
+                            "Rose":
+                                $ rosePoints =+ 1
+                                
+                                player "I don't think you've met her. She's this goth raccoon in my history class."
+                                player "She's always mean to me but that's kinda hot??"
+                                
+                                if claireBullyLevel > 0:
+                                    claire @ say "Ksksksks I knew it, you have a fetish for being bullied~"
                                     
-                                    claire @ say "Maybe I should go shoeless too."
+                                    player "I do not!"
+                                    player "She doesn't really bully me, it's more like she wants to be on her own."
+                                    player "...Okay maybe she does insult me frequently but that's besides the point."
                                     
-                                    player "Nice. Free the paws."
-                                "She's not for me":
-                                    player "She's not for me but who am I to judge."
+                                claire @ say "What's her name?"
+                                
+                                player "Rose. Rose Kaczynski."
+                                
+                                claire @ say "No way, the dean's granddaughter??"
+                                
+                                player "Yeah, her."
+                                
+                                claire @ say "Ooh, you'd never have to work for a good grade in your life if you got with her~"
+                                
+                                player "Psh as if that's ever gonna happen. She flat out doesn't like me. At all."
+                                
+                                claire @ say "Ya just gotta get your foot in the door! Show her what a cool guy you are!"
+                                
+                                player "That's the hard part."
+                            
+                            "Mishka":
+                                $ mishkaPoints =+ 1
+                            
+                                player "So I go to the cafe on campus pretty often and like... Mishka is always just so kind to me."
+                                player "And she's just so cute I just wanna give her a hug but she seems so shy and distant I dunno if she'd ever let me."
+                                
+                                claire @ say "Aww, who wouldn't wanna give sweet little Mishka a hug!"
+                                claire @ say "But yeah I don't know much about her either."
+                                
+                                player "I kinda wish we could hang out with her more often as a group. She seems lonely."
+                                
+                                claire @ say "We should invite her to more stuff!"
+                                claire @ say "Maybe you two will get closer that way!"
+                                
+                                player "Yeah, that'd be nice."
+                                
+                            "Miss Ellen":
+                                $ ellenPoints =+ 1
+                        
+                                player "Uh well... How do I put it..."
+                                player "My Literature professor is kinda hot."
+                                
+                                claire @ say "Oh my~"
+                                claire @ say "I had no idea you were into older women! How am I supposed to compete with that!"
+                                
+                                player "It's not that..!"
+                                player "Okay maybe her MILF vibes have won me over but there's something more to it."
+                                player "I like how... mature she is?"
+                                player "Like she's older and wiser but it's really easy to chat with her. I've never been able to talk with older people like that before."
+                                player "She speaks to me like I'm a friend."
+                                
+                                claire @ say "Aww that does sound pretty sweet~"
+                                claire @ say "I guess if we're talking about teacher crushes... Mrs. Celestine though~"
+                                claire @ say "Probably never gonna happen but how can I not think about what kind of antics she's been up to on her travels!"
+                                claire @ say "And she's the only professor who goes barefoot?? Who does that?!"
+                                
+                                player "I think my math professor does too."
+                                player "But she's like 50 billion years old."
+                                
+                                claire @ say "Aw."
+                                
+                                menu:
+                                    claire "{cps=0}Aw.{/cps}"
+                                    "But yeah Mrs. Celestine is hot":
+                                        $ celestineHot = True
                                     
-                                    claire @ say "I'm just saying! Since you brought it up, if I had to fuck one of my teachers she'd be high on the list!"
-                            
-                            
-                "Nah":
-                    player "No, not really. I'm just taking things one day at a time."
+                                        player "But yeah, a provacative French speaking, short dress wearing, paw beans exposed teacher... I can see the appeal."
+                                        
+                                        claire @ say "Maybe I should go shoeless too."
+                                        
+                                        player "Nice. Free the paws."
+                                    "I'm not really into Mrs. Celestine":
+                                        player "I guess Mrs. Celestine is cute but I hardly even know her."
+                                        player "She's not for me but who am I to judge?"
+                                        
+                                        claire @ say "I'm just saying! Since you brought it up, if I had to fuck one of my teachers she'd be high on the list!"
+                                
+                                
+                    "Nah":
+                        player "No, not really. I'm just taking things one day at a time."
+                        
+                        claire @ say "Fair enough! Ya never know what might happen!"
+                        
+                        player "I enjoy a good surprise."
                     
-                    claire @ say "Fair enough! Ya never know what might happen!"
+                n "Claire sighs and relaxes her grip on the cuddle puddle."
+                
+                claire @ say "It was kinda nice getting to talk openly with you like this."
+                claire @ say "I can't see the future so I have no idea what's in store for us."
+                claire @ say "But I imagine we'll become closer friends over the next few years while we study!"
+                
+                player "Yeah! I'd love that."
+                
+                claire @ say "And you and I might even start dating!"
+                claire @ say "But if not that's okay too!"
+                claire @ say "As long as you consider throwing this bun in the mix every now and then with your partner in bed~ Ksksksksk!"
+                
+                #$ randumb = renpy.random.randint(0, 4)
+                #
+                #if randumb == 0:
+                #    player "I guess it'd even out the gayness ratio if it's you, me, and Rori."
+                #    
+                #    claire @ say "Exactly! We can help Rori get over his phobia of women!"
+                #    claire @ say "...Or we can sandwich you between me and him."
+                #    
+                #    player "Yeah that could work- wait then I'd be bottoming for Rori!"
+                #    
+                #    claire @ say "Yeah? And?"
+                #    
+                #if randumb == 1:
+                #    #ava
+                #    player ""
+                #if randumb == 2:
+                #    #mishka
+                #if randumb == 3:
+                #    #rose
+                #if randumb == 4:
+                #    #ellen
+                #
                     
-                    player "I enjoy a good surprise."
+                if clairePoints > 5:
+                    player "I think I'd want you all to myself~"
+                    
+                    claire @ say "OwO"
+                    
+                #elif clairePoints > 3:
+                    #player ""
+                    
+                else:
+                    player "No promises."
+                    
+                    claire @ say "Aww..."
                 
-            n "Claire sighs and relaxes her grip on the cuddle puddle."
-            
-            claire @ say "It was kinda nice getting to talk openly with you like this."
-            claire @ say "I can't see the future so I have no idea what's in store for us."
-            claire @ say "But I imagine we'll become closer friends over the next few years while we study!"
-            
-            player "Yeah! I'd love that."
-            
-            claire @ say "And you and I might even start dating!"
-            claire @ say "But if not that's okay too!"
-            claire @ say "As long as you consider throwing this bun in the mix every now and then with your partner in bed~ Ksksksksk!"
-            
-            #$ randumb = renpy.random.randint(0, 4)
-            #
-            #if randumb == 0:
-            #    player "I guess it'd even out the gayness ratio if it's you, me, and Rori."
-            #    
-            #    claire @ say "Exactly! We can help Rori get over his phobia of women!"
-            #    claire @ say "...Or we can sandwich you between me and him."
-            #    
-            #    player "Yeah that could work- wait then I'd be bottoming for Rori!"
-            #    
-            #    claire @ say "Yeah? And?"
-            #    
-            #if randumb == 1:
-            #    #ava
-            #    player ""
-            #if randumb == 2:
-            #    #mishka
-            #if randumb == 3:
-            #    #rose
-            #if randumb == 4:
-            #    #ellen
-            #
-                
-            if clairePoints > 5:
-                player "I think I'd want you all to myself~"
-                
-                claire @ say "OwO"
-                
-            #elif clairePoints > 3:
-                #player ""
-                
-            else:
-                player "No promises."
-                
-                claire @ say "Aww..."
-            
-            claire @ say "Real talk though, I'm not just a horny rabbit who wants to fuck the last human."
-            claire @ say "That's just one part of my... romantic fantasy."
-            claire @ say "I think we've all got one of those."
-            claire @ say "Mine involves doing as much stuff as possible, trying new things, and living a fulfilling life right by my partner's side."
+                claire @ say "Real talk though, I'm not just a horny rabbit who wants to fuck the last human."
+                claire @ say "That's just one part of my... romantic fantasy."
+                claire @ say "I think we've all got one of those."
+                claire @ say "Mine involves doing as much stuff as possible, trying new things, and living a fulfilling life right by my partner's side."
 
-            player @ say "That does sound pretty nice."
-            player @ say "I'm not sure what mine is. I have a vague feeling of what I want but I couldn't begin to describe it."
-            
-            claire @ say "That's okay! You'll find it in due time!"
-            
-            player "I hope so."
-            player "*Yaaawn*"
-            player "Getting sleepy now."
-            
-            claire @ say "Same!"
-            claire @ say "About time we got some rest."
+                player @ say "That does sound pretty nice."
+                player @ say "I'm not sure what mine is. I have a vague feeling of what I want but I couldn't begin to describe it."
                 
-        "Go to bed":
-            player "I can barely keep my eyes open."
-            
-            claire @ say "Ah I see. Must've been all that hiking!"
-            claire @ say "No matter, we can chat whenever!"
+                claire @ say "That's okay! You'll find it in due time!"
+                
+                player "I hope so."
+                player "*Yaaawn*"
+                player "Getting sleepy now."
+                
+                claire @ say "Same!"
+                claire @ say "About time we got some rest."
+                    
+            "Go to bed":
+                player "I can barely keep my eyes open."
+                
+                claire @ say "Ah I see. Must've been all that hiking!"
+                claire @ say "No matter, we can chat whenever!"
+        
+        claire @ say "Nini [name]!"
+        
+        player "Goodnight Claire."
+        
+        n "You close your eyes, sandwiched between your fluffy friends, finding comfort in their warmth."
+        
+        scene bg black with fade
     
-    claire @ say "Nini [name]!"
-    
-    player "Goodnight Claire."
-    
-    n "You close your eyes, sandwiched between your fluffy friends, finding comfort in their warmth."
-    
-    scene bg black with fade
+    else:
+        claire @ say "Nini [name]!"
+        
+        player "Goodnight Claire."
 
-    
+        n "You close your eyes, sandwiched between your fluffy friends, finding comfort in their warmth."
+        
+        scene bg black with fade

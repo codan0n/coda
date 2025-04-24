@@ -3708,7 +3708,7 @@ label ellen_feeding_ducks:
             
             #margaret @ say "I'll take that as a compliment~"
             #margaret @ say "Some students just have a late start but I've had a few who inexplicably show up once then retake the class years later."
-            margaret @ say ""
+            #margaret @ say ""
             
             #player "Heh, wouldn't you be happy to see me in your class again in a few years?"
             

@@ -886,7 +886,7 @@ label liberation_day:
 
                 ava @ say "Fine, I'll do it! Just for tonight though!"
                 
-                n "You didn't even agg her on. She actually wants to do it but she had to play hard to get for all of 2 seconds."
+                n "You didn't even egg her on. She actually wants to do it but she had to play hard to get for all of 2 seconds."
                 
                 player "Sounds good to me!"
                 

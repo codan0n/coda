@@ -1093,7 +1093,7 @@ label roriNightWalkLvl1:
     n "When you step away from it and look up, you see a shadowy figure scaling the face of the building, jumping from brick to brick."
     n "He's on his way down and takes the last few jumps quicker than you expect. When he reaches the ground, his momentum leads him to nearly collide with you."
     
-    show rori angry at center:
+    show rori anxious at center:
         ypos -3000
         
     pause .2
