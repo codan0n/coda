@@ -3214,14 +3214,14 @@ label chapter3AfterWeekend:
     n "Damn, Ms. Ellen is good at flipping a switch and acting like nothing's wrong when she lectures. If you didn't know any better you'd think she's pretty happy with her life."
     n "The way she smiles at students and wags her tail on the way out of the lecture hall disguises the Ellen you know on the rooftops."
     
-    stop music fadeout 1.5
+    #stop music fadeout 1.5
     
-    scene bg black with fade
+    #scene bg black with fade
     
-    n "That's chapters 1 and 2 and the first half of chapter 3! I hope you enjoyed it!"
-    n "For access to the rest, please donate to {a=https://www.patreon.com/CodaVN}https://www.patreon.com/CodaVN{/a} or send some fanart you've made to {a=https://x.com/CodaVn}https://x.com/CodaVn{/a}"
+    #n "That's chapters 1 and 2 and the first half of chapter 3! I hope you enjoyed it!"
+    #n "For access to the rest, please donate to {a=https://www.patreon.com/CodaVN}https://www.patreon.com/CodaVN{/a} or send some fanart you've made to {a=https://x.com/CodaVn}https://x.com/CodaVn{/a}"
     
-    jump nothinglol
+    #jump nothinglol
     
     scene bg classroom with dissolve
     
@@ -3316,7 +3316,7 @@ label chapter3AfterWeekend:
                     claire @ say "Hell yeah!!"
             
         "It's nice when you speak it":
-            $ clairepoints += 1
+            $ clairePoints += 1
             
             show claire sweater happy
             
@@ -4871,7 +4871,7 @@ label claireRoriHikeContinued:
     
     rori @ say "Yeah but she's kinda..."
     
-    if roriPoints > 2:
+    if roriPoints > 3:
         player "Pushy?"
         
         show rori armscrossed surprised
@@ -7509,7 +7509,11 @@ label cuddlepuddle:
                 
                 claire @ say "And you and I might even start dating!"
                 claire @ say "But if not that's okay too!"
-                claire @ say "As long as you consider throwing this bun in the mix every now and then with your partner in bed~ Ksksksksk!"
+                claire @ say "I'd rather you just be happy, whatever it takes to get there!"
+                
+                player "Thanks. I hope you get a happy ending too."
+                
+                #claire @ say "As long as you consider throwing this bun in the mix every now and then with your partner in bed~ Ksksksksk!"
                 
                 #$ randumb = renpy.random.randint(0, 4)
                 #
@@ -7534,19 +7538,20 @@ label cuddlepuddle:
                 #    #ellen
                 #
                     
-                if clairePoints > 5:
-                    player "I think I'd want you all to myself~"
-                    
-                    claire @ say "OwO"
-                    
-                #elif clairePoints > 3:
-                    #player ""
-                    
-                else:
-                    player "No promises."
-                    
-                    claire @ say "Aww..."
+                #if clairePoints > 5:
+                #    player "I think I'd want you all to myself~"
+                #    
+                #    claire @ say "OwO"
+                #    
+                ##elif clairePoints > 3:
+                #    #player ""
+                #    
+                #else:
+                #    player "No promises."
+                #    
+                #    claire @ say "Aww..."
                 
+                claire @ say "Yeah..."
                 claire @ say "Real talk though, I'm not just a horny rabbit who wants to fuck the last human."
                 claire @ say "That's just one part of my... romantic fantasy."
                 claire @ say "I think we've all got one of those."
