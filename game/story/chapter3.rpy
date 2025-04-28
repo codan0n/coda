@@ -3214,14 +3214,14 @@ label chapter3AfterWeekend:
     n "Damn, Ms. Ellen is good at flipping a switch and acting like nothing's wrong when she lectures. If you didn't know any better you'd think she's pretty happy with her life."
     n "The way she smiles at students and wags her tail on the way out of the lecture hall disguises the Ellen you know on the rooftops."
     
-    #stop music fadeout 1.5
+    stop music fadeout 1.5
     
-    #scene bg black with fade
+    scene bg black with fade
     
-    #n "That's chapters 1 and 2 and the first half of chapter 3! I hope you enjoyed it!"
-    #n "For access to the rest, please donate to {a=https://www.patreon.com/CodaVN}https://www.patreon.com/CodaVN{/a} or send some fanart you've made to {a=https://x.com/CodaVn}https://x.com/CodaVn{/a}"
+    n "That's chapters 1 and 2 and the first half of chapter 3! I hope you enjoyed it!"
+    n "For access to the rest, please donate to {a=https://www.patreon.com/CodaVN}https://www.patreon.com/CodaVN{/a} or send some fanart you've made to {a=https://x.com/CodaVn}https://x.com/CodaVn{/a}"
     
-    #jump nothinglol
+    jump nothinglol
     
     scene bg classroom with dissolve
     
@@ -4858,6 +4858,7 @@ label claireRoriHikeContinued:
     player "You mean Claire dragging us into this?"
     player "That's just how she is. She's just trying to have a good time with us."
     
+    ###testing...
     #n "start [roriPoints]"
     
     #$ roriPoints += 1

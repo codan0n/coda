@@ -1484,7 +1484,7 @@ label exploring_campus:
             gunner "{cps=0}What about you? You down?{/cps}"
             "Join":
                 $ signedUpForFraternity = True
-                $ gunnerpoints += 1
+                $ gunnerPoints += 1
                 
                 player "Yeah but only for the free stuff."
                 
@@ -1499,7 +1499,7 @@ label exploring_campus:
                 n "Gunner holds out his fist."
                 n "As is customary, you are forced to give him a fist bump."
             "Don't join":
-                $ gunnerpoints -= 1
+                $ gunnerPoints -= 1
                 
                 player "Nah, I'd rather not."
                 
