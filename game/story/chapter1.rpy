@@ -355,7 +355,7 @@ label college_orientation:
     show margaret happy
 
     margaret @ say "Welcome to Harmonia University, new students! My name is Margaret Ellen and I'm very excited to introduce you to the next chapter of your lives!"
-    margaret @ say "This orientation marks the beginning of your journey into the finest acadamia has to offer! Everything you'll learn and experience over the next four years starts here."
+    margaret @ say "This orientation marks the beginning of your journey into the finest academia has to offer! Everything you'll learn and experience over the next four years starts here."
 
     hide margaret with dissolve
     
@@ -483,7 +483,7 @@ label college_orientation:
     menu:
         rori "{cps=0}Computer engineering! I've always loved messing around with computers. I taught myself how to program since my high school didn't have any classes for it.{/cps}"
         "Hahaha nerrrrd":
-            $ roriPoints =- 1
+            $ roriPoints -= 1
             $ calledRoriNerd = True
 
             show rori neutral
@@ -517,7 +517,7 @@ label college_orientation:
             player "I'll cross that one off the list."
 
         "Play any games?":
-            $ roriPoints =+ 1
+            $ roriPoints += 1
             
             show rori neutral
 
@@ -886,7 +886,7 @@ label college_orientation:
         menu:
             rori "{cps=0}I haven't had it online in over 48 hours and I need to run some updates. I hope my package manager doesn't break my Xorg session again...{/cps}"
             "Cool, you use Loonix?":
-                $ roriPoints =+ 1
+                $ roriPoints += 1
                 
                 show rori neutral
             
@@ -1237,7 +1237,7 @@ label exploring_campus:
         menu:
             claire "{cps=0}What about you, [name]?{/cps}"
             "Yah":
-                $ clairePoints =+ 1
+                $ clairePoints += 1
                 $ signedUpForSorority = True
                 
                 player "You know what, sure, sign me up."
@@ -1426,7 +1426,7 @@ label exploring_campus:
                 
                 gunner @ say "Hahahaha if that's your type there's plenty of jacked Alpha guys. They practically live at the gym."
             "Lay off him, dude":
-                $ roriPoints =+ 1
+                $ roriPoints += 1
                 
                 player "So what? Lay off him, dude."
                 
@@ -1484,7 +1484,7 @@ label exploring_campus:
             gunner "{cps=0}What about you? You down?{/cps}"
             "Join":
                 $ signedUpForFraternity = True
-                $ gunnerpoints =+ 1
+                $ gunnerpoints += 1
                 
                 player "Yeah but only for the free stuff."
                 
@@ -1499,7 +1499,7 @@ label exploring_campus:
                 n "Gunner holds out his fist."
                 n "As is customary, you are forced to give him a fist bump."
             "Don't join":
-                $ gunnerpoints =- 1
+                $ gunnerpoints -= 1
                 
                 player "Nah, I'd rather not."
                 
@@ -1581,7 +1581,7 @@ label exploring_campus:
                     
                     mishka @ say "Now what can I get for you?"
                 "Leave them off":
-                    $ mishkaPoints =+ 1
+                    $ mishkaPoints += 1
                     
                     player "It's fine, you can leave them off. It's comfier this way."
                     
@@ -2024,7 +2024,7 @@ label firstDayOfClass:
                 
                 gunner @ say "Hah, don't be afraid to laugh, I know I'm funny!"
             "Don't say anything":
-                $ gunnerPoints =- 1
+                $ gunnerPoints -= 1
                 
                 n "You pretend you're still waiting for the punchline and remain silent."
                 
@@ -2258,7 +2258,7 @@ label secondDayOfClass:
                 
                 claire @ say "Good, cause I was gonna sit here anyway."
             "Go right ahead!":
-                $ clairePoints =+ 1
+                $ clairePoints += 1
                 
                 player "Go ahead! Here lemme get that for you."
                 
@@ -2342,7 +2342,7 @@ label secondDayOfClass:
     menu:
         celestine "{cps=0}Next up, you there!{/cps}"
         "Same as Claire, it was random.":
-            $ clairePoints =+ 1
+            $ clairePoints += 1
             
             n "You shrug."
 
@@ -2416,7 +2416,7 @@ label secondDayOfClass:
     menu:
         claire "{cps=0}Heyyyyy, wanna be study partners?{/cps}"
         "Sure, why not?":
-            $ clairePoints =+ 1
+            $ clairePoints += 1
             
             player "Sure, why not?"
             
@@ -2564,8 +2564,8 @@ label secondDayOfClass:
     menu:
         claire "{cps=0}How does lunch tomorrow sound?{/cps}"
         "Heck yeah!":
-            $ avaPoints =+ 1
-            $ clairePoints =+ 1
+            $ avaPoints += 1
+            $ clairePoints += 1
             $ avaClaireLunch = True
             
             player "Heck yeah, that sounds nice."
@@ -4257,7 +4257,7 @@ label afterAvaText1:
         menu:
             rori "{cps=0}About... well, nevermind. It's dumb.{/cps}"
             "It's probably not dumb":
-                $ roriPoints =+ 1
+                $ roriPoints += 1
                 
                 player "If you're thinking about it so hard, it's probably not dumb."
                 
@@ -4553,8 +4553,8 @@ label thursday1:
     menu:
         n "{cps=0}She says with a wink and playfully nudges you.{/cps=0}"
         "I'd love to!":
-            $ frenchSkill =+ 1
-            $ clairePoints =+ 1
+            $ frenchSkill += 1
+            $ clairePoints += 1
             $ claireFrenchSession = 1
             
             player "I'd love to!"
@@ -4782,8 +4782,8 @@ label thursday1:
             jump thursdayNight1Study
             
         "Sorry, I'm not into fat chicks.":
-            $ claireBias =+ 1
-            $ calledClaireFat =+ 1
+            $ claireBias += 1
+            $ calledClaireFat += 1
             $ intoFatChicks = False
             
             player "Sorry, I'm not into fat chicks."
@@ -4825,16 +4825,16 @@ label thursdayNight1Study:
     menu:
         n "{cps=0}What should you study?{/cps}"
         "French":
-            $ frenchSkill =+ 1
+            $ frenchSkill += 1
             n "You pick up your French textbook and practice some lessons."
         "Literature":
-            $ literatureSkill =+ 1
+            $ literatureSkill += 1
             n "You open your totally legally acquired epub of [currentbook] and start reading."
         "History":
-            $ historySkill =+ 1
+            $ historySkill += 1
             n "You crack open your History textbook and read up on some ancient cultures."
         "Statistics":
-            $ statsSkill =+ 1
+            $ statsSkill += 1
             n "You flip open your statistics book and open a calculator app to crunch some numbers."
             
     n "It took a while, but you now feel more confident in your understanding of the topic."
@@ -5570,16 +5570,16 @@ label sunday2Evening:
     menu:
         n "{cps=0}What should you study?{/cps}"
         "French":
-            $ frenchSkill =+ 1
+            $ frenchSkill += 1
             n "You pick up your French textbook and practice some lessons."
         "Literature":
-            $ literatureSkill =+ 1
+            $ literatureSkill += 1
             n "You open your totally legally acquired epub of [currentbook] and start reading."
         "History":
-            $ historySkill =+ 1
+            $ historySkill += 1
             n "You crack open your History textbook and read up on some ancient cultures."
         "Statistics":
-            $ statsSkill =+ 1
+            $ statsSkill += 1
             n "You flip open your statistics book and open a calculator app to crunch some numbers."
             
     n "It took a while, but you now feel more confident in your understanding of the topic."

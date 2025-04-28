@@ -34,7 +34,7 @@ label chapter2start:
     menu:
         rothbauer "{cps=0}Anyone?{/cps}"
         "Ancient Egypt":
-            $ historySkill =+ 1
+            $ historySkill += 1
         
             "No one else says anything so you raise your hand and take a guess."
             
@@ -425,8 +425,8 @@ label week2Tuesday:
     menu:
         n "{cps=0}He's not.{/cps}"
         "Look at Rose's answers.":
-            $ rosePoints =- 1
-            $ badEnd =+ 1
+            $ rosePoints -= 1
+            $ badEnd += 1
             
             n "Any way to pass, right? It's not like history is that important anyway."
             n "You sneak a few glances at Rose's sheet until she seems to notice."
@@ -680,16 +680,16 @@ label week2Tuesday:
             n "Arcoonians fostered a fiercely individualist mindset that idealized liberty and sovereign freedom."
             n "Despite being united under general governance, battles between settlements were common. It's unclear what they fought over but the ruling class believed that it \"culled the weak.\""
         "French":
-            $ frenchSkill =+ 1
+            $ frenchSkill += 1
             n "You pick up your French textbook and practice some lessons."
         "Literature":
-            $ literatureSkill =+ 1
+            $ literatureSkill += 1
             n "You open your totally legally acquired epub of [currentbook] and start reading."
         "History":
-            $ historySkill =+ 1
+            $ historySkill += 1
             n "You crack open your History textbook and read up on some ancient cultures."
         "Statistics":
-            $ statsSkill =+ 1
+            $ statsSkill += 1
             n "You flip open your statistics book and open a calculator app to crunch some numbers."
     
     
@@ -996,7 +996,7 @@ label week2Tuesday:
             n "Claire lets out a disappointed sigh but doesn't say anything."
         "Okay!":
             $ photoWithClaire = True
-            $ clairePoints =+ 1
+            $ clairePoints += 1
             
             show ava happy
             
@@ -1021,8 +1021,8 @@ label week2Tuesday:
 
             player "Great..."
         "Alright but I'm getting my picture taken with you next.":
-            $ clairePoints =- 1
-            $ avaPoints =+ 1
+            $ clairePoints -= 1
+            $ avaPoints += 1
             $ photoWithAva = True
             $ photoWithClaire = True
             
@@ -1180,7 +1180,7 @@ label week2Tuesday:
     menu:
         rose "{cps=0}Give those to me. Now.{/cps=0}"
         "Only if you let me write a page of the project":
-            $ goodEnd =+ 1
+            $ goodEnd += 1
             $ writingHistoryPaper = True
             
             n "You might end up regretting this later but you feel bad for making Rose do all the work."
@@ -1308,16 +1308,16 @@ label week2Tuesday:
     menu:
         n "{cps=0}What should you study?{/cps}"
         "French":
-            $ frenchSkill =+ 2
+            $ frenchSkill += 2
             n "You pick up your French textbook and practice some lessons."
         "Literature":
-            $ literatureSkill =+ 2
+            $ literatureSkill += 2
             n "You open your totally legally acquired epub of [currentbook] and start reading."
         "History":
-            $ historySkill =+ 2
+            $ historySkill += 2
             n "You crack open your History textbook and read up on some ancient cultures."
         "Statistics":
-            $ statsSkill =+ 2
+            $ statsSkill += 2
             n "You flip open your statistics book and open a calculator app to crunch some numbers."
             
     n "Without the distractions in place you feel like you learned more than you normally do."
@@ -2480,16 +2480,16 @@ label hospital_bound:
     menu:
         n "{cps=0}What should you study?{/cps}"
         "French":
-            $ frenchSkill =+ 1
+            $ frenchSkill += 1
             n "You pick up your French textbook and practice some lessons."
         "Literature":
-            $ literatureSkill =+ 1
+            $ literatureSkill += 1
             n "You open your totally legally acquired epub of [currentbook] and start reading."
         "History":
-            $ historySkill =+ 1
+            $ historySkill += 1
             n "You crack open your history textbook and read up on some ancient cultures."
         "Statistics":
-            $ statsSkill =+ 1
+            $ statsSkill += 1
             n "You flip open your statistics book and open a calculator app to crunch some numbers."
     
     n "Time flies and before you know it, it's dark out."
@@ -2671,31 +2671,31 @@ label hospital_bound:
             menu:
                 n "{cps=0}Or at least pass the time browsing the web.{/cps}"
                 "Read for literature":
-                    $ literatureSkill =+ 1
+                    $ literatureSkill += 1
                     
-                    n "You lean over and reach into your backpack to pull out your copy of [currentBook]."
+                    n "You lean over and reach into your backpack to pull out your copy of [currentbook]."
                     n "Luckily you had your headphones in your bag as well. You put them on and get to reading."
                 "Work on stats homework":
-                    $ statsSkill =+ 1
+                    $ statsSkill += 1
                     
                     n "You lean over and reach into your backpack to pull out your stats textbook."
                     n "Luckily you had your headphones in your bag as well. You put them on and get to studying."
                     n "\"Given the rarity of a particular disease .02 and the chance of a false negative .08, find the probability that a patient actually has the disease if the test yields a positive result...\""
                 "Study history":
-                    $ historySkill =+ 1
+                    $ historySkill += 1
                     
                     n "You don't have any homework in history but it would still do you some good to crack open the textbook and do a bit of studying for the test."
                     n "Luckily you had your headphones in your bag as well. You put them on and start reading."
                     n "You don't remember where class left off so you flip to a random page."
                     n "In his final moments before his execution, the leader of the expedition famously said to the Arcoonian tribe..."
                 "Practice French":
-                    $ frenchSkill =+ 1
+                    $ frenchSkill += 1
                     
                     n "Better brush up on your French, it's one of those things where if you don't use it you lose it."
                     n "Luckily you had your headphones in your bag as well. You put them on and start reading."
                     n "Il fait un temps affreux translates to the weather is terrible! Take note of the use of Il fait, which means it makes or it does, rather than it is..."
                 "Browse pinstagram":
-                    $ avaPoints =+ 1
+                    $ avaPoints += 1
                     
                     n "You know what, you really don't feel like doing homework right now."
                     n "Instead, you'd like to indulge in the finer arts society has to offer."
@@ -2855,7 +2855,7 @@ label hospital_bound:
         jump aftermenu2
 
     label choice4:
-        $ clairePoints =+ 1
+        $ clairePoints += 1
         $ clairephonethx = True
 
         call phone_after_menu from _call_phone_after_menu_3
@@ -3285,7 +3285,7 @@ label monty_hall:
             herschel @ say "Very good Gunner, I'll add a point to your final grade."
             
         "Change your selection":
-            $ goodEnd =+ 1
+            $ goodEnd += 1
             
             n "Before you can say anything, Gunner pipes up."
             
@@ -3953,7 +3953,7 @@ label ellen_feeding_ducks:
             ava @ say "W-where did that come from?!"
             
         "She's FAT!":
-            $ calledClaireFat =+ 1
+            $ calledClaireFat += 1
             
             player "It's because you're fat."
             
@@ -3972,8 +3972,8 @@ label ellen_feeding_ducks:
             menu:
                 "{cps=0}Is that a bad thing?{/cps}"
                 "Hell no!":
-                    $ clairePoints =+ 1
-                    $ avaPoints =- 1
+                    $ clairePoints += 1
+                    $ avaPoints -= 1
                     
                     player "Hell no! I like chunky bunnies. Thick rabbits are the best."
                     
@@ -4011,7 +4011,7 @@ label ellen_feeding_ducks:
                             claire @ say "Wow, you human men really are something else ksksksks!~"
                             
                 "Kinda":
-                    $ clairePoints =- 1
+                    $ clairePoints -= 1
                     $ intoFatChicks = False
                     
                     player "N-not at all. You're perfectly friend shaped."
@@ -4024,8 +4024,8 @@ label ellen_feeding_ducks:
                     
                     ava @ say "Oof."
                 "Yes":
-                    $ claireBias =+ 1
-                    $ calledClaireFat =+ 1
+                    $ claireBias += 1
+                    $ calledClaireFat += 1
                     $ intoFatChicks = False
                     
                     player "I'm just saying your should eat a salad every so often."
@@ -4455,7 +4455,7 @@ label ellen_feeding_ducks:
     with dissolve
     
     if mishkaMallSpecialActive == True:
-        $ badEnd =+ 1
+        $ badEnd += 1
     
     #set to false because you're missing mishka's mall scene if you go with gunner or ava
     $ mishkaMallSpecialActive = False
@@ -4542,8 +4542,8 @@ label liberation_eve:
     menu:
         n "{cps=0}You've got some time before French. Maybe you should try and talk to her?{/cps}"
         "Follow her":
-            $ frenchSkill =- 2
-            $ ellenPoints =+ 2
+            $ frenchSkill -= 2
+            $ ellenPoints += 2
             
             n "Ms. Ellen seemed kinda out of it today. Perhaps it'd cheer her up if one of her students checked to see if she's alright."
             n "You manage to spot her among the crowd and follow her into the stairwell. The clacking of her heels against the concrete stairs echoes as she approaches the rooftop access door."
@@ -4639,7 +4639,7 @@ label liberation_eve:
             menu:
                 player "{cps=0}Oh right. That.{/cps=0}"
                 "I think I'm dying":
-                    $ ellenPoints =+ 1
+                    $ ellenPoints += 1
 
                     player "I think I'm dying."
 
@@ -4695,7 +4695,7 @@ label liberation_eve:
             n "Better hurry along now!"
 
         "Don't follow her":
-            $ rosePoints =+1
+            $ rosePoints +=1
             $ roseNicodemusCampusScene = True
             
             n "It's kinda creepy to stalk your professor like that. You should just chill for the next half hour you have before your next class."
@@ -4781,7 +4781,7 @@ label liberation_eve:
                     $ avaPoints += 1
                     $ clairePoints += 1
                     $ roriPoints += 1
-                    $ gunnerPoints =+ 1
+                    $ gunnerPoints += 1
                 
                     player "I think so. I have a group I hang out with pretty regularly."
                     
@@ -4832,8 +4832,8 @@ label liberation_eve:
                     nicodemus @ say "Have a nice holiday, [name]!"
                     
                 "I'm not sure":
-                    $ rosePoints =+ 1
-                    $ ellenPoints =+ 1
+                    $ rosePoints += 1
+                    $ ellenPoints += 1
                     
                     player "I'm not really sure. I talk to a few people but I dunno if we're still gonna be talking in a few years."
                     
@@ -5589,7 +5589,7 @@ label liberation_eve:
         "Sit next to Claire":
             play music "audio/music/vylet - camelia.ogg" fadein .5
         
-            $ clairePoints =+ 1
+            $ clairePoints += 1
             
             n "Surprisingly, Claire has not occupied your bed and has instead opted recline against it whilst sitting on the floor, her arm elbow deep in a bag of chips."
             n "You decide to join her down there and grab a handful of chips when she takes her paw out."
@@ -5687,7 +5687,7 @@ label liberation_eve:
             n "You're getting pretty sleepy though so you hurry and get ready for bed."
 
         "Sit next to Ava":
-            $ avaPoints =+ 1
+            $ avaPoints += 1
             
             n "Ava had decided to occupy your bed, which is fine because it's the most comfortable spot and you wanted to sit next to her anyway."
             n "You plop down on it, bouncing her up into the air."
@@ -5852,7 +5852,7 @@ label liberation_eve:
             n "You're getting pretty sleepy so you hurry and get ready for bed."
 
         "Sit next to Rori":
-            $ roriPoints =+ 1
+            $ roriPoints += 1
 
             n "You approach Rori, who is sitting in your desk chair."
 

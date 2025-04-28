@@ -113,16 +113,16 @@ label libraryEvent:
     
     menu:
         "French":
-            $ frenchSkill =+ 2
+            $ frenchSkill += 2
             n "You pick up your French textbook and practice some lessons."
         "Literature":
-            $ literatureSkill =+ 2
+            $ literatureSkill += 2
             n "You open your totally legally acquired epub of [currentbook] and start reading."
         "History":
-            $ historySkill =+ 2
+            $ historySkill += 2
             n "You crack open your History textbook and read up on some ancient cultures."
         "Statistics":
-            $ statsSkill =+ 2
+            $ statsSkill += 2
             n "You flip open your statistics book and open a calculator app to crunch some numbers."
             
     n "Without the distractions in place you feel like you learned more than you normally do."
@@ -153,16 +153,16 @@ label dormStudy:
     menu:
         n "{cps=0}What should you study?{/cps}"
         "French":
-            $ frenchSkill =+ 1
+            $ frenchSkill += 1
             n "You pick up your French textbook and practice some lessons."
         "Literature":
-            $ literatureSkill =+ 1
+            $ literatureSkill += 1
             n "You open your totally legally acquired epub of [currentbook] and start reading."
         "History":
-            $ historySkill =+ 1
+            $ historySkill += 1
             n "You crack open your history textbook and read up on some ancient cultures."
         "Statistics":
-            $ statsSkill =+ 1
+            $ statsSkill += 1
             n "You flip open your statistics book and open a calculator app to crunch some numbers."
             
     n "It took a while, but you now feel more confident in your understanding of the topic."
@@ -224,19 +224,19 @@ label roseNight:
     if roseNightWalkLvl == 1:
         call roseNightWalkLvl1 from _call_roseNightWalkLvl1
         
-        $ roseNightWalkLvl =+ 1
+        $ roseNightWalkLvl += 1
         
         return
     elif roseNightWalkLvl == 2:
         call roseNightWalkLvl2 from _call_roseNightWalkLvl2
         
-        $ roseNightWalkLvl =+ 1
+        $ roseNightWalkLvl += 1
         
         return
     elif roseNightWalkLvl == 3:
         call roseNightWalkLvl3 from _call_roseNightWalkLvl3
         
-        $ roseNightWalkLvl =+ 1
+        $ roseNightWalkLvl += 1
         
         return
     else:
@@ -254,19 +254,19 @@ label claireNight:
     if claireNightWalkLvl == 1:
         call claireNightWalkLvl1 from _call_claireNightWalkLvl1
         
-        $ claireNightWalkLvl =+ 1
+        $ claireNightWalkLvl += 1
         
         return
     elif claireNightWalkLvl == 2:
         call claireNightWalkLvl2 from _call_claireNightWalkLvl2
         
-        $ claireNightWalkLvl =+ 1
+        $ claireNightWalkLvl += 1
         
         return
     elif claireNightWalkLvl == 3:
         call claireNightWalkLvl3 from _call_claireNightWalkLvl3
         
-        $ claireNightWalkLvl =+ 1
+        $ claireNightWalkLvl += 1
         
         return
     else:
@@ -280,19 +280,19 @@ label avaNight:
     if avaNightWalkLvl == 1:
         call avaNightWalkLvl1 from _call_avaNightWalkLvl1
         
-        $ avaNightWalkLvl =+ 1
+        $ avaNightWalkLvl += 1
         
         return
     elif avaNightWalkLvl == 2:
         call avaNightWalkLvl2 from _call_avaNightWalkLvl2
         
-        $ avaNightWalkLvl =+ 1
+        $ avaNightWalkLvl += 1
         
         return
     elif avaNightWalkLvl == 3:
         call avaNightWalkLvl3 from _call_avaNightWalkLvl3
         
-        $ avaNightWalkLvl =+ 1
+        $ avaNightWalkLvl += 1
         
         return
     else:
@@ -305,19 +305,19 @@ label gunnerNight:
     if gunnerNightWalkLvl == 1:
         call gunnerNightWalkLvl1 from _call_gunnerNightWalkLvl1
         
-        $ gunnerNightWalkLvl =+ 1
+        $ gunnerNightWalkLvl += 1
         
         return
     elif gunnerNightWalkLvl == 2:
         call gunnerNightWalkLvl2 from _call_gunnerNightWalkLvl2
         
-        $ gunnerNightWalkLvl =+ 1
+        $ gunnerNightWalkLvl += 1
         
         return
     elif gunnerNightWalkLvl == 3:
         call gunnerNightWalkLvl3 from _call_gunnerNightWalkLvl3
         
-        $ gunnerNightWalkLvl =+ 1
+        $ gunnerNightWalkLvl += 1
         
         return
     else:
@@ -330,19 +330,19 @@ label roriNight:
     if roriNightWalkLvl == 1:
         call roriNightWalkLvl1 from _call_roriNightWalkLvl1
         
-        $ roriNightWalkLvl =+ 1
+        $ roriNightWalkLvl += 1
         
         return
     elif roriNightWalkLvl == 2:
         call roriNightWalkLvl2 from _call_roriNightWalkLvl2
         
-        $ roriNightWalkLvl =+ 1
+        $ roriNightWalkLvl += 1
         
         return
     elif roriNightWalkLvl == 3:
         call roriNightWalkLvl3 from _call_roriNightWalkLvl3
         
-        $ roriNightWalkLvl =+ 1
+        $ roriNightWalkLvl += 1
         
         return
     else:
@@ -358,19 +358,19 @@ label ellenNight:
     if ellenNightWalkLvl == 1:
         call ellenNightWalkLvl1 from _call_ellenNightWalkLvl1
         
-        $ ellenNightWalkLvl =+ 1
+        $ ellenNightWalkLvl += 1
         
         return
     elif ellenNightWalkLvl == 2:
         call ellenNightWalkLvl2 from _call_ellenNightWalkLvl2
         
-        $ ellenNightWalkLvl =+ 1
+        $ ellenNightWalkLvl += 1
         
         return
     elif ellenNightWalkLvl == 3:
         call ellenNightWalkLvl3 from _call_ellenNightWalkLvl3
         
-        $ ellenNightWalkLvl =+ 1
+        $ ellenNightWalkLvl += 1
         
         return
     else:
@@ -384,19 +384,19 @@ label mishkaNight:
     if mishkaNightWalkLvl == 1:
         call mishkaNightWalkLvl1 from _call_mishkaNightWalkLvl1
         
-        $ mishkaNightWalkLvl =+ 1
+        $ mishkaNightWalkLvl += 1
         
         return
     elif mishkaNightWalkLvl == 2:
         call mishkaNightWalkLvl2 from _call_mishkaNightWalkLvl2
         
-        $ mishkaNightWalkLvl =+ 1
+        $ mishkaNightWalkLvl += 1
         
         return
     elif mishkaNightWalkLvl == 3:
         call mishkaNightWalkLvl3 from _call_mishkaNightWalkLvl3
         
-        $ mishkaNightWalkLvl =+ 1
+        $ mishkaNightWalkLvl += 1
         
         return
     else:
@@ -1117,7 +1117,7 @@ label linaTown:
     menu:
         lina "{cps=0}Unless you've got someplace to be...{/cps}"
         "Stay and chat.":
-            $ goodEnd =+ 1
+            $ goodEnd += 1
             
             player "In that case, I suppose I can stay and chat a while longer."
             
@@ -1170,14 +1170,14 @@ label linaTown:
             menu:
                 n "{cps=0}Should you give her a tip?{/cps}"
                 "Tip $5":
-                    $ moneySpent =+ 5
+                    $ moneySpent += 5
                     
                     n "You pull a crisp 5 dollar bill from your wallet and drop it in her case."
                     
                     lina @ say "Thanks!~"
                 
                 "Tip $20":
-                    $ moneySpent =+ 20
+                    $ moneySpent += 20
                     
                     n "Oh what the hell, she deserves it more than you do."
                     n "You drop a 20 in her case and watch her eyes light up."
@@ -1215,14 +1215,14 @@ label linaTown:
             
             menu:
                 "Tip $5":
-                    $ moneySpent =+ 5
+                    $ moneySpent += 5
                     
                     n "You pull a crisp 5 dollar bill from your wallet and drop it in her case."
                     
                     lina @ say "Thanks!~"
                 
                 "Tip $20":
-                    $ moneySpent =+ 20
+                    $ moneySpent += 20
                     
                     n "Oh what the hell, she deserves it more than you do."
                     n "You drop a 20 in her case and watch her eyes light up."
@@ -1280,7 +1280,7 @@ label linaTown:
     menu:
         ava "{cps=0}It's not a true art!{/cps}"
         "Like photography?":
-            $ avaPoints =- 2
+            $ avaPoints -= 2
     
             player "Like how photography is just pointing and clicking?"
             
@@ -1404,7 +1404,7 @@ label mishkaCafe:
 
 
 label claireCafe:
-    $ clairePoints =+ 1
+    $ clairePoints += 1
     
     "claire cafe scene"
     

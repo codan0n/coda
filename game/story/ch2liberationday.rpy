@@ -669,12 +669,12 @@ label liberation_day:
                 menu:
                     gunner "{cps=0}Sooo... you're not into her?{/cps}"
                     "I didn't say that":
-                        $ avaPoints =+ 1
+                        $ avaPoints += 1
                     
                         player "I didn't say that."
                         player "I'm just saying I didn't pull any moves on her."
                     "She's not my type":
-                        $ avaPoints =- 2
+                        $ avaPoints -= 2
                         
                         player "Nah she's not really my type."
                         player "We were just hanging out as friends."
@@ -865,7 +865,7 @@ label liberation_day:
                 #menu:
                 #    ava "{cps=0}Aww, want me to snuggle you tonight and protect you?~{/cps}"
                 #    "Yes please":
-                $ avaPoints =+ 1
+                $ avaPoints += 1
                 
                 player "That would be delightful."
                 
@@ -1484,7 +1484,7 @@ label liberation_day:
         menu:
             gunner "{cps=0}What about you, [name]? Got any preferences?{/cps}"
             "Rose":
-                $ rosePoints =+ 1
+                $ rosePoints += 1
                 
                 player "There's this raccoon bitch named Rose in my history class..."
                 
@@ -1502,7 +1502,7 @@ label liberation_day:
                 gunner @ say "This is where it gets interesting. There's a loophole in the system."
                 gunner @ say "If we raid Claire's room, nobody can blame us if we get a little mixed up."
             "Mishka":
-                $ mishkaPoints =+ 1
+                $ mishkaPoints += 1
                 
                 player "So hear me out... Mishka?"
                 
@@ -1521,7 +1521,7 @@ label liberation_day:
                 gunner @ say "This is where it gets interesting. There's a loophole in the system."
                 gunner @ say "If we raid Claire's room, nobody can blame us if we get a little mixed up."
             "Miss Ellen":
-                $ ellenPoints =+ 1
+                $ ellenPoints += 1
                 
                 player "Haha wouldn't it be funny if we nabbed my literature professor's knickers haha I bet nobody's done that before."
                 
@@ -1726,7 +1726,7 @@ label liberation_day:
             jump raidStart
         
         label choiceSympathize:
-            $ roriPoints =+ 1
+            $ roriPoints += 1
             
             call phone_after_menu from _call_phone_after_menu_1
             
@@ -2622,7 +2622,7 @@ label liberation_day:
                     n "{cps=0}Give money to the fortune teller?{/cps}"
                     "Yes":
                         $ gnugift = True
-                        $ moneySpent =+ 5
+                        $ moneySpent += 5
                         
                         n "You won't be any poorer for giving him the money since you didn't realize you had it in the first place."
                         n "You hand over the crumpled bill and await the wisdom of the gnu."
@@ -2712,7 +2712,7 @@ label liberation_day:
             ypos 0
         
         if mishkaMall == True:
-            $ mishkaPoints =+ 1
+            $ mishkaPoints += 1
         
             n "Today's the day you finally get to hang out with Mishka."
             n "You put on your nicest casual clothes and head out."

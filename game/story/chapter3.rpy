@@ -117,9 +117,9 @@ label chapter3:
     menu:
         margaret "{cps=0}Damn, I was really counting on that cinnamon bun to get me through today...{/cps=0}"
         "Offer Miss Ellen your cinnamon roll":
-            $ ellenPoints =+ 1
+            $ ellenPoints += 1
             $ gaveCinRoll = True
-            $ badEnd =+ 1
+            $ badEnd += 1
             
             player "Well... I could give you mine. I don't really mind."
             
@@ -285,7 +285,7 @@ label chapter3:
     menu:
         player "{cps=0}Huh?{/cps}"
         "Of course!":
-            $ clairePoints =+ 1
+            $ clairePoints += 1
             
             player "Of course! I wanted to walk you to class today."
             
@@ -323,7 +323,7 @@ label chapter3:
     menu:
         celestine "{cps=0}Care to tell us, [name]?{/cps}"
         "Je faisais mes devoirs.":
-            $ frenchSkill =+ 1
+            $ frenchSkill += 1
         
             player "Je faisais mes devoirs."
             
@@ -676,7 +676,7 @@ label chapter3:
     
     menu:
         "Sit next to him":
-            $ roriPoints =+ 1
+            $ roriPoints += 1
             
             play music "audio/music/vylet - floating.ogg"
             
@@ -1183,7 +1183,7 @@ label chapter3:
     menu:
         gunner "{cps=0}Hope you won't be too jealous when I walk home holding Ava's wing~{/cps}"
         "Do it for Ava":
-            $ avaPoints =+ 2
+            $ avaPoints += 2
             $ holdingHands = "Ava"
             
             show gunner frown1
@@ -1216,7 +1216,7 @@ label chapter3:
                 ava @ say "Just try not to die, you two."
                 
         "Do it for Rori":
-            $ roriPoints =+ 2
+            $ roriPoints += 2
             $ holdingHands = "Rori"
             
             show gunner frown1
@@ -1253,7 +1253,7 @@ label chapter3:
             gunner @ say "..."
             gunner @ say "Whatever floats your boat bro."
         "Do it for Claire":
-            $ clairePoints =+ 2
+            $ clairePoints += 2
             $ holdingHands = "Claire"
             
             show gunner frown1
@@ -1293,7 +1293,7 @@ label chapter3:
         "Play the reverse card":
             $ avaPoints += 1
             $ holdingHands = "Gunner"
-            $ gunnerPoints =- 1
+            $ gunnerPoints -= 1
             
             show gunner frown1
         
@@ -1336,11 +1336,11 @@ label chapter3:
             claire @ say "He's too powerful!"
         
         "I literally don't care":
-            $ avaPoints =- 1
-            $ clairePoints =- 1
-            $ roriPoints =- 1
-            $ ellenPoints =+1
-            $ rosePoints =+1
+            $ avaPoints -= 1
+            $ clairePoints -= 1
+            $ roriPoints -= 1
+            $ ellenPoints +=1
+            $ rosePoints +=1
             $ holdingHands = "No one"
             
             show gunner frown1
@@ -2379,7 +2379,7 @@ label chapter3AfterWeekend:
     menu:
         n "{cps=0}She points to all the pieces of her contraption scattered across the floor.{/cps}"
         "Refuse":
-            $ rosePoints =- 1
+            $ rosePoints -= 1
             
             player "You've got hand-like paws, pick it up yourself."
             
@@ -2432,7 +2432,7 @@ label chapter3AfterWeekend:
             rose @ say "You're paying for this!"
             
             if gnugift == True:
-                $ rosePoints =+ 1
+                $ rosePoints += 1
                 $ fixedRosesCassette = True
                 
                 n "Wait a minute, that looks just like the gizmo that based homeless guy gave you."
@@ -2536,7 +2536,7 @@ label chapter3AfterWeekend:
                 menu:
                     n "{cps=0}900 dollars is a substantial chunk of your life savings.{/cps}"
                     "Pay":
-                        $ rosePoints =+ 1
+                        $ rosePoints += 1
                         
                         n "This kind of is your fault, even if Rose is being a cunt about it."
                         
@@ -2670,7 +2670,7 @@ label chapter3AfterWeekend:
     menu:
         gunner "{cps=0}No, but it was implied.{/cps}"
         "Cool, have fun":
-            #$ avaPoints =- 1
+            #$ avaPoints -= 1
             
             show gunner neutral
             
@@ -2731,7 +2731,7 @@ label chapter3AfterWeekend:
     menu:
         n "{cps=0}Gunner slips a $100 bill onto your desk.{/cps}"
         "Accept his bribe":
-            $ avaPoints =- 1
+            $ avaPoints -= 1
             $ claireHike = True
             
             $ gunnerBribeAccepted = True
@@ -2813,8 +2813,8 @@ label chapter3AfterWeekend:
             n "Gunner just glares at you, clearly displeased."
         
         "Make it $200":
-            $ avaPoints =- 2
-            $ badEnd =+ 1
+            $ avaPoints -= 2
+            $ badEnd += 1
             $ claireHike = True
             
             $ gunnerBribeAccepted = True
@@ -3066,7 +3066,7 @@ label chapter3AfterWeekend:
             margaret @ say "But I can't say I'm too happy with the result."
             
         "How did you get into literature?":
-            $ ellenPoints =+1
+            $ ellenPoints +=1
             
             player "How did you get into literature?"
             
@@ -3214,7 +3214,14 @@ label chapter3AfterWeekend:
     n "Damn, Ms. Ellen is good at flipping a switch and acting like nothing's wrong when she lectures. If you didn't know any better you'd think she's pretty happy with her life."
     n "The way she smiles at students and wags her tail on the way out of the lecture hall disguises the Ellen you know on the rooftops."
     
-    ###end of demo?
+    #stop music fadeout 1.5
+    
+    #scene bg black with fade
+    
+    #n "That's chapters 1 and 2 and the first half of chapter 3! I hope you enjoyed it!"
+    #n "For access to the rest, please donate to {a=https://www.patreon.com/CodaVN}https://www.patreon.com/CodaVN{/a} or send some fanart you've made to {a=https://x.com/CodaVn}https://x.com/CodaVn{/a}"
+    
+    #jump nothinglol
     
     scene bg classroom with dissolve
     
@@ -3261,7 +3268,7 @@ label chapter3AfterWeekend:
             menu:
                 claire "{cps=0}Aww don't be such a downer! If not for the French we might not have a class together!{/cps}"
                 "Now I hate them even more":
-                    $ clairepoints =- 1
+                    $ clairePoints -= 1
                     $ dissedClaire = True
                     
                     player "Yeah now I hate them even more."
@@ -3309,7 +3316,7 @@ label chapter3AfterWeekend:
                     claire @ say "Hell yeah!!"
             
         "It's nice when you speak it":
-            $ clairepoints =+ 1
+            $ clairepoints += 1
             
             show claire sweater happy
             
@@ -3638,8 +3645,8 @@ label chapter3AfterWeekend:
                 jump avaGunnerCampScene
                 
             "Change your plans":
-                $ avaPoints =- 2
-                $ clairePoints =+ 2
+                $ avaPoints -= 2
+                $ clairePoints += 2
                 $ avaHike = False
                 $ claireHike = True
                 
@@ -3924,7 +3931,7 @@ label chapter3AfterWeekend:
                                 
                                 n "She grabs a couple of twenties and stuffs them into her bra."
                                 
-                                $ money =- 60
+                                $ money -= 60
                                 
                                 player "What the hell! Give that back!"
                                 
@@ -4105,7 +4112,7 @@ label chapter3AfterWeekend:
                                     claire @ say "Good to have a backup plan~"
                             
                                 "You never know":
-                                    $ clairePoints =+ 1
+                                    $ clairePoints += 1
                                     
                                     player "You never know. Wouldn't it be really funny if we ended up dating?"
                                     
@@ -4829,7 +4836,7 @@ label claireRoriHikeContinued:
             
     #        rori @ say "Yeah..."
     #    "You alright?":
-    $ roriPoints =+ 1
+    $ roriPoints += 1
     
     player "You alright?"
     
@@ -4850,6 +4857,16 @@ label claireRoriHikeContinued:
     
     player "You mean Claire dragging us into this?"
     player "That's just how she is. She's just trying to have a good time with us."
+    
+    #n "start [roriPoints]"
+    
+    #$ roriPoints += 1
+    
+    #n "roripoints after += 1 is [roriPoints]"
+    
+    #$ roriPoints += 1
+    
+    #n "roripoints after += 1 is [roriPoints]"
     
     rori @ say "Yeah but she's kinda..."
     
@@ -4881,7 +4898,7 @@ label claireRoriHikeContinued:
         rori @ say "W-well... yeah!"
         
         show rori none
-        show rori angry
+        show rori angry neutral
         
         rori @ say "We may not get along that much but he still sees me as a bro."
         
@@ -4912,11 +4929,11 @@ label claireRoriHikeContinued:
         menu:
             rori "{cps=0}Yes that's why I'm gay, so what?{/cps}"
             "Me too lol":
-                $ roriPoints =+ 2
-                $ clairePoints =- 1
-                $ avaPoints =- 1
-                $ ellenPoints =- 1
-                $ rosePoints =- 1
+                $ roriPoints += 2
+                $ clairePoints -= 1
+                $ avaPoints -= 1
+                $ ellenPoints -= 1
+                $ rosePoints -= 1
                 
                 $ youGay = True
                 
@@ -4952,7 +4969,7 @@ label claireRoriHikeContinued:
                         
                         rori @ say "But we should really start gathering firewood before it gets dark!"
                     "Only for you":
-                        $ roriPoints =+ 1
+                        $ roriPoints += 1
                         
                         player "Think whatever you want, I'm not gay just because I'd do gay stuff with you."
                         
@@ -5010,7 +5027,7 @@ label claireRoriHikeContinued:
                         
                         rori @ say "Yeah, that sounds good."
                     "You wanna play Team Fortress 2 and...?":
-                        $ roriPoints =+ 1
+                        $ roriPoints += 1
                         
                         player "Hey you wanna play Team Fortress 2 and...? Uh... j-j-jerk off..."
                         
@@ -5031,8 +5048,8 @@ label claireRoriHikeContinued:
                 hide rori with dissolve
         
             "Girls aren't so bad":
-                $ roriPoints =- 1
-                $ roryPoints =+ 1
+                $ roriPoints -= 1
+                $ roryPoints += 1
                 
                 player "Girls aren't so bad. They have nice boobs."
                 
@@ -5145,7 +5162,7 @@ label claireRoriHikeContinued:
     menu:
         claire "{cps=0}Oop, could one of you grab my lighter? I think it's in my back pocket~{/cps}"
         "Jump at the opportunity":
-            $ clairePoints =+ 1
+            $ clairePoints += 1
             
             player "I got it!"
             
@@ -5178,7 +5195,7 @@ label claireRoriHikeContinued:
             n "You do as instructed and press down on the lighter switch under the tinder."
             
         "Just use your own lighter":
-            $ clairePoints =- 1
+            $ clairePoints -= 1
             
             player "No worries, I'll just use my own!"
             
@@ -5187,7 +5204,7 @@ label claireRoriHikeContinued:
             n "Claire frowns as you flip the lid off your lighter with a click and hold the flame underneath the tinder bundle."
             
         "Let Rori get it":
-            $ roriPoints =- 1
+            $ roriPoints -= 1
             
             n "You sit with your arms crossed waiting for Rori to do it."
             
@@ -5519,7 +5536,7 @@ label avaGunnerCampScene:
             menu:
                 n "{cps=0}Gunner looks up at the tree Ava's perched upon, her ass in plain view of you both, perfectly framed between the tree branches.{/cps}"
                 "Totally worth it":
-                    $ avaPoints =+ 1
+                    $ avaPoints += 1
                     
                     player "Totally worth it. I'd hike Mount Everest for her."
                     
@@ -5546,7 +5563,7 @@ label avaGunnerCampScene:
                     
                     gunner @ say "I'd like to see you try!"
                 "Meh":
-                    $ avaPoints =- 1
+                    $ avaPoints -= 1
                     
                     player "Meh, I've seen better."
                     
@@ -6204,7 +6221,7 @@ label cuddlepuddle:
     menu:
         claire "{cps=0}Who's next?{/cps}"
         "Rori":
-            $ roriPoints =+ 1
+            $ roriPoints += 1
             $ cuddlePuddleOrder[2] = "rori"
             
             player "Get over here, Rori!"
@@ -6620,7 +6637,7 @@ label cuddlepuddle:
                             scene bg stars with fade
             
         "Ava":
-            $ avaPoints =+ 1
+            $ avaPoints += 1
             $ cuddlePuddleOrder[2] = "ava"
             
             show claire happy
@@ -6811,8 +6828,8 @@ label cuddlepuddle:
                     scene bg stars with fade
                             
         "Gunner":
-            $ gunnerPoints =- 1
-            $ avaPoints =+ 1
+            $ gunnerPoints -= 1
+            $ avaPoints += 1
             $ cuddlePuddleOrder[2] = "gunner"
         
             show claire happy
@@ -6859,7 +6876,7 @@ label cuddlepuddle:
             
             menu:
                 "Rori next":
-                    $ roriPoints =- 1
+                    $ roriPoints -= 1
                     $ cuddlePuddleOrder[3] = "rori"
                     $ cuddlePuddleOrder[4] = "ava"
                     
@@ -7237,7 +7254,7 @@ label cuddlepuddle:
         menu:   
             claire "{cps=0}...Unless you wanna stay up and chat a bit more?{/cps}"
             "Stay up":
-                $ clairePoints =+ 1
+                $ clairePoints += 1
                 $ stayedUpWithClaire = True
                 $ romanticFantasy = True
                 
@@ -7305,7 +7322,7 @@ label cuddlepuddle:
                             claire @ say "Ksksksks I hope to meet one like you~"
                         
                     "I don't really care":
-                        $ avaPoints =- 1
+                        $ avaPoints -= 1
                         
                         player "I don't really care one way or another."
                         player "Maybe if she asked me out I'd give her a shot but I don't wanna put in that much energy trying to compete with Gunner."
@@ -7388,7 +7405,7 @@ label cuddlepuddle:
                         menu:
                             claire "{cps=0}Who?{/cps}"
                             "Rose":
-                                $ rosePoints =+ 1
+                                $ rosePoints += 1
                                 
                                 player "I don't think you've met her. She's this goth raccoon in my history class."
                                 player "She's always mean to me but that's kinda hot??"
@@ -7417,7 +7434,7 @@ label cuddlepuddle:
                                 player "That's the hard part."
                             
                             "Mishka":
-                                $ mishkaPoints =+ 1
+                                $ mishkaPoints += 1
                             
                                 player "So I go to the cafe on campus pretty often and like... Mishka is always just so kind to me."
                                 player "And she's just so cute I just wanna give her a hug but she seems so shy and distant I dunno if she'd ever let me."
@@ -7433,7 +7450,7 @@ label cuddlepuddle:
                                 player "Yeah, that'd be nice."
                                 
                             "Miss Ellen":
-                                $ ellenPoints =+ 1
+                                $ ellenPoints += 1
                         
                                 player "Uh well... How do I put it..."
                                 player "My Literature professor is kinda hot."

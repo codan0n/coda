@@ -1296,7 +1296,7 @@ label roriNightWalkLvl3:
 label mishkaNightWalkLvl1:
     $ nightEvents.remove("mishkaNight")
     
-    $ mishkaPoints =+ 1
+    $ mishkaPoints += 1
     
     scene bg campus summer night clear with dissolve
     

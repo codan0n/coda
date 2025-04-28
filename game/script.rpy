@@ -4655,7 +4655,13 @@ label start:
 
 call chapter1 from _call_chapter1
     
-
+label nothinglol:
+    scene bg black
+    
+    n "Thanks for playing!"
+    n "More to come in future updates!"
+    
+    return
 
 label ending:
 
@@ -4663,7 +4669,7 @@ label ending:
 
     ###
     n "Thanks for playing!"
-    n "More to come in a future update!"
+    n "More to come in future updates!"
     ###n "Credits in the \"About\" section on the main menu."
     #n "sprite highlighting code: Sodora"
 #    n "Writing: - Codanon, anonymous"
@@ -4681,6 +4687,5 @@ label ending:
 #    n "Notably based: @spakka5, @rexhastala, Mono, machapigeon, @lizardsart89, Loanshark, Vylet"
 
     n "twitter.com/codavn"
-
 
     return
