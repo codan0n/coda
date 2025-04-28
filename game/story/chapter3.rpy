@@ -3214,6 +3214,7 @@ label chapter3AfterWeekend:
     n "Damn, Ms. Ellen is good at flipping a switch and acting like nothing's wrong when she lectures. If you didn't know any better you'd think she's pretty happy with her life."
     n "The way she smiles at students and wags her tail on the way out of the lecture hall disguises the Ellen you know on the rooftops."
     
+    ###demo end
     #stop music fadeout 1.5
     
     #scene bg black with fade
@@ -6294,7 +6295,7 @@ label cuddlepuddle:
                         ava @ say "Claire!"
                         ava @ say "You can't just say that out loud!"
                         
-                        claire @ say "Yeah? Why not?"
+                        claire @ say "Yeah? Why not? Who's gonna stop me?"
                         
                         player "Haha you're joking right?"
                         player "...Right?"
