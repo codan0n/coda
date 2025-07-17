@@ -919,6 +919,7 @@ label chapter3:
     n "Gunner brought you to a lively restaurant in town and Rori joined up with you on the way."
     n "He was right, the seating was quick for your group despite the long line. He got you an outdoors table, fitting for such a pleasant day."
     n "After ordering drinks, you retreated to the restroom to take care of some business."
+    #n "Your bitcoin/shitcoins aren't doing so good."
     
     show ava pose smug
     show claire sweater suggestive 
@@ -2359,6 +2360,7 @@ label chapter3AfterWeekend:
     n "The classroom is pretty lively by the time you arrive. Everyone's chatting and laughing except for Rose."
     n "She sits with her head facing towards the window, staring out at the courtyard. A small rectangular box sits on her desk with a wire snaking around and splitting off into two ends that terminate at her ears."
     n "Weird, it doesn't look like any phone you've seen before."
+    #n "Wait, is that one of those cassette player things for boomers?"
     n "As you're squeezing between the row of desks you hear something fall to the ground with the sound of clattering plastics and shattering glass."
     n "The whole room goes silent and all eyes are on you."
     
@@ -2422,7 +2424,7 @@ label chapter3AfterWeekend:
             
             player "I'll get right on that."
             
-            n "Rose slots the pieces back together as you find them, though some are obviously too broken to be repaired like the window and some clips."
+            n "Rose slots the pieces back together as you find them, though some are obviously too broken to be repaired."
             n "You've gathered all the parts, or at least all the ones you can see from this aisle. Wait, there's one more under your desk."
             n "You reach for it and pass it up to Rose before sitting in your chair."
             
@@ -2430,6 +2432,8 @@ label chapter3AfterWeekend:
             
             rose @ say "Is that the flywheel? God dammit it's cracked to hell. Cheap piece of shit plastic, probably made by inferior human hands..."
             rose @ say "You're paying for this!"
+            
+            ###make a note that it's a cassette player?
             
             if gnugift == True:
                 $ rosePoints += 1
@@ -2525,7 +2529,7 @@ label chapter3AfterWeekend:
                 
                 rose @ say "$900."
                 
-                player "Nine hudred dollarydoos?!"
+                player "Nine hundred dollarydoos?!"
                 
                 rose @ say "Yeah, just 900. You're not poor are you?"
                 
@@ -2861,7 +2865,7 @@ label chapter3AfterWeekend:
             
             show gunner determined
             
-            gunner @ say "Yeah yeah, now text Ava and tell you you can't come."
+            gunner @ say "Yeah yeah, now text Ava and tell her you can't come."
             
             call phone_start from _call_phone_start_20
     
@@ -3120,7 +3124,7 @@ label chapter3AfterWeekend:
             
             player "So why'd you become one?"
             
-            n "She has to think for a moment, as if she's being searching for an answer to that question for a long time."
+            n "She has to think for a moment, as if she's been searching for an answer to that question for a long time."
             
             show margaret smoking melancholy shocked
             
@@ -3364,7 +3368,7 @@ label chapter3AfterWeekend:
             
             show claire sweater sad
             
-            n "Her desk topples back to its original position with a loud thud that reverberates around the entire room a few times."
+            n "Her desk topples back to its original position with a loud thud that reverberates around the entire room."
             
             player "I mean uhh... yeah I'm glad to get to see you so often."
             
@@ -3382,7 +3386,7 @@ label chapter3AfterWeekend:
             
             claire @ say "Ohmygosh I have to tell Ava about this!"
             
-            player "Tell her about what? We're just getting coffee together..."
+            player "Tell her about what? We're just getting drinks together..."
             
             n "Claire pulls out her phone and ignores you while texting up a storm to Ava."
             
@@ -4235,7 +4239,7 @@ label chapter3AfterWeekend:
         
         claire @ say "Well, [name]? You down to go on an adventure with me and Rori this weekend?"
         
-        player "What? You just stole my hangout buddy and now you're inviting me to come with you?"
+        player "You just stole my hangout buddy and now you're inviting me to come with you?"
         
         show claire flustered
         
@@ -4842,8 +4846,9 @@ label claireRoriHikeContinued:
     player "You alright?"
     
     rori @ say "Yeah, I just..."
-    rori @ say "I dunno why I'm here and doing this."
-    rori @ say "I hate being outside with all the bugs and the sun and getting tired walking around with nothing to do but I guess I don't have a choice now."
+    rori @ say "I dunno why I'm putting up with this."
+    rori @ say "I hate being outside with all the bugs and the sun and getting tired walking around with nothing to do."
+    rori @ say "But I guess I don't have a say in the matter."
     
     show rori concerned
     
@@ -5094,7 +5099,7 @@ label claireRoriHikeContinued:
         rori @ say "Or we could just refuse to go on her next \"adventure\" altogether."
         
         player "That too."
-        player "Let's just collect some firewood and survive this night, then go back home like nothing ever happened."        
+        player "Let's just collect some firewood and survive this night, then forget about all this."        
                 
         show rori sleepy
         
@@ -5182,7 +5187,7 @@ label claireRoriHikeContinued:
             else:
                 claire @ say "Ksksksks check the other pocket, hun~"
             
-            n "Turns out you were grabbing around the wrong pocket."
+            n "Turns out you were grabbing around in the wrong pocket."
             
             player "Oh. Here it is. Heh."
             
@@ -5241,7 +5246,7 @@ label claireRoriHikeContinued:
     show claire happy
     
     n "The bunny gets down on all fours and blows into the smoldering remains of the tinder bundle. Glowing orange embers light up and more smoke rises from it the more she blows."
-    n "With enought breaths, the twigs alight like match sticks, keeping the bundle hot until the bigger sticks reach their combustion point as well."
+    n "With enought breaths, the twigs alight like match sticks, keeping the bundle hot until the bigger sticks reach their combustion point."
     n "Against all odds, the thickest sticks you gathered burn high into the sky. Despite the cool autumn air around you, the fire is already making you sweat."
     n "Claire rolls some logs into the blaze and pokes at them with a long stick."
     
@@ -5280,7 +5285,7 @@ label claireRoriHikeContinued:
     
     claire @ say "Grab a stick and let's toast some marshmallows!"
     
-    n "Claire pulls a bag out from her shirt and tosses the sweet sugary treats to you."
+    n "Claire pulls a bag out from her bra and tosses the sweet sugary treats to you."
     
     player "Yay!"
     
@@ -5296,7 +5301,7 @@ label claireRoriHikeContinued:
     show rori worried noblush
     show claire surprised earsup
     
-    n "Suddenly the two of them snap their heads to the woods, ears perked up. You can't see a think in the darkness however."
+    n "Suddenly the two of them snap their heads to the woods, ears perked up. You can't see a thing in the darkness however."
     
     player "What? What is it?"
     
@@ -6379,8 +6384,48 @@ label cuddlepuddle:
                                 show ava at flipright
                                 
                                 n "Ava flutters over and settles in front of you. You wrap your arms around her and snuggle her close."
-                            
-                            gunner @ say "Aw man, no fair."
+                                
+                            if avaSnugglePlus == True:
+                                player "Hey, didn't you say next time we snuggled you'd be nude?"
+                                
+                                ava @ say "W-what??!"
+                                ava @ say "Oh yeahhhhh now I recall."
+                                ava @ say "I just said there'd be less clothes involved!"
+                                
+                                player "Then go ahead."
+                                
+                                ava @ say "Right here?? In front of everyone?!"
+                                
+                                gunner @ say "What the hell."
+                                
+                                claire @ say "No judgement in the cuddle puddle!"
+                                
+                                ava @ say "I guess I did agree to it... But I'm not going nude out here!"
+                                ava @ say "So take your pick, topless or bottomless."
+                                
+                                menu:
+                                    "Topless":
+                                        player "Topless."
+                                        
+                                        ava @ say "Fine. But I'm keeping my bra on."
+                                        
+                                        claire @ say "Coward.
+                                        
+                                        n "Ava unbuttons her shirt and tosses it aside."
+                                        
+                                        ava @ say "H-hey, quit staring and start cuddling!"
+                                    "Bottomless":
+                                        player "Bottomless."
+                                        
+                                        ava @ say "Fine. But I'm keeping my panties on."
+                                        
+                                        claire @ say "Coward."
+                                        
+                                        n "Ava shimmies out of her pants and tosses them aside."
+                                        
+                                        ava @ say "H-hey, quit staring and start cuddling!"
+                                        
+                            gunner @ say "This is so unfair."
                             
                             show ava typical smug
                             
@@ -6677,6 +6722,46 @@ label cuddlepuddle:
             
             ava @ say "Breeee~ Thanks~"
             
+            if avaSnugglePlus == True:
+                player "Hey, didn't you say next time we snuggled you'd be nude?"
+                
+                ava @ say "W-what??!"
+                ava @ say "Oh yeahhhhh now I recall."
+                ava @ say "I just said there'd be less clothes involved!"
+                
+                player "Then go ahead."
+                
+                ava @ say "Right here?? In front of everyone?!"
+                
+                gunner @ say "What the hell."
+                
+                claire @ say "No judgement in the cuddle puddle!"
+                
+                ava @ say "I guess I did agree to it... But I'm not going nude out here!"
+                ava @ say "So take your pick, topless or bottomless."
+                
+                menu:
+                    "Topless":
+                        player "Topless."
+                        
+                        ava @ say "Fine. But I'm keeping my bra on."
+                        
+                        claire @ say "Coward.
+                        
+                        n "Ava unbuttons her shirt and tosses it aside."
+                        
+                        ava @ say "H-hey, quit staring and start cuddling!"
+                    "Bottomless":
+                        player "Bottomless."
+                        
+                        ava @ say "Fine. But I'm keeping my panties on."
+                        
+                        claire @ say "Coward."
+                        
+                        n "Ava shimmies out of her pants and tosses them aside."
+                        
+                        ava @ say "H-hey, quit staring and start cuddling!"
+            
             show gunner annoyed at center with dissolve:
                 ypos y_gunner
                 xoffset 575
@@ -6707,7 +6792,7 @@ label cuddlepuddle:
                     
                     show gunner displeased
                     
-                    player "Why, so you can snuggle ram butt?"
+                    player "Why, so you can snuggle sheep butt?"
                     
                     show rori armscrossed worried at center with dissolve:
                         ypos y_rori
@@ -7103,6 +7188,8 @@ label cuddlepuddle:
     claire @ say "I guess the jig is up huh?"
     claire @ say "Yeah it's kinda true!"
     claire @ say "I want you [name]~"
+    
+    $ claireCommitted = True
     
     n "Wow, that's a lot to take in. You never would have imagined such a thing, even in your wildest dreams."
     
@@ -7592,3 +7679,5 @@ label cuddlepuddle:
         n "You close your eyes, sandwiched between your fluffy friends, finding comfort in their warmth."
         
         scene bg black with fade
+        
+    jump chapter4

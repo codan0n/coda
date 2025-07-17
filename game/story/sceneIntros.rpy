@@ -62,7 +62,7 @@ label avaClaireDormIntro:
     show box with Dissolve(.2):
         ypos 0
     
-    n "This is the first time you've ever been in a girl's room. This one being shared between Ava and Claire, their lifestyles are reflected in the stark contrast in their respective sides of the room."
+    n "This is one of the few times you've ever been in a girl's room. This one being shared between Ava and Claire, their lifestyles are reflected in the stark contrast in their respective sides of the room."
     n "Ava's side is tidy and clean with art books neatly stacked on the desk alongside expensive camera gear whereas Claire's half of the room is unkempt and disorganized."
     n "She also has a tendency to leave her underwear in random places."
     n "The duality of woman."

@@ -1554,8 +1554,10 @@ label exploring_campus:
     
     mishka @ say "How can I help you?"
     
+    n "Her voice is like a whisper, you can hardly hear it."
+    
     menu:
-        mishka "{cps=0}How can I help you?{/cps}"
+        n "{cps=0}Her voice is like a whisper, you can hardly hear it.{/cps}"
         "Why are the lights off?":
             player "Why are the lights off? Is the shop open?"
             
@@ -1851,10 +1853,13 @@ label firstDayOfClass:
     show rose skirt armscrossed dismissive pendant
 
     #rose @ say "Ugh. Do I have to?"
-    rose @ say "I can do the assignment on my own."
+    rose @ say "Can I just do the assignment on my own?"
     
-    rothbauer @ say "I'm sure you could, but that's not the point of this exercise. It's important for students to learn how to work with others, like in a real work environment!"
-    rothbauer @ say "I'll be checking in from time to time with each student to monitor each individual's progress and contributions to the project, so please make sure everyone in your group is pulling their weight."
+    rothbauer @ say "Technically yes, but you'd miss out on half the points!"
+    rothbauer @ say "Your grade depends on how well you work with your partners, so it's absolutely crucial that you all pull your weight and hold each other accountable!"
+    rothbauer @ say "I expect everyone to contribute their fair share! There's no excuses for skipping the presentation, even if you get hit by a bus on the day of!"
+    #Even if you're one foot in the grave, there's no excuses for "
+    #rothbauer @ say "I'll be checking in from time to time with each student to monitor each individual's progress and contributions to the project, so please make sure everyone in your group is pulling their weight."
     #rothbauer @ say "It's a great exercise in leadership and compromise that will serve you more in the long run than any history knowledge."
 
     rose @ say "Fine, whatever."
@@ -1868,7 +1873,8 @@ label firstDayOfClass:
     
     show rose skirt furiouspose pendant
 
-    rose @ say "To hell with that. I'll do it all on my own."
+    rose @ say "To hell with that! You'll just slow me down."
+    rose @ say "You can read your name aloud during the presentation but that's it."
 
     hide rose with dissolve
     
@@ -1963,7 +1969,7 @@ label firstDayOfClass:
 
         n "Looks like you made it before the teacher arrived."
         n "Nobody else is brave enough to sit in the front row, leaving you no choice but to take a seat there."
-        n "Somone sits right next to you and starts chatting you up like you're best friends."
+        n "Someone sits right next to you and starts chatting you up like you're best friends."
         
         show gunner cheeky1 at center with dissolve:
             ypos y_gunner
@@ -2043,6 +2049,8 @@ label firstDayOfClass:
     pause .1
     herschel "{nw}"
     
+    
+    
     show herschel with move:
         xoffset 270
 
@@ -2065,17 +2073,25 @@ label firstDayOfClass:
 
     gunner @ say "..."
     gunner @ say "Oh yeah."
-
-    hide gunner with dissolve
     
-    show herschel with move:
-        xoffset 0
+    herschel @ say "Moving on, my pronouns are she/her/they/them-"
+    
+    gunner @ say "That's new. What does they/them mean? Are you multiple people? Like split personalities or something?"
+    
+    herschel @ say "Honestly I don't know what is means. A colleague suggested I use these newfangled pronouns."
+    herschel @ say "And ever since I did, 37.5 percent of complaints filed against me have been classified as hate crimes!"
 
-    herschel @ say "That reminds me, I wanted to point out this can be a very challenging class."
-    herschel @ say "I recommend spending half an hour every night studying the textbook and working through the example problems."
+    #hide gunner with dissolve
+    
+    #show herschel with move:
+        #xoffset 0
+
+    #herschel @ say "That reminds me, I wanted to point out this can be a very challenging class."
+    #herschel @ say "I recommend spending half an hour every night studying the textbook and working through the example problems."
     #herschel @ say "That being said, feel free to ask as many questions as you'd like! If a student fails, then I've failed as a teacher after all."
     herschel @ say "Now then, we have much to get through and not a lot of time, so let's begin with some basics! A set is defined as a collection of elements..."
 
+    hide gunner with dissolve
     hide herschel with dissolve
 
     n "You notice Gunner aggressively taking notes throughout the whole class."
@@ -2152,10 +2168,19 @@ label secondDayOfClass:
     margaret @ say "Haha recently divorced... you know how it goes..."
 
     n "She quickly advances forward a few more slides."
+    
+    n "A girl with dyed blue fur raises her paw and blurts out a question."
+    
+    attendant "HI UM I WAS JUST WONDERING WHAT YOUR PRONOUNS ARE????"
+    
+    n "Miss Ellen lets out the most subtle of huffs but quickly goes back to cheery corporate professionalism. You get the feeling she's been asked this question before."
+    
+    margaret "Good question! I usually go by she/her but I include they/them in my email signatures because it makes me feel hip and young!"
+    margaret "You're not going to refer to me by any pronouns when speaking to me anyway, so I don't care which ones you use behind my back."
 
     show margaret neutral
 
-    margaret @ say "Ahem where was I? Oh yes, this course will introduce you to literature across a variety of different cultures throughout different time periods."
+    margaret @ say "Ahem, where was I? Oh yes, this course will introduce you to literature across a variety of different cultures throughout different time periods."
     margaret @ say "In the interest of time, most of the reading will be on the short side, or at least limited to excerpts from longer works."
     margaret @ say "In case you didn't get my email, you'll be responsible for procuring your own books, starting with a favorite of mine, Tolstoy's \"The Death of Ivan Ilyich!\""
     margaret @ say "You won't have a test on it until the end of next week but I'll expect you all to read the assigned chapters every night and keep up with the discussions in class."
@@ -2199,10 +2224,30 @@ label secondDayOfClass:
     show celestine neutral at center with dissolve:
         ypos y_celestine
 
-    celestine @ say "Bon après-midi! I am Mrs. Celestine and I'll be your French teacher for this semester, and hopefully the next one as well if you decide to stick with it!"
-
-    n "You become distracted from her introduction by the strange ripples that seem to appear out of nowhere in the translucent bottle of water on the professor's desk."
-    n "As the water starts to bounce more violently in the glass, you hear a rhythmic low pitched thud gradually getting louder."
+    celestine @ say "Bon après-midi! I am Mrs. Celestine and I'll be your professeur de français for this semester, and hopefully the next one as well if you decide to stick with it!"
+    #celestine @ say "Not a lot of students do however..."
+    celestine @ say "As per department regulations, I'm required to tell you my pronouns which are she/her/they/them!"
+    
+    n "Okay what is this trend of female professors being they/thems? You didn't know a single person in your hometown who talked about this. Maybe it's a city person thing."
+    
+    player "Excuse me, what does they/them mean?"
+    
+    celestine @ say "Oh? You've never heard of it?"
+    
+    player "No, we didn't have liberals in my hometown."
+    
+    celestine @ say "Um well...! It means... like... I'm not like the other women or... something like that."
+    
+    n "She looks down with a furrowed brow, as if this is the first time she's even considering the meaning of her self-imposed label."
+    
+    celestine @ say "A-anyway...! It's good to expand your horizons and try new things! You'll all be finding out a lot about yourselves throughout this class so it's important to keep an open mind!"
+    
+    n "Uh huh. You mindlessly nod along to her non-answer."
+    #n "She just goes on and on with her life story and you start to tune out of it.
+    n "Wait, what's that? You happen to notice something strange about the water bottle on her desk."
+    n "The liquid inside appears to be... rippling? It was subtle at first but the intensity of the waves increases over time."
+    #n "You become distracted from her introduction by the strange ripples that seem to appear out of nowhere in the translucent bottle of water on the professor's desk."
+    n "As the water starts to slosh around more violently, you begin to hear a rhythmic thudding sound that seems to be approaching."
     n "A moment later, the door crashes open and a wall of fluff squeezes through the doorframe."
 
     if metClaire == True:
@@ -4576,167 +4621,9 @@ label thursday1:
             n "Wow she's really eager to study."
             n "Claire grabs your hand and rushes you to her dorm."
             
-            if avaClaireDormIntroSeen == True:
-                scene bg avadorm with fade
-    
-                play music "audio/music/vylet - I Wish I Could Tell You.ogg" fadein .4
+            call claireFrenchStudy1
+            
                 
-                show box with Dissolve(.2):
-                    ypos 0
-                    
-            else:
-                call avaClaireDormIntro from _call_avaClaireDormIntro
-            
-            n "Ava is lying on her bed reading a magazine while listening to headphones."
-            n "She turned her eyes over to you when when Claire crashed through the doorway."            
-            
-            show ava reaching concerned at center with dissolve:
-                ypos y_ava
-                xoffset -600
-                xzoom -1
-            
-            ava @ say "Heya Claire. You alright?"
-            
-            show claire sweater happy at center with dissolve:
-                ypos y_claire
-                xoffset 500
-            
-            claire @ say "Ava, get out."
-            
-            show claire sweater leaning suggestive
-            
-            claire @ say "...unless you wanna join in on this 'study session' [name] and I are about to have."
-            
-            show ava reaching embarrassed
-            
-            ava @ say "I'll just uh, give you two some privacy."
-            ava "{nw}"
-            
-            pause .1
-            
-            show ava with move:
-                xoffset 2400
-            
-            n "Ava grabs her bag and flutters out of the room."
-            n "Without hesitation, Claire pins you between her warm soft body and the cold hard wall. She has a crazed look in her eyes and all you've got is your textbook to protect you."
-            
-            claire @ say "So~ Where did you want to begin~"
-            
-            player "Um well..."
-            player "Chapter 2-2 was giving me some trouble. I can't tell how to pronounce some of these French words that are a jumble of vowels."
-            
-            claire @ say "Ksksksks you're so adorable, acting committed to the role~"
-            
-            n "Role?"
-            n "Claire seems to think you're roleplaying like the textbook suggests."
-            n "You recall a scenario where one of you acts as a tourist in France needing help with the language. You guess you'll play along."
-            
-            claire @ say "Laisse-moi t'apprendre~"
-            
-            n "Claire lifts you off your feet and sets you down in a chair. She brushes aside a pair of panties on the desk and slams your textbook down where it was."
-            n "You feel something heavy and squishy rest atop your head as she leans over you."
-            
-            claire @ say "Il fait chaud ici, n'est-ce pas?"
-            
-            n "You think she's saying something about it being hot? You flip open your book and look around for an appropriate response."
-            
-            player "Uhh... oui assez chaud."
-            
-            show claire pose suggestive earsup
-            
-            claire @ say "Ça te dérange si j'enlève mon pull?"
-            
-            n "She tugs at the bottom of her sweater, airing out the heat beneath the fabric."
-            n "It's becoming difficult to keep track of the conversation as she uses more words you don't know."
-            n "She must have been reading ahead."
-            n "All you can offer is a basic observation about the sweater."
-            ###in later scenes if you've studied more you can say better things
-            
-            player "C'est un beau pull. Ça te va bien."
-            
-            show claire flustered
-            
-            claire @ say "Hrmm..."
-            
-            n "Claire racks her claws against the table impatiently while thinking."
-            
-            claire @ say "Il fait tellement chaud que je pourrais m'évanouir! Allons au lit!~"
-            
-            n "Before you have time to translate, you're hoisted out of the chair and thrown onto Claire's bed, face up."
-            
-            scene claire pov edited with fade
-            
-            show box:
-                ypos 0
-            
-            n "In the blink of an eye, the bunny pounces on top of you, thankfully propping herself up on her paws so as to not crush your frail human body."
-            n "Without your textbook to protect you, you'll have an even harder time navigating this strange conversation. You're still unfamiliar with the customs of France but Claire seems to be guiding you."
-            n "Perhap if you study more in your free time you'll have a better grasp on things."
-            
-            player "Is this how people normally talk in France?"
-            
-            claire "...From what I've read, yes."
-            claire "Maintenant, ne sois pas si timide~"
-            
-            scene bg black with dissolve
-            
-            stop music fadeout 2.0
-            
-            pause .8
-            
-            scene bg avadorm with fade
-            
-            play music "audio/music/vylet - blockhead.ogg" fadein .4
-            
-            show box with Dissolve(.2):
-                ypos 0
-            
-            n "An eternity passes with you and your study partner frequently changing position and whispering broken French to each other in this hot and sweaty room."
-            n "Though the odd body language still confuses you, you feel like you've learned a few new words and grammatical rules."
-            n "You've ended up lying on your back with your head in Claire's lap while she strokes your hair."
-            n "It's an incredibly soothing feeling. You could fall asleep right here."
-            n "You let out a yawn and check the time on your phone."
-            
-            show claire sweater happy at center with dissolve:
-                ypos y_claire
-
-            player "Man, it's getting late. I should get back to my dorm and get ready for tomorrow."
-            
-            n "You sit up, roll out of bed, and begin collecting your belongings."
-            
-            player "This was actually kinda fun. Like the whole 'roleplaying in French' thing. And I learned a lot!"
-            player "We should do this again sometime!"
-            
-            show claire sad
-            
-            claire @ say "...Seriously?"
-            
-            player "What?"
-            
-            claire @ say "Nothing... I had fun too."
-            
-            n "She seems disappointed. Was there something else she wanted to do?"
-            
-            show claire sweater pose suggestive
-            
-            claire @ say "Maybe next time we can do something... more fun than studying?~"
-            
-            n "Ohh she probably means playing video games."
-            ###download some french translated games for next time
-            
-            player "Sure, we can play around next time."
-            
-            claire @ say "Okay <3"
-            claire @ say "Yay <3"
-            
-            player "See you in class!"
-            
-            claire @ say "À un de ces quatre!"
-            
-            hide claire with dissolve
-            
-            stop music fadeout 2.0
-            
             scene bg codadorm with fade
             
             show box with Dissolve(.2):

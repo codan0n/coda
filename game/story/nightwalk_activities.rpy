@@ -1088,8 +1088,8 @@ label roriNightWalkLvl1:
 
     #rori climbs stuff due to his instincts, but only does it at night where he's less likely to be caught. He get paranoid and jumpy when the player discovers him and embarrassed, but offers to teach you how to climb
 
-    n "Your nightwalk brings you to an unassuming brick wall, much like any other brick wall the building here are made of."
-    n "But this one is different. Tiny pebbles fall from it and pelt your head."
+    n "Your nightwalk brings you to an unassuming brick wall, much like any other brick wall the buildings here are made of."
+    n "But something feels off. Tiny pebbles fall from it and pelt your head."
     n "When you step away from it and look up, you see a shadowy figure scaling the face of the building, jumping from brick to brick."
     n "He's on his way down and takes the last few jumps quicker than you expect. When he reaches the ground, his momentum leads him to nearly collide with you."
     

@@ -125,7 +125,7 @@ label libraryEvent:
             $ statsSkill += 2
             n "You flip open your statistics book and open a calculator app to crunch some numbers."
             
-    n "Without the distractions in place you feel like you learned more than you normally do."
+    n "Without any distractions in place you feel like you learned more than you normally do."
     
     return
     
@@ -1184,6 +1184,8 @@ label linaTown:
                     
                     lina @ say "Ohmygosh thanks!~"
                 "Let the intrusive thoughts win":
+                    $ playerBullyLevel += 1
+                    
                     hide lina with dissolve
                 
                     n "You crouch down to the saxophone case and reach into your wallet to make it look like you're going to drop in a bill."
@@ -1415,6 +1417,7 @@ label claireCafe:
     #she asks 'what do you think of that?'
     #choice to either distract her (tell her her hair is pretty today) or give a vague answer (yeah that's crazy)
     #these cafe scenes have the characters hint at their past
+    #she orders honey and salt latte
     
     return
 

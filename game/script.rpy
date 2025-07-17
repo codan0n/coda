@@ -1200,6 +1200,16 @@ layeredimage celestine excited:
         attribute say:
             "images/bubble.png"
 
+layeredimage claire topless surprised earsup:
+    at sprite_highlight('claire')
+    always:
+        'images/characters/claire/claire topless surprised earsup.png'
+    group saying:
+        xzoom .85
+        yzoom .63
+        pos (150,126)
+        attribute say:
+            "images/bubble.png"
 layeredimage claire sweater happy:
     at sprite_highlight('claire')
     always:
@@ -4391,13 +4401,18 @@ default rejectedAvasproposal = False
 default beakOrTailfeathers = ""
 default fixedRosesCassette = False
 default claireBullyLevel = 0
+default playerBullyLevel = 0
 default youGay = False
 default foughtGunner = False
+default claireCommitted = False
 default avaCommitted = False
 default roriCommitted = False
 default stayedUpWithClaire = False
 default romanticFantasy = False
 default celestineHot = False
+default almostKissedClaire = False
+default roseLibraryMidterms = False
+default avaLibraryMidterms = False
 
 default roseNightWalkLvl = 1
 default gunnerNightWalkLvl = 1
