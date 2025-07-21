@@ -4413,6 +4413,10 @@ default celestineHot = False
 default almostKissedClaire = False
 default roseLibraryMidterms = False
 default avaLibraryMidterms = False
+default suspicionOfDean = False
+default mishkaMidtermWeekendHangout = False
+default spatInRosesCoffee = False
+default drankOliviasCoffee = False
 
 default roseNightWalkLvl = 1
 default gunnerNightWalkLvl = 1

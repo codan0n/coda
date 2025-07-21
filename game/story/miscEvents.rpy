@@ -489,73 +489,74 @@ label claireFrenchStudy2:
                         
                 
             else:
-                "Yeah, kinda":
-                    player "Yeah, kinda. Until you barged in uninvited."
+                menu:
+                    "Yeah, kinda":
+                        player "Yeah, kinda. Until you barged in uninvited."
+                        
+                        ava @ say "Ahem, it's *my* dorm as well!"
+                        
+                        claire @ say "Can't a girl get some privacy with her human?"
+                        
+                        ava @ say "Oh? Are you two a couple now?"
+                        
+                        player "No."
+                        
+                        claire @ say "Not yet~"
+                        
+                        ava @ say "Don't you have your own dorm to yourself? You can have your fun over there."
+                        
+                        claire @ say "Great idea! Next time I'm coming over to your place [name]~"
+                        claire @ say "That way Ava can bring Gunner over here and it'll all work out!"
+                        
+                        ava @ say "Hey, who said I'm doing anything with Gunner?"
+                        
+                        claire @ say "Oh please, if you had a moment alone with him in private you'd be doing more than what [name] and I were about to do!"
+                        
+                        ava @ say "Not true! I'm still waiting to determine my feelings for him!"
+                        
+                        claire @ say "Well if you wait too long then your other options are gonna be taken!"
+                        
+                        ava @ say "I'll get with one of them when I'm good and ready!"
+                        
+                        menu:
+                            "Claire's right":
+                                player "Claire's right, Gunner seems like the boy for you."
+                                
+                                ava @ say "Ugh I knowwww but I still have feelings for someone else too..!"
+                                
+                                player "Who?"
+                                
+                                claire @ say "Should I tell him?"
+                                
+                                ava @ say "*sigh* No, he'll figure it out if it's meant to be."
+                            "You should wait and see":
+                                player "Yeah no need to rush, you'll find the true one for you when the time is right."
+                                
+                                ava @ say "See, [name] knows what it's all about. Romance is a delicate thing, you can't just bumrush your way in... *Claire*!"
+                                
+                                claire @ say "What? Boys are dense, you gotta let them know directly you want them, and even then they're still too stupid to get it half the time!"
+                                
+                                ava @ say "Ugh, I don't need this kind of stress during midterms week."
+                    "We were just acting out a scene":
+                        $ clairePoints -= 1
+                        
+                        player "We were just acting out a scene from our French textbook."
+                        player "Claire invited me over to study for our midterm on Thursday."
+                        player "I guess we got a little too in character."
                     
-                    ava @ say "Ahem, it's *my* dorm as well!"
-                    
-                    claire @ say "Can't a girl get some privacy with her human?"
-                    
-                    ava @ say "Oh? Are you two a couple now?"
-                    
-                    player "No."
-                    
-                    claire @ say "Not yet~"
-                    
-                    ava @ say "Don't you have your own dorm to yourself? You can have your fun over there."
-                    
-                    claire @ say "Great idea! Next time I'm coming over to your place [name]~"
-                    claire @ say "That way Ava can bring Gunner over here and it'll all work out!"
-                    
-                    ava @ say "Hey, who said I'm doing anything with Gunner?"
-                    
-                    claire @ say "Oh please, if you had a moment alone with him in private you'd be doing more than what [name] and I were about to do!"
-                    
-                    ava @ say "Not true! I'm still waiting to determine my feelings for him!"
-                    
-                    claire @ say "Well if you wait too long then your other options are gonna be taken!"
-                    
-                    ava @ say "I'll get with one of them when I'm good and ready!"
-                    
-                    menu:
-                        "Claire's right":
-                            player "Claire's right, Gunner seems like the boy for you."
-                            
-                            ava @ say "Ugh I knowwww but I still have feelings for someone else too..!"
-                            
-                            player "Who?"
-                            
-                            claire @ say "Should I tell him?"
-                            
-                            ava @ say "*sigh* No, he'll figure it out if it's meant to be."
-                        "You should wait and see":
-                            player "Yeah no need to rush, you'll find the true one for you when the time is right."
-                            
-                            ava @ say "See, [name] knows what it's all about. Romance is a delicate thing, you can't just bumrush your way in... *Claire*!"
-                            
-                            claire @ say "What? Boys are dense, you gotta let them know directly you want them, and even then they're still too stupid to get it half the time!"
-                            
-                            ava @ say "Ugh, I don't need this kind of stress during midterms week."
-                "We were just acting out a scene":
-                    $ clairePoints -= 1
-                    
-                    player "We were just acting out a scene from our French textbook."
-                    player "Claire invited me over to study for our midterm on Thursday."
-                    player "I guess we got a little too in character."
-                
-                    claire @ say "Y-yeah, I guess so..."
-                    
-                    ava @ say "Was being topless necessary for your studying too?"
-                    
-                    claire @ say "Nah, I was just hot."
-                    
-                    ava @ say "It *is* pretty hot in here."
-                    
-                    
-                    
-                    
-                    
-                    
+                        claire @ say "Y-yeah, I guess so..."
+                        
+                        ava @ say "Was being topless necessary for your studying too?"
+                        
+                        claire @ say "Nah, I was just hot."
+                        
+                        ava @ say "It *is* pretty hot in here."
+                        
+                        
+                        
+                        
+                        
+                        
                     
                     #ava @ say "How go the studies?"
                     

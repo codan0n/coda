@@ -6409,7 +6409,7 @@ label cuddlepuddle:
                                         
                                         ava @ say "Fine. But I'm keeping my bra on."
                                         
-                                        claire @ say "Coward.
+                                        claire @ say "Coward."
                                         
                                         n "Ava unbuttons her shirt and tosses it aside."
                                         
@@ -6746,7 +6746,7 @@ label cuddlepuddle:
                         
                         ava @ say "Fine. But I'm keeping my bra on."
                         
-                        claire @ say "Coward.
+                        claire @ say "Coward."
                         
                         n "Ava unbuttons her shirt and tosses it aside."
                         

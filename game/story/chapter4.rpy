@@ -7,6 +7,7 @@
     #draw teacher and nurse sprites
     #porcupine cameo?
     #add mini scenes like claire's coffee date (she gets honey and salt latte)
+    #dean's coffee scene
     
 #midterms are on thursday/friday so you have to hunker down on studying, but some distractions are in play
 #history exam has an extra credit question about dinosaurs
@@ -395,54 +396,454 @@ label chapter4:
     n "The library is packed with other students making their last stand. It's hard to even find a place to sit. Some are even sitting on the floor with their books sprawled out around them."
     
     
-    
-    
-    
-    
     $ randumb = renpy.random.randint(0, 1)
     
     if randumb == 0:
         $ roseLibraryMidterms = True
         
-        #com smug claire, furious claire
+        n "Every available spot is taken. All except for one table with a single occupant emitting bitch aura so strong it repels all others."
+        n "Be brave, [name]. Maybe if you sit at the far end she won't give you rabies."
+        n "You try to sneakily pull out the chair and sit down before she notices."
+        n "A sudden whizzing sound pierces the air followed by a stinging sensation on your hand, causing you to let go of the chair."
+        
+        player "Ow! What the fuck?"
+        
+        n "Looking down, you notice an ink splotch pooled in your fresh wound and a fountain pen lying on the ground."
+        
+        rose @ say "This table is reserved for God's chosen species. Get lost."
+        
+        menu:
+            "All I see is a filthy raccoon.":
+                player "All I see here is a filthy trash panda."
+                
+                
+            "I belong here then.":
+                player "Master species only? Then get out of my seat, trash panda."
+                
+                rose @ say "How dare you insinuate you're anything more than a barely evolved monkey!"
+                
+                player "I can't hear you over the sound of millenia of being the dominant species."
+                
+                rose @ say "Your time on this planet is long overdue!"
+                
+                player "And yet I'm still here."
+                
+                rose @ say "What have I done to deserve this hell?"
+                
+                menu:
+                    "WTF is your problem?":
+                        player "What the fuck is your problem? Why are you such a cunt?"
+                        
+                        rose @ say "Because I like being one."
+                        rose @ say "It's a raccoon thing, you wouldn't get it."
+                        
+                        player "Nah, tons of people are cunts and you're not special."
+                        
+                        rose @ say "You mean that animalistic sort of reactionary tendency? Please. You can barely see two steps ahead, let alone two hundred."
+                        rose @ say "Raccoons have a calculated view of the world and understand our place at the top. It's not our fault we're simply superior."
+                        
+                        player "So superior you ended up being trash gremlins once humans took over."
+                        
+                        rose @ say "We're a species of survival! No matter what we always end up on top!"
+                        rose @ say "The current age is proof of that! The human menace is nearly wiped out!"
+                        rose @ say "The president is a raccoon! The top 10 billionaires are raccoons! The dean of our university is a raccoon!"
+                        rose @ say "It's our world and you're just living in it."
+                        
+                        player "I still don't get why you have to be such a bitch. The dean is a nice guy for a raccoon."
+                        
+                        rose @ say "He's already peaked, he has it all and there's no more power left for him to seek."
+                        rose @ say "It's not like he'd tell you what he had to do to get where he is now."
+                        
+                        $ suspicionOfDean = True
+                        
+                        player "Whatever, I get it. Raccoons are simultaneously the most wrongfully persecuted group and the most powerful. Funny how that works."
+                        
+                        rose @ say "You don't know a damn thing about the world, do you? I'll give you a hint, it's not at all like your cheap public education told you."
+                        
+                    "Karma for being a bitch":
+                        player "Maybe it's just karma for you being such a bitch."
+                        
+                        rose @ say "Karma is something lesser species made up to feel good about themselves."
+                        
+                        player "It takes kindess and fairness to build a functioning society."
+                        
+                        rose @ say "That's what you think."
+                        
+                    "I'm literally just existing":
+                        player "I'm literally just existing here. Is that so bad?"
+                        
+                        rose @ say "Ugh you don't even realize how terrible you are. It'd be sad if it weren't so disgusting!"
+                        
+                        player "What is your problem with humans? We basically built civilization from the ground up. You'd still be living in trees if not for us."
+                        
+                        rose @ say "What an ignorant thing to say! And you genuinely believe it!"
+                        
+                        player "Uh yeah? Humans invented almost all the useful stuff while everyone else was living like their feral counterparts."
+                        
+                        rose @ say "This is your brain on human propaganda."
+                        
+                player "What's that supposed to mean."
+                        
+                rose @ say "It's not my job to educate you."
+                rose @ say "*Sigh*"
+                rose @ say "...But I will if you do something for me."
+                
+                player "What?"
+                
+                rose @ say "Go get me a coffee. No sugar or milk. I will kill you if you bring me a coffee with that junk in it."
+                
+                n "She thinks you'll spend your hard earned money buying her an overpriced coffee to listen to her lecture. Will you?"
+                
+                menu:
+                    "Go for it":
+                        player "Fine whatever, I wanted to get one for myself anyway. After I listen to your lecture, I want to copy your notes for the midterm."
+                        
+                        rose @ say "Deal."
+                        
+                        player "Be right back."
+                        
+                        call getRoseCoffee
+                    "Fuck that":
+                        $ frenchSkill += 1
+                        $ statsSkill += 1
+                        $ literatureSkill += 1
+                        
+                        player "Screw that, get your own damn coffee. I don't need your raccoonist lecture about how I'm so terrible because of my ancestors."
+                        
+                        rose @ say "Typical human scum..."
+                        
+                        n "You drop your backpack down onto the table and pull out your study material."
+                        n "Stupid raccoon bitch, who does she think she is?"
+                        n "You came here to study history but just looking at it makes you think of her."
+                        n "You decide to study everything other than it."
+                        n "You're better off in those classes now but you're not so sure you can ace the history test now. You'll just have to wing it cause it's getting late out."
+                        n "You pack your things and get ready to leave but Rose looks like she's about to pull an all nighter."
+                        
+                        jump midtermDay1                        
+                
+                
+                
+            "My mistake...":
+                player "Sorry, my mistake... Here's your fountain pen back please don't stab me with it."
+                
+                n "She snatches the pen from your hand and returns to writing her notes like nothing ever happened."
+                
+                rose @ say "...What? Go on, shoo."
+                rose @ say "Invasive species..."
+                
+                n "You look around at the table. It's full of open textbooks with print so tiny it strains your eyes to try reading them."
+                
+                player "Are you studying for the history midterm?"
+                
+                rose @ say "You think I need to study for that class?"
+                
+                n "On the surface she sounds offended but you can sense a hint of pride, scoffing at the notion that she wouldn't be prepared."
+                
+                rose @ say "I'm doing PhD level independent work, gathering sources and making sense of a very contested point in history."
+                
+                menu:
+                    "Tell me more":
+                        $ rosePoints += 1
+                        
+                        player "Sounds kinda interesting."
+                        
+                        rose @ say "You wouldn't get it."
+                        
+                        if historyPoints < 4:
+                            player "You're right, I can barely even keep up in class. You're clearly the expert here."
+                            
+                            rose @ say "At least you acknowledge your inherent ineptitude."
+                            
+                            player "I still wanna know what it's about though."
+                            
+                            n "Rose sighs and rolls her eyes."
+                            
+                        else:
+                            player "Maybe not but I bet my ancestors were there. Considering how important humans were to every recorded historical event ever."
+                            
+                            n "Rose sets down her pen and stands up in her chair to get level with you."
+                            
+                            rose @ say "Humanist propaganda!"
+                            rose @ say "The only reason you egotistical freaks ended up at the forefront of history is because you *burned* everything else to the ground."
+                            
+                            n "With a 'hmph' she sits back down and resumes her reading, trying to regain her composure."
+                            
+                            player "Really? First time I've heard of it."
+                        
+                        rose @ say "Perhaps if you get me a coffee I'll attempt to educate you on how your kind are a blight on civilization."
+                        rose @ say "If you can even understand it, that is."
+                        
+                    "Sounds boring":
+                        player "Lame. Are you getting paid for it or something?"
+                        
+                        rose @ say "I'm doing it out of my own interest. And it'll look good on a resume after I publish my results."
+                        
+                        player "What's it even about?"
+                        
+                        rose @ say "You wouldn't get it."
+                        
+                        if historyPoints < 4:
+                            player "You're right, I can barely even keep up in class. You're clearly the expert here."
+                            
+                            rose @ say "At least you acknowledge your inherent ineptitude."
+                            
+                            player "I still wanna know what it's about though."
+                            
+                            n "Rose sighs and rolls her eyes."
+                            
+                        else:
+                            player "Maybe not but I bet my ancestors were there. Considering how important humans were to every recorded historical event ever."
+                            
+                            n "Rose sets down her pen and stands up in her chair to get level with you."
+                            
+                            rose @ say "Humanist propaganda!"
+                            rose @ say "The only reason you egotistical freaks ended up at the forefront of history is because you *burned* everything else to the ground."
+                            
+                            n "With a 'hmph' she sits back down and resumes her reading, trying to regain her composure."
+                            
+                            player "Really? First time I've heard of it."
+                        
+                        rose @ say "Perhaps if you get me a coffee I'll attempt to educate you on how your kind are a blight on civilization."
+                        rose @ say "If you can even understand it, that is."      
+                        
+                n "She thinks you'll spend your hard earned money buying her an overpriced coffee to listen to her lecture. Will you?"
+                
+                menu:
+                    "Go for it":
+                        player "Fine whatever, I wanted to get one for myself anyway. How do you take it? Black like your soul?"
+                        
+                        rose @ say "Yes."
+                        
+                        player "Of course. Be right back."
+                        
+                        call getRoseCoffee
+                        
+                    "Fuck that":
+                        $ frenchSkill += 1
+                        $ statsSkill += 1
+                        $ literatureSkill += 1
+                        
+                        player "Screw that, get your own damn coffee."
+                        
+                        rose @ say "Don't tell me what to do!"
+                        
+                        player "Shut up and go back to studying! I've got my own studies to take care of."
+                        
+                        n "The two of you bury your noses in your books and pretend the other doesn't exist."
+                        n "Just thinking about history is annoying you because she's such a nerd for it."
+                        n "You decide to study everything other than it."
+                        n "By the time you leave, Rose is still writing her report."
+                        
+                        jump midtermDay1
+                
+            "I'm sitting here regardless":    
+                player "I'm sitting here whether you like it or not."
+                player "I have a right to be here. It's the school's library, you don't own it."
+                
+                rose @ say "I kinda do own it actually."
+                rose @ say "I can just tell my grandpa you're harassing me and he'll get you expelled, blacklisted, sent to Guantanamo, suicided by two bullets in the back of your head..."
+                rose @ say "Whichever I feel like."
+                
+                $ suspicionOfDean = True
+                
+                player "Ooh yeah I'm real scared of your kind old grandpa who's friendly to me."
+                ###if you've had coffee with him before mention it
+                
+                rose @ say "Looks can be deceiving. He can be ruthless. You have to be to get to where he is."
+                
+                player "Well let's just see what happens if I sit down. Oh wow nothing happened!"
+                
+                rose @ say "Nothing yet. You're wasting my time. You're supposed to shut the fuck up in a library."
+                
+                player "You're the one who can't resist bitching me out!"
+                
+                rose @ say "It's the least you deserve!"
+                
+                player "I deserve a quiet space to study!"
+                
+                n "You shove Rose's books aside and set down your bag, pulling out your notebooks."
+                n "Rose just scoffs and puts in her earbuds, trying to ignore your existence."
+                n "About an hour into studying, you start to feel drowsy but you have so much material left to cover."
+                n "Fffffuck you need a coffee if you're gonna survive. Luckily the cafe is only a short distance away."
+                n "You won't have to worry about someone stealing your spot while you're away with Rose guarding the table, so you take a trip down to Coffee Zone."
+                
+                scene bg cafe with fade
+                
+                
+                
+                
+                #in this route you get coffee for yourself but you can give it to rose
+                
+                jump midtermDay1
+                
+                
+                
+                
+                
+        #option to either get her coffee (+1 rosePoint and +2 history) or leave (+1 literature, french, and stats)
+            
+        
+        
+        
     
     else:
         $ avaLibraryMidterms = True
-    
+        
+        n "Your only chance to find an open spot is when someone gets up and leaves. You drop down your bag and settle in before anyone else can steal it from you. It's your study spot now."
+        
+        
+        #happens to be next to ava
     
     
     
     #go to library, random whether you encounter Rose (get help from her. she wants a coffee but doesn't want to give up her spot. you can get her one, optionally spit in it, and in return she'll give you her notes.) or Ava (you help each other study for your different classes)
     #rose does't actually drink the coffee (at least not this time, because it touched filthy human hands), she just likes the smell
     
+label getRoseCoffee:
+    $ rosePoints += 1
+    $ historySkill += 2
     
+    n "Coffee Zone is busier than you've ever seen it before. All the tables are taken and you have to wait in line before you can even see Mishka on the other side of the counter."
+    n "Eventually you get to see the coffee queen rat, rushing to make everyone's orders all on her own."
+    
+    mishka @ say "[name]!"
+    
+    player "Hey Mishka! Is now a good time?"
+    #Hope you don't mind me coming in on the busiest day of the year
+    
+    mishka @ say "It gets so busy during exams week... But I will make the best drinks for you as always!"
+    
+    player "You're the best Mishka. Can you make one for my.... friend? too?"
+    
+    mishka @ say "Oh? You have someone special you wish to impress?"
+    
+    player "N-no nothing like that. If anything I'm being coerced into buying her a drink."
+    
+    mishka @ say "I see... Well friend or foe I will make it all the same."
+    
+    player "Take your time, I don't wanna rush you."
+    
+    mishka @ say "Hah, thanks."
+    
+    n "You order a drink for yourself and one for Rose. Mishka immediately gets to work on it."
+    n "Would now be a good time to ask if she wants to hang out later?"
+    n "She's pretty overworked but maybe once midterms are over you two will have some free time."
+    
+    menu:
+        "\"You doing anything this weekend?\"":
+            $ mishkaPoints += 1
+            $ mishkaMidtermWeekendHangout = True
+        
+            player "Hey I was wondering if maybe you'd be free this weekend?"
+            
+            mishka @ say "Sch-scho vy mayesh na-"
+            
+            n "The rat knocks over a ceramic mug, making a loud clattering noise. She hastily uprights the mug and turns to you."
+            
+            mishka @ say "Th-this weekend? I do not really have plans..."
+            
+            player "Great, neither do I! Would you wanna hang out?"
+            
+            mishka @ say "Umm okay! We can do the hanging out!"
+            
+            player "Awesome! I'll figure out the details and let you know later, k?"
+            
+            mishka @ say "Of course, of course!"
+            
+            ###maybe later have an option where mishka's response changes if she likes or dislikes you
+        
+        "Now's not the time":
+            n "Nah, it's rude to ask her at work, especially when she's juggling orders like this."
+            
+    n "You step back and let Mishka work on the drinks and take more customer orders."
+    n "The poor rat is going back and forth nonstop preparing multiple drinks at once yet doesn't miss a beat."
+    n "A few minutes later she calls you up to the counter with the drinks you asked for."
+    
+    player "Thanks! I have to get back to studying. Hopefully you find some time to study too!"
+    
+    mishka @ say "Oh don't worry about me... Dah skorovo!"
+    
+    player "See you around!"
+    
+    n "You take the cardboard cups and make your way back to the library where Rose awaits."
+    
+    scene bg library with fade
+    
+    show box with Dissolve(.2):
+        ypos 0
+    
+    n "As you're making your way back to Rose, an idea pops into your head."
+    n "She's always getting on your case for no good reason. Perhaps it's time to pay her back for it."
+    
+    menu:
+        "Spit in her coffee":
+            $ rosePoints -= 1
+            $ badEnd += 1
+            $ spatInRosesCoffee = True
+            
+            n "You look around and find a spot where nobody can see you then pop the lid off of Rose's coffee."
+            n "There we go, a nice globule of human spit to go on top of her drink. Bon appetit, bitch."
+            n "You fix the lid back on top and return to her table."
+            
+            player "Here you go, the finest coffee in Harmonia."
+            
+            rose @ say "Set it down there. No not there, away from my notes. No, not on top of that book you drooling neanderthal!"
+            
+            n "Holy fuck is she picky with the placement of this cup."
+            n "You set it down and she adjusts it by half a millimeter."
+            
+            player "...Aren't you gonna take a sip?"
+            
+            rose @ say "No."
+            
+            player "The hell? Why not?"
+            
+            rose @ say "Because human hands touched it."
+            
+            player "Then why'd you have me get it in the first place?"
+            
+            show rose skirt handonhip shy at center:
+                ypos y_rose
+            
+            rose @ say "Because I require the aroma of a hot drink to maximize the efficiency of my studies."
+            
+            n "So you spat in her drink for nothing."
+            
+            
+        "Don't spit in her coffee":
+            n "What's wrong with you? How can you even entertain the notion of tampering with someone's drink like that?"
+            
+            if drankOliviasCoffee == True:
+                n "Even if you're some sick freak who drank that alligator's coffee that surely had a few mililiters of her drool in it."
+            
+            n "You come back to Rose's table and deliver her drink, untampered with."
+            
+            player "Here you go, the finest coffee in Harmonia."
+            
+            rose @ say "Set it down there. No not there, away from my notes. No, not on top of that book you drooling neanderthal!"
+            
+            n "Holy fuck is she picky with the placement of this cup."
+            n "You set it down and she adjusts it by half a millimeter."
+            
+            
+            
+            
+    
+    #rose lists out a few dozen of humanities great fuck ups, including many you've never heard of and several you've only seen on iceberg conspiracy memes.
+    #from the eradication of entire cultures, to burning of the largest libraries, to some interesting views on industrial society and its future, she makes some good points
+    #but given the opportunity, wouldn't any anthromorph civilization do the same?
+    #rose @ say "No, most anthromorphs lack any ambition or competence to create the conditions to nearly destroy the world at least four times."
+    #rose @ say "Only raccoons are above humans in terms of intellect and it takes us ruling the remnants of human-based civilization with an iron paw to keep the world in a peaceful and prosperous state."
+    
+    
+
+label midtermDay1:    
     #thursday
     
     
     
     
     
-    player "Heh sorry. How are things going?"
-    
-    show mishka neutral
-
-    mishka @ say "Busier than normal!"
-    
-    show mishka nya
-    
-    mishka @ say "It always gets this way before midterms and finals though."
-
-    player "Ah, would you hate me if I added one more order to the list?"
-    
-    show mishka silly wink
-
-    mishka @ say "Of course not!"
-    mishka @ say "Will it be the usual then?"
-
-    player "As always."
-
-    mishka @ say "No problem~"
-
 
 
     

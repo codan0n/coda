@@ -1808,6 +1808,8 @@ label oliviaCafe:
             
             n "You patiently wait for Mishka to finish your drink."
         "I'll just take the one Olivia left behind.":
+            $ drankOliviasCoffee = True
+        
             n "You notice Olivia left the drink you ordered on the counter."
             n "No reason to let it go to waste, right?"
             n "Haha it's not like you want to drink out of the same cup she drank from"
