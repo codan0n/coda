@@ -949,13 +949,129 @@ label chapter4:
         
         ava @ say "You wanna try making some flash cards of your own? I've got plenty leftover!"
         
+        menu:
+            "Make some flash cards":
+                $ avaPoints += 1
+                $ literatureSkill += 1
+                $ frenchSkill += 1
+                
+                player "Sure, I could give it a shot. We could quiz each other on our subjects too!"
+                
+                ava @ say "Great idea!"
+                
+                n "You start writing down some phrases from French on the cards and their translations on the back."
+                n "After finishing a few you know will be on the exam, you show them to Ava."
+                
+                player "Am I doing these right? Like this?"
+                
+                ava @ say "Yup! Want me to read them out to you and you can try and answer them?"
+                
+                player "If that's supposed to help me memorize them better then yeah go for it."
+                
+                ava @ say "It works wonders for some people!"
+                ava @ say "Ahem"
+                ava @ say "Est-ce que j'ai bien dit ça?"
+                ava @ say "Did I say that right?"
+                
+                player "You didn't give me a chance to answer!"
+                
+                ava @ say "Huh?"
+                
+                n "Ava looks at the back of the card to read the translation."
+                
+                ava @ say "\"Did I say that right?\""
+                ava @ say "Very funny. Next one!"
+                ava @ say "Comment prononcez-vous ces mots?"
+                ava @ say "How do you even pronounce these?"
+                
+                player "You did it again!"
+                
+                ava @ say "What, really? Sorry! I don't know how to say these!"
+                
+                player "Just pretend the last letter of each word doesn't exist. That's usually how I do it."
+                
+                ava @ say "Ok ok I think I got it."
+                ava @ say "Je suis passionnée de photographie."
+                ava @ say "Oh I know what this says! \"I am passionate about photography!\""
+                ava @ say "Did you put that one in just for me?"
+                
+                player "Heh no, but thanks for spoiling it for me."
+                
+                ava @ say "Sorryyy I guess I'm no good at this!"
+                
+                player "It's alright. Want me to try doing your cards for you?"
+                
+                ava @ say "Sure!"
+                
+                n "You pick up Ava's stack of flash cards and have more success reviewing her art history topics than your French ones."
+                n "You even learn a few things about ancient art."
+                
+                #ava has sketches of ancient art on her cards?
+                
+            "Study independently":
+                $ literatureSkill += 2
+                $ frenchSkill += 2
+                
+                player "Thanks but I'll just stick to doing my own thing."
+                
+                ava @ say "Oki! Lemme know if you wanna take a break and just chill for a bit!"
+                
+                player "Will do!"
+                
+                n "You and Ava both study independently of each other but occasionally provide friendly distractions during momentary breaks."
+                n "She shows you some photos she's working on editing for a project and gives you an overview of the history of art."
+                n "You try showing her some of your French lessons but she has a hard time getting the hang of it."
+                n "She's familiar with some of the books you've had to read for literature though and gives her impressions on them."
+                
+        n "You end up studying well into the evening alongside your birb friend. Looking out through the library's massive windows you can see it's already dark out."
+        n "With a yawn, you start packing your things and try to get up from the floor but Ava grabs hold of your hand."
         
+        ava @ say "Going somewhere?"
         
+        player "Uh yeah? It's getting late and the library is gonna close soon."
         
-        #(you help each other study for your different classes)
-        #art history ava? flash cards
-        #stay the night in the library with ava
-        #
+        ava @ say "And?"
+        
+        player "And... I was gonna go back to my dorm and fall asleep?"
+        
+        ava @ say "Why not stay here with me?"
+        
+        player "Here? At the library?"
+        
+        ava @ say "I wasn't kidding when I said it'd be fun to stay the night here!"
+        
+        menu:
+            "Stay here with Ava":
+                $ avaPoints += 1
+                $ literatureSkill -= 1
+                $ frenchSkill -= 1
+                
+                #if you have enough ava points, ask to see *more* of her glowy feathers. she teases you and says maybe next time
+                #scary stories
+                #glowy ava mode
+                #(you help each other study for your different classes)
+                #stay the night in the library with ava
+                #have to split up and distract a security guard to prevent them from spotting either of you
+                #make a nest out of books
+                #talk about how she can't believe you don't just date claire already, you counter about her not dating gunner already. maybe both of you have eyes on someone else
+                
+                
+                
+                
+            "Go back to your dorm":
+                player "As exciting as that sounds, I'd rather sleep in my comfy bed without worrying about campus security throwing me in jail for trespassing and missing my midterm."
+                
+                ava @ say "Aww, where's your sense of adventure?"
+                
+                player "I left it at home."
+                
+                ava @ say "Have it your way!"
+                ava @ say "Guess I'll just spend the night in this library all on my lonesome!"
+                
+                player "K, have fun with that. Good luck on your midterms!"
+                
+                
+        
         
         
         jump midtermDay1
