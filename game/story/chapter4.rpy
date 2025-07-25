@@ -1045,14 +1045,213 @@ label chapter4:
                 $ avaPoints += 1
                 $ literatureSkill -= 1
                 $ frenchSkill -= 1
+                $ avaLibraryAdventure = True
                 
-                #if you have enough ava points, ask to see *more* of her glowy feathers. she teases you and says maybe next time
-                #scary stories
-                #glowy ava mode
-                #(you help each other study for your different classes)
-                #stay the night in the library with ava
-                #have to split up and distract a security guard to prevent them from spotting either of you
+                ###cg of ava, mc, and claire hiding
+                
+                #player "You sure like to hang out in places you're not supposed to be."
+                player "I'm down for it!"
+                player "I could use a nice little adventure after studying all day!"
+                
+                ava @ say "Breeee! This is gonna be so much fun!"
+                ava @ say "We just have to find a good hiding spot and lay low when the staff does their final rounds."
+                
+                player "Any ideas?"
+                
+                ava @ say "The individual study tables should work! They're enclosed from three sides and the open side faces the wall so we just have to crawl underneath a few minutes before closing time."
+                
+                player "Huh, that might actually work. Just gotta make sure nobody sees us."
+                
+                ava @ say "Heh, maybe there's a book on sneaking we can check out first."
+                
+                player "There's not that much time left. Almost everyone has left already. We better do it before they start closing for real."
+                
+                ava @ say "It's now or never!"
+                
+                n "You and Ava nonchalantly make your way to the tables she was talking about. There's a row of them spaced out a few feet from each other and the last occupant just left."
+                n "Looking around to make sure nobody is watching, you swiftly dive underneath one and pull the chair towards you."
+                n "It's surprisingly roomy down here, and with the chair fully tucked in place, nobody would ever suspect a thing."
+                n "You hear Ava do the same as you in the desk next to yours. Now all you have to do is wait."
+                n "Your heart races as you become hypersensitive to all the sounds around you. Footsteps meander around and you hear disembodied voices of the staff chatting as they put stray books away."
+                n "It feels like someone has been watching you... You can feel the vibrations of the floor as someone approaches your desk."
+                n "Suddenly they veer off and you hear the clattering of chair against desk. Curiosity gets the better of you and you dare to take a peek."
+                n "Seems Ava had the same idea. Both of you look to one side, watching a third party attempting to copy your hiding strategy."
+                
+                claire @ say "I think I'm stuck..."
+                
+                ava @ say "Claire?! What on Earth are you doing??"
+                
+                claire @ say "I could ask you the same thing!"
+                claire @ say "I saw you and [name] swoop underneath these desks and thought that looked fun, so why don't I try it myself!"
+                
+                ava @ say "You're gonna blow our cover!!"
+                
+                claire @ say "That's not the only thing I'll blow~ Ksksksksksks!"
+                claire @ say "What are you two even up to, I wonder~"
+                
+                player "We're trying to stay the night in the library. It was kind of a spontaneous idea."
+                
+                claire @ say "Ooh the forbidden sleepover~ Mind if I join in?"
+                
+                player "You're too big to even fit under there."
+                
+                ava @ say "Yeah, you're gonna get us all caught the moment someone walks by!"
+                
+                claire @ say "B-but-"
+                claire @ say "I don't wanna miss out...!"
+                claire @ say "You're gonna try stealing [name] from me, aren't you?!"
+                
+                ava @ say "OMG stop being such a drama queen!"
+                
+                menu:
+                    "Claire can stay":
+                        $ clairePoints += 1
+                    
+                        player "*Sigh*"
+                        player "This is so dumb."
+                        player "Fine, you can stay Claire but we're not bailing you out if you get caught."
+                        
+                        claire @ say "Yisssss!!! I'll be super sneaky, they won't know a thing!"
+                        
+                        ava @ say "Ugh, I hope this doesn't blow up in our faces."
+                        
+                        player "Quiet down! They're shutting off the lights!"
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        claire @ say "Woo!"
+                        
+                        ava @ say "Shshshshs!!! Somebody outside could still hear us!"
+                        
+                        player "We gotta be sure to stay away from the windows too."
+                    
+                    "Claire must go":
+                        $ clairePoints -= 1
+                    
+                        player "Sorry Claire, you gotta go. It's risky enough as it is with just me and Ava."
+                        
+                        claire @ say "I see how it is..."
+                
+                        ava @ say "It's nothing personal, there's just no way this could work."
+                        
+                        claire @ say "Yeah, I guess so."
+                        
+                        n "Claire emerges from under her table and gives you a wave before hopping away."
+                        
+                        claire @ say "Good luck! Don't get caught!"
+                        
+                        n "You wave back and return to your hidden alcove. It's starting to hurt your back being hunched over like this. You wonder how long you'll have to wait before it's safe to leave."
+                        n "One by one, groups of lights shut off around you until you're in darkness and the voices of staff members fades away. All that's left now is the hum of the heating unit."
+                        
+                        call phone_start 
+                        
+                        call message_start("Ava", "You think we're good to come out now?", "avaavi.png") 
+
+                        call reply_message("Give it a couple minutes to be safe") 
+                        
+                        call message("Ava", "Kay", "avaavi.png") 
+                        call message("Ava", "I can't believe we're doing this!!", "avaavi.png") 
+                        
+                        call reply_message("I know right?") 
+                        call reply_message("You sure love being in weird places don't you?") 
+                        
+                        call message("Ava", "Guilty as charged~ ^v^", "avaavi.png") 
+                        call message("Ava", "There's just something so interesting about school buildings at night!", "avaavi.png") 
+                        
+                        call reply_message("It gives me chill bumps") 
+                        call reply_message("Do birds get those?") 
+                        
+                        call message("Ava", "Noope :P", "avaavi.png") 
+                        call message("Ava", "lemme feel em when we get out of here lol", "avaavi.png") 
+                        
+                        call reply_message("Sure lol") 
+    
+                        call phone_end
+                        
+                        n "A few minutes pass and you feel comfortable leaving your hiding spot. You push away the chair then go to pull the other one out for Ava."
+                        
+                        ava @ say "What a gentleman~"
+                        
+                        n "The dim glow from the ambient light leaking through the windows illuminates Ava's soft white feathers, revealing markings that normally aren't visible."
+                        
+                        if avaUrbex == True:
+                            player "Hey, I can see your feather markings again!"
+                            
+                            ava @ say "Must be the coating on the windows filtering the outside light that's making them visible for ya."
+                            ava @ say "A shame most people can't see them all the time."
+                            
+                            if avaPoints > 4:
+                                player "Do you have more markings? Like on your back?"
+                                
+                                ava @ say "Sure do! But I'm not gonna show you them tonight~"
+                                
+                                player "Aw."
+                                
+                                ava @ say "Maybe some other time~ I don't wanna go topless when there's security cameras around."
+                                
+                                player "Fair."
+                                
+                            
+                        else:
+                            player "Whoa, you're... glowing."
+                            
+                            ava @ say "Huh?"
+                            
+                            player "You've got spirals and stuff on your wings now!"
+                            
+                            ava @ say "Yeah? They've always been there."
+                            ava @ say "Ohhh you can't normally see 'em though. Forgot, they're near ultraviolet."
+                            ava @ say "They probably get washed out in bright light for your eyes."
+                            
+                            if avaPoints > 4:
+                                player "Do you have more markings? Like on your back?"
+                                
+                                ava @ say "Sure do! But I'm not gonna show you them tonight~"
+                                
+                                player "Aw."
+                                
+                                ava @ say "Maybe some other time~ I don't wanna go topless when there's security cameras around."
+                                
+                                player "Fair."
+                            
+                        ava @ say "So I guess we're in the clear?"
+                        
+                        player "Seems like it. I don't see any guards or hear any alarms."
+                        
+                        ava @ say "Then the library is ours for the night!"
+                        
+                        player "Just gotta hope nobody's watching the cameras."
+                        
+                        ava @ say "There must be thousands of security cams around the university. I doubt someone will see us on them."
+                        ava @ say "We'll try and stay out of sight though just in case."
+                        
+                        player "So... now what?"
+                        
+                        ava @ say "I don't really know. I didn't think we'd get this far."
+                        
+                        player "I mean, it's late and we have midterms tomorrow."
+                        
+                        ava @ say "How about we just... make a fort out of books and fall asleep in it?"
+                        
+                        player "Sounds good to me!"
+                        
+                        n "The next half hour is spent finding books thick enough to serve as the base for your fort then filling out the rest with whatever manuscripts fit well enough."
+                        n "You manage to get an entrance with an archway that seems stable but leaves you in fear of it all toppling down on you."
+                
+                
+                
+                
+                
+                
                 #make a nest out of books
+                #scary stories
+                #have to split up and distract a security guard to prevent them from spotting either of you
                 #talk about how she can't believe you don't just date claire already, you counter about her not dating gunner already. maybe both of you have eyes on someone else
                 
                 
@@ -1070,7 +1269,10 @@ label chapter4:
                 
                 player "K, have fun with that. Good luck on your midterms!"
                 
+                ava @ say "You too!"
                 
+                n "You leave Ava to her scheming. You wonder if she'll actually do it."
+                n "You'd rather not do anything to endanger your midterms tomorrow. You return to your dorm and get some rest, trying to ignore the test anxiety creeping up on you."
         
         
         

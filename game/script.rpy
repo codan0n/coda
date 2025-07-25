@@ -4417,6 +4417,7 @@ default suspicionOfDean = False
 default mishkaMidtermWeekendHangout = False
 default spatInRosesCoffee = False
 default drankOliviasCoffee = False
+default avaLibraryAdventure = False
 
 default roseNightWalkLvl = 1
 default gunnerNightWalkLvl = 1
