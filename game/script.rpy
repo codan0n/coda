@@ -144,7 +144,7 @@ define n = Character("", what_color="EEEEEE", callback=name_callback, cb_name = 
 #define player = Character("", color="#a4cffc", what_color="#a4cffc", callback=name_callback, cb_name = "player", what_font="dudu.ttf")
 define player = Character("testname", color="#95d29d", what_color="#a5ac61", callback=name_callback, cb_name = "player", what_font="dudu.ttf")
 define claire = Character("Claire", image="claire", color="#eeb1da", what_color="#ffd9f0", callback=name_callback, cb_name = "claire", what_font="dudu.ttf")
-define mere = Character("Mere", image="mere", color="#eeb1da", what_color="#d0dbff", callback=name_callback, cb_name = "mere", what_font="dudu.ttf")
+define guard = Character("Guard", image="guard", color="#eeb1da", what_color="#d0dbff", callback=name_callback, cb_name = "mere", what_font="dudu.ttf")
 define ava = Character("Ava", image="ava", color="#fbffc8", what_color="#c8f8ff", callback=name_callback, cb_name = "ava", what_font="dudu.ttf")
 define ellen = Character("Ellen", image="ellen", color="#b6e4d6", what_color="#ffe8b7", callback=name_callback, cb_name = "ellen", what_font="dudu.ttf")
 define margaret = Character("Margaret", image="margaret", color="#b6e4d6", what_color="#ffe8b7", callback=name_callback, cb_name = "margaret", what_font="dudu.ttf")

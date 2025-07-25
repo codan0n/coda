@@ -1117,19 +1117,423 @@ label chapter4:
                         
                         player "Quiet down! They're shutting off the lights!"
                         
+                        n "You retreat back into your hidden alcove. It's starting to hurt your back being hunched over like this. You wonder how long you'll have to wait before it's safe to leave."
+                        n "There's no way someone won't spot Claire."
+                        n "Right?"
+                        n "One by one, groups of lights shut off around you until you're in darkness and the voices of staff members fades away. All that's left now is the hum of the heating unit."
                         
+                        call phone_start 
                         
+                        call message_start("Ava", "You think we're good to come out now?", "avaavi.png") 
+
+                        call reply_message("Give it a couple minutes to be safe") 
                         
+                        call message("Ava", "I can't believe Claire's fat ass didn't get caught", "avaavi.png") 
                         
+                        call message("Claire", "Ikr!!", "claireavi.png") 
+                        call message("Claire", "I think my butt is stuck", "claireavi.png") 
                         
+                        call reply_message("We'll help you out") 
                         
+                        call message("Ava", "I think they're locking up now", "avaavi.png") 
                         
+                        call message("Claire", "This is sooo exciting!", "claireavi.png") 
+                        call message("Claire", "How did you guys come up with this idea lol", "claireavi.png") 
                         
-                        claire @ say "Woo!"
+                        call message("Ava", "There's just something so interesting about school buildings at night!", "avaavi.png") 
+                        
+                        call reply_message("It gives me chill bumps") 
+                        call reply_message("Do birds get those?") 
+                        
+                        call message("Ava", "Noope :P", "avaavi.png") 
+                        call message("Ava", "lemme feel em when we get out of here lol", "avaavi.png") 
+                        
+                        call message("Claire", "I call dibs on first touch", "claireavi.png") 
+                        
+                        call reply_message("Sure lol") 
+    
+                        call phone_end
+                        
+                        n "A few minutes pass and you feel comfortable leaving your hiding spot. You push away the chair then go to pull the other one out for Ava."
+                        
+                        ava @ say "What a gentleman~"
+                        
+                        n "The dim glow from the ambient light leaking through the windows illuminates Ava's soft white feathers, revealing markings that normally aren't visible."
+                        
+                        if avaUrbex == True:
+                            player "Hey, I can see your feather markings again!"
+                            
+                            ava @ say "Must be the coating on the windows filtering the outside light that's making them visible for ya."
+                            ava @ say "A shame most people can't see them all the time."
+                            
+                            if avaPoints > 4:
+                                player "Do you have more markings? Like on your back?"
+                                
+                                ava @ say "Sure do! But I'm not gonna show you them tonight~"
+                                
+                                player "Aw."
+                                
+                                ava @ say "Maybe some other time~ I don't wanna go topless when there's security cameras around."
+                                
+                                player "Fair."
+                                
+                            
+                        else:
+                            player "Whoa, you're... glowing."
+                            
+                            ava @ say "Huh?"
+                            
+                            player "You've got spirals and stuff on your wings now!"
+                            
+                            ava @ say "Yeah? They've always been there."
+                            ava @ say "Ohhh you can't normally see 'em though. Forgot, they're near ultraviolet."
+                            ava @ say "They probably get washed out in bright light for your eyes."
+                            
+                            if avaPoints > 4:
+                                player "Do you have more markings? Like on your back?"
+                                
+                                ava @ say "Sure do! But I'm not gonna show you them tonight~"
+                                
+                                player "Aw."
+                                
+                                ava @ say "Maybe some other time~ I don't wanna go topless when there's security cameras around."
+                                
+                                player "Fair."
+                                
+                                
+                        claire @ say "Guys? I'm still stuck!"
+                        
+                        ava @ say "Right, I forgot about her."
+                        
+                        player "We're coming, Claire."
+                        
+                        n "You and Ava grab hold of Claire's paws and pull with all your might. It takes a coupe of good yanks to finally dislodge her rear from the underside of the table."
+                                
+                        claire @ say "Thanks! Ksksksks~"
+                        claire @ say "Are we in the clear?"
+                        
+                        player "Seems like it. I don't see any guards or hear any alarms."
+                        
+                        ava @ say "The library is ours for the night!"
+                        
+                        claire @ say "Woo!! Library sleepover!!!"
                         
                         ava @ say "Shshshshs!!! Somebody outside could still hear us!"
                         
-                        player "We gotta be sure to stay away from the windows too."
+                        claire @ say "Sowwy."
+                        
+                        player "So... now what?"
+                        
+                        ava @ say "I don't really know. I didn't think we'd get this far."
+                        
+                        player "I mean, it's late and we have midterms tomorrow. We can't exactly stay up all night painting each other's nails."
+                        
+                        ava @ say "How about we just... make a fort out of books and fall asleep in it?"
+                        
+                        claire "Sounds good to me!"
+                        
+                        player "We're gonna need some big books."
+                        
+                        n "The next half hour is spent finding books thick enough to serve as the base for your fort then filling out the rest with whatever manuscripts fit well enough."
+                        n "You even manage to form an entrance with an archway that seems stable but leaves you in fear of it all toppling down on you."
+                
+                        claire @ say "It's glorious!"
+                
+                        ava @ say "I must say, this is quite an impressive fort!"
+                        ava @ say "I don't think we ever could have built such a thing during normal operating hours! The staff would have thrown a fit!"
+                        
+                        player "It'll be a fun surprise for them to find in the morning after we've left!"
+                        
+                        n "Inside is just roomy enough for you to sit upright. Ava built a nest of paperback books for you to curl up and sleep in."
+                        
+                        ava @ say "I tried to find the softest ones to sleep on."
+                        
+                        player "It beats sleeping on the ground in the woods."
+                        
+                        claire @ say "Hey, I at least provided a soft bnnuy for you to lean back on!"
+                        
+                        ava @ say "How about a soft bird this time instead?"
+                
+                        menu:
+                            "Bnnuy":
+                                player "Sorry Ava but I can't resist the bnnuy pillow."
+                                
+                                ava @ say "Aww... I understand though, Claire is a top tier cuddler~"
+                                
+                                claire @ say "Everyone needs a big beautiful bunny~"
+                                
+                                n "Claire pulls you into her grasp, inescapable yet comforting."
+                                
+                                player "So warm and soft~"
+                                
+                                if claireBullyLevel > 0:
+                                    claire @ say "Who's my little snuggleslut?"
+                                    
+                                    player "Meeeee!"
+                                    
+                                    ava @ say "What have you done to him?"
+                                    
+                                    claire @ say "Don't worry, he likes it~"
+                                    
+                                claire @ say "Now shush up and get some rest. We all got midterms tomorrow!"
+                            
+                            "Birb":
+                                player "I'll take the birb this time."
+                                
+                                claire @ say ":skull::skull::skull:"
+                                
+                                ava @ say "I may not be a good mattress like Claire but I can be a good pillow~"
+                            
+                                n "Ava snuggles up to you, enveloping you in her soft feathers while Claire pouts beside you."
+                                
+                                ava @ say "Don't be jealous~"
+                                
+                                claire @ say "It should have been meeeee!"
+                                
+                                player "Sorry Claire, this bird has been tempting me."
+                                
+                                claire @ say "I don't blame you, she's been tempting me too!"
+                                
+                                ava @ say "W-what?? Tempting you how?!"
+                                
+                                claire @ say "Ksksksksks wouldn't you like to know~"
+                            
+                                ava @ say "Go to sleep, you creature!"
+                                
+                                player "Yeah, we have midterms tomorrow."
+                                
+                                claire @ say "Fiiine. G'night y'all!"
+                            
+                            
+                            "Why not both?":
+                                player "Why not both?"
+                                
+                                ava @ say "Geez, what a snuggle whore."
+                                
+                                claire @ say "Don't listen to her, [name], I belive in snuggle positivity! It's perfectly valid to cuddle with lots of people!"
+                                claire @ say "Also that's rich coming from you, Ava! Snuggle any catboys recently?"
+                                
+                                if avaPoints > 5:
+                                    ava @ say "As a matter of fact, no I have not!"
+                                else:
+                                    ava @ say "Maybe I have, so what! At least I kept my pants on!"
+                                    
+                                    claire @ say "For now~"
+                                
+                                player "Can we all just chill out and enjoy the present snuggles?"
+                                
+                                claire @ say "That's what I'm trying to do!"
+                                claire @ say "Get in here, Ava!"
+                                
+                                n "Claire pulls Ava in as well, sandwiching you between the two ladies."
+                                
+                                claire @ say "Comfy?"
+                                
+                                player "Very."
+                                
+                                ava @ say "Yup!"
+                                
+                                claire @ say "Good~ Now shush up and get some rest. We all got midterms tomorrow!"
+                            
+                            "Neither":
+                                player "I'm good. I've already settled into this stack of National Geographics."
+                                
+                                claire @ say "Suit yourself!"
+                                claire @ say "I just hope you don't mind if Ava and I snuggle right here."
+                                
+                                ava @ say "Who said I'd snuggle with you?!"
+                                
+                                claire @ say "Come on, I know you can't resist this soft bunny~"
+                                
+                                ava @ say "It's true, you're like a mother hen guarding her babies."
+                                
+                                claire @ say "Get over here and get some snuggles~"
+                                
+                                ava @ say "Fiiine~"
+                                
+                                n "Ava scooches over and gets embraced by Claire while you flip through some of the magazines lining the floor."
+                                
+                                claire @ say "Comfy?"
+                                
+                                ava @ say "Hehe yup!"
+                
+                                claire @ say "What about you, [name]? It's not too late to join the cuddles~"
+                                
+                                player "I'm good, thanks."
+                                player "I was thinking of getting some sleep soon though. We all got midterms tomorrow and I wanna be rested up."
+                                
+                                claire @ say "Yeah, I wish we could stay up late but that's probably for the best."
+                                claire @ say "Night guys!"
+                        
+                                    
+                        n "It's not easy falling asleep in an unfamiliar place, especially with the paranoia of getting caught."
+                        n "You're keenly aware of every sound in the building, getting a mini heart attack each time a new one appears."
+                        n "What's that? Did something just beep? It kinda sounded like the front door just opened."
+                        
+                        player "Wait- did you hear that just now?"
+                        
+                        ava @ say "Was the the main entrance? Oh shit I think someone's coming!"
+                        
+                        n "Scrambling out of your book fort, you dodge the beams coming from a security guard's flashlight and remain unseen... for now."
+                        n "You did manage to get separated from Ava and Claire in the process however."
+                        n "Your body tenses up, instinctively holding your breath trying to avoid detection. You creep around a bookcase while the guard investigates your fortress."
+                        
+                        guard "Hey! Is someone there?"
+                        
+                        n "There's too many gaps in this shelf after you took so many books for the fort! You're a sitting duck!"
+                        
+                        ava @ say "Squawk!"
+                        
+                        guard "Show yourself!"
+                        
+                        n "The guard turns his attention to Ava's distraction, giving you time to get away."
+                        n "You find a relatively concealed spot but now it sounds like Ava's in trouble."
+                        
+                        guard "Alright, I see you. Come on out, birdie."
+                        
+                        menu:
+                            "Make a distraction":
+                                n "You'll be giving up your perfect hiding spot but at least you'll take the heat off Ava."
+                                
+                                player "Over here, pig!"
+                                
+                                #guard is a literal pig
+                                
+                                guard "Who said that?!"
+                                
+                                n "The guard comes storming towards you. As good as your hiding spot is, it doesn't give you much room to get away."
+                                n "You resign yourself to your fate and reveal yourself to the guard."
+                                
+                                player "I'm right here. It's just me here, alone."
+                                
+                                guard "Found you!"
+                                
+                                n "The guard apprehends you and roughly drags you out of the library, unamused by your antics."
+                                n "After chewing you out for wasting his time, he lets you off with a warning."
+                                n "Once he's out of sight, Ava swoops down and tackle hugs you."
+                                
+                                ava @ say "[name]! You didn't get arrested!"
+                                
+                                player "Heh, lucky me~"
+                                
+                                ava @ say "Thanks for distracting the guard for me! I was soooo scared hahaha!"
+                                
+                                player "Don't mention it, it was nothing. You distracted him for me first after all."
+                                
+                                if avaPoints > 5:
+                                    ava @ say "Well I think you deserve a little reward~"
+                                    
+                                    n "Ava sidles up to you, placing her wings on your chest. Standing on her tip toes, she gives you a quick kiss(?) on your cheek."
+                                    
+                                    player "Ow! Did you just peck me?"
+                                    
+                                    ava @ say "Sorry, beaks are awkward."
+                                    
+                                    player "It's ok, I liked it~"
+                                    
+                                    ava @ say *Chirp!~*"
+                                    
+                                else:
+                                    ava @ say "Well you're still my hero tonight~"
+                                    
+                                
+                            
+                            "Stay quiet":
+                                n "Sorry Ava, you should have hidden better."
+                                
+                                guard "Stop right there!"
+                                
+                                ava @ say "Eek!"
+                                
+                                n "While the guard apprehends Ava, you quietly sneak out of the library. You're not getting arrested on the night before midterms, fuck that."
+                                n "You hang around in the shadows, waiting for Ava and the cop to leave."
+                                n "Surprisingly, he releases her once they're out."
+                                n "You wait until the coast is clear before running out to her."
+                                
+                                player "Ava! You're okay!"
+                                
+                                ava @ say "Heh, yeah..."
+                                ava @ say "He bitched me out but thankfully let me go."
+                                
+                                n "She seems embarrassed about the whole thing."
+                                
+                                ava @ say "That coulda gone a lot worse."
+                                
+                                player "Yeah, imagine getting arrested just before midterms. I don't think professors would take kindly to that excuse for missing the exam."
+                                
+                                ava @ say "That's pretty much the only reason that cop let me go! He said \"I'll let you off easy because you probably have exams tomorrow!\""
+                                
+                                player "Heh, he probably just didn't wanna fill out the paperwork for bringing you in."
+                                
+                                ava @ say "That and I'm too cute to be arrested~"
+                                ava @ say "Seriously, I've been caught urbexing so often but they always let me go!"
+                                
+                                player "Luckyyy! They'd probably put me away without a second thought!"
+                                
+                                ava @ say "Thankfully we didn't have to put that to the test tonight!"
+                                
+                                
+                        n "Ava looks back to the library."
+                                
+                        ava @ say "I guess we won't be sleeping in the fort tonight, huh?"
+                        
+                        player "Sadly no. I wish I could see the looks on their faces when the library staff discovers it though."
+                        
+                        ava @ say "It's a work of art!"
+                        
+                        player "It truly is. And nobody will even know who made it."
+                        
+                        ava @ say "Nobody but us~"
+                        
+                        #player "Heh I guess you're right. Us and that pig cop."
+                        
+                        #ava @ say "Mhm."
+                        
+                        player "Yeah. It was an enjoyable night, but I'm ready to go to bed for real."
+                        
+                        ava @ say "Saaaame. It's already past midnight."
+                        
+                        player "Oof. Good luck on your midterms!"
+                        
+                        ava @ say "You too!"
+                        
+                        n "You walk Ava back to her dorm, bid her a good night, then return to your place for some much needed sleep."    
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        #major differences
+                            #mention cuddle puddle with claire
+                            #claire knocks out the guard
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+#######################################                        
+                        
+                        
                     
                     "Claire must go":
                         $ clairePoints -= 1
@@ -1235,23 +1639,278 @@ label chapter4:
                         
                         ava @ say "I don't really know. I didn't think we'd get this far."
                         
-                        player "I mean, it's late and we have midterms tomorrow."
+                        player "I mean, it's late and we have midterms tomorrow. We can't exactly stay up all night painting each other's nails."
                         
                         ava @ say "How about we just... make a fort out of books and fall asleep in it?"
                         
                         player "Sounds good to me!"
                         
                         n "The next half hour is spent finding books thick enough to serve as the base for your fort then filling out the rest with whatever manuscripts fit well enough."
-                        n "You manage to get an entrance with an archway that seems stable but leaves you in fear of it all toppling down on you."
+                        n "You manage to form an entrance with an archway that seems stable but leaves you in fear of it all toppling down on you."
+                
+                        ava @ say "I must say, this is quite an impressive fort!"
+                        ava @ say "I don't think we ever could have built such a thing during normal operating hours! The staff would have thrown a fit!"
+                        
+                        player "It'll be a fun surprise for them to find in the morning after we've left!"
+                        
+                        n "Inside is just roomy enough for you to sit upright. Ava built a nest of paperback books for you to curl up and sleep in."
+                        
+                        ava @ say "I tried to find the softest ones to sleep on."
+                        
+                        player "It beats sleeping on the ground in the woods."
+                        player "No soft bunny though."
+                        
+                        ava @ say "How about a soft bird instead?"
+                
+                        player "That'll do."
+                        
+                        n "Ava snuggles up to you, enveloping you in her soft feathers."
+                        
+                        if avaPoints > 5:
+                            n "This is comfy but you know what could be comfier?"
+                            
+                            player "Can I make a request?"
+                            
+                            ava @ say "Is it lewd?"
+                            
+                            player "..."
+                            player "A little."
+                            
+                            ava @ say "What is it?"
+                            
+                            menu:
+                                "Use her boobs as a pillow":
+                                    player "I bet your boobs would be the best pillow I've ever slept on. Can I rest my head on 'em?"
+                                    
+                                    ava @ say "You're lucky I like you or I woulda slapped you."
+                                    
+                                    player "Is that a yes then?"
+                                    
+                                    ava @ say "It's no goose down but my feathers are pretty soft~"
+                                    ava @ say "Go ahead, humie~"
+                                    
+                                    n "You maneuver into place and rest your head on her plush breasts. This beats even those super soft pillows hotels have."
+                                    
+                                    ava @ say "Ya like it?"
+                                    
+                                    player "It's perfect~"
+                                    
+                                    ava @ say "*Chirp*!"
+                                    ava @ say "I'm glad you're comfy~"
+                                "Use her butt as a pillow":
+                                    player "I bet your butt would be the best pillow I've ever slept on. Can I rest my head on it?"
+                                    
+                                    ava @ say "You're lucky I like you or I woulda slapped you."
+                                    
+                                    player "Is that a yes then?"
+                                    
+                                    ava @ say "It's no goose down but my feathers are pretty soft~"
+                                    ava @ say "Go ahead, humie~"
+                                    
+                                    n "You maneuver into place and rest your head on her plush ass. This beats even those super soft pillows hotels have."
+                                    
+                                    ava @ say "Ya like it?"
+                                    
+                                    player "It's perfect~"
+                                    
+                                    ava @ say "*Chirp*!"
+                                    ava @ say "I'm glad you're comfy~"
+                                    
+                                "Nevermind":
+                                    player "Nevermind, it was a dumb thought."
+                        
+                                    n "Ava shrugs."
+                                    
+                                    ava @ say "Whatever you say~"
+                                    ava @ say "I guess I'm flattered you had a lewd thought about me though!"
+                                    
+                                    player "...Do you have lewd thoughts about me?"
+                                    
+                                    ava @ say "Sometimes!~"
+                                    
+                                    player "Care to share any of them?"
+                                    
+                                    ava @ say "Well you didn't share yours so... nope!"
+                                    
+                                    player "Aww."
+                                    
+                        ava @ say "Let's try and get some rest now. Got those midterms in the morning after all!"
+                        
+                        player "Yeah. Goodnight! Sleep tight!"
+                        
+                        ava @ say "Nighty night!"
+                                    
+                        n "You close your eyes, feeling as though sleep could overtake you at any moment, yet it never comes."
+                        n "Ava seems to be having trouble falling asleep as well."
+                        
+                        ava @ say "...I can't sleep."
+                        
+                        player "Me neither."
+                        
+                        ava @ say "You anxious about the exams?"
+                        
+                        player "A little bit. You?"
+                        
+                        ava @ say "Same."
+                        ava @ say "But I think staying the night in an unfamiliar and also illegal to be place maybe wasn't the best idea for tonight."
+                        
+                        player "Heh you think so?"
+                        
+                        ava @ say "Maybe, but we're already here. And we made a whole fortress and everything!"
+                        
+                        player "I know right, isn't it awesome?"
+                        
+                        ava @ say "It is~"
+                        ava @ say "But you know what this night really needs?"
+                        
+                        player "What?"
+                        
+                        ava @ say "A scary story!"
+                        
+                        player "Will that put you to sleep? Won't it just give you nightmares?"
+                        
+                        ava @ say "I like nightmares! They're like horror movies in your head!"
+                        
+                        player "Heh okay weirdo~ Got any good stories to share?"
+                        
+                        ava @ say "I got a few~"
+                        
+                        n "The bird perks up and starts telling you some of her favorites about serial killers, urban legends, and straight up mythical cosmic horror conspiracy theories."
+                        n "You get so engrossed in them that you hardly even notice the sound of the door opening."
+                        
+                        player "Wait- did you hear that just now?"
+                        
+                        ava @ say "Was the the main entrance? Oh shit I think someone's coming!"
+                        
+                        n "Scrambling out of your book fort, you dodge the beams coming from a security guard's flashlight and remain unseen... for now."
+                        n "You did manage to get separated from Ava in the process however."
+                        n "Your body tenses up, instinctively holding your breath trying to avoid detection. You creep around a bookcase while the guard investigates your fortress."
+                        
+                        guard "Hey! Is someone there?"
+                        
+                        n "There's too many gaps in this shelf after you took so many books for the fort! You're a sitting duck!"
+                        
+                        ava @ say "Squawk!"
+                        
+                        guard "Show yourself!"
+                        
+                        n "The guard turns his attention to Ava's distraction, giving you time to get away."
+                        n "You find a relatively concealed spot but now it sounds like Ava's in trouble."
+                        
+                        guard "Alright, I see you. Come on out, birdie."
+                        
+                        menu:
+                            "Make a distraction":
+                                n "You'll be giving up your perfect hiding spot but at least you'll take the heat off Ava."
+                                
+                                player "Over here, pig!"
+                                
+                                #guard is a literal pig
+                                
+                                guard "Who said that?!"
+                                
+                                n "The guard comes storming towards you. As good as your hiding spot is, it doesn't give you much room to get away."
+                                n "You resign yourself to your fate and reveal yourself to the guard."
+                                
+                                player "I'm right here. It's just me here, alone."
+                                
+                                guard "Found you!"
+                                
+                                n "The guard apprehends you and roughly drags you out of the library, unamused by your antics."
+                                n "After chewing you out for wasting his time, he lets you off with a warning."
+                                n "Once he's out of sight, Ava swoops down and tackle hugs you."
+                                
+                                ava @ say "[name]! You didn't get arrested!"
+                                
+                                player "Heh, lucky me~"
+                                
+                                ava @ say "Thanks for distracting the guard for me! I was soooo scared hahaha!"
+                                
+                                player "Don't mention it, it was nothing. You distracted him for me first after all."
+                                
+                                if avaPoints > 5:
+                                    ava @ say "Well I think you deserve a little reward~"
+                                    
+                                    n "Ava sidles up to you, placing her wings on your chest. Standing on her tip toes, she gives you a quick kiss(?) on your cheek."
+                                    
+                                    player "Ow! Did you just peck me?"
+                                    
+                                    ava @ say "Sorry, beaks are awkward."
+                                    
+                                    player "It's ok, I liked it~"
+                                    
+                                    ava @ say *Chirp!~*"
+                                    
+                                else:
+                                    ava @ say "Well you're still my hero tonight~"
+                                    
+                                
+                            
+                            "Stay quiet":
+                                n "Sorry Ava, you should have hidden better."
+                                
+                                guard "Stop right there!"
+                                
+                                ava @ say "Eek!"
+                                
+                                n "While the guard apprehends Ava, you quietly sneak out of the library. You're not getting arrested on the night before midterms, fuck that."
+                                n "You hang around in the shadows, waiting for Ava and the cop to leave."
+                                n "Surprisingly, he releases her once they're out."
+                                n "You wait until the coast is clear before running out to her."
+                                
+                                player "Ava! You're okay!"
+                                
+                                ava @ say "Heh, yeah..."
+                                ava @ say "He bitched me out but thankfully let me go."
+                                
+                                n "She seems embarrassed about the whole thing."
+                                
+                                ava @ say "That coulda gone a lot worse."
+                                
+                                player "Yeah, imagine getting arrested just before midterms. I don't think professors would take kindly to that excuse for missing the exam."
+                                
+                                ava @ say "That's pretty much the only reason that cop let me go! He said \"I'll let you off easy because you probably have exams tomorrow!\""
+                                
+                                player "Heh, he probably just didn't wanna fill out the paperwork for bringing you in."
+                                
+                                ava @ say "That and I'm too cute to be arrested~"
+                                ava @ say "Seriously, I've been caught urbexing so often but they always let me go!"
+                                
+                                player "Luckyyy! They'd probably put me away without a second thought!"
+                                
+                                ava @ say "Thankfully we didn't have to put that to the test tonight!"
+                                
+                                
+                        n "Ava looks back to the library."
+                                
+                        ava @ say "I guess we won't be sleeping in the fort tonight, huh?"
+                        
+                        player "Sadly no. I wish I could see the looks on their faces when the library staff discovers it though."
+                        
+                        ava @ say "It's a work of art!"
+                        
+                        player "It truly is. And nobody will even know who made it."
+                        
+                        ava @ say "Nobody but us~"
+                        
+                        #player "Heh I guess you're right. Us and that pig cop."
+                        
+                        #ava @ say "Mhm."
+                        
+                        player "Yeah. It was an enjoyable night, but I'm ready to go to bed for real."
+                        
+                        ava @ say "Saaaame. It's already past midnight."
+                        
+                        player "Oof. Good luck on your midterms!"
+                        
+                        ava @ say "You too!"
+                        
+                        n "You walk Ava back to her dorm, bid her a good night, then return to your place for some much needed sleep."        
+                        
+                        
+        
                 
                 
-                
-                
-                
-                
-                #make a nest out of books
-                #scary stories
-                #have to split up and distract a security guard to prevent them from spotting either of you
                 #talk about how she can't believe you don't just date claire already, you counter about her not dating gunner already. maybe both of you have eyes on someone else
                 
                 
