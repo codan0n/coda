@@ -1252,6 +1252,22 @@ label chapter4:
                         
                         claire @ say "Hey, I at least provided a soft bnnuy for you to lean back on!"
                         
+                        scene bg library night
+                        
+                        show box with Dissolve(.2):
+                            ypos 0
+                        
+                        show ava glowy suggestive at center:
+                            ypos y_ava
+                            xoffset 500
+                            matrixcolor BrightnessMatrix(-0.10)
+                        
+                        show claire sweater derp at center:
+                            ypos y_claire
+                            xoffset -500
+                            xzoom -1
+                            matrixcolor BrightnessMatrix(-0.10)
+                        
                         ava @ say "How about a soft bird this time instead?"
                 
                         menu:
@@ -1389,11 +1405,16 @@ label chapter4:
                         n "The guard turns his attention to Ava's distraction, giving you time to get away."
                         n "You find a relatively concealed spot but now it sounds like Ava's in trouble."
                         
-                        guard "Alright, I see you. Come on out, birdie."
+                        guard "Alright, I see you! Come on out, birdie."
                         
                         menu:
                             "Make a distraction":
                                 n "You'll be giving up your perfect hiding spot but at least you'll take the heat off Ava."
+                                n "Just as you're about to draw the guard's attention, Claire "
+                                
+                                
+                                
+                                
                                 
                                 player "Over here, pig!"
                                 
@@ -1431,7 +1452,7 @@ label chapter4:
                                     
                                     player "It's ok, I liked it~"
                                     
-                                    ava @ say *Chirp!~*"
+                                    ava @ say "*Chirp!~*"
                                     
                                 else:
                                     ava @ say "Well you're still my hero tonight~"
@@ -1839,7 +1860,7 @@ label chapter4:
                                     
                                     player "It's ok, I liked it~"
                                     
-                                    ava @ say *Chirp!~*"
+                                    ava @ say "*Chirp!~*"
                                     
                                 else:
                                     ava @ say "Well you're still my hero tonight~"
@@ -2094,7 +2115,16 @@ label midtermDay1:
     #thursday
     
     
+    scene bg roof
     
+    show box with Dissolve(.2):
+        ypos 0
+        
+    show margaret happy at center:
+        ypos y_margaret
+        
+    margaret @ say "Got any plans for next week?"
+
     
     
 
