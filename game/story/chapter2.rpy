@@ -5169,7 +5169,7 @@ label liberation_eve:
 
     mishka @ say "And for you two?"
 
-    claire @ say "Can I get a large chai tea latte, hot, with almond milk and extra honey and salt aaaaaand five chocolate chip cookies?"
+    claire @ say "Can I get a large chai tea latte, hot, with almond milk and extra honey and salt aaaaaand half a dozen chocolate chip cookies?"
     
     #player "You don't have to get me anything lol"
     player "Oh nice you're getting a cookie for everyone?"

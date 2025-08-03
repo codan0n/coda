@@ -4418,6 +4418,8 @@ default mishkaMidtermWeekendHangout = False
 default spatInRosesCoffee = False
 default drankOliviasCoffee = False
 default avaLibraryAdventure = False
+default ch4EllenSnack = False
+default claireFrenchCheat1 = False
 
 default roseNightWalkLvl = 1
 default gunnerNightWalkLvl = 1

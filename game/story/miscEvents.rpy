@@ -366,9 +366,17 @@ label claireFrenchStudy2:
             if avaCommitted == True:
                 ava @ say "Were you really just gonna steal him away from me like that?!"
                 
+                show claire topless surprised earsup at center:
+                    ypos y_claire
+                    xoffset 500
+                show ava pose annoyed at center:
+                    ypos y_ava
+                    xoffset -500
+                    xzoom -1
+                
                 claire @ say "Don't you have your own boytoy to play with? Can't you let me have this human male all for myself?"
                 
-                ava @ say "You know I have feelings for [name] too!"
+                ava @ say "Bitch, you know I have feelings for [name] too!"
                 
                 claire @ say "I can't help it if he falls for *my* charm instead!~"
                 
@@ -380,6 +388,7 @@ label claireFrenchStudy2:
                         player "Claire invited me over to study for our midterm on Thursday."
                         player "I guess we got a little too in character."
                     
+                        claire @ say "Oh!"
                         claire @ say "Y-yeah, I guess so..."
                         
                         ava @ say "Was being topless necessary for your studying too?"
@@ -422,20 +431,20 @@ label claireFrenchStudy2:
                         
                         player "I'm surprised you two get along so well considering how much you argue."
                         
-                        ava @ say "That's just how girls are. The more we bicker, the stronger our friendship."
+                        ava @ say "That's just how girls are. The more we bicker, the stronger our friendship!"
                         
                         claire @ say "This bird always comes down to my bunk to snuggle at night after we get in a huge fight~"
                         
                         #ava @ say "Oh shush, [name] doesn't need to know that!"
-                        ava @ say "Yup! Do guys not do that?"
+                        ava @ say "Do guys not do that?"
                         
                         player "Nah, we just call each other homophobic slurs."
                         
                     "Claire is pretty irresistable...":
                         $ avaPoints -= 2
                         
-                        player "Claire is pretty irresistable apparently."
-                        player "We were just trying some stuff, nothing serious."
+                        player "Turns out Claire is pretty irresistable."
+                        player "We were just trying some stuff, nothing too serious."
                         
                         ava @ say "Hmph, then I hope you don't mind me 'just trying some stuff' with Gunner!"
                         
@@ -484,7 +493,7 @@ label claireFrenchStudy2:
                         
                         n "Gee why do you get two girls flocking to you?"
                         n "It feels less like a chad power fantasy and more like you're working to wrangle them in."
-                        
+                        n "Twice the women, twice the problems."
                         
                         
                 
@@ -493,7 +502,7 @@ label claireFrenchStudy2:
                     "Yeah, kinda":
                         player "Yeah, kinda. Until you barged in uninvited."
                         
-                        ava @ say "Ahem, it's *my* dorm as well!"
+                        ava @ say "Excuse me, it's *my* dorm as well!"
                         
                         claire @ say "Can't a girl get some privacy with her human?"
                         
@@ -544,6 +553,7 @@ label claireFrenchStudy2:
                         player "Claire invited me over to study for our midterm on Thursday."
                         player "I guess we got a little too in character."
                     
+                        claire @ say "Oh!"
                         claire @ say "Y-yeah, I guess so..."
                         
                         ava @ say "Was being topless necessary for your studying too?"
@@ -551,6 +561,8 @@ label claireFrenchStudy2:
                         claire @ say "Nah, I was just hot."
                         
                         ava @ say "It *is* pretty hot in here."
+                        
+                        
                         
                         
                         

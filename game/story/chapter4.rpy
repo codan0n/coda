@@ -71,6 +71,19 @@ label chapter4:
     
     n "From the corner of your eye you see Gunner striding up to you."
     
+    scene bg campus autumn day clear
+    
+    show box with Dissolve(.2):
+        ypos 0
+    
+    show gunner determined at center:
+        ypos y_gunner
+        xoffset -400
+        xzoom -1
+    show rori coat angry neutral at center:
+        ypos y_rori
+        xoffset 350
+    
     gunner @ say "Sup homos."
     
     menu:
@@ -1410,53 +1423,7 @@ label chapter4:
                         menu:
                             "Make a distraction":
                                 n "You'll be giving up your perfect hiding spot but at least you'll take the heat off Ava."
-                                n "Just as you're about to draw the guard's attention, Claire "
-                                
-                                
-                                
-                                
-                                
-                                player "Over here, pig!"
-                                
-                                #guard is a literal pig
-                                
-                                guard "Who said that?!"
-                                
-                                n "The guard comes storming towards you. As good as your hiding spot is, it doesn't give you much room to get away."
-                                n "You resign yourself to your fate and reveal yourself to the guard."
-                                
-                                player "I'm right here. It's just me here, alone."
-                                
-                                guard "Found you!"
-                                
-                                n "The guard apprehends you and roughly drags you out of the library, unamused by your antics."
-                                n "After chewing you out for wasting his time, he lets you off with a warning."
-                                n "Once he's out of sight, Ava swoops down and tackle hugs you."
-                                
-                                ava @ say "[name]! You didn't get arrested!"
-                                
-                                player "Heh, lucky me~"
-                                
-                                ava @ say "Thanks for distracting the guard for me! I was soooo scared hahaha!"
-                                
-                                player "Don't mention it, it was nothing. You distracted him for me first after all."
-                                
-                                if avaPoints > 5:
-                                    ava @ say "Well I think you deserve a little reward~"
-                                    
-                                    n "Ava sidles up to you, placing her wings on your chest. Standing on her tip toes, she gives you a quick kiss(?) on your cheek."
-                                    
-                                    player "Ow! Did you just peck me?"
-                                    
-                                    ava @ say "Sorry, beaks are awkward."
-                                    
-                                    player "It's ok, I liked it~"
-                                    
-                                    ava @ say "*Chirp!~*"
-                                    
-                                else:
-                                    ava @ say "Well you're still my hero tonight~"
-                                    
+                                n "Just as you're about to draw the guard's attention, Claire whistles to get his attention."
                                 
                             
                             "Stay quiet":
@@ -1466,94 +1433,45 @@ label chapter4:
                                 
                                 ava @ say "Eek!"
                                 
-                                n "While the guard apprehends Ava, you quietly sneak out of the library. You're not getting arrested on the night before midterms, fuck that."
-                                n "You hang around in the shadows, waiting for Ava and the cop to leave."
-                                n "Surprisingly, he releases her once they're out."
-                                n "You wait until the coast is clear before running out to her."
+                                n "Just as the guard is about to apprehend Ava, Claire whistles to get his attention."
                                 
-                                player "Ava! You're okay!"
+                        n "She somehow climbed on top of a bookshelf and was towering over the guard."
                                 
-                                ava @ say "Heh, yeah..."
-                                ava @ say "He bitched me out but thankfully let me go."
-                                
-                                n "She seems embarrassed about the whole thing."
-                                
-                                ava @ say "That coulda gone a lot worse."
-                                
-                                player "Yeah, imagine getting arrested just before midterms. I don't think professors would take kindly to that excuse for missing the exam."
-                                
-                                ava @ say "That's pretty much the only reason that cop let me go! He said \"I'll let you off easy because you probably have exams tomorrow!\""
-                                
-                                player "Heh, he probably just didn't wanna fill out the paperwork for bringing you in."
-                                
-                                ava @ say "That and I'm too cute to be arrested~"
-                                ava @ say "Seriously, I've been caught urbexing so often but they always let me go!"
-                                
-                                player "Luckyyy! They'd probably put me away without a second thought!"
-                                
-                                ava @ say "Thankfully we didn't have to put that to the test tonight!"
-                                
-                                
-                        n "Ava looks back to the library."
-                                
-                        ava @ say "I guess we won't be sleeping in the fort tonight, huh?"
+                        claire @ say "Get out of here guys, I'll take him on!"
                         
-                        player "Sadly no. I wish I could see the looks on their faces when the library staff discovers it though."
-                        
-                        ava @ say "It's a work of art!"
-                        
-                        player "It truly is. And nobody will even know who made it."
-                        
-                        ava @ say "Nobody but us~"
-                        
-                        #player "Heh I guess you're right. Us and that pig cop."
-                        
-                        #ava @ say "Mhm."
-                        
-                        player "Yeah. It was an enjoyable night, but I'm ready to go to bed for real."
-                        
-                        ava @ say "Saaaame. It's already past midnight."
-                        
-                        player "Oof. Good luck on your midterms!"
-                        
-                        ava @ say "You too!"
-                        
-                        n "You walk Ava back to her dorm, bid her a good night, then return to your place for some much needed sleep."    
+                        n "The last thing you see is Claire jumping onto the guard, dropping him to the ground and causing the whole floor to shake before Ava takes your hand and pulls you to the exit."
                         
                         
+                        n "Outside, you lurk in the shadows waiting to see the result of the rabbit's scuffle with the guard."
                         
+                        ava @ say "Oh my gosh, do you think she's okay? Should we go in and back her up?"
                         
+                        player "Either she sacrificed herself for us or she'll emerge victorious in combat."
                         
+                        n "A few minutes pass by and then a lone figure's sillouette appears behind the glass door."
+                        n "Is that...?"
                         
+                        ava @ say "Claire!!! You made it!"
                         
+                        n "Ava swoops in to give her a hug after she opens the door and escapes the hospital on her own."
                         
+                        claire @ say "That guard wasn't so tough!"
+                        claire @ say "Some basic jui jitsu was enough to knock him out cold!"
                         
+                        player "Holy shit, you didn't have to assault an officer of the law for our sake."
                         
+                        claire @ say "I know, but it sounded like fun~ So I did it anyway!"
                         
+                        ava @ say "I'm glad you didn't get arrested! That would have been such a nightmare the day before midterms!"
                         
+                        claire @ say "I know right! Speaking of which, it's gotten pretty late hasn't it?"
                         
-                        #major differences
-                            #mention cuddle puddle with claire
-                            #claire knocks out the guard
+                        player "That's more than enough excitement for the night. Come on, let's all get some rest before exams begin."
                         
+                        n "You walk Ava and Claire to their dorm, still riding the high from escaping the library."
+                        n "Your heart's still racing by the time you make it back to your dorm but eventually the exhaustion catches up with you and you fall asleep."
                         
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-#######################################                        
-                        
+                         
                         
                     
                     "Claire must go":
@@ -1956,7 +1874,7 @@ label chapter4:
         
         
         
-        jump midtermDay1
+    jump midtermDay1Cafe
     
     
 label getRoseCoffee:
@@ -2088,7 +2006,7 @@ label getRoseCoffee:
     rose @ say "Perfect. Now just sit over there while I explain to you why the human race was destined for extinction."
             
     n "Rose lists out a few dozen of humanities great fuck ups, including many you've never heard of and several you've only seen on iceberg conspiracy memes."
-    n "Rrom the eradication of entire cultures, to burning of the largest libraries, to some interesting views on industrial society and its future, she makes some good points."
+    n "From the eradication of entire cultures, to burning of the largest libraries, to some interesting views on industrial society and its future, she makes some good points."
     
     player "Okay but given the opportunity, wouldn't any anthromorph civilization do the same?"
     
@@ -2109,34 +2027,634 @@ label getRoseCoffee:
     n "You feel like all the relevant information is laid out in the most straightforward way possible. This will definitely help boost your grade."
     n "You take them back to your dorm and read them in detail, absorbing more information than you could have otherwise."
     
-    
+    jump midtermDay1
 
+
+label midtermDay1Cafe:
+    n "Your alarm drags you up from the comfort of slumber, reminding you that today is one day you can't afford to sleep in."
+    n "You need a coffee, badly."
+    n "You barely got any sleep after last night's ordeal. You wonder if the fortress is still standing."
+    n "There's just enough time to swing by the cafe before starting your literature exam."
+    
+    
+    
+    n "Coffee Zone is busier than you've ever seen it before. All the tables are taken and you have to wait in line before you can even see Mishka on the other side of the counter."
+    n "Eventually you get to see the coffee queen rat, rushing to make everyone's orders all on her own."
+    
+    mishka @ say "[name]!"
+    
+    player "Hey Mishka! Is now a good time?"
+    #Hope you don't mind me coming in on the busiest day of the year
+    
+    mishka @ say "It gets so busy during exams week... But I will make the best drinks for you as always!"
+    
+    player "You're the best Mishka."
+    
+    n "Should you get a treat for Ms. Ellen? It might get her to go easy on you when she grades your paper."
+    
+    menu:
+        "Get her a cinnamon roll":
+            $ ch4EllenSnack = True
+        
+            player "Could I get a cinnamon roll to go as well?"
+        
+            mishka @ say "You have luck, this is the last one yet again!"
+            
+            player "Did you save it just for me?"
+            
+            mishka @ say "Well... maybe~"
+            
+            player "Thanks. I'm gonna try bribing my literature professor with it."
+            
+            mishka @ say "Hopefully that goes well!"
+            
+            player "Speaking of which, you're insane to be working when midterms start today. You get enough time to study?"
+            
+        
+        "Don't get her anything":
+            n "Nah, you'll do this fair and square. You don't need a crutch to pass."
+            
+            player "You're insane to be working when midterms start today. You get enough time to study?"
+    
+    mishka @ say "Um.... Well... There is no need to worry about me, really!"
+    
+    player "If you say so. I'm sure you'll do well!"
+    
+    mishka @ say "Heh thanks, I think you will do well too!"
+    
+    n "You finish up your order and stand around while she gets to work on it."
+    n "Would now be a good time to ask if she wants to hang out later?"
+    n "She's pretty overworked but maybe once midterms are over you two will have some free time."
+    
+    menu:
+        "\"You doing anything this weekend?\"":
+            $ mishkaPoints += 1
+            $ mishkaMidtermWeekendHangout = True
+        
+            player "Hey I was wondering if maybe you'd be free this weekend?"
+            
+            mishka @ say "Sch-scho vy mayesh na-"
+            
+            n "The rat knocks over a ceramic mug, making a loud clattering noise. She hastily uprights the mug and turns to you."
+            
+            mishka @ say "Th-this weekend? I do not really have plans..."
+            
+            player "Great, neither do I! Would you wanna hang out?"
+            
+            mishka @ say "Umm okay! We can do the hanging out!"
+            
+            player "Awesome! I'll figure out the details and let you know later, k?"
+            
+            mishka @ say "Of course, of course!"
+            
+            ###maybe later have an option where mishka's response changes if she likes or dislikes you
+        
+        "Now's not the time":
+            n "Nah, it's rude to ask her at work, especially when she's juggling orders like this."
+            
+    n "You step back and let Mishka work on drinks for multiple customers at once."
+    n "The poor rat is going back and forth nonstop preparing multiple drinks at once yet doesn't miss a beat."
+    n "A few minutes later she calls you up to the counter with the drinks you asked for."
+    
+    player "Thanks! See you around!"
+    
+    mishka @ say "Dah skorovo!"
+    
+    n "You take the cardboard cup and make your way to the literature building, taking sips along the way that gradually bring you back up to full consciousness."
+    
 label midtermDay1:    
     #thursday
     
+    n "Today's the day. Midterms."
+    n "You'll be glad to get them over with."
+    n "You've done everything you can to prepare. All that's left to do is face them with courage and put pencil to paper."
     
-    scene bg roof
+label midtermDay1Cont:
+    n "The classroom is extra hectic just minutes before class is scheduled to begin."
+    n "Tons of chatter, anxious students worrying over their grades, hastily trying to cram in knowledge and share answers before the teacher arrives."
+    n "You're too tired from all the studying you've done throughout the week to bother. Instead you just try to remain calm."
+    
+    if ch4EllenSnack == True:
+        n "On your way to your desk you drop off a bag containing the cafe's confectionary treat onto Ms. Ellen's table."
+        n "She'll know who it's from."
+        
+    n "You sit down and close your eyes, getting a couple minutes of rest in before the exam begins."
+    n "The room goes silent when the door opens and the sound of Ms. Ellen's heels clatters against the floor on her way to the podium."
+    
+    if ch4EllenSnack == True:
+        n "She looks momentarily confused as she picks up the bag you left for her. She gives it a few sniffs then looks around the room."
+        n "You give her a wink when her gaze meets yours and she returns it with a smile."
+        
+    margaret @ say "Good morning class! I'm sure you're all as anxious to be done with this as I am so without further adiue, I'll just go ahead and hand out the exams. Do your best!"
+    
+    n "She goes around the room, dropping off a packet of papers on everyone's desk."
+    n "Her tail brushed against your hand as she passed by you. So soft~ You just wanna reach out and stroke her fur, but you remember that'd be considered sexual harassment and get you canceled."
+    n "You'll just have to take this boring exam instead."
+    n "You pick up your pencil and get to work."
+    
+    scene bg classroom with fade
+    
+    n "Not even an hour goes by and you're finished. You didn't think it was so bad."
+    n "Half the class had already finished and left by the time you stand up and hand yours in."
+    n "You've still got plenty of time before your next exam but you're too burnt out to study."
+    n "What to do...?"
+    
+    scene bg roof autumn day
     
     show box with Dissolve(.2):
         ypos 0
-        
-    show margaret happy at center:
+    
+    n "You felt compelled to come up here for some reason."
+    n "Maybe it's because the breeze is comforting."
+    n "Your worries melt away as you watch students walking to their next class several stories below you."
+    n "You'll be among them in a few minutes, but for now this is your secret spot where you can just get away."
+    n "Well, it's someone else's secret spot too."
+    
+    show margaret happy at center with dissolve:
         ypos y_margaret
+    
+    margaret @ say "Oh? Looks like I'm late to the party~"
+    
+    player "Or maybe I'm just early."
+    
+    margaret @ say "How'd the exam go? Did I make it too easy?"
+    
+    player "I feel like it was pretty typical."
+    
+    margaret @ say "Good, I'm glad you didn't struggle with it too much!"
+    
+    if ch4EllenSnack == True:
+        n "She unfurls the paper bag you left her and pulls out the cinnamon roll."
         
-    margaret @ say "Got any plans for next week?"
-
+        margaret @ say "Am I right to assume this was your doing?"
+        
+        player "Guilty as charged, ma'am."
+        
+        margaret @ say "So you're bribing me? How sweet of you~"
+        
+        menu:
+            "It's not a bribe":
+                player "It's not a bribe!"
+                
+                margaret @ say "So you just did it out of love for your literature professor then, huh?"
+                
+                player "Something like that..."
+                player "I just knew you liked them so I got you one."
+                
+                margaret @ say "We're not supposed to accept gifts from students but I'll make an exception. I always do~"
+                
+            "It's totally a bribe":
+                player "Is it that obvious?"
+                
+                margaret @ say "People don't just give things away with no expectation of a favor in return."
+                margaret @ say "Lucky for you I'm willing to bump your grade up for sweet gestures like this. Just a bit!"
+                
+        n "Miss Ellen takes a bite out of the treat. Her tail starts to wag immediately."
+        
+        if ellenPoints > 3:
+            n "She tears a piece off and holds it out for you."
+            
+            margaret @ say "Want a bite?"
+            
+            player "Sure."
+            
+            n "You take the chunk of sweet glazed cinnamon roll and devour it in one go."
+            n "You didn't realize how hungry that exam had made you."
+            
+            
+        margaret @ say "Y'know, this ain't the most expensive gift a student has given me, but it's up there with the sweetest!"
+        
+        player "Oh? Do students buy you things often?"
+        
+        margaret @ say "A little more than you'd expect."
+        margaret @ say "I'm just a basic literature professor so I don't get free cars and vacation homes like some in the business and political science departments."
+        margaret @ say "It's usually small things like purses, shoes, phones..."
+        margaret @ say "I did have one student who was unusual. He wasn't even doing poorly in the class, he just... enjoyed giving me cash."
+        margaret @ say "I think he ended up giving me over ten thousand dollars over the semester."
+        
+        player "Without you even asking? I don't ever want to hear about male privelige ever again."
+        
+        margaret @ say "Hehehe a few thousand doesn't make up for the challenges I've faced."
+        
+        player "And here all I can offer are cinnamon rolls."
+        
+        margaret @ say "You don't have to do much to pass my class. Just listening to me rant is enough, either in the classroom or up here."
+        margaret @ say "Preferably up here so I don't have to pay for therapy."
+        
+        player "I'll do what I can."
+                
+        
+        
+    
+        
+    else:
+        n "She pulls a cigarette and a lighter from her pocket and lights one up."
+    
+        margaret @ say "Usually only smoke when I have a bad day but this is to reward myself for making it through the week."
+        
+        player "Midterms rough of you too?"
+        
+        margaret @ say "I have to come up with all new questions and rubrics each semester."
+        margaret @ say "I can't reuse the old ones because students were just buying them from upperclassmen."
+        
+        player "Wow. And here I thought I went to a decent university."
+        
+        margaret @ say "If only you knew how rampant cheating was. Not just here but everywhere."
+        
+        if ellenPoints > 3:
+            n "Ms. Ellen pulls the cigarette box out and shakes it around."
+            
+            margaret @ say "Huh, only one left."
+            margaret @ say "You want it?"
+            
+            menu:
+                "Hell yeah":
+                    $ ellenPoints += 1
+                    
+                    player "Smoking ciggies with my professor on the rooftop during school hours? How could I resist!"
+                    
+                    n "You take the cig and put it between your lips. Flicking her lighter open, Ms. Ellen ignites it for you."
+                    
+                    player "*Cough*"
+                    
+                    margaret @ say "Heh, you ever smoked one before? I forgot the raised the age where you can buy 'em."
+                    
+                    player "No but I wanted to look cool."
+                    
+                    margaret @ say "Cool? Not so much."
+                    margaret @ say "Cute is maybe the more appropriate word."
+                    
+                    player "I'll take it."
+                    
+                "Nah":
+                    player "Nah, smoking is bad for you."
+                    
+                    margaret @ say "Only in excess! But I'm not gonna pressure you into it, I'm too old for that."
+                    
+                    player "Did somebody pressure you into trying it?"
+                    
+                    margaret @ say "Only the struggles of life nudged me towards it."
+                    margaret @ say "I used to be so against it until I finally tried one and then it became a routine."
+                    margaret @ say "Gotta have something to look forward to and these smoke breaks scratch that itch!"
+                    
+                    player "I don't think I'm at that point in my life yet."
+                    
+                    margaret @ say "Suit yourself, that just leaves more for me~"
+                    
+        margaret @ say "Y'know I've caught a few of your classmates cheating already. Some were even bold enough to look at their phones during the exam today thinking I wouldn't notice!"
+        
+        player "Are you gonna fail them?"
+        
+        margaret @ say "Mmmmh probably not. I dunno. If I feel like it I might."
+        margaret @ say "Writing up a report for academic dishonesty is suuuuuch a hassle."
+        margaret @ say "I'll probably let it slide unless those students piss me off."
+        
+        player "I'll try and stay on your good side then."
+        
+        margaret @ say "Just listening to me ramble on about things up here has put you in a pretty good spot, [name]."
+        margaret @ say "You could cheat all you want and I won't give it a second thought."
+        
+        player "So I didn't even have to put all that effort into that exam?"
+        
+        margaret @ say "You *could* have just turned in a blank sheet of paper, but I actually enjoy reading your thoughts on the class material!"
+        
+        if literatureSkill < 5:
+            margaret @ say "Even if they're a bit... underdeveloped."
+        
+        margaret @ say "It's a lot more interesting than grading 80 other strangers' responses."
+        
+        player "Glad I can provide some entertainment value."
+        
+    if ellenPoints > 4:
+        n "Ms. Ellen looks like she's about to say something but hesitates."
+        
+        if ch4EllenSnack == True:
+            n "She finishes her cinnamon roll then blurts it out."
+        else:
+            n "She takes a drag from her cigarette then blurts it out."
+    
+        margaret @ say "Hey, you got any plans for next week?"
+        
+        player "Sorta? Not really? Why?"
+        
+        margaret @ say "I was just wondering... how do I put this..."
+        margaret @ say "I'm not supposed to just *invite* a student over to my place..."
+        
+        menu:
+            "Invite yourself":
+                player "What if I were to ask to come over? Maybe I'm just curious to see how a literature professor decorates her home."
+                player "Probably lots of books, aren't there?"
+                
+                margaret @ say "Yes! Tons of them! Would you like to come over and see? I can show you my favorites! You might find one you like~"
+                
+                player "I'd love to!"
+                
+                margaret @ say "Perfect! Let me write down my address for you and we can meet up sometime next week. Sound good?"
+                
+                n "Ms. Ellen can't stop her tail from rapidly wagging as she writes on a scrap piece of paper and hands it to you."
+                
+                player "Nice, I can't wait!"
+                
+                margaret @ say "Same!"
+                
+                n "It feels kinda off to arrange a visit to your teacher's house. But hey you're an adult, you can do whatever you want. It's not like it's illegal to swing by an older woman's house and hang out."
+            "That would be weird":
+                player "Uhhhh yeah that would be kinda weird."
+                
+                margaret @ say "Haha... it would, wouldn't it? Forget I mentioned it!"
+                margaret @ say "We've been up here a while, don't you have somewhere to be?"
+        
+        
+    n "You check the time on your phone. Just a few minutes left until your next midterm."
+        
+    player "Oop, it was nice chatting up here with you but I gotta go take my exam in French now."
+    
+    margaret @ say "Oh? Bonne chance et à bientôt~"
+    
+    player "You can speak French??"
+    
+    margaret @ say "Just a bit~ I'm friends with the professor."
+    
+    player "You know Mrs. Celestine?"
+    
+    margaret @ say "Yup! We hang out from time to time. Now get going before you're late!"
+    
+    player "Alright, see you later!"
+    
+    margaret @ say "Au revoir, [name]!"
+    
+    n "She waves you off as you hoist your bag up and head down the stairway on to your next exam."
+    
+    scene bg classroom with fade
+    
+    n "You show up with only a few minutes to spare. Other students are flipping through their notes and books, making last minute preparations while Claire stares off into space, humming a tune to herself."
+    
+    claire @ say "[name]! You're 87 seconds late compared to your average arrival time! That's like 1 and a half standard deviations from the norm!"
+    
+    if smokedCig1:
+        claire @ say "Why do you smell like cigarettes? Do you smoke?"
+    else:
+        claire @ say "Were you talking with someone? You smell like dog."
+        
+    player "I was just chatting with my literature professor after my exam."
+    
+    claire @ say "Oh! Think you did well?"
+    
+    player "Well enough."
     
     
-
-
+    if claireFrenchStudy1 == True and claireFrenchStudy2 == True:
+        claire @ say "I'm sure you'll make a hundred on this test after all the studying we did together~"
+        
+        player "We didn't really do a whole lot of actual studying, did we?"
+        
+        claire @ say "It was more like... immersive learning ksksksks~"
+    elif claireFrenchStudy1 == True:
+        claire @ say "I'm sure you'll do pretty well on this test! After all, we did study together~"
+        
+        player "I don't think I learned much from that study session..."
+        
+        claire @ say "I guess we'll have to study together more often!"
+    else:
+        claire @ say "I hope you're prepared for this test!"
+        
+        player "I guess we'll find out. I'm sure you'll have no problem with it."
+        
+        claire @ say "If ya want, you can copy my answers~"
+        
+        menu:
+            "Do it":
+                $ claireFrenchCheat1 = True
+                
+                player "If I get stuck I'll take a peek."
+                
+                claire @ say "Ksksksks feel free to peek as much as you want~"
+            "Don't do it":
+                player "Nah, I'll be fine."
+                
+                claire @ say "If you insist! I'm sure you'll do fine!"
+        
+    celestine @ say "Bonjour class! Please clear your desks and we'll begin the exam!"
     
-        #visit cafe
-        #do lit and french midterm, talk to margaret after class, go home and study for either math or history
+    n "Mrs. Celestine passes out the paper packets and you get to work on yours."
+    
+    if frenchSkill < 4:
+        n "Damn, some of these are actually kind of hard."
         
+        if claireFrenchCheat1 == True:
+            n "You might have to look at Claire's answers after all."
+            n "She can obviously work through these much faster than you can but she's been intentionally waiting for you to finish each page before turning hers over."
+            n "You quickly copy her answers, trying to rearrange the wording as best you can to obscure the fact that you've cheated your way through these questions."
+        else:
+            n "Maybe you should have taken Claire up on her offer after all."
+            n "She's working through these too fast and is already 2 pages ahead of you."
+            n "Guess you're on your own."
         
+    else:
+        n "You diligently go through them, pacing yourself."
         
+        if claireFrenchCheat1 == True:
+            n "These questions aren't actually that hard. No need to cheat off Claire after all."
+            
+        else:
+            n "These questions aren't actually that hard."
+
+        if claireFrenchStudy1 == True and claireFrenchStudy2 == True:
+            n "Those extra study sessions with her paid off after all."
+        elif claireFrenchStudy1 == True:
+            n "That study session with her paid off after all."
+    
+    n "Before you know it, you reach the end of the exam. You give your answers a quick final look over before turning it in."
+    
+    celestine @ say "Merci! Have a nice autumn break, [name]!"
+    
+    n "Outside you find Claire waiting for you."
+    
+    claire @ say "So? How'd ya feel about that test?"
+    
+    if claireFrenchCheat1 == True:
+        claire @ say "I saw ya copying my answers so you're gonna ace it~"
         
+        player "Heh yeah thanks for letting me do that."
+        
+        claire @ say "No problem! You can cheat on me anytime! On tests I mean."
+        
+        n "Her tone suddenly becomes deadly serious."
+        
+        claire @ say "If we're dating and you cheat on me with another girl I'll murder you both."
+
+        n "She looms over you, putting off an aura that's both protective and possessive."
+        n "Before you can piss yourself in fear, Ava comes swooping in and Claire returns to her usual bubbly self."
+    
+    
+    else:
+        if frenchSkill < 4:
+            player "It was kinda hard for me..."
+            
+            claire @ say "Really? You should have taken me up on my offers to study together!"
+            
+            claire @ say "Really? I guess we need to study together more often~"
+        
+        else:
+            player "It wasn't so bad."
+            
+            if claireFrenchStudy1 == True and ClaireFrenchStudy2 == True:
+                player "No doubt thanks to your help with those study sessions."
+                
+                claire @ say "Glad to be of service~"
+                
+            elif claireFrenchStudy1 == True:
+                player "No doubt thanks to your help with that study session."
+                
+                claire @ say "Glad to be of service~"
+        
+        if avaPoints > 5:
+            n "Ava comes swooping in at high speed. She's heading right at you!"
+            
+            ava @ say "[name]! Coming in hot!!"
+            
+            n "Instinct kicks in and you hold your arms out ready to catch her."
+            n "Once she flies into your grasp you spin in place to slow down her momentum."
+            
+            player "Gotchya!"
+            
+            claire @ say "Nice Chad spin~"
+            
+            ava @ say "Whew, thanks [name]! My mind was still stuck on that last exam and I didn't hit the breaks in time."
+            
+            player "No problem. Better you crash into me than the ground."
+            
+            claire @ say "She coulda crashed into me too. I'm a bigger target anyway!"
+            
+            ava @ say "Maybe I picked my target deliberately~"
+            
+            claire @ say "Ksksksks you know you can let go of him now, right?"
+            
+            ava @ say "R-right haha..."
+            
+            n "Ava pulls her wings back and brushes her feathers into place."
+            
+            claire @ say "Aww look at [name], he's blushing!"
+            
+            player "I am not!"
+            
+            claire @ say "You are too!"
+            claire @ say "I wonder if you'd blush if I swooped down into your arms like that~"
+            
+            ava @ say "You'd crush him to death if you tried!"
+            
+            menu:
+                "Worth it":
+                    $ avaPoints -=1
+                    $ clairePoints +=1
+                    
+                    player "It'd be worth it."
+                    
+                    claire @ say "See, he gets it."
+                    claire @ say "I'll spare ya this time but it's the thought that counts!"
+            
+                "Rather get hit by a truck":
+                    $ clairePoints -=1
+                    
+                    player "I'd rather get hit by a truck. At least then my death would be quick and painless."
+            
+                    claire @ say "Aww..."
+            
+        else:
+            n "Ava comes swooping in at high speed but Claire is there to catch her and spin her around."
+            
+            claire @ say "Whoa! Someone's happy to see us ksksksksk!"
+            
+            player "Nice save."
+            
+            ava @ say "Sorry about that! My mind was still stuck on that last exam!"
+            ava @ say "I hope I got that last question right..."
+            
+            n "Claire sets Ava down and pats her feathers back into place."
+            
+    player "You two still have one more exam today, right? I just got finished with my last one."
+    
+    ava @ say "Yup! I can't stay long 'cause I gotta rush to my next one."
+    
+    claire @ say "Yeah, we only got a few minutes left!"
+    
+    player "Good luck you two! I'm gonna head back to my dorm and get ready for tomorrow's exams."
+        
+    ava @ say "See ya! We'll meet up before the autumn break!"
+    
+    claire @ say "Yeah let's hang all hang out tomorrow!"
+    
+    player "Sounds good to me. Later!"
+    
+    scene bg codadorm with fade
+    
+    n "You're kinda burnt out from today's exams but you're only halfway through."
+    n "You muster up the energy to study a bit for stats and history but wind up falling asleep early."
         
         
     # friday
-        #do history and math midterms, meet up with the main group after class to discuss plans for the autumn break
+    
+    n "The following day..."
+    
+    n "Just gotta get through two more exams and then you're home free."
+    if statsSkill > 3:
+        n "You feel like you'll do fine but Gunner on the other hand..."
+        
+        gunner @ say "It's so over. We're cooked."
+        
+        player "You might be cooked but I think I'll be okay."
+        
+        gunner @ say "For real? Lemme peep your answers then."
+        
+        menu:
+            "Let him":
+                player "Fine, just don't get me in trouble."
+                
+                gunner @ say "Thanks bro you're the best."
+            "Don't let him":
+                player "Fuck that, you're gonna get me in trouble."
+                
+                gunner @ say "No it's cool, I'll bail you out. I'm rich, remember?"
+                
+                player "How could I ever forget?"
+                
+                
+                
+    
+    
+    else
+    n "Same as Gunner, you don't feel super confident about this one."
+    
+    gunner @ say "It's so over. We're cooked."
+    
+    
+    
+        #go through these quickly
+        #history midterm, mention rose's notes helping if you have them
+        #can let gunner cheat on your math test but you may not be confident in your own answers
+        #lunch meet up with the main group after class to discuss plans for the autumn break
+        #rory shows up to taunt rori before she goes home for the break
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    # saturday and beyond
+        #creative writing with mishka
+        
+        #pokemon go with rori
+        
+        #sleeping over at ellen's house
+        
+        #finding out rose lives in your dorm building
+        
+        #power outage in the dorms during a storm
+        
