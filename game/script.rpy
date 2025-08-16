@@ -151,6 +151,7 @@ define margaret = Character("Margaret", image="margaret", color="#b6e4d6", what_
 define mishka = Character("Mishka", image="mishka", color="#a4cffc", what_color="#dbc9f3", callback=name_callback, cb_name = "mishka", what_font="dudu.ttf")
 define rose = Character("Rose", image="rose", color="#dbb0ff", what_color="#b3a6ff", callback=name_callback, cb_name = "rose", what_font="dudu.ttf")
 define rori = Character("Rori", image="rori", color="#b5d0ff", what_color="#ddd4ac", callback=name_callback, cb_name = "rori", what_font="dudu.ttf")
+define rory = Character("Rory", image="rory", color="#b5d0ff", what_color="#ddd4ac", callback=name_callback, cb_name = "rory", what_font="dudu.ttf")
 define gunner = Character("Gunner", image="gunner", color="#f7d2ae", what_color="#ff5497", callback=name_callback, cb_name = "gunner", what_font="dudu.ttf")
 define rothbauer = Character("Mr. Rothbauer", image="rothbauer", what_color="d0dbff", callback=name_callback, cb_name = "other1", what_font="dudu.ttf")
 define herschel = Character("Mrs. Herschel", image="herschel", what_color="d0dbff", callback=name_callback, cb_name = "herschel", what_font="dudu.ttf")
@@ -2960,7 +2961,20 @@ layeredimage olivia looking:
         attribute say:
             "images/bubble.png"
     
-    
+
+
+
+layeredimage rory autumn neutral:
+    at sprite_highlight('rory')
+    always:
+        'images/characters/rory/rory autumn neutral.png'
+    group saying:
+        xzoom .75
+        yzoom .6
+        pos (4,33)
+        attribute say:
+            "images/bubble.png"
+
     
     
 layeredimage rori furious:
@@ -4417,9 +4431,16 @@ default suspicionOfDean = False
 default mishkaMidtermWeekendHangout = False
 default spatInRosesCoffee = False
 default drankOliviasCoffee = False
+default hasRosesNotes = False
 default avaLibraryAdventure = False
 default ch4EllenSnack = False
 default claireFrenchCheat1 = False
+default letGunnerCheatStats = False
+default avaJealousy = 0
+default claireSmoochies = False
+default avaCucked = False
+default avaLostInterest = True
+default fuckedClaireEarly = False
 
 default roseNightWalkLvl = 1
 default gunnerNightWalkLvl = 1

@@ -1,5 +1,6 @@
 label claireFrenchStudy1:
-    #add minor variations if you do this after claire tells you she likes you
+    $ claireFrenchSession = 1
+    
     #add bullyclaire if flag is true
 
     if avaClaireDormIntroSeen == True:
@@ -167,12 +168,16 @@ label claireFrenchStudy1:
 
 
 label claireFrenchStudy2:
-    $ claireFrenchSession = 2
+    
     
     if avaClaireDormIntroSeen == False:
         call avaClaireDormIntro
-    
-    n "At least Ava isn't here this time."
+
+    if claireFrenchSession == 1:
+        n "At least Ava isn't here this time."
+        
+    $ claireFrenchSession = 2
+        
     n "Claire wastes no time in removing her sweater."
     
     claire @ say "What? It's hot in here."
@@ -493,13 +498,17 @@ label claireFrenchStudy2:
                         
                         n "Gee why do you get two girls flocking to you?"
                         n "It feels less like a chad power fantasy and more like you're working to wrangle them in."
-                        n "Twice the women, twice the problems."
+                        n "Twice the women, double the problems."
                         
                         
                 
             else:
                 menu:
                     "Yeah, kinda":
+                        $ claireSmoochies = True
+                        $ claireBias += 1
+                        
+                    
                         player "Yeah, kinda. Until you barged in uninvited."
                         
                         ava @ say "Excuse me, it's *my* dorm as well!"
@@ -562,29 +571,55 @@ label claireFrenchStudy2:
                         
                         ava @ say "It *is* pretty hot in here."
                         
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                    
-                    #ava @ say "How go the studies?"
-                    
-                    # claire @ say "Tres bien!"
+                ava @ say "Well whatever. Don't let me interrupt your \"study session.\" I've got my own exams to prepare for."
                 
+                n "Ava flutters up to her bunk above you. Out of sight, out of mind."
                 
+                player "Now where were we?"
                 
+                claire @ say "You know exactly where we were~"
+                
+                n "Claire pulls you in closer."
+                
+                claire @ say "I'm gonna teach you how to French kiss~"
+                
+                scene bg black with fade
+                
+                n "The following moments are some of the most intense, passionate physical sensations you could imagine."
+                n "Claire..."
+                n "Maybe she's the one for you after all."
+                
+                #n "All that and you didn't even bang her."
+                        
+
             
-            
-            
-            
-            
-            
-        
         "Focus on studying":
-            $ frenchSkill += 1
+            $ frenchSkill += 2
+            
+            n "Wait a minute! Hold the fuck up there bucko, don't you see what's going on?"
+            n "Don't be so oblivious. How is sitting in this bunny's lap with your head resting on her soft pillowy tits supposed to help you pass your exam?"
+            n "That's right, it's *not.*"
+            n "This is merely a feminist ploy to make you fail your class so you fall behind while w*men take over the workforce."
+            n "It's not enough for them to take your virginity, they're going after your careers too."
+            n "Next there will be a femoid president and then what?! Double X chromosomes on Mars? Madness!"
+            n "And it all starts here at this humble Ivy League university. The first step to preventing the matriarchal apocalypse begins with you passing your first semester."
+            n "You may very well be saving the planet by turning down this horny rabbit's advances."
+            n "You're welcome, future generations."
+            
+            player "Ahem, can we just get through this chapter? I really need to focus."
+            
+            claire @ say "Quoi?"
+            claire @ say "Uhhh sure? I mean if that's really what you want, I'll..."
+
+            n "Claire awkwardly trails off while you bury your nose in this book."
+            n "Your noble sacrifice will go down in history."
+            n "You're like a monk, purely in the zone, resisting all temptation around you. Your reward at the end of it is enlightenment. You've never been more ready for an exam before in your life."
+            n "You bid the bunny adieu and return to your dorm, confident in your knowledge."
+                        
+            #ava @ say "How go the studies?"
+            
+            # claire @ say "Tres bien!"
+
 
 
     return

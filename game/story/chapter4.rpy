@@ -71,7 +71,7 @@ label chapter4:
     
     n "From the corner of your eye you see Gunner striding up to you."
     
-    scene bg campus autumn day clear
+    scene bg hallway summer day
     
     show box with Dissolve(.2):
         ypos 0
@@ -391,17 +391,187 @@ label chapter4:
             show box with Dissolve(.2):
                 ypos 0
                 
-            if claireFrenchSession == 0:
-                call claireFrenchStudy1
-            else:
-                call claireFrenchStudy2
+            call claireFrenchStudy2
     
     
     #wednesday
     
-    n "You get a sinking feeling in your gut after classes."
-    n "These were the last ones before your midterms. All the lessons and reviews do nothing to combat the nerves you get from the impending exams."
-    n "What if you missed something? What if you suddenly forget how to write your name?"
+    n "The following day..."
+    
+    n "Today's the last day before midterms begin. Better pay attention in class and study hard."
+    
+    
+    if claireSmoochies == True:
+    
+        scene bg campus autumn day clear
+        
+        show box with Dissolve(.2):
+            ypos 0
+    
+        n "On your way to class you bump into Ava, looking frantic."
+        
+        show ava typical neutral at center:
+            ypos y_ava
+        
+        ava @ say "Oh uh... hey, [name]! Ready for midterms?"
+        
+        player "I'm not sure. I guess I have to be cause they're coming whether I like it or not."
+        
+        ava @ say "I know right? Just one of those things to do and be over with."
+        ava @ say "..."
+        
+        n "Ava lowers her voice."
+        
+        ava @ say "So um..."
+        
+        show ava pose concerned
+        
+        ava @ say "Did you... do it with Claire last night?"
+        
+        menu:
+            "I sure did":
+                if avaPoints > 4:
+                    $ avaCucked = True
+                $ avaLostInterest = True
+                $ fuckedClaireEarly = True
+                $ avaJealousy += 3
+                
+                player "You really wanna know?"
+                
+                n "Ava nods."
+                
+                player "Yeah, I did."
+                
+                ava @ say "Oh..."
+                ava @ say "I mean uh... congrats?"
+                
+                player "It was kind of a spontaneous thing, ya know?"
+                
+                ava @ say "Right haha yeah, you two just saw the opportunity and fucked."
+                ava @ say "On the bed right underneath me."
+                ava @ say "I had my headphones on so I couldn't hear you guys btw"
+                ava @ say "Just in case you were self conscious about that part."
+                
+                player "I wasn't."
+                
+                ava @ say "Then I guess that's a relief."
+                ava @ say "I was wondering why the hell the bunk bed was shaking so much."
+                
+                player "Sorry about that, you know how Claire is."
+                
+                claire @ say "Speaking of that big beautiful bunny..."
+                
+                n "Claire hops onto the scene with extra whimsy before practically draping herself on top of you."
+                n "You can barely hold her up."
+                
+                claire @ say "Way to go champ, you really handled that \"study session\" like a pro~"
+                claire @ say "I'm sure you'll pass that midterm with flying colors ksksksksks!"
+                
+                player "Claire please get off of me, I'm too weak from last night."
+                
+                #ava sprites getting progressively angrier
+                
+                claire @ say "Oh! I guess you deserve a break. You were doing a lot of heavy lifting after all~"
+                
+                ava @ say "Would you look at the time, I have to get to class."
+                ava @ say "Sounds like you two spent a lot of time studying French last night."
+                ava @ say "Hope it was worth it."
+                
+                n "Ava takes to the skies before you can say goodbye."
+                
+                claire @ say "She's jealous~"
+                
+                player "I feel bad that we kept her up last night."
+                
+                claire @ say "Yeahhhhh, we'll have to study at your place next time~"
+                
+                player "Mhm~ Think we better get to class now though."
+                
+                claire @ say "We'll do more stuff after midterms ksksksksks"
+                claire @ say "See you around, cutie~"
+                
+                n "Claire gives you a kiss on your cheek then skips away."
+                n "It's gonna be really hard to focus in class today."
+                
+                
+                
+                
+            "I sure didn't":
+                $ avaJealousy += 1
+                
+                player "Nah, we just kissed and stuff."
+                
+                ava @ say "Was it... nice? I mean would you do it again?"
+                
+                menu:
+                    "Hell yeah":
+                        $ avaJealousy += 1
+                        
+                        player "Hell yeah, it was fucking awesome."
+                        
+                        ava @ say "I see..."
+                        ava @ say "I'm glad you found someone you enjoy."
+                        
+                        player "I know right? I used to think Claire was kinda annoying but now I really like spending time with her."
+                        player "Should I ask her out??"
+                        
+                        n "Ava rolls her eyes."
+                        
+                        ava @ say "If she's the one you want then go for it I guess."
+                        ava @ say "You could do better though. Just saying."
+                        
+                        player "I dunno, Claire might just be the best."
+                        
+                        n "Ava scoffs."
+                        
+                        ava @ say "Whatever, I gotta head to class now."
+                        
+                        n "Ava takes to the skies before you can say goodbye."
+                        
+                        
+                        
+                        
+                    "Probably not":
+                        $ clairePoints -= 1
+                        
+                        player "Honestly probably not. I was just caught up in the moment and wanted to try it out, ya know?"
+                        
+                        ava @ say "Y-yeah I totally get that haha!"
+                        ava @ say "Like I've come *this close* to kissing Gunner before but I'm still like, holding out in case he gives me the ick."
+                        
+                        if avaCommitted == True:
+                            player "Well... I might be free. Just sayin'."
+                            
+                            ava @ say "*Breee~*"
+                            ava @ say "It'd be nice to explore that option soon~"
+                            ava @ say "But ugh midterms. I gotta go to class now. Maybe we can meet up later?"
+                            #get coffee, just the two of us?
+                            
+                            player "I'd love to! Once all this midterm business is taken care of."
+                            
+                            ava @ say "Can't wait~"
+                        else:
+                            player "You think you might have a backup plan?"
+                            
+                            ava @ say "Hmmm... there's *someone* I've got my eyes on~"
+                            
+                            player "Who?"
+                            
+                            ava @ say "Someone really oblivious."
+                            
+                            player "Keeping it a secret, huh?"
+                            
+                            ava @ say "I'm really not."
+                            ava @ say "I've gotta head to class now. See you later!"
+                            
+                            player "See ya!"
+    
+    
+    ###claire bday scene goes here
+    
+    
+    n "After classes end you suddenly get a sinking feeling in your gut."
+    n "You could very well bomb these tests and have to retake classes, wasting valuable time and delaying your graduation."
     n "This is your last chance to prepare, better make it count."
     
     scene bg library with fade
@@ -409,7 +579,12 @@ label chapter4:
     n "The library is packed with other students making their last stand. It's hard to even find a place to sit. Some are even sitting on the floor with their books sprawled out around them."
     
     
+    #if you studied with claire last night then default this scene to the rose version
+    
     $ randumb = renpy.random.randint(0, 1)
+    
+    if claireFrenchSession == 2:
+        $ randumb = 0
     
     if randumb == 0:
         $ roseLibraryMidterms = True
@@ -920,10 +1095,6 @@ label chapter4:
                 
                 
                 jump midtermDay1
-                
-                
-                
-                
                 
         
         
@@ -2597,8 +2768,41 @@ label midtermDay1Cont:
     n "The following day..."
     
     n "Just gotta get through two more exams and then you're home free."
+    
+    if hasRosesNotes == True:
+        n "Reading through Rose's notes is sure to give you a massive leg up on this exam."
+        
+        player "Thanks again for the notes the other day."
+        
+        rose @ say "Whatever. Don't mention it."
+        
+        if rosePoints > 3:
+            n "Ooh nice she's wearing the same perfume she was wearing at the library the other day."
+            n "Even the page she gave you had the faint scent of goth bitch on it."
+            n "You couldn't resist giving it a sniff or two while studying last night."
+        
+    
+    else:
+        if historySkill > 3:
+            n "You should do reasonably well on this one as long as there's no curveball questions."
+            
+        else:
+            n "You could have spent more time studying this topic. Hopefully the questions aren't too hard."
+            
+        n "Now you're imagining Rose tutoring you. She'd bite you every time you got a question wrong."
+        
+    rothbauer @ say "Good day, students! All you'll need for this exam is a pencil, so go ahead and clear your desks and let's get started!"
+    
+    n "The test is a blur of dynasties and eras, those who ruled and influenced early civilizations, and the lasting impacts of their actions. You're left dazed by the end of it."
+    n "Once you're finished, you turn it in and hurry to your next exam without much time to spare."
+        
+    scene bg lecturehall with fade
+    
+    n "Gunner's already here and writing equations on his paws with a pen."
+    n "There's not enough space for all of them."
+    
     if statsSkill > 3:
-        n "You feel like you'll do fine but Gunner on the other hand..."
+        n "You feel like you'll be fine but he might not do so hot..."
         
         gunner @ say "It's so over. We're cooked."
         
@@ -2608,34 +2812,151 @@ label midtermDay1Cont:
         
         menu:
             "Let him":
+                $ letGunnerCheatStats = True
+                
                 player "Fine, just don't get me in trouble."
                 
                 gunner @ say "Thanks bro you're the best."
+                
+                player "I'm not liable for giving bad answers either. I'm not gonna be making 100\% on this."
+                
+                gunner @ say "It's all good, you'll do better than I would."
             "Don't let him":
                 player "Fuck that, you're gonna get me in trouble."
                 
                 gunner @ say "No it's cool, I'll bail you out. I'm rich, remember?"
                 
                 player "How could I ever forget?"
+                player "Why don't you just bribe Mrs. Herschel?"
                 
+                gunner @ say "That's what I do with all my teachers but she's a bitch and won't take my money."
                 
-                
-    
-    
-    else
-    n "Same as Gunner, you don't feel super confident about this one."
-    
-    gunner @ say "It's so over. We're cooked."
-    
-    
-    
-        #go through these quickly
-        #history midterm, mention rose's notes helping if you have them
-        #can let gunner cheat on your math test but you may not be confident in your own answers
-        #lunch meet up with the main group after class to discuss plans for the autumn break
-        #rory shows up to taunt rori before she goes home for the break
+                player "Oh the horror."
+                    
+    else:
+        n "You don't feel super confident about this one either."
         
+        gunner @ say "It's so over. We're cooked."
         
+        player "Just a bit."
+        
+        gunner @ say "Mrs. Herschel is notorious for giving extremely hard tests. Fuck this bitch."
+        
+    herschel @ say "Good morning class! You know what day it is! Clear your desks and let the fun begin!"
+    
+    gunner @ say "See this is her idea of fun. She's a sadist!"
+    
+    n "When you get your test, your faced with a wall of verbose word problems and mathematical formulas including some symbols you've never even seen before."
+    n "This is gonna be tougher than you thought."
+    n "You focus your concentration on recalling every bit of statistical knowledge you've studied over the semester."
+    
+    if letGunnerCheatStats == True:
+        n "You give enough space so Gunner can peek at your answers and wait for him to finish before turning the page."
+        n "God damn he's so slow. He better hurry up or you're leaving him behind."
+        
+    else:
+        n "Gunner tries to peek at your answers but you're moving too fast for him. You're already on the next page."
+        n "Too bad buddy, if you don't hurry up you won't even finish this exam in time."
+        
+    n "When Mrs. Herschel calls for everyone to put their pencils down, Gunner spends a solid extra minute writing answers while the tests are collected."
+    
+    herschel @ say "That's enough, Gunner. I've given you plenty of extra time. If you want more, tell the department heads that you have a disability."
+    
+    gunner @ say "Like tell them I'm retarded?"
+    
+    herschel @ say "*Sigh*"
+    herschel @ say "They might fall for it."
+        
+    player "Snrk!"
+    
+    gunner @ say "Don't you 'snrk!'"
+    gunner @ say "I'll just pay them off."
+    
+    herschel @ say "Money only gets you so far, young man."
+    
+    hide herschel with dissolve
+    
+    menu:
+        "Encourage him":
+            $ gunnerPoints += 1
+            
+            player "Come on dude, the semester's only halfway over. You can still pull this together."
+            
+            n "Gunner takes a deep breath and composes himself."
+            
+            gunner "You're right, this is just a minor setback. I only need to improve enough to get a D."
+            
+            n "You start to crack up at the obvious joke."
+            
+            gunner "Shut up, you know what I meant."
+            
+            
+        "Taunt him":
+            player "LMFAOOOO get dunked on richboiii!"
+            
+            gunner @ say "I'm gonna pay you $100 to shut the fuck up."
+            
+            player "Deal!"
+            
+            n "Gunner slides a crisp hundo your way and you gladly take it. Easiest money you've ever made."
+            
+        
+    gunner @ say "Gotta run but we'll meet up later for lunch, k?"
+    gunner @ say "I wanna get the whole squad together one last time before autumn break."
+    gunner @ say "We'll meet up at that Thai place. No stupid contests this time."
+    
+    scene bg black with fade
+    
+    
+    n "You return to your dorm and unwind for a bit until Gunner texts you saying everyone's ready."
+    
+    scene bg town
+    
+    n "When you arrive, Claire waves you over to the table your friends are sitting at."
+    
+    claire @ say "There he is!!"
+    
+    gunner @ say "[name]! You made it!"
+    
+    ava @ say "Did you get lost on the way here?"
+    
+    rori @ say "Yeah man, we've been waiting for you for a while."
+    
+    n "Truth be told maybe you did get a little lost. You kinda spaced out and don't even remember how you got here."
+    
+    player "Sorry guys, I'll try and be faster next time."
+    
+    claire @ say "It's alright! We were just talking about our plans for the autumn break now that midterms are outta the way!"
+    
+    player "Plans? Oh right, I didn't make any."
+    
+    ava @ say "You mean you're not going back home?"
+    
+    n "You shrug."
+    
+    player "No? Why would I?"
+    
+    n "Your friends look to each other uneasily."
+    
+    ava @ say "I've got my bags packed and ready to go already."
+    
+    claire @ say "If I'd known you'd be here alone I wouldn't have made plans to visit home!"
+    
+    gunner @ say "My flight home leaves tonight. What are you gonna do here for a whole week?"
+    
+    player "Same thing I always do, whatever I feel like."
+    
+    rori @ say "Don't worry, I'm staying too! We can hang out and chill whenever."
+    
+    
+    
+    
+    
+    
+    #lunch meet up with the main group after class to discuss plans for the autumn break
+    #rory shows up to taunt rori before she goes home for the break
+    
+    
         
         
         
@@ -2655,6 +2976,16 @@ label midtermDay1Cont:
         #sleeping over at ellen's house
         
         #finding out rose lives in your dorm building
+            #her grandad doesn't let her stay with him because he wants her to get out more
         
         #power outage in the dorms during a storm
+        
+        #texting friends
+        
+        #claire's pinstagram
+        
+        #skip class with ava and claire. they sleep over
+        
+        #saturday - gunner finds you in bed with ava and gets mad. Ava and Claire want to go out again today but you faint and they take you to the hospital, where you get your diagnosis. You start a new treatment to mitigate your symptoms.
+        
         
