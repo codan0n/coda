@@ -4441,6 +4441,7 @@ default claireSmoochies = False
 default avaCucked = False
 default avaLostInterest = True
 default fuckedClaireEarly = False
+default hittingOnRori = False
 
 default roseNightWalkLvl = 1
 default gunnerNightWalkLvl = 1
