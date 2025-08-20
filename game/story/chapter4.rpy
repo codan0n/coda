@@ -1,28 +1,5 @@
 #chapter 4
 
-#to do
-    #add autumn backgrounds
-    #color more backgrounds (add watercolor to lecture hall)
-    #revise ch 1-3 to add more contextual stuff and cut out fluff
-    #draw teacher and nurse sprites
-    #porcupine cameo?
-    #add mini scenes like claire's coffee date (she gets honey and salt latte)
-    #dean's coffee scene
-    
-#midterms are on thursday/friday so you have to hunker down on studying, but some distractions are in play
-#history exam has an extra credit question about dinosaurs
-#miss ellen asks if you're doing anything during the break and might ask you to come over. either way you get her number and start texting (later on you not ellen and miss ellen have the same number)
-#after midterms, gunner, ava and claire go home for fall break
-#rory taunts rori for not coming home
-#can either walk around playing pokemon go with rori or creative writing with mishka
-#find out rose lives next door to you
-#later get stuck in a power outage in the dorms until you find the breaker and flip it with rose. can't use fire escape or it will set off the sprinklers and ruin everything
-#when gunner comes back, he's in shock at all the rats rori has collected in their dorm
-#get grades back, see what you need to work on
-#chapter ends with skipping class to hang out with ava and claire, then having a medical episode and finding your true diagnosis
-
-
-
 label chapter4:
     #monday
     
@@ -3124,6 +3101,10 @@ label midtermDay1Cont:
                 rory @ say "You're just jealous that I have one~"
                 
                 n "You're sensing some sibling rivalry going on here."
+                
+                rory @ say "And you are?"
+                
+                player "[name]. Can't say it's been a pleasure to meet you."
             "I love this bitch already":
                 player "Damn this bitch seems kinda evil."
                 player "I'm into that."
@@ -3169,48 +3150,154 @@ label midtermDay1Cont:
                 
             "Introduce yourself politely":
                 player "I don't believe we've met before. I'm [name]."
-        
+                
+                rory @ say "Nice to meet me, isn't it? I'm Rory -- with a \"y~\""
+                
+                n "She does a little curtsy."
+                
+                rory @ say "So nice of you to wrangle my little brother Rori in my absence!"
+                
+                if roriPoints > 4:
+                    player "Rori's nice, I like him."
+                else:
+                    player "He can be a handful sometimes."
+                
+                rory @ say "I'm surprised they even admitted him to Harmonia. They must have seen his name and got it mixed up with mine~"
+                
+                rori @ say "I'm surprised they haven't admitted you to a mental asylum!"
+                
+                n "There is legitimate anger in Rori's voice."
+                
+                player "What's your problem? She's your sister isn't she?"
+                
+                rori @ say "She's a psychopath! Don't be fooled!"
+                
+                rory @ say "Don't mind him, he's just jealous!"
+                
+                
+                
+                #rori @ say "Shut up, I deserve to be here more than you!"
+                #
+                #rory @ say "Do you?"
+                #rory @ say "I'm clearly the better candidate!"
+                
         
         rory @ say "I'm basically exactly like him but better in every way!"
-        rory @ say "While he's busy downloading kernels, I'm uploading patches to fix them~"
-        rory @ say "I can run circles around him in his favorite games~ He used to get so mad when I'd perfect KO him in Tekken 10 times in a row!"
+        rory @ say "While he's busy downloading kernels, I'm uploading patches for them~"
+        rory @ say "I can run circles around him in his favorite games~ He used to cry when I'd perfect KO him in Tekken 10 times in a row!"
+        rory @ say "Now he just ragequits!"
+        rory @ say "*And* I can climb faster than him with one hoof tied behind my back! We tested this once and I humiliated him~"
+        
+        if roriPoints > 4:
+            player "My Rori is kind and sweet."
+            
+            rori @ say "Y-your Rori?"
+            
+            rory @ say "I see, you're one of *those* types."
+            #rory @ say "I can be sweeter than him... I just choose not to~"
+            rory @ say "Don't make the mistake of conflating passiveness with kindness."
+            rory @ say "Rori's personality is a result of him being submissive. He may appear to be nice on the surface, but he's really just desperate for affection."
+            rory @ say "But even then, I bet I'm sweeter~"
+        else:
+            player "You can't be better at everything. Rori has to have something he beats you at."
+            
+            rory @ say "That's the sad part, he really doesn't!"
+            rory @ say "I'm just a straight upgrade from him."
+            rory @ say "Literally~"
+            
+            #rory @ say "The only reason to choose him over me is for his dick, which isn't even that big."
+            
+            #player "H-how would you know?"
+            
+            #rory @ say "Doesn't matter. I could turn any gay man straight anyway~"
+            
+            #rory @ say "Why settle for him when you could have me instead?"
+        
+        #rory @ say "I haven't met anyone worthy of me yet. I'm almost afraid I never will."
         
         
-        #rory @ say "Why settle for him when you could have me instead?"
+        rori @ say "What do you want, Rory? Did you come over here just to torture me?"
+                
+        rory @ say "I just wanted to say goodbye my little bro before I go back home for autumn break, that's all!"
+        rory @ say "I know it must have been rough when Ma and Pa denied your request to visit."
+        rory @ say "But don't worry, we'll enjoy the time I'm home without you!"
+        
+        rori @ say "Oh go to hell."
+        
+        rory @ say "Not right now~"
+        rory @ say "I'll catch up with you later, I've got a flight to catch!"
+        rory @ say "And it was really nice meeting your boyfriend. Enjoy him while you can, because I might decide to make him mine when I'm back! Hahahaha!"
+        
+        n "She shoulder checks Rori so hard he falls to the ground as she walks away."
+        
+        menu:
+            "Help him up":
+                n "You hold out your hand to grab onto and hoist him back up onto his feet."
+                
+            "Let him get up":
+                n "He doesn't need your pity. Helping him will just bruise his ego even more."
+                n "He picks himself up and brushes the leaves and dirt off his jacket."
+        
+        rori @ say "Grrrr that bitch..."
+        
+        player "And you lived with her for years? That must have been brutal."
+        
+        rori @ say "I don't care if she's my sister, I genuinely hate her."
+        rori @ say "I don't even care that she's better at everything, the world would be a better place without her in it."
+        
+        player "Geez man. At least she's going away for the week."
+        
+        rori @ say "Yeah... Luckily I haven't run into her much here. But now that she's seen me with friends she'll stop at nothing to sabotage me."
+        rori @ say "She can't stand seeing me happy. It's the one thing that gets under her skin."
+        
+        player "...You wanna talk about it?"
+        
+        rori @ say "I dunno. Not right now. I wanna be alone."
+        
+        player "Alright. I'll see you around man."
+        
+        rori @ say "Yeah. And thanks for being here for me."
+        
+        player "Anytime. That's what bros are for."
+        
+        
+    
+#saturday
+    
+    if mishkaMidtermWeekendHangout == true:
+        n ""
     
     
-    #after everyone else leaves, rory shows up to taunt rori before she goes home for the break
-    
-    
+    #either creative writing with mishka or pokemon go with rori
+    #finding out rose lives in your dorm building
+        #her grandad doesn't let her stay with him because he wants her to get out more
         
         
+    # autumn break
         
-        
-        
-        
-        
-        
-        
-        
-        
-    # saturday and beyond
-        #creative writing with mishka
-        
-        #pokemon go with rori
-        
+        #monday
         #sleeping over at ellen's house
+        #or inviting rori over to your dorm, can lead to snuggles
         
-        #finding out rose lives in your dorm building
-            #her grandad doesn't let her stay with him because he wants her to get out more
         
-        #power outage in the dorms during a storm
+        #mid week side content
+            #history extra credit
+                #lina scene
+            
+            #texting friends, see what they're up to. claire at the beach, ava and gunner at a party
+                #claire's pinstagram
+            
         
-        #texting friends
+        #friday
+            #power outage in the dorms during a storm
+            
         
-        #claire's pinstagram
         
+        
+    # classes resume
         #skip class with ava and claire. they sleep over
-        
+        #trish??
+        # end up seeing celestine and ellen shopping together
         #saturday - gunner finds you in bed with ava and gets mad. Ava and Claire want to go out again today but you faint and they take you to the hospital, where you get your diagnosis. You start a new treatment to mitigate your symptoms.
         
         
