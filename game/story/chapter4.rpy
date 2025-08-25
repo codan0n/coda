@@ -3265,7 +3265,7 @@ label midtermDay1Cont:
 #saturday
     
     if mishkaMidtermWeekendHangout == true:
-        n ""
+        n "test"
     
     
     #either creative writing with mishka or pokemon go with rori
