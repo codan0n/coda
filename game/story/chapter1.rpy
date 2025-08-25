@@ -5378,8 +5378,8 @@ label sunday2:
     menu:
         n "{cps=0}You'll take that as a no.{/cps=0}"
         "Offer your umbrella.":
-            $ goodEnd = goodEnd + 1
-            $ rosePoints = + 1
+            $ goodEnd += 1
+            $ rosePoints += 1
             $ gaveUmbrella = True
             
             n "You can't let her go out in that storm without at least an umbrella."
