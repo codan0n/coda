@@ -2,6 +2,7 @@
 
 label roseNightWalkLvl1:
     $ nightEvents.remove("roseNight")
+    $ rosePoints += 1
 
     scene bg campus summer night clear with dissolve
     
@@ -569,7 +570,7 @@ label avaNightWalkLvl2:
 label avaNightWalkLvl3:
     scene bg track with fade
     
-    n "rose night walk part 3"
+    n "ava night walk part 3"
 
     return
     

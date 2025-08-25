@@ -2539,7 +2539,7 @@ label chapter3AfterWeekend:
                 
                 menu:
                     n "{cps=0}900 dollars is a substantial chunk of your life savings.{/cps}"
-                    "Pay":
+                    "Pay up":
                         $ rosePoints += 1
                         
                         n "This kind of is your fault, even if Rose is being a cunt about it."

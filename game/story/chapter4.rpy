@@ -3263,14 +3263,527 @@ label midtermDay1Cont:
         
     
 #saturday
+    n "It's officially the first day of your autumn break. No more worries until school starts back up again."
+    n "You can enjoy life at your own pace and do whatever you want."
     
     if mishkaMidtermWeekendHangout == true:
-        n ""
+        n "You agreed to meet up with Mishka at the cafe today. She said it would be closed for the duration of the break but that it would be a good spot to hang out."
+                
+        call roseInHallways
+        
+        jump writingWithMishka
+        
+    call roseInHallways
+    
+    jump goWithRori
+        
+
+label roseInHallways:
+    n "On your way out, you nearly trip over some short gremlin-type creature."
+    n "Oh wait, that's just Rose."
+    
+    rose @ say "Watch it, punk!"
+    
+    player "Rose?? What are you doing in my dorm building?"
+    
+    rose @ say "*Your* dorm building?! If it's anyone's, it's mine!"
+    
+    player "Wait, you've been living here this whole time?"
+    
+    rose @ say "...Yes."
+    
+    player "Aren't you rich? Don't you have a mansion you could be living in instead?"
+    
+    rose @ say "*Sigh* I don't know why I'm even entertaining you but yes normally I would be residing in the family mansion."
+    rose @ say "But granddad insists that I spend some time in the dorms to \"meet people and make friends\" whatever that means."
+    
+    player "I'm people."
+    
+    rose @ say "No, you're not. You're barely even sapient."
+    
+    menu:
+        "About this mansion...":
+            player "About this mansion... I think I could get you back in there."
+            
+            rose @ say "I doubt it but let me hear your stupid idea. I could use a laugh."
+            
+            player "Your grandpa just wants to see you with a friend then he'll let you back in, right?"
+            player "I could be your rental friend!"
+            
+            rose @ say "I think I just puked a little."
+            rose @ say "Just moving back into the mansion wouldn't be worth spending a second with a h*man."
+            rose @ say "...But he's also holding my inheritance hostage."
+            rose @ say "And I don't know which is worse, being in the presence of you or being poor."
+            
+            player "It's just pretend, you don't have to commit to it."
+            player "But the more convincing it looks the less time we'll have to spend together."
+            
+            rose @ say "Ugh, what have I done to deserve such a fate?"
+            
+            player "Gee, I wonder."
+            player "So are you down?"
+            
+            rose @ say "What's the catch?"
+            
+            player "I wanna sleep over at the mansion."
+            
+            rose @ say "Hell no!"
+            
+            player "Just for one night! We can even sleep in different rooms!"
+            
+            if rosePoints > 3:
+                rose @ say "I hate this and I hate you but if it will make my filthy human-sympathizer granddad happy then..."
+                rose @ say "Fine."
+                rose @ say "We'll \"\"\"hang out\"\"\" on occasion within view of my grandfather. You'll stand no closer than 5 feet away from me and under no circumstances will you so much as lay a finger on me."
+                rose @ say "Once I'm back in my rightful home, we cease all contact forever and ideally you kill yourself."
+                
+                player "Deal. Except for the killing myself part. You gotta offer up something good for that."
+                
+                if rosePoints > 5:
+                
+                    rose @ say "What, like a pat on the back?"
+                    
+                    player "I was thinking more like..."
+                    
+                    menu:
+                        "A date":
+                            player "A date?"
+                            
+                            rose @ say "Absolutely not."
+                            
+                            player "For real, I'll take you out and if you decline a second date I'll kill myself on the spot."
+                            
+                            rose @ say "Not happening."
+                            
+                            player "Alright alright, we'll just be \"friends\" til you get your mansion."
+                            
+                            rose @ say "I'd say it was a pleasure doing business with you, but it really wasn't. I'm only doing this for my grandfather."
+                            rose @ say "And so I can get out of these dorms and away from the disgusting troll that inhabits them!"
+                            
+                            player "Yeah whatever. See you around, \"friend~\""
+                            
+                            rose @ say "Weirdo creep."
+                        "A kiss":
+                            player "A kiss?"
+                            
+                            rose @ say "Not in stock."
+                            
+                            player "Just one little smooch and then I'm dead. A kiss of death."
+                            
+                            rose @ say "You can kiss the barrel of a shotgun."
+                            
+                            player "Alright alright, we'll just be \"friends\" til you get your mansion."
+                            
+                            rose @ say "I'd say it was a pleasure doing business with you, but it really wasn't. I'm only doing this for my grandfather."
+                            rose @ say "And so I can get out of these dorms and away from the disgusting troll that inhabits them!"
+                            
+                            player "Yeah whatever. See you around, \"friend~\""
+                            
+                            rose @ say "Weirdo creep."
+                        "A pawjob" if rosePoints > 6:
+                            n "Yeah why not, you feel confident enough to say this."
+                            
+                            player "Gimme a pawjob and I'll blow my brains out after blowing my load."
+                            
+                            rose @ say "The only paws you'll be getting will be me knocking your lights out."
+                            
+                            n "It seems your confidence was misplaced..."
+                            
+                            player "Alright alright, we'll just be \"friends\" til you get your mansion."
+                            
+                            rose @ say "I'd say it was a pleasure doing business with you, but it really wasn't. I'm only doing this for my grandfather."
+                            rose @ say "And so I can get out of these dorms and away from the disgusting troll that inhabits them!"
+                            
+                            player "Yeah whatever. See you around, \"friend~\""
+                            
+                            rose @ say "Weirdo creep."
+                        "Your panties" if avaPantsu == True or clairePantsu == True:
+                            player "Ok hear me out..."
+                            
+                            rose @ say "Uh huh?"
+                            
+                            player "I've been starting a collection..."
+                            
+                            rose @ say "Riiiight."
+                            
+                            player "Of women's panties."
+                            
+                            rose @ say "Oh go fuck yourself."
+                            
+                            player "I know right? It all started from this stupid frat boy panty raid thing."
+                            player "And I'd kill to have yours."
+                            player "Kill myself even."
+                            
+                            rose @ say "Aside from how disgusting it is to ask that of anyone, let alone someone who hates your guts-"
+                            rose @ say "Do you have any idea how much these cost?!"
+                            
+                            player "It's just underwear, it can't be that expensive."
+                            
+                            rose @ say "I don't wear *anything* that costs less than $850."
+                            rose @ say "Not even my socks."
+                            
+                            player "Is that per sock or do you count them as a pair?"
+                            
+                            rose @ say "*Sigh*"
+                            rose @ say "You know what, fine. It's for the greater good."
+                            
+                            player "H-holy shit...!"
+                            
+                            n "Right then and there Rose bends over and reaches under her skirt. She steps out of a pair of lacey purple panties, the soft silk shining in the sun's glow."
+                            n "You swear they were sparkling, like you were in an anime."
+                            n "She tosses them to you and the first thing you can think to do is sniff them."
+                            
+                            n "Wait, what's happening...?"
+                            n "The hallway is spinning and you feel as though you're being dragged backwards at high speed."
+                            
+                            n "You wake up on the floor, panties nowhere to be found."
+                            n "What just happened?"
+                            n "You pull yourself up onto your feet and suddenly recall."
+                            n "The moment you asked for Rose's panties she jumped up and smacked you on your head, knocking you out cold."
+                            n "But it felt so real in that dream..."
+                            n "You're just gonna count that as a W."
+                            
+                            
+                    
+                else:
+                    #what, you want a handjob?
+                    #kinda
+                    #well you're not getting one
+                    rose @ say "How about I let you lick my boots?"
+                    
+                    player "How about you lick my balls?"
+                    
+                    rose @ say "How about I kick you in the balls?"
+                    
+                    player "Barefoot?"
+                    
+                    rose @ say "Forget it."
+                    
+                    player "Alright alright, we'll just be \"friends\" til you get your mansion."
+                    
+                    rose @ say "I'd say it was a pleasure doing business with you, but it really wasn't. I'm only doing this for my grandfather."
+                    rose @ say "And so I can get out of these dorms and away from the disgusting troll that inhabits them!"
+                    
+                    player "Yeah whatever. See you around, \"friend~\""
+                    
+                    rose @ say "Weirdo creep."
+                    
+            else:
+                rose @ say "You're just as retarded as the rest of your species if you think I'd agree to any of this!"
+                rose @ say "I'd sooner burn the mansion down than let you take one step into it!"
+                
+                player "Suit yourself. Have fun living in the dorms for the next four years."
+                
+                n "You do a cool 360 and walk away, staring her down as you moonwalk out of there."
+            
+            
+        "Have fun living in the dorms, bitch":
+            player "Ok then have fun living in the dorms, bitch."
+            
+            rose @ say "I was actually on my way to the library."
+            
+            if avaLibraryAdventure == true:
+                player "I tried to live in the library once. Maybe you could do the same."
+                
+                rose @ say "Did it work out?"
+                
+                player "No."
+                
+                rose @ say "Sad."
+            else:
+                player "Why don't you move into the library? You practically already live there."
+                
+                rose @ say "I just might. This dorm has a human infestation and the only solution is to burn the whole thing down."
+                
+            player "Why are you going to the library? Midterms are over. We have a week off school."
+            
+            rose @ say "Your kind wouldn't understand concepts like diligence and perfectionism so I don't expect you to get it."
+            rose @ say "But if you must know, I'm going to do some research on dinosaurs."
+            
+            player "You're actually doing the history extra credit? You already have a hundred in that class."
+            
+            rose @ say "A hundred and one mind you."
+            rose @ say "But yes, I'm aiming for a hundred and two. Plus the material is good to know. Not easy to find information on that era since y'know, you destroyed it all."
+            
+            player "I wasn't there!"
+            
+            rose @ say "Yet if you were, you'd destroy it with your incompetence."
+            
+            player "Fuck this and fuck you. I've got better things to do."
+            
+            rose @ say "So do I. So get out of my way."
+            
+            n "You decide to flex your height and take a step over her rather than around."
+            
+            rose @ say "Ugh, please die."
+            
+            player "No you."
+            
+            n "The two of you head in opposite directions, taking different stairwells to the base floor, then pretend not to see each other on the way out."
+            
+        
+label writingWithMishka:
+
+    play music "audio/music/vylet - I Wish I Could Tell You.ogg" fadein 1.0
     
     
-    #either creative writing with mishka or pokemon go with rori
-    #finding out rose lives in your dorm building
-        #her grandad doesn't let her stay with him because he wants her to get out more
+    
+    
+    
+    
+    #mishka meets you outside and offers you a drink, then you go inside
+    #mishka makes some drinks and asks what you do for fun
+    #you mention you used to write
+    #she gets excited and shows you her fanfictions
+    #you do some collab writing
+    
+    
+    
+
+    n "What better place to write than a cafe?"
+    n "You step up to the counter to order your required caffeinated beverage."
+
+    show mishka neutral at center with dissolve:
+        xzoom -1
+        
+    mishka @ say "Hello [name]! What it is I can get for you today?"
+    
+    n "You place your order and she gets started on it while you find a place to set up your laptop."
+    
+    show mishka at flipleft
+        
+    pause .3
+
+    show mishka neutral at offscreenleft with move:
+        yalign 0
+        
+        
+    #n "You order the usual and find a place to set up your laptop."
+    n "As you're catching up on your insane writings, Mishka walks up to you with two drinks in her hands."
+
+    show mishka anxious grin at center with move:
+        xzoom -1
+        xpos 1750
+
+    mishka @ say "Here's your drink~"
+
+    player "Thanks."
+
+    n "Mishka continues to hover over you as you scald your tongue on 200 degrees of hot coffee."
+    
+    show mishka shy grin
+
+    mishka @ say "..."
+
+    player "...?"
+
+    mishka @ say "What your working on?"
+
+    player "Just a story thing."
+    
+    show mishka shy -grin
+
+    mishka @ say "Oh? For class or for a fun?"
+
+    player "Just something to pass the time I guess. I used to be really into writing but just kinda stopped at some point."
+    
+    show mishka happy
+
+    mishka @ say "Ah, that is so cool!"
+    
+    show mishka neutral
+    
+    mishka @ say "I once wrote little stories but now I'm content to only read them."
+
+    player "Really? What kind of stories do you like?"
+
+    mishka @ say "I read much of medieval fantasy stuff!"
+    mishka @ say "I also liked the slavic fan fictions of western media."
+
+    player "Really? That's a thing?"
+
+    mishka @ say "Oh yes, there is big community for it! I would even download fan dubs of your cartoons to watch. They are so much more lighthearted compared to old Soviet reruns!"
+    mishka @ say "It was good escapism when shells were landing near village."
+
+    player "...Shells?"
+    
+    show mishka depressed
+
+    mishka @ say "Ehh, it's not important. Sorry to bring it up."
+    
+    show mishka happy
+    
+    mishka @ say "But this is how I started to be learning English!"
+    
+    show mishka neutral 
+    
+    mishka @ say "I could hardly get enough of reading the stories!"
+    
+    #mishka @ say "I often would have no familiarity with the source material while reading the fanfics so it was always a surprise finally to see the originals!"
+    
+    $ mishkaWriting = False
+
+    menu:
+        mishka "{cps=0}I could hardly get enough of reading the stories!{/cps=0}"
+        "Would you like to know what this one's about?":
+            #finished
+            $ mishkaWriting = True
+            
+            n "You're hesitant to reveal your writing to anyone you personally know, but Mishka seems pretty open to this kind of thing so maybe she won't make fun of you?"
+
+            player "Would you like to know what this one's about?"
+            
+            show mishka overjoyed
+
+            mishka @ say "Zvichayno!!!"
+
+            player "Heheh I'll take that as a yes."
+            
+            show mishka shy grin
+
+            mishka @ say "Xaxa yes, of course of course!"
+
+            n "Mishka sits down across from you and you explain the plot so far. She nods and seems to not only understand your overly convoluted lore but enjoy it as well."
+            
+            show mishka neutral
+
+            mishka @ say "Wow [name], that sounds pretty neat!"
+
+            player "Really? You think so? I was afraid it would sound lame when I said it aloud."
+
+            mishka @ say "No no no, you clearly put a lot of effort into this!"
+            mishka @ say "Is there somewhere I can read the whole thing?"
+
+            n "You tell her the name and site it's uploaded on and she types it into her phone."
+
+            mishka @ say "Oorah! I'll check it out when I have a chance!"
+
+            hide mishka with dissolve
+
+            n "Mishka continues to sit with you and chat while you work on your story. The cafe is empty so it's not like she has to go back to work anyway."
+            n "She even moved her seat right next to your so she could read your screen. You've never really been this close to her before since she's always been behind a table."
+            n "She smells like lavender."
+            n "You bounce a few ideas off her and she gives some good feedback as well as a few ideas of her own."
+            n "After you've spent a few hours at the cafe, you've got a near-final draft ready and your table is littered with empty coffee cups."
+
+            show mishka neutral at center with dissolve:
+                xzoom -1
+
+            mishka @ say "*Yaaaawn*"
+            mishka @ say "Welp, it's about time to close down."
+
+            player "Damn, did I really spend all day here?"
+
+            mishka @ say "You did!"
+            mishka @ say "Not that I mind though!"
+            
+            show mishka happy
+                        
+            mishka @ say "It was good to help you with your writings!"
+
+            player "Haha I appreciate the help! I'll go over this one more time before posting it online."
+            
+            show mishka neutral
+
+            mishka @ say "I can't wait to read it!"
+
+            hide mishka with dissolve
+
+            n "You help Mishka throw away all the cups and wipe down the table before saying goodbye and returning to your dorm for the night."
+
+        "I should really get back to work":
+            #finished
+            #+1 point for everyone else
+            $ roriPoints += 1
+            $ ellenPoints += 1
+            $ rosePoints += 1
+            $ avaPoints += 1
+            $ clairePoints += 1
+            player "Nice!"
+            player "I should get back to work on mine though. Thanks for the coffee!"
+            
+            show mishka sad
+
+            n "Mishka looks slightly taken aback."
+
+            mishka @ say "O-oh, right of course. I should get back to work too..."
+            mishka @ say "Well I'll let you alone for now."
+            
+            #show mishka despondent 
+            show mishka anxious
+            
+            mishka @ say "Uhh let me know if you need more coffee!"
+
+            hide mishka with dissolve
+
+            n "She awkwardly walks back to the counter and pulls out a book."
+            n "It dawns on you that she probably wanted to sit with you and hear about your story."
+            n "Well dang, now you feel bad."
+            n "It's too late to invite her back over so you might as well actually get started writing this next chapter."
+            #n "You quickly review your wikiped page to refamiliarize yourself with the plot."
+            n "The more you write, the more you get into it"
+            n "You had forgotten how much you really enjoyed this."
+            n "After you've spent a few hours at the cafe, you've got a near-final draft ready and your table is littered with empty coffee cups."
+
+            show mishka despondent at center with dissolve:
+                xzoom -1
+
+            mishka @ say "*Yaaaawn*"
+            mishka @ say "Welp, it's about time to close down."
+
+            player "Damn, did I really spend all day here?"
+
+            mishka @ say "Yup."
+            mishka @ say "Time flies when you're busy I suppose."
+            mishka @ say "I hope you got a lot done."
+
+            player "Yeah, I think I'll post this chapter tonight."
+            
+            show mishka neutral
+
+            mishka @ say "Oh?"
+            mishka @ say "Well good luck [name]!"
+            mishka @ say "I hope people enjoy to read it!"
+
+            player "Thanks!"
+
+            hide mishka with dissolve
+
+            n "You help Mishka throw away all the cups and wipe down the table before saying goodbye and returning to your dorm for the night."
+            n "You wonder if you should have told her what you were writing or if she would have thought it was lame."
+            n "You've never told somebody you personally know about it before. You prefer to post anonymously."
+            n "If someone in irl found out you were responsible for this dumb indulgent fanfiction..."
+            n "You shudder to imagine how your friends would view you afterwards."
+            n "But after spending all day writing, you remember what drew you into this in the first place."
+            n "The waifus."
+            n "It's always been about the waifus."
+
+    hide box
+
+    stop music fadeout 1.0
+
+    scene bg black with fade
+
+    hide box
+
+
+
+
+
+label goWithRori:
+    
+    
+
+
+
+
+
+
+
+    
+    
+    #either creative writing with mishka or pokemon go with rori (come across him while going on a walk)
+    
         
         
     # autumn break
@@ -3282,9 +3795,14 @@ label midtermDay1Cont:
         
         #mid week side content
             #history extra credit
-                #lina scene
+                #optional pic with rose to send to her grandpa
+            #if you decline, then go for a walk and encounter lina, choice to do panty raid (with or without her)
+            #if you decline, you walk into town and come across margaret and celestine shopping (celestine remarks she thinkgs someone stole her panties so she had to get more)
+                #margaret "Time honored tradition. Boys will be boys."
+                #riiiiight, boys
             
             #texting friends, see what they're up to. claire at the beach, ava and gunner at a party
+                #ava: Guess who showed up!!
                 #claire's pinstagram
             
         
@@ -3297,7 +3815,6 @@ label midtermDay1Cont:
     # classes resume
         #skip class with ava and claire. they sleep over
         #trish??
-        # end up seeing celestine and ellen shopping together
         #saturday - gunner finds you in bed with ava and gets mad. Ava and Claire want to go out again today but you faint and they take you to the hospital, where you get your diagnosis. You start a new treatment to mitigate your symptoms.
         
         
