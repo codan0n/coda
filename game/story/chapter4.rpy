@@ -1,4 +1,5 @@
 #chapter 4
+#reply to this post or your mother will die in her sleep tonight
 
 label chapter4:
     #monday
@@ -3773,6 +3774,17 @@ label writingWithMishka:
 label goWithRori:
     
     
+    
+    
+    # happen upon rori while on a walk
+    # he's staring down at his phone
+    # ask what he's playing
+    # monster catcher go
+    # you're totally unfamiliar with the type of game, despite it being super popular just a couple years back
+    # you install it on your phone and have to go through a trillion tutorials but rori promises it gets fun
+    # get bored/can't get it working on your lagdroid. either abandon the hangout or go to your dorm
+    
+    
 
 
 
@@ -3781,8 +3793,6 @@ label goWithRori:
 
 
     
-    
-    #either creative writing with mishka or pokemon go with rori (come across him while going on a walk)
     
         
         
@@ -3790,13 +3800,18 @@ label goWithRori:
         
         #monday
         #sleeping over at ellen's house
-        #or inviting rori over to your dorm, can lead to snuggles
+        #ellen's romantic fantasy
+            #wants someone who's not afraid to live like it's their last day alive. wants to be free and try new things, go anywhere, just have fun. needs to be someone dedicated to that. no regrets lifestyle.
+        #or go to rori's dorm and get drunk while playing games, can lead to snuggles and gay ram sex (he'll try it if he likes you enough but afterwards says he can't do it again without both of you committing to a relationship)
+            #rori's romantic fantasy
+            #wants someone especially genuine and caring. just a very close best friend i guess? someone who doesn't need him to be any different, just appreciates him as he is
+       
         
         
         #mid week side content
             #history extra credit
                 #optional pic with rose to send to her grandpa
-            #if you decline, then go for a walk and encounter lina, choice to do panty raid (with or without her)
+            #if you decline, then go for a walk and encounter lina, choice to do panty raid 
             #if you decline, you walk into town and come across margaret and celestine shopping (celestine remarks she thinkgs someone stole her panties so she had to get more)
                 #margaret "Time honored tradition. Boys will be boys."
                 #riiiiight, boys
@@ -3817,4 +3832,8 @@ label goWithRori:
         #trish??
         #saturday - gunner finds you in bed with ava and gets mad. Ava and Claire want to go out again today but you faint and they take you to the hospital, where you get your diagnosis. You start a new treatment to mitigate your symptoms.
         
-        
+    #to be committed to ava's route, there's a part where ava's polaroids get lost in the wind and you and gunner have to chase after them. gunner gives up bc it's too dangerous but you can still get it (something like it flies into traffic). Make it super obvious that you're committing to ava here, like "are you absolutely sure you would do this for ava?" or like tell her afterwards "i wouldn't do that for anyone other than you"
+    #gunner saves you on your first try, pulls you back and tells you to let it go, it's just one photo
+    #if you succeed, ava will later invite you on a date and commit to you 
+    
+    
