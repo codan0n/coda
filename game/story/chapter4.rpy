@@ -2977,290 +2977,290 @@ label midtermDay1Cont:
             ava @ say "Wife-murderers you say?"
             ava @ say "Now I'm interested~"
     
-    n "The waitress comes to take your orders, putting a pause on your conversation."
-    n "The rest of your afternoon is spend discussing everyone's plans upon returning home."
-    n "After lunch you all walk back to campus to say goodbye before parting ways."
-    
-    claire @ say "I'm gonna miss you guys!!!"
-    
-    ava @ say "Same! I hope you all have a great autumn break!"
-    
-    gunner @ say "Hold down the fort, Rori. If anyone breaks in, there's a 1911 under my pillow you can use."
-    
-    rori @ say "Let me guess, it's made of solid gold?"
-    
-    gunner @ say "They make them out of anything else?"
-    
-    player "It's kinda weird, it feels like we're saying farewell forever."
-    
-    claire @ say "Awww we'll be back before you know it!"
-    
-    ava @ say "Yeah and we can still text each other!"
-    
-    player "I mean I've been with you guys since this semester started. This is the first time we'll be apart since we met."
-    player "It's like going back to before I started college, back when I was on my own."
-    player "At least Rori will still be here."
-    
-    rori @ say "I know how you feel. You know you can text me if you ever get lonely and we can hang out!"
-    
-    claire @ say "Oh my god I would ship you two so hard if I wasn't gonna take [name] for myself."
-    
-    if avaCommitted:
-        ava @ say "Saaame~"
+        n "The waitress comes to take your orders, putting a pause on your conversation."
+        n "The rest of your afternoon is spend discussing everyone's plans upon returning home."
+        n "After lunch you all walk back to campus to say goodbye before parting ways."
         
-    gunner @ say "Rori, *please* take [name] so I don't have to compete with him for Ava. Thank you."
+        claire @ say "I'm gonna miss you guys!!!"
+        
+        ava @ say "Same! I hope you all have a great autumn break!"
+        
+        gunner @ say "Hold down the fort, Rori. If anyone breaks in, there's a 1911 under my pillow you can use."
+        
+        rori @ say "Let me guess, it's made of solid gold?"
+        
+        gunner @ say "They make them out of anything else?"
+        
+        player "It's kinda weird, it feels like we're saying farewell forever."
+        
+        claire @ say "Awww we'll be back before you know it!"
+        
+        ava @ say "Yeah and we can still text each other!"
+        
+        player "I mean I've been with you guys since this semester started. This is the first time we'll be apart since we met."
+        player "It's like going back to before I started college, back when I was on my own."
+        player "At least Rori will still be here."
+        
+        rori @ say "I know how you feel. You know you can text me if you ever get lonely and we can hang out!"
+        
+        claire @ say "Oh my god I would ship you two so hard if I wasn't gonna take [name] for myself."
+        
+        if avaCommitted:
+            ava @ say "Saaame~"
+            
+        gunner @ say "Rori, *please* take [name] so I don't have to compete with him for Ava. Thank you."
+        
+        rori @ say "Guys..."
+        
+        claire @ say "We're just teasin' ya~"
+        claire @ say "But you two *would* make a cute couple ksksksksk~"
+        
+        ava @ say "Come on, I think we've tortured him enough. We can't stick around forever, we've all got our flights to catch!"
+        ava @ say "I'm glad we got to see each other one last time before the break!"
+        
+        gunner @ say "For sure. We'll have to catch up once we're back!"
+        
+        claire @ say "Safe travels you two!"
+        
+        gunner @ say "Call me when you get home!"
+        
+        ava @ say "I will~"
+        
+        n "After an extremely protracted goodbye from everyone, your friends leave one by one until it's just you and Rori left."
+        
+        rori @ say "Whew, that was exhausting."
+        
+        player "I thought they'd never leave."
+        
+        if hittingOnRori == True:
+            rori @ say "...Were you serious about doing stuff at your dorm?"
+            
+            menu:
+                "Yeah, kinda":
+                    player "The door's always open for ya~"
+                    
+                    if roriPoints > 4:                    
+                        rori @ say "I uh..."
+                        rori @ say "I might come in one night >w>"
+                    else:
+                        rori @ say "I'll uh... keep that in mind UwU"
+                "Maybe? I don't know":
+                    player "Yes? No? Maybe. I don't know."
+                    
+                    if roriPoints > 4:
+                        rori @ say "Well uh... if you wanna... Just let me know haha?"
+                        
+                    else:
+                        rori @ say "N-nevermind. Forget I said anything."
+                "Nooooo haha":
+                    player "Noooo haha I was just joking around."
+                    player "I wouldn't wanna have hot and sweaty sex with an adorable sheep boy after missing out on a new episode of Kitsune Chronicles because we were too busy kissing."
+                    player "That would be gay."
+                    
+                    rori @ say "You're right, it would be."
+        
+        n "Rori looks past you with a face of utter horror and dread."
+        
+        ###alt intro where you get rory mixed up with rori and think he's trooned out. 50/50 chance?
+        
+        rori @ say "Oh my god is that...?"
     
-    rori @ say "Guys..."
-    
-    claire @ say "We're just teasin' ya~"
-    claire @ say "But you two *would* make a cute couple ksksksksk~"
-    
-    ava @ say "Come on, I think we've tortured him enough. We can't stick around forever, we've all got our flights to catch!"
-    ava @ say "I'm glad we got to see each other one last time before the break!"
-    
-    gunner @ say "For sure. We'll have to catch up once we're back!"
-    
-    claire @ say "Safe travels you two!"
-    
-    gunner @ say "Call me when you get home!"
-    
-    ava @ say "I will~"
-    
-    n "After an extremely protracted goodbye from everyone, your friends leave one by one until it's just you and Rori left."
-    
-    rori @ say "Whew, that was exhausting."
-    
-    player "I thought they'd never leave."
-    
-    if hittingOnRori == True:
-        rori @ say "...Were you serious about doing stuff at your dorm?"
+        rory @ say "Heyyyyyy lil bro~"
+        
+        n "She looks over you from top to bottom. You can't tell if she's intrigued or disgusted."
+        
+        rory @ say "Is this your boyfriend? Just kidding, you could never get a boyfriend!"
+        
+        rori @ say "What do you want? Don't you have some butterflies to be pulling the wings off of?"
+        
+        rory @ say "Oh no, I stopped doing that ages ago. I aim for bigger targets now~"
         
         menu:
-            "Yeah, kinda":
-                player "The door's always open for ya~"
+            "Who the hell is this bitch?":
+                player "Rori you wanna tell me who this bitch is?"
                 
-                if roriPoints > 4:                    
-                    rori @ say "I uh..."
-                    rori @ say "I might come in one night >w>"
-                else:
-                    rori @ say "I'll uh... keep that in mind UwU"
-            "Maybe? I don't know":
-                player "Yes? No? Maybe. I don't know."
+                rori @ say "She-"
+                
+                rory @ say "This bitch right here-"
+                
+                n "She points to Rori."
+                
+                rory @ say "- that's my little brother unfortunately. We're twins but I'm older by a few minutes~ Like everything in life he came in last place."
+                
+                player "I didn't ask you."
+                
+                rory @ say "Didn't you? You said Rory right? With a \'y\'"
+                
+                player "You're both named Rori?"
+                player "Are you fucking serious?"
+                
+                rory @ say "Pfffft hahahah I know it's confusing, right? At home I'm usually referred to as \"the better Rory~\""
+                
+                rori @ say "More like cunt Rory!"
+                
+                rory @ say "You're just jealous that I have one~"
+                
+                n "You're sensing some sibling rivalry going on here."
+                
+                rory @ say "And you are?"
+                
+                player "[name]. Can't say it's been a pleasure to meet you."
+            "I love this bitch already":
+                player "Damn this bitch seems kinda evil."
+                player "I'm into that."
+                
+                rori @ say "Don't be. She's just a psychopath."
+                
+                rory @ say "How rude!"
+                rory @ say "Well if my dear brother won't introduce me to his friend, I guess I'll have to do it."
+                rory @ say "I'm Rory. With a \'y~\' I'm Rori's twin sister, older by just a couple minutes."
+                
+                n "She holds out her hoof and you reach out to shake it."
+                
+                rori @ say "[name] wait!!!"
+                
+                n "Too late."
+                n "Rory grabs hold of your soft fleshy human hand and absolutely *crushes* it."
+                n "You pull back, yelping in pain."
+                
+                player "Ow! What the fuck!"
+                
+                rory @ say "Oops hehehe sorry~"
+                rory @ say "I forget how fragile others can be."
+                
+                n "One of your fingers is sticking out at an unnatural angle. You can neither feel it nor move it."
+                
+                player "I think you broke something."
+                
+                rory @ say "No worries, I can fix it!"
+                
+                n "Before you have time to react, Rory grabs hold of your finger and moves it back into place."
+                
+                player "Aaaaaaagh!!!"
+                
+                rory @ say "Good as new!"
+                
+                n "Through the excruciating pain, you find that you can in fact move your finger again."
+                
+                rori @ say "I tried to warn you..."
+                rori @ say "This is how she's always been. Imagine living with her."
+                
+                rory @ say "Yes, imagine living with someone as perfect as *me~*"
+                rory @ say "You should be honored to have had the privilige, little Rori~"
+                
+            "Introduce yourself politely":
+                player "I don't believe we've met before. I'm [name]."
+                
+                rory @ say "Nice to meet me, isn't it? I'm Rory -- with a \"y~\""
+                
+                n "She does a little curtsy."
+                
+                rory @ say "So nice of you to wrangle my little brother Rori in my absence!"
                 
                 if roriPoints > 4:
-                    rori @ say "Well uh... if you wanna... Just let me know haha?"
-                    
+                    player "Rori's nice, I like him."
                 else:
-                    rori @ say "N-nevermind. Forget I said anything."
-            "Nooooo haha":
-                player "Noooo haha I was just joking around."
-                player "I wouldn't wanna have hot and sweaty sex with an adorable sheep boy after missing out on a new episode of Kitsune Chronicles because we were too busy kissing."
-                player "That would be gay."
+                    player "He can be a handful sometimes."
                 
-                rori @ say "You're right, it would be."
-    
-    n "Rori looks past you with a face of utter horror and dread."
-    
-    ###alt intro where you get rory mixed up with rori and think he's trooned out. 50/50 chance?
-    
-    rori @ say "Oh my god is that...?"
-
-    rory @ say "Heyyyyyy lil bro~"
-    
-    n "She looks over you from top to bottom. You can't tell if she's intrigued or disgusted."
-    
-    rory @ say "Is this your boyfriend? Just kidding, you could never get a boyfriend!"
-    
-    rori @ say "What do you want? Don't you have some butterflies to be pulling the wings off of?"
-    
-    rory @ say "Oh no, I stopped doing that ages ago. I aim for bigger targets now~"
-    
-    menu:
-        "Who the hell is this bitch?":
-            player "Rori you wanna tell me who this bitch is?"
-            
-            rori @ say "She-"
-            
-            rory @ say "This bitch right here-"
-            
-            n "She points to Rori."
-            
-            rory @ say "- that's my little brother unfortunately. We're twins but I'm older by a few minutes~ Like everything in life he came in last place."
-            
-            player "I didn't ask you."
-            
-            rory @ say "Didn't you? You said Rory right? With a \'y\'"
-            
-            player "You're both named Rori?"
-            player "Are you fucking serious?"
-            
-            rory @ say "Pfffft hahahah I know it's confusing, right? At home I'm usually referred to as \"the better Rory~\""
-            
-            rori @ say "More like cunt Rory!"
-            
-            rory @ say "You're just jealous that I have one~"
-            
-            n "You're sensing some sibling rivalry going on here."
-            
-            rory @ say "And you are?"
-            
-            player "[name]. Can't say it's been a pleasure to meet you."
-        "I love this bitch already":
-            player "Damn this bitch seems kinda evil."
-            player "I'm into that."
-            
-            rori @ say "Don't be. She's just a psychopath."
-            
-            rory @ say "How rude!"
-            rory @ say "Well if my dear brother won't introduce me to his friend, I guess I'll have to do it."
-            rory @ say "I'm Rory. With a \'y~\' I'm Rori's twin sister, older by just a couple minutes."
-            
-            n "She holds out her hoof and you reach out to shake it."
-            
-            rori @ say "[name] wait!!!"
-            
-            n "Too late."
-            n "Rory grabs hold of your soft fleshy human hand and absolutely *crushes* it."
-            n "You pull back, yelping in pain."
-            
-            player "Ow! What the fuck!"
-            
-            rory @ say "Oops hehehe sorry~"
-            rory @ say "I forget how fragile others can be."
-            
-            n "One of your fingers is sticking out at an unnatural angle. You can neither feel it nor move it."
-            
-            player "I think you broke something."
-            
-            rory @ say "No worries, I can fix it!"
-            
-            n "Before you have time to react, Rory grabs hold of your finger and moves it back into place."
-            
-            player "Aaaaaaagh!!!"
-            
-            rory @ say "Good as new!"
-            
-            n "Through the excruciating pain, you find that you can in fact move your finger again."
-            
-            rori @ say "I tried to warn you..."
-            rori @ say "This is how she's always been. Imagine living with her."
-            
-            rory @ say "Yes, imagine living with someone as perfect as *me~*"
-            rory @ say "You should be honored to have had the privilige, little Rori~"
-            
-        "Introduce yourself politely":
-            player "I don't believe we've met before. I'm [name]."
-            
-            rory @ say "Nice to meet me, isn't it? I'm Rory -- with a \"y~\""
-            
-            n "She does a little curtsy."
-            
-            rory @ say "So nice of you to wrangle my little brother Rori in my absence!"
-            
-            if roriPoints > 4:
-                player "Rori's nice, I like him."
-            else:
-                player "He can be a handful sometimes."
-            
-            rory @ say "I'm surprised they even admitted him to Harmonia. They must have seen his name and got it mixed up with mine~"
-            
-            rori @ say "I'm surprised they haven't admitted you to a mental asylum!"
-            
-            n "There is legitimate anger in Rori's voice."
-            
-            player "What's your problem? She's your sister isn't she?"
-            
-            rori @ say "She's a psychopath! Don't be fooled!"
-            
-            rory @ say "Don't mind him, he's just jealous!"
-            
-            
-            
-            #rori @ say "Shut up, I deserve to be here more than you!"
-            #
-            #rory @ say "Do you?"
-            #rory @ say "I'm clearly the better candidate!"
-            
-    
-    rory @ say "I'm basically exactly like him but better in every way!"
-    rory @ say "While he's busy downloading kernels, I'm uploading patches for them~"
-    rory @ say "I can run circles around him in his favorite games~ He used to cry when I'd perfect KO him in Tekken 10 times in a row!"
-    rory @ say "Now he just ragequits!"
-    rory @ say "*And* I can climb faster than him with one hoof tied behind my back! We tested this once and I humiliated him~"
-    
-    if roriPoints > 4:
-        player "My Rori is kind and sweet."
+                rory @ say "I'm surprised they even admitted him to Harmonia. They must have seen his name and got it mixed up with mine~"
+                
+                rori @ say "I'm surprised they haven't admitted you to a mental asylum!"
+                
+                n "There is legitimate anger in Rori's voice."
+                
+                player "What's your problem? She's your sister isn't she?"
+                
+                rori @ say "She's a psychopath! Don't be fooled!"
+                
+                rory @ say "Don't mind him, he's just jealous!"
+                
+                
+                
+                #rori @ say "Shut up, I deserve to be here more than you!"
+                #
+                #rory @ say "Do you?"
+                #rory @ say "I'm clearly the better candidate!"
+                
         
-        rori @ say "Y-your Rori?"
+        rory @ say "I'm basically exactly like him but better in every way!"
+        rory @ say "While he's busy downloading kernels, I'm uploading patches for them~"
+        rory @ say "I can run circles around him in his favorite games~ He used to cry when I'd perfect KO him in Tekken 10 times in a row!"
+        rory @ say "Now he just ragequits!"
+        rory @ say "*And* I can climb faster than him with one hoof tied behind my back! We tested this once and I humiliated him~"
         
-        rory @ say "I see, you're one of *those* types."
-        #rory @ say "I can be sweeter than him... I just choose not to~"
-        rory @ say "Don't make the mistake of conflating passiveness with kindness."
-        rory @ say "Rori's personality is a result of him being submissive. He may appear to be nice on the surface, but he's really just desperate for affection."
-        rory @ say "But even then, I bet I'm sweeter~"
-    else:
-        player "You can't be better at everything. Rori has to have something he beats you at."
-        
-        rory @ say "That's the sad part, he really doesn't!"
-        rory @ say "I'm just a straight upgrade from him."
-        rory @ say "Literally~"
-        
-        #rory @ say "The only reason to choose him over me is for his dick, which isn't even that big."
-        
-        #player "H-how would you know?"
-        
-        #rory @ say "Doesn't matter. I could turn any gay man straight anyway~"
-        
-        #rory @ say "Why settle for him when you could have me instead?"
-    
-    #rory @ say "I haven't met anyone worthy of me yet. I'm almost afraid I never will."
-    
-    
-    rori @ say "What do you want, Rory? Did you come over here just to torture me?"
+        if roriPoints > 4:
+            player "My Rori is kind and sweet."
             
-    rory @ say "I just wanted to say goodbye my little bro before I go back home for autumn break, that's all!"
-    rory @ say "I know it must have been rough when Ma and Pa denied your request to visit."
-    rory @ say "But don't worry, we'll enjoy the time I'm home without you!"
-    
-    rori @ say "Oh go to hell."
-    
-    rory @ say "Not right now~"
-    rory @ say "I'll catch up with you later, I've got a flight to catch!"
-    rory @ say "And it was really nice meeting your boyfriend. Enjoy him while you can, because I might decide to make him mine when I'm back! Hahahaha!"
-    
-    n "She shoulder checks Rori so hard he falls to the ground as she walks away."
-    
-    menu:
-        "Help him up":
-            n "You hold out your hand to grab onto and hoist him back up onto his feet."
+            rori @ say "Y-your Rori?"
             
-        "Let him get up":
-            n "He doesn't need your pity. Helping him will just bruise his ego even more."
-            n "He picks himself up and brushes the leaves and dirt off his jacket."
-    
-    rori @ say "Grrrr that bitch..."
-    
-    player "And you lived with her for years? That must have been brutal."
-    
-    rori @ say "I don't care if she's my sister, I genuinely hate her."
-    rori @ say "I don't even care that she's better at everything, the world would be a better place without her in it."
-    
-    player "Geez man. At least she's going away for the week."
-    
-    rori @ say "Yeah... Luckily I haven't run into her much here. But now that she's seen me with friends she'll stop at nothing to sabotage me."
-    rori @ say "She can't stand seeing me happy. It's the one thing that gets under her skin."
-    
-    player "...You wanna talk about it?"
-    
-    rori @ say "I dunno. Not right now. I wanna be alone."
-    
-    player "Alright. I'll see you around man."
-    
-    rori @ say "Yeah. And thanks for being here for me."
-    
-    player "Anytime. That's what bros are for."
-    
-    
+            rory @ say "I see, you're one of *those* types."
+            #rory @ say "I can be sweeter than him... I just choose not to~"
+            rory @ say "Don't make the mistake of conflating passiveness with kindness."
+            rory @ say "Rori's personality is a result of him being submissive. He may appear to be nice on the surface, but he's really just desperate for affection."
+            rory @ say "But even then, I bet I'm sweeter~"
+        else:
+            player "You can't be better at everything. Rori has to have something he beats you at."
+            
+            rory @ say "That's the sad part, he really doesn't!"
+            rory @ say "I'm just a straight upgrade from him."
+            rory @ say "Literally~"
+            
+            #rory @ say "The only reason to choose him over me is for his dick, which isn't even that big."
+            
+            #player "H-how would you know?"
+            
+            #rory @ say "Doesn't matter. I could turn any gay man straight anyway~"
+            
+            #rory @ say "Why settle for him when you could have me instead?"
+        
+        #rory @ say "I haven't met anyone worthy of me yet. I'm almost afraid I never will."
+        
+        
+        rori @ say "What do you want, Rory? Did you come over here just to torture me?"
+                
+        rory @ say "I just wanted to say goodbye my little bro before I go back home for autumn break, that's all!"
+        rory @ say "I know it must have been rough when Ma and Pa denied your request to visit."
+        rory @ say "But don't worry, we'll enjoy the time I'm home without you!"
+        
+        rori @ say "Oh go to hell."
+        
+        rory @ say "Not right now~"
+        rory @ say "I'll catch up with you later, I've got a flight to catch!"
+        rory @ say "And it was really nice meeting your boyfriend. Enjoy him while you can, because I might decide to make him mine when I'm back! Hahahaha!"
+        
+        n "She shoulder checks Rori so hard he falls to the ground as she walks away."
+        
+        menu:
+            "Help him up":
+                n "You hold out your hand to grab onto and hoist him back up onto his feet."
+                
+            "Let him get up":
+                n "He doesn't need your pity. Helping him will just bruise his ego even more."
+                n "He picks himself up and brushes the leaves and dirt off his jacket."
+        
+        rori @ say "Grrrr that bitch..."
+        
+        player "And you lived with her for years? That must have been brutal."
+        
+        rori @ say "I don't care if she's my sister, I genuinely hate her."
+        rori @ say "I don't even care that she's better at everything, the world would be a better place without her in it."
+        
+        player "Geez man. At least she's going away for the week."
+        
+        rori @ say "Yeah... Luckily I haven't run into her much here. But now that she's seen me with friends she'll stop at nothing to sabotage me."
+        rori @ say "She can't stand seeing me happy. It's the one thing that gets under her skin."
+        
+        player "...You wanna talk about it?"
+        
+        rori @ say "I dunno. Not right now. I wanna be alone."
+        
+        player "Alright. I'll see you around man."
+        
+        rori @ say "Yeah. And thanks for being here for me."
+        
+        player "Anytime. That's what bros are for."
+        
+        
     
 #saturday
     n "It's officially the first day of your autumn break. No more worries until school starts back up again."
