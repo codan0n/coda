@@ -3527,96 +3527,169 @@ label writingWithMishka:
 
     play music "audio/music/vylet - I Wish I Could Tell You.ogg" fadein 1.0
     
+    n "Outside the cafe you see Mishka standing by herself, watching street birds hop around and peck at the ground."
+    n "They fly away as you approach and Mishka notices you."
     
+    mishka @ say "[name]! You're here!"
     
+    #player "Sorry, am I late? I thought we agreed to meet up at noon."
     
+    #n "You check the time on your phone. It's only 11:45."
     
+    #mishka @ say "Nyet, it's okay. I just thought you might"
     
-    #mishka meets you outside and offers you a drink, then you go inside
-    #mishka makes some drinks and asks what you do for fun
-    #you mention you used to write
-    #she gets excited and shows you her fanfictions
-    #you do some collab writing
+    player "Hey Mishka! Sorry to keep you waiting."
     
+    mishka @ say "No worries! So...."
     
+    n "She looks around nervously."
     
-
-    n "What better place to write than a cafe?"
-    n "You step up to the counter to order your required caffeinated beverage."
-
-    show mishka neutral at center with dissolve:
-        xzoom -1
+    mishka @ say "I'm not sure what to do now."
+    
+    #player "I think college students are supposed to go to parties during these breaks."
+    player "Honestly me neither."
+    player "The campus is a ghost town cause of autumn break."
+    
+    mishka @ say "Would you like to go inside? I can make drinks for us."
+    
+    n "You shrug your shoulders."
+    
+    player "Might as well."
+    
+    scene bg cafe with fade
+    
+    n "Mishka unlocks the door and leads you inside where she starts the make the usual coffee for you."
+    
+    player "At least there's no customers to worry about today."
+    
+    mishka @ say "None except you! But do not worry, I won't charge for this."
+    
+    player "Thanks. Is working at a cafe fun? I like the chill vibes drinking here but it looks pretty hectic making the drinks for everyone."
+    
+    mishka @ say "Oh it gets pretty hard at times! But it's fairly routine work I would say."
+    
+    player "You're here like all the time. How do you find time for classes?"
+    
+    mishka @ say "Well I..."
+    #Справді немає потреби!
+    mishka @ say "Spravdi nemaye potreby!"
+    
+    player "Pardon?"
+    
+    mishka @ say "Nevermind. What do you do for fun?"
+    
+    menu:
+        "Troll online image boards":
+            player "I engage in the art of baiting people online."
+            
+            mishka @ say "You do... baiting to people? I am not familiar with this term."
+            
+            player "It's a niche hobby where the goal is to make strangers get mad."
+            
+            mishka @ say "I see."
+            
+            n "You can tell by the look on her face that she doesn't understand the point."
+            n "You're starting to question the point of it all yourself."
+            
+            player "Over time people catch on to trolling efforts and it takes a lot of creativity to come up with new bait but I'm pretty good at it."
+            player "I'm known as a master baiter."
+            
+            mishka @ say "So it's like creative writing?"
+            
+            player "Sorta?"
+            
+            mishka @ say "Ahh how fascinating! I liked to write too!"
+            
         
-    mishka @ say "Hello [name]! What it is I can get for you today?"
-    
-    n "You place your order and she gets started on it while you find a place to set up your laptop."
-    
-    show mishka at flipleft
+        "Write spicy fanfics":
+            player "I like to write."
+            
+            n "Mishka's eyes widen with excitement."
+            
+            mishka @ say "You do?!"
+            mishka @ say "What sort of things do you write?"
+            
+            n "You're embarrassed to confess to the type of literature you enjoy."
+            
+            player "Just like uh... y'know, stuff. Romance stories I guess you could say."
+            
+            mishka @ say "Ahh how fascinating! I liked to write too!"
+            
+        #"":
+            
         
-    pause .3
-
-    show mishka neutral at offscreenleft with move:
-        yalign 0
+        "Nothing":
+            player "For fun? What's that?"
+            
+            mishka @ say "You know, what are things you enjoy doing?"
+            
+            player "I'm not really sure? I don't do a whole lot."
         
-        
-    #n "You order the usual and find a place to set up your laptop."
-    n "As you're catching up on your insane writings, Mishka walks up to you with two drinks in her hands."
-
-    show mishka anxious grin at center with move:
-        xzoom -1
-        xpos 1750
-
-    mishka @ say "Here's your drink~"
-
-    player "Thanks."
-
-    n "Mishka continues to hover over you as you scald your tongue on 200 degrees of hot coffee."
+            mishka @ say "Really? Nothing?"
+            mishka @ say "Why don't you try something new?"
+            
+            player "Like what?"
+            
+            mishka @ say "When I found myself in your position I took to creative writing!"
+            
+    player "What did you write?"
     
-    show mishka shy grin
-
-    mishka @ say "..."
-
-    player "...?"
-
-    mishka @ say "What your working on?"
-
-    player "Just a story thing."
+    mishka @ say "Stories based on cartoons I watched!"
     
-    show mishka shy -grin
-
-    mishka @ say "Oh? For class or for a fun?"
-
-    player "Just something to pass the time I guess. I used to be really into writing but just kinda stopped at some point."
+    n "Mishka finishes with the drinks and finds a table for you to sit at."
     
-    show mishka happy
-
-    mishka @ say "Ah, that is so cool!"
+    mishka @ say "Back in my home village we had a satellite dish for the television that could just barely pick up signals. Sometimes it would show cartoons but mostly old Soviet era ones."
     
-    show mishka neutral
+    player "Wow, I totally forgot that was even a thing. Both satellite TV and the Soviet Union."
     
-    mishka @ say "I once wrote little stories but now I'm content to only read them."
-
-    player "Really? What kind of stories do you like?"
-
-    mishka @ say "I read much of medieval fantasy stuff!"
-    mishka @ say "I also liked the slavic fan fictions of western media."
-
-    player "Really? That's a thing?"
-
-    mishka @ say "Oh yes, there is big community for it! I would even download fan dubs of your cartoons to watch. They are so much more lighthearted compared to old Soviet reruns!"
-    mishka @ say "It was good escapism when shells were landing near village."
-
+    mishka @ say "Yes, both were awful!"
+    mishka @ say "Eventually we got a computer and I could download western cartoons with fan made Ukrainian dubs! I liked them because they were so much more lighthearted!"
+    mishka @ say "It was good escapism when shells were landing near our village."
+    
     player "...Shells?"
-    
-    show mishka depressed
-
+     
     mishka @ say "Ehh, it's not important. Sorry to bring it up."
-    
-    show mishka happy
-    
     mishka @ say "But this is how I started to be learning English!"
+    mishka @ say "I downloaded western fanfictions of my favorite cartoons and read through them. Then I tried writing my own!"
     
-    show mishka neutral 
+    n "You nod then take a sip of your drink, scalding your tongue on 200 degrees of hot coffee (93.3C for countries without freedom units)."
+    
+    player "Did you post them online?"
+    
+    mishka @ say "I did! But they are lost to time now."
+    
+    n "She takes a sip of her coffee then looks to you with a smile."
+    
+    mishka @ say "Maybe... we could write one together?"
+    
+    menu:
+        "Sounds fun!":
+            player "I'd be down to try it. I've never written with someone before though."
+            
+            mishka @ say "That's okay, we can figure it out!"
+            
+            n "Mishka grabs some napkins and pulls a pen from her jacket pocket. She begins sketching diagrams."
+            
+            mishka @ say "I like to start with outline. You know basic three act structure, right?"
+            
+            player "Uhh yeah. Beginning, middle, end."
+            
+            mishka @ say "Yup! I like to "
+            
+        "I'd rather not":
+            #watch cartoons on your phone
+    
+    
+    player ""
+    
+    
+    #she gets excited and shows you her fanfictions
+    #you do some collab writing on napkins
+    
+    
+    
+    
+    
     
     mishka @ say "I could hardly get enough of reading the stories!"
     
@@ -3836,4 +3909,4 @@ label goWithRori:
     #gunner saves you on your first try, pulls you back and tells you to let it go, it's just one photo
     #if you succeed, ava will later invite you on a date and commit to you 
     
-    
+    #glare all you want, you're not getting them back ms ellen
