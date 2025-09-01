@@ -3668,173 +3668,109 @@ label writingWithMishka:
             
             mishka @ say "That's okay, we can figure it out!"
             
-            n "Mishka grabs some napkins and pulls a pen from her jacket pocket. She begins sketching diagrams."
-            
-            mishka @ say "I like to start with outline. You know basic three act structure, right?"
-            
-            player "Uhh yeah. Beginning, middle, end."
-            
-            mishka @ say "Yup! I like to "
+            n "You discuss some basic premises, characters, and plot and settle on a rough plan."
             
         "I'd rather not":
-            #watch cartoons on your phone
+            player "Ehhh I'd rather not. I'm not that great of a writer."
+            
+            mishka @ say "Oh come on, at least give it a try!"
+    
+            player "Alright, but I probably won't be that much help."
+            
+            mishka @ say "All that matters is that we have fun with it!"
+    
+            n "Mishka guides you through setting up some basic premises, characters, and a plot."
+    
+    n "Mishka grabs some napkins and pulls a pen from her jacket pocket. She begins sketching diagrams."
+    
+    mishka @ say "I like to start draw outlines and arrows pointing out related events. You know basic three act structure, right?"
+    
+    player "Uhh yeah. Beginning, middle, end."
+    
+    mishka @ say "Yup! I like to start with the end then work my way backwards!"
+    mishka @ say "Got any ideas?"
+    
+    player "For the ending?? Okay uhhh what if... "
     
     
-    player ""
-    
-    
-    #she gets excited and shows you her fanfictions
-    #you do some collab writing on napkins
-    
-    
-    
-    
-    
-    
-    mishka @ say "I could hardly get enough of reading the stories!"
-    
-    #mishka @ say "I often would have no familiarity with the source material while reading the fanfics so it was always a surprise finally to see the originals!"
-    
-    $ mishkaWriting = False
-
     menu:
-        mishka "{cps=0}I could hardly get enough of reading the stories!{/cps=0}"
-        "Would you like to know what this one's about?":
-            #finished
-            $ mishkaWriting = True
+        "A storm comes...":
+            player "...a giant storm comes and wipes out the town."
             
-            n "You're hesitant to reveal your writing to anyone you personally know, but Mishka seems pretty open to this kind of thing so maybe she won't make fun of you?"
-
-            player "Would you like to know what this one's about?"
+            mishka @ say "And then?"
             
-            show mishka overjoyed
-
-            mishka @ say "Zvichayno!!!"
-
-            player "Heheh I'll take that as a yes."
+            player "I dunno?"
             
-            show mishka shy grin
-
-            mishka @ say "Xaxa yes, of course of course!"
-
-            n "Mishka sits down across from you and you explain the plot so far. She nods and seems to not only understand your overly convoluted lore but enjoy it as well."
+            mishka @ say "That's like the climax of the story but there's gotta be more!"
+            mishka @ say "If the town gets destroyed by the storm then the people will have to rebuild!"
             
-            show mishka neutral
-
-            mishka @ say "Wow [name], that sounds pretty neat!"
-
-            player "Really? You think so? I was afraid it would sound lame when I said it aloud."
-
-            mishka @ say "No no no, you clearly put a lot of effort into this!"
-            mishka @ say "Is there somewhere I can read the whole thing?"
-
-            n "You tell her the name and site it's uploaded on and she types it into her phone."
-
-            mishka @ say "Oorah! I'll check it out when I have a chance!"
-
-            hide mishka with dissolve
-
-            n "Mishka continues to sit with you and chat while you work on your story. The cafe is empty so it's not like she has to go back to work anyway."
-            n "She even moved her seat right next to your so she could read your screen. You've never really been this close to her before since she's always been behind a table."
-            n "She smells like lavender."
-            n "You bounce a few ideas off her and she gives some good feedback as well as a few ideas of her own."
-            n "After you've spent a few hours at the cafe, you've got a near-final draft ready and your table is littered with empty coffee cups."
-
-            show mishka neutral at center with dissolve:
-                xzoom -1
-
-            mishka @ say "*Yaaaawn*"
-            mishka @ say "Welp, it's about time to close down."
-
-            player "Damn, did I really spend all day here?"
-
-            mishka @ say "You did!"
-            mishka @ say "Not that I mind though!"
+            player "I guess that gives all the characters a moment to get together and start all over again."
             
-            show mishka happy
-                        
-            mishka @ say "It was good to help you with your writings!"
-
-            player "Haha I appreciate the help! I'll go over this one more time before posting it online."
+            mishka @ say "Absolutely! Things are forever changed but they still have a home and each other and live happily ever after!"
+            mishka @ say "Now let's go back and start at the beginning to figure out how to get there..."
+        
+        "The protagonist dies":
             
-            show mishka neutral
-
-            mishka @ say "I can't wait to read it!"
-
-            hide mishka with dissolve
-
-            n "You help Mishka throw away all the cups and wipe down the table before saying goodbye and returning to your dorm for the night."
-
-        "I should really get back to work":
-            #finished
-            #+1 point for everyone else
-            $ roriPoints += 1
-            $ ellenPoints += 1
-            $ rosePoints += 1
-            $ avaPoints += 1
-            $ clairePoints += 1
-            player "Nice!"
-            player "I should get back to work on mine though. Thanks for the coffee!"
+            player "...the protagonist dies in the end?"
             
-            show mishka sad
-
-            n "Mishka looks slightly taken aback."
-
-            mishka @ say "O-oh, right of course. I should get back to work too..."
-            mishka @ say "Well I'll let you alone for now."
+            mishka @ say "Seems kinda bleak. Does he do a heroic sacrifice or something?"
             
-            #show mishka despondent 
-            show mishka anxious
+            player "Maybe... not? Sometimes people just die."
             
-            mishka @ say "Uhh let me know if you need more coffee!"
-
-            hide mishka with dissolve
-
-            n "She awkwardly walks back to the counter and pulls out a book."
-            n "It dawns on you that she probably wanted to sit with you and hear about your story."
-            n "Well dang, now you feel bad."
-            n "It's too late to invite her back over so you might as well actually get started writing this next chapter."
-            #n "You quickly review your wikiped page to refamiliarize yourself with the plot."
-            n "The more you write, the more you get into it"
-            n "You had forgotten how much you really enjoyed this."
-            n "After you've spent a few hours at the cafe, you've got a near-final draft ready and your table is littered with empty coffee cups."
-
-            show mishka despondent at center with dissolve:
-                xzoom -1
-
-            mishka @ say "*Yaaaawn*"
-            mishka @ say "Welp, it's about time to close down."
-
-            player "Damn, did I really spend all day here?"
-
-            mishka @ say "Yup."
-            mishka @ say "Time flies when you're busy I suppose."
-            mishka @ say "I hope you got a lot done."
-
-            player "Yeah, I think I'll post this chapter tonight."
+            mishka @ say "Yeah but narratively there has to be something there. There needs to be a reason to write it like that!"
             
-            show mishka neutral
-
-            mishka @ say "Oh?"
-            mishka @ say "Well good luck [name]!"
-            mishka @ say "I hope people enjoy to read it!"
-
-            player "Thanks!"
-
-            hide mishka with dissolve
-
-            n "You help Mishka throw away all the cups and wipe down the table before saying goodbye and returning to your dorm for the night."
-            n "You wonder if you should have told her what you were writing or if she would have thought it was lame."
-            n "You've never told somebody you personally know about it before. You prefer to post anonymously."
-            n "If someone in irl found out you were responsible for this dumb indulgent fanfiction..."
-            n "You shudder to imagine how your friends would view you afterwards."
-            n "But after spending all day writing, you remember what drew you into this in the first place."
-            n "The waifus."
-            n "It's always been about the waifus."
-
-    hide box
-
-    stop music fadeout 1.0
+            player "Okay well maybe the whole story is about like setting things up to pass the torch to the future generations?"
+            
+            mishka @ say "That could work! Except I think it might cause conflict with some parts of the lore."
+            
+            player "Yeah, I didn't think of that."
+            
+            mishka @ say "It's like that saying \"It's about the journey, not the destination.\""
+            
+            player "Huh, I think that actually works better. Like the main character is focusing on figuring out to spend his days before the inevitable end."
+            
+            mishka @ say "In that case it should be a hopeful tragedy!"
+            
+            player "Isn't that kind of a contradiction?"
+            
+            mishka @ say "Not really! If his death is a tragedy then that means someone cares about him."
+            mishka @ say "And if someone cares, then that must mean they had good times together."
+            mishka @ say "So he'll have left his mark on the world."
+            
+            player "I guess that makes sense. I just hope it's not all for nothing."
+            
+            mishka @ say "Nobody said writing would be easy!"
+            
+    n "You spend the whole day workshopping your story ideas with Mishka, chugging through multiple cups of coffee."
+    n "Before you know it, it's dark outside."
+    
+    mishka @ say "*Yaaaawn*"
+    mishka @ say "I think we will have to stop for now."
+    
+    player "Damn, we spent the whole day just writing."
+    
+    mishka @ say "Yeah!! Did you enjoy it?"
+    
+    menu:
+        "I did. A lot.":
+            player "I did. A lot. I'm glad you dragged me into it!"
+            
+            mishka @ say "Hehe I'm glad I could drag you into it! We should write more together some time."
+            
+            player "Of course! We have to finish the story after all!"
+            
+        "It was alright":
+            player "It was alright. Maybe writing's not my thing after all."
+    
+            mishka @ say "Aww. Sorry to hear."
+            mishka @ say "Maybe I should not have dragged you into this..."
+            
+            player "No it's fine, it was a nice gesture I just can't write well with others."
+            
+            mishka @ say "..."
+    
+    
+    n "You help Mishka throw away all the cups and wipe down the table before saying goodbye and returning to your dorm for the night."
 
     scene bg black with fade
 
@@ -3852,7 +3788,7 @@ label goWithRori:
     # happen upon rori while on a walk
     # he's staring down at his phone
     # ask what he's playing
-    # monster catcher go
+    # monster catcher go vers 1.49b7-rc3
     # you're totally unfamiliar with the type of game, despite it being super popular just a couple years back
     # you install it on your phone and have to go through a trillion tutorials but rori promises it gets fun
     # get bored/can't get it working on your lagdroid. either abandon the hangout or go to your dorm
