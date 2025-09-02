@@ -4029,6 +4029,7 @@ label roriSnuggles:
     
     player "Well I kinda like you too, otherwise I wouldn't be snuggling with you."
     
+    ###only have option to listen if romantic fantasy flag is false
     rori @ say "*Sigh* Do you wanna listen to me ramble or do you just wanna snug? I'm good with either."
     
     menu:
@@ -4037,18 +4038,111 @@ label roriSnuggles:
             player "Go ahead and talk, I'll listen."
             
             rori @ say "Thanks. I wouldn't bring this up to anyone else but I feel comfortable saying it to you cause... I think you'll get it."
-            rori @ say ""
+            rori @ say "I've never known what it's like to love or be loved by someone. I kept to myself in high school and mostly stayed inside my room doing computer stuff at home."
+            rori @ say "Between the isolation and torment from my family, I just- developed a desire for a certain kind of person. Someone who's genuine and caring."
+            rori @ say "And who appreciates me for who I am."
+            rori @ say "I'm not gonna settle for someone who doesn't see my perspective. I need someone who can empathize with me. Does that make sense?"
+            rori @ say "Call it a romantic fantasy of mine. I just want to love someone who loves me back and we'd do anything for each other."
+            rori @ say "I don't think relationships like that can be forced into existing. I think I'll have to meet exactly the right person and go from there."
+            rori @ say "Okay rant over."
             
+            player "Wow. I haven't really thought of it in words like that but yeah I kinda agree with you. Some people just aren't meant to be together but conversely some are perfect for each other."
+            player "I don't really know if I'm the right one for you but..."
             
+            rori @ say "We wouldn't be snuggling like this if there wasn't a chance."
             
-            #talk about romantic fantasy (optional)
-                #wants someone especially genuine and caring. just a very close best friend i guess? someone who doesn't need him to be any different, just appreciates him as he is
+            player "Lucky we're still young and have time to figure shit out."
+            
+            n "Rori looks into your eyes and smiles sweetly."
+            
+            rori @ say "Yeah~"
+            rori @ say "By the way, we don't have to rush and have this all figured out right now. I'm happy to just enjoy spending time with you however we feel like."
+            rori @ say "Soooo like if you wanted to smooch or somethin' we could give it a shot just to see how it feels?"
+            
+            menu:
+                "Kiss him":
+                    player "What you mean liiiiike... this?"
+                    
+                    n "You gently raise his chin with your fingers and press your lips to his."
+                    n "He seems shocked you actually did it at first, but then he melts in your embrace and leans into it."
+                    n "It seems to last forever, or at least until you're out of breath."
+                    
+                    rori @ say "*Gasp!*"
+                    rori @ say "Whew that sure was... something!"
+                    rori @ say "A very exciting something!"
+                    
+                    player "Yeah? You wanna do it again?~"
+                    
+                    rori @ say "You bet!"
+                    
+                    n "He enthusiastically pulls you in for a peppering of smoochies. It gets to the point where you have to pull him off you just to get a breath."
                 
+                    rori @ say "Heh sorry, I got a little carried away. I've been touch-starved my whole life."
+                    
+                    player "I know how it is. I just need to come up to breathe every now and then!"
+                    
+                    rori @ say "You know we can actually go beyond this if you want?"
+                    
+                    player "Wait what? Is there like kissing level 2 or something?"
+                    
+                    rori @ say "Pffft no! Well I mean yeah there kinda is I think but that's not what I'm talking about."
+                    
+                    player "You're gonna have to spell it out for me then."
+                    
+                    n "Rori giggles and whispers it into your ear."
+                    
+                    rori @ say "Human male on male anthro~"
                 
-            #can smooch and/or fug after
-            
-            
-            
+                    n "You fully understand what you must do."
+                
+                    menu:
+                        "Gay ram sex":
+                            player "Alright, we just have to decide who's gonna top."
+                            
+                            rori @ say "...Rock-paper-scissors for it?"
+                            
+                            player "Okay, do we shoot on three or do like one-two-three-shoot?"
+                            
+                            rori @ say "Let's just go on three."
+                            
+                            player "Best two out of three?"
+                            
+                            rori @ say "Yeah."
+                            rori @ say "Okay ready?"
+                            
+                            player "Ready!"
+                            
+                            scene bg black with dissolve
+                            
+                            n "You ended up getting the result you wanted."
+                            
+                        
+                        "No gay ram sex":
+                            player "Sorry but I'm not ready to have gay ram sex right now."
+                            
+                            rori @ say "That's okay! Like I said we don't have to speedrun this at all. We can just do whatever feels right."
+                            
+                            player "Thanks for understanding."
+                            
+                            rori @ say "Thanks for being here with me~"
+                            
+                            player "You mind if I stay the night?"
+                            
+                            rori @ say "Go right ahead~"
+                        
+                
+                "Don't kiss him":
+                    player "I'm actually good like this. Just wanna take it slow and snuggle my ram friend."
+                
+                    rori @ say "That's perfectly fine! I'm good with whatever."
+                    rori @ say "I'm enjoying this as-is already~"
+                    
+                    player "Good~"
+                    
+                    n "You rest your chin on his head as you hold him close."
+                    n "This is nice."
+                    n "You could just close your eyes and fall asleep just like this."
+        
         "Snug":
             player "Let's just enjoy the moment. We both wanna snuggle a cute boy, so here we are."
             
@@ -4070,1087 +4164,131 @@ label roriSnuggles:
             
             rori @ say "Mmh~"
             
-            if roriPoints > 4:
-                menu:
-                    "Ask if he wants to go further":
-                        n "You're in bed with this pantless ram, cuddling and "
-                        
-                        rori @ say "U-um well, how much further are you talkin'?"
-                        
-                        menu:
-                            "Some smoochies":
+            menu:
+                "Ask if he wants to go further":
+                    n "You're in bed with this pantless ram, cuddling and grabbing his ass. This is obviously going somewhere."
+                    
+                    player "You wanna take this further?"
+                    
+                    rori @ say "U-um well, how much further are you talkin'?"
+                    
+                    menu:
+                        "Some smoochies":
+                            player "Nothing crazy, just some smoochies."
                             
-                            "Gay ram sex":
-                    "This is as far as you go":
-                        n ""
-        
-    
-    
-    
-    
-
-
-    rori @ say "That alcohol is really starting to kick in~"
-
-
-    
-    #gay ram sex (optional) (he'll try it if he likes you enough but afterwards says he can't do it again without both of you committing to a relationship)
-  
-
-
-###############
-
-
-                n "You and Rori take turns passing the bottle back and forth, gradually becoming worse at the games you're playing yet having more fun the drunker you get."
-                n "Something about letting all your worries slip away while you mash buttons and trash talk each other makes for a most enjoyable evening."
-                n "All while sitting in a steamy room with a cute guy..."
-                n "All the dorkiness of Rori disappears as he becomes more relaxed and almost arrogant with the way he plays, going for risky stylish combos rather than safe, effective ones."
-
-                rori @ say "Hey."
-
-                player "Yeah?"
-
-                rori @ say "It's getting kinda hot in here."
-                rori @ say "You mind if I take my pants off?"
-
-                n "Maybe it's just the alcohol but the way he so confidently said that instantly puts a blush on your face."
-                n "He's right though, it is getting kinda hot."
-                n "And it's not really that weird for animal people to take their pants off cause they have fur... right?"
-                n "Thankfully spending all that time on video game imageboards prepared you for sleepovers like this."
-
-                player "...Only if I can join you."
-
-                rori @ say "Heheheh, now yer talkin'~"
-
-                n "You and Rori shakily rise from your seats and undo your pants."
-                n "Rori particularly seems to have a difficult time as he stumbles from side to side until sitting back down and kicking off his pants legs."
-
-                show rori pantslessdrunk with dissolve
-
-                rori @ say "Ahh, there we go~"
-                rori @ say "Nice undies by the way."
-
-                player "Same, dude."
-
-                rori @ say "Ssssay, how bout we make this a little more... interestin'?"
-
-                player "I'm listening."
-
-                rori @ say "Loser -*hic*- has to sit in the winner's lap for the next few rounds~"
-
-                player "You're on!"
-
-                n "You blurt it out without even thinking. Upon quick retrospection you realize you've lost nine out of the past ten matches and you only won one because Rori got up to take a piss."
-                n "This is gonna be hard."
-
-                menu:
-                    n "{cps=0}This is gonna be hard.{/cps}"
-                    "Try to win":
-                        n "Try as you might, your drunken reflexes are just too slow to outpace Rori's expertise with the game."
-                        #n "You manage to work him into a sweat however, before ultimately being defeated."
-
-                        rori @ say "Ahhh a deal's a deal, [name]!~ Come on up and have a seat~"
-
-                        n "Rori moves his fight stick out of the way and pats his lap."
-                        n "With a defeated sigh you get up from your bean bag chair and immediately trip over a chord. Thankfully Rori catches you, albeit in a somewhat... compromising position."
-
-                        rori @ say "Whoa! Y-you okay?"
-
-                        n "With the worst possible timing, the door creaks open and Gunner pokes his head inside."
-
-                        show gunner neutral at norm with moveinright:
-                            xpos 550
-
-                        gunner @ say "Hey guys are you done making out or whatever, I-"
-                        gunner @ say "Oh my."
-                        gunner @ say "I'll just leave you to it then."
-
-                        show gunner neutral at offscreenright with move:
-                            yalign 0
-
-                        n "The sheer amount of embarrassment you're feeling temporarily sobers you up enough to stand up and turn around to plant your rear in his lap."
-                        n "Rori assists you by putting his hands on your sides pulling you into him. He acts like Gunner didn't just walk in on you."
-
-                        rori @ say "There ya go~ Comfy?"
-                        #rori @ say "Go ahead and get comfortable~"
-
-                        player "Y-yeah."
-
-                        n "You lean over to pick your controller up off the ground while Rori has an awkward time setting his fight stick up on your lap."
-                        n "You get settled in and lean back against Rori's chest, just living in the moment until Rori pokes you."
-
-                        rori @ say "You gonna pick your character or what?"
-
-                        player "Oops forgot to hit A, sorry."
-
-                        n "You tap the button and resume playing."
-                        n "Rori rests his muzzle on your shoulder and several rounds go by, usually with him winning."
-                        n "It doesn't help that you're distracted..."
-                        n "He's so warm and soft..."
-                        n "A spontaneous thought pops into your head."
-                        n "You should kiss him."
-
-                        menu:
-                            "Kiss him!":
-                                n "In the middle of a match, you turn your head and bring one hand up to Rori's face, stroking his fur."
-
-                                rori @ say "Heyyyy what are you doin'?~ I'm tryna play thish game hahaha~"
-
-                                n "You silence his complaints by planting your lips upon his."
-                                n "His eyes go wide and muffled moans escape his throat."
-                                n "Soon though, his mind catches up to what's happening and he accepts it."
-                                n "He lets go of his controller and his paws start to explore your body while kissing you back."
-                                
-                                stop music fadeout 1.0
-
-                                scene bg roridorm with fade
-
-                                show box with Dissolve(.2):
-
-                                #monday4
-
-                                n "After that it's hard to recall specific details, but you remember it was a fun night."
-                                n "You woke up in his bed with him in your arms, enjoying the snuggles while you wait for him to wake up."
-
-                                show rori pantsless at norm with dissolve
-
-                                rori @ say "*Yaaaawn*"
-                                rori @ say "God, I've got such a headache... Oh hey [name]."
-                                rori @ say "Err, what are you doing in my bed?"
-                                rori @ say "And where are your pants?"
-
-                                n "You stifle a giggle and lean in to give him a smooch on his lips."
-
-                                player "Does that jog your memory?"
-
-                                rori @ say "Oh... Oh! Haha yeah, it does~"
-                                rori @ say "I guess I thought that was just a dream. I'm glad it wasn't though!"
-
-                                player "Me too~"
-
-                                rori @ say "Ahah... Soooo...."
-                                rori @ say "What now?"
-
-                                player "I should probably get going soon so Gunner can reclaim his dorm."
-
-                                rori @ say "Yeah, I guess we did kinda hog the room for ourselves..."
-
-                                n "He helps you find your pants then gives you a parting kiss on your way out."
-
-                                player "But yeah, I wouldn't mind if we hung out at my dorm next time."
-                                player "I got the whole place to myself~"
-
-                                rori @ say "Sounds good to me~"
-
-                                n "He looks so cute when he smiles like that. You can't help but pull him into a hug and kiss him one more time before leaving."
-
-                                rori @ say "See you later [name]!"
-
-                                player "Later!"
-
-                                stop music fadeout 1.3
-
-                                scene bg codadorm with fade
-
-                                show box with Dissolve(.2):
-
-                                n "After taking a shower, you check your phone. Looks like Rori sent you a message."
-
-                                call phone_start from _call_phone_start_21
-
-                                call message_start("Rori", "Hey [name] I really enjoyed last night and I'd love to do something like that again soon", "roriavi.png") from _call_message_start_31
-
-                                call reply_message("Same!") from _call_reply_message_120
-
-                                call message("Rori", "<3", "roriavi.png") from _call_message_165
-                                call message("Rori", "Gunner's been complaining it smells like sweaty human in here now lmao", "roriavi.png") from _call_message_166
-
-                                call reply_message("Oh right, animals have much stronger sense of smell than I do") from _call_reply_message_121
-                                call reply_message("I just took a shower but I can still smell a bit of ram") from _call_reply_message_122
-
-                                call message("Rori", "Sorry lol", "roriavi.png") from _call_message_167
-                                call message("Rori", "We also have a much stronger musk than humans", "roriavi.png") from _call_message_168
-
-                                call reply_message("It's fine I don't mind") from _call_reply_message_123
-                                call reply_message("I kinda like your smell~") from _call_reply_message_124
-
-                                call message("Rori", "Aww <3", "roriavi.png") from _call_message_169
-
-                                call reply_message("<3") from _call_reply_message_125
-
-                                call phone_end from _call_phone_end_25
-
-                                #n "You start getting ready for class, excited to text Rori again afterward."
-
-                                jump monday6
-                            "Don't kiss him":
-                                $ dating = ""
-                                n "You've got to put a stop to this. You don't like Rori like this."
-                                n "You shouldn't lead him on by kissing him. You shouldn't even be in his lap."
-                                n "But he's having such a good time, and honestly so are you."
-                                n "It wouldn't hurt to let him enjoy having your butt in his lap for a few more rounds, right?"
-                                n "You play another round or two before deciding to hop off and sit back in the bean bag chair."
-
-                                rori @ say "Aww, leaving so soon?"
-
-                                player "It was getting a little too hot for my liking."
-
-                                rori @ say "Heh, I'll say it was~"
-                                rori @ say "Ah well, the spot's still available if you ever change your mind~"
-
-                                n "As tempting as it is, you stay where you are for the remainder of the night until it's time to return to your dorm."
-                                n "You and Rori had finished the bottle of whiskey at some point but you'd sobered up enough to walk home."
-
-                                rori @ say "Ahh, this was fun, wasn't it?"
-                                rori @ say "Nothin' like playing games with a friend all night, huh?"
-
-                                player "Yup! The alcohol sure helped too~"
-
-                                rori @ say "Heh, it sure did~"
-
-                                n "Rori leans into you and gives you a hug."
-
-                                rori @ say "See ya later~"
-                                rori @ say "Don't get lost on the way back home, k?"
-
-                                n "You return the hug and pat him on the back."
-
-                                player "I'll be alright."
-
-                                rori @ say "Don't forget your pants, bro."
-
-                                player "Oh right."
-
-                                n "You put your pants back on before waving goodbye to Rori and heading back to your dorm, where you flop in bed and fall asleep immediately."
-
-                                stop music fadeout 1.3
-
-                                scene bg codadorm with fade
-
-                                show box with Dissolve(.2):
-
-                                n "The following morning, you check your phone and find Rori messaged you."
-
-                                call phone_start from _call_phone_start_22
-
-                                call message_start("Rori", "Last night was pretty crazy, huh? I enjoyed it tho and I hope you did too lol", "roriavi.png") from _call_message_start_32
-
-                                call reply_message("Yeah lol it was great") from _call_reply_message_126
-                                call reply_message("We should do it again sometime!") from _call_reply_message_127
-
-                                call message("Rori", "Sure! I promise I'll keep my pants on next time :P", "roriavi.png") from _call_message_170
-                                call message("Rori", "Haha unless...?", "roriavi.png") from _call_message_171
-
-                                call reply_message("Omg I just remembered that part") from _call_reply_message_128
-                                call reply_message("I blame the alcohol") from _call_reply_message_129
-
-                                call message("Rori", "Suuuuuure", "roriavi.png") from _call_message_172
-                                call message("Rori", "lol Gunner's been complaining it smells like sweaty human in here now", "roriavi.png") from _call_message_173
-
-                                call reply_message("Oh right, animals have much stronger sense of smell than I do") from _call_reply_message_130
-                                call reply_message("I need to take a shower. I still smell like ram.") from _call_reply_message_131
-
-                                call message("Rori", "Sorry lol", "roriavi.png") from _call_message_174
-                                call message("Rori", "We also have a much stronger musk than humans", "roriavi.png") from _call_message_175
-
-                                call reply_message("It's fine I don't mind") from _call_reply_message_132
-
-                                call message("Rori", "Heh well I'll see you around [name]", "roriavi.png") from _call_message_176
-
-                                call reply_message("see yaaaa") from _call_reply_message_133
-
-                                call phone_end from _call_phone_end_26
-
-                                jump monday6
-                    "Lose on purpose":
-                        #rori suspects you lost on purpose and teases you but player blames it on being drunk
-                        n "The thought of sitting in Rori's lap is all you need to throw the match."
-                        n "You play extra bad to ensure you lose, though it probably wasn't necessary."
-
-                        rori @ say "Ahahaha what was that?? Don't tell me you lost on purpose~"
-
-                        player "Shuddup, it was the alcohol makin' me all slow and stuff!"
-
-                        rori @ say "Suuuuuure [name]~"
-                        rori @ say "Now hurry up and get your cute butt up here!"
-
-                        n "His words ellicit a giggle out of you, throwing out any pretense of you not being eager to do this."
-                        n "Rori moves his fight stick out of the way and pats his lap."
-                        n "You hop up from your bean bag chair and stumble over to Rori, planting your rear square in his lap and fidgeting around to get comfortable."
-                        n "You can hear a soft sigh from behind you as his hands grab your waist and pull you closer to him."
-                        n "With the worst possible timing, the door creaks open and Gunner pokes his head inside."
-                        n "You freeze, but Rori seems utterly unaware of Gunner's presence and gently paws at you."
-
-                        show gunner neutral at norm with moveinright:
-                            xpos 555
-
-                        gunner @ say "Hey guys are you done making out or whatever, I-"
-                        gunner @ say "Oh my."
-                        gunner @ say "I'll see myself out then."
-
-                        show gunner neutral at offscreenright with move:
-                            yalign 0
+                            rori @ say "That I can do, but only for you~"
                             
-                        n "Your face turns red and you feel hotter than before."
-
-                        rori @ say "Heh, what's the matter? Never been in a ram's lap before?"
-
-                        player "Y-yeah, that's it."
-
-                        rori @ say "Well you better get used to it~"
-
-                        n "Rori leans to the side to pick up your controllers. He hands you yours and you help him set his fight stick up on your lap."
-                        n "You get settled in and lean back against Rori's chest while he gets used to this... control scheme."
-
-                        rori @ say "You gonna pick your character or what?"
-
-                        player "Hm? Oh right, sorry."
-
-                        n "You hurry up and choose your fighter and resume playing."
-                        n "Rori rests his muzzle on your shoulder and several rounds go by, usually with him winning."
-                        n "It doesn't help that you're distracted..."
-                        n "He's so warm and soft..."
-                        n "A spontaneous thought pops into your head."
-                        n "You should kiss him."
-
-                        menu:
-                            "Kiss him!":
-                                n "In the middle of a match, you turn your head and bring one hand up to Rori's face, stroking his fur."
-
-                                rori @ say "Heyyyy what are you doin'?~ I'm tryna play thish game hahaha~"
-
-                                n "You silence his complaints by planting your lips upon his."
-                                n "His eyes go wide and muffled moans escape his throat."
-                                n "Soon though, his mind catches up to what's happening and he accepts it."
-                                n "He lets go of his controller and his paws start to explore your body while kissing you back."
-
-                                stop music fadeout 1.0
-
-                                scene bg roridorm with fade
-
-                                show box with Dissolve(.2):
-
-                                #monday4
-
-                                n "After that it's hard to recall specific details, but you remember it was a fun night."
-                                n "You woke up in his bed with him in your arms, enjoying the snuggles while you wait for him to wake up."
-
-                                show rori pantsless at norm with dissolve
-
-                                rori @ say "*Yaaaawn*"
-                                rori @ pantsless "God, I've got such a headache... Oh hey [name]."
-                                rori @ pantsless "Err, what are you doing in my bed?"
-                                rori @ pantsless "And where are your pants?"
-
-                                n "You stifle a giggle and lean in to give him a smooch on his lips."
-
-                                player "Does that jog your memory?"
-
-                                rori @ pantsless "Oh... Oh! Haha yeah, it does~"
-                                rori @ pantsless "I guess I thought that was just a dream. I'm glad it wasn't though!"
-
-                                player "Me too~"
-
-                                rori @ pantsless "Ahah... Soooo...."
-                                rori @ pantsless "What now?"
-
-                                player "I should probably get going soon so Gunner can reclaim his dorm."
-
-                                rori @ say "Yeah, I guess we did kinda hog the room for ourselves..."
-
-                                player "Oh shoot, I forgot it's Monday already!"
-
-                                n "He helps you find your pants then gives you a parting kiss on your way out."
-
-                                player "But yeah, I wouldn't mind if we hung out at my dorm next time."
-                                player "I got the whole place to myself~"
-
-                                rori @ pantsless "Sounds good to me~"
-
-                                n "He looks so cute when he smiles like that. You can't help but pull him into a hug and kiss him one more time before leaving."
-
-                                rori @ pantsless "See you later [name]!"
-
-                                player "Later!"
-
-                                stop music fadeout 1.3
-
-                                scene bg codadorm with fade
-
-                                show box with Dissolve(.2):
-
-                                n "After taking a shower, you check your phone. Looks like Rori sent you a message."
-
-                                call phone_start from _call_phone_start_23
-
-                                call message_start("Rori", "Hey [name] I really enjoyed last night and I'd love to do something like that again soon", "roriavi.png") from _call_message_start_33
-
-                                call reply_message("Same!") from _call_reply_message_134
-
-                                call message("Rori", "<3", "roriavi.png") from _call_message_177
-                                call message("Rori", "Gunner's been complaining it smells like sweaty human in here now lmao", "roriavi.png") from _call_message_178
-
-                                call reply_message("Oh right, animals have much stronger sense of smell than I do") from _call_reply_message_135
-                                call reply_message("I just took a shower but I can still smell a bit of ram") from _call_reply_message_136
-
-                                call message("Rori", "Sorry lol", "roriavi.png") from _call_message_179
-                                call message("Rori", "We also have a much stronger musk than humans", "roriavi.png") from _call_message_180
-
-                                call reply_message("It's fine I don't mind") from _call_reply_message_137
-                                call reply_message("I kinda like your smell~") from _call_reply_message_138
-
-                                call message("Rori", "Aww <3", "roriavi.png") from _call_message_181
-
-                                call reply_message("<3") from _call_reply_message_139
-
-                                call phone_end from _call_phone_end_27
-
-                                #n "You start getting ready for class, excited to text Rori again afterward."
-
-                                jump monday6
-                            "Don't kiss him":
-                                $ dating = ""
-                                n "You've got to put a stop to this. You don't like Rori like this."
-                                n "You shouldn't lead him on by kissing him. You shouldn't even be in his lap."
-                                n "But he's having such a good time, and honestly so are you."
-                                n "It wouldn't hurt to let him enjoy having your butt in his lap for a few more rounds, right?"
-                                n "You play another round or two before deciding to hop off and sit back in the bean bag chair."
-
-                                rori @ say "Aww, leaving so soon?"
-
-                                player "It was getting a little too hot for my liking."
-
-                                rori @ say "Heh, I'll say it was~"
-                                rori @ say "Ah well, the spot's still available if you ever change your mind~"
-
-                                n "As tempting as it is, you stay where you are for the remainder of the night until it's time to return to your dorm."
-                                n "You and Rori had finished the bottle of whiskey at some point but you'd sobered up enough to walk home."
-
-                                rori @ say "Ahh, this was fun, wasn't it?"
-                                rori @ say "Nothin' like playing games with a friend all night, huh?"
-
-                                player "Yup! The alcohol sure helped too~"
-
-                                rori @ say "Heh, it sure did~"
-
-                                n "Rori leans into you and gives you a hug."
-
-                                rori @ say "See ya later~"
-                                rori @ say "Don't get lost on the way back home, k?"
-
-                                n "You return the hug and pat him on the back."
-
-                                player "I'll be alright."
-
-                                rori @ say "Don't forget your pants, bro."
-
-                                player "Oh right."
-
-                                n "You put your pants back on before waving goodbye to Rori and heading back to your dorm, where you flop in bed and fall asleep immediately."
-
-                                stop music fadeout 1.3
-
-                                scene bg codadorm with fade
-
-                                show box with Dissolve(.2):
-
-                                n "The following morning, you check your phone and find Rori messaged you."
-
-                                call phone_start from _call_phone_start_24
-
-                                call message_start("Rori", "Last night was pretty crazy, huh? I enjoyed it tho and I hope you did too lol", "roriavi.png") from _call_message_start_34
-
-                                call reply_message("Yeah lol it was great") from _call_reply_message_140
-                                call reply_message("We should do it again sometime!") from _call_reply_message_141
-
-                                call message("Rori", "Sure! I promise I'll keep my pants on next time :P", "roriavi.png") from _call_message_182
-                                call message("Rori", "Haha unless...?", "roriavi.png") from _call_message_183
-
-                                call reply_message("Omg I just remembered that part") from _call_reply_message_142
-                                call reply_message("I blame the alcohol") from _call_reply_message_143
-
-                                call message("Rori", "Suuuuuure", "roriavi.png") from _call_message_184
-                                call message("Rori", "lol Gunner's been complaining it smells like sweaty human in here now", "roriavi.png") from _call_message_185
-
-                                call reply_message("Oh right, animals have much stronger sense of smell than I do") from _call_reply_message_144
-                                call reply_message("I need to take a shower. I still smell like ram.") from _call_reply_message_145
-
-                                call message("Rori", "Sorry lol", "roriavi.png") from _call_message_186
-                                call message("Rori", "We also have a much stronger musk than humans", "roriavi.png") from _call_message_187
-
-                                call reply_message("It's fine I don't mind") from _call_reply_message_146
-
-                                call message("Rori", "Heh well I'll see you around [name]", "roriavi.png") from _call_message_188
-
-                                call reply_message("see yaaaa") from _call_reply_message_147
-
-                                call phone_end from _call_phone_end_28
-                                jump monday6
-            "Politely decline":
-
-                n "Rori shrugs"
-
-                rori @ say "More for me I guess."
-
-                n "He throws his head back to take another swig."
-
-                player "Hey take it easy with that stuff."
-                player "Where'd you even get that anyway?"
-
-                rori @ say "Snuck it out of the fraternity building."
-
-                player "Well quit chugging it and hit start already!"
-
-                n "Rori flips you off and starts the game."
-                n "He gradually becomes worse at the game, yet you end up having more fun the drunker he gets."
-                n "He gets more sluggish but less predictable over time, leading to some interesting and hilarious plays."
-                n "Something about letting all your worries slip away while you mash buttons and trash talk each other makes for a most enjoyable evening."
-                n "All while sitting in a steamy room with a cute guy..."
-                n "All the dorkiness of Rori disappears as he becomes more relaxed and almost arrogant with the way he plays, going for risky stylish moves rather than safe, effective ones."
-
-                rori @ say "Hey."
-
-                player "Yeah?"
-
-                rori @ say "It's getting kinda hot in here."
-                rori @ say "You mind if I take my pants off?"
-
-                n "Did he really just say what you think he said? You thought you were just coming over to play video games..."
-                n "He's right though, it is getting kinda hot."
-                n "And it's not really that weird for animal people to take their pants off cause they have fur... right?"
-                n "Ah what the hell, why not?"
-
-                player "...Only if I can join you."
-
-                rori @ say "Heheheh, now yer talkin'~"
-
-                n "You and Rori rise from your seats and undo your pants."
-                n "Rori particularly seems to have a difficult time as he stumbles from side to side until sitting back down and kicking off his pants legs."
-
-                show rori pantslessdrunk with dissolve
-
-                rori @ say "Ahh, there we go~"
-                rori @ say "Nice undies by the way."
-
-                player "Same, dude."
-
-                rori @ say "Sayyyy, how bout we make this a little more... interestin'?"
-
-                player "Uh, like how?"
-
-                rori @ say "Loser -*hic*- has to sit in the winner's lap for the next few rounds~"
-
-                n "Given the way he's playing, you're confident you can beat him."
-                n "Unless he's been luring you into a false sense of security this whole time so he can win when it matters."
-
-                player "You're on!"
-
-                n "Drunk Rori is somehow so charming you don't even consider turning him down."
-                n "You choose your best character and get ready to take him on."
-
-                menu:
-                    n "{cps=0}You choose your best character and get ready to take him on.{/cps}"
-                    "Try to win":
-                        n "Fueled by your sudden desire to have that cute ram sitting in your lap, you go all out."
-                        n "Your efforts pay off and you decisively win the match. You look over to Rori and pat your lap."
-
-                        rori @ say "Wha-? No way I lost! Best two out of three!"
-
-                        player "Nope! A deal's a deal, Rori!~ Now get that fluffy booty over here asap~"
-
-                        n "Rori grins as he gets up and stumbles over to you."
-
-                        rori @ say "Alright, but you asked for it~"
-
-                        player "What the hell's that supposed to mea-"
-                        player "OOF!"
-
-                        n "Rori falls ass first onto you, pinning you between him and the bean bag chair you're sitting on."
-
-                        rori @ say "Hehehe, comfy?~"
-
-                        n "You toss your controller aside and grab hold of the ram's hips to position him more comfortably on your lap."
-
-                        rori @ say "Heheheh~ H-hey, cut that out -*squeak*- I'm ticklish~ Ahashahaaha~"
-
-                        n "God damn this ram makes some adorable noises."
-                        n "With the worst possible timing, the door creaks open and Gunner pokes his head inside."
-
-                        show gunner neutral at norm with moveinright:
-                            xpos 555
-
-                        gunner @ say "Hey guys are you done making out or whatever, I-"
-                        gunner @ say "Oh my."
-                        gunner @ say "I'll just leave you to it then."
-
-                        show gunner neutral at offscreenright with move:
-                            yalign 0
-
-                        n "You don't even think Rori noticed with how much he's struggling to breath from laughing."
-                        n "You smirk and tease him a bit more before letting him get comfortable."
-
-                        player "There ya go~ Comfy?"
-
-                        rori @ say "Y-yeah."
-
-                        n "You lean over to pick your controllers up off the ground, setting Rori's fight stick down on his lap."
-                        n "You pick your character and rest your chin on his shoulder. You can feel him shiver and hear him sigh."
-                        n "So cute~"
-                        n "You scritch his head a bit and he rewards you with more of those cute noises."
-
-                        player "Ready?"
-
-                        rori @ say "Hm?"
-
-                        player "To start the game?"
+                            player "Just some experimental smoochies. To test if you're *actually* gay."
+                            
+                            rori @ say "Oh yes, we're just testing if *I'm* gay."
+                            
+                            player "Yup. Now shut up and kiss me, you fag~"
+                            
+                            rori @ say "Gladly~"
+                            
+                            n "Rori leans in and pushes his lips to yours."
+                            n "Time seems to stand still."
+                            n "Your brain races to determine how you feel about this while coming up with no clear answers."
+                            n "Eventually you run out of breath and have to pull back."
+                            
+                            rori @ say "How was that?"
+                            
+                            player "Fucking awesome!"
+                            player "I mean, analysis was inconclusive. More evidence is needed."
+                            
+                            rori @ say "Then come here and get some more~"
+                    
+                            n "Rori enthusiastically pulls you in for round two. You think you could get used to this."
                         
-                        rori @ say "Oh! Yeah~"
+                        
+                        "Gay ram sex":
+                            player "I kinda wanna try out this gay sex thing I saw on the internet."
+                            
+                            rori @ say "I hate to break it to you but gay sex is a myth. It doesn't actually exist."
+                            
+                            player "Darn. It looked really hot."
+                            
+                            rori @ say "Hahaha let's try it anyway~"
+                            
+                            player "For real? Like actually seriously?"
+                            
+                            rori @ say "Yeah? I don't see why not. You're hot and I have an emotional attachment to you."
+                            
+                            player "UwU same goes for you~"
+                            
+                            rori @ say "We'd just be... experimenting. That's what college is for right?"
+                            
+                            player "Alright alright, we just have to decide who's gonna top."
+                            
+                            rori @ say "...Rock-paper-scissors for it?"
+                            
+                            player "Okay, do we shoot on three or do like one-two-three-shoot?"
+                            
+                            rori @ say "Let's just go on three."
+                            
+                            player "Best two out of three?"
+                            
+                            rori @ say "Yeah."
+                            rori @ say "Okay ready?"
+                            
+                            player "Ready!"
+                            
+                            scene bg black with dissolve
+                            
+                            n "You ended up getting the result you wanted."
+                            
+                        
+                "This is as far as you go":                    
+                    n "You rest your chin on his head as you hold him close."
+                    n "This is nice."
+                    n "You could just close your eyes and fall asleep just like this."
+
+    
+    n "The following morning..."
+    
+    n "You wake up with Rori slumbering in your arms."
+    n "You almost can't believe how last night went."
+    n "He starts to stir and awaken from his slumber."
+    
+    player "Morning, cutie~"
+    
+    rori @ say "Morning~"
+    
+    n "He yawns and gives you one last tight embrace before rolling out of bed."
+    
+    rori @ say "Mmmh, last night was pretty wild huh?"
+    
+    player "Not wild enough I'd say."
+    
+    rori @ say "Heh, you freak~"
+    
+    n "He smirks at you then looks away."    
+    
+    rori @ say "To tell you the truth, it was really nice but I don't think I can do that again without us committing to each other. You know what I mean?"
+    
+    player "I get you. It was just an experiment."
+    
+    rori @ say "A fun experiment~"
+    rori @ say "But now it's time to get serious."
+    rori @ say "I think we'll both need time to figure things out for ourselves."
+    
+    player "For sure."
+    
+    n "You spend some time getting yourself together than give Rori a big hug before leaving to return to your own dorm."
+    
+    #rori @ say "Until then..."
+    #n "He gives you a parting kiss"
+    
+    
+
+
+    #rori @ say "That alcohol is really starting to kick in~"
 
-                        n "You play a few rounds but notice you aren't winning as often, despite being the sober one."
-                        n "Dammit it's all Rori's fault, he's distracting you! He keeps fidgeting and making cute noises and looking at you with those adorable eyes and... and..."
-                        n "He's so warm and soft..."
-                        n "A spontaneous thought pops into your head."
-                        n "You should kiss him."
 
-                        menu:
-                            "Kiss him!":
-                                n "In the middle of a match, you lean forward and bring one hand up to Rori's face, stroking his fur."
 
-                                rori @ say "Heyyyy what are you doin'?~ I'm tryna play thish game hahaha~"
 
-                                n "You silence his complaints by turning his head and planting your lips upon his."
-                                n "His eyes go wide and muffled moans escape his throat."
-                                n "Soon though, his mind catches up to what's happening and he accepts it."
-                                n "You let go of his controller and start to rub up and down his fluffy body with your hands while kissing him passionately."
 
-                                stop music fadeout 1.0
 
-                                scene bg roridorm with fade
-
-                                show box with Dissolve(.2):
-
-                                #monday4
-
-                                n "After that it's hard to recall specific details, but you remember it was a fun night."
-                                n "You woke up in his bed with him in your arms, enjoying the snuggles while you wait for him to wake up."
-
-                                show rori pantsless at norm with dissolve
-
-                                rori @ say "*Yaaaawn*"
-                                rori @ say "God, I've got such a headache... Oh hey [name]."
-                                rori @ say "Err, what are you doing in my bed?"
-                                rori @ say "And where are your pants?"
-
-                                n "You stifle a giggle and lean in to give him a smooch on his lips."
-
-                                player "Does that jog your memory?"
-
-                                rori @ say "Oh... Oh! Haha yeah, it does~"
-                                rori @ say "I guess I thought that was just a dream. I'm glad it wasn't though!"
-
-                                player "Me too~"
-
-                                rori @ say "Ahah... Soooo...."
-                                rori @ say "What now?"
-
-                                player "I should probably get going soon so Gunner can reclaim his dorm."
-
-                                rori @ say "Yeah, I guess we did kinda hog the room for ourselves..."
-
-                                player "Oh shoot, I forgot it's Monday already!"
-
-                                n "He helps you find your pants then gives you a parting kiss on your way out."
-
-                                player "But yeah, I wouldn't mind if we hung out at my dorm next time."
-                                player "I got the whole place to myself~"
-
-                                rori @ say "Sounds good to me~"
-
-                                n "He looks so cute when he smiles like that. You can't help but pull him into a hug and kiss him one more time before leaving."
-
-                                rori @ say "See you later [name]!"
-
-                                player "Later!"
-
-                                stop music fadeout 1.3
-
-                                scene bg codadorm with fade
-
-                                show box with Dissolve(.2):
-
-                                n "After taking a shower, you check your phone. Looks like Rori sent you a message."
-
-                                call phone_start from _call_phone_start_25
-
-                                call message_start("Rori", "Hey [name] I really enjoyed last night and I'd love to do something like that again soon", "roriavi.png") from _call_message_start_35
-
-                                call reply_message("Same!") from _call_reply_message_148
-
-                                call message("Rori", "<3", "roriavi.png") from _call_message_189
-                                call message("Rori", "Gunner's been complaining it smells like sweaty human in here now lmao", "roriavi.png") from _call_message_190
-
-                                call reply_message("Oh right, animals have much stronger sense of smell than I do") from _call_reply_message_149
-                                call reply_message("I just took a shower but I can still smell a bit of ram") from _call_reply_message_150
-
-                                call message("Rori", "Sorry lol", "roriavi.png") from _call_message_191
-                                call message("Rori", "We also have a much stronger scent than humans", "roriavi.png") from _call_message_192
-
-                                call reply_message("It's fine I don't mind") from _call_reply_message_151
-                                call reply_message("I kinda like your smell~") from _call_reply_message_152
-
-                                call message("Rori", "Aww <3", "roriavi.png") from _call_message_193
-
-                                call reply_message("<3") from _call_reply_message_153
-
-                                call phone_end from _call_phone_end_29
-
-                                #n "You start getting ready for class, excited to text Rori again afterward."
-                                jump monday6
-                            "Don't kiss him":
-                                $ dating = ""
-                                n "You've got to put a stop to this. You don't like Rori like this."
-                                n "You shouldn't lead him on by kissing him. You shouldn't even have him in his lap like this."
-                                n "But he's having such a good time, and honestly so are you."
-                                n "It wouldn't hurt to let him enjoy having his butt in your lap for a few more rounds, right?"
-                                n "You play another round or two before deciding to kick him off and make him sit back in his cool gamer chair."
-
-                                rori @ say "Aww, was I distracting you?"
-
-                                player "Eh, It was getting a little too hot for my liking."
-
-                                rori @ say "Heh, I'll say it was~"
-                                rori @ say "If you change your mind, all you gotta do is give the word~"
-
-                                n "Your mind imagines several different scenarios at once but you shake your head and focus."
-                                n "As tempting as it is, you sit and play for the remainder of the night until you're too sleepy to continue."
-
-                                player "Ahh, this was fun, wasn't it?"
-                                player "Nothin' like playing games with a friend all night, huh?"
-
-                                rori @ say "Yup! The alcohol sure helped too~"
-
-                                player "...Yeah, it did~"
-
-                                n "Rori leans into you and gives you a hug."
-
-                                rori @ say "See ya later~"
-                                rori @ say "Don't get lost on the way back home, k?"
-
-                                n "You return the hug and pat him on the back."
-
-                                player "I'll be alright."
-
-                                rori @ say "Don't forget your pants, bro."
-
-                                player "Oh right. I knew I was forgetting something!"
-
-                                n "You put your pants back on before waving goodbye to Rori and heading back to your dorm, where you flop in bed and fall asleep immediately."
-
-                                stop music fadeout 1.3
-
-                                scene bg codadorm with fade
-
-                                show box with Dissolve(.2):
-
-                                n "The following morning, you check your phone and find Rori messaged you."
-
-                                call phone_start from _call_phone_start_26
-
-                                call message_start("Rori", "Last night was pretty crazy, huh? I enjoyed it tho and I hope you did too lol", "roriavi.png") from _call_message_start_36
-
-                                call reply_message("Yeah lol it was great") from _call_reply_message_154
-                                call reply_message("We should do it again sometime!") from _call_reply_message_155
-
-                                call message("Rori", "Sure! I promise I'll keep my pants on next time :P", "roriavi.png") from _call_message_194
-                                call message("Rori", "Haha unless...?", "roriavi.png") from _call_message_195
-
-                                call reply_message("Omg you were having the time of your life on my lap, weren't you?") from _call_reply_message_156
-
-                                call message("Rori", ";3", "roriavi.png") from _call_message_196
-                                call message("Rori", "lol Gunner's been complaining it smells like sweaty human in here now", "roriavi.png") from _call_message_197
-
-                                call reply_message("Oh right, animals have much stronger sense of smell than I do") from _call_reply_message_157
-                                call reply_message("I need to take a shower. I still smell like ram.") from _call_reply_message_158
-
-                                call message("Rori", "Sorry lol", "roriavi.png") from _call_message_198
-                                call message("Rori", "We also have a much stronger scent than humans", "roriavi.png") from _call_message_199
-
-                                call reply_message("It's fine I don't mind") from _call_reply_message_159
-
-                                call message("Rori", "Heh well I'll see you around [name]", "roriavi.png") from _call_message_200
-
-                                call reply_message("see yaaaa") from _call_reply_message_160
-
-                                call phone_end from _call_phone_end_30
-                                jump monday6
-                    "Lose on purpose":
-                        n "You'd rather be sitting in that cute ram's lap than the other way around."
-                        n "You have to really try to throw the match while making it look convincing but Rori immediately sees through your trickery."
-
-                        rori @ say "Hah! No way I just destroyed you that hard while drunk! You want to sit in my lap that bad, huh~"
-
-                        player "N-no, I just... My finger's were sweaty so I kept missing the buttons and..."
-
-                        rori @ say "Ahaha suuure~ Don't worry, I won't tell anyone how eager you are to lose a bet to me~"
-                        rori @ say "But next game you lose, you're takin' off more than just your pants~"
-                        rori @ say "Now hurry up and get your cute butt up here!"
-
-                        n "Rori moves his fight stick out of the way and pats his lap."
-
-                        n "God, he's so much more... dominant when he's like this."
-                        n "Not that you mind one bit."
-                        n "You hop up from your bean bag chair and stumble over to Rori, planting your rear square in his lap and fidgeting around to get comfortable."
-                        n "You can hear a soft sigh from behind you as his hands grab your waist and pull you closer to him."
-
-                        player "Ah~ Rori... I-"
-
-                        n "With the worst possible timing, the door creaks open and Gunner pokes his head inside."
-                        n "You freeze, but Rori continues to casually paw at you, seemingly oblivious to Gunner's presence."
-                        n "That or he just doesn't care."
-
-                        show gunner neutral at norm with moveinright:
-                            xpos 550
-
-                        gunner @ say "Hey guys are you done making out or whatever, I-"
-                        gunner @ say "Oh my."
-
-                        rori @ say "Hm? Whassat?"
-                        rori @ say "Gunner!!!! Sup, man? Wanna join us?"
-
-                        n "Your face turns red and you feel hotter than before."
-                        n "Gunner's interruption sobers you up even more than you already were. You think about getting out of Rori's lap but he's got a firm grip on you."
-                        n "That, and he's just so comfortable and makes you feel like you belong on his lap, even if someone's watching."
-
-                        gunner @ say "Maybe later. When everyone has their pants on."
-
-                        show gunner neutral at offscreenright with move:
-                            yalign 0
-
-                        n "Rori shrugs."
-
-                        rori @ say "What's his problem? Anyway, you gonna pick your character?"
-
-                        n "You hurry up and choose your fighter and resume playing."
-                        n "Rori rests his muzzle on your shoulder and several rounds go by. You're tempted to lose again on purpose he's somehow playing even worse than you."
-
-                        rori @ say "Nff, I can't beat ya. 'm too drunk."
-                        rori @ say "Wanna play another game?"
-
-                        player "Sure, what else ya got?"
-
-                        n "A mischievous grin forms on Rori's face."
-
-                        rori @ say "What was that Gunner said about makin' out?"
-                        rori @ say "Oh yeah~"
-                        rori @ say "Ever make out with a ram before?"
-
-                        player "N-no?"
-
-                        rori @ say "Would you like to?~"
-
-                        menu:
-                            rori "{cps=0}Would you like to?~{/cps=0}"
-                            "Hell yes!":
-                                n "Your heart skips a beat."
-
-                                player "Y-yes, I'd love to!"
-
-                                n "Rori brings a hand up to your face, turning your head to face him. The smell of alcohol fills your nose as he brings his lips close to yours."
-                                n "You tremble as he pushes against you, giving you your first taste of both whiskey and cute ram boy. that alone is enough to make you feel intoxicated and wanting for more."
-                                n "Rori happily obliges you, gently gripping your hair as he pushes his lips harder into yours. Soft moans come from the both of you as you enjoy the intimate moment."
-                                
-                                stop music fadeout 1.0
-
-                                scene bg roridorm with fade
-
-                                show box with Dissolve(.2):
-
-                                #monday4
-
-                                n "After that it's hard to recall specific details, but you remember it was a fun night."
-                                n "You woke up in his bed with him in your arms, enjoying the snuggles while you wait for him to wake up."
-
-                                show rori pantsless at norm with dissolve
-
-                                rori @ say "*Yaaaawn*"
-                                rori @ say "God, I've got such a headache... Oh hey [name]."
-                                rori @ say "Err, what are you doing in my bed?"
-                                rori @ say "And where are your pants?"
-
-                                n "You stifle a giggle and lean in to give him a smooch on his lips."
-
-                                player "Does that jog your memory?"
-
-                                rori @ say "Oh... Oh! Haha yeah, it does~"
-                                rori @ say "I guess I thought that was just a dream. I'm glad it wasn't though!"
-
-                                player "Me too~"
-
-                                rori @ say "Ahah... Soooo...."
-                                rori @ say "What now?"
-
-                                player "I should probably get going soon so Gunner can reclaim his dorm."
-
-                                rori @ say "Yeah, I guess we did kinda hog the room for ourselves..."
-
-                                player "Oh shoot, I forgot it's Monday already!"
-
-                                n "He helps you find your pants then gives you a parting kiss on your way out."
-
-                                player "But yeah, I wouldn't mind if we hung out at my dorm next time."
-                                player "I got the whole place to myself~"
-
-                                rori @ say "Sounds good to me~"
-
-                                n "He looks so cute when he smiles like that. You can't help but pull him into a hug and kiss him one more time before leaving."
-
-                                rori @ say "See you later [name]!"
-
-                                player "Later!"
-
-                                stop music fadeout 1.3
-
-                                scene bg codadorm with fade
-
-                                show box with Dissolve(.2):
-
-                                n "After taking a shower, you check your phone. Looks like Rori sent you a message."
-
-                                call phone_start from _call_phone_start_27
-
-                                call message_start("Rori", "Hey [name] I really enjoyed last night and I'd love to do something like that again soon", "roriavi.png") from _call_message_start_37
-
-                                call reply_message("Same!") from _call_reply_message_161
-
-                                call message("Rori", "<3", "roriavi.png") from _call_message_201
-                                call message("Rori", "Gunner's been complaining it smells like sweaty human in here now lmao", "roriavi.png") from _call_message_202
-
-                                call reply_message("Oh right, animals have much stronger sense of smell than I do") from _call_reply_message_162
-                                call reply_message("I just took a shower but I can still smell a bit of ram") from _call_reply_message_163
-
-                                call message("Rori", "Sorry lol", "roriavi.png") from _call_message_203
-                                call message("Rori", "We also have a much stronger scent than humans", "roriavi.png") from _call_message_204
-
-                                call reply_message("It's fine I don't mind") from _call_reply_message_164
-                                call reply_message("I kinda like your smell~") from _call_reply_message_165
-
-                                call message("Rori", "Aww <3", "roriavi.png") from _call_message_205
-
-                                call reply_message("<3") from _call_reply_message_166
-
-                                call phone_end from _call_phone_end_31
-
-                                jump monday6
-                            "Nah":
-                                $ dating = ""
-                                n "You've got to put a stop to this. You don't like Rori like this."
-                                n "You shouldn't lead him on by kissing him. You shouldn't even be in his lap."
-                                n "But he's having such a good time, and honestly so are you."
-                                n "It wouldn't hurt to let him enjoy having your butt in his lap for a few more rounds, right?"
-
-                                player "Nah, I'm good like this. Thanks for the offer though haha"
-
-                                n "Rori shrugs."
-
-                                rori @ say "Your loss~"
-
-                                n "Rori puts his hands on his controller and starts another game. You play round after round, telling yourself you'll get up after this next one but you never do."
-                                n "Rori keeps distracting you, even going so far as to nibble on your ears, which turns out to be a strangely ticklish sensation."
-                                n "During one such instance, you end up so distracted you actually lose a match you were trying to win."
-
-                                rori @ say "Aha! Gotchya! I told ya what'd happen next round I took from ya, didn't I?~"
-
-                                n "You nervously gulp."
-
-                                player "W-well, a deal's a deal I guess..."
-
-                                stop music fadeout 1.0
-
-                                scene bg roridorm with fade
-
-                                show box with Dissolve(.2):
-
-                                #monday4
-
-                                n "After that it's hard to recall specific details, but you remember it was a fun night."
-                                n "You woke up in his bed with him in your arms, enjoying the snuggles for a bit before slinking away to get dressed."
-                                n "Fuuuuuck, why can't you find your underwear?"
-                                if fratsoro == "soro":
-                                    n "At least you locate your bra, hanging off the side of the bed from one of Rori's horns."
-                                n "Whatever. You hastily put on your pants and tip toe toward the door."
-                                n "You feel bad about ditching him but you weren't planning on staying the night really don't feel like staying any longer."
-
-                                show rori pantsless at norm with dissolve
-
-                                rori @ say "*Yaaaawn*"
-                                rori @ say "God, I've got such a headache... Oh hey [name]."
-                                rori @ say "Err, what are you doing here?"
-
-                                player "Err, I guess we passed out last night. Pretty intense gaming session, heh."
-
-                                rori @ say "Mmmyeah, makes sense."
-
-                                player "Anyway, I had fun and all but I gotta go do a thing now. See ya later!"
-
-                                rori @ say "See ya!"
-                                rori @ say "Oh, don't forget about these!"
-
-                                n "Rori pulls your underwear out from under his pillow and holds them up."
-                                n "You sheepishly snag them and stuff them under your shirt and head out."
-
-                                stop music fadeout 1.3
-
-                                scene bg codadorm with fade
-
-                                show box with Dissolve(.2):
-
-                                n "After taking a shower, you check your phone. Looks like Rori sent you a message."
-
-                                call phone_start from _call_phone_start_28
-
-                                call message_start("Rori", "Hey [name] I really enjoyed last night. I guess things got pretty wild but I was too drunk to remember clearly", "roriavi.png") from _call_message_start_38
-
-                                call reply_message("Yeah I think we both ended up intoxicated") from _call_reply_message_167
-                                call reply_message("It was fun but I'm not sure if I wanna do it again..,") from _call_reply_message_168
-
-                                call message("Rori", "Hm", "roriavi.png") from _call_message_206
-                                call message("Rori", "Well I won't bring it up again", "roriavi.png") from _call_message_207
-                                call message("Rori", "Gunner on the other hand...", "roriavi.png") from _call_message_208
-
-                                call reply_message("Oh god") from _call_reply_message_169
-
-                                call message("Rori", "Don't worry, I don't think he's gonna blackmail you or anything", "roriavi.png") from _call_message_209
-                                call message("Rori", "It's not like he got any pics of us half naked with you on my lap", "roriavi.png") from _call_message_210
-
-                                call reply_message("Mrf~") from _call_reply_message_170
-                                call reply_message("NGL i did lose that game on purpose") from _call_reply_message_171
-
-                                call message("Rori", "I knew you did~", "roriavi.png") from _call_message_211
-
-                                call reply_message("Drunk ram boy is hard to resist >.>") from _call_reply_message_172
-
-                                call message("Rori", "Hehe good to know~", "roriavi.png") from _call_message_212
-                                call message("Rori", "Well I can always steal another bottle, and my lap's always available ;3", "roriavi.png") from _call_message_213
-
-                                call reply_message("Heh, I'll keep that in mind") from _call_reply_message_173
-
-                                call message("Rori", "Sure thing, cutie~ UwU", "roriavi.png") from _call_message_214
-                                call message("Rori", "Until that happens, I get the impression you'd rather be like", "roriavi.png") from _call_message_215
-                                call message("Rori", "how things were before last night", "roriavi.png") from _call_message_216
-
-                                call reply_message("Mmmmyeah") from _call_reply_message_174
-
-                                call message("Rori", "That's cool. I don't mind us just being friends.", "roriavi.png") from _call_message_217
-
-                                call reply_message("Thanks Rori") from _call_reply_message_175
-
-                                call phone_end from _call_phone_end_32
-
-                                jump monday6
-
-
-
-################
 
 
 
@@ -5189,7 +4327,7 @@ label roriSnuggles:
         
         
     # classes resume
-        #skip class with ava and claire. they sleep over
+        #skip class with ava and claire? or just have it so they come over on the weekend since they missed you. they sleep over
         #trish??
         #saturday - gunner finds you in bed with ava and gets mad. Ava and Claire want to go out again today but you faint and they take you to the hospital, where you get your diagnosis. You start a new treatment to mitigate your symptoms.
         
