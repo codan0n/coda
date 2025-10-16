@@ -93,6 +93,21 @@ define gui.title_text_size = 92
 define gui.main_menu_background = "gui/main_menu.png"
 define gui.game_menu_background = "gui/game_menu.png"
 
+image main_menu_animated:
+    "gui/main_menu_frames1.png" 
+    pause 0.2
+    "gui/main_menu_frames2.png" 
+    pause 0.2
+    "gui/main_menu_frames3.png" 
+    pause 0.2
+    "gui/main_menu_frames4.png" 
+    pause 0.2
+    "gui/main_menu_frames5.png" 
+    pause 0.2
+    "gui/main_menu_frames6.png" 
+    pause 0.2
+    repeat
+
 
 ## Dialogue ####################################################################
 ##

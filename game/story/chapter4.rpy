@@ -933,7 +933,7 @@ label chapter4:
                 n "Fffffuck you need a coffee if you're gonna survive. Luckily the cafe is only a short distance away."
                 n "You won't have to worry about someone stealing your spot while you're away with Rose guarding the table, so you take a trip down to Coffee Zone."
                 
-                scene bg cafe with fade
+                scene bg cafe summer day with fade
                 
                 n "Coffee Zone is busier than you've ever seen it before. All the tables are taken and you have to wait in line before you can even see Mishka on the other side of the counter."
                 n "Eventually you get to see the coffee queen rat, rushing to make everyone's orders all on her own."
@@ -942,6 +942,8 @@ label chapter4:
                 
                 player "Hey Mishka! Is now a good time?"
                 #Hope you don't mind me coming in on the busiest day of the year
+                
+                show mishka standing overjoyed
                 
                 mishka @ say "It gets so busy during exams week... But I will make the best drinks for you as always!"
                 
@@ -2030,6 +2032,11 @@ label getRoseCoffee:
     $ rosePoints += 1
     $ historySkill += 2
     
+    scene bg cafe summer day with fade
+    
+    show box with Dissolve(.2):
+        ypos 0
+    
     n "Coffee Zone is busier than you've ever seen it before. All the tables are taken and you have to wait in line before you can even see Mishka on the other side of the counter."
     n "Eventually you get to see the coffee queen rat, rushing to make everyone's orders all on her own."
     
@@ -2037,6 +2044,9 @@ label getRoseCoffee:
     
     player "Hey Mishka! Is now a good time?"
     #Hope you don't mind me coming in on the busiest day of the year
+    
+    show mishka neutral tongueout wink right at center:
+        ypos y_mishka
     
     mishka @ say "It gets so busy during exams week... But I will make the best drinks for you as always!"
     
@@ -2491,6 +2501,8 @@ label midtermDay1Cont:
         
         menu:
             "Invite yourself":
+                $ invitedToEllensHouse = True
+            
                 player "What if I were to ask to come over? Maybe I'm just curious to see how a literature professor decorates her home."
                 player "Probably lots of books, aren't there?"
                 
@@ -2977,291 +2989,291 @@ label midtermDay1Cont:
     
             ava @ say "Wife-murderers you say?"
             ava @ say "Now I'm interested~"
+
+    n "The waitress comes to take your orders, putting a pause on your conversation."
+    n "The rest of your afternoon is spent discussing everyone's plans upon returning home."
+    n "After lunch you all walk back to campus to say goodbye before parting ways."
     
-        n "The waitress comes to take your orders, putting a pause on your conversation."
-        n "The rest of your afternoon is spend discussing everyone's plans upon returning home."
-        n "After lunch you all walk back to campus to say goodbye before parting ways."
-        
-        claire @ say "I'm gonna miss you guys!!!"
-        
-        ava @ say "Same! I hope you all have a great autumn break!"
-        
-        gunner @ say "Hold down the fort, Rori. If anyone breaks in, there's a 1911 under my pillow you can use."
-        
-        rori @ say "Let me guess, it's made of solid gold?"
-        
-        gunner @ say "They make them out of anything else?"
-        
-        player "It's kinda weird, it feels like we're saying farewell forever."
-        
-        claire @ say "Awww we'll be back before you know it!"
-        
-        ava @ say "Yeah and we can still text each other!"
-        
-        player "I mean I've been with you guys since this semester started. This is the first time we'll be apart since we met."
-        player "It's like going back to before I started college, back when I was on my own."
-        player "At least Rori will still be here."
-        
-        rori @ say "I know how you feel. You know you can text me if you ever get lonely and we can hang out!"
-        
-        claire @ say "Oh my god I would ship you two so hard if I wasn't gonna take [name] for myself."
-        
-        if avaCommitted:
-            ava @ say "Saaame~"
-            
-        gunner @ say "Rori, *please* take [name] so I don't have to compete with him for Ava. Thank you."
-        
-        rori @ say "Guys..."
-        
-        claire @ say "We're just teasin' ya~"
-        claire @ say "But you two *would* make a cute couple ksksksksk~"
-        
-        ava @ say "Come on, I think we've tortured him enough. We can't stick around forever, we've all got our flights to catch!"
-        ava @ say "I'm glad we got to see each other one last time before the break!"
-        
-        gunner @ say "For sure. We'll have to catch up once we're back!"
-        
-        claire @ say "Safe travels you two!"
-        
-        gunner @ say "Call me when you get home!"
-        
-        ava @ say "I will~"
-        
-        n "After an extremely protracted goodbye from everyone, your friends leave one by one until it's just you and Rori left."
-        
-        rori @ say "Whew, that was exhausting."
-        
-        player "I thought they'd never leave."
-        
-        if hittingOnRori == True:
-            rori @ say "...Were you serious about doing stuff at your dorm?"
-            
-            menu:
-                "Yeah, kinda":
-                    player "The door's always open for ya~"
-                    
-                    if roriPoints > 4:                    
-                        rori @ say "I uh..."
-                        rori @ say "I might come in one night >w>"
-                    else:
-                        rori @ say "I'll uh... keep that in mind UwU"
-                "Maybe? I don't know":
-                    player "Yes? No? Maybe. I don't know."
-                    
-                    if roriPoints > 4:
-                        rori @ say "Well uh... if you wanna... Just let me know haha?"
-                        
-                    else:
-                        rori @ say "N-nevermind. Forget I said anything."
-                "Nooooo haha":
-                    player "Noooo haha I was just joking around."
-                    player "I wouldn't wanna have hot and sweaty sex with an adorable sheep boy after missing out on a new episode of Kitsune Chronicles because we were too busy kissing."
-                    player "That would be gay."
-                    
-                    rori @ say "You're right, it would be."
-        
-        n "Rori looks past you with a face of utter horror and dread."
-        
-        ###alt intro where you get rory mixed up with rori and think he's trooned out. 50/50 chance?
-        
-        rori @ say "Oh my god is that...?"
+    claire @ say "I'm gonna miss you guys!!!"
     
-        rory @ say "Heyyyyyy lil bro~"
+    ava @ say "Same! I hope you all have a great autumn break!"
+    
+    gunner @ say "Hold down the fort, Rori. If anyone breaks in, there's a 1911 under my pillow you can use."
+    
+    rori @ say "Let me guess, it's made of solid gold?"
+    
+    gunner @ say "They make them out of anything else?"
+    
+    player "It's kinda weird, it feels like we're saying farewell forever."
+    
+    claire @ say "Awww we'll be back before you know it!"
+    
+    ava @ say "Yeah and we can still text each other!"
+    
+    player "I mean I've been with you guys since this semester started. This is the first time we'll be apart since we met."
+    player "It's like going back to before I started college, back when I was on my own."
+    player "At least Rori will still be here."
+    
+    rori @ say "I know how you feel. You know you can text me if you ever get lonely and we can hang out!"
+    
+    claire @ say "Oh my god I would ship you two so hard if I wasn't gonna take [name] for myself."
+    
+    if avaCommitted:
+        ava @ say "Saaame~"
         
-        n "She looks over you from top to bottom. You can't tell if she's intrigued or disgusted."
-        
-        rory @ say "Is this your boyfriend? Just kidding, you could never get a boyfriend!"
-        
-        rori @ say "What do you want? Don't you have some butterflies to be pulling the wings off of?"
-        
-        rory @ say "Oh no, I stopped doing that ages ago. I aim for bigger targets now~"
+    gunner @ say "Rori, *please* take [name] so I don't have to compete with him for Ava. Thank you."
+    
+    rori @ say "Guys..."
+    
+    claire @ say "We're just teasin' ya~"
+    claire @ say "But you two *would* make a cute couple ksksksksk~"
+    
+    ava @ say "Come on, I think we've tortured him enough. We can't stick around forever, we've all got our flights to catch!"
+    ava @ say "I'm glad we got to see each other one last time before the break!"
+    
+    gunner @ say "For sure. We'll have to catch up once we're back!"
+    
+    claire @ say "Safe travels you two!"
+    
+    gunner @ say "Call me when you get home!"
+    
+    ava @ say "I will~"
+    
+    n "After an extremely protracted goodbye from everyone, your friends leave one by one until it's just you and Rori left."
+    
+    rori @ say "Whew, that was exhausting."
+    
+    player "I thought they'd never leave."
+    
+    if hittingOnRori == True:
+        rori @ say "...Were you serious about doing stuff at your dorm?"
         
         menu:
-            "Who the hell is this bitch?":
-                player "Rori you wanna tell me who this bitch is?"
+            "Yeah, kinda":
+                player "The door's always open for ya~"
                 
-                rori @ say "She-"
-                
-                rory @ say "This bitch right here-"
-                
-                n "She points to Rori."
-                
-                rory @ say "- that's my little brother unfortunately. We're twins but I'm older by a few minutes~ Like everything in life he came in last place."
-                
-                player "I didn't ask you."
-                
-                rory @ say "Didn't you? You said Rory right? With a \'y\'"
-                
-                player "You're both named Rori?"
-                player "Are you fucking serious?"
-                
-                rory @ say "Pfffft hahahah I know it's confusing, right? At home I'm usually referred to as \"the better Rory~\""
-                
-                rori @ say "More like cunt Rory!"
-                
-                rory @ say "You're just jealous that I have one~"
-                
-                n "You're sensing some sibling rivalry going on here."
-                
-                rory @ say "And you are?"
-                
-                player "[name]. Can't say it's been a pleasure to meet you."
-            "I love this bitch already":
-                player "Damn this bitch seems kinda evil."
-                player "I'm into that."
-                
-                rori @ say "Don't be. She's just a psychopath."
-                
-                rory @ say "How rude!"
-                rory @ say "Well if my dear brother won't introduce me to his friend, I guess I'll have to do it."
-                rory @ say "I'm Rory. With a \'y~\' I'm Rori's twin sister, older by just a couple minutes."
-                
-                n "She holds out her hoof and you reach out to shake it."
-                
-                rori @ say "[name] wait!!!"
-                
-                n "Too late."
-                n "Rory grabs hold of your soft fleshy human hand and absolutely *crushes* it."
-                n "You pull back, yelping in pain."
-                
-                player "Ow! What the fuck!"
-                
-                rory @ say "Oops hehehe sorry~"
-                rory @ say "I forget how fragile others can be."
-                
-                n "One of your fingers is sticking out at an unnatural angle. You can neither feel it nor move it."
-                
-                player "I think you broke something."
-                
-                rory @ say "No worries, I can fix it!"
-                
-                n "Before you have time to react, Rory grabs hold of your finger and moves it back into place."
-                
-                player "Aaaaaaagh!!!"
-                
-                rory @ say "Good as new!"
-                
-                n "Through the excruciating pain, you find that you can in fact move your finger again."
-                
-                rori @ say "I tried to warn you..."
-                rori @ say "This is how she's always been. Imagine living with her."
-                
-                rory @ say "Yes, imagine living with someone as perfect as *me~*"
-                rory @ say "You should be honored to have had the privilige, little Rori~"
-                
-            "Introduce yourself politely":
-                player "I don't believe we've met before. I'm [name]."
-                
-                rory @ say "Nice to meet me, isn't it? I'm Rory -- with a \"y~\""
-                
-                n "She does a little curtsy."
-                
-                rory @ say "So nice of you to wrangle my little brother Rori in my absence!"
+                if roriPoints > 4:                    
+                    rori @ say "I uh..."
+                    rori @ say "I might come in one night >w>"
+                else:
+                    rori @ say "I'll uh... keep that in mind UwU"
+            "Maybe? I don't know":
+                player "Yes? No? Maybe. I don't know."
                 
                 if roriPoints > 4:
-                    player "Rori's nice, I like him."
+                    rori @ say "Well uh... if you wanna... Just let me know haha?"
+                    
                 else:
-                    player "He can be a handful sometimes."
+                    rori @ say "N-nevermind. Forget I said anything."
+            "Nooooo haha":
+                player "Noooo haha I was just joking around."
+                player "I wouldn't wanna have hot and sweaty sex with an adorable sheep boy after missing out on a new episode of Kitsune Chronicles because we were too busy kissing."
+                player "That would be gay."
                 
-                rory @ say "I'm surprised they even admitted him to Harmonia. They must have seen his name and got it mixed up with mine~"
-                
-                rori @ say "I'm surprised they haven't admitted you to a mental asylum!"
-                
-                n "There is legitimate anger in Rori's voice."
-                
-                player "What's your problem? She's your sister isn't she?"
-                
-                rori @ say "She's a psychopath! Don't be fooled!"
-                
-                rory @ say "Don't mind him, he's just jealous!"
-                
-                
-                
-                #rori @ say "Shut up, I deserve to be here more than you!"
-                #
-                #rory @ say "Do you?"
-                #rory @ say "I'm clearly the better candidate!"
-                
-        
-        rory @ say "I'm basically exactly like him but better in every way!"
-        rory @ say "While he's busy downloading kernels, I'm uploading patches for them~"
-        rory @ say "I can run circles around him in his favorite games~ He used to cry when I'd perfect KO him in Tekken 10 times in a row!"
-        rory @ say "Now he just ragequits!"
-        rory @ say "*And* I can climb faster than him with one hoof tied behind my back! We tested this once and I humiliated him~"
-        
-        if roriPoints > 4:
-            player "My Rori is kind and sweet."
+                rori @ say "You're right, it would be."
+    
+    n "Rori looks past you with a face of utter horror and dread."
+    
+    ###alt intro where you get rory mixed up with rori and think he's trooned out. 50/50 chance?
+    
+    rori @ say "Oh my god is that...?"
+
+    rory @ say "Heyyyyyy lil bro~"
+    
+    n "She looks over you from top to bottom. You can't tell if she's intrigued or disgusted."
+    
+    rory @ say "Is this your boyfriend? Just kidding, you could never get a boyfriend!"
+    
+    rori @ say "What do you want? Don't you have some butterflies to be pulling the wings off of?"
+    
+    rory @ say "Oh no, I stopped doing that ages ago. I aim for bigger targets now~"
+    
+    menu:
+        "Who the hell is this bitch?":
+            player "Rori you wanna tell me who this bitch is?"
             
-            rori @ say "Y-your Rori?"
+            rori @ say "She-"
             
-            rory @ say "I see, you're one of *those* types."
-            #rory @ say "I can be sweeter than him... I just choose not to~"
-            rory @ say "Don't make the mistake of conflating passiveness with kindness."
-            rory @ say "Rori's personality is a result of him being submissive. He may appear to be nice on the surface, but he's really just desperate for affection."
-            rory @ say "But even then, I bet I'm sweeter~"
-        else:
-            player "You can't be better at everything. Rori has to have something he beats you at."
+            rory @ say "This bitch right here-"
             
-            rory @ say "That's the sad part, he really doesn't!"
-            rory @ say "I'm just a straight upgrade from him."
-            rory @ say "Literally~"
+            n "She points to Rori."
             
-            #rory @ say "The only reason to choose him over me is for his dick, which isn't even that big."
+            rory @ say "- that's my little brother unfortunately. We're twins but I'm older by a few minutes~ Like everything in life he came in last place."
             
-            #player "H-how would you know?"
+            player "I didn't ask you."
             
-            #rory @ say "Doesn't matter. I could turn any gay man straight anyway~"
+            rory @ say "Didn't you? You said Rory right? With a \'y\'"
             
-            #rory @ say "Why settle for him when you could have me instead?"
+            player "You're both named Rori?"
+            player "Are you fucking serious?"
+            
+            rory @ say "Pfffft hahahah I know it's confusing, right? At home I'm usually referred to as \"the better Rory~\""
+            
+            rori @ say "More like cunt Rory!"
+            
+            rory @ say "You're just jealous that I have one~"
+            
+            n "You're sensing some sibling rivalry going on here."
+            
+            rory @ say "And you are?"
+            
+            player "[name]. Can't say it's been a pleasure to meet you."
+        "I love this bitch already":
+            player "Damn this bitch seems kinda evil."
+            player "I'm into that."
+            
+            rori @ say "Don't be. She's just a psychopath."
+            
+            rory @ say "How rude!"
+            rory @ say "Well if my dear brother won't introduce me to his friend, I guess I'll have to do it."
+            rory @ say "I'm Rory. With a \'y~\' I'm Rori's twin sister, older by just a couple minutes."
+            
+            n "She holds out her hoof and you reach out to shake it."
+            
+            rori @ say "[name] wait!!!"
+            
+            n "Too late."
+            n "Rory grabs hold of your soft fleshy human hand and absolutely *crushes* it."
+            n "You pull back, yelping in pain."
+            
+            player "Ow! What the fuck!"
+            
+            rory @ say "Oops hehehe sorry~"
+            rory @ say "I forget how fragile others can be."
+            
+            n "One of your fingers is sticking out at an unnatural angle. You can neither feel it nor move it."
+            
+            player "I think you broke something."
+            
+            rory @ say "No worries, I can fix it!"
+            
+            n "Before you have time to react, Rory grabs hold of your finger and moves it back into place."
+            
+            player "Aaaaaaagh!!!"
+            
+            rory @ say "Good as new!"
+            
+            n "Through the excruciating pain, you find that you can in fact move your finger again."
+            
+            rori @ say "I tried to warn you..."
+            rori @ say "This is how she's always been. Imagine living with her."
+            
+            rory @ say "Yes, imagine living with someone as perfect as *me~*"
+            rory @ say "You should be honored to have had the privilige, little Rori~"
+            
+        "Introduce yourself politely":
+            player "I don't believe we've met before. I'm [name]."
+            
+            rory @ say "Nice to meet me, isn't it? I'm Rory -- with a \"y~\""
+            
+            n "She does a little curtsy."
+            
+            rory @ say "So nice of you to wrangle my little brother Rori in my absence!"
+            
+            if roriPoints > 4:
+                player "Rori's nice, I like him."
+            else:
+                player "He can be a handful sometimes."
+            
+            rory @ say "I'm surprised they even admitted him to Harmonia. They must have seen his name and got it mixed up with mine~"
+            
+            rori @ say "I'm surprised they haven't admitted you to a mental asylum!"
+            
+            n "There is legitimate anger in Rori's voice."
+            
+            player "What's your problem? She's your sister isn't she?"
+            
+            rori @ say "She's a psychopath! Don't be fooled!"
+            
+            rory @ say "Don't mind him, he's just jealous!"
+            
+            
+            
+            #rori @ say "Shut up, I deserve to be here more than you!"
+            #
+            #rory @ say "Do you?"
+            #rory @ say "I'm clearly the better candidate!"
+            
+    
+    rory @ say "I'm basically exactly like him but better in every way!"
+    rory @ say "While he's busy downloading kernels, I'm uploading patches for them~"
+    rory @ say "I can run circles around him in his favorite games~ He used to cry when I'd perfect KO him in Tekken 10 times in a row!"
+    rory @ say "Now he just ragequits!"
+    rory @ say "*And* I can climb faster than him with one hoof tied behind my back! We tested this once and I humiliated him~"
+    
+    if roriPoints > 4:
+        player "My Rori is kind and sweet."
         
-        #rory @ say "I haven't met anyone worthy of me yet. I'm almost afraid I never will."
+        rori @ say "Y-your Rori?"
         
+        rory @ say "I see, you're one of *those* types."
+        #rory @ say "I can be sweeter than him... I just choose not to~"
+        rory @ say "Don't make the mistake of conflating passiveness with kindness."
+        rory @ say "Rori's personality is a result of him being submissive. He may appear to be nice on the surface, but he's really just desperate for affection."
+        rory @ say "But even then, I bet I'm sweeter~"
+    else:
+        player "You can't be better at everything. Rori has to have something he beats you at."
         
-        rori @ say "What do you want, Rory? Did you come over here just to torture me?"
-                
-        rory @ say "I just wanted to say goodbye my little bro before I go back home for autumn break, that's all!"
-        rory @ say "I know it must have been rough when Ma and Pa denied your request to visit."
-        rory @ say "But don't worry, we'll enjoy the time I'm home without you!"
+        rory @ say "That's the sad part, he really doesn't!"
+        rory @ say "I'm just a straight upgrade from him."
+        rory @ say "Literally~"
         
-        rori @ say "Oh go to hell."
+        #rory @ say "The only reason to choose him over me is for his dick, which isn't even that big."
         
-        rory @ say "Not right now~"
-        rory @ say "I'll catch up with you later, I've got a flight to catch!"
-        rory @ say "And it was really nice meeting your boyfriend. Enjoy him while you can, because I might decide to make him mine when I come back! Hahahaha!"
+        #player "H-how would you know?"
         
-        n "She shoulder checks Rori so hard he falls to the ground as she walks away."
+        #rory @ say "Doesn't matter. I could turn any gay man straight anyway~"
         
-        menu:
-            "Help him up":
-                n "You hold out your hand to grab onto and hoist him back up onto his feet."
-                
-            "Let him get up":
-                n "He doesn't need your pity. Helping him will just bruise his ego even more."
-                n "He picks himself up and brushes the leaves and dirt off his jacket."
-        
-        rori @ say "Grrrr that bitch..."
-        
-        player "And you lived with her for years? That must have been brutal."
-        
-        rori @ say "I don't care if she's my sister, I genuinely hate her."
-        rori @ say "I don't even care that she's better at everything, the world would be a better place without her in it."
-        
-        player "Geez man. At least she's going away for the week."
-        
-        rori @ say "Yeah... Luckily I haven't run into her much here. But now that she's seen me with friends she'll stop at nothing to sabotage me."
-        rori @ say "She can't stand seeing me happy. It's the one thing that gets under her skin."
-        
-        player "...You wanna talk about it?"
-        
-        rori @ say "I dunno. Not right now. I wanna be alone."
-        
-        player "Alright. I'll see you around man."
-        
-        rori @ say "Yeah. And thanks for being here for me."
-        
-        player "Anytime. That's what bros are for."
-        
-        
+        #rory @ say "Why settle for him when you could have me instead?"
+    
+    #rory @ say "I haven't met anyone worthy of me yet. I'm almost afraid I never will."
+    
+    
+    rori @ say "What do you want, Rory? Did you come over here just to torture me?"
+            
+    rory @ say "I just wanted to say goodbye my little bro before I go back home for autumn break, that's all!"
+    rory @ say "I know it must have been rough when Ma and Pa denied your request to visit."
+    rory @ say "But don't worry, we'll enjoy the time I'm home without you!"
+    
+    rori @ say "Oh go to hell."
+    
+    rory @ say "Not right now~"
+    rory @ say "I'll catch up with you later, I've got a flight to catch!"
+    rory @ say "And it was really nice meeting your boyfriend. Enjoy him while you can, because I might decide to make him mine when I come back! Hahahaha!"
+    
+    n "She shoulder checks Rori so hard he falls to the ground as she walks away."
+    
+    menu:
+        "Help him up":
+            n "You hold out your hand to grab onto and hoist him back up onto his feet."
+            
+        "Let him get up":
+            n "He doesn't need your pity. Helping him will just bruise his ego even more."
+            n "He picks himself up and brushes the leaves and dirt off his jacket."
+    
+    rori @ say "Grrrr that bitch..."
+    
+    player "And you lived with her for years? That must have been brutal."
+    
+    rori @ say "I don't care if she's my sister, I genuinely hate her."
+    rori @ say "I don't even care that she's better at everything, the world would be a better place without her in it."
+    
+    player "Geez man. At least she's going away for the week."
+    
+    rori @ say "Yeah... Luckily I haven't run into her much here. But now that she's seen me with friends she'll stop at nothing to sabotage me."
+    rori @ say "She can't stand seeing me happy. It's the one thing that gets under her skin."
+    
+    player "...You wanna talk about it?"
+    
+    rori @ say "I dunno. Not right now. I wanna be alone."
+    
+    player "Alright. I'll see you around man."
+    
+    rori @ say "Yeah. And thanks for being here for me."
+    
+    player "Anytime. That's what bros are for."
+    
+    
     
 #saturday
     n "It's officially the first day of your autumn break. No more worries until school starts back up again."
@@ -3997,6 +4009,8 @@ label ch4GoWithRori:
             
     n "You play a few more rounds with Rori before calling it a night."
     
+    jump autumnBreakPt2
+    
 label roriSnuggles:
     n "You hop onto Rori's bed and pat the mattress."
     
@@ -4279,30 +4293,1066 @@ label roriSnuggles:
     #rori @ say "Until then..."
     #n "He gives you a parting kiss"
     
-    
-
 
     #rori @ say "That alcohol is really starting to kick in~"
 
 
+label autumnBreakPt2:
+    n "The following day..."
+    
+    n "It sure is nice waking up on a Monday without having to worry about going to classes."
+    n "But it does get a little boring not having anything to do. No responsibilities but also half your friends are away."
+    n "Wait, you have the technology to see what they're up to. You open Claire's pinstagram on your phone to see what that big beautiful bunny has been up to."
+    
+    n "####put custom image for phone here"
+    ####include patreon comments
+    #fem porcupine
+    
+    n "How does she have so many autumn break pictures already when it's only just begun?"
+    n "Might as well send her a text."
+    
+    call phone_start 
+    
+    call message_start("me", "Hey just wanted to see how you were doing", "testimage.png") 
+    call reply_message("Looks like you're having a fun autumn break judging by ur pinsta") 
+    
+    if clairePoints > 4:
+        call reply_message("you lookin cute in that swimsuit lmao")
+         
+    call message("Claire", "OMG HEYYYYYYY", "claireavi.png") 
+    
+    if clairePoints > 4:
+        call message("Claire", "Thx uwu~", "claireavi.png") 
+    
+    call message("Claire", "Sory i've been quiet i've been ssuuuuuuper busy", "claireavi.png") 
+    call message("Claire", "Hope you've been having a nice break too!", "claireavi.png") 
+
+    call reply_message("Yeah it gets lonely tho without you all here") 
+    
+    call message("Claire", "AWWWWW", "claireavi.png") 
+    call message("Claire", "DW we'll be back to have fun again soon!!!", "claireavi.png") 
+    
+    if fuckedClaireEarly == True:
+        call reply_message("Speaking of fun...") 
+        call reply_message("That thing we did last week was nice~") 
+        
+        call message("Claire", "It sure was~", "claireavi.png") 
+        call message("Claire", "But it happened at the worst time possible cause midterms and now I'm a million miles away ;^;", "claireavi.png") 
+        call message("Claire", "I wish we could have had more time to talk about it in person", "claireavi.png") 
+        
+        call reply_message("Ikr") 
+        call reply_message("I don't regret it but it was sort of a heat of the moment thing") 
+        call reply_message("I'm still trying to figure some things out") 
+        call reply_message("But I'd love to spend more time with you when you're back <3") 
+        
+        call message("Claire", "Okiiii I get u", "claireavi.png") 
+        call message("Claire", "Take your time thinking", "claireavi.png") 
+        call message("Claire", "I know you'll be mine sooner or later >:3", "claireavi.png") 
+        
+        #ikr it was reallllly bad timing cause of finals and then my flight home so we didnt even have a chance to talk about it!
+        #i don't regret it but i don't think i'm quite ready for a relationship at the moment. i still need to figure some things out but i'll get back to you on that soon i promise
+
+    call reply_message("Hold on, Ava's texting me")
+    
+    call message("Claire", "OMG TELL THAT BITCH I SAID HIIIII", "claireavi.png") 
+    
+    call message("Ava", "Hi [name]! Just wanted to see how you're doing!", "avaavi.png") 
+    
+    call reply_message("I'm good lol just bored cause half my friends abandoned me")
+    call reply_message("jk it's nice to chill and not worry about anything for a bit")
+    
+    call message("Ava", "Hang in there! Claire tells me she has plans for all of us once we're back ^v^", "avaavi.png") 
+    
+    call reply_message("Not sure if I should be excited or nervous")
+    call reply_message("How's your break going?")
+    
+    call message("Ava", "Pretty good! I'm at a party right now and you'll never believe who showed up!", "avaavi.png") 
+    
+    call message("Gunner", "Sup humie", "gunneravi.png") 
+    
+    call reply_message("The hell? Gunner lives near you?")
+    
+    call message("Ava", "Not exaaaaactly", "avaavi.png") 
+    
+    call message("Gunner", "I can be anywhere on the continent in a couple hours", "gunneravi.png") 
+    call message("Gunner", "The perks of owning a private supersonic jet :3c", "gunneravi.png") 
+    
+    call reply_message("Oh I see you're simply stalking her")
+    
+    call message("Gunner", "It's legally not considered stalking if I'm hot", "gunneravi.png") 
+    
+    call message("Ava", "Facts", "avaavi.png") 
+    call message("Ava", "Wish you were here [name]!", "avaavi.png") 
+    
+    call reply_message("Hopefully I can make it next time")
+    
+    call screen phone_reply("Without Gunner","withoutGunner","Get everyone together","everyoneParty")
+    
+label withoutGunner:
+    $ partyWithoutGunner = True
+    
+    call phone_after_menu 
+    
+    call message_start("me", "Gunner's not invited tho", "testimage.png") 
+
+    call message("Gunner", "Fuck you, what did I do", "gunneravi.png") 
+    
+    call reply_message("Sorry bro, just don't wanna watch you get cucked when I steal your crush")
+    
+    call message("Gunner", "Over my dead body", "gunneravi.png") 
+    call message("Gunner", "We all know how this ends", "gunneravi.png") 
+    call message("Gunner", "I get the cute girl and you end up with a 400 pound bunny", "gunneravi.png") 
+
+    call message("Ava", ">implying Claire isn't a cutie", "avaavi.png") 
+    
+    call reply_message("Plot twist: Claire steals Ava from us")
+    
+    call message("Ava", "And then you two start going out together! :>", "avaavi.png") 
+    
+    call message("Gunner", "Yeah I'd just kill myself", "gunneravi.png") 
+    call message("Gunner", "Txt you later [name], enjoy jerking off alone", "gunneravi.png") 
+    
+    call reply_message("You too")
+    
+    call message("Ava", "See you soon!", "avaavi.png") 
+    
+    call phone_end 
+    
+    jump afterAutumnPhone
+label everyoneParty:
+    $ partyWithEveryone = True
+
+    call phone_after_menu 
+    
+    call message_start("me", "We should party with the whole crew", "testimage.png") 
+    
+    call message("Ava", "Yeah! Claire's fun to party with!", "avaavi.png") 
+    
+    call message("Gunner", "You remember that time I tried bringing Rori with us :|", "gunneravi.png") 
+    
+    call reply_message("He was just shy cause it was his first time")
+    
+    call message("Ava", "I bet he'd be a real party animal!", "avaavi.png") 
+    
+    call message("Gunner", "Speaking of which, we've got a party to get back to >:3", "gunneravi.png") 
+    
+    call message("Ava", "Yeahhhhh txt u later [name]!", "avaavi.png") 
+
+    call reply_message("See you guys later. Try not to get too wild.")
+
+    call phone_end 
+    
+    jump afterAutumnPhone
+    
+label afterAutumnPhone:
+    n "Seems like everyone's enjoying their autumn break."
+    
+    if partyWithoutGunner == True:
+        n "It kinda irks you that you can't be at that party with Ava."
+        n "The thought of Gunner flirting with her pisses you off."
+        n "You'll have to get your revenge next time you see them. Maybe you'll challenge him to a duel to the death."
+    
+    
+    if invitedToEllensHouse == False:
+        n "There's not much to do here. You hadn't realized how dull your life could be without friends to hang out with."
+        n "Rori's busy tinkering with his loonix boxes today and you don't even know how to find Mishka with the cafe being closed."
+        n "That leaves... no one? You really need to make more friends."
+        #n "Only options now are to go for a walk or masturbate."
+        n "You should get out of this dorm. It's starting to feel like a prison."
+        
+        jump trish1
+    
+    else:
+        n "Lucky for you, you've got plans today. Big plans."
+        n "Your hot milf dog professor wants you to come over to her house today. You know what that means?"
+        
+        scene bg streets
+        
+        n "*knock knock knock*"
+        n "You almost can't believe you're doing this. You're starting to feel nervous."
+        n "Did you remember to brush your teeth this morning? What if she thinks you smell weird?"
+        n "Were you supposed to bring condoms? Does it even matter?"
+        n "Is this even the right address? What if she was just messing with you and gave you a fake one?"
+        n "You're about to knock on the door again when it creeps open."
+        
+        margaret @ say "Hello..?"
+        margaret @ say "Oh my goodness, [name]! I can't believe you actually showed up! Were we supposed to meet today? I thought it was tomorrow!"
+        
+        player "You said to come over on Monday..."
+        
+        margaret @ say "Right, silly me. I thought it was still Sunday. Come on in and make yourself at home!"
+        
+        n "Ms. Ellen invites you inside and shows you to her bedroom."
+        n "Oh god oh fuck it's really happening"
+        n "You wonder what her favorite position is. Probably doggystyle lmao."
+        n "As your mind races with perverse thoughts, something catches your attention."
+        
+        player "Wait a minute, is that a SNES?"
+        
+        margaret @ say "Yeah? I was doing my yearly playthrough of Chrono Trigger."
+        
+        player "Holy based. How far are you?"
+        
+        margaret @ say "I just got to Magus's castle. I'm gonna run through it with Frog and Lucca."
+        
+        player "Nice. I didn't expect you to be a gamer!"
+        
+        margaret @ say "I don't play a lot of the new stuff."
+        margaret @ say "As with literature, I'm only really fond of the classics~"
+        
+        menu:
+            "Same":
+                $ ellenPoints += 1
+                
+                player "Same. Nothing beats that era of games."
+                
+                margaret @ say "So many good RPGs~"
+                margaret @ say "I'm still waiting on a good translation hack for some Japan exclusives..."
+                
+                player "You must have played a ton if you're that deep into it."
+                
+                margaret @ say "I might've played as many RPGs as I've read books! And I've read *a lot* of books."
+                
+                n "Any inkling of having an intimate moment with your professor has left your mind and been replaced with a desire to experience the golden age of gaming with someone who grew up with it."
+                
+                player "Any chance you've got anything we could play together?"
+                
+                margaret @ say "Of course!"
+            "These were before my time":
+                player "SNES is before my time but it has some good games."
+        
+                margaret @ say "Now you've made me feel old. I could have sworn this was next gen just a few years ago!"
+                margaret @ say "3D stuff still feels new to me to be honest."
+                
+                player "Wow. We really are from different generations."
+                
+                margaret @ say "You kids are all used to realistic graphics that leave nothing to the imagination!"
+                margaret @ say "But I tell you, I've been brought to tears from 8-bit games that only had 256 colors to work with!"
+                #and paying to win but we had to work for victory! And we only had 256 colors to work with!"
+                
+                player "Heh okay boomer. I started out on a PS2 but I'd be down to play some retro games with you."
+                
+                n "Miss Ellen winces when you say \"retro.\" These consoles may seem outdated to you but to her they're still as revolutionary as the day they released."
+                
+        
+        margaret @ say "I'm sure I have a multiplayer game somewhere around here..."
+        margaret @ say "I've never really had the chance to play with someone before hah..."
+        
+        n "Plastic clatters against plastic as she digs around a disorganized pile of cartridges."
+        
+        margaret @ say "Oh how about this one?"
+        
+        n "She holds up SNES cart, the label worn and hard to read."
+        
+        player "Battletoads? Really?"
+        
+        margaret @ say "Bet I can get a higher score than you~"
+        
+        n "Her tail swishes eagerly. How can you say no?"
+        
+        player "Alright but if I win I'm staying the night."
+        
+        margaret @ say "Deal!"
+        
+        n "She rips out the previous cartridge and slams Battletoads into the console before flipping the power switch."
+        
+        margaret @ say "Aaaaand here's your controller!"
+        
+        n "As she unwinds the cord, a sweet aroma fills the air followed by beeping coming from the other room."
+        
+        margaret @ say "Oh! I forgot I had cookies in the oven! Be right back."
+        
+        n "This day just keeps getting better and better."
+        
+        scene bg ellensroom with fade
+        
+        n "The hours pass by, laying in your professors bed while munching on cookies and running through this beat 'em up game."
+        n "Once Ms. Ellen taught you the strats it actually became pretty fun. Of course her score was naturally always just ahead of yours."
+        n "She wasn't kidding about being experienced."
+        
+        margaret @ say "This is the final level, get ready!"
+        
+        n "You lean forward, taking the game a bit more seriously now."
+        n "It gets pretty tough but Ms. Ellen is always there to bail you out."
+        
+        if ellenPoints > 5:
+            n "You're neck and neck throughout the final sequence but she hangs back during the last moments, allowing you to get the killing blow on the boss."
+            n "You're sweating and your hands are shaking from all the button mashing but you've done it. Your score ends up being a hair above hers."
+            
+            margaret @ say "Oh noooo, you won! Guess that means you're staying the night~"
+            
+            player "You let me win on purpose, didn't you?"
+            
+            margaret @ say "Mmmmmaybe~"
+            margaret @ say "Or maybe I'm just too good of a Battletoads mentor hehe!"
+            margaret @ say "Either way, you're mine now! And I'm gonna force you to play more of these \"retro\" games with me!"
+            
+            player "Nooo, anything but that haha!"
+            player "I definitely don't enjoy older things haha!"
+            
+            margaret @ say "You will once I'm done with you~"
+            
+            n "Ms. Ellen pounces on you, growling and playfully biting at your neck. She's so gentle though it gives you more of a ticklish feeling."
+            
+            player "Pfffft hahaha whoa now! Down girl! Sit!"
+            
+            n "Your professor immediately halts and pulls off of you, sitting like the dog she is. She seems to be awaiting another command."
+            
+            player "Uhh roll over?"
+            
+            n "Without hesitation, she rolls onto her back. Instinctively you reach out to rub her belly."
+            
+            player "Who's a good girl?~"
+            
+            margaret @ say "Meeee? Is it me?!"
+            
+            player "Yeah~"
+            
+            n "Her tail wags so fast you're afraid she'll take flight."
+            
+            margaret @ say "Woof!"
+            margaret @ say "Err, pardon me..."
+            
+            n "She suddenly regains her composure and sits back up."
+            
+            margaret @ say "I don't know what came over me..."
+            margaret @ say "It just felt so right to do those things... maybe because you're a human?"
+            
+            player "I guess this old dog can still learn new tricks~"
+            
+            margaret @ say "I'd be more than just man's best friend if we kept that up~"
+            margaret @ say "Sorry, pretend I didn't say that!"
+            
+            n "Flustered, she looks away and reaches down to picks up a catridge off the floor. Kirby Super Star. Nice."
+            
+            margaret @ say "Wanna 100\% The Great Cave Offensive with me?"
+            
+            player "Of course!"
+            
+            n "You blaze through the whole game well into the night until your eyes are strained from staring at the screen for so long."
+            n "You're starting to get tired too."
+            n "Miss Ellen offered to let you stay the night. You wonder where you'll sleep."
+            
+            player "*Yawn*"
+            player "Getting sleepy."
+            
+            margaret @ say "Me too."
+            margaret @ say "I had a lot of fun just chilling with you today. Not having to worry about classes or pretend to be professional is nice."
+            
+            player "Yeah, you're really nice to hang out with. Didn't feel awkward at all. Not even being sarcastic."
+            
+            margaret @ say "You think so? Maybe we should do this more often then?~"
+            
+            player "Play vidya on your bed? Or hang out in general?"
+            
+            margaret @ say "Both!"
+            margaret @ say "But some days I do just lie in bed all day. Would be nice to have some company~"
+            margaret @ say "Speaking of which..."
+            
+            n "She reclines on the bed. Her head hits the pillow with a satisfying *pomf* sound."
+            
+            margaret @ say "Would you like to sleep with me?"
+            
+            n "."
+            n "Did she just"
+            
+            player "Y-you want me to sleep with you?"
+            
+            margaret @ say "Yeah!"
+            margaret @ say "O-oh, not like that honey."
+            margaret @ say "I just didn't want you to have to sleep on the couch is all."
+            margaret @ say "Sorry, I could have worded that better."
+            
+            player "I'd think a literature professor would be more careful with her words."
+            
+            margaret @ say "I may be a little irresponsible heh..."
+            
+            player "It's cute~"
+            
+            margaret @ say "Speak for yourself!"
+            
+            n "She slips under the blanket and holds it up for you."
+            
+            margaret @ say "Now hurry up and get in, I'm getting cold!"
+            
+            player "Yes ma'am~"
+            
+            n "You crawl underneath the cover and pop your head up above the pillows."
+            n "God there's so many pillows. How many cushions does a single dog need?"
+            
+            margaret @ say "Comfy?"
+            
+            player "Quite."
+            
+            margaret @ say "Good~"
+            
+            n "She reaches over you and turns off the lamp."
+            
+            margaret @ say "Sorry about that, I can't sleep with the light on."
+            
+            player "It's all good."
+            
+            if romanticFantasy == False:
+                margaret @ say "You're not cold are you?"
+                
+                n "Miss Ellen grabs hold of your hand."
+                
+                margaret @ say "My, you're burning up!"
+                margaret @ say "Would you mind if I steal some of your warmth?"
+                
+                menu:
+                    "Go for it":
+                        $ romanticFantasy = True
+                        
+                        player "Go for it. Steal as much as you want."
+                        
+                        n "Once again you get pounced on, this time in a more snuggly way."
+                        n "Miss Ellen's soft fur wraps around you, caressing your skin. You gently stroke it with your fingers."
+                        n "Up close, she's got that dog smell but very well groomed. You can't say you mind it."
+                        
+                        margaret @ say "Thanks [name]~"
+                        
+                        player "Don't mention it. You get the warmth, I get the floof."
+                        
+                        margaret @ say "Hehe go ahead and scritch all you want~ Just be careful where those hands end up!"
+                        
+                        player "I won't go anywhere you don't want me to!"
+                        
+                        margaret @ say "Behind the ears is a good spot~"
+                        
+                        player "Like this?"
+                        
+                        margaret @ say "Mmmh oh yeah, that's the stuff~"
+                        
+                        n "Her leg kicks as you rub behind her ear."
+                        
+                        player "Such a good dog~"
+                        
+                        margaret @ say "You haven't seen anything yet~"
+                        margaret @ say "Gosh I can't believe I'm engaging in casual pet play with a student... I imagine the university wouldn't think highly of that."
+                        
+                        player "Don't worry, I won't tell anyone."
+                        
+                        margaret @ say "I know you wouldn't."
+                        margaret @ say "But even if you did, I don't think I'd regret it."
+                        margaret @ say "Screw the university! I don't want to be chained down to that facade of academics and prestige."
+                        margaret @ say "*Sigh*"
+                        margaret @ say "I just want to live my life."
+                        
+                        player "This might be a dumb question, but why don't you? Just live your life I mean."
+                        
+                        margaret @ say "I suppose it's not that easy. Habits are hard to break you know?"
+                        margaret @ say "There's comfort in having my cushy job and being looked up to and being entrusted with all these responsibilities."
+                        margaret @ say "But if I could go back and never have any of it..."
+                        margaret @ say "I just miss those days in the old arcades. No worries, no plans, just living in the moment."
+                        
+                        player "I think I get what you mean. That's sorta how my life is right now. I just wake up each day and get dragged into some wacky thing one of my friends schemed."
+                        
+                        margaret @ say "Exactly! I want to have someone to try new things with, explore different places, . Not get bogged down in figuring out mortgages and slideshow presentations."
+                        margaret @ say "But at my age, everyone's so involved in their careers and appearances. They're more concerned about looking good than having a good time."
+                        margaret @ say "And well, anyone who's not is struggling just to keep their head above the water."
+                        
+                        player "So you want a luxurious life style without the responsibilities?"
+                        
+                        margaret @ say "When you put it like that, it does sound selfish doesn't it?"
+                        margaret @ say "But I don't care. I know what I want. I just don't know how to get it."
+                        margaret @ say "I should be living like it's my last day on this earth. I ain't getting any younger so I might as well make the most of it all."
+                        margaret @ say "Traveling, partying, some general mishchief, a little bit of sex drugs and rock and roll..."
+                        margaret @ say "I wish I had someone who felt the same way. Dedicated to each other and up against the rest of the world to make it ours. We'd make it work."
+                        
+                        player "Sounds like a lot to ask for..."
+                        
+                        menu:
+                            "I hope you find what you're looking for":
+                                player "But I hope you find someone who can do all that for you."
+                                player "I'm just a broke student figuring things out as I go along, but I can at least treat you like a friend rather than a professor."
+                                
+                                margaret @ say "Thank you, [name], that's incredibly sweet of you~"
+                                margaret @ say "Maybe what I'm asking for is too much... it's just a silly little romantic fantasy I have, nothing more."
+                                margaret @ say "Next week I'll get up and go back to teaching like it's all the same to me."
+                                margaret @ say "But at least you'll know I'm thinking about quitting my job and buying a camper van to travel the country!"
+                                
+                                player "If you do, let me know! I could be swayed to drop out and see what this country has to offer to a vagabond."
+                                
+                                margaret @ say "It's probably not as glamorous as it sounds, but hey I'd let you come along in exchange for scritches~"
+                                
+                                player "Heh, good bitches get scritches~"
+                                
+                                margaret @ say "Hey! Is that any way to speak about your professor?"
+                                
+                                player "Sorry."
+                                
+                                margaret @ say "Hehe I'm kidding~ You just said you see me more as a friend at this point anyway so I think any semblance of professionalism has gone out the window."
+                                
+                                player "True. I was just testing the waters."
+                                
+                                margaret @ say "As long as it's behind closed doors... I'll be a good bitch for the scritch~"
+                                
+                                player "That's a good girl~"
+                                
+                                n "You reward her with a barrage of scritches with both hands all over her back. You can't get enough of that cute hind leg kick she does on reflex."
+                                
+                                margaret @ say "*Whiiiiine*"
+                                
+                                n "You can hear her tail swishing against the blanket."
+                                
+                                player "Alright, that's all I had left in me. Need to sleep now."
+                                
+                                n "She lets out a disappointed whine."
+                                
+                                margaret @ say "Aww, just when the fun is starting..."
+                                margaret @ say "It has gotten quite late though. See you in the morning, [name]~"
+                                
+                                player "Goodnight Miss Ellen. I'm glad to be here with you like this tonight."
+                                
+                                margaret @ say "As am I~ Goodnight~"
+                                
+                             
+                            "Could be me >:3":
+                                player "Bet I could fill that role >:3"
+                                
+                                margaret @ say "Kshh, you? You really think so?"
+                                margaret @ say "Wait, you sounded way too eager. What's going on in that head of yours?"
+                                
+                                player "Nothing, I just like the idea of dropping out and roaming the country in a camper van with a hot milf teacher is all."
+                                
+                                margaret @ say "M-me? A hot milf?! And who said anything about living in a camper van?"
+                                
+                                player "You said you wanted to travel and try new things. Life on the road is about as free as it gets. With a camper you can go anywhere you want!"
+                                
+                                margaret @ say "Admittedly, it does sound nice... even if it's a bit of a mid-life crisis cliche."
+                        
+                                player "I'm not too attached to the idea of sitting still for four years getting a useless meme degree, I'm just doing it cause I've got nothing better to do."
+                                
+                                margaret @ say "Well, I guess if I retired early to travel it would be nice to have a handy man to fix things up for me~"
+                                
+                                player "Yeah? I can do a lot more than that too! We could be wild party animals on the road, having fun wherever we go~"
+                                
+                                margaret @ say "Pshh okay it does sound fun. ...But you're not serious are you?"
+                                
+                                player "Depends on if you'd be down for it."
+                                
+                                margaret @ say "Hmm... I'll definitely have to consider it."
+                                
+                                player "Would scritches sweeten the deal?"
+                                
+                                margaret @ say "You've seen how easily I'm bribed with small tokens of affection~"
+                                
+                                n "You work your fingers into her back, gently digging your nails in until she's kicking her leg on reflex."
+                                
+                                margaret @ say "Oooh, there's just something about humans that can do that *so* well~"
+                                
+                                player "Imagine this but every single night~"
+                        
+                                margaret @ say "You drive a hard bargain, young man~"
+                                margaret @ say "I can't just up and leave everything behind right this minute but I won't flat out say no to your little plan~"
+                                
+                                player "So there's a chance?"
+                                
+                                margaret @ say "However small it may be, but yes there's a chance."
+                                margaret @ say "Let's sleep on it for now though, okay? It's past my bedtime."
+                                
+                                player "Alright. Goodnight Miss Ellen."
+                                
+                                margaret @ say "Goodnight, [name]."
+                                
+                                n "The professor leans in and plants a sweet smooch on your lips before realizing what she's done and suddenly tensing up."
+                                
+                                margaret @ say "Ah-!"
+                                margaret @ say "That was an accident!!!"
+                                margaret @ say "Sorry, it was just a force of habit. Say goodnight then a little smooch. That's how I did it for over a decade."
+                                
+                                player "It's okay, I understand."
+                                
+                                n "You gently stroke her fur until she calms down."
+                                
+                                player "Even if you didn't mean anything by it, I kinda liked it. So there's that."
+                                
+                                margaret @ say "Yeah, I bet a little perv like you absolutely would~"
+                                
+                                player "Huh?"
+                                
+                                n "You become aware that in stroking her fur, your hand has ended up squarely on her ass."
+                                
+                                player "Well I don't see you complaining!"
+                                
+                                margaret @ say "You're right, I'm not~"
+                                margaret @ say "But let's leave it here for tonight, because I am seriously tired."
+                                margaret @ say "Keep scritching though."
+                                
+                                player "Yes ma'am~"
+                                
+                                n "You gently knead your fingers into her plush rump as you drift into sleep."
+                        
+                                        
+                    
+                    "It's all mine":
+                        player "Sorry, this warmth is all mine."
+                        
+                        margaret @ say "Aww... Forget I asked."
+                        margaret @ say "Have a good night [name]."
+                        
+                        player "You too, Ms. Ellen."
+                        
+                        
+            
+            else:
+                n "You settle in against the silky sheets and close your eyes."
+                n "It's almost unbelievable that you're here right now, lying beside your literature professor after a long day of gaming."
+                n "Hopefully she doesn't regret it in the morning."
+                
+                
+                
+            n "When you rouse from slumber, the other half of the bed is empty."
+            n "Did Ms. Ellen "
+            
+            
+                
+            #in the morning she makes you breakfast
+            
+            
+            
+            
+        else:
+            
+            #she wins and thanks you for a great time but you have to go
+        
+            #reminisces about going to arcades back in the day
+        
+        
+        
+        
+        
+        
+        
+    
+    
+    
+
+    
+   
+        
+        jump midweekAutumnBreak
+    
 
 
+label trish1:
+    $ metTrish = True
+    
+    n "A walk around the campus does wonders for your sanity. Sometimes you really just need to get that blood pumping."
+    n "As you round a corner, you're knocked backward and fall to the ground."
+    
+    #rewrite this a bit so trish reflects on your choices
 
+    trish @ say "Oh my gosh are you okay???"
+    #hide sayfarleft with Dissolve(.2)
+    
+    show trish neutral at norm with dissolve:
+        xzoom -1
+    
+    n "Standing over you is the fattest possum you've seen in your life."
+    n "Even fatter than the one your cousin caught in his garage and kept as a pet."
+    n "And she smells more like trash than your cousin's possum ever did."
+    n "While you're still seeing stars, she pulls you up to your feet."
+    
+    player "Uhh, sorry about that."
+    
+    n "You do a 360 and start to walk away but just end up bumping into her again."
+    
+    trish @ say "You alright there? Did you bump your head or something?"
+    trish @ say "I bumped my head once really hard when I was little and since then I don't remember things too good anymore."
+    trish @ say "Then again, I don't remember if I had good memory when I was little so maybe I was always like this."
+    trish @ say "What did you say your name was again?"
+    
+    player "[name]? Wait yeah it's definitely [name]."
+    
+    n "You must have hit your head harder than you thought."
+    
+    trish @ say "Hehe I guess you don't remember things either! We have so much in common!"
+    trish @ say "My name's uhh...."
+    trish @ say "Ummmmmm....."
+    trish @ say "Oh yeah, it's Trish! Trish de la {a=https://e926.net/posts?tags=trish_%284chan%29}Trash{/a}!"
+    
+    if gunnerRaid == True:
+        player "Wait I remember you! You raided my underwear drawer!"
+        
+        trish @ say "Ksksksks guilty as charged!"
+        trish @ say "It was part of my sorority's initiation ritual!"
+        
+        player "More like humiliation ritual!"
+        
+        trish @ say "Sorryyyy, would you like them back? I'm wearing them right now. Kinda tight on me though."
+        
+        player "What the fuck? Just... keep them."
+    
+    trish @ say "So where are you going?"
+    
+    player "No where really? I'm just on a walk-"
+    
+    trish @ say "Noooo I mean where are you *going?*"
+    trish @ say "Like in liiiiife?"
+    
+    player "Oh. Still probably nowhere."    
+    player "Why do you ask?"
+    
+    trish @ say "Cause you've got an interesting aura about you!"
+    
+    player "Aura? What's that all about?"
+    
+    trish @ say "Let's just say I can detect certain things about you~"
+    trish @ say "Liiiiike I know you've got a crush!"
+    
+    player "Is it that obvious?"
+    player "Wait, have you been stalking me?"
+    
+    trish @ say "No no, I can just tell from your aura!"
+    trish @ say "You have that loner vibe. But perhaps you don't want to be alone forever?"
+    trish @ say "Let's see... what else?"
+    
+    n "Trish waves her hands around your head. She seems to be concentrating hard."
+    
+    trish @ say "There sure are a lot of paths ahead of you! Let's see, maybe some of the routes you've taken already will give me some context..."
+    trish @ say "Oh my, you're quite popular! I see, I see... Yup, that checks out."
+    
+    if fuckedClaireEarly == True or fuckedRoriEarly == True:
+        trish @ say "You've done *something*... with *someone*... that perhaps wasn't the right time to do it?"
+        trish @ say "You may have wanted it, but I sense some guilt and commitment issues."
+        trish @ say "Not a big deal though, I'm sure those can be worked out!"
+        
+    if avaPoints > 4:
+        trish @ say "Ooh I sense some competition! There's something you want but someone standing in your way."
+        trish @ say "That's always a tricky situation! Especially if you don't want to let anyone go."
+    
+    if invitedToEllensHouse == True:
+        trish @ say "Are your desires somewhat... unconventional? Are you a bit concerned about the ramifications of *that*?"
+        trish @ say "People could lose their jobs because of you. But maybe that's okay?"
+        
+    if historyCheated == True or claireFrenchCheat1 == True or gaveCinRoll == True or ch4EllenSnack == True:
+        trish @ say "I guess you're not above bending the rules to get what you want... What a rebel!"
+    else:
+        trish @ say "You tend to play by the rules, which is admirable! Will it always get you where you wanna go?"
+        
+    if spicyVictory == True:
+        trish @ say "You seem to work hard for the things you truly want. You don't always have to go that far though!"
+    else:
+        trish @ say "You lost something recently and you'll never live it down, but it's not over yet!"
+    
+    if clairePoints > 5:
+        trish @ say "OwO there's someone you've been spending a lot of time with! I wonder where that will go~"
+    else:
+        trish @ say "Aww, looks like there's someone who likes you but you don't quite like them back."
+    
+    
+    n "You feel a tingly sensation in your brain. How could she know about that?"
+    
+    player "Okay I get it, you have some vague notions of a few things I've done this semester. Got any more dollar store magic tricks?"
+    
+    trish @ say "Yup!"
+    trish @ say "Close your eyes and think of someone~"
+    trish @ say "I don't just see the past, aura has a present and a future!"
+    
+    $ trishFortunes = 0
+    
+    menu:
+        "Go along with it":
+            player "Okay but don't try and steal my wallet, it's empty."
+    
+            n "You're not sure why, but you feel like this possum might be onto something. Can she really read your aura just like that?"
+            
+            trish @ say "Are you thinking of someone? Don't tell me who, just think."
+            
+            n "Who are you thinking of?"
+            
+            jump thinkingCharacter
+        "Refuse":
+            player "Yeah nah, I'm not looking for a fortune telling. I'll figure things out on my own."
+        
+            trish @ say "I had a feeling you'd say that. Just wanted to give the offer!"
+            trish @ say "You seemed kinda lonely so I wanted to talk to you because I'm a loner too!"
+            trish @ say "I'm not sure why but people usually seem repulsed by me."
+            
+            player "Maybe it's the smell?"
+            
+            trish @ say "Yeah maybe! I think everyone can smell auras. Y'know, like subconciously. And their subcon tells them to stay away from me."
+            trish @ say "And when I bumped into you I read your aura and could tell you were a little different too."
+            
+            player "That's probably just the autism."
+            
+            trish @ say "Yummmmm autistic aura~~~"
+            
+            player "Okay what the heck even is an aura?"
+            
+            trish @ say "It's kinda hard to define. It's a metaphysical property all sentient beings possess that influences your connections and pathways in life."
+            trish @ say "I believe it's an evolved social mechanism."
+            
+            player "Sounds like something a schizophrenic would come up with."
+            player "Tell me more."
+            
+            trish @ say "Ohmygosh okay! *huff huff* Sorry I'm just getting really excited, not many people care to hear about my aura theories!"
+            trish @ say "In fact, you're the first person I've talked to for this long at Harmonia!"
+            trish @ say "Though I did kinda have to knock you out for this to happen."
+            
+            player "I forgive you."
+            player "So what do you think my aura says about me?"
+            
+            trish @ say "I suspect you have an aura that repels most people but allows a few select ones through."
+            trish @ say "You're like a black coffee! Bitter tasting and intolerable for most unless you dress it up with cream and sugar, but some people really prefer the bitterness!"
+            
+            player "I can be pretty bitter."
+            player "So auras are like inherent personal biases we have towards types of people?"
+            
+            trish @ say "Yisssss!!!"
+            trish @ say "Now you're getting it!"
+            trish @ say "You might get along with another bitter aura because you're the same, or you might get along with a creamy aura because you pair well together!"
+            trish @ say "But oftentimes the requirements are highly specific. You need a certain type of additive to go with a certain roast."
+            
+            player "That just sounds like a measure of how well people get along based on their personality."
+            
+            trish @ say "It does! But it's deeper than that."
+            trish @ say "Now consider that someone doesn't have to taste a coffee to tell it's bitter. It's already in the air. They can smell it."
+            trish @ say "They can smell your aura too. Not literaly, it's just a metaphor."
+            trish @ say "Your aura permeates into all aspects of your existence. Through walls, space, time, information systems like internets, possibly even across people you encounter..."
+            trish @ say "The point is, someone can read your aura without ever knowing your personality."
+            trish @ say "In fact your personality, or the one you present to others, doesn't have to match your aura!"
+            trish @ say "You can have a sour aura and be a sweet person."
+            
+            player "That's... huh. So how are auras consciously perceived?"
+            
+            trish @ say "They're not!"
+            trish @ say "At least not normally."
+            trish @ say "I'm training to be proficient in reading auras but I still get them wrong all the time. I may even be completely wrong about you!"
+            trish @ say "It's an underdeveloped scientific field of study that has been suppressed by governments because it has dangerous implications so I'm like a pioneer in researching this kinda stuff."
+            
+            player "Wow and it's totally not made up bullshit?"
+            
+            trish @ say "Nope! It's as real as the simulation we're living in!"
+            trish @ say "That is to say, it's \'canon,\' whatever that means."
+            
+            player "And what exactly are the implications of auras being real?"
+            
+            trish @ say "It's tied to fate. Everyone has a fate but your aura determines how you reach it. It can even affect the final outcome to some degree!"
+            trish @ say "It's true! I've seen it before!!!"
+            trish @ say "I'm so excited to observe and research this phenomenon more! I'm collecting all my notes and working on a paper to publish once I have sufficient evidence."
+            
+            player "So it's all unproven theory as of now?"
+            
+            trish @ say "*Huff huff* sort of? Metaphysical interactions are kinda hard to prove real. It's like a black hole of information that has to be deduced."
+            #trish @ say "I'm getting a *strong* sense that your aura will be crucial for my research so I'm gonna start stalking you, k? Hope you don't mind!"
+            
+            trish @ say "I'm sorry I took up so much of your time, I was just excited to talk about auras with someone who would listen."
+            
+            player "It's fine, it was really interesting to hear about!"
+            
+            trish @ say "Hehe I'm glad! I have a feeling this won't be the last time we meet"
+            #trish @ say "Hehe I'm glad! I'll let you go for now, but I'll be keeping my eye on you."
+            
+            player "Yeah sure, see you around."
+            
+            n "What a weirdo."
+            
+            jump midweekAutumnBreak
+    
 
-
+label thinkingCharacter:
+    menu:
+        "Claire":
+            $ clairePoints += 1
+            
+            player "Yeah I'm thinking of someone."
+            
+            trish @ say "Ok mhm yeah I got you..."
+            
+            trish @ say "This might sound obvious but I can tell she's suuuper into you! Like she would *die* for you."
+            trish @ say "I can't believe you aren't together yet! What's the holdup?"
+            
+            if clairePoints > 4:
+                player "I dunno, things just keep getting in the way I guess."
+                
+                trish @ say "Well I think you'll have your chance soon!"
+            else:
+                player "That's the problem, I don't like her as much as she likes me."
+                
+                trish @ say "Mhhhh yeah that could be a problem. Why don't you give her a chance!"
+                
+                player "Hmm, not sure I want to."
+            
+        "Ava":
+            $ avaPoints += 1
+            player "Yeah I'm thinking of someone."
+            
+            if avaCucked == True:
+                trish @ say "I hate to break it to ya but I think you botched this one."
+                
+                player "What? What did I do?"
+                
+                trish @ say ""
+            elif avaPoints < 4:
+                trish @ say "I hope you're not too into this one, 'cause she might be going towards someone else!"
+                
+                player "I kinda figured that was the case."
+            
+            else:
+                trish @ say "Huh, this one is as into you as that other one! Seems she has a backup plan but you're plan A!"
+                
+                player "Yay! I believe you because it's what I want to hear!"
+        
+        "Rori":
+            $ roriPoints += 1
+            
+            player "Yeah I'm thinking of someone."
+            
+            trish @ say "Gayyyyyyy!"
+            trish @ say "Ksksksksks just kidding! Unless..?"
+            
+            if fuckedRoriEarly:
+                trish @ say "Oh wow that's super gay..!"
+                
+                player "Hey stop, go back!"
+                
+                trish @ say "Sorry, sorry! I'll just ignore that thing I just saw in your memories."
+                trish @ say "Really though he seems sweet, and if you like him that much you should let him know!"
+            else:
+                trish @ say "Aww, what a sweetie! I can't tell how much he likes you but you two would definitely make a great couple!"
+        
+        "Ms. Ellen":
+            $ ellenPoints += 1
+            
+            player "Yeah I'm thinking of someone."
+        
+            trish @ say "There's not much there at the moment buuuuut..."
+            
+            if ellenPoints > 3:
+                trish @ say "She definitely sees something in you~"
+            else:
+                trish @ say "That could totally change."
+        "Rose":
+            $ rosePoints += 1
+            player "Yeah I'm thinking of someone."
+            
+            trish @ say "Ooh that's one mean bitch! What is it that you see in her?"
+            trish @ say "Ah, I should have known."
+            
+            if rosePoints > 3:
+                trish @ say "The good news is you're not *entirely* on her bad side!"
+                
+            else:
+                trish @ say "Yeah I don't think she's ever gonna warm up to you, sorry."
+            
+        "Mishka":
+            $ mishkaPoints += 1
+            
+            player "Yeah I'm thinking of someone."
+            
+            if mishkaPoints > 2:
+                trish @ say "She might be the one."
+                
+                player "The one?"
+                player "What do you mean \"might be?\""
+                
+                trish @ say "I'm not a fortune teller, just an aura sniffer!"
+                trish @ say "All I can say is out of all the outcomes, that one might be the best."
+            else:
+                trish @ say "Cute! Do I need to say anything else?"
+                
+                player "I was kind of expecting a fortune."
+                
+                trish @ say "I'm not a fortune teller, just an aura sniffer!"
+                trish @ say "All I can sniff out is that you two would get along well."
+        
+        "Someone else":
+            jump thinkingCharacterAlt
+    
+label thinkingCharacterAlt:
+    menu:
+        "Rory":
+            $ roryPoints += 1
+            
+            player "Yeah I'm thinking of someone."
+            
+            trish @ say "Verrrry interesting choice..."
+            trish @ say "You're wanting to know if she'd be into you?"
+            trish @ say "Well yes and no. I won't say any more."
+        
+        "Gunner":
+            $ gunnerPoints += 1
+            
+            player "Yeah I'm thinking of someone."
+            
+            trish @ say "Yup, you two are gonna end up together. 100 percent."
+            trish @ say "I'm just messing with ya! That doesn't happen in any of his nine lives."
+        "Trish":
+            player "Yeah I'm thinking of someone."
+            
+            trish @ say "Oh my gosh, I'm so flattered!"
+            
+            player "Wait, you can actually tell I'm thinking of you?"
+            
+            trish @ say "I can tell a lot of things~"
+            trish @ say "That yummy aura is telling me we'll be seeing each other again~"
+            trish @ say "I for one am excited!"
+            
+            player "I can't tell if I should be or not."
+        #"Dean Kaczynski":
+            #player "Yeah I'm thinking of someone."
+            
+            #trish @ say "..."
+            #trish @ say "Well... hm, how do I put this?"
+            #trish @ say ""
+        "???":
+            player "Yeah I'm thinking of someone..? Wait, am I? Who the fuck is that?"
+            
+            trish @ say "Who indeed? I'm not sure how to interpret this one."
+            trish @ say "I think you'd like her though."
+            
+            player "Does she like me?"
+            
+            trish @ say "Yes, but not in a way you'd like."
+            
+            player "Aww."
+            
+        "Someone else":
+            jump thinkingCharacter
+            
+label afterTrishFortune:
+    $ trishFortunes += 1
+    
+    if trishFortunes < 2:
+        trish @ say "Let's do this one more time. Choose carefully!"
+        trish @ say "You ready?"
+        
+        jump thinkingCharacter
+        
+    n "You open your eyes, dizzy, as if someone's been digging around your brain."
+    
+    trish @ say "Believe me now? That aura you've got is just so delicious, I couldn't help myself!"
+    
+    player "You were kinda vague but... also spot on? Just who are you?"
+    
+    trish @ say "I'm just a derpy possum! There's nothin' real special about me but I done a bunch of travelin' and got to see a lot of things."
+    trish @ say "And eventually I learned how to see through people and taste their auras!"
+    trish @ say "I won't spoil the fun you've got in store. There's lots of options still but I have a feeling you'll go a certain way. Just sit back and enjoy it all playing out!"
+    
+    player "I guess that's all I can really do."
+    
+    trish @ say "That's the spirit! I'll be keeping an eye out for you. It was really nice meeting my future-"
+    trish @ say "Woops, I mean a new friend!"
+    
+    player "Cool, yeah. See you around."
+    
+    n "What a weirdo."
+    
+    jump midweekAutumnBreak
+    
+    
+label midweekAutumnBreak:
+    n ""
+            
 
 
 
     
     
         
-        
-    # autumn break
-        
-        #monday
-        #sleeping over at ellen's house
-        #ellen's romantic fantasy
-            #wants someone who's not afraid to live like it's their last day alive. wants to be free and try new things, go anywhere, just have fun. needs to be someone dedicated to that. no regrets lifestyle.
         
        
         
@@ -4315,9 +5365,6 @@ label roriSnuggles:
                 #margaret "Time honored tradition. Boys will be boys."
                 #riiiiight, boys
             
-            #texting friends, see what they're up to. claire at the beach, ava and gunner at a party
-                #ava: Guess who showed up!!
-                #claire's pinstagram
             
         
         #friday
@@ -4327,12 +5374,9 @@ label roriSnuggles:
         
         
     # classes resume
-        #skip class with ava and claire? or just have it so they come over on the weekend since they missed you. they sleep over
+        #skip class with ava and claire? or just have it so they come over on the weekend since they missed you. they sleep over. Just skip math class on friday.
         #trish??
         #saturday - gunner finds you in bed with ava and gets mad. Ava and Claire want to go out again today but you faint and they take you to the hospital, where you get your diagnosis. You start a new treatment to mitigate your symptoms.
         
-    #to be committed to ava's route, there's a part where ava's polaroids get lost in the wind and you and gunner have to chase after them. gunner gives up bc it's too dangerous but you can still get it (something like it flies into traffic). Make it super obvious that you're committing to ava here, like "are you absolutely sure you would do this for ava?" or like tell her afterwards "i wouldn't do that for anyone other than you"
-    #gunner saves you on your first try, pulls you back and tells you to let it go, it's just one photo
-    #if you succeed, ava will later invite you on a date and commit to you 
     
     #glare all you want, you're not getting them back ms ellen

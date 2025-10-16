@@ -443,7 +443,14 @@ label claireFrenchStudy2:
                         #ava @ say "Oh shush, [name] doesn't need to know that!"
                         ava @ say "Do guys not do that?"
                         
-                        player "Nah, we just call each other homophobic slurs."
+                        player "Nah, we just call each other homophobic slurs and say to commit suicide."
+                        
+                        claire @ say "Hey we should start doing that. Ava you feathermuncher!"
+                        
+                        ava @ say "If you don't kill yourself right now I'm gonna come over there and strangle you myself."
+                        
+                        n "The two proceed to bicker with increasingly heated insults."
+                        n "And you're trapped right in the middle of it."
                         
                     "Claire is pretty irresistable...":
                         $ avaPoints -= 2
