@@ -4820,7 +4820,7 @@ label afterAutumnPhone:
                                 
                                 player "You said you wanted to travel and try new things. Life on the road is about as free as it gets. With a camper you can go anywhere you want!"
                                 
-                                margaret @ say "Admittedly, it does sound nice... even if it's a bit of a mid-life crisis cliche."
+                                margaret @ say "Admittedly, it does sound nice... even if it's a bit of a mid-life crisis cliche. I'll say it does make for a cute little romantic fantasy."
                         
                                 player "I'm not too attached to the idea of sitting still for four years getting a useless meme degree, I'm just doing it cause I've got nothing better to do."
                                 
@@ -4902,35 +4902,80 @@ label afterAutumnPhone:
                 n "Hopefully she doesn't regret it in the morning."
                 
                 
-                
+        
             n "When you rouse from slumber, the other half of the bed is empty."
-            n "Did Ms. Ellen "
+            n "Did Ms. Ellen change her mind about \"sleeping with you?\""
+            n "You stretch and crawl out of bed. What now?"
+            n "You're looking through her game collection when a savory smell wafts through the room."
+            n "When you're about to see what's cooking, Miss Ellen bursts through the door."
             
+            margaret @ say "Heya sleepyhead! Come get some breakfast! Hope you like pancakes and bacon!"
             
+            n "After subsisting on nothing but cookies and snacks yesterday, you could go for a real meal."
+            
+            player "That sounds perfect right about now!"
+            
+            n "Miss Ellen leads you to the dining room and gives you a full breakfast before sending you on your way."
+            n "...She's definitely wife material."
                 
-            #in the morning she makes you breakfast
-            
-            
-            
+
             
         else:
+            n "You're neck and neck throughout the final sequence but you manage to get the killing blow on the boss."
+            n "You're sweating and your hands are shaking from all the button mashing but for all your efforts you still end up with a lower score."
             
-            #she wins and thanks you for a great time but you have to go
-        
-            #reminisces about going to arcades back in the day
-        
-        
-        
-        
-        
-        
-        
-    
-    
-    
+            margaret @ say "Darn, what a shame. You almost had me there!"
+            
+            player "I didn't think I was dealing with a pro gamer here!"
+            
+            margaret @ say "All that time in the arcades finally paid off!"
+            
+            player "You went to arcades?"
+            
+            margaret @ say "Of course! They were THE place to be! How do you think I got into gaming?"
+            margaret @ say "A shame they don't really exist anymore. I'd love to relive those days."
+            
+            player "Man, I never even got to experience one."
+            
+            margaret @ say "Those days are long gone, unfortunately."
+            margaret @ say "*Sigh*"
+            margaret @ say "But this was close enough I'd say!"
+            
+            player "Yeah! Playing retro games with my literature professor ended up being way more fun than I would have thought!"
+            player "I'd love to do it again whenever you wanna go back to the good old days!"
+            
+            margaret @ say "I've got plenty of free time so just hit me up!"
+            
+            n "Miss Ellen stands up and stretches. She checks the time and looks outside."
+            
+            margaret @ say "My, it's gotten late. Will you be okay walking back home in the dark?"
+            
+            player "I can manage. It's just a short way back to my dorm."
+            
+            margaret @ say "Well then, I'll see you in class then?"
+            
+            player "Yup. See you next week!"
+            
+            n "Miss Ellen gives you a parting hug, pulling you off the ground for a moment."
+            
+            player "Whoa haha, easy girl."
+            
+            margaret @ say "Thanks for hanging out with me. It's not every day I get to feel this young again!"
+            
+            player "It was awesome getting to see this side of you. You're not really a snooty professor, you're just a chill gamer girl."
+            
+            margaret @ say "Haha well if you reveal my secret to anybody, I'll fail you!"
+            
+            player "And doom me to another semester with you?"
+            
+            margaret @ say "Yes~"
+            margaret @ say "Now gimme some scritches before you leave!"
+            
+            player "Yes ma'am~"
+            
+            n "You smile as her leg kicks on reaction from your fingers digging into her fur. You leave her wagging her tail even as you step out the door and wave goodbye."
+            
 
-    
-   
         
         jump midweekAutumnBreak
     
