@@ -4447,6 +4447,7 @@ default partyWithoutGunner = False
 default partyWithEveryone = False
 default metTrish = False
 default trishFortunes = 0
+default roseWarning = False
 
 default roseNightWalkLvl = 1
 default gunnerNightWalkLvl = 1

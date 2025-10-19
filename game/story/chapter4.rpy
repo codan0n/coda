@@ -2782,6 +2782,9 @@ label midtermDay1Cont:
         n "Now you're imagining Rose tutoring you. She'd bite you every time you got a question wrong."
         
     rothbauer @ say "Good day, students! All you'll need for this exam is a pencil, so go ahead and clear your desks and let's get started!"
+    rothbauer @ say "Oh but before we begin, I'd like to mention an opportunity for extra credit over the break."
+    rothbauer @ say "All you have to do is research a \"conspiracy\" related to prehistoric civilization and write a one page paper explaining it and providing evidence that it may in fact be true."
+    rothbauer @ say "Now then, let's get this exam out of the way!"
     
     n "The test is a blur of dynasties and eras, those who ruled and influenced early civilizations, and the lasting impacts of their actions. You're left dazed by the end of it."
     n "Once you're finished, you turn it in and hurry to your next exam without much time to spare."
@@ -5390,7 +5393,242 @@ label afterTrishFortune:
     
     
 label midweekAutumnBreak:
-    n ""
+    n "You find yourself without much to do at the moment halfway into your autumn break. You really underestimated how much classes give you something to do with your time."
+    n "That and half your friends are away."
+    n "Maybe now's a good time to do that extra credit assignment for history?"
+    
+    menu:
+        "Yah":
+            n "Getting work done during down time lets you slack off later. Sounds like a win win to you."
+            n "Plus this should be a fun little project, looking into what the government doesn't want you to know."
+            
+            scene bg library with fade
+            
+            n "The library is dead silent, more so than usual. You'd think it was closed if the lights weren't on."
+            n "You begin to peruse the shelves. If you were a book containing forbidden knowledge, where would you be?"
+            n "After turning a corner, you trip over a stack of books haphazardously left in the aisle."
+            
+            rose @ say "Watch where you're going!"
+            
+            n "You look down to find an angry raccoon looking up at you."
+            n "Oh boy here we go again."
+            
+            menu:
+                "Sorry":
+                    player "Sorry, didn't mean to knock over your book fortress."
+                    
+                    rose @ say "Whatever. Go away."
+                    
+                    n "She busies herself reconstructing the stack. It quickly ends up taller than she is."
+                    
+                    player "Want me to help?"
+                    
+                    rose @ say "No."
+                    
+                    player "Fine, I'll just pester you instead. You here working on the extra credit for Rothbauer?"
+                    
+                    rose @ say "*Sigh*"
+                    rose @ say "That's what I *was* doing before you interrupted."
+                    
+                    player "He's gonna have to invent a grade higher than an A for you."
+                    
+                    rose @ say "Perfection is the lowest standard."
+                    
+                    n "You can sense a hint of pride in her voice."
+                    
+                    player "Cool, find anything interesting?"
+                    
+                    rose @ say "Yes but it's way beyond your comprehension."
+                    
+                    player "Got anything my tiny human brain *could* comprehend?"
+                    
+                    if rosePoints > 3:
+                        rose @ say "Hmm."
+                        
+                        n "She slips a book out from the stack and tosses it to you."
+                        
+                        rose @ say "Try this. It's baby's first redpill. Perfect for someone like you."
+                        
+                        n "You look down and read the title."
+                        n "\"Human Society and Its Future\""
+                        
+                        player "Very funny. Too bad none of this came true."
+                        
+                        rose @ say "We narrowly avoided it. All it took was a mass extinction event but it was worth the cost."
+                        
+                        player "You know, your hatred for humanity is starting to grow on me. It's actually kinda cute."
+                        
+                        rose @ say "There's nothing cute about wanting you dead!"
+                        
+                        player "I dunno, yandere is pretty hot."
+                        
+                        rose @ say "If this is a reverse psychological trick to get me to stop hating on your entire species, it's not gonna work."
+                        
+                        player "Good, I wouldn't have it any other way. You're perfect the way you are."
+                        
+                        rose @ say ""
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        #rose seethes about having human dna but says that raccoons are great in spite of it and researchers are working on bringing back pure arcoon dna
+                        
+                        
+                        
+                        #if you offered to help her with the mansion situation, offer to take a pic of you and her studying together to send to her grandpa
+                        
+                    else:
+                        rose @ say "I'm not doing your research for you."
+                        
+                        player "Okay well it looks like you've hoarded all the good books for yourself so lemme just... yoink!"
+                        
+                        n "You grab a random book off the ground. It's titled \"The Human History Iceberg\""
+                        
+                        rose @ say "Hey! Oh whatever, take it and leave."
+                        
+                        n "Clutching the book, you scuttle on out of there to write your report. You can barely get a quarter of the way down the iceberg before the required foreknowledge goes beyond your understanding."
+                        
+                        player "What kind of crack was the author on? The hell do you mean the moon landing was a cover up for exiling humans off the planet?"
+                        n "For that matter, how did JFK personally do 9/11?"
+                        n "The author states he hired a hit on himself to produce a rare chemical in his brain at the moment of death to astral project into the pilots' heads but fails to explain the motivation to do such a thing."
+                        
+                        n "These conspiracies seem a little out there, but there might be some truth in a few of them."
+                        n "Rose would know more."
+                        n "You find her in a more extravagant book fort than before."
+                        
+                        player "Wow, someone's been busy."
+                        
+                        rose @ say "Go away human scum. I'm building a kingdom for the master species."
+                        
+                        player "Riiight. Anyway I had a question about this conspiracy."
+                        
+                        rose @ say "If it has to do with humans being awful and ruining everything for everyone, it's not a conspiracy it's just a fact of their nature."
+                        
+                        player "Yeah okay it says that modern raccoons are the descendants of human and arcoon hybrids. Is that true?"
+                        
+                        rose @ say "What?!"
+                        
+                        n "Rose bursts from her fort, knocking over a support wall and causing to all come crashing down."
+                        n "She snatches the book from your hands and scours over the page you had it flipped to."
+                        
+                        rose @ say "Utter fanfiction."
+                        rose @ say "The modern raccoon is a result of a carefully crafted eugenics program to produce the perfect organism."
+                        rose @ say "Highly advanced genetic modification was involved but the technology was destroyed so the plebs couldn't get their paws on it."
+                        
+                        player "Oh. I just thought it was odd that it was the only part of the book that provided evidence. The whole DNA sequence is laid out in a table and seemed pretty legit."
+                        player "I guess it's just fake science though, huh?"
+                        
+                        rose @ say "Yeah. You're better off researching something more worthwhile."
+                        rose @ say "Like... this book has a good explanation!"
+                        
+                        n "She holds up a copy of \"Mesozoic Man: Escaping Extinction.\""
+                        
+                        rose @ say "That ought to get you up to speed on how humans screwed the dinosaurs -- *ahem* FIGURATIVELY! -- then locked them out of the bunkers after causing the apocalypse."
+                        
+                        player "Oh neat! Do you actually believe humans are that old? Or is it just more \"humans bad\" propaganda?"
+                        
+                        rose @ say "It's a complex history, but yes there's ample evidence that the civilization before ours was destroyed by humans."
+                        rose @ say "Now whether your kind were alien invaders or demonic spawn remains to be decisively concluded. Personally I think it's both."
+                        
+                        player "Thanks for clearing that up. I'll get to work finishing my paper now. Hope yours is going well too!"
+                        
+                        rose @ say "Don't worry about me. Mr. Rothbauer is gonna learn a few new things from my paper!"
+                        
+                        player "Heh I'm sure he will. See you in class!"
+                        
+                        n "You return to your desk and bang out the rest of your paper."
+                        n "On your way home you pass by Rose again, who has a whole stack of pages she's written on her conspiracy of choice. She probably has a novel's worth of material already in her head."
+                        
+                        
+                        #if you offered to help her with the mansion situation, offer to take a pic of you and her studying together to send to her grandpa
+                        
+                        
+                    
+                    
+                    autumnBreakLockIn
+                    
+                    
+                "Fuck you":
+                    player "Fuck you and your stupid book fort!"
+                    
+                    n "You kick the remainder of the stack and watch the books spill all over the floor."
+                    
+                    if rosePoints < 2:
+                        rose @ say "Listen you humanigger, if you don't clean up this mess you made, you're done for!"
+                    else:
+                        rose @ say "Listen you humanoid, if you don't clean up this mess you made, you're done for!"
+                    
+                    menu:
+                        "Nope":
+                            $ roseWarning = True
+                            $ rosePoints -= 1
+                            $ historyPoints += 1
+                            
+                            player "Nope. You've done nothing but antagonize me so this is the least you deserve."
+                            player "Have fun organizing those again. I know you must have ordered them in some extremely autistic way that took all day."
+                            
+                            rose @ say "Ugh just leave me alone!"
+                            rose @ say "I'm seriously this close to putting you down. Killing an endangered species may be a felony but I've got connections to escape jail time."
+                            rose @ say "Consider this a warning to stay out of my way from now on."
+                            
+                            player "Whatever. I've got more important things to do than waste time on trash like you."
+                            
+                            n "You kick aside her books and march through the aisle."
+                            n "Eventually you find a book related to your search and produce a half-assed paper."
+                            n "You would have put in more effort but that raccoon makes you seethe so much, you can't stop thinking about your mutual hatred for each other."
+                            
+                            jump autumnBreakLockIn
+                        "Okay fine, sorry":
+                            $ historyPoints += 1
+                            
+                            n "That may have been a bit too far, even for all the trouble she's given you."
+                            
+                            player "Alright fine, that was a bit much. Sorry I guess."
+                            
+                            n "You drop down and begin gathering the books and piling them up."
+                            
+                            rose @ say "What the hell are you doing? Stack them by weight, not cover surface area!"
+                            rose @ say "You know what? Don't even bother. You can't get anything right. Just leave."
+                            
+                            player "Fine, if that's what you really want."
+                            
+                            n "You stand up and step away. Perhaps it's for the best."
+                            n "You take a look back at her and start to feel bad. You sure know how to handle the ladies, don't you?"
+                            n "Eventually you find a book related to your search and produce a half-assed paper."
+                            n "You would have put in more effort but you're mind is stuck in a loop replaying that Rose encounter and how you could have done better."
+                            
+                            jump autumnBreakLockIn
+                            
+                            
+                            
+                        "Or what, you'll shoot me?":
+                            player "Fuck that. What're you gonna do, shoot me?"
+                            
+                            n "A deranged grin forms on Rose's face."
+                            
+                            rose @ say "Yes actually!"
+                            
+                            n "She quickdraws a pistol from her skirt and takes aim at you."
+                            n "*BANG*"
+                            
+                            n "The last thing you see is the muzzle flash illuminating the raccoon's face before you crumple to the ground."
+                            n "A hole in your heart leaks pint after pint of blood, draining your consciousness."
+                            n "Your skin goes cold and your vision fades to black."
+                            
+                            rose @ say "You get what you fucking deserve."
+                        
+                            
+                        
+            
+            
+        "Nah":
+            n "Yeah no, you're not gonna waste your life away hitting the books. That's not natural."
+            n "Your monkey brain tells you what you need is a good old fashioned walk. Some fresh air and sunlight to clear your mind."
+            
+            
             
 
 
@@ -5410,7 +5648,10 @@ label midweekAutumnBreak:
                 #margaret "Time honored tradition. Boys will be boys."
                 #riiiiight, boys
             
-            
+
+
+label autumnBreakLockIn:
+
         
         #friday
             #power outage in the dorms during a storm
