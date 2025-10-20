@@ -4399,6 +4399,7 @@ default clairephonethx = False
 default avaUrbex = False
 default gunnerRaid = False
 default avaPantsu = False
+default featherMuncher == False
 default clairePantsu = False
 default roseNicodemusCampusScene = False
 default gnugift = False
@@ -4443,11 +4444,13 @@ default avaLostInterest = False
 default fuckedClaireEarly = False
 default hittingOnRori = False
 default invitedToEllensHouse = False
+default mansionQuestStarted = False
 default partyWithoutGunner = False
 default partyWithEveryone = False
 default metTrish = False
 default trishFortunes = 0
 default roseWarning = False
+default metLina = False
 
 default roseNightWalkLvl = 1
 default gunnerNightWalkLvl = 1

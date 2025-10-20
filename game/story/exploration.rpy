@@ -1070,34 +1070,50 @@ label linaTown:
     show lina sax neutral at center with dissolve:
         ypos y_lina
     
-    lina @ say "Heya! I've seen you around before!"
-    
-    player "You have?"
-    
-    lina @ say "Yeah, on campus! You're a student too, aren't you?"
-    
-    player "Oh there, right. I'm afraid I never noticed you."
-    
-    lina @ say "That's alright. I'm just kinda in the background."
-    
-    player "Well it's nice to finally meet you I guess! My name's [name]."
-    
-    lina @ say "I'm Lina! A pleasure to finally get to meet you as well!"    
-    lina @ "You're a human!"
-    
-    player "And you're a... bird?"
-    
-    lina @ say "A harpy eagle to be precise. We can see from pretty far away."
-    lina @ say "It's always easy to spot you 'cause you're the only human around!"
-    
-    player "Thanks? I think? You haven't been stalking me, have you?"
-    
-    lina @ say "Noooo, nothing like that! I just see you talking with that bunny girl and secretary bird all the time."
-    
-    player "Yeah they're... something haha."
-    player "So uhh, you come here often?"
-    
-    lina @ say "Usually on the weekends! That's when lots of people are out and about and usually have a buck to spare *chirp~*"
+    if metLina == False:
+        $ metLina = True
+        
+        lina @ say "Heya! I've seen you around before!"
+        
+        player "You have?"
+        
+        lina @ say "Yeah, on campus! You're a student too, aren't you?"
+        
+        player "Oh there, right. I'm afraid I never noticed you."
+        
+        lina @ say "That's alright. I'm just kinda in the background."
+        
+        player "Well it's nice to finally meet you I guess! My name's [name]."
+        
+        lina @ say "I'm Lina! A pleasure to finally get to meet you as well!"    
+        lina @ "You're a human!"
+        
+        player "And you're a... bird?"
+        
+        lina @ say "A harpy eagle to be precise. We can see from pretty far away."
+        lina @ say "It's always easy to spot you 'cause you're the only human around!"
+        
+        player "Thanks? I think? You haven't been stalking me, have you?"
+        
+        lina @ say "Noooo, nothing like that! I just see you talking with that bunny girl and secretary bird all the time."
+        
+        player "Yeah they're... something haha."
+        player "So uhh, you come here often?"
+        
+    else:
+        player "Hey, you're the panty bird! Lina, right?"
+        
+        lina @ say "Yup! My collection is still growing haha!"
+        
+        player "Can't believe I share a school with a pervert like you."
+        
+        lina @ say "Hey, it's not a fetish thing! I just do it cause it's funny!"
+        
+        player "Suuuuure~"
+        player "I didn't know you were also a street begger on the side."
+        
+        
+    lina @ say "Usually only on the weekends! That's when lots of people are out and about and usually have a buck to spare *chirp~*"
     
     n "You take a look inside her saxophone case. There's probably around $50 in there."
     
@@ -1232,6 +1248,8 @@ label linaTown:
                     lina @ say "Ohmygosh thanks!~"
                 "Let the intrusive thoughts win":
                     hide lina with dissolve
+                    
+                    $ featherMuncher = True
                 
                     n "You crouch down to the saxophone case and reach into your wallet to make it look like you're going to drop in a bill."
                     n "But before she can react, you snatch a handful of bills and start walking away."

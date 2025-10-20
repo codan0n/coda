@@ -3348,6 +3348,8 @@ label roseInHallways:
             player "Just for one night! We can even sleep in different rooms!"
             
             if rosePoints > 3:
+                $ mansionQuestStarted = True
+            
                 rose @ say "I hate this and I hate you but if it will make my filthy human-sympathizer granddad happy then..."
                 rose @ say "Fine."
                 rose @ say "We'll \"\"\"hang out\"\"\" on occasion within view of my grandfather. You'll stand no closer than 5 feet away from me and under no circumstances will you so much as lay a finger on me."
@@ -5466,19 +5468,111 @@ label midweekAutumnBreak:
                         
                         player "Good, I wouldn't have it any other way. You're perfect the way you are."
                         
-                        rose @ say ""
+                        rose @ say "Well I..."
+                        rose @ say "I know I am! I don't need your affirmation!"
+                        rose @ say "Here, take this and go learn something!"
+                        
+                        n "Rose shoves a book into your hands. It's titled \"The Human History Iceberg.\""
+                        
+                        player "Ooh, this looks like a good one! Thanks~"
+                        
+                        rose @ say "If you don't get an A on the assignment, I'll be more disappointed in you than usual."
+                        
+                        n "Clutching the book, you scuttle on out of there to write your report. You can barely get a quarter of the way down the iceberg before the required foreknowledge goes beyond your understanding."
+                        
+                        player "What kind of crack was the author on? The hell do you mean the moon landing was a cover up for exiling humans off the planet?"
+                        n "For that matter, how did JFK personally do 9/11?"
+                        n "The author states he hired a hit on himself to produce a rare chemical in his brain at the moment of death to astral project into the pilots' heads but fails to explain the motivation to do such a thing."
+                        
+                        n "These conspiracies seem a little out there, but there might be some truth in a few of them."
+                        n "Rose would know more."
+                        n "You find her in a more extravagant book fort than before."
+                        
+                        player "Wow, someone's been busy."
+                        
+                        rose @ say "Go away human scum. I'm building a kingdom for the master species."
+                        
+                        player "Riiight. Anyway I had a question about this conspiracy."
+                        
+                        rose @ say "If it has to do with humans being awful and ruining everything for everyone, it's not a conspiracy it's just a fact of their nature."
+                        
+                        player "Yeah okay it says that modern raccoons are the descendants of human and arcoon hybrids. Is that true?"
+                        
+                        n "Rose goes silent for a moment."
+                        
+                        rose @ say "...There's evidence to suggest it is, yes."
+                        
+                        player "So that makes you...?"
+                        
+                        rose @ say "Damn you humans, you ruin everything you touch!"
+                        rose @ say "Arcoonians should have killed you all on sight. Kept the bloodline pure..."
+                        
+                        player "..."
+                        
+                        n "Things are starting to make a little more sense now. Her hatred for humans seems a bit less irrational now."
+                        
+                        rose @ say "*IF* that conspiracy is even slightly true, the modern raccoon is still the best living species IN SPITE of any dormant human DNA presence!"
+                        
+                        menu:
+                            "It's just a dumb theory":
+                                player "Honestly the theory sounds dumb as fuck and doesn't make any sense."
+                                player "Humans can't even hybridize with raccoons. There's not enough matching DNA so I doubt it would even work for a pureblood arcoon."
+                                
+                                rose @ say "It's based on some DNA records and computer models showing it could *maybe* theoretically happen. We don't have the whole picture."
+                                rose @ say "Scientists are working to reconstruct arcoon DNA in full. Until then we won't know for sure what happened."
+                                rose @ say "Either way, they died out and the modern raccoon is adapted to the modern world. They probably used advanced technology to alter their DNA for how gay and retarded the world was becoming."
+                                
+                                player "Right. Then they'd destroy said technology to prevent others from getting their filthy hands on it."
+                                
+                                rose @ say "Exactly! That's the level they operated on! So advanced even their ancient scrapped designs are science fiction to us!"
+                                rose @ say "Once civilization stabilizes from the disease that was humanity, we'll bring back glorious arcoonian culture!"
+                                rose @ say "A new wave of philosophers! Independence! Ferocity! Individual freedoms! Academics will truly be great again!"
+                        
+                                player "Make academics great again? What's wrong with our education?"
+                                
+                                rose @ say "It's been tainted by communism. Only humans could make a mistake so big it ruins intellectual discourse for multiple future generations."
+                                
+                                player "You got me there. Sorry for inventing communism."
+                                
+                                rose @ say "Admitting you're the problem is the first step in recovery."
+                                
+                                player "I think you got that slightly wrong but who am I to argue?"
+                                player "Thanks for the help with the extra credit though. See you in class next week."
+                                
+                                rose @ say "Still hoping you get struck by lightning, but yeah see you in class I guess."
+                                
+                                n "Wow, that's a massive improvement! You think she's starting to warm up to you!"
+                            "So you're coping?":
+                                $ rosePoints -= 2
+                            
+                                player "I sorta get it now. All that cope about hating humans because you're partly one."
+                                
+                                rose @ say "Shut UP!!!"
+                                rose @ say "You and I have NOTHING in common, least of all on a genetic level!"
+                                rose @ say "You've barely evolved past being a feral ape for eons, whereas raccoons are the pinnacle of natural selection!"
+                                
+                                player "LMAO your ancestors fucked human men."
+                                player "Maybe arcoonians weren't that great until they got a little human DNA in them?"
+                                
+                                rose @ say "How dare you even suggest such a thing!"
+                                rose @ say "I can't wait until your kind is dead and buried for good."
+                                
+                                player "Hey at least my genetics will live on inside you and the rest of the raccoons!"
+                                
+                                rose @ say "Damn you humans... You can burn in hell and if you don't leave me alone I'll send you straight there!"
+                                
+                                n "Oh shit she might be serious. She's reaching for her hip, her hand on an imprint beneath her clothes that looks suspiciously like a handgun."
+                                n "You take a step back and hold your hands up in the air."
+                                
+                                player "Hey, I was just playing. No need to take me seriously. I was just on my way out."
+                                
+                                n "You book it out of the library as fast as you can before she decides to use you as target practice."
+                                
+                                player "SEEYOUINCLASSNEXTWEEK!!!"
+                                
+                                
                         
                         
-                        
-                        
-                        
-                        
-                        
-                        #rose seethes about having human dna but says that raccoons are great in spite of it and researchers are working on bringing back pure arcoon dna
-                        
-                        
-                        
-                        #if you offered to help her with the mansion situation, offer to take a pic of you and her studying together to send to her grandpa
                         
                     else:
                         rose @ say "I'm not doing your research for you."
@@ -5556,10 +5650,10 @@ label midweekAutumnBreak:
                     
                     n "You kick the remainder of the stack and watch the books spill all over the floor."
                     
-                    if rosePoints < 2:
-                        rose @ say "Listen you humanigger, if you don't clean up this mess you made, you're done for!"
-                    else:
-                        rose @ say "Listen you humanoid, if you don't clean up this mess you made, you're done for!"
+                    #if rosePoints < 2:
+                        #rose @ say "Listen you humanigger, if you don't clean up this mess you made, you're done for!"
+                    #else:
+                    rose @ say "Listen you humanoid, if you don't clean up this mess you made, you're done for!"
                     
                     menu:
                         "Nope":
@@ -5628,8 +5722,422 @@ label midweekAutumnBreak:
             n "Yeah no, you're not gonna waste your life away hitting the books. That's not natural."
             n "Your monkey brain tells you what you need is a good old fashioned walk. Some fresh air and sunlight to clear your mind."
             
+            if metLina == False:
+                $ metLina = True
+                
+                n "It's not long before you come across a stranger who strikes up a conversation."
+                
+                lina @ say "Heya! I've seen you around before!"
+                
+                player "You have?"
+                
+                lina @ say "Yeah, on campus! You're a student too, aren't you?"
+                
+                player "Oh there, right. I'm afraid I never noticed you."
+                
+                lina @ say "That's alright. I'm just kinda in the background."
+                
+                player "Well it's nice to finally meet you I guess! My name's [name]."
+                
+                lina @ say "I'm Lina! A pleasure to finally get to meet you as well!"    
+                lina @ "You're a human!"
+                
+                player "And you're a... bird?"
+                
+                lina @ say "A harpy eagle to be precise. We can see from pretty far away."
+                lina @ say "It's always easy to spot you 'cause you're the only human around!"
+                
+                player "Thanks? I think? You haven't been stalking me, have you?"
+                
+                lina @ say "Noooo, nothing like that! I just see you talking with that bunny girl and secretary bird all the time."
+                
+                player "Yeah they're... something haha."
+                
+                player "So you got left behind too? For autumn break?"
+                
+                lina @ say "Yeahhhh I didn't wanna fly all the way back home. Besides..."
+                
+                n "A sinister smirk forms on her beak."
+                
+                lina @ say "Long breaks like this are the perfect time to conduct panty raids!"
+                
+                player "Seriously? A buddy of mine had a hard time convincing me that was a real thing."
+                
+                lina @ say "Oh it's very real~"
+                lina @ say "I mean, either that or I've just been breaking in and burglarizing all this time."
+                
+                if gunnerRaid == True:
+                    player "Yeah I ended up joining him and a gay friend a few weeks ago to do a raid. It was pretty fun."
+                    
+                    lina @ say "OMG for real??? Who's panties did ya nab?"
+                    
+                    if avaPantsu == True:
+                        player "Uhhhh you probably don't know her. The photography bird girl I hang out with."
+                        
+                        lina @ say "Ooooh her?~ I bet she's got some cute ones~"
+                        lina @ say "But I might be biased cause we're both birbs hehe~"
+                        
+                        player "Yeah they're pretty nice~"
+                        
+                        lina @ say "Think you could help a bird out in getting a pair herself?"
+                        
+                        menu:
+                            "Visit Ava's dorm with Lina":
+                                player "Mmmh alright, I could show you where her dorm is."
+                                
+                                lina @ say "And be an accomplice to my raid?"
+                                
+                                player "Eh why not?"
+                                
+                                lina @ say "Yay! Panty raiding buddy!!!"
+                                
+                                player "Yeah please don't shout that at the top of your lungs."
+                                
+                                lina @ say "Heh sorry. Shall we go then?"
+                                
+                                
+                                
+                                
+                                
+                                
+                                jump pantyRaidLina1
+                            "Stay out of it":
+                                player "I'll have no part in helping you with that."
+                                
+                                lina @ say "A master panty hunter like me doesn't need any help!"
+                                lina @ say "I'll amass the biggest collection of stolen panties this university has ever seen!"
+                                
+                                player "Good luck with that. Have a nice day."
+                                
+                                n "That's enough talking to the mentally ill for today. You've got better things to do."
+                                
+                                lina @ say "See ya!"
+                                
+                                jump celestineMargaretVisit1
+                        
+                        
+                        
+                        
+                    
+                    if clairePantsu == True:
+                        player "Uhhh that big bunny girl I hang out with."
+                        
+                        lina @ say "Ooooh you're into the chunky ones, huh?"
+                        lina @ say "Not my cuppa tea but I've got a few like that in my collection~"
+                        
+                        player "She's roommates with the other bird girl I talk to."
+                        
+                        lina @ say "The photographer one? I could go for taking a pair from her~"
+                        
+                        menu:
+                            "Visit Ava's dorm with Lina":
+                                player "If you want, I could show you where her dorm is."
+                                
+                                lina @ say "And be an accomplice to my raid?"
+                                
+                                player "Eh why not?"
+                                
+                                lina @ say "Yay! Panty raiding buddy!!!"
+                                
+                                player "Yeah please don't shout that at the top of your lungs."
+                                
+                                lina @ say "Heh sorry. Shall we go then?"
+                                
+                                
+                                
+                                
+                                
+                                jump pantyRaidLina1
+                                
+                            "Stay out of it":
+                                player "I'll have no part in helping you with that."
+                                
+                                lina @ say "A master panty hunter like me doesn't need any help!"
+                                lina @ say "I'll amass the biggest collection of stolen panties this university has ever seen!"
+                                
+                                player "Good luck with that. Have a nice day."
+                                
+                                n "That's enough talking to the mentally ill for today. You've got better things to do."
+                        
+                                lina @ say "See ya!"
+                        
+                                jump celestineMargaretVisit1
+                        
+                        
+                    else:
+                        player "I didn't end up with any. I was just playing chaperone."
+                        
+                        lina @ say "Aww, what a shame."
+                        lina @ say "You wanna make up for it and come with me tonight?"
+                        
+                        player "What, let's go rob someone's house tonight?"
+                        
+                        lina @ say "Just their panties!"
+                        
+                        menu:
+                            "I'm in":
+                                player "I'm game. I was kinda nervous the first time but I think I can handle it now."
+                                
+                                lina @ say "Relax, I'm a pro at this! There's not a chance we'll get caught!"
+                                
+                                
+                                
+                                
+                                
+                                jump pantyRaidLina1
+                                
+                            "I'm out":
+                                player "Count me out. I had enough of it the first time."
+                                
+                                lina @ say "Alright then, that just leaves more for me~"
             
             
+            else:
+                n "It's not long before you come across someone you've seen before."
+            
+                lina @ say "Hey, it's you again!"
+                
+                player "Huh? Oh hey, the saxophone bird."
+            
+                if featherMuncher == True:
+                    lina @ say "Give me back the money you stole from me!"
+                    
+                    player "Sorry, I spent it already."
+                    
+                    lina @ say "What kind of person steals from a street performer anyway? You bum!"
+                    
+                    player "Speak for yourself! You were the one extorting everyone for their hard earned cash."
+                
+                    lina @ say "I did no such thing! Anyone is free to donate or not!"
+                    lina @ say "And what's wrong with being a feathermuncher, huh?"
+                    
+                    player "It's gay."
+            
+                    lina @ say "Ah, I see. My mistake."
+                    lina @ say "Liking girls *is* pretty gay. You don't like girls do you?"
+                    
+                    player "What? No of course not!"
+                    player "Wait a minute..."
+                    
+                    lina @ say "Hah! Got ya!"
+                    
+                    n "Dammit she's flying away before you can get a comeback in!"
+                    n "You end up shouting slurs into the wind."
+                    n "You're down 2 to 0 against this lesbird."
+                    
+                    
+                    jump celestineMargaretVisit1
+                    
+                else:
+                    lina @ say "I have a name, you know! Did you already forget it?"
+                    
+                    player "Lina, right? How goes it? Stuck on campus during the break I see."
+                    
+                    lina @ say "Yeahhh but I"m not complaining! I'm making the most of it in fact!"
+                    
+                    player "How's that?"
+                    
+                    n "She gestures for you to lean closer so she can whisper something to you."
+                    
+                    lina @ say "Have you ever heard of a... panty raid?"
+                    
+                    player "Oh god not this again. A buddy of mine had a hell of a time convincing me that was a real thing."
+                    
+                    if gunnerRaid == True:
+                        player "I ended up joining him and a gay friend a few weeks ago to do a raid. It was pretty fun."
+                    
+                        lina @ say "OMG for real??? Who's panties did ya nab?"
+                            
+                        if avaPantsu == True:
+                            player "Uhhhh you probably don't know her. The photography bird girl I hang out with."
+                            
+                            lina @ say "Ooooh her?~ I bet she's got some cute ones~"
+                            lina @ say "But I might be biased cause we're both birbs hehe~"
+                            
+                            player "Yeah they're pretty nice~"
+                            
+                            lina @ say "Think you could help a bird out in getting a pair herself?"
+                            
+                            menu:
+                                "Visit Ava's dorm with Lina":
+                                    player "Mmmh alright, I could show you where her dorm is."
+                                    
+                                    lina @ say "And be an accomplice to my raid?"
+                                    
+                                    player "Eh why not?"
+                                    
+                                    lina @ say "Yay! Panty raiding buddy!!!"
+                                    
+                                    player "Yeah please don't shout that at the top of your lungs."
+                                    
+                                    lina @ say "Heh sorry. Shall we go then?"
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    jump pantyRaidLina1
+                                "Stay out of it":
+                                    player "I'll have no part in helping you with that."
+                                    
+                                    lina @ say "A master panty hunter like me doesn't need any help!"
+                                    lina @ say "I'll amass the biggest collection of stolen panties this university has ever seen!"
+                                    
+                                    player "Good luck with that. Have a nice day."
+                                    
+                                    n "That's enough talking to the mentally ill for today. You've got better things to do."
+                                    
+                                    lina @ say "See ya!"
+                                    
+                                    jump celestineMargaretVisit1
+                            
+                            
+                        if clairePantsu == True:
+                            player "Uhhh that big bunny girl I hang out with."
+                            
+                            lina @ say "Ooooh you're into the chunky ones, huh?"
+                            lina @ say "Not my cuppa tea but I've got a few like that in my collection~"
+                            
+                            player "She's roommates with the other bird girl I talk to."
+                            
+                            lina @ say "The photographer one? I could go for taking a pair from her~"
+                            
+                            menu:
+                                "Visit Ava's dorm with Lina":
+                                    player "If you want, I could show you where her dorm is."
+                                    
+                                    lina @ say "And be an accomplice to my raid?"
+                                    
+                                    player "Eh why not?"
+                                    
+                                    lina @ say "Yay! Panty raiding buddy!!!"
+                                    
+                                    player "Yeah please don't shout that at the top of your lungs."
+                                    
+                                    lina @ say "Heh sorry. Shall we go then?"
+                                    
+                                    
+                                    
+                                    
+                                    jump pantyRaidLina1
+                                    
+                                "Stay out of it":
+                                    player "I'll have no part in helping you with that."
+                                    
+                                    lina @ say "A master panty hunter like me doesn't need any help!"
+                                    lina @ say "I'll amass the biggest collection of stolen panties this university has ever seen!"
+                                    
+                                    player "Good luck with that. Have a nice day."
+                                    
+                                    n "That's enough talking to the mentally ill for today. You've got better things to do."
+                            
+                                    lina @ say "See ya!"
+                            
+                                    jump celestineMargaretVisit1
+                            
+                            
+                        else:
+                            player "I didn't end up with any. I was just playing chaperone."
+                            
+                            lina @ say "Aww, what a shame."
+                            lina @ say "You wanna make up for it and come with me tonight?"
+                            
+                            player "What, let's go rob someone's house tonight?"
+                            
+                            lina @ say "Just their panties!"
+                            
+                            menu:
+                                "I'm in":
+                                    player "I'm game. I was kinda nervous the first time but I think I can handle it now."
+                                    
+                                    lina @ say "Relax, I'm a pro at this! There's not a chance we'll get caught!"
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    jump pantyRaidLina1
+                                    
+                                    
+                                "I'm out":
+                                    player "Count me out. I had enough of it the first time."
+                                    
+                                    lina @ say "Alright then, that just leaves more for me~"
+                                    
+                                    player "Good luck on your panty quest!"
+                                    
+                                    lina @ say "A master underwear thief like me doesn't need luck! It's pure motivation and skill!"
+                                    
+                                    player "Haha sure, well show me whatever spoils you find later."
+                                    
+                                    lina @ say "I will!"
+                            
+                                    jump celestineMargaretVisit1
+                        
+                        
+                    
+                    
+                    
+                    else:
+                        player "Is everyone in this university a deranged pervert?"
+                        
+                        lina @ say "It's just a hobby, okay??"
+                        lina @ say "There's no greater joy than finding a jackpot of cute frilly panties and adding to my collection~"
+                        
+                        player "Man, humans leave anthromorphs to their own devices for like 2 generations and this is what happens."
+                        
+                        lina @ say "Don't be a stick in the mud! I can show you how fun it really is!"
+                        
+                        menu:
+                            "I'm in":
+                                player "Eh sure, I'll do it. Somehow it feels more innocent to go on a raid with a girl than with two frat boys."
+                                
+                                lina @ say "That's the spirit!"
+                                
+                                
+                                
+                                
+                                jump pantyRaidLina1
+                                
+                                
+                            "I'm out":
+                                player "Count me out. I don't need to be on the sexual offenders registry."
+                                
+                                lina @ say "Alright then, that just leaves more for me~"
+                                
+                                player "Good luck on your panty quest!"
+                                
+                                lina @ say "A master underwear thief like me doesn't need luck! It's pure motivation and skill!"
+                                
+                                player "Haha sure, well show me whatever spoils you find later."
+                                
+                                lina @ say "I will!"
+                        
+                                jump celestineMargaretVisit1
+                            
+                            
+label pantyRaidLina1:
+    
+                                
+                    
+                    
+            #you point out ava and claire's dorm to lina and break in with her.
+            #lina has lockpicking skills
+            #claire left a note for you
+            #ava only left behind 1 pair and lina snatches it
+                    
+            
+            #lina: It's too bad you're not a girl. Yuri is the purest form of love!
+                #menu: "Go on a schizophrenic rant"
+            
+            
+            
+label celestineMargaretVisit1:
+    
+    
+    
+    
 
 
 
@@ -5641,8 +6149,6 @@ label midweekAutumnBreak:
         
         
         #mid week side content
-            #history extra credit
-                #optional pic with rose to send to her grandpa
             #if you decline, then go for a walk and encounter lina, choice to do panty raid 
             #if you decline, you walk into town and come across margaret and celestine shopping (celestine remarks she thinkgs someone stole her panties so she had to get more)
                 #margaret "Time honored tradition. Boys will be boys."
