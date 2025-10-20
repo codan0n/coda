@@ -4399,8 +4399,10 @@ default clairephonethx = False
 default avaUrbex = False
 default gunnerRaid = False
 default avaPantsu = False
-default featherMuncher == False
+default avaPantsuLina = False
 default clairePantsu = False
+default clairePantsuLina = False
+default featherMuncher == False
 default roseNicodemusCampusScene = False
 default gnugift = False
 default stayedInHospitalWithGunner = False
@@ -4451,6 +4453,7 @@ default metTrish = False
 default trishFortunes = 0
 default roseWarning = False
 default metLina = False
+default margaretPantsu = False
 
 default roseNightWalkLvl = 1
 default gunnerNightWalkLvl = 1

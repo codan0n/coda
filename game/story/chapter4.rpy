@@ -2837,7 +2837,7 @@ label midtermDay1Cont:
         
     herschel @ say "Good morning class! You know what day it is! Clear your desks and let the fun begin!"
     
-    gunner @ say "See this is her idea of fun. She's a sadist!"
+    gunner @ say "See, this is her idea of fun. She's a sadist!"
     
     n "When you get your test, your faced with a wall of verbose word problems and mathematical formulas including some symbols you've never even seen before."
     n "This is gonna be tougher than you thought."
@@ -5920,6 +5920,7 @@ label midweekAutumnBreak:
                     player "Wait a minute..."
                     
                     lina @ say "Hah! Got ya!"
+                    lina @ say "See you around, dork. I got a panty raid to get to!"
                     
                     n "Dammit she's flying away before you can get a comeback in!"
                     n "You end up shouting slurs into the wind."
@@ -6118,50 +6119,184 @@ label midweekAutumnBreak:
                             
                             
 label pantyRaidLina1:
+    n "Lina's key fob got you inside Ava and Claire's dorm building and you brought her outside their room."
     
-                                
+    player "Here it is. Last time I had an easier time getting in but it's locked now."
+    
+    lina @ say "Not a problem! I've honed my lockpicking skills for moments like these!"
+    
+    n "Within seconds, Lina gets the door open."
+    
+    player "Wow, you really are a pro at this."
+    
+    n "Stepping inside the poorly lit room, you hurry to the clothes drawers."
+    
+    player "Ah, this one's Claire's."
+    player "Huh? There's a note here addressed to... me?"
+    
+    n "You flip it open and read through it. Not even halfway through it has you blushing."
+    
+    lina @ say "Well? What does it say!"
+    
+    player "Nothing, nothing. It's very private. Hey, stop!"
                     
+    n "Lina swipes the note from your hand and flutters up to the top bunk to read it."
+    
+    lina @ say "Wow. This Claire lady is *really* into you."
+    
+    player "Tell me about it."
+    
+    lina @ say "Sounds like that bunny's panties are reserved for you!"
+    
+    menu:
+        "Take them":
+            $ clairePantsuLina = True
+            
+            player "Damn right."
+            
+            if clairePantsu == True:
+                $ clairePantsu = True
+                
+                n "Now you have two pairs of big bunny panties. You don't even know what to do with one."
+                
+            else:
+                n "You bunch them up and stuff them in your pocket."
+                n "You're gonna have a hard time explaining this if you get stopped and searched."
+                
+            n "Let's see what Ava has to offer..."
+            
+            
+                
+                
+        "Leave them":
+            player "I came here for Ava's knickers."
+            
+            n "You close Claire's drawer and open the one beneath it."
+            
+            
+        player "Hey!"
+        
+        n "Lina swooped down and snatched the only set of undergarments Ava left behind."
+        
+        player "Those were for me, not you!"
+        
+        lina @ say "Finders keepers~"
+        lina @ say "Hey, she's the same size as me!"
+            
+        if avaPoints > 4:
+            player "I swear if I have to compete with ANOTHER suiter for her I'm gonna start taking out the competition. And I don't mean like on a date."
+    
+            lina @ say "I dunno, we might hit it off!"
+            
+            player "I'm pretty sure she's straight."
+            
+            lina @ say "So is spaghetti until it gets hot!"
+            
+            player "Come on, I'll trade you Claire's panties for those."
+            
+            lina @ say "Nahhh, these are just what I came for~"
+            
+        if avaPantsu == True:
+            player "Whatever, I already have one of Ava's."
                     
-            #you point out ava and claire's dorm to lina and break in with her.
-            #lina has lockpicking skills
-            #claire left a note for you
-            #ava only left behind 1 pair and lina snatches it
-                    
+        player "I think we're done here."
+        
+        lina @ say "Mhm! I told ya no panties are safe from me!"
+        
+        player "Glad I don't have to worry about you stealing the underwear off my ass."
+        
+        lina @ say "Yeah no, boys are gross lol"
+        lina @ say "But thanks for joining me on this raid! Feel free to hit me up later if you wanna go on another raid!"
+        
+        player "If I ever find the time, sure."
             
-            #lina: It's too bad you're not a girl. Yuri is the purest form of love!
-                #menu: "Go on a schizophrenic rant"
-            
-            
+        if clairePantsuLina == True:
+            n "You leave the dorm and part ways, wondering what to do with your prize. And how Claire will react when she finds out what you've done."
+        else:
+            n "You leave the dorm and part ways, disappointed you couldn't get Ava's panties. They seem to be in high demand."
             
 label celestineMargaretVisit1:
+    n "Continuing your walk, you end up in the town proper. The streets are empty. Not even traffic blocks the roadways."
+    n "You guess college towns just get put on pause when students are away."
+    n "But for the actual residents, it must be a break from all the hustle and bustle they bring."
+    n "Looks like two of them are out having a pleasant day together right now."
     
+    margaret @ say "[name]? Fancy happening upon you this far out from the campus!"
     
+    celestine @ say "Bonjour, [name]!"
     
+    player "Good afternoon! It's kinda weird seeing you two just hanging out but I guess even professors have friends."
     
-
-
-
+    margaret @ say "Yup! We're just doing some winter clothes shopping while we can!"
     
+    celestine @ say "Before those pesky students can pick the shelves clean!"
     
+    player "Wow, now I see how you view your students haha"
+    
+    celestine @ say "Don't get me wrong, I love my students, but nobody told me Harmonia was such a wild town!"
+    
+    n "Mrs. Celestine looks around and whispers something to you."
+    
+    celestine @ say "I'm *constantly* having to buy new undergarments because of a certain local \"tradition\" of stealing them!"
+    
+    margaret @ say "I'll admit it gets on my nerves. But boys will be boys."
+    
+    if margaretPantsu == True:
+        n "Miss Ellen glares at you, out of Mrs. Celestine's sight."
         
+        ###alt where she winks at you if you have high ellenpoints
         
-       
+        player "Haha y-yeah who would do such a thing?"
         
+        n "Glare all you want, you're not getting them back."
+    
+    else:
+        player "Riiiiight, boys."
         
-        #mid week side content
-            #if you decline, then go for a walk and encounter lina, choice to do panty raid 
-            #if you decline, you walk into town and come across margaret and celestine shopping (celestine remarks she thinkgs someone stole her panties so she had to get more)
-                #margaret "Time honored tradition. Boys will be boys."
-                #riiiiight, boys
-            
-
+    margaret @ say "Anyway, it was nice seeing you outside of the classroom!"
+    
+    celestine @ say "Agreed! Hopefully you have something to keep yourself busy if you're stuck here during the break."
+    
+    player "I'm managing to get by. Eager for three quarters of my main friend group to get back from their vacation though."
+    
+    celestine @ say "We'd invite you to hang out with us but we were just about to go into..."
+    
+    n "She points at the women's lingerie store. Obviously wouldn't be a good look for two female professors to bring a male student along with them in there."
+    
+    player "Haha of course, I get it. You two have a nice day! I'll see you in class next week!"
+    
+    celestine @ say "À bientôt!"
+    
+    margaret @ say "I'll give you a heads up and say there'll be a quiz first thing on Tuesday!"
+    
+    player "Thanks!"
+    
+    n "As you pass by each other, you glance into the window display of the store they're about to enter."
+    n "You can't help but imagine them in the outfits you see."
+    
+    
 
 label autumnBreakLockIn:
+    scene bg codadorm with fade
+    
+    n "As your autumn break is coming to a close, you decide to take a day to make sure you're caught up on studies."
+    n "A nasty storm brews outside as you open the university's coursework app on your laptop."
+    n "Gusts of wind make the building creak and you swear the walls are tilting a little."
+    n "Rain starts to pour down and it's not long before regular lightning strikes flash through your window."
+    n "With a crash of thunder, the building shakes and the lights flicker."
+    n "Your internet connection shuts off and the room goes dark."
+    
+    
 
+    
+    #power outage in the dorms during a storm
+    #a glitch caused the doors to lock
+    #get stuck in a power outage in the dorms until you find the breaker and flip it with rose. can't use fire escape or it will set off the sprinklers and ruin her books
+    #rose "Don't you dare try the fire escape!"
+    #player "Why not?"
+    #rose "It'll trigger the sprinklers and ruin my books."
+    #rose bitches about garbage human-designed technology causing this problem
         
-        #friday
-            #power outage in the dorms during a storm
-            
         
         
         
@@ -6171,4 +6306,4 @@ label autumnBreakLockIn:
         #saturday - gunner finds you in bed with ava and gets mad. Ava and Claire want to go out again today but you faint and they take you to the hospital, where you get your diagnosis. You start a new treatment to mitigate your symptoms.
         
     
-    #glare all you want, you're not getting them back ms ellen
+    
