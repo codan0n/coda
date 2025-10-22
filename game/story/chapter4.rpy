@@ -6319,6 +6319,8 @@ label autumnBreakLockIn:
     
     menu:
         "Wanna go get some coffee?":
+            $ offeredRoseCoffeeDuringOutage = True
+        
             player "Wanna go get some coffee? It'll be my treat."
         
             rose @ say "What, when I'm dressed like this?"
@@ -6365,7 +6367,7 @@ label mishkaPowerOutage:
     
     mishka @ say "Welcome, [name]! The shop is technically still closed but I came to get it ready for re-opening soon."
     
-    player "Perfect timing, Mishka! I hope your place didn't get hit by the power outage. I came here cause I dunno when my dorm will have electrcity again."
+    player "Perfect timing, Mishka! I hope your place didn't get hit by the power outage. I came here cause I dunno when my dorm will have electricity again."
     
     mishka @ say "Nope! My home is all good. But I did come here for something else..."
     
@@ -6378,24 +6380,115 @@ label mishkaPowerOutage:
     mishka @ say "Hehe dyakuyu!"
     mishka @ say "Is there something I can get for you?"
     
-    menu:
-        "One coffee":
-            n ""
+    if offeredRoseCoffeeDuringOutage == True:
+        menu:
+            "One coffee":
+                n "You'll just get one for yourself."
+                
+                player "One coffee please. For here if that's okay."
+                
+                mishka @ say "Sure! I can stay here for a while. Hopefully the power comes back in your dorm soon."
+                
+                player "Yeah but I don't mind hanging out here until you have to go home."
+                player "I didn't realize how dependent I was on electricity. I can't even unlock my door without it."
+                
+                mishka @ say "Oh no! I don't mind staying until the electricity returns for you though!"
+                
+                player "They should have it fixed in a couple hours. Stuff like this happened all the time back home. Pretty much any time it stormed I'd have to prepare for the power to go out."
+                
+                mishka @ say "And what did you do during that time?"
+                
+                player "Mostly played games on battery powered devices. I'd have to cook with candles."
+                
+                mishka @ say "Ah, I have had to do that before. The candle cooking."
+                
+                player "Yeah? And how'd you pass the time?"
+                
+                mishka @ say "Hehe I didn't have much that was battery powered but books don't need batteries!"
+                mishka @ say "I read a lot of science and math about reaching space."
+                
+                player "Cool! I like reading about space but the math stuff kinda goes beyond my understanding."
+                
+                mishka @ say "It's not so hard if you have a good understanding of calculus!"
+                
+                player "Yeah count me out then."
+                
+                mishka @ say "I see... maybe one day you'd like to learn and I could teach you?"
+                
+                player "I'll have to get through my statistics class first."
+                
+                mishka @ say "Well... we'll see!"
+                
+                n "You sip on coffee with Mishka for a few hours until you figure the power must be back on in your dorm."
+                n "By now the rain has subsided and you can both go home without getting soaked."
+                
+                #mishka @ say "It was good seeing you again! Come by any time!"
+                
+            
+            "Two coffees":
+                n "You'll bring one back for Rose after all."
+                
+                player "Two coffees please! To go!"
+                
+                
+                
+                
+                
+                #quick mishka visit, return to rose with coffee (at least she'll appreciate the scent)                                   
+                #if you don't get coffee for rose then you sit and wait for the power to come back in the cafe
+                #bring coffee back for rose, sit and chat til the power comes back
+                #if she hates you and you have low points she'll splash the coffee in your face
+                
+                
+                
+                
+                
+                
+                
+    else:
+        player "One coffee please. For here if that's okay."
+
+        mishka @ say "Sure! I can stay here for a while. Hopefully the power comes back in your dorm soon."
         
-        "Two coffees":
-            n ""
+        player "Yeah but I don't mind hanging out here until you have to go home."
+        player "I didn't realize how dependent I was on electricity. I can't even unlock my door without it."
+        
+        mishka @ say "Oh no! I don't mind staying until the electricity returns for you though!"
+        
+        player "They should have it fixed in a couple hours. Stuff like this happened all the time back home. Pretty much any time it stormed I'd have to prepare for the power to go out."
+        
+        mishka @ say "And what did you do during that time?"
+        
+        player "Mostly played games on battery powered devices. I'd have to cook with candles."
+        
+        mishka @ say "Ah, I have had to do that before. The candle cooking."
+        
+        player "Yeah? And how'd you pass the time?"
+        
+        mishka @ say "Hehe I didn't have much that was battery powered but books don't need batteries!"
+        mishka @ say "I read a lot of science and math about reaching space."
+        
+        player "Cool! I like reading about space but the math stuff kinda goes beyond my understanding."
+        
+        mishka @ say "It's not so hard if you have a good understanding of calculus!"
+        
+        player "Yeah count me out then."
+        
+        mishka @ say "I see... maybe one day you'd like to learn and I could teach you?"
+        
+        player "I'll have to get through my statistics class first."
+        
+        mishka @ say "Well... we'll see!"
+        
+        n "You sip on coffee with Mishka for a few hours until you figure the power must be back on in your dorm."
+        n "By now the rain has subsided and you can both go home without getting soaked."
+        
+        #mishka @ say "It was good seeing you again! Come by any time!"
             
             
-            
-    #quick mishka visit, return to rose with coffee (at least she'll appreciate the scent)        
-    #at the cafe, ask what mishka does during power outages. She mentions they were frequent in her village. She likes to read math and science books. Hint at her affinity for space.
     
-    
-    
-    
-    #if you don't get coffee for rose then you sit and wait for the power to come back in the cafe
-    #bring coffee back for rose, sit and chat til the power comes back
-    #if she hates you and you have low points she'll splash the coffee in your face
+    n "When you return to your dorm, the lights are back on in the lobby and your key works on the door."
+    n "Finally, you can get started on preparing for your return to class in a couple days."
     
     
     
@@ -6407,7 +6500,8 @@ label mishkaPowerOutage:
     
     
     
-    
+label afterFallBreak:
+    n ""
     
     
     
