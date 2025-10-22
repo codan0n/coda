@@ -6285,24 +6285,144 @@ label autumnBreakLockIn:
     n "Rain starts to pour down and it's not long before regular lightning strikes flash through your window."
     n "With a crash of thunder, the building shakes and the lights flicker."
     n "Your internet connection shuts off and the room goes dark."
+    n "The only source of illumination is the dull blue light emitted by your laptop screen that soon dies as well."
     
+    rose @ say "Are you fucking kidding me?!"
     
-
+    n "Sounds like your neighbor is enjoying the outage as much as you are."
+    n "You hear some thuds like she's kicking the wall in the hallway."
     
-    #power outage in the dorms during a storm
-    #a glitch caused the doors to lock
-    #get stuck in a power outage in the dorms until you find the breaker and flip it with rose. can't use fire escape or it will set off the sprinklers and ruin her books
-    #rose "Don't you dare try the fire escape!"
-    #player "Why not?"
-    #rose "It'll trigger the sprinklers and ruin my books."
-    #rose bitches about garbage human-designed technology causing this problem
+    player "Hey, what the hell are you doing out here? Quit sperging out, it's just a power outage."
+    
+    n "Rose is outside her door, clawing at it. She must have just got back from the gym, judging by her attire."
+    
+    rose @ say "In a sane society this would never even be a problem but just *look* at this!"
+    
+    n "Rose holds her key fob up to her door. The little LED that's supposed to flash green and unlock the door remains dark."
+    
+    rose @ say "The human desire to make everything electronic has once again failed to consider basic usability."
+    
+    player "What really? The door locks run on the main power?"
+    player "I guess if you're locked out of your room you can stay in mine until the electricity comes back on."
+    
+    n "*click*"
+    n "You look back to your door which has just shut on its own, locking you out."
+    
+    player "Oh fuck."
+    
+    n "You try your key a few times and get the same result as Rose."
+    
+    player "Okay I'm with you, smart electronics are dumb."
+    
+    n "Rose kicks her door one more time, just for good measure."
+    n "The power might be out all day. Gotta find some way to pass the time."
+    
+    menu:
+        "Wanna go get some coffee?":
+            player "Wanna go get some coffee? It'll be my treat."
         
+            rose @ say "What, when I'm dressed like this?"
+            
+            player "I don't mind."
+            
+            rose @ say "Well I do!"
+            
+            player "I can bring something back for you then."
+            
+            if roseHatesYouALot == True:
+                rose @ say "Forget it. Just leave me alone."
+                
+                player "Fine. Hope the power comes back soon. I'll be at Coffee Zone if you change your mind."
+            
+            else:
+                rose @ say "Psh. Do whatever you want, I don't care."
+                
+                n "You shrug."
+                
+                player "Lemme know if you change your mind I guess."
+            
+            jump mishkaPowerOutage
+                
+                
+            
+            
+            
+        "Leave her":
+            n "You don't wanna spend the next few hours with a wet bitchy raccoon."
+            n "You'll be content to get some coffee and wait for the power to come back on your own."
+            
+            player "I'm going out."
+            
+            rose @ say "Good. Get out of my sight."
+            
+            player "That's the idea."
+            
+            jump mishkaPowerOutage
+            
+label mishkaPowerOutage:
+    n "You pull off your hood and stomp your feet on the welcome mat upon arriving at the cafe. Luckily it seems that this part of the university still has power."
+    n "The sign on the door said it was closed for autumn break but you saw Mishka from the window and she waved at you."
+    
+    mishka @ say "Welcome, [name]! The shop is technically still closed but I came to get it ready for re-opening soon."
+    
+    player "Perfect timing, Mishka! I hope your place didn't get hit by the power outage. I came here cause I dunno when my dorm will have electrcity again."
+    
+    mishka @ say "Nope! My home is all good. But I did come here for something else..."
+    
+    n "Mishka pulls an espresso shot from the machine and gives it a sip."
+    
+    mishka @ say "I don't have one of these fancy contraptions at home so it's nice to come here just to make myself a drink!"
+    
+    player "Your drinks are always worth going out of the way for!"
+    
+    mishka @ say "Hehe dyakuyu!"
+    mishka @ say "Is there something I can get for you?"
+    
+    menu:
+        "One coffee":
+            n ""
         
+        "Two coffees":
+            n ""
+            
+            
+            
+    #quick mishka visit, return to rose with coffee (at least she'll appreciate the scent)        
+    #at the cafe, ask what mishka does during power outages. She mentions they were frequent in her village. She likes to read math and science books. Hint at her affinity for space.
+    
+    
+    
+    
+    #if you don't get coffee for rose then you sit and wait for the power to come back in the cafe
+    #bring coffee back for rose, sit and chat til the power comes back
+    #if she hates you and you have low points she'll splash the coffee in your face
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
         
         
     # classes resume
-        #skip class with ava and claire? or just have it so they come over on the weekend since they missed you. they sleep over. Just skip math class on friday.
         #trish??
+        #you oversleep and miss math class, spend the rest of friday with ava and claire, they sleep over, gunner comes by to drop off your homework
         #saturday - gunner finds you in bed with ava and gets mad. Ava and Claire want to go out again today but you faint and they take you to the hospital, where you get your diagnosis. You start a new treatment to mitigate your symptoms.
         
     

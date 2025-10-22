@@ -4454,6 +4454,7 @@ default trishFortunes = 0
 default roseWarning = False
 default metLina = False
 default margaretPantsu = False
+default roseHatesYouALot = False
 
 default roseNightWalkLvl = 1
 default gunnerNightWalkLvl = 1
