@@ -6430,14 +6430,183 @@ label mishkaPowerOutage:
                 
                 player "Two coffees please! To go!"
                 
+                mishka @ say "All for you or did you find someone to share with? Heheh~"
+                
+                player "There's someone who *might* appreciate it. That or she'll throw it in my face."
+                
+                mishka @ say "Hoping it's the former!"
+                
+                player "That's the plan."
+                
+                n "Mishka prepares your drinks and sends you off with a friendly wave as you brave the storm again."
+                
+                mishka @ say "Doh pobachennya! Good luck!"
+                
+                player "Thanks!"
+                
+                n "Back at your dorm, the lights are still off. You left the lobby door ajar in case the door remained locked and without power."
+                n "In the hallway you find Rose sitting with her back to the wall."
+                n "You were right, the smell of coffee got her attention."
+                
+                player "I got one for you."
+                
+                #rose @ say "Did you spit in it?"
+                
+                #player "Not this time."
+                
+                if roseHatesYouALot == True or rosePoints < 3:
+                    #if she hates you and you have low points she'll splash the coffee in your face
+                    rose @ say "Too bad you ruined it by touching the cup with your human hands."
+                    
+                    player "Sorry, I'll wear gloves next time."
+                    
+                    rose @ say "Don't even bother getting me anything. I seriously just want you to fuck off."
+                    
+                    player "*Sigh.* More for me then I guess."
+                    
+                    n "You slump against the wall, occasionally checking your phone in between sips until the power returns."
+                    n "Rose doesn't even say anything to you, she just quietly unlocks her door and slips into her dorm."
+                    
+                    jump afterFallBreak
+                else:
+                    n "You hold out the drink. Rose hesitates for a moment before taking it and warming her paws."
+                    
+                    player "Don't worry, I got the darkest kind for you."
+                    
+                    rose @ say "Hmph. You're too sweet."
+                    
+                    player "Was that sarcasm?"
+                    
+                    rose @ say "No. But I hate sweetness."
+                    
+                    n "She takes a sip and you slump down in front of your own door."
+                    
+                    player "Have you ever tried it? Not being a cunt I mean?"
+                    
+                    rose @ say "Nah, I like being mean."
+                    
+                    player "Why?"
+                    
+                    n "Rose pauses as if she'd never considered it before."
+                    
+                    rose @ say "It's just my nature. And I like the aesthetic."
+                    
+                    menu:
+                        "Valid":
+                            player "And that's totally heccin' valid. You go girl!"
+                        
+                            rose @ say "Oh shut up. I don't need your validation."
+                            rose @ say "I hate everyone and everyone hates me and that's just the way it's gonna be forever."
+                            
+                            player "What about your family?"
+                            
+                            rose @ say "You mean my grandpa? He's nice to everyone."
+                            
+                            player "Too bad he didn't teach you to be the same. It's clear he loves you though. And I'm sure you love him back."
+                            
+                            rose @ say "Ick. \"Love\" doesn't exist. It's just a justification for treating people who can help you better so they're more likely to further your own goals."
+                            
+                            player "That's a bleak way of looking at it."
+                            
+                            rose @ say "Yeah, and?"
+                            
+                            player "And I think you just need more people to show you kindness. Hence why I put up with all your bullshit and still brought you a coffee today."
+                            
+                            rose @ say "Do you expect me to say thanks?"
+                            
+                            player "No but I expect you to appreciate that I thought of you."
+                            
+                            rose @ say "*siiiip*"
+                            
+                            rose @ say "It's good."
+                                
+                            player "Glad you enjoy your black-as-your-soul coffee. I got something a little sweeter."
+                            #player "I dunno how you drink it like that. I need at least a drop of milk or sweetener in mine."
+                            
+                            if rosePoints > 5:
+                                rose @ say "...Mind if I try?"
+                                
+                                player "As long as you don't mind the fact that a filthy human took a sip from it."
+                                
+                                rose @ say "Ugh, take the lid off then."
+                                
+                                n "You pop off the lid and pass it to her."
+                                n "She sniffs it and gives it a taste but makes a face."
+                                
+                                rose @ say "Yup, I was right. Sweetness is overrated."
+                                
+                                player "You get used to it."
+                                
+                                n "She hands back your drink."
+                                
+                                rose @ say "I'd rather not."
+                            else:
+                                rose @ say "*Wretch*"
+                                rose @ say "Learn to embrace the bitterness, coward."
+                                
+                                player "I'm trying to."
+                                
+                                
+                            n "The lights suddenly turn on and the building begins to hum as the HVAC system comes alive."
+                            
+                            rose @ say "Finally!"
+                            
+                            n "Rose gets up and tries her key and the door unlocks."
+                            
+                            player "Guess I'll see you around, neighbor."
+                            
+                            rose @ say "I wouldn't count on it."
+                            
+                            if rosePoints > 5:
+                                rose @ say "...But thanks for the coffee."
+                                
+                            n "She heads into her room and slams the door."
+                            n "What a day. You stand up and enter your room, sitting at your laptop to finally get some work done."
+                            
+                            
+                            
+                        
+                        "Invalid":
+                            player "So instead of trying to improve yourself, you just act like a feral raccoon and adopt a goth aesthetic to justify it?"
+                            
+                            rose @ say "I'm *constantly* in a state of self improvement. I work out every day, I've read a dozen books this semester alone, my grades are better than anyone *in the country.*"
+                            rose @ say "I'm already better than everyone else but that makes them jealous and act like crabs in a bucket."
+                            
+                            player "I'm just saying a little kindness never hurt."
+                            
+                            rose @ say "On the contrary, kindness is an act of weakness and submission. Strong people take what they want and always get their way. Kind people end up being pulled apart by others."
+                            
+                            player "Kindness isn't about selfish desires, but it does open some doors regardless."
+                            
+                            rose @ say "I'll bust down any doors in my way."
+                            
+                            player "How's that working for ya? Does your key work yet?"
+                            
+                            rose @ say "Kindness isn't gonna magically bring the power back."
+                            
+                            n "The lights suddenly turn on and the building begins to hum as the HVAC system comes alive."
+                            
+                            player "Maybe it does. I was kind enough to bring you a drink and now the electricity's restored!"
+                            
+                            n "Rose rolls her eyes and gets up to try her key."
+                            
+                            rose @ say "Keep telling yourself that."
+                            
+                            player "Guess I'll see you around, huh neighbor?"
+                            
+                            rose @ say "I wouldn't count on it."
+                            
+                            if rosePoints > 5:
+                                rose @ say "...But thanks for the coffee."
+                                
+                            n "She heads into her room and slams the door."
+                            n "What a day. You stand up and enter your room, sitting at your laptop to finally get some work done."
+                            
                 
                 
                 
                 
-                #quick mishka visit, return to rose with coffee (at least she'll appreciate the scent)                                   
-                #if you don't get coffee for rose then you sit and wait for the power to come back in the cafe
-                #bring coffee back for rose, sit and chat til the power comes back
-                #if she hates you and you have low points she'll splash the coffee in your face
+                    jump afterFallBreak
                 
                 
                 
@@ -6495,13 +6664,10 @@ label mishkaPowerOutage:
     
     
     
-    
-    
-    
-    
-    
 label afterFallBreak:
-    n ""
+    n "As your break comes to a close, Ava, Claire, and Gunner return to Harmonia. It didn't feel like home without them."
+    n "You spend the week just catching up on the events of everyone's vacations and antics."
+    
     
     
     
