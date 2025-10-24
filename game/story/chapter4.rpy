@@ -218,7 +218,7 @@ label chapter4:
     n "After class, Gunner dragged you to the library and found a table for just the two of you."
     
     if statsSkill < 3:
-        n "You don't really mind the impropmtu study session, you could use some more practice in statistics."
+        n "You don't really mind the impromptu study session, you could use some more practice in statistics."
         
     else:
         n "You're feeling confident in your math abilities to do well on the test, but a little extra practice won't hurt."
@@ -584,7 +584,7 @@ label chapter4:
                 
                 rose @ say "And all I see is a barely evolved monkey taking up space and wasting air!"
                 
-                player "I can't hear you over the sound of millenia of being the dominant species."
+                player "I can't hear you over the sound of millennia of being the dominant species."
                 
                 rose @ say "Your time on this planet is long overdue!"
                 
@@ -627,7 +627,7 @@ label chapter4:
                         
                         rose @ say "Karma is something lesser species made up to feel good about themselves."
                         
-                        player "It takes kindess and fairness to build a functioning society."
+                        player "It takes kindness and fairness to build a functioning society."
                         
                         rose @ say "That's what you think."
                         
@@ -731,7 +731,7 @@ label chapter4:
                         
                         rose @ say "Karma is something lesser species made up to feel good about themselves."
                         
-                        player "It takes kindess and fairness to build a functioning society."
+                        player "It takes kindness and fairness to build a functioning society."
                         
                         rose @ say "That's what you think."
                         
@@ -1490,7 +1490,7 @@ label chapter4:
                                 
                                 ava @ say "Geez, what a snuggle whore."
                                 
-                                claire @ say "Don't listen to her, [name], I belive in snuggle positivity! It's perfectly valid to cuddle with lots of people!"
+                                claire @ say "Don't listen to her, [name], I believe in snuggle positivity! It's perfectly valid to cuddle with lots of people!"
                                 claire @ say "Also that's rich coming from you, Ava! Snuggle any catboys recently?"
                                 
                                 if avaPoints > 5:
@@ -3162,7 +3162,7 @@ label midtermDay1Cont:
             rori @ say "This is how she's always been. Imagine living with her."
             
             rory @ say "Yes, imagine living with someone as perfect as *me~*"
-            rory @ say "You should be honored to have had the privilige, little Rori~"
+            rory @ say "You should be honored to have had the privilege, little Rori~"
             
         "Introduce yourself politely":
             player "I don't believe we've met before. I'm [name]."
@@ -3874,7 +3874,7 @@ label ch4GoWithRori:
     
     n "He leans forward and grabs a bottle of whiskey from under his desk."
     
-    player "Whoa, where'd you get that? Won't the school expell you if they find out you have that in the dorms?"
+    player "Whoa, where'd you get that? Won't the school expel you if they find out you have that in the dorms?"
     
     rori @ say "I guess we better dispose of the evidence then~"
     rori @ say "Winner takes a shot after each round?"
@@ -3965,7 +3965,7 @@ label ch4GoWithRori:
             
             player "A war path? Dude you're exaggerating."
             
-            rori @ say "Kinda but you get what I mean. Women are selfish by design. At least with guys we can have some comradery. We instinctually *understand* each other on a primal level."
+            rori @ say "Kinda but you get what I mean. Women are selfish by design. At least with guys we can have some comradery. We instinctively *understand* each other on a primal level."
             rori @ say "And I... I take comfort in that."
             
             player "I don't mean to sound homophobic but it just seems like you hate women."
@@ -4053,7 +4053,8 @@ label roriSnuggles:
     
     menu:
         "Listen":
-            ###set romantic fantasy var true
+            $ romanticFantasy = True
+            
             player "Go ahead and talk, I'll listen."
             
             rori @ say "Thanks. I wouldn't bring this up to anyone else but I feel comfortable saying it to you cause... I think you'll get it."
@@ -4762,7 +4763,7 @@ label afterAutumnPhone:
                         margaret @ say "When you put it like that, it does sound selfish doesn't it?"
                         margaret @ say "But I don't care. I know what I want. I just don't know how to get it."
                         margaret @ say "I should be living like it's my last day on this earth. I ain't getting any younger so I might as well make the most of it all."
-                        margaret @ say "Traveling, partying, some general mishchief, a little bit of sex drugs and rock and roll..."
+                        margaret @ say "Traveling, partying, some general mischief, a little bit of sex drugs and rock and roll..."
                         margaret @ say "I wish I had someone who felt the same way. Dedicated to each other and up against the rest of the world to make it ours. We'd make it work."
                         
                         player "Sounds like a lot to ask for..."
@@ -5123,7 +5124,7 @@ label trish1:
             
             player "Maybe it's the smell?"
             
-            trish @ say "Yeah maybe! I think everyone can smell auras. Y'know, like subconciously. And their subcon tells them to stay away from me."
+            trish @ say "Yeah maybe! I think everyone can smell auras. Y'know, like subconsciously. And their subcon tells them to stay away from me."
             trish @ say "And when I bumped into you I read your aura and could tell you were a little different too."
             
             player "That's probably just the autism."
@@ -5160,7 +5161,7 @@ label trish1:
             
             trish @ say "It does! But it's deeper than that."
             trish @ say "Now consider that someone doesn't have to taste a coffee to tell it's bitter. It's already in the air. They can smell it."
-            trish @ say "They can smell your aura too. Not literaly, it's just a metaphor."
+            trish @ say "They can smell your aura too. Not literally, it's just a metaphor."
             trish @ say "Your aura permeates into all aspects of your existence. Through walls, space, time, information systems like internets, possibly even across people you encounter..."
             trish @ say "The point is, someone can read your aura without ever knowing your personality."
             trish @ say "In fact your personality, or the one you present to others, doesn't have to match your aura!"
@@ -5415,7 +5416,7 @@ label midweekAutumnBreak:
             
             n "The library is dead silent, more so than usual. You'd think it was closed if the lights weren't on."
             n "You begin to peruse the shelves. If you were a book containing forbidden knowledge, where would you be?"
-            n "After turning a corner, you trip over a stack of books haphazardously left in the aisle."
+            n "After turning a corner, you trip over a stack of books haphazardly left in the aisle."
             
             rose @ say "Watch where you're going!"
             
@@ -6193,7 +6194,7 @@ label pantyRaidLina1:
     lina @ say "Hey, she's the same size as me!"
         
     if avaPoints > 4:
-        player "I swear if I have to compete with ANOTHER suiter for her I'm gonna start taking out the competition. And I don't mean like on a date."
+        player "I swear if I have to compete with ANOTHER suitor for her I'm gonna start taking out the competition. And I don't mean like on a date."
 
         lina @ say "I dunno, we might hit it off!"
         

@@ -173,7 +173,7 @@ label week2Tuesday:
     
     show margaret melancholy
     
-    margaret @ say "He comes to realize that the perception of death revolves around the fulfillment of life one has made for themself."
+    margaret @ say "He comes to realize that the perception of death revolves around the fulfillment of life one has made for themselves."
     margaret @ say "He had once believed he led a fulfilling life by acquiring prestige and status, but as he lay dying, none of his achievements mattered so much as the sympathy he received from his servant."
     
     show margaret happy at hop
@@ -183,7 +183,7 @@ label week2Tuesday:
     show margaret neutral
     
     margaret @ say "Their relationship resembled that of business partners, where one is only good for the convenience and profits they bring in, but by this time Ivan was nothing but dead weight."
-    margaret @ say "His existence brought about an impersonal and artificial partnership that could only acknowledge each other as far as how one benefitted the other."
+    margaret @ say "His existence brought about an impersonal and artificial partnership that could only acknowledge each other as far as how one benefited the other."
     margaret @ say "And thus his death would be a relief to them."
     
     n "Damn, what a downer."
@@ -349,7 +349,7 @@ label week2Tuesday:
         "Stand around awkwardly":
             n "Nothing comes to mind. No conversation starters, no pickup lines, no funny hypothetical questions."
             n "So you just stand there, looking around aimlessly and giving polite smiles whenever your eyes meet."
-            n "To your credit, Mishka also seems to be in the same akward state of not know what to do or say."
+            n "To your credit, Mishka also seems to be in the same awkward state of not know what to do or say."
             
             show mishka anxious neutral -
             

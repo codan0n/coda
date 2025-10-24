@@ -132,8 +132,7 @@ label chapter1:
     n "The name on the envelope said \"Harmonia University.\""
     n "It's ridiculous... Could it really be true?"
     n "Such a prestigious university wants you...?"
-    n "You never even applied."
-    n "Did they send this by mistake?"
+    n "You never even applied. Did they send this by mistake?"
     n "But it's signed by the dean himself."
     
     n "\"Congratulations! You have been admitted to Harmonia University's undergraduate program!\""
@@ -248,7 +247,7 @@ label nicodemusQuestions:
         
                     player "They're not around anymore, right?"
                     
-                    nicodemus @ say "Correct, they went exctinct decades ago. There's not even a color photograph of a living one."
+                    nicodemus @ say "Correct, they went extinct decades ago. There's not even a color photograph of a living one."
                     
             n "\"Extinct.\""
             n "The word sends chills down your spine."
@@ -285,7 +284,7 @@ label nicodemusQuestions:
             nicodemus @ say "Less busy than you'd imagine! I may run the show around here but the show mostly takes care of itself."
             nicodemus @ say "I usually just sign documents and attend meetings. People look to me for approval, but I'm really just acting as a figurehead most of the time."
             nicodemus @ say "Someone to stand around and look wise."
-            nicodemus @ say "The departments handle all the number crunching and recomendations, I just give the final authorization."
+            nicodemus @ say "The departments handle all the number crunching and recommendations, I just give the final authorization."
             nicodemus @ say "So I don't mind getting out of the office to have a pleasant chat with the students."
             nicodemus @ say "Feel free to break me out of that prison from time to time to discuss whatever's on your mind."
             nicodemus @ say "It's also a great photo opportunity."
@@ -339,7 +338,7 @@ label college_orientation:
     n "You look around for an open spot and find one near the front of the room."
     n "Weird looks are shot in your direction, followed by whispers as you walk past. They act like you don't notice their stares and comments."
     n "You're used to it though, it happens everywhere you go. Understandably so, considering your kind is about as rare as a unicorn."
-    n "Is this what college is? It already feels like a prison."
+    #n "Is this what college is? It already feels like a prison."
     n "You slump down in your seat and try to ignore the world around you, praying that this will be over with quickly."
     #n "You slump down in a seat and try to astral project into the future, if only to get away from here."
     #n "It's not working."
@@ -362,7 +361,6 @@ label college_orientation:
     n "You start to tune out of what she's saying. It's just boring introductory formalities anyway."
     n "You hear the door open, followed by hoofsteps coming down the stairs. Must have been a straggler who arrived late."
     n "The room's pretty full but there's another vacant seat next to yours."
-    #n "Please deer god, you pray whoever it is doesn't sit there. You've had a rough day and don't want to have to make friends already."
     n "A moment later, a nerdy looking ram squeezes past you and sits in it."
     
     show rori concerned at center with moveinright:
@@ -538,15 +536,15 @@ label college_orientation:
 
             rori @ say "Oh you bet it is. I've messed around with some game engines before and it can quickly get overwhelming."
             
-            show rori anxious
+            #show rori anxious
             
-            rori @ say "I've got something I've been working on for a few years. I hope I can still work on it here but I heard my differential equations professor likes to assign a lot of homework."
+            #rori @ say "I've got something I've been working on for a few years. I hope I can still work on it here but I heard my differential equations professor likes to assign a lot of homework."
 
-            player "Damn. Well good luck with that."
+            #player "Damn. Well good luck with that."
 
-            show rori laugh
+            #show rori laugh
 
-            rori @ say "Thanks! I'll need it!"
+            #rori @ say "Thanks! I'll need it!"
 
         "At least you know what you wanna do.":
             show rori neutral
@@ -605,11 +603,11 @@ label college_orientation:
         xzoom -1
     with dissolve
     
-    ava @ say "Um hi...! My name's Ava and, as you might have guessed, I'm a photography major! I often go out into nature and shoot wildlife and landscapes, but I also dabble in street photography."
+    ava @ say "Um hi...! My name's Ava and, as you might have guessed, I'm a photography major! I prefer to go out into nature and shoot wildlife and landscapes, but I also dabble in street photography."
     
     show ava excited at hop
     
-    ava @ say "I like the idea of capturing rare moments in time that disappear as quickly as they come."
+    ava @ say "I like the idea of capturing rare moments in time that disappear as quickly as they come!"
     #ava @ say "I like the idea of capturing the rarely seen or overlooked aspects of life!"
     
     show ava happy
@@ -732,9 +730,6 @@ label college_orientation:
 
     n "It's about time. You were starting to doze off."
     n "Now that that's out of the way, you can return to your dorm and get your things put away."
-    #n "When you arrived earlier today, the dean himself greeted you and showed you to your dorm, no doubt a gesture mandated by the affirmative action council."
-    #n "When you arrived earlier today, the dean himself greeted you and personally showed you to your dorm, no doubt to make you feel more welcome given your situation."
-    #n "You can't help but feel it was an empty gesture though. He made sure to get you a room all to yourself, as if that wouldn't make you feel more alone."
     n "On your way out, you overhear some familiar voices."
 
     show ava typical happy at center:
@@ -794,7 +789,7 @@ label college_orientation:
     n "As they reunite with their kids, they embrace each other, wave goodbye, and some even shed tears."
     n "This must be the moment where they see their babies one last time before pushing them out of the nest."
     n "As you walk past, you overhear them talking about how proud they are of their children and how much they'll miss them."
-    n "Damn, these people need to chill. It's not like they won't see each other again during the holidays. Or they can just call. We have the technology."
+    #n "Damn, these people need to chill. It's not like they won't see each other again during the holidays. Or they can just call. We have the technology."
     #n "Everyone's hugging and saying goodbye like they're not just gonna come back home in a few months for Thanksgiving and Christmas."
     #n "Oh god some of them are even crying."
     #n "Mostly the moms and some of the sons."
@@ -880,11 +875,13 @@ label college_orientation:
     
     show rori anxious
     
-    rori @ say "I haven't had it online in over 48 hours and I need to run some updates. I hope my package manager doesn't break my Xorg session again..."
+    rori @ say "There's an update for openZFS I need to add so I can finally use an up-to-date kernel!"
+    #rori @ say "Hopefully there's a new update for yt-dlp. It's been broken for the past few days."
+    #rori @ say "I haven't had it online in over 48 hours and I need to run some updates. I hope my package manager doesn't break my Xorg session again..."
 
     if calledRoriNerd == False:
         menu:
-            rori "{cps=0}I haven't had it online in over 48 hours and I need to run some updates. I hope my package manager doesn't break my Xorg session again...{/cps}"
+            rori "{cps=0}There's an update for openZFS I need to add so I can finally use an up-to-date kernel!{/cps}"
             "Cool, you use Loonix?":
                 $ roriPoints += 1
                 
@@ -906,7 +903,7 @@ label college_orientation:
                 
                 show rori smug -blushing
                 
-                rori @ say "We can play some games and stuff too."
+                #rori @ say "We can play some games and stuff too."
                 
                 player "Sure. Lead the way."
                 
@@ -930,34 +927,34 @@ label college_orientation:
                 
                 rori @ say "He's probably out at some party right now, I dunno."
                 
-                player "Probably crushing pussy while we hook up a gaming computer."
+                #player "Probably crushing pussy while we hook up a gaming computer."
                 
                 show rori neutral
                 
-                rori @ say "Yup. But I'd rather be doing this."
-                rori @ say "Pass me that displayport cable please."
-                rori @ say "Now let's see if this works. I'm a bit worried about my SSD's firmware acting janky after the last update."
+                #rori @ say "Yup. But I'd rather be doing this."
+                #rori @ say "Pass me that displayport cable please."
+                #rori @ say "Now let's see if this works. I'm a bit worried about my SSD's firmware acting janky after the last update."
                         
                 n "Rori reaches behind the desk and hooks up a few wires to the desktop tower. When he presses the power button, a rainbow of LEDS shine through the glass panel of the case."
                 n "A moment later, the monitor wakes up and a stream of debug messages scrolls across the monitor."
-                n "It stops and prompts him to enter a password. You avert your eyes out of respect for his privacy."
-                n "Yet you can't help but notice the rapid fire clattering of his mechanical keyboard goes on for half a minute before he presses the enter key."
+                #n "It stops and prompts him to enter a password. You avert your eyes out of respect for his privacy."
+                #n "Yet you can't help but notice the rapid fire clattering of his mechanical keyboard goes on for half a minute before he presses the enter key."
                 
-                player "Damn, your password must be longer than the Pentagon's. What you hiding on that hard drive?"
+                #player "Damn, your password must be longer than the Pentagon's. What you hiding on that hard drive?"
                 
-                show rori smirk lookingaway
+                #show rori smirk lookingaway
                 
-                n "Rori pushes up his glasses and smirks."
+                #n "Rori pushes up his glasses and smirks."
                 
-                rori @ say "16 terabytes of anime bluray rips, 4.5 terabytes of games, 750 gigabytes of jpop, and a couple gigs of leaked government documents and source code."
+                #rori @ say "16 terabytes of anime bluray rips, 4.5 terabytes of games, 750 gigabytes of jpop, and a couple gigs of leaked government documents and source code."
                 
-                player "All legally acquired?"
+                #player "All legally acquired?"
                 
-                show rori happy
+                #show rori happy
     
-                rori @ say "Legal in my VPN's host country!"
+                #rori @ say "Legal in my VPN's host country!"
                 
-                player "Nice."
+                #player "Nice."
                 
                 show rori anxious
                 
@@ -979,30 +976,30 @@ label college_orientation:
                 
                 rori @ say "Haha yeah... Sorry about this but I doubt I'll be able to get this running tonight."
                 
-                player "Does this mean no games?"
+                #player "Does this mean no games?"
                 
-                show rori sleepy blushing
+                #show rori sleepy blushing
                 
-                n "Rori looks down sadly."
+                #n "Rori looks down sadly."
                 
-                rori @ say "No games."
+                #rori @ say "No games."
 
-                n "You point to a console shoved under the desk."
+                #n "You point to a console shoved under the desk."
 
-                player "What about that?"
+                #player "What about that?"
                 
-                show rori neutral -blushing
+                #show rori neutral -blushing
                 
-                rori @ say "My PS3? I use it as a blueyray player. Or more often a doorstop."
+                #rori @ say "My PS3? I use it as a blueyray player. Or more often a doorstop."
                 
-                player "Doesn't it play games too?"
+                #player "Doesn't it play games too?"
                 
-                rori @ say "It's technically capable of it but..."
-                rori @ say "What games?"
+                #rori @ say "It's technically capable of it but..."
+                #rori @ say "What games?"
                 
-                player "Oh yeah lol"
+                #player "Oh yeah lol"
                 
-                rori @ say "I'll have this computer fixed and ready to go next time, I swear. I think something might have gotten corrupted during transport."
+                rori @ say "I'll have this computer fixed and ready to go next time, I swear. Maybe one of the RAM sticks got unseated..."
                 
                 player "It's alright. It's pretty late and it's been a long day anyway. I'm just gonna go to my dorm and sleep."
                 player "See you around, dude."
@@ -1104,8 +1101,7 @@ label exploring_campus:
     n "You unfortunately stumble into what must be the hub of social activity on campus today: club registration."
     n "Tables and booths line the street with banners advertising the different clubs and organizations the university has to offer."
     n "There's one for the botany club, debate club, algae bee tea club,  {a=https://4chan.org/trash/hmofa}/hmofa/{/a} club, anime club, vidya club, golf club, and so on."
-    n "Going straight across is the quickest way to the restaurants, so you head in with your eyes forward."
-    n "You know the moment you look at any of them, some representative will drag you into an involuntary conversation."
+    n "Going straight across is the quickest way to the restaurants, so you head in with your eyes forward. You know the moment you look at any of them, some representative will drag you into an involuntary conversation."
     n "Almost there... Almost... Just a few more meters."
         
     $ randumb = renpy.random.randint(0, 1)
@@ -1116,6 +1112,7 @@ label exploring_campus:
     if randumb == 0:
         $ metClaire = True
         $ metAva = True
+        $ metAvaClaireFirst = True
         
         n "You almost managed to get to the end without being harassed by anybody."
         
@@ -1322,6 +1319,8 @@ label exploring_campus:
         
     else:
         $ metGunner = True
+        $ metGunnerFirst = True
+        
         n "You almost made it to the end without getting poached by some aggressive salesman."
         
         show gunner neutral at center with dissolve:
@@ -1537,7 +1536,7 @@ label exploring_campus:
 
     #n "Smooth jazzy music plays from speakers mounted on the walls. Thank raptor Jesus it's not the obnoxious music they blast at  so loud you can't even hear the barista call your name."
     n "The interior is dim and so quiet you can hear your footsteps echo. You'd think it was abandoned if not for the barista watering a plant at the counter."
-    n "Written on the chalkboard on the far end of the room is a phrase in cyrillic and underneath is the menu, thankfully in English."
+    n "Written on the chalkboard on the far end of the room is a phrase in Cyrillic and underneath is the menu, thankfully in English."
     #n "Calming music plays from the speakers mounted to the walls. This would be a nice place to study."
     n "After giving it a look over, you decide what you want and walk up to place your order."
 
@@ -4250,7 +4249,7 @@ label afterAvaText1:
         show box with Dissolve(.2):
             ypos 0
         
-        n "The night air is cool with a constant brisk wind buffetting your jacket."
+        n "The night air is cool with a constant brisk wind buffeting your jacket."
         n "Gone is the hustle and bustle of the campus's daytime operations, replaced with a sense of isolation and abandonment."
         n "With only the street lamps to light the way, your surroundings become an unfamiliar void where only the odd stranger lurks."
         n "So it seems, until a friendly figure emerges from the shadows and locks eyes with you."
@@ -4909,7 +4908,7 @@ label rooftop_party:
         xoffset 450
     with move
 
-    n "Rori emerges from the mosh pit, looking dishevelled."
+    n "Rori emerges from the mosh pit, looking disheveled."
     n "He adjusts his glasses and walks up to you."
 
     rori @ say "Gunner! I looked away for like two seconds and lost track of you!"
