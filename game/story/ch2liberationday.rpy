@@ -10,7 +10,7 @@ label liberation_day:
     n "You've always felt awkward about this holiday."
     n "Like it's not for you or something."
     n "Maybe a hundred years ago it was about the alliance between humans and anthromorphs."
-    n "But nowadays it's been recontextualized as the rise of animal people after your kind died off."
+    n "But nowadays it's been re-contextualized as the rise of animal people after your kind died off."
     n "It's a really strange feeling. The world you inhabit was shaped by humans who are just gone now, aside from you."
     n "Your great grandpa would have been horrified to see you hanging out with your current friends."
     n "He claimed he was allergic to any kind of fur but he always looked so smug when detailing the battles he had fought in where he killed anthromorphs."
@@ -2578,7 +2578,9 @@ label liberation_day:
 
                 rose @ say "Forget it. Like I said, nobody carries cash anymore, boomer."
                 
-                fortune @ say "I take etherium. My wallet address is 0x1AF7aD03CbB3e40a55392D518D585eA3EBB8F4B8."
+                fortune @ say "I take etherium. My wallet address is 0x1AF7aD03CbB..."
+                
+                # n "He's actually saying the whole thing out loud"
                 
                 rose @ say "Cryptocurrency is fake and g- "
                 

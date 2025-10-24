@@ -1468,7 +1468,7 @@ label week2Tuesday:
 #            player "Only in certain countries!"
 #            
         "Gunner's right, we should all commit a crime":
-            player "Gunner's right, commiting crime is fun."
+            player "Gunner's right, committing crime is fun."
             
             show gunner neutral
             show rori neutral
@@ -1644,7 +1644,7 @@ label week2Tuesday:
     show rori smirk -
     show gunner mischief
     
-    gunner @ say "I mean, we'd be liable for any damages to property or personel as a result of giving this bitch a shake, wouldn't we?"
+    gunner @ say "I mean, we'd be liable for any damages to property or personnel as a result of giving this bitch a shake, wouldn't we?"
     
     player "Sure sounds like criminal activity to me."
     
@@ -4343,7 +4343,7 @@ label ellen_feeding_ducks:
     
     gunner @ say "Oh my God Rori you cannot be this homosexual."
     
-    player "Panty raids aren't real. It's just some dumb thing Hollywoo came up with for college propaganda movies to trick people into taking out loans to get a worthless degree."
+    player "Panty raids aren't real. It's just some dumb thing Hollywoof came up with for college propaganda movies to trick people into taking out loans to get a worthless degree."
     
     show gunner motivated -
     

@@ -119,7 +119,7 @@ label chapter1:
 
     stop music fadeout .5
     
-    "Coda is a purely fictional story created by a diverse team with various different backgrounds and beliefs. The actions and views of some characters do not necessarily reflect those of the creators."
+    "Coda is a purely fictional story created by a diverse team with various different backgrounds and beliefs. The actions and views of some characters do not necessarily reflect those of the creators. This is a story about love, not hate."
     "Viewer discretion is advised."
     "Please note that this is a work in progress build that is unfinished in many places."
     

@@ -824,7 +824,7 @@ label chapter3:
     
     show claire sweater suggestive
     
-    claire @ say "It's true, we can be viscious~"
+    claire @ say "It's true, we can be vicious~"
     claire @ say "I wouldn't mind taking a bite out of you in particular, [name]~"
     claire @ say "I bet humans taste delicious~"
     
@@ -1365,7 +1365,7 @@ label chapter3:
     
     gunner @ say "Enough talking! Let's get this competition started already!"
 
-    n "You and Gunner dig into your bowls, haphazardously taking large bites to get through it quicker."
+    n "You and Gunner dig into your bowls, haphazardly taking large bites to get through it quicker."
     n "Gunner is getting better at using the chopsticks, grabbing whole clumps of noodles at once."
     n "Your tongue stings and soon your water runs out. You take to chewing on ice cubes to dull the pain."
     
@@ -1535,7 +1535,7 @@ label chapter3:
                 
                 claire @ say "Ksksksks I'll take that as a compliment~"
                 
-                n "Eventually you manage to corale your friend group out of the hospital and stop them from making a scene."
+                n "Eventually you manage to corral your friend group out of the hospital and stop them from making a scene."
                 n "Your gut still hurts but you have no regrets."
                 n "You'll be out of commission for at least a day or two. Hopefully you didn't just cause permanent damage to your digestive tract."
                 
@@ -1928,7 +1928,7 @@ label chapter3:
                             #player "Ever heard of pairbonding?"
                             #gunner @ say "Well right now it looks like you're pairbonded to *me*"
                             
-                            player "I don't want any part of this isoceles love triangle shipwreck-in-progress!"
+                            player "I don't want any part of this isosceles love triangle shipwreck-in-progress!"
                             
                             claire @ say "That's right! Human males are for pairbonding only!"
                             
@@ -2843,7 +2843,7 @@ label chapter3AfterWeekend:
             
             show gunner frown1
             
-            gunner @ say "Oop, this is kinda embarassing. Do you have change for a $10,000 bill?"
+            gunner @ say "Oop, this is kinda embarrassing. Do you have change for a $10,000 bill?"
             
             player "I didn't even know they made those."
             
@@ -3176,7 +3176,7 @@ label chapter3AfterWeekend:
             
     show margaret smoking sad
             
-    n "She pulls out another cigarette and puts it to her mouth but pauses before lighting it. Seemingly changing her mind, she puts the ligher away."
+    n "She pulls out another cigarette and puts it to her mouth but pauses before lighting it. Seemingly changing her mind, she puts the lighter away."
     
     show margaret smoking intrigued shocked
     
@@ -3766,7 +3766,7 @@ label chapter3AfterWeekend:
                 
                 claire @ say "Aw, you're just sayin' that."
                 
-                player "No really. I cancelled my plans with Ava cause I'd rather chill with you this weekend."
+                player "No really. I canceled my plans with Ava cause I'd rather chill with you this weekend."
                 
                 show claire surprised earsup
                 
@@ -5900,7 +5900,7 @@ label avaGunnerCampScene:
             n "Only audio cues can clue you in to what's happening outside."
             n "Latches being flipped open, bags being unzipped, buttons coming undone..."
             n "What sort of wild animal can do such things with so much precision?"
-            n "Finally a sillouette comes into view in front of the tent, followed by the zipper coming undone."
+            n "Finally a silhouette comes into view in front of the tent, followed by the zipper coming undone."
             
             pause .2
             
@@ -5993,7 +5993,7 @@ label avaGunnerCampScene:
             
             fortune @ say "What you're referring to linux is actually GNU/linux or as I've recently taken to calling it, GNU+linux as..."
             
-            n "You've seemingly enraged him and you can see his hooves pulling the tent frabric apart."
+            n "You've seemingly enraged him and you can see his hooves pulling the tent fabric apart."
             n "Now would be a good time to start running."
             
             player "OK I think we seriously need to leave."
@@ -6398,7 +6398,7 @@ label cuddlepuddle:
                                 
                                 gunner @ say "What the hell."
                                 
-                                claire @ say "No judgement in the cuddle puddle!"
+                                claire @ say "No judgment in the cuddle puddle!"
                                 
                                 ava @ say "I guess I did agree to it... But I'm not going nude out here!"
                                 ava @ say "So take your pick, topless or bottomless."
@@ -7172,7 +7172,7 @@ label cuddlepuddle:
     rori @ say "Is that the only reason you're into him?"
     
     claire @ say "W-well it may have been before I got to know him..!"
-    claire @ say "But now I see him as a sweet kindhearted loveable goofball who's mine!!!"
+    claire @ say "But now I see him as a sweet kindhearted lovable goofball who's mine!!!"
     claire @ say "The first time ever I held a boy's hand was with [name]! We're meant to be together!"
     
     player "Wait you have a crush on me?"
@@ -7568,7 +7568,7 @@ label cuddlepuddle:
                                     "But yeah Mrs. Celestine is hot":
                                         $ celestineHot = True
                                     
-                                        player "But yeah, a provacative French speaking, short dress wearing, paw beans exposed teacher... I can see the appeal."
+                                        player "But yeah, a provocative French speaking, short dress wearing, paw beans exposed teacher... I can see the appeal."
                                         
                                         claire @ say "Maybe I should go shoeless too."
                                         

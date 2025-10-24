@@ -7263,8 +7263,8 @@ label ch4Finale:
     n "Just walking hurts like hell but it's nothing compared to the turmoil wracking your brain."
     n "By the time you get back to your dorm, you're panting heavily and exhausted all the energy you had left."
     n "You collapse onto your bed and close your eyes, trying to escape this reality."
-    
-
+    n "*Buzz buzz*"
+    n "Who the hell is texting you at a time like this?"
 
 
     jump ending
