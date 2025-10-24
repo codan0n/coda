@@ -4402,7 +4402,7 @@ default avaPantsu = False
 default avaPantsuLina = False
 default clairePantsu = False
 default clairePantsuLina = False
-default featherMuncher == False
+default featherMuncher = False
 default roseNicodemusCampusScene = False
 default gnugift = False
 default stayedInHospitalWithGunner = False

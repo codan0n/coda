@@ -5649,7 +5649,7 @@ label midweekAutumnBreak:
                         
                     
                     
-                    autumnBreakLockIn
+                    jump autumnBreakLockIn
                     
                     
                 "Fuck you":
@@ -5943,7 +5943,7 @@ label midweekAutumnBreak:
                     
                     player "Lina, right? How goes it? Stuck on campus during the break I see."
                     
-                    lina @ say "Yeahhh but I"m not complaining! I'm making the most of it in fact!"
+                    lina @ say "Yeahhh but I'm not complaining! I'm making the most of it in fact!"
                     
                     player "How's that?"
                     
@@ -6182,48 +6182,48 @@ label pantyRaidLina1:
             
             n "You close Claire's drawer and open the one beneath it."
             
-            
-        player "Hey!"
         
-        n "Lina swooped down and snatched the only set of undergarments Ava left behind."
-        
-        player "Those were for me, not you!"
-        
-        lina @ say "Finders keepers~"
-        lina @ say "Hey, she's the same size as me!"
-            
-        if avaPoints > 4:
-            player "I swear if I have to compete with ANOTHER suiter for her I'm gonna start taking out the competition. And I don't mean like on a date."
+    player "Hey!"
     
-            lina @ say "I dunno, we might hit it off!"
-            
-            player "I'm pretty sure she's straight."
-            
-            lina @ say "So is spaghetti until it gets hot!"
-            
-            player "Come on, I'll trade you Claire's panties for those."
-            
-            lina @ say "Nahhh, these are just what I came for~"
-            
-        if avaPantsu == True:
-            player "Whatever, I already have one of Ava's."
-                    
-        player "I think we're done here."
+    n "Lina swooped down and snatched the only set of undergarments Ava left behind."
+    
+    player "Those were for me, not you!"
+    
+    lina @ say "Finders keepers~"
+    lina @ say "Hey, she's the same size as me!"
         
-        lina @ say "Mhm! I told ya no panties are safe from me!"
+    if avaPoints > 4:
+        player "I swear if I have to compete with ANOTHER suiter for her I'm gonna start taking out the competition. And I don't mean like on a date."
+
+        lina @ say "I dunno, we might hit it off!"
         
-        player "Glad I don't have to worry about you stealing the underwear off my ass."
+        player "I'm pretty sure she's straight."
         
-        lina @ say "Yeah no, boys are gross lol"
-        lina @ say "But thanks for joining me on this raid! Feel free to hit me up later if you wanna go on another raid!"
+        lina @ say "So is spaghetti until it gets hot!"
         
-        player "If I ever find the time, sure."
-            
-        if clairePantsuLina == True:
-            n "You leave the dorm and part ways, wondering what to do with your prize. And how Claire will react when she finds out what you've done."
-        else:
-            n "You leave the dorm and part ways, disappointed you couldn't get Ava's panties. They seem to be in high demand."
-            
+        player "Come on, I'll trade you Claire's panties for those."
+        
+        lina @ say "Nahhh, these are just what I came for~"
+        
+    if avaPantsu == True:
+        player "Whatever, I already have one of Ava's."
+                
+    player "I think we're done here."
+    
+    lina @ say "Mhm! I told ya no panties are safe from me!"
+    
+    player "Glad I don't have to worry about you stealing the underwear off my ass."
+    
+    lina @ say "Yeah no, boys are gross lol"
+    lina @ say "But thanks for joining me on this raid! Feel free to hit me up later if you wanna go on another raid!"
+    
+    player "If I ever find the time, sure."
+        
+    if clairePantsuLina == True:
+        n "You leave the dorm and part ways, wondering what to do with your prize. And how Claire will react when she finds out what you've done."
+    else:
+        n "You leave the dorm and part ways, disappointed you couldn't get Ava's panties. They seem to be in high demand."
+        
 label celestineMargaretVisit1:
     n "Continuing your walk, you end up in the town proper. The streets are empty. Not even traffic blocks the roadways."
     n "You guess college towns just get put on pause when students are away."
@@ -6835,8 +6835,6 @@ label ch4Finale:
     player "Well if you insist..."
     
     scene bg codadorm with fade
-    
-    show box:
 
     show ava normal neutral at norm:
         xpos 500
