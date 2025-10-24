@@ -1340,8 +1340,8 @@ label exploring_campus:
         
         show gunner cutie
         
-        gunner @ say "No worries, we like totally respect your pronouns or whatever. Name's Gunner by the way!"
-        #gunner @ say "No worries, we like totally respect your pronouns or whatever stupid bullshit you believe in. Name's Gunner by the way!"
+        #gunner @ say "No worries, we like totally respect your pronouns or whatever. Name's Gunner by the way!"
+        gunner @ say "No worries, we like totally respect your pronouns or whatever stupid bullshit you believe in. Name's Gunner by the way!"
         
         player "[name]. Now if you'll excuse me."
         
@@ -1349,11 +1349,13 @@ label exploring_campus:
         
         gunner @ say "The strong stoic type, I see! You'd fit right in!"
         
-        n "Gunner steps in front of you and blocks your path, waving a clipboard and pen in your face."
+        player "It's pronounced \"sto-ic.\""
+        
+        n "You try to move past him but he steps in front of you and blocks your path, waving a clipboard and pen in your face."
         
         show gunner neutral
         
-        gunner @ say "So what do you say? Are you a bad enough dude to join?"
+        gunner @ say "Right, so what do you say? Are you a bad enough dude to join?"
         
         player "Not particularly."
         
@@ -1438,6 +1440,10 @@ label exploring_campus:
                 show gunner neutral
                 
                 gunner @ say "Seriously though, some Alphas are jacked. They practically live at the gym."
+                
+                show gunner itsover
+                
+                gunner @ say "I wish I could do the same but I'm too busy having sex with women."
         
         show rori worried
         show gunner neutral
@@ -1521,8 +1527,7 @@ label exploring_campus:
         with dissolve
         
     n "You wave goodbye to the duo and hurry away before someone else distracts you from your mission."
-    n "A few restaurants catch your eye, but the long lines accompanying them dissuade you from bothering with them."
-    n "You weren't about to escape one crowd only to end up in another."
+    n "A few restaurants catch your eye, but the long lines accompanying them dissuade you from bothering to try them. You weren't about to escape one crowd only to end up in another."
     n "When all hope seemed lost, the scent of coffee and bagels in the air came to your rescue, leading you to a small building hidden behind the library."
 
     stop music fadeout 1.3
@@ -1536,9 +1541,9 @@ label exploring_campus:
 
     #n "Smooth jazzy music plays from speakers mounted on the walls. Thank raptor Jesus it's not the obnoxious music they blast at  so loud you can't even hear the barista call your name."
     n "The interior is dim and so quiet you can hear your footsteps echo. You'd think it was abandoned if not for the barista watering a plant at the counter."
-    n "Written on the chalkboard on the far end of the room is a phrase in Cyrillic and underneath is the menu, thankfully in English."
+    #n "Written on the chalkboard on the far end of the room is a phrase in Cyrillic and underneath is the menu, thankfully in English."
     #n "Calming music plays from the speakers mounted to the walls. This would be a nice place to study."
-    n "After giving it a look over, you decide what you want and walk up to place your order."
+    n "After giving the menu a look over, you decide what you want and walk up to place your order."
 
     show mishka neutral at center with dissolve:
         ypos y_mishka
@@ -1555,46 +1560,48 @@ label exploring_campus:
     
     n "Her voice is like a whisper, you can hardly hear it."
     
-    menu:
-        n "{cps=0}Her voice is like a whisper, you can hardly hear it.{/cps}"
-        "Why are the lights off?":
-            player "Why are the lights off? Is the shop open?"
+#    menu:
+#        n "{cps=0}Her voice is like a whisper, you can hardly hear it.{/cps}"
+#        "Why are the lights off?":
+#            player "Why are the lights off? Is the shop open?"
+#            
+#            show mishka anxious smile
+#            
+#            mishka "It's just how I like things. I can turn them on if you like."
+#            
+#            menu:
+#                mishka "{cps=0}It's just how I like things. I can turn them on if you like.{/cps=0}"
+#                "Please do":
+#                    $ cafeLightsOn = True
+#                    
+#                    player "Please do. I can't see anything in this darkness."
+#                    
+#                    mishka @ say "Duzhe dobre."
+#                    
+#                    show mishka asleep
+#                    
+#                    n "The barista clenches her eyes shut as she puts a claw to the light switch."
+#                    n "When the lights come on, she winces and slowly opens her eyes."
+#                    
+#                    show mishka neutral -anxious
+#                    
+#                    mishka @ say "Now what can I get for you?"
+#                "Leave them off":
+#                    $ mishkaPoints += 1
+#                    
+#                    player "It's fine, you can leave them off. It's comfier this way."
+#                    
+#                    show mishka anxious neutral
+#                    
+#                    n "She seems pleased with your response."
+#                    
+#                    show mishka neutral -anxious
+#                    
+#                    mishka @ say "Now what can I get for you?"
+#        "Place your order":
+#            player "Yeah can I get uhh...."
             
-            show mishka anxious smile
-            
-            mishka "It's just how I like things. I can turn them on if you like."
-            
-            menu:
-                mishka "{cps=0}It's just how I like things. I can turn them on if you like.{/cps=0}"
-                "Please do":
-                    $ cafeLightsOn = True
-                    
-                    player "Please do. I can't see anything in this darkness."
-                    
-                    mishka @ say "Duzhe dobre."
-                    
-                    show mishka asleep
-                    
-                    n "The barista clenches her eyes shut as she puts a claw to the light switch."
-                    n "When the lights come on, she winces and slowly opens her eyes."
-                    
-                    show mishka neutral -anxious
-                    
-                    mishka @ say "Now what can I get for you?"
-                "Leave them off":
-                    $ mishkaPoints += 1
-                    
-                    player "It's fine, you can leave them off. It's comfier this way."
-                    
-                    show mishka anxious neutral
-                    
-                    n "She seems pleased with your response."
-                    
-                    show mishka neutral -anxious
-                    
-                    mishka @ say "Now what can I get for you?"
-        "Place your order":
-            player "Yeah can I get uhh...."
+    player "Yeah can I get uhh...."
 
     n "You give the barista your order and swipe your card on the machine."
 
@@ -1616,7 +1623,7 @@ label exploring_campus:
     player "Thanks uhh..."
 
     n "You look down at her name tag."
-    n "It's in cyrillic."
+    n "It's in Cyrillic."
     n "{font=ahellya.ttf}Мишка{/font}"
     
     menu:
@@ -1646,7 +1653,7 @@ label exploring_campus:
             mishka @ say "I don't recall seeing you before. You must be new student."
         #"{font=ahellya.ttf}Мишка{/font}":
         "Meeshka":
-            n "You've pirated enough Russian malware to be able to sound out the letters."
+            n "You've pirated enough eastern European malware to be able to sound out the letters."
             
             player "Thanks uhh, Meesh...ka! Am I saying that right?"
             
@@ -1706,13 +1713,13 @@ label exploring_campus:
 
     n "You walk out the door, feeling somewhat uplifted by the barista's words, and find a place to sit and enjoy your breakfast."
     n "A light breeze passes by as you open your box and stab a fork into your pancakes."
-    n "You take a sip of coffee and watch the other students walking around."
-    n "It's pretty easy to pick out who's a freshman like you and who's been here for a while."
-    n "The new people are still basically high schoolers at this point. Practically still kids, and it shows in the way they carry themselves."
-    n "Unsure about the world but excited about all the possibilities."
-    n "The upperclassmen on the other hand seem a bit more grizzled, beaten down by the world but tougher for it."
-    n "Less optimistic, more realistic."
-    n "Man."
+    #n "You take a sip of coffee and watch the other students walking around."
+    #n "It's pretty easy to pick out who's a freshman like you and who's been here for a while."
+    #n "The new people are still basically high schoolers at this point. Practically still kids, and it shows in the way they carry themselves."
+    #n "Unsure about the world but excited about all the possibilities."
+    #n "The upperclassmen on the other hand seem a bit more grizzled, beaten down by the world but tougher for it."
+    #n "Less optimistic, more realistic."
+    #n "Man."
     n "To be honest, you're kinda glad you're back in school."
     n "The past few years hadn't been kind to you. You basically had to drop out of high school to take care of your parents in their final moments."
     n "It'll be nice going back to a structured life with classes but with the added liberty of being a \"\"\"real\"\"\" adult."
@@ -1724,7 +1731,7 @@ label exploring_campus:
     #n "Living life to its fullest."
     n "Alas, you still need to unpack your belongings and tidy up your dorm. You should also do a bit of grocery shopping on the way back." 
     n "You best go to bed early too, you don't want to be late for class tomorrow."
-    n "No sense in wasting any more time. You'll get these errands done now so you can be well rested tomorrow."
+    #n "No sense in wasting any more time. You'll get these errands done now so you can be well rested tomorrow."
     
     stop music fadeout 1.0
 
@@ -2072,13 +2079,6 @@ label firstDayOfClass:
 
     gunner @ say "..."
     gunner @ say "Oh yeah."
-    
-    herschel @ say "Moving on, my pronouns are she/her/they/them-"
-    
-    gunner @ say "That's new. What does they/them mean? Are you multiple people? Like split personalities or something?"
-    
-    herschel @ say "Honestly I don't know what is means. A colleague suggested I use these newfangled pronouns."
-    herschel @ say "And ever since I did, 37.5 percent of complaints filed against me have been classified as hate crimes!"
 
     #hide gunner with dissolve
     
@@ -2172,7 +2172,7 @@ label secondDayOfClass:
     
     attendant "HI UM I WAS JUST WONDERING WHAT YOUR PRONOUNS ARE????"
     
-    n "Miss Ellen lets out the most subtle of huffs but quickly goes back to cheery corporate professionalism. You get the feeling she's been asked this question before."
+    #n "Miss Ellen lets out the most subtle of huffs but quickly goes back to cheery corporate professionalism. You get the feeling she's been asked this question before."
     
     margaret "Good question! I usually go by she/her but I include they/them in my email signatures because it makes me feel hip and young!"
     margaret "You're not going to refer to me by any pronouns when speaking to me anyway, so I don't care which ones you use behind my back."
@@ -2225,23 +2225,10 @@ label secondDayOfClass:
 
     celestine @ say "Bon après-midi! I am Mrs. Celestine and I'll be your professeur de français for this semester, and hopefully the next one as well if you decide to stick with it!"
     #celestine @ say "Not a lot of students do however..."
-    celestine @ say "As per department regulations, I'm required to tell you my pronouns which are she/her/they/them!"
     
-    n "Okay what is this trend of female professors being they/thems? You didn't know a single person in your hometown who talked about this. Maybe it's a city person thing."
+    celestine @ say "It's good to expand your horizons and try new things! You'll all be finding out a lot about yourselves throughout this class so it's important to keep an open mind!"
     
-    player "Excuse me, what does they/them mean?"
     
-    celestine @ say "Oh? You've never heard of it?"
-    
-    player "No, we didn't have liberals in my hometown."
-    
-    celestine @ say "Um well...! It means... like... I'm not like the other women or... something like that."
-    
-    n "She looks down with a furrowed brow, as if this is the first time she's even considering the meaning of her self-imposed label."
-    
-    celestine @ say "A-anyway...! It's good to expand your horizons and try new things! You'll all be finding out a lot about yourselves throughout this class so it's important to keep an open mind!"
-    
-    n "Uh huh. You mindlessly nod along to her non-answer."
     #n "She just goes on and on with her life story and you start to tune out of it.
     n "Wait, what's that? You happen to notice something strange about the water bottle on her desk."
     n "The liquid inside appears to be... rippling? It was subtle at first but the intensity of the waves increases over time."
