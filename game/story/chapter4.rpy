@@ -5037,7 +5037,7 @@ label trish1:
     
     trish @ say "So where are you going?"
     
-    player "No where really? I'm just on a walk-"
+    player "Nowhere really? I'm just on a walk-"
     
     trish @ say "Noooo I mean where are you *going?*"
     trish @ say "Like in liiiiife?"
@@ -5200,7 +5200,10 @@ label trish1:
             
             n "What a weirdo."
             
-            jump midweekAutumnBreak
+            if autumnBreakOver == True:
+                jump ch4Finale
+            else:
+                jump midweekAutumnBreak
     
 
 label thinkingCharacter:
@@ -5391,7 +5394,11 @@ label afterTrishFortune:
     
     n "What a weirdo."
     
-    jump midweekAutumnBreak
+    if autumnBreakOver == True:
+        jump ch4Finale
+    else:
+        jump midweekAutumnBreak
+
     
     
 label midweekAutumnBreak:
@@ -6665,15 +6672,47 @@ label mishkaPowerOutage:
     
     
 label afterFallBreak:
+    $ autumnBreakOver = True
+
     n "As your break comes to a close, Ava, Claire, and Gunner return to Harmonia. It didn't feel like home without them."
     n "You spend the week just catching up on the events of everyone's vacations and antics."
+    n "You also got your grades back from the midterms."
+    
+    if historySkill < 2:
+        n "Your history grade is abysmal."
+    if historySkill > 2 and historySkill <= 5:
+        n "You're doing fine in history. Could be better though."
+    if historySkill > 5:
+        n "You're doing great in history."
+    if statsSkill < 2:
+        n "Holy fuck you're as bad as Gunner at statistics."
+    if statsSkill > 2 and statsSkill <= 5:
+        n "You got a high C in statistics. You'll take that."
+    if statsSkill > 5:
+        n "Gunner's gonna be jealous of your stats grade."
+    if frenchSkill < 2:
+        n "Man, you're failing French. Claire is gonna kill you."
+    if frenchSkill > 2 and frenchSkill <= 5:
+        n "French is about what you expected. Neither bad nor great."
+    if frenchSkill > 5:
+        n "You're doing pretty good in French. Claire will be proud!"
+    if literatureSkill < 2:
+        n "You should have bribed Ms. Ellen more to get a passing grade in literature."
+    if literatureSkill > 2 and literatureSkill <= 5:
+        n "As for literature, you're passing but not with any flying colors."
+    if literatureSkill > 5:
+        n "All your hard work in literature has paid off! Either that or Ms. Ellen just likes you."
+    
+    n "At least now you can better allocate your time between studies and friends."
+    n "Just gotta pass with good enough grades to keep your scholarship."
     
     
     
+    #go for a walk, then jump to friday where you oversleep then hang out with ava and claire, then gunner scene, then pass out, then hospital
     
     
     
-    
+label ch4Finale:
     
     
     

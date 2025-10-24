@@ -4456,6 +4456,7 @@ default metLina = False
 default margaretPantsu = False
 default roseHatesYouALot = False
 default offeredRoseCoffeeDuringOutage = False
+default autumnBreakOver = False
 
 default roseNightWalkLvl = 1
 default gunnerNightWalkLvl = 1
