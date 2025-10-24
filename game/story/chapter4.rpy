@@ -5720,6 +5720,8 @@ label midweekAutumnBreak:
                             n "Your skin goes cold and your vision fades to black."
                             
                             rose @ say "You get what you fucking deserve."
+                            
+                            jump ending
                         
                             
                         
@@ -6718,18 +6720,6 @@ label afterFallBreak:
     
     
 label ch4Finale:
-
-
-
-
-
-    #ava & claire "We just missed you so much we wanted to make up for it with a whole weekend together!"
-    #ava and claire knock on your door for your scheduled saturday hangout that you don't recall
-    # player "Man, I've sure been tired lately. I slept in yesterday too and missed class."
-    
-
-
-
     scene bg codadorm with fade
     
     play music "audio/ambient/morning birds.ogg" fadein .5
@@ -6742,108 +6732,73 @@ label ch4Finale:
     claire @ say "[name]!!! Wake up! We've got a long day ahead of us!"
 
     n "You jolt awake and slowly piece together where you are."
-    n "It kinda feels like the past couple weeks have been a dream. Or perhaps a nightmare."
-
+    n "The past couple of days have felt like a dream. It's hard to remember what's real and what's not."    
     n "*KNOCK KNOCK KNOCK KNOCK*"
     n "You groan and roll out of bed."
-
+    
     player "One second! Lemme put some pants on, jeez..."
 
     ava @ say "Take your time [name], we'll wait!"
 
     claire @ say "Or you could just open the door as you are right now :3"
 
-    show ava normal neutral at offscreenleft:
-        yalign 0
-    show claire sweater neutral at offscreenright:
-        yalign 0
-
     n "You throw on some clothes and open the door."
 
-    play music "audio/exports/Oak Library [55dAgNKir9A].opus" fadein 1.0
+    claire @ say "Heyyyyy!!! Why haven't you been responding to our texts??"
 
-    show ava normal neutral at norm:
-        xzoom -1
-        xpos 1440
-    show claire sweater neutral at norm:
-        xpos 460
-    with move
+    player "Huh? What texts?"
 
-    claire @ say "Heyyyyy! What's up? Why haven't you been responding to our texts??"
+    n "You pick up your phone to check but pressing the wake up button only shows a dead battery on the screen."
 
-    player "Huh? Oh sorry, I forgot to put my phone on the charger before falling asleep."
+    player "Woops. Guess I forgot to charge it."
 
     ava @ say "It's cool. It's not like we were about to just abandon you today!"
 
     claire @ say "Yeah!! We've got a busy schedule today and it wouldn't be the same without you!"
-
-    player "Remind me again what we're doing? I have to go to class in like two hours."
     
-    show ava bored
+    player "I'm flattered but remind me again what we're doing?"
 
     ava @ say "You already forgot?"
     
-    show claire sweater overjoyed
+    ava @ say "We're gonna get some boba tea and go out shopping and get massages at the spa and and and-"
     
-    claire @ say "We're skipping class today to go on an adventure!"
+    player "Whoa, when did you plane this?"
+    player "Did you just wake up and decide we were going out all day?"
     
-    show ava overjoyed
-    
-    ava @ say "We're gonna get some boba tea and go out shopping and get massages at the spa and and and"
-    
-    show claire sweater neutral
-    
-    player "Did you just wake up and decide to do this?"
-    
-    show ava normal neutral
-    show claire sweater surprised
-
     claire @ say "Oh my gosh do you really not remember?"
 
-    ava @ say "Yeah, we had a whole conversation about this last week! Did you hit your head or something??"
-
-    player "Now that you mention it, it rings a bell. But it feels more like it happened in a dream."
+    ava @ say "Yeah, we had a whole conversation about this a couple days ago! Did you hit your head or something??"
     
-    show claire sweater leaning
-
-    claire @ say "Well we better make sure today's unforgettable then, huh?"
+    player "I don't think so? Sorry, I just genuinely don't remember this convo."
     
-    show claire sweater neutral
+    claire @ say "That's alright! We'll just have to make sure today's unforgettable then, huh?"
     
-    claire @ say "Come on, let's go get coffee first to wake you up, sleepyhead~"
-
-
-
-
+    player "Man, I've sure been tired lately. I slept in yesterday too and missed class."
+    player "What's the occasion?"
+    
+    claire @ say "We just missed you so much we wanted to make up for it with a whole weekend together!"
+    
+    player "Aww, you guys~"
+    
+    ava @ say "Come on, we've got a long day ahead of us! Let's get coffee first to wake you up, sleepyhead~"
 
     n "After grabbing breakfast at Coffee Zone, you, Claire and Ava roamed the streets off campus."
-    #n "With it being a weekday, it almost felt like a ghost town. Everyone was at work or school. It was nice to have the town practically all to yourself though."
-    n "The three of you walked through main street and explored the various antique shops, boutiques, and other stores without a care in the world."
-    n "Getting pampered at the spa was obviously the highlight of the day."
-    n "Relaxing and listening to Ava and Claire gossip about cute boys and petty girl drama while getting a massage was definitely worth letting your classwork pile up."
+    n "The three of you walked through main street and explored the various antique shops, boutiques, and other stores."
+    n "Getting pampered at the spa was the highlight of the day."
+    n "Getting a massage while Ava and Claire gossiped about petty girl drama was nice."
     n "They barely even argued!"
-    n "Not to mention your nails have never looked better."
-    n "They even had a sauna, though apparently they aren't as popular among your anthro friends. Probably because it causes their fur and feathers to get heavy with dampness and smothers them."
-    n "But as someone with based human skin, it really opened up your pores and relieved all the tension in your body, melting away all your worries."
-    n "Ava had to drag you out, otherwise you never would have left."
+    #n "Not to mention your nails have never looked better."
+    n "They even had a sauna!"
     n "You suspect Claire let her towel slip on purpose when you were looking in her direction even though she swears it was an accident."
     n "Then there was the incident at the tea shop where she kept referring to your drinks as 'booba tea.'"
-    n "With the sun starting to set, you make your way back to the dorms."
     n "Overall it was quite a pleasant day, but apparently the bird and bunny weren't done with you yet."
 
-
-
-
-
-
-show ava normal neutral at norm:
+    show ava normal neutral at norm:
         xpos 500
     show claire sweater neutral at norm:
         xzoom -1
         xpos -400
     with dissolve
-
-    #play music "audio/music/Evan Schaeffer - React.ogg" fadein .5
 
     player "This was awesome, we should do this again sometime."
     
@@ -6881,9 +6836,6 @@ show ava normal neutral at norm:
     
     scene bg codadorm with fade
     
-    #play music "audio/music/Vylet Pony - lemonade.ogg" fadein .5
-    play music "audio/exports/vylet pony - 05 Reading at Night (夜に読みます).opus" fadein .5
-    
     show box:
 
     show ava normal neutral at norm:
@@ -6895,81 +6847,26 @@ show ava normal neutral at norm:
 
     n "Claire flops on your bed and Ava flutters over."
 
-    claire @ say "Go ahead and put some flixnet on the TV, [name]!"
-
-    n "Aw hell, you always knew this day would come."
-    n "The day you'd have to admit you don't have a flixnet subscription and that you just pirate TV shows from streaming sites."
-    n "At least last time you had Rori as a scapegoat since he had all those obscure shows on his flash drive."
-
-    player "Err about that..."
-
-    show bg static2
-    pause .02
-    show bg static3
-    pause .02
-    show bg codadorm
+    claire @ say "Go ahead and put some Flixnet on the TV, [name]!"
     
-    show ava concerned
-
-    ava @ say "What's wrong? You *do* have a streaming service, don't you?"
-    # I mean, how much of a virgin would you have to be to not have one in current year?"
-    
-    show claire sweater surprised
-
-    claire @ say "Are you okay? You're doing that human thing where water comes out of your skin."
-
-    n "Fuck fuck fuck fuck fuck they know."
-    n "You carefully weigh your options."
-    n "The window is a mere 2 meters to your left, you could jump out and the fall would likely kill you immediately but you just remembered you haven't cleared your browser history yet."
-    n "Then it hits you."
-    n "Rori left his flash drive here!"
-    n "You can load up one of his animes and just say it's not on any American streaming services so Rori downloaded it for you."
-    n "Of course, that means you'll have to deal with the obnoxious noises and annoying anime tropes but it's better than your friends thinking you're a virgin."
-
-    player "A-actually, why don't I put on some anime? There's this one Rori downloaded for me that I've been wanting to watch and it's not on flixnet..."
-    
-    show claire sweater neutral
-
-    claire @ say "Sounds good to me!"
-    
-    show ava excited
-
-    ava @ say "Go for it!"
-    
-    show ava normal neutral
-
-    n "Whew, they fell for it. Now you just have to plug your laptop in and pick a normal anime..."
-    n "Dammit Rori, why are all your file names in Japanese??"
-    n "You double click one at random and the video opens. After a few seconds the subtitles show up, revealing the name of this series to be \"Monster Girl Adventure\""
+    n "You mindlessly turn on the TV without realizing it's set to automatically resume the last thing you were watching."
     n "Oh deer lord no, not this..."
+    
+    claire @ say "Ooh you're into \"Monster Girl Adventures\" too? Good taste, [name]~"
     
     show ava overjoyed
 
-    ava @ say "Ooh, this looks interesting!"
+    ava @ say "I've heard of this one! Interesting choice, [name]..."
     
-    show claire sweater surprised
+    n "They're... into it? Maybe a night of watching softcore anime porn with two girls won't be so bad after all."
+    n "The pungent odor of strong alcohol reaches your nose and you look to Claire and find her sipping on a bottle of clear fluid."
+    n "You can see on the label it's 95% alcohol by volume."
 
-    claire @ say "Hey I've heard of this one!"
-    
-    show claire sweater leaning
-    
-    claire @ say "Interesting choice~ Hurry up and fullscreen it, [name]~"
-    
-    show ava normal neutral
-
-    n "It's too late now, the die has been cast and your fate is sealed."
-    n "All you can do is sit on the bed between your friends and prepare for an awkward night."
-    n "Distracted by all your worrying and overthinking, you're caught off guard when the pungent odor of alcohol wafts through the air and Claire nudges you."
-
-    claire @ say "Hey, you got any soda? Or am I gonna have to chug this raw?"
-
-    n "Claire waves a bottle in front of your face."
+    claire @ say "You got any soda? Or am I gonna have to chug this raw?"
 
     player "What the..? Where'd you get that?"
     
-    show claire sweater -leaning pose lusty
-
-    claire @ say "I told you I was bringing alcohol, duh. I managed to get my paws on a full bottle of vodka! Pretty sweet, huh?~"
+    claire @ say "I told you I was bringing alcohol, duh. I managed to get my paws on a full bottle of the good stuff! Pretty sweet, huh?~"
 
     n "She says with a wink as she licks the bottle."
     
@@ -6993,9 +6890,9 @@ show ava normal neutral at norm:
 
     n "The big bunny blocks your view of the TV as she walks over to the fridge, swaying her hips."
     n "She opens the door and bends down, taking her time grabbing the drinks with her ass in the air and her little tail wagging."
-    n "She somehow manages to be more lewd than this literal porn anime on the screen right now."
-    n "She even looks behind her to make sure you're watching, though it's not like you could avoid having the thicc bun in your field of vision no matter which direction you're facing."
-    n "You look over to Ava who's stifling a giggle."
+    n "She somehow manages to be more lewd than the anime on the screen right now."
+    n "She even looks behind her to make sure you're watching. It's not like you could avoid having her in your field of view no matter which direction you're facing."
+    n "You look over to Ava who stifles a giggle."
 
     player "Was this part of the plans we made earlier too?"
     
@@ -7004,7 +6901,7 @@ show ava normal neutral at norm:
     ava @ say "Hehehe no, this is just how she is~"
     
     show ava normal neutral
-
+    
     n "Claire plops down on the bed with a pack of soda and some plastic cups you had lying around, knocking both you and Ava into the air."
     n "When you come back down, the bunny wraps her arms around both you and Ava, the two of you on each side of her."
     
@@ -7016,7 +6913,7 @@ show ava normal neutral at norm:
 
     ava @ say "Psh, not true!"
 
-    n "Claire pours everyone a round of drinks, mixing extra pop in with Ava's to dilute the nail polish taste and smell."
+    n "Claire pours everyone a round of drinks, mixing extra soda in with Ava's to dilute the nail polish taste and smell."
 
     claire @ say "You're right, you could never match how sexy I am~"
     
@@ -7035,7 +6932,7 @@ show ava normal neutral at norm:
     ava @ say "Hmph!"
 
     n "Once again you find yourself in the middle of one of their bickering sessions. At least you have some booze to sip on while they go at it."
-    n "They continue to argue while you watch the show. It's actually pretty good. The story has you engaged and the monster girls are cute."
+    n "They continue to argue while you watch the show."
     
     show ava tipsy
     show claire sweater lusty alert
@@ -7054,7 +6951,9 @@ show ava normal neutral at norm:
         claire "{cps=0}Let'sh ssssettle this right now! [name]! If you had to pick one us... *hic* for the tiddies! Who would you pick?{/cps}"
         "Claire":
             $ ellenPoints = ellenPoints + 1
+            $ clairePoints += 1
             $ avaPoints = avaPoints - 1
+            
             n "You hesitate, preparing yourself for Ava's wrath."
 
             player "...Claire."
@@ -7064,29 +6963,17 @@ show ava normal neutral at norm:
             claire @ say "Hah! I told ya! Humans looooooove bigger~"
 
             n "The bunny pulls you in for a hug, pressing her massive pillowy chest into your face while Ava glares at you."
-
-            #ava @ say "I'll strangle you with your own bra!"
-            
-            #claire "You hear that, [name]? Ava wants to take off my bra ksksksksks!"
-            
-            
-            #claire "You'll have to get it off first~"
-            
-            #ava says something about strangling claire with her own bra, claire counters saying it's not big enough
-
-            #claire @ say "What bra?~"
-
-            #ava @ say "Grrr... Fffffine you win thiss battle, but a nice toned aaaasssssss ish what everyone wants!"
             
             ava @ say "Grrr... Who needfsdfsa tits when -hic- when I've got an ass like this!"
-
-            #claire @ say "Sorry, [name] can't hear you over the sound of my massive titties covering [hisher] ears!"
-
+            
             n "The two move onto arguing about butts. Once Claire lets you go, you take another drink and the rest of the night becomes a blur."
+
+            
         "Ava":
             $ rosePoints = rosePoints + 1
             $ roriPoints = roriPoints + 1
             $ clairePoints = clairePoints - 1
+            
             n "You hesitate, preparing yourself for Claire's wrath."
             
             player "...Ava."
@@ -7094,25 +6981,19 @@ show ava normal neutral at norm:
             ava @ say "Hah! I was right! [name] has a more refined taste in breasts~"
 
             n "The bird pulls you in for a hug, rubbing your face between her petite breasts while Claire glares at you."
-
-            claire @ say "You can't even smother [name] with those tiny tits of yours!"
-            claire @ say "At least I've got the better ass~"
-
-            ava @ say "What makes you think someone would prepfer your fat butt in favor of a nice toned ass like mine?"
             
-            show claire sweater leaning -lusty
-
-            claire @ say "You saw how [name] was staring when I was bent overr earlierrrr!"
-
+            claire @ say "You may have won this battle but you saw how [name] was staring when I was bent overr earlierrrr!"
+            
             ava @ say "That's only cause your ass is bigger than the broad side of a barnnn!"
 
             claire @ say "I'll take that as a compliment~"
 
-            n "The two move onto arguing about asses. Once Ava lets you go, you take another drink and the rest of the night becomes a blur."
+            n "The two move onto arguing about butts. Once Ava lets you go, you take another drink and the rest of the night becomes a blur."
         "Both":
             $ avaPoints = avaPoints + 1
             $ clairePoints = clairePoints + 1
-            player "Both are great."
+            
+            player "Both are pretty great to be honest."
 
             n "Both Claire and Ava instantly shift from being catty to being flattered. They both hug and nuzzle you tight, pressing their chests against you."
 
@@ -7122,6 +7003,30 @@ show ava normal neutral at norm:
 
             n "You can't breathe but that's alright. This is a good way to die."
             n "The rest of the night is a blur, but you recall Ava and Claire moving on to arguing about who has the better ass next."
+        "Neither":
+            $ roriPoints += 1
+            $ clairePoints -= 2
+            $ avaPoints -= 1
+            
+            player "Neither."
+            
+            claire @ say "Gaaaaaay!"
+            
+            ava @ say "Yeah [name], what'ssss wrong wit -hic- with you??"
+            
+            player "Nothing! I just don't wanna choose between you two!"
+            
+            claire @ say "What, you want us boooooth??"
+            
+            ava @ say "I think we could arrange that~"
+            
+            player "That's not what I..."
+            
+            n "They both hug and nuzzle you tight, pressing their chests against you."
+            n "You're being smothered by anthro females."
+            n "For some, this would be a great way to die."
+            n "The rest of the night is a blur, but you recall Ava and Claire moving on to arguing about who has the better ass next."
+            
 
 
     stop music fadeout 1.0
@@ -7144,11 +7049,7 @@ show ava normal neutral at norm:
     pause .7
 
 
-
-
-
-
-n "You wake up to the sound of banging on your door."
+    n "You wake up to the sound of banging on your door."
     n "Each knock feels like they're hitting your head directly."
     n "Fuuuuuuck you're so hungover. You forgot to drink any water last night."
     n "You clumsily roll over Claire's body on your way out of bed. She's sound asleep and doesn't notice you, even as you trip over the blanket and hit the ground."
@@ -7157,7 +7058,7 @@ n "You wake up to the sound of banging on your door."
     show gunner neutral at norm with dissolve:
         xzoom -1
 
-    gunner @ say "Morning, [name]. You didn't show up to class last night so Mrs. Herschel wanted me to give you this homework-"
+    gunner @ say "Morning, [name]. You didn't show up to class the other day so Mrs. Herschel wanted me to give you this homework-"
 
     n "Gunner's eyes suddenly go wide."
 
@@ -7176,8 +7077,9 @@ n "You wake up to the sound of banging on your door."
 
     #show gunner angry
     ###show gunner yiik pose
-    gunner @ say "How could you-"
+    gunner @ say "Ava?!"
     gunner @ say "What the hell is going on??"
+    gunner @ say "You better have a good explanation for this!"
 
     player "It's not what you think, we were just..."
 
@@ -7224,111 +7126,146 @@ n "You wake up to the sound of banging on your door."
     
     ava @ say "Anyway, I'm sure I had a good time with you [name]!"
     
+    if avaPoints < 5 or avaLostInterest == True:
+        ava @ say "I just feel bad about Gunner..."
+    else:
+        ava @ say "I hope Gunner's not too upset..."
+    
+    menu:
+        "He'll get over it":
+            player "He'll get over it. We didn't even do anything."
+            
+            ava @ say "Yeah... but this has kinda gone on long enough."
+            ava @ say "It doesn't feel good stringing both of you along like this."
+            
+        "Don't worry about him":
+            player "Don't worry about him. He can be pissy if he wants. He's just jealous."
+            
+            claire @ say "You sure you wanna play this game, Ava? Using [name] to make Gunner chase after you more seems..."
+            
+            ava @ say "Shshshs! I'm *definitely* not doing that!"
+            
+            claire @ say "Suuuure."
+        
+        "We didn't even do anything":
+            player "We didn't even do anything. It was basically just a cuddle puddle but drunk."
+            
+            ava @ say "Yeah... but still."
+            
+            if avaPoints < 5 or avaLostInterest == True:
+                ava @ say "I didn't want him to think I slept with you!"
+    
+                claire @ say "Maybe don't wake up in [name]'s bed in front of him then?"
+                
+                ava @ say "I know! It was just bad timing."
+            else:
+                ava @ say "I don't wanna lose him as a friend over something silly like this."
+                
+    ava @ say "[name]? Are you alright?"
+    
+    n "You suddenly feel faint. Your vision fades before you can even react. You're out cold before you even hit the floor."
+                
     
     
     
+    n "*Beep* ... *beep* ... *beep* ..."
+    n "The steady blips from a heartrate monitor welcome you back to consciousness."
+    n "You're back in the hospital and you feel worse than ever before."
+    n "Your muscles feel too weak to even lift your finger to the button to call the nurse."
+    n "Once again your body gives up on you and you return to slumber."
     
-
-nurse @ say "I'm just gonna get the routine checkup bullshit out of the way quickly cause I'm sure you don't have time for this sort of thing."
-
-    n "She wraps something around your arm and connects it to a machine that slowly inflates it."
-    n "She takes a reading from the machine and writes it down before deflating the armband and removing it."
-
-    nurse @ say "Blood pressure's a bit high but that's expected."
-    nurse @ say "Any headaches, drowsiness, or nausea since Monday?"
-
-    player "No. If anything I've felt great these past few days."
-
-    nurse @ say "Well, at least those pills are working."
-
-    player "I noticed I've been forgetting things more often though."
-    player "Like, I literally won't know how I got to class sometimes."
-    player "And occasionally I'll see static? And get that feeling like when you get up too fast after lying down for a while."
+    scene bg black with fade
+    
+    n "*Beep* ... *beep* ... *beep* ..."
+    
+    kitsuragi @ say "[name]? Are you awake?"
+    
+    player "Urgh..."
+    player "I'd rather not be."
+    
+    kitsuragi @ say "Stay with me for a while."
+    kitsuragi @ say "Your friends brought you in a week ago and this is the first time you've been coherent."
+    
+    player "A... whole week?!"
+    
+    #raise the tempo of the heart rate monitor
+    
+    kitsuragi @ say "Please try to stay calm. I need to ask you a few questions."
+    kitsuragi @ say "Have you been experiencing any headaches, drowsiness, or nausea since the last time you were here?"
+    
+    player "I started getting sleepier just last week... err, the last week before I passed out I guess."
+    player "And apparently I couldn't remember whole conversations I was a part of. Dunno if that is related."
+    player "Also I literally won't know how I got to class sometimes. I'll just end up there like I woke up there."
+    player "And occasionally I'll see static? Like that feeling like when you get up too fast after lying down for a while."
+    
+    kitsuragi @ say "I see."
 
     n "The nurse writes that down in a notepad then looks away and sighs."
 
-    nurse @ say "Look, there's no easy way to tell you this but the blood tests came back and..."
-    nurse @ say "And we can say with confidence that you do in fact have nihil syndrome."
+    kitsuragi @ say "Look, there's no easy way to tell you this but the blood tests came back and..."
+    kitsuragi @ say "And we can say with confidence that you do in fact have CORVID-19."
 
     n "You feel your heart sink to the bottom of your stomach."
-
-    #player "What?! No, redo the test! It was probably just a false positive!"
+    
     player "What?! You said I was fine last time I was here!"
-
-    nurse @ say "I'm afraid we already ran tests multiple blood samples using different methods and they consistently tested positive."
-
-    n "You slump in your seat, feeling like this is some sort of bad dream."
-
+    
+    kitsuragi @ say "I know it's hard to accept."
+    
     player "So this means I'm gonna die soon, right?"
 
     n "The nurse avoids eye contact, gesturing with her hands as she tries to come up with an answer for you."
 
-    nurse @ say "Well... since we caught it early... and there have been advancements in medicine... experimental technology could..."
+    kitsuragi @ say "Well... since we caught it early... and there have been advancements in medicine... experimental technology could..."
 
     player "Just- how long do you think I have?"
 
-    nurse @ say "...Five years? Maybe more, maybe less. I don't know. This disease isn't easy to predict."
+    kitsuragi @ say "...Five years? Maybe more, maybe less. I don't know. This disease isn't easy to predict."
 
     player "So just enough time to graduate college and keel over. Great."
-
-    nurse @ say "Hey, I'm not saying for sure you'll pass away anytime soon, that was just an estimate based on average cases."
-    nurse @ say "Some people went ten, fifteen, almost twenty years before it was their time."
-    nurse @ say "You may not be around for as long as you'd like but you can do a lot in the time you have left."
+    
+    kitsuragi @ say "Hey, I'm not saying for sure you'll pass away anytime soon, that was just an estimate based on average cases."
+    kitsuragi @ say "Some people went ten, fifteen, almost twenty years before it was their time."
+    kitsuragi @ say "You may not be around for as long as you'd like but you can do a lot in the time you have left."
     
     player "Even if I do stay around longer than expected, it'll be a miserable existence."
     player "I've seen how the affected get. They're practically zombies. No more energy, fading memory, totally apathetic."
+    player "Just look at me, I'm already getting there!"
     
-    nurse @ say "My advice to you is to take advantage of every single day. Don't let any time go to waste. Enjoy your time here while it lasts."
-    nurse @ say "I guess that advice goes to everyone, but moreso in your case."
+    kitsuragi @ say "My advice to you is to take advantage of every single day. Don't let any time go to waste. Enjoy your time here while it lasts."
+    kitsuragi @ say "I guess that advice goes to everyone, but moreso in your case."
 
     player "So... that's it? \"You're dying, but make sure you spend your time wisely. Bye!\""
 
-    nurse @ say "Pretty much."
-    nurse @ say "My boss initially wanted to put you back in one of these beds so we could run more tests on you but I convinced him it would be pointless."
-    nurse @ say "You've got a life to live, a destiny to fulfill and such. No need to waste it in here. Do whatever you wanted to do."
+    kitsuragi @ say "Pretty much."
+    kitsuragi @ say "My boss initially wanted to put you back in one of these beds so we could run more tests on you but I convinced him it would be pointless."
+    kitsuragi @ say "You've got a life to live, a destiny to fulfill and such. No need to waste it in here. Do whatever you've always wanted to do."
 
     n "You look down, unsure of what do say or do."
 
-    nurse @ say "..."
-    nurse @ say "Look, I have a confession to make."
-    nurse @ say "I could see the signs from the first tests we ran on you."
-    nurse @ say "I intentionally mislead you and told you you probably didn't have the disease because I knew it would only depress you."
-    nurse @ say "And when you're running out of time, the last thing you need is depression."
-    nurse @ say "You've had nihil syndrome for who knows how long, but you could very well have lived the rest of your life without knowing."
-    nurse @ say "Don't let this drag you down. Just use this knowledge to prepare and do whatever you always wanted to do before the end of your life."
-    nurse @ say "I'm truly sorry, but that's the best advice I can give you."
+    kitsuragi @ say "..."
+    kitsuragi @ say "Look, I have a confession to make."
+    kitsuragi @ say "I could see the signs from the first tests we ran on you."
+    kitsuragi @ say "I intentionally mislead you and told you you probably didn't have the disease because I knew it would only make things worse."
+    kitsuragi @ say "You've had CORVID syndrome for who knows how long, but you never even knew it until now."
+    kitsuragi @ say "Don't let this drag you down. Just use this knowledge to prepare. Tell your friends how much you loved them before it's too late."
+    kitsuragi @ say "I'm truly sorry, but that's the best advice I can give you."
 
     n "You want to argue but she's got a point."
     n "And besides, you really want to get out of this place as soon as possible."
 
     player "Fine. If that's all you have for me, then I'll be leaving. Thanks for the heads up."
 
-    nurse @ say "We'll continue to monitor your case and provide as much support as we can. Don't hesitate to call us if you feel strange in the slightest."
-    nurse @ say "Here's my card. Call me whenever you feel like, even if you just wanna talk or whatever."
+    kitsuragi @ say "We'll continue to monitor your case and provide as much support as we can. Don't hesitate to call us if you feel strange in the slightest."
+    kitsuragi @ say "Here's my card. Call me whenever you feel like, even if you just wanna talk or whatever."
 
     player "...Thanks."
 
-    n "You take her card and hurry out of the room."
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    n "You take her card and pull yourself out of the bed, refusing her help."
+    n "Just walking hurts like hell but it's nothing compared to the turmoil wracking your brain."
+    n "By the time you get back to your dorm, you're panting heavily and exhausted all the energy you had left."
+    n "You collapse onto your bed and close your eyes, trying to escape this reality."
     
 
-        #sunday - gunner finds you in bed with ava and gets mad. Ava and Claire want to go out again today but you faint and they take you to the hospital, where you get your diagnosis. You start a new treatment to mitigate your symptoms. Fall into a panic and depression over your fate.
-        
-    
-    
+
+
+    jump ending
