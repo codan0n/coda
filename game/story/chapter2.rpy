@@ -1,4 +1,7 @@
 label chapter2start:
+    scene bg black with dissolve
+    
+    n "Chapter 2"
 
     ###CHAPTER 2
     ###weather will be randomized (starting in week 4?) and affects what you can do after class
@@ -1599,7 +1602,7 @@ label week2Tuesday:
     
     stop music fadeout 2.0
     
-    scene bg schoolhallways with fade
+    scene bg schoolhallways summer day with fade
     
     play music "audio/music/vylet - there.ogg" fadein .4
     
@@ -1863,7 +1866,7 @@ label beauty_and_the_beast:
     
     n "With that, you pack your things and get ready for class."
     
-    scene bg schoolhallways with fade
+    scene bg schoolhallways summer day with fade
     
     play music "audio/ambient/indoors people talking.ogg" fadein .4
     
@@ -1880,7 +1883,7 @@ label beauty_and_the_beast:
     
     stop music fadeout 2.0
     
-    scene bg roof with fade
+    scene bg roof summer day with fade
     
     ###overcast day
     
@@ -2596,7 +2599,7 @@ label hospital_bound:
             n "Can't be that hard, right? It's not like everybody is on the lookout for you, and for all they know you're cleared to leave."
             n "You quietly slip out of bed and put your shoes on before grabbing your bag and approaching the door."
             
-            scene bg schoolhallways with dissolve
+            scene bg schoolhallways summer day with dissolve
             
             show box with Dissolve(.2):
                 ypos 0
@@ -4550,7 +4553,7 @@ label liberation_eve:
             
             stop music fadeout 2.0
             
-            scene bg roof with fade
+            scene bg roof summer day with fade
             
             play music "audio/music/vylet - Colourless.ogg" fadein .4
             
@@ -4941,7 +4944,7 @@ label liberation_eve:
     
     stop music fadeout 2.0
     
-    scene bg cafe with fade
+    scene bg cafe summer day with fade
     
     show box with Dissolve(.2):
         ypos 0

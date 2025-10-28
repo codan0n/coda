@@ -122,6 +122,7 @@ label chapter1:
     "Coda is a purely fictional story created by a diverse team with various different backgrounds and beliefs. The actions and views of some characters do not necessarily reflect those of the creators. This is a story about love, not hate."
     "Viewer discretion is advised."
     "Please note that this is a work in progress build that is unfinished in many places."
+    "Chapter 1"
     
     scene bg letter with fade
     
@@ -1532,7 +1533,7 @@ label exploring_campus:
 
     stop music fadeout 1.3
 
-    scene bg cafe with fade
+    scene bg cafe summer day with fade
 
     play music "audio/music/mere - coffeeLoveIntro.exe.ogg" 
 
@@ -2946,7 +2947,7 @@ label thirdDayOfClassStats:
         
         ava @ say "Then it's settled! Lead the way, [name]!"
 
-        scene bg cafe with fade
+        scene bg cafe summer day with fade
 
         play music "audio/music/mere - coffeeLoveInstrumentalEditSlowexe.ogg" fadein .4
 
@@ -3222,7 +3223,7 @@ label thirdDayOfClassStats:
 
         stop music fadeout .5
 
-        scene bg cafe with fade
+        scene bg cafe summer day with fade
 
         play music "audio/music/mere - coffeeLoveInstrumentalEditSlowexe.ogg"
 
@@ -4845,7 +4846,7 @@ label rooftop_party:
 
     stop music fadeout 1.0
 
-    scene bg roof with fade
+    scene bg roof summer day with fade
 
     #play music "audio/Monkey Warhol - Boots & Pants (Instrumental Mix).mp3" fadein .4
     #https://freemusicarchive.org/music/Monkey_Warhol/boots-pants-ep/boots-pants-instrumental-mix
@@ -5178,7 +5179,7 @@ label rooftop_party:
 
     n "Ignoring his complaints, you drag him from the crowd and head down the stairway into the building."
 
-    scene bg schoolhallways with dissolve
+    scene bg schoolhallways summer day with dissolve
 
     play music "audio/music/Monkey Warhol - Boots & Pants (Instrumental Mix).ogg" fadein .5
 
@@ -5320,7 +5321,7 @@ label sunday2:
     n "Looking around, it seems you'd fallen asleep in Rori and Gunner's dorm. They're passed out in their respective beds."
     n "No reason to stick around. You feel groggy and sweaty and gross and you need a shower and some coffee as soon as possible."
     
-    scene bg cafe with fade
+    scene bg cafe summer day with fade
 
     play music "audio/music/mere - coffeeLove.exe.ogg" fadein .4
 

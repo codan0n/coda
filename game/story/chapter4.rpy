@@ -2,10 +2,24 @@
 #reply to this post or your mother will die in her sleep tonight
 
 label chapter4:
+    scene bg black with dissolve
+    
+    n "Chapter 4"
+
     #monday
+    
+    scene bg classroom with fade
+    
+    show box with Dissolve(.2):
+        ypos 0
+    
+    show rothbauer at center with dissolve:
+        ypos y_roth
     
     rothbauer @ say "...That's the final lesson that will be on the midterm! We'll have a review on Wednesday then you'll be all set for Friday's exam."
     rothbauer @ say "That's all I have for you today. Good luck on your midterms!"
+    
+    hide rothbauer with dissolve
     
     n "The classroom fills with the sounds of papers shuffling and bags being zipped as students begin to file out."
     
@@ -13,6 +27,9 @@ label chapter4:
         n "You have a bad feeling about this history exam. Maybe you should ask someone for help studying."
         n "Rose is definitely the smartest person in this class. She's aced every quiz so far and always has her snout in the books."
         n "As much as you hate to ask, she might be your best bet. You muster up the courage to look over to her and clear your throat."
+        
+        show rose skirt armscrossed dismissive at center with dissolve:
+            ypos y_rose
         
         player "Hey Rose, I-"
         
@@ -22,6 +39,8 @@ label chapter4:
         
         rose @ say "Don't care."
         
+        hide rose with dissolve
+        
         n "Without even looking at you, she packs her things and walks away."
         
         
@@ -29,9 +48,15 @@ label chapter4:
         n "You feel sufficiently prepared for this exam. A lot of it is stuff you've learned before, just in greater detail."
         n "Still though, if you wanted to ace it you could go for some tutoring."
         
-    scene bg hallways
+    scene bg schoolhallways autumn day
+    
+    show box with Dissolve(.2):
+        ypos 0
     
     n "On your way to stats, you spot Rori at the vending machine again playing with his rat companion."
+    
+    show rori rat concerned at center with dissolve:
+        ypos y_rori
     
     rori @ say "Okay... sit! Sit? Please? I'll give you another pretzel if you sit."
     
@@ -49,17 +74,11 @@ label chapter4:
     
     n "From the corner of your eye you see Gunner striding up to you."
     
-    scene bg hallway summer day
-    
-    show box with Dissolve(.2):
-        ypos 0
-    
     show gunner determined at center:
         ypos y_gunner
         xoffset -400
         xzoom -1
-    show rori coat angry neutral at center:
-        ypos y_rori
+    show rori with move:
         xoffset 350
     
     gunner @ say "Sup homos."
@@ -75,6 +94,7 @@ label chapter4:
             
         "I'm not a homo":
             $ roriPoints -= 1
+            
             player "Hold up, I ain't no homo!"
             
             gunner @ say "But you are a homo sapien!"
@@ -196,9 +216,19 @@ label chapter4:
     
     player "You too!"
     
-    scene bg classroom
+    scene bg lecturehall with fade
+    
+    show box:
+        ypos 0
+    
+    show herschel at center with dissolve:
+        ypos y_herschel
     
     herschel @ say "Good afternoon class! The midterm is coming up on Friday but we still have a lot of content to cover so let's jump right in!"
+    
+    show gunner neutral at center with dissolve:
+        ypos y_gunner
+        xoffset -350
     
     gunner @ say "You mean there's *more* to study?!"
     
@@ -213,7 +243,10 @@ label chapter4:
     
     gunner @ say "You and me are going to the library to study after this."
     
-    scene bg library
+    scene bg library with fade
+    
+    show box:
+        ypos 0
     
     n "After class, Gunner dragged you to the library and found a table for just the two of you."
     
@@ -222,6 +255,9 @@ label chapter4:
         
     else:
         n "You're feeling confident in your math abilities to do well on the test, but a little extra practice won't hurt."
+        
+    show gunner neutral at center:
+        ypos y_gunner
         
     gunner @ say "Okay, let's start from the start. What is probability?"
     
@@ -277,8 +313,9 @@ label chapter4:
     #choose to either focus on your own studies or help him study
     #explain statistics and probability in terms of stock markets and betting
 
-
     #tuesday
+    
+    scene bg black with dissolve
     
     n "The following day..."
     

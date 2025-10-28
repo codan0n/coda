@@ -4,8 +4,7 @@ label chapter3:
     
     scene bg black with fade
     
-    $ townEvents.append("linaTown")
-    
+    n "Chapter 3"
     n "A few weeks later"
     
     scene bg cafe with dissolve
@@ -263,7 +262,7 @@ label chapter3:
     
     stop music fadeout 1.0
     
-    scene bg campus summer day clear with fade
+    scene bg campus autumn day clear with fade
     
     show box with Dissolve(.2):
         ypos 0
@@ -347,7 +346,7 @@ label chapter3:
     
     stop music fadeout 1.0
         
-    scene bg campus summer day clear with fade
+    scene bg campus autumn day clear with fade
     
     show box with Dissolve(.2):
         ypos 0
@@ -541,7 +540,7 @@ label chapter3:
     
     n "The following day..."
     
-    scene bg campus summer day clear with fade
+    scene bg campus autumn day clear with fade
     
     show box with Dissolve(.2):
         ypos 0
@@ -765,7 +764,7 @@ label chapter3:
     
     stop music fadeout 2.0
     
-    scene bg campus summer day clear with fade
+    scene bg campus autumn day clear with fade
     
     #play music "audio/music/vylet - sailing away.ogg" fadein .5
     play music "audio/music/vylet - diaries i kept.ogg" fadein .5
@@ -2927,7 +2926,7 @@ label chapter3AfterWeekend:
     
     stop music fadeout 2.0
     
-    scene bg roof with dissolve
+    scene bg roof autumn day with dissolve
     
     play music "audio/music/vylet - manehattan's finest.ogg" fadein .5
     
@@ -3716,7 +3715,7 @@ label chapter3AfterWeekend:
                 
                 stop music fadeout 2.0
                 
-                scene bg campus summer day clear with fade
+                scene bg campus autumn day clear with fade
                 
                 play music "audio/music/vylet - mistress.ogg" fadein .5
                 #play music "audio/music/vylet - camelia.ogg" fadein .5
@@ -3985,7 +3984,7 @@ label chapter3AfterWeekend:
                         
                         claire @ say "Oh my gosh are you alright?"
                         
-                        scene bg campus summer day clear with dissolve
+                        scene bg campus autumn day clear with dissolve
                         
                         show box with Dissolve(.2):
                             ypos 0
@@ -4336,7 +4335,7 @@ label chapter3AfterWeekend:
         
         stop music fadeout 2.0
         
-        scene bg campus summer day clear with fade
+        scene bg campus autumn day clear with fade
         
         play music "audio/music/vylet - Hard to Say Anything.ogg" fadein .5
         
@@ -4484,7 +4483,7 @@ label claireRoriHikeAltStart:
 
     call phone_end from _call_phone_end_28
     
-    scene bg campus summer day clear with fade
+    scene bg campus autumn day clear with fade
     
     play music "audio/music/vylet - Hard to Say Anything.ogg" fadein .5
     
