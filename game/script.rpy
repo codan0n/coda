@@ -185,6 +185,7 @@ define y_roth = 1750
 define y_nicodemus = 1400
 define y_trish = 1300
 define y_fortune = 1100
+define y_rory = 1565
 
 
 #old mishka text color a4cffc

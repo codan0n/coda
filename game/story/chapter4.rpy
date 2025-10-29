@@ -319,7 +319,12 @@ label chapter4:
     
     n "The following day..."
     
+    scene bg classroom with dissolve
+    
     #margaret @ say "That just about sums up our review for Thursday's midterm! Study hard and do your best!"
+    
+    show celestine neutral at center with dissolve:
+        ypos y_celestine
     
     celestine @ say "Bonjours les étudiants!"
     celestine @ say "We're officially one week away from the midterm! You're all doing well in class so I have no doubt that everyone pass!"
@@ -342,6 +347,7 @@ label chapter4:
             show claire sweater happy at center with dissolve:
                 xzoom -1
                 xpos -300
+                ypos y_claire
 
             claire @ say "Mais oui!"
 
@@ -354,6 +360,11 @@ label chapter4:
     n "Mrs. Celestine goes around the classroom asking questions in French to each student."
     n "Unsurprisingly, Claire has no trouble at all, whereas you have to take a few notes."
     n "After class ends she turns to you with a devious grin."
+    
+    show claire sweater happy at center with dissolve:
+        xzoom -1
+        xpos -300
+        ypos y_claire
     
     claire @ say "Heyyyyy [name]~"
     claire @ say "I'm having trouble with a few French words, would you like to come over to my dorm and \"\"\"study\"\"\"?"
@@ -372,6 +383,9 @@ label chapter4:
             n "You pack your things and head to the library to cram for the exams."
             
             scene bg library with fade
+            
+            show box with Dissolve(.2):
+                ypos 0
             
             n "What will you study?"
             
@@ -401,7 +415,7 @@ label chapter4:
             
             n "Claire proceeds to grab your hand and drag you to her dorm."
             
-            scene bg avadorm
+            scene bg avadorm with fade
             
             show box with Dissolve(.2):
                 ypos 0
@@ -411,6 +425,8 @@ label chapter4:
     
     #wednesday
     
+    scene bg black with dissolve
+    
     n "The following day..."
     
     n "Today's the last day before midterms begin. Better pay attention in class and study hard."
@@ -418,7 +434,7 @@ label chapter4:
     
     if claireSmoochies == True:
     
-        scene bg campus autumn day clear
+        scene bg campus autumn day with fade
         
         show box with Dissolve(.2):
             ypos 0
@@ -448,8 +464,8 @@ label chapter4:
                 if avaPoints > 4:
                     $ avaCucked = True
                 $ avaLostInterest = True
-                $ fuckedClaireEarly = True
                 $ avaJealousy += 3
+                $ fuckedClaireEarly = True
                 
                 player "You really wanna know?"
                 
@@ -473,6 +489,9 @@ label chapter4:
                 ava @ say "I was wondering why the hell the bunk bed was shaking so much."
                 
                 player "Sorry about that, you know how Claire is."
+                
+                show claire flannel happy at center:
+                    ypos y_claire
                 
                 claire @ say "Speaking of that big beautiful bunny..."
                 
@@ -584,6 +603,7 @@ label chapter4:
     
     ###claire bday scene goes here
     
+    scene bg black with fade
     
     n "After classes end you suddenly get a sinking feeling in your gut."
     n "You could very well bomb these tests and have to retake classes, wasting valuable time and delaying your graduation."
@@ -612,6 +632,9 @@ label chapter4:
         player "Ow! What the fuck?"
         
         n "Looking down, you notice an ink splotch pooled in your fresh wound and a fountain pen lying on the ground."
+        
+        show rose skirt furiouspose at center with dissolve:
+            ypos y_rose
         
         rose @ say "This table is reserved for God's chosen species. Get lost."
         
@@ -785,7 +808,7 @@ label chapter4:
                         
                         rose @ say "This is your brain on human propaganda."
                         
-                player "What's that supposed to mean."
+                player "What's that supposed to mean?"
                         
                 rose @ say "It's not my job to educate you."
                 rose @ say "*Sigh*"
@@ -793,7 +816,7 @@ label chapter4:
                 
                 player "What?"
                 
-                rose @ say "Go get me a coffee. No sugar or milk. I will kill you if you bring me a coffee with that junk in it."
+                rose @ say "Go get me a coffee. No sugar or milk. I won't hesitate to kill you if you bring me a coffee with that junk in it."
                 
                 n "She thinks you'll spend your hard earned money buying her an overpriced coffee to listen to her lecture. Will you?"
                 
@@ -970,10 +993,18 @@ label chapter4:
                 n "Fffffuck you need a coffee if you're gonna survive. Luckily the cafe is only a short distance away."
                 n "You won't have to worry about someone stealing your spot while you're away with Rose guarding the table, so you take a trip down to Coffee Zone."
                 
-                scene bg cafe summer day with fade
+                scene bg cafe autumn day with fade
+                
+                show box:
+                    ypos 0
                 
                 n "Coffee Zone is busier than you've ever seen it before. All the tables are taken and you have to wait in line before you can even see Mishka on the other side of the counter."
                 n "Eventually you get to see the coffee queen rat, rushing to make everyone's orders all on her own."
+                
+                show mishka neutral at center with dissolve:
+                    xzoom -1
+                    #xpos -440
+                    ypos y_mishka
                 
                 mishka @ say "[name]!"
                 
@@ -1038,6 +1069,9 @@ label chapter4:
                     
                 n "You return to your seat across from Rose, reinvigorated to knock out this study session."
                 n "The raccoon looks up from her book and sniffs the air."
+                
+                show rose skirt furiouspose at center with dissolve:
+                    ypos y_rose
                 
                 rose @ say "Coffee? Is that... ah it must be Costa Rican. My favorite type. The best type."
                 
@@ -1121,6 +1155,9 @@ label chapter4:
         
         n "Your only chance to find an open spot is when someone gets up and leaves. You drop down your bag and settle in before anyone else can steal it from you. It's your study spot now."
         n "By sheer coincidence, you find yourself bumping shoulders with a feathered friend."
+        
+        show ava typical happy at center:
+            ypos y_ava
         
         ava @ say "OMG hi [name]! Fancy seeing you here!"
         
@@ -1239,7 +1276,7 @@ label chapter4:
         
         player "Here? At the library?"
         
-        ava @ say "I wasn't kidding when I said it'd be fun to stay the night here!"
+        ava @ say "I wasn't kidding when I said it'd be fun to spend the night here!"
         
         menu:
             "Stay here with Ava":
@@ -2069,7 +2106,7 @@ label getRoseCoffee:
     $ rosePoints += 1
     $ historySkill += 2
     
-    scene bg cafe summer day with fade
+    scene bg cafe autumn day with fade
     
     show box with Dissolve(.2):
         ypos 0
@@ -2079,11 +2116,15 @@ label getRoseCoffee:
     
     mishka @ say "[name]!"
     
+    show mishka neutral at center with dissolve:
+        xzoom -1
+        #xpos -440
+        ypos y_mishka
+    
     player "Hey Mishka! Is now a good time?"
     #Hope you don't mind me coming in on the busiest day of the year
     
-    show mishka neutral tongueout wink right at center:
-        ypos y_mishka
+    show mishka neutral tongueout wink right
     
     mishka @ say "It gets so busy during exams week... But I will make the best drinks for you as always!"
     
@@ -2161,6 +2202,9 @@ label getRoseCoffee:
             
             player "Here you go, the finest coffee in Harmonia."
             
+            show rose skirt furiouspose at center with dissolve:
+                ypos y_rose
+            
             rose @ say "Set it down there. No not there, away from my notes. No, not on top of that book you drooling neanderthal!"
             
             n "Holy fuck is she picky with the placement of this cup."
@@ -2176,8 +2220,7 @@ label getRoseCoffee:
             
             player "Then why'd you have me get it in the first place?"
             
-            show rose skirt handonhip shy at center:
-                ypos y_rose
+            show rose skirt handonhip shy at center
             
             rose @ say "Because I require the aroma of a hot drink to maximize the efficiency of my studies."
             
@@ -2188,7 +2231,7 @@ label getRoseCoffee:
             n "What's wrong with you? How can you even entertain the notion of tampering with someone's drink like that?"
             
             if drankOliviasCoffee == True:
-                n "Even if you're some sick freak who drank that alligator's coffee that surely had a few mililiters of her drool in it."
+                n "Even if you're some sick freak who drank that alligator's coffee that surely had a few milliliters of her drool in it."
             
             n "You come back to Rose's table and deliver her drink, untampered with."
             
@@ -2227,15 +2270,30 @@ label getRoseCoffee:
 
 
 label midtermDay1Cafe:
+    scene bg black with fade
+    
+    scene bg codadorm autumn day with fade
+    
+    show box:
+        ypos 0
+
     n "Your alarm drags you up from the comfort of slumber, reminding you that today is one day you can't afford to sleep in."
     n "You need a coffee, badly."
     n "You barely got any sleep after last night's ordeal. You wonder if the fortress is still standing."
     n "There's just enough time to swing by the cafe before starting your literature exam."
     
+    scene bg cafe autumn day with fade
     
+    show box:
+        ypos 0
     
     n "Coffee Zone is busier than you've ever seen it before. All the tables are taken and you have to wait in line before you can even see Mishka on the other side of the counter."
     n "Eventually you get to see the coffee queen rat, rushing to make everyone's orders all on her own."
+    
+    show mishka neutral at center with dissolve:
+        xzoom -1
+        #xpos -440
+        ypos y_mishka
     
     mishka @ say "[name]!"
     
@@ -2318,20 +2376,29 @@ label midtermDay1Cafe:
     
     n "You take the cardboard cup and make your way to the literature building, taking sips along the way that gradually bring you back up to full consciousness."
     
+    jump midtermDay1Cont
+    
 label midtermDay1:    
     #thursday
+    
+    scene bg codadorm autumn day with fade
     
     n "Today's the day. Midterms."
     n "You'll be glad to get them over with."
     n "You've done everything you can to prepare. All that's left to do is face them with courage and put pencil to paper."
     
 label midtermDay1Cont:
+    scene bg lecturehall with fade
+    
+    show box:
+        ypos 0
+    
     n "The classroom is extra hectic just minutes before class is scheduled to begin."
     n "Tons of chatter, anxious students worrying over their grades, hastily trying to cram in knowledge and share answers before the teacher arrives."
     n "You're too tired from all the studying you've done throughout the week to bother. Instead you just try to remain calm."
     
     if ch4EllenSnack == True:
-        n "On your way to your desk you drop off a bag containing the cafe's confectionary treat onto Ms. Ellen's table."
+        n "On your way to your desk you drop off a bag containing the cafe's confection onto Ms. Ellen's table."
         n "She'll know who it's from."
         
     n "You sit down and close your eyes, getting a couple minutes of rest in before the exam begins."
@@ -2341,6 +2408,9 @@ label midtermDay1Cont:
         n "She looks momentarily confused as she picks up the bag you left for her. She gives it a few sniffs then looks around the room."
         n "You give her a wink when her gaze meets yours and she returns it with a smile."
         
+    show margaret neutral at center:
+        ypos y_margaret
+        
     margaret @ say "Good morning class! I'm sure you're all as anxious to be done with this as I am so without further adiue, I'll just go ahead and hand out the exams. Do your best!"
     
     n "She goes around the room, dropping off a packet of papers on everyone's desk."
@@ -2348,7 +2418,10 @@ label midtermDay1Cont:
     n "You'll just have to take this boring exam instead."
     n "You pick up your pencil and get to work."
     
-    scene bg classroom with fade
+    scene bg lecturehall with fade
+    
+    show box with Dissolve(.2):
+        ypos 0
     
     n "Not even an hour goes by and you're finished. You didn't think it was so bad."
     n "Half the class had already finished and left by the time you stand up and hand yours in."
@@ -2585,12 +2658,18 @@ label midtermDay1Cont:
     
     scene bg classroom with fade
     
+    show box:
+        ypos 0
+    
     n "You show up with only a few minutes to spare. Other students are flipping through their notes and books, making last minute preparations while Claire stares off into space, humming a tune to herself."
+    
+    show claire flannel happy at center with dissolve:
+        ypos y_claire
     
     claire @ say "[name]! You're 87 seconds late compared to your average arrival time! That's like 1 and a half standard deviations from the norm!"
     
     if smokedCig1:
-        claire @ say "Why do you smell like cigarettes? Do you smoke?"
+        claire @ say "Why do you smell like cigarettes? Since when do you smoke?"
     else:
         claire @ say "Were you talking with someone? You smell like dog."
         
@@ -2709,6 +2788,9 @@ label midtermDay1Cont:
         if avaPoints > 5:
             n "Ava comes swooping in at high speed. She's heading right at you!"
             
+            show ava casual happy at center:
+                ypos y_ava
+            
             ava @ say "[name]! Coming in hot!!"
             
             n "Instinct kicks in and you hold your arms out ready to catch her."
@@ -2759,6 +2841,9 @@ label midtermDay1Cont:
                     claire @ say "Aww..."
             
         else:
+            show ava casual happy at center:
+                ypos y_ava
+        
             n "Ava comes swooping in at high speed but Claire is there to catch her and spin her around."
             
             claire @ say "Whoa! Someone's happy to see us ksksksksk!"
@@ -2784,7 +2869,7 @@ label midtermDay1Cont:
     
     player "Sounds good to me. Later!"
     
-    scene bg codadorm with fade
+    scene bg codadorm autumn night with fade
     
     n "You're kinda burnt out from today's exams but you're only halfway through."
     n "You muster up the energy to study a bit for stats and history but wind up falling asleep early."
@@ -2792,7 +2877,11 @@ label midtermDay1Cont:
         
     # friday
     
+    scene bg black with fade
+    
     n "The following day..."
+    
+    scene bg classroom with dissolve
     
     n "Just gotta get through two more exams and then you're home free."
     
@@ -2800,6 +2889,9 @@ label midtermDay1Cont:
         n "Reading through Rose's notes is sure to give you a massive leg up on this exam."
         
         player "Thanks again for the notes the other day."
+        
+        show rose skirt furiouspose at center with dissolve:
+            ypos y_rose
         
         rose @ say "Whatever. Don't mention it."
         
@@ -2818,6 +2910,11 @@ label midtermDay1Cont:
             
         n "Now you're imagining Rose tutoring you. She'd bite you every time you got a question wrong."
         
+    hide rose with dissolve
+        
+    show rothbauer at center with dissolve:
+        ypos y_roth
+        
     rothbauer @ say "Good day, students! All you'll need for this exam is a pencil, so go ahead and clear your desks and let's get started!"
     rothbauer @ say "Oh but before we begin, I'd like to mention an opportunity for extra credit over the break."
     rothbauer @ say "All you have to do is research a \"conspiracy\" related to prehistoric civilization and write a one page paper explaining it and providing evidence that it may in fact be true."
@@ -2833,6 +2930,9 @@ label midtermDay1Cont:
     
     if statsSkill > 3:
         n "You feel like you'll be fine but he might not do so hot..."
+        
+        show gunner cheeky1 at center with dissolve:
+            ypos y_gunner
         
         gunner @ say "It's so over. We're cooked."
         
@@ -2866,11 +2966,17 @@ label midtermDay1Cont:
     else:
         n "You don't feel super confident about this one either."
         
+        show gunner cheeky1 at center with dissolve:
+            ypos y_gunner
+        
         gunner @ say "It's so over. We're cooked."
         
         player "Just a bit."
         
         gunner @ say "Mrs. Herschel is notorious for giving extremely hard tests. Fuck this bitch."
+        
+    show herschel at center with dissolve:
+        ypos y_herschel
         
     herschel @ say "Good morning class! You know what day it is! Clear your desks and let the fun begin!"
     
@@ -2942,6 +3048,15 @@ label midtermDay1Cont:
     scene bg town
     
     n "When you arrive, Claire waves you over to the table your friends are sitting at."
+    
+    show gunner cheeky1 at center with dissolve:
+        ypos y_gunner
+    show rori anxious at center with dissolve:
+        ypos y_rori
+    show ava typical happy at center:
+        ypos y_ava
+    show claire sweater happy at center:
+        ypos y_claire
     
     claire @ say "There he is!!"
     
@@ -3116,7 +3231,10 @@ label midtermDay1Cont:
     
     ###alt intro where you get rory mixed up with rori and think he's trooned out. 50/50 chance?
     
-    rori @ say "Oh my god is that...?"
+    rori @ say "Oh no, is that who I think it is?"
+    
+    show rory autumn neutral at center:
+        ypos y_rory
 
     rory @ say "Heyyyyyy lil bro~"
     
@@ -3313,9 +3431,14 @@ label midtermDay1Cont:
     
     player "Anytime. That's what bros are for."
     
-    
+    scene bg black with fade
     
 #saturday
+    scene bg codadorm autumn day with fade
+    
+    show box:
+        ypos 0
+
     n "It's officially the first day of your autumn break. No more worries until school starts back up again."
     n "You can enjoy life at your own pace and do whatever you want."
     
@@ -3334,6 +3457,9 @@ label midtermDay1Cont:
 label roseInHallways:
     n "On your way out, you nearly trip over some short gremlin-type creature."
     n "Oh wait, that's just Rose."
+    
+    show rose skirt furiouspose at center with dissolve:
+        ypos y_rose
     
     rose @ say "Watch it, punk!"
     
@@ -3579,10 +3705,20 @@ label roseInHallways:
         
 label writingWithMishka:
 
+    scene bg cafe autumn day with fade
+    
+    show box:
+        ypos 0
+
     play music "audio/music/vylet - I Wish I Could Tell You.ogg" fadein 1.0
     
     n "Outside the cafe you see Mishka standing by herself, watching street birds hop around and peck at the ground."
     n "They fly away as you approach and Mishka notices you."
+    
+    show mishka neutral at center with dissolve:
+        xzoom -1
+        #xpos -440
+        ypos y_mishka
     
     mishka @ say "[name]! You're here!"
     
@@ -3837,12 +3973,19 @@ label writingWithMishka:
 label ch4GoWithRori:
     n "After lazing around your dorm for a bit, you get bored and decide to take a walk around campus."
     
+    scene bg campus autumn day with fade
+    
+    show box:
+        ypos 0
     
     n "The campus is like a ghost town now that the autumn break is in effect."
     n "There's only the sound of wind rustling through the leaves and... hoof steps?"
     n "You turn around and see Rori with his nose buried in his phone. He doesn't even notice you."
     
     player "Yo! Rori!"
+    
+    show rori anxious at center with dissolve:
+        ypos y_rori
     
     rori @ say "Huh?"
     
@@ -3901,8 +4044,16 @@ label ch4GoWithRori:
             rori @ say "How about we go back to my dorm and play a real game?"
             
             player "I'm down."
+            
+    scene bg roridorm with fade
+    
+    show box:
+        ypos 0
     
     n "Rori plugs some controllers into his PC then runs a few commands in a terminal. On his monitor an emulator pops up and the game begins to boot up."
+    
+    show rori anxious at center with dissolve:
+        ypos y_rori
     
     player "Yayyy modded Super Smash Sisters!"
     
@@ -4341,7 +4492,14 @@ label roriSnuggles:
 
 
 label autumnBreakPt2:
+    scene bg black with dissolve
+
     n "The following day..."
+    
+    scene bg codadorm with fade
+    
+    show box:
+        ypos 0
     
     n "It sure is nice waking up on a Monday without having to worry about going to classes."
     n "But it does get a little boring not having anything to do. No responsibilities but also half your friends are away."
@@ -4509,7 +4667,7 @@ label afterAutumnPhone:
         n "Lucky for you, you've got plans today. Big plans."
         n "Your hot milf dog professor wants you to come over to her house today. You know what that means?"
         
-        scene bg streets
+        scene bg streets with dissolve
         
         n "*knock knock knock*"
         n "You almost can't believe you're doing this. You're starting to feel nervous."
@@ -4518,6 +4676,9 @@ label afterAutumnPhone:
         n "Is this even the right address? What if she was just messing with you and gave you a fake one?"
         n "You're about to knock on the door again when it creeps open."
         
+        show margaret smoking intrigued at center with dissolve:
+            ypos y_margaret
+        
         margaret @ say "Hello..?"
         margaret @ say "Oh my goodness, [name]! I can't believe you actually showed up! Were we supposed to meet today? I thought it was tomorrow!"
         
@@ -4525,10 +4686,15 @@ label afterAutumnPhone:
         
         margaret @ say "Right, silly me. I thought it was still Sunday. Come on in and make yourself at home!"
         
+        scene bg ellenbedroom with dissolve
+        
         n "Ms. Ellen invites you inside and shows you to her bedroom."
         n "Oh god oh fuck it's really happening"
         n "You wonder what her favorite position is. Probably doggystyle lmao."
         n "As your mind races with perverse thoughts, something catches your attention."
+        
+        show margaret smoking intrigued at center with dissolve:
+            ypos y_margaret
         
         player "Wait a minute, is that a SNES?"
         
@@ -5027,6 +5193,11 @@ label afterAutumnPhone:
 label trish1:
     $ metTrish = True
     
+    scene bg campus autumn with dissolve
+    
+    show box:
+        ypos 0
+    
     n "A walk around the campus does wonders for your sanity. Sometimes you really just need to get that blood pumping."
     n "As you round a corner, you're knocked backward and fall to the ground."
     
@@ -5440,6 +5611,11 @@ label afterTrishFortune:
     
     
 label midweekAutumnBreak:
+    scene bg codadorm with fade
+    
+    show box:
+        ypos 0
+
     n "You find yourself without much to do at the moment halfway into your autumn break. You really underestimated how much classes give you something to do with your time."
     n "That and half your friends are away."
     n "Maybe now's a good time to do that extra credit assignment for history?"
@@ -5458,6 +5634,10 @@ label midweekAutumnBreak:
             rose @ say "Watch where you're going!"
             
             n "You look down to find an angry raccoon looking up at you."
+            
+            show rose skirt furiouspose at center with dissolve:
+                ypos y_rose
+            
             n "Oh boy here we go again."
             
             menu:
@@ -5769,10 +5949,15 @@ label midweekAutumnBreak:
             n "Yeah no, you're not gonna waste your life away hitting the books. That's not natural."
             n "Your monkey brain tells you what you need is a good old fashioned walk. Some fresh air and sunlight to clear your mind."
             
+            scene bg campus autumn day with dissolve
+            
             if metLina == False:
                 $ metLina = True
                 
                 n "It's not long before you come across a stranger who strikes up a conversation."
+                
+                show lina sax neutral at center with dissolve:
+                    ypos y_lina
                 
                 lina @ say "Heya! I've seen you around before!"
                 
@@ -5941,6 +6126,9 @@ label midweekAutumnBreak:
             
             else:
                 n "It's not long before you come across someone you've seen before."
+                
+                show lina sax neutral at center with dissolve:
+                    ypos y_lina
             
                 lina @ say "Hey, it's you again!"
                 
@@ -6263,10 +6451,20 @@ label pantyRaidLina1:
         n "You leave the dorm and part ways, disappointed you couldn't get Ava's panties. They seem to be in high demand."
         
 label celestineMargaretVisit1:
+    scene bg town with dissolve
+    
+    show box:
+        ypos 0
+
     n "Continuing your walk, you end up in the town proper. The streets are empty. Not even traffic blocks the roadways."
     n "You guess college towns just get put on pause when students are away."
     n "But for the actual residents, it must be a break from all the hustle and bustle they bring."
     n "Looks like two of them are out having a pleasant day together right now."
+    
+    show margaret smoking intrigued at center with dissolve:
+        ypos y_margaret
+    show celestine neutral at center with dissolve:
+        ypos y_celestine
     
     margaret @ say "[name]? Fancy happening upon you this far out from the campus!"
     
@@ -6341,6 +6539,9 @@ label autumnBreakLockIn:
     
     player "Hey, what the hell are you doing out here? Quit sperging out, it's just a power outage."
     
+    show rose skirt furiouspose at center with dissolve:
+        ypos y_rose
+    
     n "Rose is outside her door, clawing at it. She must have just got back from the gym, judging by her attire."
     
     rose @ say "In a sane society this would never even be a problem but just *look* at this!"
@@ -6409,8 +6610,18 @@ label autumnBreakLockIn:
             jump mishkaPowerOutage
             
 label mishkaPowerOutage:
+    scene bg cafe autumn rain with dissolve
+    
+    show box:
+        ypos 0
+
     n "You pull off your hood and stomp your feet on the welcome mat upon arriving at the cafe. Luckily it seems that this part of the university still has power."
     n "The sign on the door said it was closed for autumn break but you saw Mishka from the window and she waved at you."
+    
+    show mishka neutral at center with dissolve:
+        xzoom -1
+        #xpos -440
+        ypos y_mishka
     
     mishka @ say "Welcome, [name]! The shop is technically still closed but I came to get it ready for re-opening soon."
     
@@ -6491,9 +6702,14 @@ label mishkaPowerOutage:
                 
                 player "Thanks!"
                 
+                scene bg codadorm with fade
+                
                 n "Back at your dorm, the lights are still off. You left the lobby door ajar in case the door remained locked and without power."
                 n "In the hallway you find Rose sitting with her back to the wall."
                 n "You were right, the smell of coffee got her attention."
+                
+                show rose skirt furiouspose at center with dissolve:
+                    ypos y_rose
                 
                 player "I got one for you."
                 
@@ -6713,6 +6929,8 @@ label mishkaPowerOutage:
     
 label afterFallBreak:
     $ autumnBreakOver = True
+    
+    scene bg black with fade
 
     n "As your break comes to a close, Ava, Claire, and Gunner return to Harmonia. It didn't feel like home without them."
     n "You spend the week just catching up on the events of everyone's vacations and antics."
@@ -6781,6 +6999,11 @@ label ch4Finale:
     claire @ say "Or you could just open the door as you are right now :3"
 
     n "You throw on some clothes and open the door."
+    
+    show claire sweater wave happy at center with dissolve:
+        ypos y_claire
+    show ava typical happy at center:
+        ypos y_ava
 
     claire @ say "Heyyyyy!!! Why haven't you been responding to our texts??"
 
@@ -7086,6 +7309,10 @@ label ch4Finale:
 
 
     n "You wake up to the sound of banging on your door."
+    
+    scene bg codadorm with fade
+    
+    n "*KNOCK KNOCK KNOCK KNOCK*"
     n "Each knock feels like they're hitting your head directly."
     n "Fuuuuuuck you're so hungover. You forgot to drink any water last night."
     n "You clumsily roll over Claire's body on your way out of bed. She's sound asleep and doesn't notice you, even as you trip over the blanket and hit the ground."
@@ -7205,6 +7432,9 @@ label ch4Finale:
     
     
     n "*Beep* ... *beep* ... *beep* ..."
+    
+    scene bg hospital bed with fade
+    
     n "The steady blips from a heartrate monitor welcome you back to consciousness."
     n "You're back in the hospital and you feel worse than ever before."
     n "Your muscles feel too weak to even lift your finger to the button to call the nurse."
@@ -7215,6 +7445,14 @@ label ch4Finale:
     n "*Beep* ... *beep* ... *beep* ..."
     
     kitsuragi @ say "[name]? Are you awake?"
+    
+    scene bg hospital with fade
+    
+    show box:
+        ypos 0
+        
+    show kitsuragi at center:
+        ypos y_kitsuragi
     
     player "Urgh..."
     player "I'd rather not be."
@@ -7298,8 +7536,14 @@ label ch4Finale:
 
     n "You take her card and pull yourself out of the bed, refusing her help."
     n "Just walking hurts like hell but it's nothing compared to the turmoil wracking your brain."
+    
+    scene bg codadorm with fade
+    
     n "By the time you get back to your dorm, you're panting heavily and exhausted all the energy you had left."
     n "You collapse onto your bed and close your eyes, trying to escape this reality."
+    
+    scene bg black with dissolve
+    
     n "*Buzz buzz*"
     n "Who the hell is texting you at a time like this?"
 
