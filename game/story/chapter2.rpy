@@ -8,7 +8,7 @@ label chapter2start:
     ###once a week you can sleep in and get a chance at a unique night scene?
     ###can also do night scenes on weekends more freely?
 
-    scene bg codadorm with fade
+    scene bg codadorm summer day with fade
 
     show box with Dissolve(.2):
         ypos 0
@@ -131,7 +131,7 @@ label chapter2start:
     
     stop music fadeout 2.0
     
-    scene bg campus summer day clear with fade
+    scene bg campus summer day with fade
     
     show box with Dissolve(.2):
         ypos 0
@@ -237,7 +237,7 @@ label week2Tuesday:
     
     n "Mrs. Celestine goes over some terms and typical everyday sayings, then has the class recite them and practice in groups."
     
-    scene bg campus summer day clear with fade
+    scene bg campus summer day with fade
     
     play music "audio/music/vylet - Hard to Say Anything.ogg" fadein .4
     
@@ -505,7 +505,7 @@ label week2Tuesday:
     
     stop music fadeout 2.0
     
-    scene bg codadorm with fade
+    scene bg codadorm summer day with fade
     
     show box with Dissolve(.2):
         ypos 0
@@ -539,7 +539,7 @@ label week2Tuesday:
     
     #thursday 2
 
-    scene bg codadorm with fade
+    scene bg codadorm summer day with fade
 
     show box with Dissolve(.2):
         ypos 0
@@ -549,13 +549,13 @@ label week2Tuesday:
     n "Stirring from your slumber, you take a deep breath and stretch."
     n "You seem to have slept off whatever was ailing you last night but something still feels off."
     
-    show bg codadormshake
+    show bg codadorm summer dayshake
     
     n "As you throw the blanket off you and take your first steps of the day, a sudden dizziness overtakes you."
     n "The whole room is spinning..."
     n "..."
 
-    show bg codadorm with dissolve
+    show bg codadorm summer day with dissolve
     
     stop music fadeout 1.5
 
@@ -659,7 +659,7 @@ label week2Tuesday:
 
     stop music fadeout 1.0
 
-    scene bg codadorm with fade
+    scene bg codadorm summer day with fade
 
     show box with Dissolve(.2):
         ypos 0
@@ -741,7 +741,7 @@ label week2Tuesday:
 
     #___friday2
 
-    scene bg codadorm with fade
+    scene bg codadorm summer day with fade
 
     ##play sound "audio/ambient/morning birds.ogg" fadein .4
     play music "audio/music/vylet - yeah i'm ok thanks for asking.ogg" fadein .4
@@ -802,7 +802,7 @@ label week2Tuesday:
 
     pause .7
     
-    scene bg campus summer day clear with fade
+    scene bg campus summer day with fade
     
     show box with Dissolve(.2):
         ypos 0
@@ -1125,7 +1125,7 @@ label week2Tuesday:
 
     pause .7
 
-    scene bg codadorm with fade
+    scene bg codadorm summer day with fade
     
     show box with Dissolve(.2):
         ypos 0
@@ -1366,7 +1366,7 @@ label week2Tuesday:
 
     stop music fadeout 1.3
 
-    scene bg campus summer day clear with fade
+    scene bg campus summer day with fade
 
     show box with Dissolve(.2):
         ypos 0
@@ -1821,7 +1821,7 @@ label week2Tuesday:
 
 label beauty_and_the_beast:
 
-    scene bg codadorm with fade
+    scene bg codadorm summer day with fade
 
     play music "audio/ambient/morning birds.ogg" fadein 0.1
 
@@ -2065,7 +2065,7 @@ label beauty_and_the_beast:
 
     stop music fadeout 1.0
 
-    scene bg campus summer day clear with fade
+    scene bg campus summer day with fade
     
     show box with Dissolve(.2):
         ypos 0
@@ -2187,7 +2187,7 @@ label beauty_and_the_beast:
 
     pause .7
     
-    scene bg campus summer day clear with fade
+    scene bg campus summer day with fade
 
     play music "audio/ambient/outdoors people talking.ogg" fadein .5
 
@@ -2199,7 +2199,7 @@ label beauty_and_the_beast:
 
     show bg static2
     pause .02
-    show bg campus summer day clear
+    show bg campus summer day
 
     n "It becomes difficult to breathe and you feel a sharp pain thrashing about your whole body."
     n "Your vision begins to fade as you drop down to your hands and knees."
@@ -2208,7 +2208,7 @@ label beauty_and_the_beast:
     pause .02
     show bg static2
     pause .02
-    show bg campus summer day clear
+    show bg campus summer day
 
     n "The last thing you recall is slumping to the ground and hearing someone call your name."
 
@@ -2599,7 +2599,7 @@ label hospital_bound:
             n "Can't be that hard, right? It's not like everybody is on the lookout for you, and for all they know you're cleared to leave."
             n "You quietly slip out of bed and put your shoes on before grabbing your bag and approaching the door."
             
-            scene bg schoolhallways summer day with dissolve
+            scene bg schoolhallways summer night with dissolve
             
             show box with Dissolve(.2):
                 ypos 0
@@ -3019,7 +3019,7 @@ label leaving_hospital:
 
     stop music fadeout 1.0
 
-    scene bg codadorm with fade
+    scene bg codadorm summer day with fade
 
     play music "audio/music/vylet pony - Reading at Night.ogg"
 
@@ -3160,7 +3160,7 @@ label leaving_hospital:
     pause .7
     
 label monty_hall:
-    scene bg codadorm with fade
+    scene bg codadorm summer day with fade
 
     play music "audio/ambient/morning birds.ogg" fadein .4
 
@@ -3325,7 +3325,7 @@ label monty_hall:
             
     stop music fadeout 1.0
     
-    scene bg campus summer day clear with fade
+    scene bg campus summer day with fade
     
     play music "audio/music/vylet - Ordinarily.ogg" fadein .4
     
@@ -3436,7 +3436,7 @@ label monty_hall:
     pause .7
 
 label ellen_feeding_ducks:
-    scene bg campus summer day clear with fade
+    scene bg campus summer day with fade
     
     play music "audio/music/vylet - Tranquility and Happiness.ogg" 
     
@@ -3887,7 +3887,7 @@ label ellen_feeding_ducks:
     
     stop music fadeout 2.0
     
-    scene bg campus summer day clear with fade
+    scene bg campus summer day with fade
     
     play music "audio/music/vylet - Catching On.ogg" fadein .4
     
@@ -4199,7 +4199,7 @@ label ellen_feeding_ducks:
     
     stop music fadeout 2.0
     
-    scene bg campus summer day clear with fade
+    scene bg campus summer day with fade
     
     play music "audio/music/vylet - by the seaside.ogg" fadein .4
     
@@ -4705,7 +4705,7 @@ label liberation_eve:
             
             stop music fadeout 1.0
             
-            scene bg campus summer day clear with fade
+            scene bg campus summer day with fade
             
             show box with Dissolve(.2):
                 ypos 0
@@ -5385,7 +5385,7 @@ label liberation_eve:
 
     stop music fadeout 1.3
 
-    scene bg codadorm with fade
+    scene bg codadorm summer night with fade
 
     ##play sound "ambient/outdoors night crickets.ogg"
 

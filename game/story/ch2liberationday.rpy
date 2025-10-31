@@ -1,5 +1,5 @@
 label liberation_day:
-    scene bg codadorm with fade
+    scene bg codadorm summer day with fade
 
     show box:
         ypos 0
@@ -2348,7 +2348,7 @@ label liberation_day:
         n "At least you can get some extra credit by going to that parade today."
         n "That way you'll be able to work 2\% less hard and still pass your history class, which sounds like a fair tradeoff."
 
-        scene bg town with fade
+        scene bg town summer day with fade
         
         play music "audio/music/vylet - manehattan's finest.ogg" fadein .5
 
@@ -2684,7 +2684,7 @@ label liberation_day:
         
         stop music fadeout 1.0
 
-        scene bg codadorm with fade
+        scene bg codadorm summer night with fade
 
         show box:
             ypos 0
@@ -2708,7 +2708,7 @@ label liberation_day:
 
         pause .7
 
-        scene bg codadorm with fade
+        scene bg codadorm summer day with fade
 
         show box with Dissolve(.2):
             ypos 0
@@ -3033,7 +3033,7 @@ label liberation_day:
         
         scene bg black with fade
         
-        scene bg codadorm with fade
+        scene bg codadorm summer night with fade
         
         show box with Dissolve(.2):
             ypos 0

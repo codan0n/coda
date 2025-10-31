@@ -89,7 +89,7 @@ label sleepingIn:
     
     pause 0.9
     
-    scene bg codadorm with fade
+    scene bg codadorm summer day with fade
 
     show box with Dissolve(.2):
         ypos 0

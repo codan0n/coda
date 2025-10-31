@@ -142,7 +142,7 @@ label dormSleep:
 label dormStudy:
     stop music fadeout 2.0
 
-    scene bg codadorm with fade
+    scene bg codadorm summer night with fade
     
     show box with Dissolve(.2):
         ypos 0

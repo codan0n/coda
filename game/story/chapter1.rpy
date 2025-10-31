@@ -28,7 +28,7 @@ label chapter1:
 
 
 
-#    scene bg campus summer day clear with fade
+#    scene bg campus summer day with fade
 #    
 #    show gunner neutral at left
 #    show rori neutral at right
@@ -162,8 +162,8 @@ label chapter1:
     
     ########
     
-    #scene bg campus summer day clear_sunny_day with dissolve
-    scene bg campus summer day clear with dissolve
+    #scene bg campus summer day_sunny_day with dissolve
+    scene bg campus summer day with dissolve
     #background names can't have capital letters
     
     play music "audio/music/vylet - Hard to Say Anything.ogg" fadein .4
@@ -255,7 +255,7 @@ label nicodemusQuestions:
             n "You've been trying not to think about it, but that's what your species will be once you die."
             n "All that will be left of you are stories and photographs."
             
-            scene bg campus summer day clear with dissolve    
+            scene bg campus summer day with dissolve    
             
             show box with Dissolve(.2):
                 ypos 0      
@@ -1044,7 +1044,7 @@ label afterRoriOrientationDay:
 label playerDormOrientationDay:
     stop music fadeout 1.5
 
-    scene bg codadorm with fade
+    scene bg codadorm summer day with fade
 
     show box with Dissolve(.2):
         ypos 0
@@ -1075,7 +1075,7 @@ label playerDormOrientationDay:
 label exploring_campus:
     #___sunday1
     
-    scene bg codadorm with fade
+    scene bg codadorm summer day with fade
 
     show box with Dissolve(.2):
         ypos 0
@@ -1091,7 +1091,7 @@ label exploring_campus:
 
     stop music fadeout 1.0
 
-    scene bg campus summer day clear with fade
+    scene bg campus summer day with fade
 
     play music "audio/music/vylet - there.ogg" fadein .5
 
@@ -1705,7 +1705,7 @@ label exploring_campus:
 
     stop music fadeout 1.0
 
-    scene bg campus summer day clear with dissolve
+    scene bg campus summer day with dissolve
 
     play music "audio/ambient/outdoors people talking.ogg" fadein .5
 
@@ -1754,7 +1754,7 @@ label exploring_campus:
     pause .7
 
 label firstDayOfClass:
-    scene bg codadorm with fade
+    scene bg codadorm summer day with fade
 
     play music "audio/ambient/morning birds.ogg" fadein .4
 
@@ -1917,7 +1917,7 @@ label firstDayOfClass:
 
     stop music fadeout 1.0
 
-    scene bg campus summer day clear with fade
+    scene bg campus summer day with fade
 
     play music "audio/ambient/outdoors people talking.ogg" fadein .5
 
@@ -2120,7 +2120,7 @@ label firstDayOfClass:
 
 label secondDayOfClass:
     #___tuesday1
-    scene bg codadorm with fade
+    scene bg codadorm summer day with fade
 
     play music "audio/ambient/morning birds.ogg" fadein .4
 
@@ -2482,7 +2482,7 @@ label secondDayOfClass:
         
     stop music fadeout 1.0
 
-    scene bg campus summer day clear with fade
+    scene bg campus summer day with fade
 
     show box with Dissolve(.2):
         ypos 0
@@ -2695,7 +2695,7 @@ label thirdDayOfClass:
    
     play music "audio/ambient/morning birds.ogg" fadein .5
 
-    scene bg codadorm with fade
+    scene bg codadorm summer day with fade
 
     show box with Dissolve(.2):
         ypos 0
@@ -2872,7 +2872,7 @@ label thirdDayOfClassStats:
 
     stop music fadeout .5
 
-    scene bg campus summer day clear with fade
+    scene bg campus summer day with fade
 
     play music "audio/music/vylet - by the seaside.ogg" fadein .5
 
@@ -3996,7 +3996,7 @@ label avaClaireGunnerLunch:
 
     stop music fadeout 1.0
 
-    scene bg codadorm with fade
+    scene bg codadorm summer day with fade
     
     play music "audio/music/vylet - wish.ogg" fadein 0.5
 
@@ -4557,7 +4557,7 @@ label thursday1:
 
     stop music fadeout 1.0
 
-    scene bg campus summer day clear with fade
+    scene bg campus summer day with fade
 
     #play sound "audio/ambient talking.ogg" fadein .5
     play music "audio/music/Vylet Pony - Cozy Pone.ogg"
@@ -4611,7 +4611,7 @@ label thursday1:
             call claireFrenchStudy1
             
                 
-            scene bg codadorm with fade
+            scene bg codadorm summer day with fade
             
             show box with Dissolve(.2):
                 ypos 0
@@ -4686,7 +4686,7 @@ label thursday1:
 label thursdayNight1Study:
     stop music fadeout 2.0
     
-    scene bg codadorm with fade
+    scene bg codadorm summer day with fade
     
     show box with Dissolve(.2):
         ypos 0
@@ -4735,7 +4735,7 @@ label thursday1End:
     pause .7
 
 label friday1:
-    scene bg codadorm with fade
+    scene bg codadorm summer day with fade
     
     show box with Dissolve(.2):
         ypos 0
@@ -4743,7 +4743,7 @@ label friday1:
     n "You've made it to the end of your first week back in school."
     n "Just have to get today's classes knocked out, then you'll be free for two whole days."
     
-    scene bg campus summer day clear with fade
+    scene bg campus summer day with fade
     
     play music "audio/ambient/outdoors people talking.ogg" fadein .5
     
@@ -4758,7 +4758,7 @@ label friday1:
     
     stop music fadeout 1.5
     
-    scene bg codadorm with fade
+    scene bg codadorm summer day with fade
     
     play music "audio/music/vylet - im sorry (apathy).ogg" fadein .4
     
@@ -4830,7 +4830,7 @@ label friday1:
 label rooftop_party:
     # saturday 2
     
-    scene bg codadorm with fade
+    scene bg codadorm summer night with fade
     
     play music "audio/ambient/morning birds.ogg" fadein 0.1    
 
@@ -4846,7 +4846,7 @@ label rooftop_party:
 
     stop music fadeout 1.0
 
-    scene bg roof summer day with fade
+    scene bg roof summer night with fade
 
     #play music "audio/Monkey Warhol - Boots & Pants (Instrumental Mix).mp3" fadein .4
     #https://freemusicarchive.org/music/Monkey_Warhol/boots-pants-ep/boots-pants-instrumental-mix
@@ -5179,7 +5179,7 @@ label rooftop_party:
 
     n "Ignoring his complaints, you drag him from the crowd and head down the stairway into the building."
 
-    scene bg schoolhallways summer day with dissolve
+    scene bg schoolhallways summer night with dissolve
 
     play music "audio/music/Monkey Warhol - Boots & Pants (Instrumental Mix).ogg" fadein .5
 
@@ -5321,7 +5321,7 @@ label sunday2:
     n "Looking around, it seems you'd fallen asleep in Rori and Gunner's dorm. They're passed out in their respective beds."
     n "No reason to stick around. You feel groggy and sweaty and gross and you need a shower and some coffee as soon as possible."
     
-    scene bg cafe summer day with fade
+    scene bg cafe summer day rain with fade
 
     play music "audio/music/mere - coffeeLove.exe.ogg" fadein .4
 
@@ -5433,7 +5433,7 @@ label sunday2:
     stop music fadeout 2.0
 
 label sunday2Evening:
-    scene bg codadorm with fade
+    scene bg codadorm summer day rain with fade
     
     show box with Dissolve(.2):
         ypos 0    

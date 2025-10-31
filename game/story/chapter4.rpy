@@ -2272,7 +2272,7 @@ label getRoseCoffee:
 label midtermDay1Cafe:
     scene bg black with fade
     
-    scene bg codadorm autumn day with fade
+    scene bg codadorm autumn day autumn day with fade
     
     show box:
         ypos 0
@@ -2381,7 +2381,7 @@ label midtermDay1Cafe:
 label midtermDay1:    
     #thursday
     
-    scene bg codadorm autumn day with fade
+    scene bg codadorm autumn day autumn day with fade
     
     n "Today's the day. Midterms."
     n "You'll be glad to get them over with."
@@ -2869,7 +2869,7 @@ label midtermDay1Cont:
     
     player "Sounds good to me. Later!"
     
-    scene bg codadorm autumn night with fade
+    scene bg codadorm autumn day autumn night with fade
     
     n "You're kinda burnt out from today's exams but you're only halfway through."
     n "You muster up the energy to study a bit for stats and history but wind up falling asleep early."
@@ -3434,7 +3434,7 @@ label midtermDay1Cont:
     scene bg black with fade
     
 #saturday
-    scene bg codadorm autumn day with fade
+    scene bg codadorm autumn day autumn day with fade
     
     show box:
         ypos 0
@@ -4496,7 +4496,7 @@ label autumnBreakPt2:
 
     n "The following day..."
     
-    scene bg codadorm with fade
+    scene bg codadorm autumn day with fade
     
     show box:
         ypos 0
@@ -5611,7 +5611,7 @@ label afterTrishFortune:
     
     
 label midweekAutumnBreak:
-    scene bg codadorm with fade
+    scene bg codadorm autumn day with fade
     
     show box:
         ypos 0
@@ -6522,7 +6522,7 @@ label celestineMargaretVisit1:
     
 
 label autumnBreakLockIn:
-    scene bg codadorm with fade
+    scene bg codadorm autumn day with fade
     
     n "As your autumn break is coming to a close, you decide to take a day to make sure you're caught up on studies."
     n "A nasty storm brews outside as you open the university's coursework app on your laptop."
@@ -6702,7 +6702,7 @@ label mishkaPowerOutage:
                 
                 player "Thanks!"
                 
-                scene bg codadorm with fade
+                scene bg codadorm autumn day with fade
                 
                 n "Back at your dorm, the lights are still off. You left the lobby door ajar in case the door remained locked and without power."
                 n "In the hallway you find Rose sitting with her back to the wall."
@@ -6976,7 +6976,7 @@ label afterFallBreak:
     
     
 label ch4Finale:
-    scene bg codadorm with fade
+    scene bg codadorm autumn day with fade
     
     play music "audio/ambient/morning birds.ogg" fadein .5
 
@@ -7095,7 +7095,7 @@ label ch4Finale:
 
     player "Well if you insist..."
     
-    scene bg codadorm with fade
+    scene bg codadorm autumn day with fade
 
     show ava normal neutral at norm:
         xpos 500
@@ -7310,7 +7310,7 @@ label ch4Finale:
 
     n "You wake up to the sound of banging on your door."
     
-    scene bg codadorm with fade
+    scene bg codadorm autumn day with fade
     
     n "*KNOCK KNOCK KNOCK KNOCK*"
     n "Each knock feels like they're hitting your head directly."
@@ -7537,7 +7537,7 @@ label ch4Finale:
     n "You take her card and pull yourself out of the bed, refusing her help."
     n "Just walking hurts like hell but it's nothing compared to the turmoil wracking your brain."
     
-    scene bg codadorm with fade
+    scene bg codadorm autumn day with fade
     
     n "By the time you get back to your dorm, you're panting heavily and exhausted all the energy you had left."
     n "You collapse onto your bed and close your eyes, trying to escape this reality."

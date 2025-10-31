@@ -7,7 +7,7 @@ label chapter3:
     n "Chapter 3"
     n "A few weeks later"
     
-    scene bg cafe with dissolve
+    scene bg cafe autumn day with dissolve
     
     play music "audio/music/mere - coffeeLoveLoopInstrumental.exe.ogg" fadein 1.0
 
@@ -517,7 +517,7 @@ label chapter3:
     
     stop music fadeout 1.0
     
-    scene bg codadorm with fade
+    scene bg codadorm autumn day with fade
     
     show box with Dissolve(.2):
         ypos 0
@@ -527,7 +527,7 @@ label chapter3:
     n "It suddenly hits you that things are going pretty well for the first time in your life. You're in an Ivy League university, you've got friends, your bills are paid... what more could you ask for?"
     n "That's it, you can't just lie in bed when you're so full of positive energy. You've gotta go for a /nightwalk/"
     
-    scene bg campus summer night clear with fade
+    scene bg campus autumn night with fade
     
     show box with Dissolve(.2):
         ypos 0
@@ -1620,7 +1620,7 @@ label chapter3:
                     n "Basking in the glory of holding Ava's wing, you make your departure from the hospital with your entourage of fluffy companions."
                         
                     if avaPoints > 3:    
-                        scene bg codadorm with fade
+                        scene bg codadorm autumn day with fade
                         
                         n "Ava leaned on you as you walked back towards campus."
                         n "Almost like she likes you or something. Weird."
@@ -2284,7 +2284,7 @@ label chapter3:
             
             stop music fadeout 2.0
             
-            scene bg codadorm with fade
+            scene bg codadorm autumn day with fade
             
             play music "audio/ambient/morning birds.ogg" fadein .4
             
@@ -2327,7 +2327,7 @@ label chapter3:
                 
             scene bg black with dissolve
             
-            scene bg codadorm with dissolve
+            scene bg codadorm autumn day with dissolve
             
             show box with Dissolve(.2):
                 ypos 0
@@ -2340,7 +2340,7 @@ label chapter3:
     jump chapter3AfterWeekend
         
 label chapter3AfterWeekend:
-    scene bg codadorm with fade
+    scene bg codadorm autumn day with fade
     
     show box with Dissolve(.2):
         ypos 0
@@ -3582,7 +3582,7 @@ label chapter3AfterWeekend:
                 
                 stop music fadeout 2.0
                 
-                scene bg codadorm with fade
+                scene bg codadorm autumn day with fade
                 
                 show box:
                     ypos 0
@@ -3641,7 +3641,7 @@ label chapter3AfterWeekend:
                 
                 stop music fadeout 2.0
                 
-                scene bg codadorm with fade
+                scene bg codadorm autumn day with fade
                 
                 show box:
                     ypos 0
@@ -4300,7 +4300,7 @@ label chapter3AfterWeekend:
         
         n "The next few days go by uneventfully."
         
-        scene bg codadorm with dissolve
+        scene bg codadorm autumn day with dissolve
         
         play music "audio/ambient/morning birds.ogg" fadein 0.1
     
@@ -4460,7 +4460,7 @@ label claireRoriHikeAltStart:
         
     n "The next few days go by uneventfully."
     
-    scene bg codadorm with dissolve
+    scene bg codadorm autumn day with dissolve
     
     play music "audio/ambient/morning birds.ogg" fadein 0.1
     

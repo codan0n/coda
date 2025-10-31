@@ -4,7 +4,7 @@ label roseNightWalkLvl1:
     $ nightEvents.remove("roseNight")
     $ rosePoints += 1
 
-    scene bg campus summer night clear with dissolve
+    scene expression "bg campus [currentSeason] night" with dissolve
     
     play music "audio/music/vylet - wish.ogg" fadein .5
     
@@ -192,7 +192,7 @@ label avaNightWalkLvl1:
     $ nightEvents.remove("avaNight")
     # see ava and gunner walking together, flirting. They're surprised to see you.
     
-    scene bg campus summer night clear with dissolve
+    scene expression "bg campus [currentSeason] night" with dissolve
     
     play music "audio/music/Vylet Pony - lemonade.ogg" fadein .5
     
@@ -578,7 +578,7 @@ label avaNightWalkLvl3:
 label claireNightWalkLvl1:
     $ nightEvents.remove("claireNight")
     
-    scene bg campus summer night clear with dissolve
+    scene expression "bg campus [currentSeason] night" with dissolve
     
     play music "audio/music/Vylet Pony - Cozy Pone.ogg" fadein .5
     
@@ -1080,7 +1080,7 @@ label ellenNightWalkLvl3:
 label roriNightWalkLvl1:
     $ nightEvents.remove("roriNight")
     
-    scene bg campus summer night clear with dissolve
+    scene expression "bg campus [currentSeason] night" with dissolve
     
     play music "audio/music/vylet - Hard to Say Anything.ogg" fadein .5
     
@@ -1299,7 +1299,7 @@ label mishkaNightWalkLvl1:
     
     $ mishkaPoints += 1
     
-    scene bg campus summer night clear with dissolve
+    scene expression "bg campus [currentSeason] night" with dissolve
     
     show box with Dissolve(.2):
         ypos 0
@@ -1310,7 +1310,9 @@ label mishkaNightWalkLvl1:
     n "Ah fuck it, you could go for a drink if the door isn't locked."
     n "To your surprise, it's not."
     
-    scene bg cafe with fade
+    #scene bg cafe summer night with fade
+    scene expression "bg cafe [currentSeason] night" with fade
+    
     
     play music "audio/music/vylet - blockhead.ogg" fadein .5
     
