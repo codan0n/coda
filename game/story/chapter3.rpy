@@ -262,7 +262,7 @@ label chapter3:
     
     stop music fadeout 1.0
     
-    scene bg campus autumn day clear with fade
+    scene bg campus autumn day with fade
     
     show box with Dissolve(.2):
         ypos 0
@@ -346,7 +346,7 @@ label chapter3:
     
     stop music fadeout 1.0
         
-    scene bg campus autumn day clear with fade
+    scene bg campus autumn day with fade
     
     show box with Dissolve(.2):
         ypos 0
@@ -540,7 +540,7 @@ label chapter3:
     
     n "The following day..."
     
-    scene bg campus autumn day clear with fade
+    scene bg campus autumn day with fade
     
     show box with Dissolve(.2):
         ypos 0
@@ -551,7 +551,7 @@ label chapter3:
     n "At least you got let out early and can prepare for statistics. There were a few homework problems you should double check."
     n "It can wait until after you get a snack at a vending machine though."
     
-    scene bg schoolhallways with dissolve
+    scene bg schoolhallways autumn day with dissolve
     
     show box with Dissolve(.2):
         ypos 0
@@ -764,7 +764,7 @@ label chapter3:
     
     stop music fadeout 2.0
     
-    scene bg campus autumn day clear with fade
+    scene bg campus autumn day with fade
     
     #play music "audio/music/vylet - sailing away.ogg" fadein .5
     play music "audio/music/vylet - diaries i kept.ogg" fadein .5
@@ -890,7 +890,7 @@ label chapter3:
     
     stop music fadeout 2.0
     
-    scene bg town with fade
+    scene bg town summer day with fade
     
     #play music "audio/music/vylet - I Wish I Could Tell You.ogg" fadein .5
     play music "audio/music/vylet - Destiny Station.ogg" fadein .5
@@ -2913,7 +2913,7 @@ label chapter3AfterWeekend:
        
     n "The rest of the day passes by uneventfully."
 
-    scene bg schoolhallways with fade
+    scene bg schoolhallways autumn day with fade
     
     play music "audio/ambient/indoors people talking.ogg" fadein .4
     
@@ -3008,7 +3008,7 @@ label chapter3AfterWeekend:
             player "What made you want to become a professor?"
             
             show margaret none
-            show margaret sad smoking
+            show margaret sadsmoking
          
             margaret @ say "You're acting like this was my first choice of profession."
             
@@ -3143,7 +3143,7 @@ label chapter3AfterWeekend:
             n "Her tail is wagging. You feel like you've just been standing around and listening to her talk but you must be doing something right."
             n "Ms. Ellen takes another puff and her grin fades away."
             
-    show margaret sad smoking
+    show margaret sadsmoking
             
     margaret @ say "I was fooled into thinking that becoming a professor would make me feel... prestigious."
     margaret @ say "When all I do is explain old books to rich brats."
@@ -3397,7 +3397,7 @@ label chapter3AfterWeekend:
     
     stop music fadeout 2.0
     
-    scene bg cafe with fade
+    scene bg cafe autumn day with fade
     
     play music "audio/music/mere - coffeeLove.exe.ogg" fadein .5
     
@@ -3715,7 +3715,7 @@ label chapter3AfterWeekend:
                 
                 stop music fadeout 2.0
                 
-                scene bg campus autumn day clear with fade
+                scene bg campus autumn day with fade
                 
                 play music "audio/music/vylet - mistress.ogg" fadein .5
                 #play music "audio/music/vylet - camelia.ogg" fadein .5
@@ -3984,7 +3984,7 @@ label chapter3AfterWeekend:
                         
                         claire @ say "Oh my gosh are you alright?"
                         
-                        scene bg campus autumn day clear with dissolve
+                        scene bg campus autumn day with dissolve
                         
                         show box with Dissolve(.2):
                             ypos 0
@@ -4335,7 +4335,7 @@ label chapter3AfterWeekend:
         
         stop music fadeout 2.0
         
-        scene bg campus autumn day clear with fade
+        scene bg campus autumn day with fade
         
         play music "audio/music/vylet - Hard to Say Anything.ogg" fadein .5
         
@@ -4483,7 +4483,7 @@ label claireRoriHikeAltStart:
 
     call phone_end from _call_phone_end_28
     
-    scene bg campus autumn day clear with fade
+    scene bg campus autumn day with fade
     
     play music "audio/music/vylet - Hard to Say Anything.ogg" fadein .5
     

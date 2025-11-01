@@ -1725,16 +1725,16 @@ layeredimage margaret smoking melancholy:
         pos (0,88)
         attribute say:
             "images/bubble.png"
-layeredimage margaret sad smoking:
-    at sprite_highlight('margaret')
-    always:
-        'images/characters/margaret/margaret sad smoking.png'
-    group saying:
-        xzoom .9
-        yzoom .75
-        pos (0,88)
-        attribute say:
-            "images/bubble.png"
+#layeredimage margaret sad smoking:
+#    at sprite_highlight('margaret')
+#    always:
+#        'images/characters/margaret/margaret sad smoking.png'
+#    group saying:
+#        xzoom .9
+#        yzoom .75
+#        pos (0,88)
+#        attribute say:
+#            "images/bubble.png"
 layeredimage margaret smoking sad shocked:
     at sprite_highlight('margaret')
     always:

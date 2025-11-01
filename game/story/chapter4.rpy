@@ -27,11 +27,11 @@ label chapter4:
         n "You have a bad feeling about this history exam. Maybe you should ask someone for help studying."
         n "Rose is definitely the smartest person in this class. She's aced every quiz so far and always has her snout in the books."
         n "As much as you hate to ask, she might be your best bet. You muster up the courage to look over to her and clear your throat."
+    
+        player "Hey Rose, I-"
         
         show rose skirt armscrossed dismissive at center with dissolve:
             ypos y_rose
-        
-        player "Hey Rose, I-"
         
         rose @ say "Nope. Study on your own."
         
@@ -42,13 +42,14 @@ label chapter4:
         hide rose with dissolve
         
         n "Without even looking at you, she packs her things and walks away."
+        n "You should have known she'd brush you off."
         
         
     else:
         n "You feel sufficiently prepared for this exam. A lot of it is stuff you've learned before, just in greater detail."
-        n "Still though, if you wanted to ace it you could go for some tutoring."
+        #n "Still though, if you wanted to ace it you could go for some tutoring."
         
-    scene bg schoolhallways autumn day
+    scene bg schoolhallways autumn day with dissolve
     
     show box with Dissolve(.2):
         ypos 0
@@ -64,32 +65,53 @@ label chapter4:
     
     player "Hi Rori. G'day, Guts."
     
+    show rori rat smile
+    
     rori @ say "Heya [name]. I'm just trying to teach Guts some tricks. I think he sorta understands what I want him to do but he's... defiant."
+    
+    show rori rat neutral
     
     player "Must be in his rebellious phase."
     
     n "Guts looks up at you before running down Rori's sleeve and snatching the pretzel out of his hoof."
     
-    rori @ say "Hey!"
+    show rori rat sassy
     
-    n "From the corner of your eye you see Gunner striding up to you."
+    rori @ say "Hey!"
     
     show gunner determined at center:
         ypos y_gunner
-        xoffset -400
-        xzoom -1
+        xoffset -2000
+    
+    n "From the corner of your eye you see Gunner striding up to you."
+    
     show rori with move:
         xoffset 350
+    show gunner determined with move:
+        ypos y_gunner
+        xoffset -400
+        #xpos 2500
+        xzoom -1
+    
     
     gunner @ say "Sup homos."
     
     menu:
+        gunner "{cps=0}Sup homos.{/cps}"
         "How did you know??":
             $ youGay = True
             
+            show rori rat concerned
+            show gunner neutral
+            
             player "H-how did you know I'm a homo?"
             
+            show gunner cutie
+            
             gunner @ say "It's shorthand for homo sapien."
+            
+            show gunner disgusted
+            
             gunner @ say "Wait a minute, are you actually-"
             
         "I'm not a homo":
@@ -97,28 +119,75 @@ label chapter4:
             
             player "Hold up, I ain't no homo!"
             
+            show gunner neutral
+            show rori rat neutral
+            
             gunner @ say "But you are a homo sapien!"
+            
+            show gunner eyesclosed smile
+            
             gunner @ say "You literally cannot deny your homo-ness."
             
         "Respond \"Kill yourself\"":
             $ gunnerPoints -= 1
             
+            show rori rat neutral
+            
             player "Kill yourself."
+            
+            show gunner hissing
             
             gunner @ say "After you."
             
+            show rori rat anxious2
+            
             rori @ say "Guys..."
+        
+    show gunner uncomfy
+    show rori rat anxious2
         
     gunner @ say "Holy shit a rat!!"
     
+    pause .1
+    
+    show gunner:
+        linear .3 xoffset 0
+    pause .1
+    show rori:
+        linear .3 xoffset 600
+
+    
     n "Gunner pounces in the air, pawing and clawing at Rori's hoodie as Guts scurries around frantically."
     
+    show rori rat sassy
+    
     rori @ say "Hey! Stop it!"
+    
+    show rori:
+        linear .15 xoffset 250
+        
+    pause .1
+    
+    show gunner snoring at shudder
+    
+    pause .5
+        
+    show gunner:
+        linear .2 ypos 2800
+        
+    pause .2
+    
+    show rori:
+        linear .4 xoffset 400
     
     n "A sound not unlike a baseball being struck by a bat rings out as Rori's horns collide with Gunner's skull."
     n "Gunner falls flat on his back and Rori goes to check on Guts."
     
-    rori @ say "There you are! Are you okay?"
+    show rori rat surprised
+    
+    rori @ say "Are you okay? Gunner didn't scratch you, did he?"
+    
+    show rori rat concerned
     
     n "Guts is still a bit shaken but he seems to find comfort in the Rori's grasp."
     
@@ -127,21 +196,39 @@ label chapter4:
     rori @ say "Did I? I didn't mean to, I just reacted like any ram would."
     
     menu:
+        rori "{cps=0}Did I? I didn't mean to, I just reacted like any ram would.{/cps}"
         "Let's steal his wallet":
             $ playerBullyLevel += 1
             
             player "He deserved it. Let's see how much cash he's carrying. I'm sure he won't miss a couple thousand bucks."
             
+            show rori rat cheery blush
+            
             rori @ say "Do what you will, I'm just glad Guts isn't hurt."
+            
+            hide rori with dissolve
             
             n "You crouch down to Gunner's limp body and feel around for his wallet but it's not long before his eyes snap open."
             
+            show gunner hissing at center with dissolve:
+                ypos y_gunner
+            
             gunner @ say "Keep your paws to yourself, mister."
+            
+            show gunner itsover
+            
             gunner @ say "Sheesh, I get knocked out for two seconds and you can't help trying to molest me."
+            
+            show gunner annoyed
             
             player "I was just checking your pulse."
             
             gunner @ say "Yeah yeah I've heard it all before. Trying to see if my cock throbs when you grab it."
+            
+            pause .1
+            
+            show gunner with move:
+                xoffset -400
             
         "We should see if he's still alive":
             player "We should at least check and see if he's still breathing."
@@ -155,24 +242,47 @@ label chapter4:
             n "..."
             n "Gunner starts to stir, groaning in pain. He reaches up to his head where Rori struck him and winces."
             
+            show gunner hissing at center with dissolve:
+                ypos y_gunner
+                xoffset -400
+            
             gunner @ say "Ughhh..."
             
             player "You okay?"
+            
+            show gunner itsover
             
             gunner @ say "It hurts so much..."
             
             player "You're not bleeding but you might have a concussion. We can take you to the hospital if you're gonna cry about it."
             
+            show gunner wink frown
+            
             gunner @ say "I don't care about that..."
+            
+            show gunner disgusted
+            
             gunner @ say "I'm more upset that I got knocked out by *Rori* of all people."
             
+            show rori rat neutral
+            
             rori @ say "Oh, good to see he's still his usual self. I thought I might have given him brain damage."
+            
+    show gunner uncomfy
 
     n "Gunner rises to his feet, shaking his head."
+    
+    show rori rat sassy at center with dissolve:
+        ypos y_rori
+        xoffset 400
+    
+    rori @ say "What do you have to say for yourself? You scared our little rat buddy half to death!"
     
     gunner @ say "Sorry, instincts got a hold of me. I see prey animal, I go for it."
     
     #player "Are secretary birds considered prey animals? Feral ones are pretty aggressive."
+    
+    show rori rat anxious2
     
     rori @ say "Be nice to Guts! He's already crippled!"
     
@@ -180,9 +290,15 @@ label chapter4:
     
     gunner @ say "Wait, you named him? Is that the rat from a few weeks ago?"
     
+    show rori rat silly
+    
     rori @ say "Yup! I started visiting him regularly and we just sorta became friends."
     
+    show gunner annoyed
+    
     gunner @ say "Gross."
+    
+    show rori neutral
     
     rori @ say "Rats are actually super smart and learn quickly. I've been teaching him tricks! Watch"
     rori @ say "C'mere Guts, in one sleeve and out the other!"
@@ -191,17 +307,28 @@ label chapter4:
     
     player "Impressive. I could never do that."
     
+    show gunner frown1
+    
     gunner @ say "Yeah cool, just don't bring fleas into our room. The last thing I need is the black plague localized in our dorm during midterms."
     
     rori @ say "Don't worry, he's chill. I gave him a little bath and everything!"
     
     player "Sounds like you're taking great care of him!"
     
+    show rori rat smile
+    
     rori @ say "Yeah! I never had a pet before so I did a bunch of research and found out how to best take care of him!"
+    
+    show gunner snoring
     
     gunner @ say "I guess if he makes you so happy then I'll try to repress my feline instincts to kill it on sight."
     
+    show rori rat flattered blush
+    show gunner neutral
+    
     rori @ say "Thanks. And I'll try to repress my sheep instincts to headbutt on reaction."
+    
+    show rori rat neutral
     
     player "It was a pretty well-timed overhead attack."
     player "I think it's about time we get to class now."
@@ -210,7 +337,7 @@ label chapter4:
     
     player "Bye Rori! Bye Guts!"
     
-    gunner @ say "Later homo. Later rat."
+    gunner @ say "Later homos. Later rat."
     
     rori @ say "Good luck with midterms!"
     
@@ -226,9 +353,14 @@ label chapter4:
     
     herschel @ say "Good afternoon class! The midterm is coming up on Friday but we still have a lot of content to cover so let's jump right in!"
     
-    show gunner neutral at center with dissolve:
+    pause .1
+    
+    show herschel with move:
+        xoffset 400
+    show gunner displeased at center with dissolve:
         ypos y_gunner
         xoffset -350
+        xzoom -1
     
     gunner @ say "You mean there's *more* to study?!"
     
@@ -250,7 +382,7 @@ label chapter4:
     
     n "After class, Gunner dragged you to the library and found a table for just the two of you."
     
-    if statsSkill < 3:
+    if statsSkill < 4:
         n "You don't really mind the impromptu study session, you could use some more practice in statistics."
         
     else:
@@ -263,11 +395,18 @@ label chapter4:
     
     player "You don't know?"
     
+    show gunner displeased
+    
     gunner @ say "Obviously I know, but this is gonna be a comprehensive review."
     
     player "There's not enough time in a day to go over half a semester's worth of lessons. Just focus on what you struggle with."
     
+    show gunner pissed
+    
     gunner @ say "Ok ok ok I just *cannot* afford to fail this class again."
+    
+    show gunner uncomfy
+    
     gunner @ say "Like I get the basics but when you start throwing in factorials and shit it gets confusing."
     
     player "Yeah, there are a lot of formulas to memorize, and knowing when to use which one."
@@ -279,10 +418,13 @@ label chapter4:
     n "At least you try to but Gunner interrupts you every few minutes with another question."
     
     menu:
+        n "{cps=0}At least you try to but Gunner interrupts you every few minutes with another question.{/cps}"
         "Focus on helping him":
             $ gunnerPoints += 1
             
             n "You'll be nice and help him out since he's so far behind you. You just hope you don't drop a letter grade by neglecting your own studies."
+            
+            show gunner cheeky1
             
             gunner @ say "Thanks for the help bro, it really means a lot!"
         "Focus on your own studies":
@@ -290,17 +432,28 @@ label chapter4:
     
             player "You gotta try figuring these out on your own. I won't be there to help you during the test."
             
+            show gunner cutie
+            
             gunner @ say "We could always cheat :3"
             
             player "Yeah no I'm not copying your wrong answers."
             
+            show gunner cheeky1
+            
             gunner @ say "But can I copy your wrong answers?"
             
             menu:
+                gunner "{cps=0}But can I copy your wrong answers?{/cps}"
                 "Why not":
                     player "As long as you don't drag me into it when you get caught."
+                    
+                    gunner @ say "Hell yeah!!!"
+                    
+                    player "Shh! This is a library!"
                 "Nah":
                     player "Mrs. Herschel will know something is up if we both get the same answers."
+                    
+                    show gunner charming
                     
                     gunner @ say "I'll take the fall for it if she notices."
                     
@@ -320,6 +473,9 @@ label chapter4:
     n "The following day..."
     
     scene bg classroom with dissolve
+    
+    show box with Dissolve(.2):
+        ypos 0
     
     #margaret @ say "That just about sums up our review for Thursday's midterm! Study hard and do your best!"
     
